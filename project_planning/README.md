@@ -1,5 +1,8 @@
 # 项目规划
 
+- [GitHub三人协作操作手册](github_collaboration_guide.pdf)：21页零基础教程，覆盖首次接入、每天开发、换电脑、PR、冲突、撤销和稳定版发布；第20页为日常速查。
+- [教程可编辑正文](github_collaboration_guide.md)：教程内容源，`source/generate_github_guide.py`从它生成PDF。
+
 - [项目规划书](project_plan.pdf)：按硬件、视觉、主控分工的执行计划。
 - [规划文字版](project_plan.md)：便于阅读与修改。
 - [三人分工大纲](team_work_outline.pdf)：角色职责及阶段概览。

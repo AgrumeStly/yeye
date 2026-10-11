@@ -18,6 +18,8 @@ git clone https://github.com/AgrumeStly/yeye.git
 
 ## 从这里开始
 
+- 学三人协作：[GitHub零基础操作手册](project_planning/github_collaboration_guide.pdf)（21页，第20页为日常速查）
+
 - 看比赛要求：[比赛原文](competition/比赛文档.pdf)
 - 看任务与截止日期：[项目规划书](project_planning/project_plan.pdf) / [可编辑文字版](project_planning/project_plan.md)
 - 看三人职责：[分工大纲](project_planning/team_work_outline.pdf)
