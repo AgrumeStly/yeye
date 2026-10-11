@@ -6,7 +6,7 @@
 
 项目远端：[AgrumeStly/yeye](https://github.com/AgrumeStly/yeye)，私有仓库。成员须获邀后才能下载和提交。
 
-在笔记本或队友电脑首次下载：
+在主控笔记本、视觉电脑或硬件电脑首次下载：
 
 ```bash
 git clone https://github.com/AgrumeStly/yeye.git
@@ -73,7 +73,7 @@ yeye/
 ## 文件放置规则
 
 1. 根目录只保留导航、工作区规则和工具配置，不再散放业务文档。
-2. 官方要求放 `competition/`；团队自己的计划与决定放 `project_planning/`。
+2. 官方要求放 `competition/`；团队的计划与决定放 `project_planning/`。
 3. 硬件资料继续遵守 `AGENTS.md`：文档放 `hardware_preparation/`，生成器放其 `source/`，被替代版本放其 `archive/`。
 4. `source/` 在文档目录内专指文档生成器；软件工程使用 `firmware/` 或 `src/`，参考代码使用 `reference_code/`。
 5. 模块原始样本留在模块目录；整车跨模块的测试结果统一放 `testing/`。例如一次试跑可用 `testing/2026-11-01_run01/`，集中保存日志、参数和录像。
