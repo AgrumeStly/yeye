@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-10",
+  "source": "hardware_purchase_list.pdf",
+  "allocations": {
+    "control": {
+      "buyer": "主控",
+      "rows": [
+        {
+          "source_id": "01",
+          "quantity": 1
+        },
+        {
+          "source_id": "03",
+          "quantity": 1
+        },
+        {
+          "source_id": "07",
+          "quantity": 1
+        },
+        {
+          "source_id": "11",
+          "quantity": 1
+        },
+        {
+          "source_id": "12",
+          "quantity": 1
+        },
+        {
+          "source_id": "15",
+          "quantity": 1
+        },
+        {
+          "source_id": "18",
+          "quantity": 1
+        }
+      ],
+      "parts_total": 207.8
+    },
+    "vision": {
+      "buyer": "视觉",
+      "rows": [
+        {
+          "source_id": "02",
+          "quantity": 1
+        },
+        {
+          "source_id": "04",
+          "quantity": 1
+        },
+        {
+          "source_id": "15",
+          "quantity": 1
+        },
+        {
+          "source_id": "19",
+          "quantity": 1
+        }
+      ],
+      "parts_total": 211.0
+    },
+    "hardware": {
+      "buyer": "硬件",
+      "rows": [
+        {
+          "source_id": "05",
+          "quantity": 2
+        },
+        {
+          "source_id": "06",
+          "quantity": 2
+        },
+        {
+          "source_id": "08",
+          "quantity": 1
+        },
+        {
+          "source_id": "09",
+          "quantity": 1
+        },
+        {
+          "source_id": "10",
+          "quantity": 1
+        },
+        {
+          "source_id": "13",
+          "quantity": 1
+        },
+        {
+          "source_id": "14",
+          "quantity": 1
+        },
+        {
+          "source_id": "16",
+          "quantity": 1
+        },
+        {
+          "source_id": "17",
+          "quantity": 1
+        }
+      ],
+      "parts_total": 207.0
+    }
+  },
+  "parts_total": 625.8,
+  "shared_shipping_price_allowance": 20,
+  "planned_total": 645.8,
+  "budget_note": "All prices carried forward from the source PDF; no new merchant quotes. Tools and practice track excluded."
+}

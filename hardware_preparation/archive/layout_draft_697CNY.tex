@@ -1,0 +1,46 @@
+\documentclass[UTF8,a4paper,10pt]{ctexart}
+\usepackage[margin=15mm]{geometry}
+\usepackage{longtable,booktabs,array,xcolor,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.17}
+\begin{document}
+{\LARGE\bfseries 智能小车必买硬件清单}\par
+\vspace{2mm}
+三人队伍｜双轮差速＋前置视觉｜整车预算约 ¥700｜2026 年 10 月 10 日\par
+\vspace{2mm}
+\colorbox{gray!12}{\parbox{\dimexpr\linewidth-2\fboxsep}{\textbf{采购原则：}以下价格是单项\textbf{目标上限}，并非已锁定报价。先核对主板、视觉套件、电机及驱动的实付价，再下单电池与供电模块。}}\par
+\vspace{3mm}
+\small
+\begin{longtable}{p{1.0cm}p{4.1cm}p{1.0cm}p{7.0cm}r}
+\toprule
+序号 & 必买硬件 & 数量 & 下单时核对的规格 & 目标价\\
+\midrule
+1 & STM32 NUCLEO-G474RE 主控板 & 1 & 原装开发板，板载 ST-LINK；负责双电机闭环与传感器采集 & ¥167\\
+2 & 立创庐山派 Lite-K230D-CanMV 标准套件 & 1 & 型号 LCKFB-LSPI-K230D-128M-CanMV；确认含 GC2093 摄像头、排线 & ¥210\\
+3 & microSD 卡 & 1 & 8 GB 及以上，Class 10 & ¥15\\
+4 & ICM-42688-P 六轴 IMU 模块 & 1 & 购买焊好的模块，不买裸芯片；支持 3.3 V、SPI & ¥25\\
+5 & N20 金属减速编码电机套装 & 2 套 & 同型号；6 V、约 600--800 rpm；AB 相编码器可接 3.3 V；含轮胎和固定支架 & ¥100\\
+6 & DRV8833 双路电机驱动模块 & 1 & 两路独立驱动；核对模块封装及每路电流，须匹配电机堵转电流 & ¥20\\
+7 & 轻质底板、万向支撑球、摄像头可调支架 & 各 1 & 组成紧凑双轮差速车，安装后满足比赛外形限制 & ¥35\\
+8 & 2S 7.4 V 锂电池 & 1 & 约 850--1500 mAh；放电能力、插头和尺寸匹配整车 & ¥45\\
+9 & 2S 平衡充电器 & 1 & 与电池平衡接口匹配 & ¥20\\
+10 & 5 V 降压模块 & 1 & 给视觉板和主控分别并联取电；输出能力满足两板需要 & ¥15\\
+11 & 6 V 降压模块 & 1 & 给电机驱动供电；目标持续输出至少 3 A，按所选电机复核 & ¥20\\
+12 & 开关、插头、导线、铜柱、螺丝、热缩管、扎带 & 1 批 & 包括主控与视觉板的 UART 三线连接；固定电池和摄像头排线 & ¥25\\
+\midrule
+\multicolumn{4}{r}{\textbf{目标合计（不含运费和工具）}} & \textbf{¥697}\\
+\bottomrule
+\end{longtable}
+\normalsize
+\textbf{接线要点}\par
+电池分两路：6 V 降压给电机驱动，5 V 降压给两块控制板；所有模块共地。视觉板与 STM32 的 UART 只接 TX、RX、GND，信号为 3.3 V。NUCLEO 外部供电跳线按 ST 手册设置，电机不得从开发板 5 V 引脚取电。\par
+\vspace{2mm}
+\textbf{已有或借用的工具（不计入整车预算）}\par
+电脑、万用表、电烙铁与焊锡、USB-C 数据线、Micro-USB 数据线。\par
+\vspace{2mm}
+\textbf{采购前最后核对}\par
+视觉套件是否含摄像头；电机编码器电平与堵转电流；驱动模块真实输出规格；电池、充电器及插头是否配套；整车装好后是否符合比赛尺寸。\par
+\vfill
+{\footnotesize 资料：\url{https://www.digikey.cn/zh/products/detail/stmicroelectronics/NUCLEO-G474RE/10231585}；\url{https://openkits-wiki.easyeda.com/zh-hans/lushan-pi-k230/quick-start.html}；\url{https://www.ti.com/product/DRV8833}。比赛限制以队伍持有的《比赛文档.pdf》为准。}
+\end{document}

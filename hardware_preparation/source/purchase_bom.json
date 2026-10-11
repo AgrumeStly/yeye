@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-10",
+  "currency": "CNY",
+  "rows": [
+    {
+      "id": "01",
+      "category": "主控",
+      "model": "立创·天空星 STM32F407VET6 开发板-青春版",
+      "quantity": 1,
+      "unit_budget": 39.9,
+      "price_status": "官网展示价"
+    },
+    {
+      "id": "02",
+      "category": "视觉套件",
+      "model": "立创·庐山派 Lite-K230D-CanMV / 128MB / GC2093",
+      "quantity": 1,
+      "unit_budget": 188.0,
+      "price_status": "官网展示价"
+    },
+    {
+      "id": "03",
+      "category": "调试器",
+      "model": "立创 DAPLink 调试工具",
+      "quantity": 1,
+      "unit_budget": 22.9,
+      "price_status": "官网展示价"
+    },
+    {
+      "id": "04",
+      "category": "存储卡",
+      "model": "MK米客方德 SDSDQAB-008G-MK / 8GB / Class 10",
+      "quantity": 1,
+      "unit_budget": 15.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "05",
+      "category": "编码电机套装",
+      "model": "Yahboom MD310Z20_7.4V + Bracket + 3mm Coupling",
+      "quantity": 2,
+      "unit_budget": 40.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "06",
+      "category": "驱动轮",
+      "model": "Yahboom 65mm classic rubber wheel / 6000300098",
+      "quantity": 2,
+      "unit_budget": 6.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "07",
+      "category": "驱动板",
+      "model": "Yahboom AT8236 Standard / YB-MNT03-V1.0",
+      "quantity": 1,
+      "unit_budget": 55.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "08",
+      "category": "底板",
+      "model": "FR4 无覆铜板 180×110×2mm / 四角R3",
+      "quantity": 1,
+      "unit_budget": 12.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "09",
+      "category": "后支撑轮",
+      "model": "Yahboom 1-inch universal wheel / 6000301765 裸轮",
+      "quantity": 1,
+      "unit_budget": 6.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "10",
+      "category": "视觉安装台",
+      "model": "FR4 80×60×2mm + M3×60mm 铝合金双通柱×4",
+      "quantity": 1,
+      "unit_budget": 12.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "11",
+      "category": "电池",
+      "model": "Tattu TA-45C-800-2S1P-XT30",
+      "quantity": 1,
+      "unit_budget": 45.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "12",
+      "category": "充电器",
+      "model": "ISDT UC2 / 0.8A / 2S LiPo",
+      "quantity": 1,
+      "unit_budget": 35.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "13",
+      "category": "充电电源",
+      "model": "小米 MDY-11-EM / USB-A / 5V档3A",
+      "quantity": 1,
+      "unit_budget": 25.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "14",
+      "category": "扬声器",
+      "model": "DFRobot FIT0502 / 8Ω / 3W标称",
+      "quantity": 1,
+      "unit_budget": 15.0,
+      "price_status": "官网展示价"
+    },
+    {
+      "id": "15",
+      "category": "USB数据线",
+      "model": "USB-A公→USB-C公 / 0.3m / USB2.0 480Mbps / 3A",
+      "quantity": 2,
+      "unit_budget": 5.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "16",
+      "category": "接线包",
+      "model": "按第4页逐项购买，含电源转接、信号线和固定耗材",
+      "quantity": 1,
+      "unit_budget": 30.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "17",
+      "category": "紧固件包",
+      "model": "按第4页逐项购买，含排针和绝缘支撑柱",
+      "quantity": 1,
+      "unit_budget": 15.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "18",
+      "category": "无源器件包",
+      "model": "按第4页电容、电阻精确规格购买",
+      "quantity": 1,
+      "unit_budget": 5.0,
+      "price_status": "估算"
+    },
+    {
+      "id": "19",
+      "category": "散热片",
+      "model": "铝散热片 20×20×6mm / 绝缘导热胶贴",
+      "quantity": 1,
+      "unit_budget": 3.0,
+      "price_status": "估算"
+    }
+  ],
+  "parts_total": 625.8,
+  "shipping_allowance": 20.0,
+  "planned_total": 645.8,
+  "note": "Only rows marked 官网展示价 have a checked display price; remaining numbers are budget estimates, not merchant quotes."
+}

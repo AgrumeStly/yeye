@@ -1,0 +1,42 @@
+# Local tools and credentials
+/.agents/
+/.codex/
+/.aws/
+/skills-lock.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Regenerable previews and caches
+/tmp/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Compiler outputs and machine-specific IDE state
+build/
+Debug/
+Release/
+Objects/
+Listings/
+*.o
+*.obj
+*.axf
+*.elf
+*.map
+*.lst
+*.dep
+*.uvoptx
+*.uvguix.*
+*.bak
+
+# Large raw recordings belong in shared storage
+*.mp4
+*.mov
+*.avi
