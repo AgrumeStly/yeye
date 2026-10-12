@@ -3,3 +3,4 @@ firmware/DebugConfig/
 *.build_log.htm
 *.uvgui.*
 firmware/build_create.log
+firmware/yeye_uart_check.uvprojx

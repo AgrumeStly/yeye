@@ -14,4 +14,4 @@
 
 正式装配图保存在 `../../hardware_preparation/`。本表仅作软件资源草案。板级当前使用HSI，未设168MHz；改外部晶振/PLL后须同时重算UART BRR、滴答和定时器时钟。
 
-核对来源：[立创天空星原理图](https://wiki.lckfb.com/zh-hans/tkx/hardware/schematic.html)、ST官方设备头文件stm32f407xx.h。最终复用功能与对应芯片数据手册复核。
+核对来源：[立创天空星原理图](https://wiki.lckfb.com/zh-hans/tkx/hardware/schematic.html)、配套SPL的ST设备头文件stm32f4xx.h。最终复用功能与对应芯片数据手册复核。

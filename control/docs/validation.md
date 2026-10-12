@@ -1,13 +1,13 @@
 # 主控基础工程验证记录
 
-日期：2026-10-12，北京时间。范围：到货前软件验证；无赛车、板卡或电机接入。
+日期：2026-10-12，北京时间。本记录对应标准外设库（SPL）版本。范围：到货前软件验证；无赛车、板卡或电机接入。
 
 | 项目 | 方法 | 结果 |
 | --- | --- | --- |
 | Keil LogicDemo | Keil5.24a / ARMCC5.06u5实际编译链接 | 0错误、0警告；Code1860、RO424、RW12、ZI1108字节 |
-| Keil HardwareBench | 同环境实际编译链接 | 0错误、0警告；Code1612、RO424、RW16、ZI1104字节 |
+| Keil HardwareBench | 同环境实际编译链接，含SPL RCC/GPIO/USART/misc模块 | 0错误、0警告；Code2112、RO424、RW36、ZI1108字节 |
 | 链接布局 | 核对Keil生成scatter文件 | FLASH0x08000000/0x80000，SRAM0x20000000/0x20000 |
-| UART可选分支 | ARMCC单独编译board.c，BOARD_UART_ENABLE=1 | 编译通过；串口接收中断和缓冲代码未做板上验证 |
+| UART开启分支 | check_uart_build.ps1临时工程，BOARD_UART_ENABLE=1，完整编译链接 | 0错误、0警告；Code3428、RO424、RW44、ZI1364字节；串口未做板上验证 |
 | PC通信与状态机 | GCC，C99，Wall/Wextra/Wconversion/Werror/pedantic | 55项检查全部通过 |
 | Python编码示例 | 输出直道、无效路径、START、STOP、STATUS的20字节包 | 生成成功；直道固定字节向量与C编码器匹配 |
 | Keil模拟器运行 | 命令行自动调试尝试 | 未取得日志；窗口检查工具不可用，模拟器执行待主控按说明人工确认 |
@@ -27,3 +27,5 @@ PASS all 55 checks
 不将电脑逻辑检查当成实车性能：HSI误差、实际帧率、UART引脚/电平、上下电、下载器连接、电机方向、编码器、PID、真实制动距离、一圈判定与语音链路均待硬件到货后验证。
 
 原始可重建输出在control/build和control/firmware/build，Git忽略。主控修改通信或状态机后重新执行tools/run_host_tests.ps1和两个Keil目标编译，记录新的验证结果。
+
+标准库版本固定为V1.3.0，来自Keil官方分发包1.0.8；本机用于器件识别/下载的DFP仍为2.17.1。SPL源文件、匹配头文件和许可证已随工程保存，原始来源与SHA256见firmware/vendor/stdperiph/source_manifest.json。

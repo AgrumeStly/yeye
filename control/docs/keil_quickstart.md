@@ -8,6 +8,7 @@
 | 编译器 | ARM Compiler 5.06 update 5 (build 528) |
 | 芯片 | STM32F407VETx，对应STM32F407VET6 |
 | 芯片包 | Keil.STM32F4xx_DFP 2.17.1 |
+| 外设库 | STM32F4 SPL V1.3.0，随工程保存；无需另行安装旧版芯片包 |
 | FLASH | 起点0x08000000，大小0x80000 |
 | RAM | 起点0x20000000，大小0x20000；CCM暂不用 |
 | 工程 | control/firmware/yeye_control.uvprojx |
@@ -42,9 +43,10 @@ Keil命令行编译：
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/build_keil.ps1 -Target LogicDemo
 powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/build_keil.ps1 -Target HardwareBench
+powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/check_uart_build.ps1
 ```
 
-Keil安装在其他位置时增加参数，例如 `-KeilRoot 'D:\Keil_v5'`。脚本只编译，不下载、不烧录。
+Keil安装在其他位置时增加参数，例如 `-KeilRoot 'D:\Keil_v5'`。脚本只编译，不下载、不烧录。check_uart_build.ps1使用临时工程验证UART开启分支，不改变原工程的UART关闭设置。
 
 ## 主控：笔记本首次接入
 
@@ -70,3 +72,5 @@ powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/setup_debug.ps
 6. UART引脚经主控、硬件确认后，在board.h把BOARD_UART_ENABLE改为1，重建再验证串口。电机输出仍是空适配层，不会产生PWM。
 
 官方依据：[Keil命令行编译](https://www.keil.com/support/man/docs/uv4/uv4_commandline.asp)、[立创天空星原理图](https://wiki.lckfb.com/zh-hans/tkx/hardware/schematic.html)、[立创程序下载教程](https://wiki.lckfb.com/zh-hans/tkx/tkx-stm32f407vxt6/beginner/download.html)。接线以硬件手中版本和对应原理图为准。
+
+标准库函数、配置宏与新增外设的方法见 [standard_library.md](standard_library.md)。当前STM32F40_41xxx用于选择F405/F407等器件组，芯片仍是STM32F407VET6。
