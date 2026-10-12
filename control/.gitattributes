@@ -1,0 +1,4 @@
+# Preserve upstream dependency whitespace; distinguish it from team-written code.
+firmware/vendor/** linguist-vendored -whitespace
+firmware/startup/startup_stm32f407xx.s linguist-vendored -whitespace
+firmware/startup/LICENSE.txt -whitespace
