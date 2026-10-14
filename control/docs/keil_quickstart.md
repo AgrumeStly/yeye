@@ -13,6 +13,7 @@
 | RAM | 起点0x20000000，大小0x20000；CCM暂不用 |
 | 工程 | control/firmware/yeye_control.uvprojx |
 | 演示目标 | LogicDemo，模拟器 |
+| 首次上板测试 | BoardSelfTest，USB DFU已实际烧录并验证双闪 |
 | 板级目标 | HardwareBench，CMSIS-DAP；到货后确认调试器连接设置 |
 
 ## 主控：没有板卡时演示
@@ -43,6 +44,7 @@ Keil命令行编译：
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/build_keil.ps1 -Target LogicDemo
 powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/build_keil.ps1 -Target HardwareBench
+powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/build_keil.ps1 -Target BoardSelfTest
 powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/check_uart_build.ps1
 ```
 
@@ -63,6 +65,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File control/tools/setup_debug.ps
 6. 用分支、提交号确认两台电脑代码一致，不复制整个Keil安装目录或账号配置。
 
 ## 主控与硬件：到货后的板级第一步
+
+Type-C直连电脑的首次点灯测试已经完成。主控选择BoardSelfTest编译，USB DFU下载及结果判断见 [板级测试说明](board_self_test.md)。以下步骤用于后续通过SWD运行HardwareBench和查看变量，需要另接调试器。
 
 1. 核对实物确为STM32F407VET6；GD32、HC32等型号不能按本工程直接下载。
 2. 暂不接电机供电。确认DAPLink的SWDIO、SWCLK、GND和目标参考电压，按调试器说明接线。

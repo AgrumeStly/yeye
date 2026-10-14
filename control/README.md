@@ -1,12 +1,15 @@
-# 主控开发：到货前基础工程
+# 主控开发：标准库基础工程
 
 配置日期：2026-10-12。目标为已购的立创天空星 STM32F407VET6 青春版。采用STM32F4标准外设库（SPL），已建立Keil5工程、通信解析、状态机、电脑模拟测试和操作说明。
 
 **主控从这里开始：** 双击 `firmware/yeye_control.uvprojx`，选择 `LogicDemo`，按 F7 编译。无硬件演示见 [Keil操作说明](docs/keil_quickstart.md)。
 
+2026-10-14 已完成实物首次测试：新增 `BoardSelfTest`，USB DFU 烧录及逐字节读回校验通过，主控确认板载用户灯正常双闪。见 [板级测试说明](docs/board_self_test.md) 和 [实物测试记录](../hardware_preparation/board_self_test_record.md)。
+
 | 位置 | 内容 | 主责 |
 | --- | --- | --- |
-| `firmware/yeye_control.uvprojx` | Keil工程，含LogicDemo、HardwareBench两个目标 | 主控 |
+| `firmware/yeye_control.uvprojx` | Keil工程，含LogicDemo、HardwareBench、BoardSelfTest三个目标 | 主控 |
+| `firmware/src/board_self_test.c` | 标准库用户灯双闪、时钟配置检查、128字节RAM自检 | 主控 |
 | `firmware/src/car.c` | 启动、停止、路径失效与通信超时状态机 | 主控 |
 | `firmware/src/protocol.c` | 定长结果包、CRC、流式接收解析 | 主控；视觉按协议发送 |
 | `firmware/src/board.c` | HSI时钟、滴答、待启用UART、调试输出变量 | 主控；硬件复核引脚 |
@@ -28,6 +31,6 @@
 
 ## 收工与换电脑
 
-主控保存代码、验证后提交任务分支并推送；笔记本Clone/Pull相同分支。build目录和IDE本机状态不入库。笔记本安装Keil、对应编译器与芯片包后，执行 `tools/setup_debug.ps1` 再打开工程；已有本机调试设置不会被覆盖。
+主控保存并验证本地代码；明确要求上传时再提交、推送任务分支。上传后笔记本Clone/Pull相同分支。build目录和IDE本机状态不入库。笔记本安装Keil、对应编译器与芯片包后，执行 `tools/setup_debug.ps1` 再打开工程；已有本机调试设置不会被覆盖。
 
 硬件接线资料放 `../hardware_preparation/`；视觉侧实现放 `../vision/`；整车测试结果放 `../testing/`。

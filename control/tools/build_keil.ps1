@@ -1,4 +1,4 @@
-param([string]$KeilRoot = 'C:\Keil_v5', [ValidateSet('LogicDemo','HardwareBench')][string]$Target = 'LogicDemo')
+param([string]$KeilRoot = 'C:\Keil_v5', [ValidateSet('LogicDemo','HardwareBench','BoardSelfTest')][string]$Target = 'LogicDemo')
 $ErrorActionPreference = 'Stop'
 $controlRoot = Split-Path $PSScriptRoot -Parent
 $project = Join-Path $controlRoot 'firmware/yeye_control.uvprojx'
