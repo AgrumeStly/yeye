@@ -1,8 +1,37 @@
 # 版本与设备交接记录
 
-版本：v1.0。日期：2026-10-18（北京时间）。维护角色：主控／03 GitHub与多设备同步。
+版本：v1.1。日期：2026-10-18（北京时间）。维护角色：主控／03 GitHub与多设备同步。
 
-依据：G-01任务授权、[协作标准](collaboration_standard.md)、[项目状态](project_status.md)及本次Git命令实测。记录仅确认实际检查到的设备与远端引用，不替代固件、驱动或整车验证。
+依据：G-01、G-02任务授权、[协作标准](collaboration_standard.md)、[项目状态](project_status.md)及本次Git命令实测。记录仅确认实际检查到的设备与远端引用，不替代固件、驱动或整车验证。接续优先使用最新G-02步骤，G-01保留为历史记录。
+
+## G-02：协作文档合入main及台式机接续
+
+### 授权、版本与执行边界
+
+主控于2026-10-18明确授权“合并至main”，包括相关记录提交上传、创建或更新PR、普通merge commit合并及台式机本地main同步。不发布、不删除任务分支、不强推或丢弃修改。
+
+| 对象 | 执行前已确认事实 | 接续及验证要求 |
+| --- | --- | --- |
+| 台式机 | DESKTOP-0HLUQN7；D:\Projects\yeye；当前codex/project-coordination；HEAD为2e16e84205e5fc44440092935a2fbfb01abfc0fe | 保留00状态表修改并提交上传，PR合并后切main并仅快进接续 |
+| 远端来源分支 | codex/project-coordination位于2e16e84205e5fc44440092935a2fbfb01abfc0fe，与本地一致 | 追加本次状态与交接记录提交；合并时校验PR来源最终完整提交号 |
+| 本地及远端main | 9c2db9bcedf01e40dcfddde3ee7dfcc3b618cb0f | PR合并后核对GitHub Merged状态、两侧main完整提交号及8份最终文档 |
+| 工作区 | 仅project_status.md有00的G-01验收、G-02登记和授权修改，暂存区为空 | 保留该内容；仅提交相关记录，无关修改不得夹带 |
+| 主控笔记本 | 未实际检查设备名、目录、分支、提交或环境 | 待确认，按下方main接续步骤核实 |
+| 视觉、硬件电脑 | 未实际核对 | 待确认，本次不认定对应设备已同步 |
+
+03开工时通过对话列表确认00、01、02及其它已显示的本项目对话空闲。远端main是来源分支祖先，尚无本分支到main的开放PR。8份Markdown内容已审阅；链接、编码、冲突标记及git diff --check检查作为本次适用验证，不重测固件。
+
+本段在PR合并前随来源分支提交，记载的是执行前事实、授权与接续要求。G-02是否完成，以03最终回报的PR链接及Merged状态、来源最终提交、普通合并提交、本地与远端main完整提交号、文档核对和工作区状态为证；不为在正文写入自身最终提交号重复提交。最终回报前不将待执行事项当成已验证。
+
+### 主控笔记本从main接续（待实际执行）
+
+1. 主控记录笔记本设备名、实际工程目录和 `git remote -v`，确认origin为AgrumeStly/yeye；执行 `git status --short --branch`、`git branch --show-current`、`git rev-parse HEAD`。保留已有修改；不干净时先交03核对，不覆盖、不强推。
+2. 确认该目录没有其它对话正在写入或操作分支，运行 `git fetch origin`。
+3. 已有本地main时，运行 `git switch main`，再运行 `git pull --ff-only origin main`。没有本地main时，运行 `git switch --track -c main origin/main`。不能快进或存在分叉时保留现场交03处理。
+4. 运行 `git rev-parse HEAD`、`git rev-parse origin/main`、`git ls-remote --heads origin main`，对照03最终回报的完整main提交；同时核对工作区状态与8份协作文档。远端若已有后续更新，先由03确认新增差异，不能仅凭分支名认定同版。
+5. 主控将设备名、目录、完整提交和工作区状态带回03，再更新“待确认”。IDE、编译器、芯片支持包、驱动、串口、下载器与板卡配置另行核实；代码文件一致不能替代环境或实车验证。
+
+尚未Clone的笔记本须Clone到新的空目录，再按上述步骤核对main；已有工程不得复制覆盖。本次保留codex/project-coordination任务分支，后续开发应按新任务安排使用分支。
 
 ## G-01：项目协作文档上传与笔记本接续准备
 
@@ -26,7 +55,7 @@
 
 远端地址：https://github.com/AgrumeStly/yeye.git。
 
-首批文档提交之后另有执行记录提交，包含本文件、G-01结果和导航更新。最终交付提交号由03完成推送与远端复核后在给00的回报中提供。持有最终版本的设备可运行 `git log -1 --format=%H -- project_planning/version_handoff.md` 查得本记录提交号；不要将首批7471643误当作包含交接记录的最终版本。
+首批文档提交之后另有执行记录提交，包含本文件、G-01结果和导航更新。G-01最终交付为2e16e84205e5fc44440092935a2fbfb01abfc0fe，03已完成推送与远端复核，00随后独立验收通过。不要将首批7471643误当作包含交接记录的最终版本，也不要以G-02后续记录提交替代G-01历史验收版本。
 
 ### 执行与验证证据
 
@@ -45,7 +74,7 @@
 - 本次Git执行遇到目录所有者与执行账号不同的保护提示，采用单次命令参数 `git -c safe.directory=D:/Projects/yeye ...`；未修改全局safe.directory配置。目标设备若出现同类提示，先核对目录和归属。
 - 未确认目标设备，尚未合并至main；不能按main拉取后认定已取得本次文档。
 
-### 主控笔记本接续步骤（待实际执行）
+### G-01当时的笔记本接续步骤（历史；最新接续按G-02）
 
 1. 主控在笔记本记录设备名与实际工程目录，确认远端地址；执行 `git status --short --branch`、`git branch --show-current`、`git rev-parse HEAD`，保留已有修改。工作区不干净或存在同名分支分叉时先交03核对，不覆盖、不强推。
 2. 确认笔记本工程没有其它对话正在写入。运行 `git fetch origin`，检查 `git branch -vv`。
