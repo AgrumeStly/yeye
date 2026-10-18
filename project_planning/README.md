@@ -3,6 +3,7 @@
 - [对话分工与标准文档](collaboration_standard.md)：长期对话的职责、旧对话衔接建议、标准文档入口、内容源和交接方式。
 - [当前状态与任务](project_status.md)：当前进展、证据、近期任务与文档冲突的统一汇总。日常先看这一份，原规划保留目标与里程碑。
 - [项目协作对话初始化Prompt](agent_initialization_prompts.md)：00项目总指挥、01主控固件开发、02整车联调与拼组、03GitHub与多设备同步的初始化文本及任务分配模板。主控向00汇报，00生成Prompt交由主控转发。
+- [版本与设备交接记录](version_handoff.md)：03维护设备、目录、分支、提交、未同步项和接续步骤；笔记本未实际核对前保持待确认。
 
 - [GitHub三人协作操作手册](github_collaboration_guide.pdf)：21页零基础教程，覆盖首次接入、每天开发、换电脑、PR、冲突、撤销和稳定版发布；第20页为日常速查。
 - [教程可编辑正文](github_collaboration_guide.md)：教程内容源，`source/generate_github_guide.py`从它生成PDF。
