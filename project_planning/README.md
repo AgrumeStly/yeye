@@ -1,5 +1,9 @@
 # 项目规划
 
+- [对话分工与标准文档](collaboration_standard.md)：长期对话的职责、旧对话衔接建议、标准文档入口、内容源和交接方式。
+- [当前状态与任务](project_status.md)：当前进展、证据、近期任务与文档冲突的统一汇总。日常先看这一份，原规划保留目标与里程碑。
+- [项目协作对话初始化Prompt](agent_initialization_prompts.md)：00项目总指挥、01主控固件开发、02整车联调与拼组、03GitHub与多设备同步的初始化文本及任务分配模板。主控向00汇报，00生成Prompt交由主控转发。
+
 - [GitHub三人协作操作手册](github_collaboration_guide.pdf)：21页零基础教程，覆盖首次接入、每天开发、换电脑、PR、冲突、撤销和稳定版发布；第20页为日常速查。
 - [教程可编辑正文](github_collaboration_guide.md)：教程内容源，`source/generate_github_guide.py`从它生成PDF。
 
@@ -9,6 +13,6 @@
 - `source/generate_project_plan.py`：生成当前目录内的规划PDF和Markdown。
 - `source/generate_team_outline.py`：生成当前目录内的分工大纲PDF。
 
-生成脚本是可重复生成文档的内容源。修改后重新运行会覆盖对应产物；如直接修改Markdown，请先同步回生成脚本再重新生成。
+规划书和分工大纲的内容源在对应生成脚本内；规划生成器会覆盖规划Markdown和PDF。GitHub教程以Markdown为内容源。对话标准和当前状态直接维护Markdown。具体生成方向见对话与文档标准，修改时先确认内容源。
 
 后续进度表、会议决定与待办清单放在本目录；被替代的规划放 `archive/`（有需要时创建）。比赛官方资料见 `../competition/`。
