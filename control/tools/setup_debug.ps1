@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 $controlRoot = Split-Path $PSScriptRoot -Parent
-$destination = Join-Path $controlRoot 'firmware/yeye_control.uvoptx'
+$destination = Join-Path $controlRoot 'MDK-ARM/yeye_control.uvoptx'
 if (Test-Path -LiteralPath $destination) {
     Write-Output 'Existing local debug settings retained.'
 } else {

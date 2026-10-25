@@ -1,8 +1,8 @@
 param([string]$KeilRoot = 'C:\Keil_v5')
 $ErrorActionPreference = 'Stop'
 $controlRoot = Split-Path $PSScriptRoot -Parent
-$firmwareRoot = Join-Path $controlRoot 'firmware'
-$outputRoot = Join-Path $firmwareRoot 'build/uart_check'
+$firmwareRoot = Join-Path $controlRoot 'MDK-ARM'
+$outputRoot = Join-Path $firmwareRoot '../build/firmware/uart_check'
 New-Item -ItemType Directory -Force -Path $outputRoot | Out-Null
 [xml]$projectXml = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $firmwareRoot 'yeye_control.uvprojx')
 foreach ($targetNode in $projectXml.Project.Targets.Target) {

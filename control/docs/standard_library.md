@@ -1,6 +1,6 @@
 # 主控：标准外设库代码说明
 
-工程已改为STM32F4标准外设库（SPL）写法。外设初始化集中在 `firmware/src/board.c`，通信协议与状态机保持独立，仍可在电脑上测试。
+工程已改为STM32F4标准外设库（SPL）写法。外设初始化集中在 `Drivers_Custom/Board/board.c`，通信协议与状态机保持独立，仍可在电脑上测试。
 
 ## 按这个顺序阅读
 
@@ -14,7 +14,9 @@
 | 6 | 第4步 | 开接收/错误中断，配置NVIC，再启用USART2 |
 | 7 | USART2_IRQHandler() | 通过库函数读状态与字节，放入缓冲；协议解析在主循环执行 |
 
-UART默认关闭；主控与硬件核对接线后再改BOARD_UART_ENABLE。电机PWM和编码器尚未实现，不会因启用UART而驱动电机。
+UART默认关闭；主控与硬件核对接线后再改BOARD_UART_ENABLE。原HardwareBench仍不配置PWM或编码器，不会因启用UART而驱动电机。C-02B的[MotorBench](motor_bench.md)另用独立入口和TIM1驱动，不链接board.c，也不启用UART；尚未读取编码器。
+
+2026-10-24新增[MotorDirect](motor_direct.md)独立入口：SPL普通GPIO固定PE9高、其余三控制脚低，不配置TIM1／AF／PWM；人工一次500ms后锁定。该目标仍使用TIM5建立R1看门狗初始化的独立超时时基，TIM／IWDG库及CMSIS SysTick不能因“不要PWM”而删除。原PWM与持续目标保留。
 
 ## 初始化结构体的通用写法
 
@@ -35,10 +37,10 @@ USART采用相同思路：USART_StructInit填默认值 → 修改USART_InitTypeD
 
 ## 工程如何找到标准库
 
-- `firmware/vendor/stdperiph/inc/`：库函数声明、结构体和参数宏。
-- `firmware/vendor/stdperiph/src/`：真正的库函数实现；Keil分组为StdPeriph_Driver。
-- `firmware/vendor/stm32/stm32f4xx.h`：与标准库匹配的设备定义，不与HAL设备头混用。
-- `firmware/include/stm32f4xx_conf.h`：当前启用RCC、GPIO、USART、misc头文件，定义assert_param。
+- `Drivers/stdperiph/inc/`：库函数声明、结构体和参数宏。
+- `Drivers/stdperiph/src/`：真正的库函数实现；Keil分组为StdPeriph_Driver。
+- `Drivers/stm32/stm32f4xx.h`：与标准库匹配的设备定义，不与HAL设备头混用。
+- `Core/Inc/stm32f4xx_conf.h`：启用RCC、GPIO、USART、misc并定义assert_param；三个电机诊断目标均定义MOTOR_BENCH_TARGET，另引入TIM／IWDG声明。
 - Keil预定义宏为 `STM32F40_41xxx,USE_STDPERIPH_DRIVER,HSE_VALUE=8000000`。HSE为未来核对外部晶振预留，当前实际时钟仍为HSI 16MHz。
 
 USE_STDPERIPH_DRIVER使设备头自动包含stm32f4xx_conf.h；STM32F40_41xxx选择F407所属器件组。这些宏用于配套SPL V1.3.0，不把它们换成HAL示例宏。
@@ -49,6 +51,6 @@ SysTick_Config、__disable_irq、__DMB和SCB的FPU启动设置属于Cortex-M4内
 
 ## 到货后新增PWM或编码器
 
-主控先与硬件确认实际引脚与定时器资源，再加入同版本stm32f4xx_tim.h、stm32f4xx_tim.c，在conf头中启用对应声明，并在Keil添加源文件。按时钟→引脚→定时器参数→通道→启用的顺序配置。当前未复制TIM驱动，不提前预设电机模式、编码器极性或PID参数。
+主控先确认实际引脚与定时器资源，再加入同版本TIM驱动并在Keil启用。C-02B已从原官方1.0.8包补入SPL V1.3.0的TIM／IWDG模块；当前MotorBench、MotorContinuous和MotorDirect均通过MOTOR_BENCH_TARGET引入对应声明，原三个目标显式排除新源文件。PWM台架采用先GPIO低→时钟与计时参数→四通道零比较值→人工触发后切AF并开MOE的顺序；Direct不启用TIM1输出，仍保留TIM5时基及IWDG。编码器极性及PID仍待后续实现与标定。
 
-来源与许可见firmware/vendor/README.md。可在Keil通过函数名查找对应库源码，结合注释理解参数，再修改应用初始化。
+来源与许可见Drivers/README.md。可在Keil通过函数名查找对应库源码，结合注释理解参数，再修改应用初始化。

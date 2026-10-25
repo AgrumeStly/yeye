@@ -1,36 +1,63 @@
-# 主控开发：标准库基础工程
+# 主控开发：STM32 SPL分层工程
 
-配置日期：2026-10-12。目标为已购的立创天空星 STM32F407VET6 青春版。采用STM32F4标准外设库（SPL），已建立Keil5工程、通信解析、状态机、电脑模拟测试和操作说明。
+更新：2026-10-25（北京时间，ORG-02）。维护：主控／01。
+既有STM32F407VET6、SPL V1.3.0、Keil5与六个目标继续使用；本轮只迁目录和引用，应用代码字节及运行行为保留。
 
-**主控从这里开始：** 双击 `firmware/yeye_control.uvprojx`，选择 `LogicDemo`，按 F7 编译。无硬件演示见 [Keil操作说明](docs/keil_quickstart.md)。
+## 打开哪个工程
 
-2026-10-14 已完成实物首次测试：新增 `BoardSelfTest`，USB DFU 烧录及逐字节读回校验通过，主控确认板载用户灯正常双闪。见 [板级测试说明](docs/board_self_test.md) 和 [实物测试记录](../hardware_preparation/board_self_test_record.md)。
+| 场景 | 入口 |
+| --- | --- |
+| 当前MotorDirect诊断接续 | [MDK-ARM/motor_direct.uvprojx](MDK-ARM/motor_direct.uvprojx)，只有MotorDirect；[人工步骤](docs/motor_direct.md) |
+| 查看全部六目标／继续开发 | [MDK-ARM/yeye_control.uvprojx](MDK-ARM/yeye_control.uvprojx) |
+| 无硬件学习 | 多目标工程选择LogicDemo；[Keil说明](docs/keil_quickstart.md)、[SPL说明](docs/standard_library.md) |
+| 看分层和各文件归属 | [整车架构](../docs/architecture.md)、[API索引](../docs/interfaces.md) |
+| 查已验证范围 | [validation.md](docs/validation.md)、[整车状态](../project_planning/project_status.md)、[ORG-02](../project_planning/tasks/ORG-02.md) |
 
-| 位置 | 内容 | 主责 |
-| --- | --- | --- |
-| `firmware/yeye_control.uvprojx` | Keil工程，含LogicDemo、HardwareBench、BoardSelfTest三个目标 | 主控 |
-| `firmware/src/board_self_test.c` | 标准库用户灯双闪、时钟配置检查、128字节RAM自检 | 主控 |
-| `firmware/src/car.c` | 启动、停止、路径失效与通信超时状态机 | 主控 |
-| `firmware/src/protocol.c` | 定长结果包、CRC、流式接收解析 | 主控；视觉按协议发送 |
-| `firmware/src/board.c` | HSI时钟、滴答、待启用UART、调试输出变量 | 主控；硬件复核引脚 |
-| `docs/` | 操作说明、协议草案、状态图、引脚候选、验证记录 | 三人共同阅读 |
-| `tests/` | 主控C代码的电脑端自动测试 | 主控 |
-| `tools/` | 编译、测试、调试初始化和Python编码示例 | 主控；视觉参考编码示例 |
+主控在Keil用Project → Open Project打开上述新路径。原control/firmware中的正式工程已迁走，该目录只保留历史本机缓存；不再打开旧UART临时工程。没有创建CubeMX配置或.ioc文件。
 
-主控学习标准库入口：[标准库代码说明](docs/standard_library.md)，按时钟→GPIO→USART→NVIC顺序阅读board.c。
+## 文件按层放置
 
-## 当前完成范围
+```text
+control/
+├── Core/
+│   ├── Inc/stm32f4xx_conf.h
+│   ├── Src/                 main.c和四个独立目标入口
+│   └── Startup/             F407启动汇编及许可
+├── App/
+│   ├── Car/                 car.c / car.h
+│   └── Diagnostics/         motor_bench.c / motor_bench.h
+├── Drivers_Custom/
+│   ├── Board/               board.c / board.h
+│   ├── Motor/               motor_bench_pwm与motor_direct_gpio
+│   └── Communication/       protocol.c / protocol.h
+├── Drivers/                 cmsis / stm32 / stdperiph
+├── Algorithms/              纯算法落点，当前仅范围说明
+├── Tests/Host/              原电脑测试和fakes
+├── MDK-ARM/                 yeye_control与motor_direct工程
+├── tools/                   现有编译、检查、调试配置脚本
+├── docs/                    操作、协议、引脚、验证与历史交付
+├── build/                   电脑输出；firmware/保存新ARM构建
+└── firmware/                旧本机缓存与迁移说明
+```
 
-- 台式机Keil5.24a / ARM Compiler 5.06 update 5，已补充官方STM32F4xx_DFP 2.17.1。
-- FLASH `0x08000000 / 512 KiB`，普通SRAM `0x20000000 / 128 KiB`。64 KiB CCM尚未分配。
-- 工程依赖随代码保存，路径均相对工程目录。LogicDemo不访问外设寄存器。
-- 外设配置调用RCC_*、GPIO_Init、USART_Init、NVIC_Init；内核滴答、中断屏蔽与FPU启动使用CMSIS。
-- HardwareBench使用内部HSI 16MHz、1ms滴答、约5ms一次主循环调度，不依赖外部晶振。
+保留原文件名和函数名，便于接续学习材料。没有独立car_control／car_state、PID、Encoder、Sensor或tracking实现；后续有实际任务再拆分或新增，不能把目录存在算成功能完成。新应用代码仍按AGENTS写详细中文注释。
 
-**当前不是整车运行程序。** 电机输出只是 `left_request/right_request` 调试值；UART默认关闭，未配置电机PWM、编码器、速度PID、自动完成一圈停车或语音应答。这些功能到货后按实物与接线继续接入。协议参数为草案，尚待视觉共同确认。
+## 当前实现与证据
 
-## 收工与换电脑
+- 基础工程：HSI 16MHz，FLASH 0x08000000／512KiB，普通SRAM 0x20000000／128KiB，CCM未分配。Keil5.24a／ARMCC5.06u5／STM32F4xx_DFP2.17.1沿用。
+- LogicDemo：协议与状态机演示。HardwareBench：1ms滴答、约5ms主循环，UART默认关闭；board_apply_requests仍更新调试请求，尚非整车运动适配。
+- BoardSelfTest：已有2026-10-14双闪与DFU读回[记录](../hardware_preparation/board_self_test_record.md)，不替代UART、电机或整车测试。
+- MotorBench R3：0x020B0003，原30%／20kHz／500ms诊断；已有[R3板内快照](../testing/2026-10-21_motor_bench/r3_watch/README.md)，原起转未通过。
+- MotorContinuous：0x020B1001，原持续A诊断；[配对Watch](../testing/2026-10-24_motor_continuous/watch/README.md)和人工测量已归档，电机仍未转。
+- MotorDirect：0x020B2001，普通GPIO人工单次A500ms，原停止锁定、IWDG和TIM5保护保留；软件与独立入口完成，下载／无动力演练／起转回报仍待主控。
+- 编码器采集、速度PID、整圈停车及语音应答尚未实现；[协议](docs/protocol_v1_draft.md)仍为草案。视觉和硬件内部工作由对应角色负责。
 
-主控保存并验证本地代码；明确要求上传时再提交、推送任务分支。上传后笔记本Clone/Pull相同分支。build目录和IDE本机状态不入库。笔记本安装Keil、对应编译器与芯片包后，执行 `tools/setup_debug.ps1` 再打开工程；已有本机调试设置不会被覆盖。
+迁移后六目标、UART开启分支和独立Direct构建均0错误0警告；现有六个电脑测试脚本通过。六目标BIN／HEX与迁移前逐字节一致。完整方法、日志与边界见[ORG-02](../project_planning/tasks/ORG-02.md)，本轮没有烧录或新实物验证。
 
-硬件接线资料放 `../hardware_preparation/`；视觉侧实现放 `../vision/`；整车测试结果放 `../testing/`。
+## 输出和换电脑
+
+新ARM输出在control/build/firmware，电脑测试输出在control/build。原firmware/build日志与旧产物保留原位供历史记录溯源；AXF含调试路径，迁移后哈希可能变化，不能与历史AXF混用。
+
+当前本机两个uvoptx、uvguix和DebugConfig随工程迁移并保留原CMSIS-DAP设置；Git忽略这些本机文件。另一设备须核对本机编译器、芯片包、下载器和全部目标配置。tools/setup_debug.ps1只在没有已有uvoptx时装旧双目标模板，不能保证新设备六目标调试已齐。
+
+默认本地保存验证，上传当前改动须主控明确要求。同一checkout的工程保存、构建、Git与板卡操作顺序进行。硬件资料在hardware_preparation、视觉在vision、实物证据在testing，路径保持原位。

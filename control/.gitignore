@@ -1,6 +1,8 @@
 # Portable debug defaults are stored in tools/debug_options.xml.
+MDK-ARM/DebugConfig/
 firmware/DebugConfig/
 *.build_log.htm
 *.uvgui.*
 firmware/build_create.log
+MDK-ARM/yeye_uart_check.uvprojx
 firmware/yeye_uart_check.uvprojx

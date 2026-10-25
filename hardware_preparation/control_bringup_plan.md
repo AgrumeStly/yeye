@@ -5,7 +5,7 @@
 ## 当前起点
 
 - 主控已确认负责采购的硬件到齐；不据此认定电机、底盘、供电和视觉模块已完成验收。
-- 现有工程目标为立创天空星 STM32F407VET6 青春版，采用 SPL，工程位于 `control/firmware/yeye_control.uvprojx`。到货实物仍需核对版本。
+- 现有工程目标为立创天空星 STM32F407VET6 青春版，采用 SPL，工程位于 `control/MDK-ARM/yeye_control.uvprojx`。到货实物仍需核对版本。
 - 根据既有验证记录，LogicDemo、HardwareBench 和 UART 开启分支已通过电脑端编译，通信及状态机通过55项电脑检查；这些是2026-10-12的历史记录，本次未重新编译或做实物测试。
 - HardwareBench 当前使用 HSI 16 MHz、1 ms滴答和约5 ms调度。UART默认关闭，电机输出仅更新调试变量。
 - 电机PWM、编码器、速度闭环、一圈判定和动作反馈尚未实现。现有左右请求数值是软件演示值，不能直接当作已标定的轮速或实车参数。

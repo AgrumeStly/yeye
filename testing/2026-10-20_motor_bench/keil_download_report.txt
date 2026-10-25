@@ -1,0 +1,14 @@
+来源：主控于2026-10-20在00对话粘贴的Keil输出，非00直接采集。
+现场同时回报：天空星主板红灯常亮，绿灯仍不闪。
+以下保留主控提供的日志正文：
+
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'MotorBench'
+".\build\motor_bench\motor_bench.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:00
+Load "D:\\Projects\\yeye\\control\\firmware\\build\\motor_bench\\motor_bench.axf"
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Flash Load finished at 20:36:59

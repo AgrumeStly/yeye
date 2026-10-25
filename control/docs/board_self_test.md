@@ -1,12 +1,14 @@
 # 主控：首次板级标准库测试
 
+> 2026-10-25目录迁移：当前Keil工程在control/MDK-ARM，新ARM产物在control/build/firmware；原目标、版本及保护不变。历史产物／日志留原位置，当前分层和迁移验证见[ORG-02](../../project_planning/tasks/ORG-02.md)。
+
 适用板卡：立创天空星 STM32F407VET6。2026-10-14 已实际烧录，主控确认用户灯正常双闪。完整结果见 [实物测试记录](../../hardware_preparation/board_self_test_record.md)。
 
 ## 主控：打开与编译
 
-1. 打开 `control/firmware/yeye_control.uvprojx`。
+1. 打开 `control/MDK-ARM/yeye_control.uvprojx`。
 2. 在 Keil 左上角选择 **BoardSelfTest**，按 F7 编译。
-3. 预期显示 `0 Error(s), 0 Warning(s)`。输出位于 `control/firmware/build/board_test/`，测试源文件为 `control/firmware/src/board_self_test.c`。
+3. 预期显示 `0 Error(s), 0 Warning(s)`。输出位于 `control/firmware/build/board_test/`，测试源文件为 `control/Core/Src/board_self_test.c`。
 
 仓库根目录也可执行：
 

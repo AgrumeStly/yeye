@@ -1,5 +1,7 @@
 # 主控：Keil5 开始操作
 
+2026-10-25目录更新：正式工程现位于control/MDK-ARM，入口在Core/Src，板级适配在Drivers_Custom/Board；新固件输出为control/build/firmware，旧firmware/build留作历史日志。六目标、SPL／CMSIS-DAP及运行行为保留，见[分层架构](../../docs/architecture.md)和[ORG-02](../../project_planning/tasks/ORG-02.md)。
+
 ## 台式机已配置
 
 | 设置 | 当前值 |
@@ -11,9 +13,12 @@
 | 外设库 | STM32F4 SPL V1.3.0，随工程保存；无需另行安装旧版芯片包 |
 | FLASH | 起点0x08000000，大小0x80000 |
 | RAM | 起点0x20000000，大小0x20000；CCM暂不用 |
-| 工程 | control/firmware/yeye_control.uvprojx |
+| 工程 | control/MDK-ARM/yeye_control.uvprojx |
 | 演示目标 | LogicDemo，模拟器 |
 | 首次上板测试 | BoardSelfTest，USB DFU已实际烧录并验证双闪 |
+| 持续转动测试（10-24新增） | **MotorContinuous**，版本0x020B1001，KEY长按松开后只A桥30%／20kHz持续输出，再按KEY停止锁定；[下载及操作](motor_continuous.md)。原MotorBench仍500ms，下载时电池拔开 |
+| 无PWM单次诊断（10-24最新） | **MotorDirect**，版本0x020B2001，GPIO固定10只A桥一次500ms后锁定，强于原30%PWM；[纯Keil操作](motor_direct.md)，先断动力下载并做无动力自动停止演练 |
+| 首次电机台架 | 当前R3版本0x020B0003，保留30%／20kHz／500ms并保存实际活动／停止寄存器。R2已回报Verify OK及绿灯正常但A无动作；本轮按[第13节](motor_bench.md)保持动力电池拔开、驱动OFF，用纯Keil重建／Download、F5与Periodic Window Update采集一次A后保留Watch；不暂停捕捉、不接动力、不加功率 |
 | 板级目标 | HardwareBench，CMSIS-DAP；到货后确认调试器连接设置 |
 
 ## 主控：没有板卡时演示

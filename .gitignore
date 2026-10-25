@@ -1,5 +1,9 @@
 # Local tools and credentials
-/.agents/
+/.agents/*
+!/.agents/skills/
+/.agents/skills/*
+!/.agents/skills/grill-me/
+!/.agents/skills/grilling/
 /.codex/
 /.aws/
 /skills-lock.json
@@ -18,6 +22,7 @@ venv/
 node_modules/
 .DS_Store
 Thumbs.db
+/.obsidian/workspace*.json
 
 # Compiler outputs and machine-specific IDE state
 build/
