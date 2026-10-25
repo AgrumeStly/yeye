@@ -7,7 +7,7 @@
  * 正常超时才推进下一阶段；人工停止立即锁定，防止误将异常测试继续为双桥。
  * 2026-10-24新增独立MotorContinuous目标：只允许A桥，人工启动后持续输出，
  * KEY停止／故障／复位仍撤驱动；宏只在该目标定义，原MotorBench仍为500ms三步序列。
- * MotorDirect使用同一人工触发逻辑，但只允许A桥一次500ms，结束后锁定；
+ * MotorDirect A／B独立目标使用同一人工触发逻辑，每次只允许选中桥一次500ms；
  * 真正的高低电平由独立GPIO适配器生成，不使用原PWM适配器。
  */
 #include "motor_bench.h"
@@ -21,7 +21,7 @@ static void wait_release(motor_bench_t *b, uint32_t now) {
 }
 
 void motor_bench_init(motor_bench_t *b, uint32_t now) {
-    /* 不从之前的RAM值恢复进度；复位后重新从A开始且必须重新人工触发。 */
+    /* 不从之前的RAM值恢复进度；复位后从目标设定的单桥或原序列开始，须人工触发。 */
     memset(b, 0, sizeof(*b));
     b->raw_since = now;
     wait_release(b, now);
@@ -39,8 +39,8 @@ void motor_bench_tick(motor_bench_t *b, uint32_t now, uint8_t raw_pressed) {
     if ((uint32_t)(now - b->raw_since) >= MOTOR_BENCH_DEBOUNCE_MS)
         b->stable_button = raw;
 
-#if defined(MOTOR_CONTINUOUS_A_TARGET) || defined(MOTOR_DIRECT_A_TARGET)
-    /* 两种单A诊断都只允许step=0；禁止错误阶段值切到B或双桥。 */
+#if defined(MOTOR_CONTINUOUS_A_TARGET) || defined(MOTOR_DIRECT_A_TARGET) || defined(MOTOR_DIRECT_B_TARGET)
+    /* 单桥诊断只允许step=0；禁止错误阶段值切到另一桥或双桥。 */
     if (b->step != 0u) {
 #else
     if (b->step > 2u) {
@@ -60,7 +60,7 @@ void motor_bench_tick(motor_bench_t *b, uint32_t now, uint8_t raw_pressed) {
          */
         else if ((uint32_t)(now - b->run_since) >= MOTOR_BENCH_RUN_MS) {
             b->output_mask = 0u;
-#ifdef MOTOR_DIRECT_A_TARGET
+#if defined(MOTOR_DIRECT_A_TARGET) || defined(MOTOR_DIRECT_B_TARGET)
             /* 固定高低电平相当于满导通，只允许一次短时诊断；超时立即锁定，
              * 不进入B／AB，也不能在松键后重复触发，复测必须先断动力再复位。
              */
@@ -96,9 +96,13 @@ void motor_bench_tick(motor_bench_t *b, uint32_t now, uint8_t raw_pressed) {
             held = (uint32_t)(b->raw_since - b->state_since);
             if (b->state == MOTOR_BENCH_ARMED && held >= MOTOR_BENCH_HOLD_MS &&
                 held < MOTOR_BENCH_STUCK_MS) {
+#ifdef MOTOR_DIRECT_B_TARGET
+                b->output_mask = MOTOR_BENCH_MASK_B;
+#else
                 b->output_mask = b->step == 0u ? MOTOR_BENCH_MASK_A :
                     (b->step == 1u ? MOTOR_BENCH_MASK_B :
                      (MOTOR_BENCH_MASK_A | MOTOR_BENCH_MASK_B));
+#endif
                 b->run_since = now;
                 b->state = MOTOR_BENCH_RUNNING;
             } else wait_release(b, now);

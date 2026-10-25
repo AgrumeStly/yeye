@@ -11,6 +11,7 @@
 | 判断该找哪个Codex对话、怎样交接 | [协作标准与对话登记](project_planning/collaboration_standard.md) |
 | 给现有对话更新职责或恢复上下文 | [完整接续Prompt](project_planning/agent_initialization_prompts.md) |
 | 在笔记本Clone当前版本并接续Codex | [G-03上传与设备接续](project_planning/tasks/G-03.md) |
+| 台式机更新正式版本并继续Codex | [G-04正式版本与台式机接续](project_planning/tasks/G-04.md) |
 | 交付一项跨轮任务 | [任务文件与模板](project_planning/tasks/README.md) |
 | 查文件放哪、以哪份为准 | [目录与内容源](DIRECTORY_GUIDE.md) |
 | 看本次为什么这样整理、阅读和检查范围 | [体系审查与迁移记录](project_planning/organization_review.md) |

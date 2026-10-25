@@ -10,8 +10,10 @@
 | [2026-10-20_motor_bench](2026-10-20_motor_bench/acceptance_record.md) | 原版下载、启动故障与R1后绿灯恢复 | 自主启动完整变量／电机通过证据未齐 |
 | [2026-10-21_motor_bench](2026-10-21_motor_bench/no_rotation_record.md) | 原PWM／R2无动作、[静态电压续报](2026-10-21_motor_bench/i05_measurement_results.md)、[R3快照](2026-10-21_motor_bench/r3_watch/README.md) | 目录日期是建档日期，续报保留实际日期；板内启停不证明外部波形／起转 |
 | [2026-10-24_motor_continuous](2026-10-24_motor_continuous/watch/README.md) | 持续A启用／KEY停止配对Watch | 电机未转；[示波器结果表](2026-10-24_motor_continuous/scope_results.md)未填写，不算已测波形 |
+| [2026-10-25_motor_direct](2026-10-25_motor_direct/acceptance_record.md) | 主控回报A通电起转、约500ms后停转，随后回报B也正常 | B的具体灯态／时长／下载读回未记录；原PWM失败及编码器、闭环、整车验证仍独立保留 |
+| [2026-10-25_motor_pwm](2026-10-25_motor_pwm/acceptance_record.md) | 重写后1kHz／50%／500ms；软件检查通过，主控回报完整流程符合预期，A/B分别起转与自动停转人工验收完成 | 文字回报，无独立Watch/波形/精确计时；AB同时运行、编码器及闭环未验收 |
 
-首次主板双闪另在[board_self_test_record.md](../hardware_preparation/board_self_test_record.md)，原路径保留。当前MotorDirect操作查[固件说明](../control/docs/motor_direct.md)，不能把旧测试结果自动套给它。
+首次主板双闪另在[board_self_test_record.md](../hardware_preparation/board_self_test_record.md)，原路径保留。MotorDirect操作查[固件说明](../control/docs/motor_direct.md)及[B版说明](../control/docs/motor_direct_b.md)，不能把旧测试结果自动套给它。
 
 ## 新记录怎样保存
 

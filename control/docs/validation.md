@@ -1,5 +1,46 @@
 # 主控基础工程验证记录
 
+## 2026-10-25：MotorPwm人工验收回报
+
+主控在收到新MotorPwm下载、无动力演练、A/B分别500ms测试及断动力收尾流程后回报：“全部符合预期”。据此记录A/B分别PWM起转、约500ms自动停转与阶段灯态符合本轮流程，C-02B-PWM-R4软件及人工验收完成。证据为主控文字回报，未另附Watch版本读回、仪器计时、波形或录像；不把约500ms描述写成精密测量，也不据此确认AB同时运行、编码器或闭环。详见[现场原始回报与结果](../../testing/2026-10-25_motor_pwm/acceptance_record.md)、[任务](../../project_planning/tasks/C-02B-PWM-R4.md)。本轮仅回写文档，未改代码或重新构建；全局摘要由00据文件更新。
+
+## 2026-10-25：按主控要求重写PWM
+
+主控确认AB直接驱动均正常，随后要求删除旧PWM代码重写。已替换motor_bench_main.c与motor_bench_pwm.c，更新接口，新增独立motor_pwm.uvprojx／MotorPwm。新单次版本0x020B0004：1kHz、50%、500ms，只有选中桥IN1切AF，IN2始终GPIO低；MOE使能失败立即撤驱动并锁存故障32。纯按键状态机、Direct A/B与SPL依赖保持现有接口。
+
+Keil5／ARMCC5.06u5：独立MotorPwm与原MotorBench均0错误0警告，Code4908／RO424／RW64／ZI1288；独立BIN5396字节，SHA256为ea10fb83a5497c40c346ee6005073562dade79b013fcc8c6a5f6ec4d49d65a33，两入口BIN一致。MotorContinuous仍20kHz／30%持续A，版本升级0x020B1002，构建0错误0警告，Code4864／RO424／RW64／ZI1288，BIN哈希1002748e7755bf9ec762bfdee29f389e51b48ca411abb669a4ac510003783374。
+
+电脑模型：新PWM168项／9场景，启动154项／10场景，按键73项；持续115项／7场景与启动154项；Direct A/B各52593项／9场景及Direct启动154项通过。测试更新了新频率/占空比、仅IN1切AF和版本的预期，并增加真实SysTick下完整A/B/AB独立人工触发、500ms边界、终态锁定；MOE拒绝使能场景改为验证立即故障停止。其他停止、回绕与启动失败场景保留。
+
+工程和本机uvoptx已核对独立目标、源码引用、CMSIS-DAP/SWD及Flash配置。新工程准备时XML空字段格式导致Keil退出15，规范化空字段后实际构建通过。全部是软件检查，未由代理下载、访问调试器或运行马达；新PWM起转、外部波形与电流仍待主控。操作、任务与持久化日志分别见[MotorPwm](motor_pwm.md)、[C-02B-PWM-R4](../../project_planning/tasks/C-02B-PWM-R4.md)、[本次证据](../../testing/2026-10-25_motor_pwm/acceptance_record.md)。
+
+## 2026-10-25：笔记本Keil下载配置
+
+维护：主控／01。依据：主控要求继续调整Keil5设置，使工程具备手动下载配置；本轮未执行Flash Download、目标复位或运行。
+
+开工发现主控已生成motor_direct.uvoptx、界面文件和DebugConfig，并将独立工程UpdateFlashBeforeDebugging改为1。独立工程实际本机Debug驱动仍为UL2CM3，未选CMSIS-DAP。修改前将两工程及现有独立uvoptx备份到control/build/keil_laptop_settings_backup_20261025_133141，保留已有DebugConfig。
+
+- 修正独立motor_direct.uvoptx并新建六目标yeye_control.uvoptx。除LogicDemo保留模拟器外，板级目标选BIN/CMSIS_AGDI.dll；CMSIS_AGDI注册项设置SWD、1MHz（本机驱动频率表索引-S3）、自动选择已接入的DAPLink。
+- Flash设置为STM32F4xx_512.FLM，起点0x08000000，范围0x80000，算法RAM起点0x20000000、大小0x1000；选擦除／编程／校验，不选下载后复位运行。Flash使用Debug Driver；各目标关闭Update Target before Debugging，实际下载由主控在Keil手动点击Flash → Download。
+- 预置MotorDirect版本、fault、ms、watchdog_stage、状态机和GPIO诊断六项Watch，MotorBench／MotorContinuous使用各自变量；启用Periodic Window Update，关闭Run to main及Trace／Event Recorder自动恢复。未改现有dbgconf寄存器值、应用代码、保护参数和编译选项。
+- 已静态检查两份XML、六目标覆盖、CMSIS-DAP DLL与Flash算法路径及Watch变量对应源码；此前本机六目标及独立Direct均已编译通过，本轮配置不改变编译内容。尝试打开Keil核对界面，实际窗口标题确认载入独立工程，但当前自动化未能读取Options对话框，因此不将界面设置或SWD通信写成已实测通过。
+
+两份uvoptx为本机忽略文件，不能通过Git默认同步。主控退出现有Keil后重新打开D:\projects\projectsyeye\control\MDK-ARM\motor_direct.uvprojx，以重新加载本机设置；旧窗口如询问保存，选择No避免覆盖新配置。动力电池拔开、驱动OFF时，Options for Target → Debug应为CMSIS-DAP Debugger；Settings核对SWD／1MHz，Utilities使用Debug Driver、关闭Update Target before Debugging；Flash Download页核对STM32F4xx 512KB／0x08000000、Program／Verify与不勾Reset and Run，再按既有MotorDirect说明手动下载。Programming Done／Verify OK尚无本轮回报；主控无需重复报告既定硬件型号。
+
+## 2026-10-25：笔记本芯片包安装与编译验证
+
+维护：主控／01。依据：主控明确要求在已接入DAPLink的笔记本安装项目缺少的芯片包、驱动等；不含烧录或电机操作授权。
+
+- 设备名JOKEBEARDESKTOP，实际目录D:\projects\projectsyeye；分支codex/current-version-20261025，完整HEAD为0f033c6f67e5d4bef27b1c5afdd9d7014ac0456d。开工工作区干净。
+- 复用D:\software\Keil5，TOOLS.INI标记5.24a；实际运行ARMCC版本查询，结果为5.06 update 5 build 528。Git 2.50.1、MinGW GCC 6.3.0已存在。
+- 从Keil官方HTTPS地址下载并使用本机签名有效的UV4/PackUnzip.exe安装Keil.STM32F4xx_DFP 2.17.1。该包声明依赖ARM.CMSIS 5.6.0，因此同时安装5.6.0，原5.0.1保留。两个安装进程均退出0，安装至现有ARM/PACK目录，STM32F4xx_512.FLM存在。
+- 下载地址分别为https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack 与https://www.keil.com/pack/ARM.CMSIS.5.6.0.pack 。本次下载文件SHA256分别为C7E0F3595AA5EE4C2DA2C0DE79598B8A91FC5F4F77E16C3B39C674429FB0F4EB及15A139AAB106111F82BE486C5D0834C9AB77DAADF27391781FEE8185B1E85285；这些是本机留证值，不是另行取得的厂家校验值。安装包保留在用户临时目录。
+- 已接入LC DAPLINK，USB VID_0D28/PID_0204。HID、WinUSB、USB串口、存储及复合接口均Status OK；驱动提供商Microsoft，IsSigned=True。串口为COM9。现有Keil包含CMSIS_AGDI.dll与CMSIS_DAP.dll，无需另装第三方USB驱动，也未替换当前驱动或升级DAPLink固件。
+- 顺序构建yeye_control.uvprojx六目标以及motor_direct.uvprojx独立目标，全部0错误0警告。MotorBench、MotorContinuous、MotorDirect导出BIN的SHA256分别与ORG-02记录的d09c4095…、5cd07579…、6377f00d…一致。六目标源码文件引用检查无缺失。
+- 本机PowerShell默认策略禁止执行.ps1；仅在获准的本次构建子进程使用-NoProfile -ExecutionPolicy Bypass运行原build_keil.ps1，并显式传入-KeilRoot D:\software\Keil5；未修改全局执行策略。独立工程使用Keil命令行构建。日志在control/build/firmware/*_build.log，独立入口日志为MotorDirect_standalone_laptop_build.log；均为Git忽略的本机输出。
+
+本次没有重跑电脑模型或UART开启分支，没有打开调试会话、复位目标、烧录、驱动电机、上传或跨聊天发送。两个本机uvoptx及DebugConfig仍未配置，六目标人工Debug／Flash／Watch设置与实际下载链路仍待单独核对；不使用旧setup_debug.ps1双目标模板宣称六目标配置齐全。USB枚举及编译通过不代表板卡通信、MotorDirect起转或整车验收完成。全局状态仍由00按本模块证据顺序汇总。
+
 ## 2026-10-25：ORG-02物理分层与等价检查
 
 按主控确认把Core、App、Drivers_Custom、Drivers、Algorithms、Tests、MDK-ARM放在control内。应用C／H和启动汇编只移动，4份电脑测试更新6处直接包含真实.c的路径；工程、工具、清单及文档引用同步。新Keil入口为[MDK-ARM/yeye_control.uvprojx](../MDK-ARM/yeye_control.uvprojx)，Direct独立入口为[同目录motor_direct.uvprojx](../MDK-ARM/motor_direct.uvprojx)，新ARM输出在control/build/firmware。

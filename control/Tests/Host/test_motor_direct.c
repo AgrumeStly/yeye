@@ -6,6 +6,17 @@
 #include <stdlib.h>
 #include <string.h>
 #include <setjmp.h>
+#ifdef MOTOR_DIRECT_B_TARGET
+#define TEST_MASK 2u
+#define TEST_PIN GPIO_Pin_13
+#define TEST_REVISION 0x020b2002u
+#define OTHER_MASK 1u
+#else
+#define TEST_MASK 1u
+#define TEST_PIN GPIO_Pin_9
+#define TEST_REVISION 0x020b2001u
+#define OTHER_MASK 2u
+#endif
 #include "../../Drivers_Custom/Motor/motor_direct_gpio.c"
 #define main direct_application_main
 #include "../../Core/Src/motor_direct_main.c"
@@ -47,7 +58,7 @@ void GPIO_Init(void *p,GPIO_InitTypeDef *g) {
 }
 void GPIO_ResetBits(void *p,uint16_t n) { ((model_gpio_t *)p)->ODR &= ~(uint32_t)n; }
 void GPIO_SetBits(void *p,uint16_t n) {
-    CHECK(p==GPIOE && n==GPIO_Pin_9); /* 非A1的任何置高请求直接失败。 */
+    CHECK(p==GPIOE && n==TEST_PIN); /* 非当前选定桥IN1的任何置高请求直接失败。 */
     ++set_calls;
     if(disturb_set==0u) ((model_gpio_t *)p)->ODR |= n;
 }
@@ -85,7 +96,7 @@ static void press_to_run(void) {
     CHECK(g_motor_direct.state==MOTOR_BENCH_ARMED && set_calls==0u);
     /* 第一次采样松键时才建立raw_since；满30ms差值需要31次1ms调用。 */
     pressed=0u;ticks(31u);
-    CHECK(g_motor_direct.state==MOTOR_BENCH_RUNNING && g_motor_direct.output_mask==1u);
+    CHECK(g_motor_direct.state==MOTOR_BENCH_RUNNING && g_motor_direct.output_mask==TEST_MASK);
     CHECK(set_calls==1u && g_motor_direct_gpio_diag.active.valid==1u);
     CHECK(g_motor_direct_gpio_diag.enable_calls==1u && g_motor_direct_gpio_diag.stopped.valid==0u);
 }
@@ -106,12 +117,12 @@ static void lockout(void) {
 static void normal_timeout(void) {
     motor_direct_gpio_snapshot_t kept;
     trigger_a();
-    CHECK(g_motor_direct_gpio_diag.enable_count==1u && (GPIOE->ODR&0x6a00u)==0x200u);
+    CHECK(g_motor_direct_gpio_diag.enable_count==1u && (GPIOE->ODR&0x6a00u)==TEST_PIN);
     CHECK((GPIOE->MODER&0x3ccc0000u)==0x14440000u && GPIOE->AFR[1]==0u);
     CHECK((GPIOE->ODR&8u)!=0u); /* 未选PE3不被四脚写入破坏。 */
     memcpy(&kept,(const void *)&g_motor_direct_gpio_diag.active,sizeof(kept));
     ticks(499u);CHECK(g_motor_direct.state==MOTOR_BENCH_RUNNING && set_calls==1u);
-    CHECK((GPIOE->ODR&0x6a00u)==0x200u);
+    CHECK((GPIOE->ODR&0x6a00u)==TEST_PIN);
     ticks(1u);stopped_ok(MOTOR_DIRECT_STOP_TIMEOUT);
     CHECK(g_motor_direct.state==MOTOR_BENCH_COMPLETE && g_motor_direct.step==0u);
     CHECK(g_motor_direct_gpio_diag.elapsed_ms==500u);
@@ -133,7 +144,7 @@ static void bad_step(void) {
     CHECK(g_motor_direct.state==MOTOR_BENCH_ABORTED);lockout();
 }
 static void illegal_request(void) {
-    trigger_a();g_motor_direct.output_mask=2u;ticks(1u);
+    trigger_a();g_motor_direct.output_mask=OTHER_MASK;ticks(1u);
     stopped_ok(MOTOR_DIRECT_STOP_INVALID_MASK);
     CHECK(g_motor_direct_fault==32u && g_motor_direct.output_mask==0u);
     CHECK(g_motor_direct.state==MOTOR_BENCH_ABORTED);lockout();
@@ -158,12 +169,12 @@ static void actual_readback(void) {
     CHECK(g_motor_direct_gpio_diag.enable_calls==1u && g_motor_direct_gpio_diag.enable_count==0u);
     CHECK(g_motor_direct_gpio_diag.active.gpio_odr==GPIOE->ODR);
     CHECK(g_motor_direct_gpio_diag.active.gpio_idr==0x1234u);
-    CHECK((g_motor_direct_gpio_diag.active.gpio_odr&0x200u)==0u);
+    CHECK((g_motor_direct_gpio_diag.active.gpio_odr&TEST_PIN)==0u);
     ticks(500u);stopped_ok(MOTOR_DIRECT_STOP_TIMEOUT);
 }
 static void clock_fault(void) {
     CHECK(g_motor_direct_fault==3u && g_motor_direct.state==MOTOR_BENCH_ABORTED);
-    CHECK(motor_direct_gpio_apply(1u)==0); /* 模块自身也拒绝时钟失败后的误调用。 */
+    CHECK(motor_direct_gpio_apply(TEST_MASK)==0); /* 模块自身也拒绝时钟失败后的误调用。 */
     pressed=1u;ticks(1500u);pressed=0u;ticks(40u);
     CHECK(set_calls==0u && (GPIOE->ODR&0x6a00u)==0u && watchdog_enabled==0u);
 }
@@ -179,7 +190,7 @@ static void run(void (*test)(void),uint8_t clock_bad) {
     pressed=disturb_set=0u;bad_clock=clock_bad;set_calls=reloads=watchdog_enabled=0u;startup_counter=0u;
     scenario=test;
     if(setjmp(completed)==0) { SystemInit();(void)direct_application_main(); }
-    CHECK(g_motor_direct_revision==0x020b2001u);
+    CHECK(g_motor_direct_revision==TEST_REVISION);
     CHECK(memcmp(&model_tim1,&(model_tim_t){0},sizeof(model_tim1))==0);
     CHECK(RCC->APB2ENR==0u); /* GPIO置高、TIM5时基存在，TIM1／APB2始终不启用。 */
 }

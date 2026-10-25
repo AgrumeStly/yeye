@@ -1,5 +1,7 @@
 # C-02B 双电机首次开环试转操作说明
 
+> 2026-10-25：主控确认AB直接驱动均正常并要求删除旧PWM代码重写，当前源码已换成0x020B0004、1kHz／50%的新实现。**以下旧R3参数和无动力限制属于历史记录；本次实测使用[MotorPwm独立工程与新步骤](motor_pwm.md)。** 原R3失败及快照仍是原版本证据，不再用当前源码重建旧R3。
+
 > 2026-10-25目录迁移：当前Keil工程在control/MDK-ARM，新ARM产物在control/build/firmware；原目标、版本及保护不变。历史产物／日志留原位置，当前分层和迁移验证见[ORG-02](../../project_planning/tasks/ORG-02.md)。
 
 2026-10-24最新简化诊断为[MotorDirect固定GPIO单次500ms](motor_direct.md)：原接线、无PWM、只A一次，结束锁定。主控当前无法去实验室，本次按该独立说明选择目标；下文是保留的原MotorBench流程。

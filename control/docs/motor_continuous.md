@@ -1,5 +1,7 @@
 # MotorContinuous：A桥持续转动测试
 
+> 2026-10-25：按主控要求重写PWM入口与驱动后，共用实现的MotorContinuous版本升级为0x020B1002，仍保留20kHz／30%、人工触发持续A与KEY停止锁定。当前源码仅IN1切AF，IN2保持GPIO低；旧0x020B1001的Watch、BIN哈希与失败结果属于历史版本。新持续目标已编译和模型检查，未重新实物验证；本轮起转测试使用[MotorPwm单次500ms流程](motor_pwm.md)，不使用持续目标。
+
 > 2026-10-25目录迁移：当前Keil工程在control/MDK-ARM，新ARM产物在control/build/firmware；原目标、版本及保护不变。历史产物／日志留原位置，当前分层和迁移验证见[ORG-02](../../project_planning/tasks/ORG-02.md)。
 
 日期：2026-10-24。维护：主控／01。依据：主控本轮直接要求“让马达一直转”；沿用已确认型号、端口及DAPLink／Keil5配置。代码、编译与电脑检查完成；主控已反馈轮子不转、再次按KEY后绿灯闪烁，起转未通过，不宣称电机故障已解决。

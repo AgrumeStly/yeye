@@ -96,7 +96,7 @@ void __WFI(void) {
 }
 int motor_bench_pwm_init(void) { output_mask = 0u; return mode == MODEL_BAD_CLOCK ? 0 : 1; }
 void motor_bench_pwm_stop(void) { output_mask = 0u; ++stop_calls; }
-void motor_bench_pwm_apply(uint8_t m) { output_mask = m; if (m != 0u) ++nonzero_output_calls; }
+int motor_bench_pwm_apply(uint8_t m) { output_mask = m; if (m != 0u) ++nonzero_output_calls; return 1; }
 void motor_bench_pwm_diag_context(uint32_t ms, uint32_t state, uint32_t fault,
                                   motor_bench_stop_reason_t reason) {
     (void)ms; (void)state; (void)fault; (void)reason;
@@ -143,9 +143,9 @@ static void run_case(model_mode_t scenario, uint32_t initial_counter, uint32_t e
     CHECK(systick_started == 1u && g_motor_bench_ms >= 1100u);
     CHECK(output_mask == 0u && nonzero_output_calls == 0u && order_errors == 0u);
 #ifdef MOTOR_CONTINUOUS_A_TARGET
-    CHECK(timer_running == 0u && g_motor_bench_revision == 0x020b1001u);
+    CHECK(timer_running == 0u && g_motor_bench_revision == 0x020b1002u);
 #else
-    CHECK(timer_running == 0u && g_motor_bench_revision == 0x020b0003u);
+    CHECK(timer_running == 0u && g_motor_bench_revision == 0x020b0004u);
 #endif
     if (expected_fault == 0u) {
         CHECK(g_motor_bench.state == MOTOR_BENCH_READY);

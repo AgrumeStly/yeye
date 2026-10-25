@@ -1,8 +1,8 @@
 /**
  * @file motor_direct_gpio.c
- * @brief SPL普通GPIO短时驱动：PE9高、PE11／13／14低，无TIM1、无PWM、无AF切换。
+ * @brief SPL普通GPIO短时驱动：A版PE9高或B版PE13高，其余三脚低；无PWM／AF。
  *
- * AT8236输入10为一个方向的导通，00为滑行／休眠；A不是已标定的左右轮。
+ * AT8236输入10为一个方向的导通，00为滑行／休眠；A／B尚未标定左右轮。
  * 恒定高电平在电机侧相当于满导通，强于原30%PWM，500ms限制由人工状态机执行。
  * 复位最初GPIO高阻，依赖驱动下拉；进入应用后先主动拉低，再等待新的人工触发。
  * GPIO_Mode_OUT使定时器复用不参与输出，禁止用主板引脚承担电机动力电流。
@@ -11,6 +11,13 @@
 #include "stm32f4xx.h"
 
 #define DIRECT_PINS (GPIO_Pin_9 | GPIO_Pin_11 | GPIO_Pin_13 | GPIO_Pin_14)
+#ifdef MOTOR_DIRECT_B_TARGET
+#define DIRECT_ALLOWED_MASK 2u
+#define DIRECT_HIGH_PIN GPIO_Pin_13 /* BIN1=1、BIN2=0；A桥两输入保持低。 */
+#else
+#define DIRECT_ALLOWED_MASK 1u
+#define DIRECT_HIGH_PIN GPIO_Pin_9  /* AIN1=1、AIN2=0；B桥两输入保持低。 */
+#endif
 static uint8_t gpio_ready, output_ready, active_mask, requested_mask;
 static uint32_t diagnostic_ms, diagnostic_state, diagnostic_fault;
 static motor_direct_stop_reason_t diagnostic_reason;
@@ -40,7 +47,7 @@ static void pins_output(void) {
 }
 
 /** @brief 启用／停止操作完成后固定次数读取真实GPIO／RCC，不生成期望值。
- * @param s volatile RAM保存区；mask为本次A事件标签，停止帧mask1不表示还输出。
+ * @param s volatile RAM保存区；mask为当前桥事件标签，停止帧mask不表示还输出。
  * @return 无。valid最后发布；IDR只读一次，不能代替稳定电压或机械状态检测。
  */
 static void capture(volatile motor_direct_gpio_snapshot_t *s, uint8_t mask) {
@@ -112,24 +119,24 @@ int motor_direct_gpio_apply(uint8_t mask) {
         if (active_mask != 0u) motor_direct_gpio_stop();
         return 1;
     }
-    if (output_ready == 0u || mask != 1u) {
-        /* 不接受B／AB或未初始化的驱动请求；调用者据返回0锁存故障，禁止恢复。 */
+    if (output_ready == 0u || mask != DIRECT_ALLOWED_MASK) {
+        /* 只接受目标宏选定的单桥；其它桥／AB／未初始化均锁存故障。 */
         stop_with_reason(MOTOR_DIRECT_STOP_INVALID_MASK);
         return 0;
     }
     if (active_mask != 0u) return 1; /* 每1ms重复请求不重启500ms窗口或重复置高。 */
     GPIO_ResetBits(GPIOE, DIRECT_PINS);
     pins_output();
-    GPIO_SetBits(GPIOE, GPIO_Pin_9); /* 只给AIN1逻辑高；AIN2／B两输入始终低。 */
-    active_mask = 1u;
+    GPIO_SetBits(GPIOE, DIRECT_HIGH_PIN); /* 只给当前目标选定桥的IN1逻辑高。 */
+    active_mask = DIRECT_ALLOWED_MASK;
     ++g_motor_direct_gpio_diag.enable_calls;
     g_motor_direct_gpio_diag.start_ms = diagnostic_ms;
     g_motor_direct_gpio_diag.stop_ms = 0u;
     g_motor_direct_gpio_diag.elapsed_ms = 0u;
     g_motor_direct_gpio_diag.stop_reason = 0u;
     g_motor_direct_gpio_diag.stopped.valid = 0u;
-    capture(&g_motor_direct_gpio_diag.active, 1u);
-    if ((g_motor_direct_gpio_diag.active.gpio_odr & DIRECT_PINS) == GPIO_Pin_9)
+    capture(&g_motor_direct_gpio_diag.active, DIRECT_ALLOWED_MASK);
+    if ((g_motor_direct_gpio_diag.active.gpio_odr & DIRECT_PINS) == DIRECT_HIGH_PIN)
         ++g_motor_direct_gpio_diag.enable_count;
     return 1;
 }

@@ -128,13 +128,43 @@ static void stopped_ok(motor_bench_stop_reason_t reason) {
     CHECK((g_motor_bench_pwm_diag.stopped.gpio_odr&0x6a00u)==0u);
 }
 #ifndef MOTOR_CONTINUOUS_A_TARGET
+/* 人工输入贯穿真实SysTick，核对A→B→AB各阶段只运行500ms且不自行续跑。 */
+static void manual_sequence(void) {
+    unsigned stage;
+    uint32_t expected_mask;
+    ticks(1100u);
+    for (stage=0u; stage<3u; ++stage) {
+        CHECK(g_motor_bench.state==MOTOR_BENCH_READY && g_motor_bench.step==stage);
+        ticks(2500u);
+        CHECK(g_motor_bench.output_mask==0u && (TIM1->BDTR&TIM_BDTR_MOE)==0u);
+        pressed=1u; ticks(1100u);
+        CHECK(g_motor_bench.state==MOTOR_BENCH_ARMED && g_motor_bench.output_mask==0u);
+        pressed=0u; ticks(31u);
+        expected_mask=stage==0u ? 1u : (stage==1u ? 2u : 3u);
+        CHECK(g_motor_bench.state==MOTOR_BENCH_RUNNING && g_motor_bench.output_mask==expected_mask);
+        CHECK(TIM1->CCR1==((expected_mask&1u)!=0u ? 8000u : 0u));
+        CHECK(TIM1->CCR3==((expected_mask&2u)!=0u ? 8000u : 0u));
+        CHECK(TIM1->CCR2==0u && TIM1->CCR4==0u);
+        CHECK((GPIOE->MODER&0x30c00000u)==0x10400000u); /* PE11/PE14始终GPIO。 */
+        ticks(499u); CHECK(g_motor_bench.state==MOTOR_BENCH_RUNNING);
+        ticks(1u);
+        CHECK(g_motor_bench_pwm_diag.elapsed_ms==500u && g_motor_bench.output_mask==0u);
+        CHECK((GPIOE->MODER&0x3ccc0000u)==0x14440000u && (GPIOE->ODR&0x6a00u)==0u);
+        CHECK((TIM1->BDTR&TIM_BDTR_MOE)==0u && g_motor_bench_pwm_diag.stop_reason==MOTOR_BENCH_STOP_TIMEOUT);
+        ticks(1100u);
+    }
+    CHECK(g_motor_bench.state==MOTOR_BENCH_COMPLETE);
+    pressed=1u; ticks(1200u); pressed=0u; ticks(1100u);
+    CHECK(g_motor_bench.state==MOTOR_BENCH_COMPLETE && g_motor_bench_pwm_diag.enable_calls==3u);
+}
 static void normal_timeout(void) {
     motor_bench_pwm_snapshot_t kept;
     trigger_a();
     CHECK(g_motor_bench_pwm_diag.enable_count==1u && g_motor_bench_pwm_diag.active.mask==1u);
-    CHECK(g_motor_bench_pwm_diag.active.tim_ccr1==240u && g_motor_bench_pwm_diag.active.tim_ccr3==0u);
-    CHECK(g_motor_bench_pwm_diag.active.tim_arr==799u && g_motor_bench_pwm_diag.active.tim_psc==0u);
-    CHECK((g_motor_bench_pwm_diag.active.gpio_moder&0x3ccc0000u)==0x28880000u);
+    CHECK(g_motor_bench_pwm_diag.active.tim_ccr1==8000u && g_motor_bench_pwm_diag.active.tim_ccr3==0u);
+    CHECK(g_motor_bench_pwm_diag.active.tim_arr==15999u && g_motor_bench_pwm_diag.active.tim_psc==0u);
+    CHECK((g_motor_bench_pwm_diag.active.gpio_moder&0x3ccc0000u)==0x14480000u);
+    CHECK((g_motor_bench_pwm_diag.active.tim_ccer&0x1111u)==0x0101u);
     memcpy(&kept,(const void *)&g_motor_bench_pwm_diag.active,sizeof(kept));
     TIM1->CNT=777u; GPIOE->IDR=0x6a00u; ticks(499u);
     CHECK(g_motor_bench.state==MOTOR_BENCH_RUNNING); ticks(1u);
@@ -159,13 +189,17 @@ static void fault_stop(void) {
 }
 #ifndef MOTOR_CONTINUOUS_A_TARGET
 static void disturbed_readback(void) {
-    disturb_enable=1u; trigger_a();
+    /* MOE被硬件模型拒绝时，新入口应同一滴答锁定并撤去GPIO，而不是继续RUNNING。 */
+    ticks(1100u); pressed=1u; ticks(1100u); disturb_enable=1u;
+    pressed=0u; ticks(31u);
+    CHECK(g_motor_bench.state==MOTOR_BENCH_ABORTED && g_motor_bench_fault==32u);
     CHECK(g_motor_bench_pwm_diag.enable_count==0u && g_motor_bench_pwm_diag.enable_calls==1u);
-    CHECK(g_motor_bench_pwm_diag.active.tim_bdtr==TIM1->BDTR);
+    CHECK((g_motor_bench_pwm_diag.active.tim_bdtr&TIM_BDTR_MOE)==0u);
     CHECK(g_motor_bench_pwm_diag.active.tim_ccr1==137u && g_motor_bench_pwm_diag.active.tim_arr==911u);
     CHECK(g_motor_bench_pwm_diag.active.tim_psc==7u && g_motor_bench_pwm_diag.active.tim_ccer==0x1000u);
     CHECK(g_motor_bench_pwm_diag.active.gpio_afrh==0x43215678u && g_motor_bench_pwm_diag.active.gpio_idr==0x6000u);
-    ticks(500u); stopped_ok(MOTOR_BENCH_STOP_TIMEOUT);
+    ticks(500u); stopped_ok(MOTOR_BENCH_STOP_FAULT);
+    CHECK(g_motor_bench.output_mask==0u && g_motor_bench_pwm_diag.enable_calls==1u);
     CHECK(g_motor_bench_pwm_diag.active.tim_ccr1==137u && g_motor_bench_pwm_diag.stopped.tim_psc==7u);
 }
 static void failed_stop_readback(void) {
@@ -181,14 +215,22 @@ static void invalid_mask(void) {
     motor_bench_pwm_apply(9u); CHECK(g_motor_bench_pwm_diag.request_count==2u);
 }
 static void change_and_wrap(void) {
+    uint32_t pulse;
+#ifdef MOTOR_CONTINUOUS_A_TARGET
+    pulse=240u;
+#else
+    pulse=8000u;
+#endif
     trigger_a(); motor_bench_pwm_apply(2u);
     CHECK(g_motor_bench_pwm_diag.enable_calls==2u && g_motor_bench_pwm_diag.stopped.valid==0u);
-    CHECK(g_motor_bench_pwm_diag.active.mask==2u && g_motor_bench_pwm_diag.active.tim_ccr3==240u);
+    CHECK(g_motor_bench_pwm_diag.active.mask==2u && g_motor_bench_pwm_diag.active.tim_ccr3==pulse);
+    CHECK((g_motor_bench_pwm_diag.active.gpio_moder&0x3ccc0000u)==0x18440000u);
     motor_bench_pwm_stop();
     CHECK(g_motor_bench_pwm_diag.active.run_id==2u && g_motor_bench_pwm_diag.stopped.run_id==2u);
     motor_bench_pwm_diag_context(0xffffffffu-200u,4u,0u,MOTOR_BENCH_STOP_NONE);
     motor_bench_pwm_apply(3u);
-    CHECK(g_motor_bench_pwm_diag.active.tim_ccr1==240u && g_motor_bench_pwm_diag.active.tim_ccr3==240u);
+    CHECK(g_motor_bench_pwm_diag.active.tim_ccr1==pulse && g_motor_bench_pwm_diag.active.tim_ccr3==pulse);
+    CHECK((g_motor_bench_pwm_diag.active.gpio_moder&0x3ccc0000u)==0x18480000u);
     motor_bench_pwm_diag_context(299u,0u,0u,MOTOR_BENCH_STOP_TIMEOUT); motor_bench_pwm_stop();
     CHECK(g_motor_bench_pwm_diag.elapsed_ms==500u && g_motor_bench_pwm_diag.active.run_id==3u);
 }
@@ -230,13 +272,13 @@ static void run(void (*test)(void)) {
     gpio_ready=timer_ready=active_mask=requested_mask=startup_timer_clocked=0u;
     g_motor_bench_ms=g_motor_bench_fault=g_motor_bench_revision=0u;
     g_motor_bench_watchdog_started=g_motor_bench_watchdog_stage=0u;
-    diagnostic_ms=diagnostic_state=diagnostic_fault=0u; diagnostic_reason=MOTOR_BENCH_STOP_NONE;
+    event_ms=event_state=event_fault=0u; event_reason=MOTOR_BENCH_STOP_NONE;
     pressed=disturb_enable=disturb_stop=0u; startup_counter=0u; enable_api_calls=0u; scenario=test;
     if (setjmp(completed)==0) { SystemInit(); (void)bench_application_main(); }
 #ifdef MOTOR_CONTINUOUS_A_TARGET
-    CHECK(g_motor_bench_revision==0x020b1001u);
+    CHECK(g_motor_bench_revision==0x020b1002u);
 #else
-    CHECK(g_motor_bench_revision==0x020b0003u);
+    CHECK(g_motor_bench_revision==0x020b0004u);
 #endif
 }
 int main(void) {
@@ -246,8 +288,8 @@ int main(void) {
     printf("PASS continuous A: %u checks in 7 real-main/PWM model scenarios (120s, wrap, stop, fault, lockout; no board)\n",checks);
 #else
     run(normal_timeout); run(key_stop); run(fault_stop); run(disturbed_readback);
-    run(failed_stop_readback); run(invalid_mask); run(change_and_wrap); run(no_output);
-    printf("PASS PWM retained diagnostics: %u checks in 8 real-main/PWM model scenarios (no board access)\n",checks);
+    run(failed_stop_readback); run(invalid_mask); run(change_and_wrap); run(no_output); run(manual_sequence);
+    printf("PASS rewritten PWM: %u checks in 9 real-main/PWM model scenarios (A/B/AB, timeout, stop, fault, wrap; no board access)\n",checks);
 #endif
     return 0;
 }

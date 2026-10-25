@@ -5,9 +5,14 @@
 
 ## 打开哪个工程
 
+2026-10-25最新电机工作：主控确认AB直接驱动均正常后，要求删除旧PWM实现重写。现已替换PWM入口与驱动，当前实测入口为 [MotorPwm独立工程](MDK-ARM/motor_pwm.uvprojx)，目标 **MotorPwm**、版本0x020B0004、1kHz／50%／500ms；先A正常再B。按[新PWM步骤](docs/motor_pwm.md)操作，[任务与检查](../project_planning/tasks/C-02B-PWM-R4.md)。共用驱动的MotorContinuous升0x020B1002，仍20kHz／30%持续A；本页后文ORG-02数值为迁移时证据。
+
+本轮结果：主控回报“全部符合预期”，A/B分别PWM起转、自动停转及对应灯态人工验收完成。[现场记录](../testing/2026-10-25_motor_pwm/acceptance_record.md)保留回报与测量边界；本项任务完成。
+
 | 场景 | 入口 |
 | --- | --- |
-| 当前MotorDirect诊断接续 | [MDK-ARM/motor_direct.uvprojx](MDK-ARM/motor_direct.uvprojx)，只有MotorDirect；[人工步骤](docs/motor_direct.md) |
+| 已通过的PWM分步测试／复现基线 | [MDK-ARM/motor_pwm.uvprojx](MDK-ARM/motor_pwm.uvprojx)，只有MotorPwm；[操作与结果](docs/motor_pwm.md) |
+| Direct A诊断对照 | [MDK-ARM/motor_direct.uvprojx](MDK-ARM/motor_direct.uvprojx)，只有MotorDirect；[人工步骤](docs/motor_direct.md) |
 | 查看全部六目标／继续开发 | [MDK-ARM/yeye_control.uvprojx](MDK-ARM/yeye_control.uvprojx) |
 | 无硬件学习 | 多目标工程选择LogicDemo；[Keil说明](docs/keil_quickstart.md)、[SPL说明](docs/standard_library.md) |
 | 看分层和各文件归属 | [整车架构](../docs/architecture.md)、[API索引](../docs/interfaces.md) |

@@ -1,142 +1,123 @@
 /**
  * @file motor_bench_main.c
- * @brief 独立MotorBench入口：PA0按键、PB2提示、TIM1四PWM、1ms监督和IWDG。
+ * @brief 重写PWM测试入口：先四脚低，完成启动监督，再接受KEY长按松开。
  *
- * 本目标不链接原board.c/main.c，不接收UART，不初始化编码器或整车状态机。
- * 监督在SysTick内执行，主循环只等待中断；IWDG仅在监督完成后喂狗，
- * 若滴答/CPU停滞，独立LSI看门狗复位。所有复位重新等待人工操作，不续跑。
- * 看门狗不是精确计时器：分频32、重装249，按LSI名义32kHz约250ms，
- * 实际周期受LSI容差影响；正常试转500ms由HSI驱动的SysTick计时。
- * C-02B-R1：启动等待改用TIM5独立1MHz计数，不能使用尚未启动的毫秒计数。
+ * 单次目标1kHz/50%，每阶段500ms；持续A目标保留20kHz/30%与人工停止语义。
+ * 复用与Direct共用的纯按键状态机，不改已验证的Direct A/B代码及其参数。
+ * TIM1负责PWM，TIM5只为启动等待计时；SysTick每1ms推进按键和超时，最后喂IWDG。
+ * 无编码器/电流/温度反馈，所有试转须悬空；复位后必须重新人工触发。
  */
 #include "motor_bench.h"
 #include "motor_bench_pwm.h"
 #include "stm32f4xx.h"
 
 uint32_t SystemCoreClock = HSI_VALUE;
-/* Watch仅供可用SWD场景观察；USB DFU没有运行中Watch功能。 */
 motor_bench_t g_motor_bench;
-volatile uint32_t g_motor_bench_ms;
-volatile uint32_t g_motor_bench_fault;
-/* 故障位可组合且运行中不自动清除；非零时不调用试转逻辑，只保持零驱动。 */
+volatile uint32_t g_motor_bench_ms, g_motor_bench_fault, g_motor_bench_revision;
+volatile uint32_t g_motor_bench_watchdog_started, g_motor_bench_watchdog_stage;
 #define MOTOR_BENCH_FAULT_PWM_CLOCK 1u
 #define MOTOR_BENCH_FAULT_STARTUP_TIMER 2u
 #define MOTOR_BENCH_FAULT_LSI_TIMEOUT 4u
 #define MOTOR_BENCH_FAULT_IWDG_TIMEOUT 8u
 #define MOTOR_BENCH_FAULT_SYSTICK 16u
-#define STARTUP_WAIT_US 10000u       /* LSI及寄存器更新各最多等待10ms。 */
-#define STARTUP_POLL_LIMIT 100000u   /* 定时器异常停滞时的第二道有限循环保护。 */
-
-volatile uint32_t g_motor_bench_revision;
-volatile uint32_t g_motor_bench_watchdog_started;
-/* 0=未开始，1=启动时基就绪，2=LSI就绪，3=IWDG已启动，4=配置更新完成。 */
-volatile uint32_t g_motor_bench_watchdog_stage;
+#define MOTOR_BENCH_FAULT_PWM_REQUEST 32u
+#define STARTUP_WAIT_US 10000u
+#define STARTUP_POLL_LIMIT 100000u
 static uint8_t startup_timer_clocked;
 
-/** @brief 启动阶段使用HSI，不依赖8MHz外部晶振或PLL；尚不允许PWM。 */
+/** @brief 启用HSI并复位时钟树；执行时应用尚未允许任何PWM请求。
+ * 无参数/返回值。使用SPL设置时钟，CMSIS负责中断向量和FPU内核许可。
+ * 冷启动HSI是芯片复位时钟；随后驱动层还会核对四路实际时钟均为16MHz。
+ */
 void SystemInit(void) {
     RCC_HSICmd(ENABLE);
     while (RCC_GetFlagStatus(RCC_FLAG_HSIRDY) == RESET) { }
     RCC_SYSCLKConfig(RCC_SYSCLKSource_HSI);
-    while (RCC_GetSYSCLKSource() != 0x00u) { }
+    while (RCC_GetSYSCLKSource() != 0u) { }
     RCC_DeInit();
     NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0u);
-    SCB->CPACR |= 0x00f00000u; /* CMSIS内核FPU访问许可，与原工程相同。 */
+    SCB->CPACR |= 0x00f00000u;
 }
 
-/** @brief 读取实际RCC配置更新Hz变量；本目标只接受16MHz配置。 */
+/** @brief 读取RCC实际配置并更新Hz单位的内核时钟变量；不假定外部晶振存在。 */
 void SystemCoreClockUpdate(void) {
     RCC_ClocksTypeDef clocks;
     RCC_GetClocksFreq(&clocks);
     SystemCoreClock = clocks.SYSCLK_Frequency;
 }
 
-/** @brief 配置WKUP/PA0为输入下拉、PB2为先灭后输出，保留SWD与其他针脚。 */
+/** @brief KEY为PA0/WKUP输入下拉，PB2绿灯先灭再配置输出；不影响SWD。 */
 static void controls_init(void) {
-    GPIO_InitTypeDef gpio;
+    GPIO_InitTypeDef config;
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA | RCC_AHB1Periph_GPIOB, ENABLE);
-    GPIO_StructInit(&gpio);
-    gpio.GPIO_Pin = GPIO_Pin_0;
-    gpio.GPIO_Mode = GPIO_Mode_IN;
-    gpio.GPIO_PuPd = GPIO_PuPd_DOWN;
-    GPIO_Init(GPIOA, &gpio);
+    GPIO_StructInit(&config);
+    config.GPIO_Pin = GPIO_Pin_0;
+    config.GPIO_Mode = GPIO_Mode_IN;
+    config.GPIO_PuPd = GPIO_PuPd_DOWN;
+    GPIO_Init(GPIOA, &config);
     GPIO_ResetBits(GPIOB, GPIO_Pin_2);
-    gpio.GPIO_Pin = GPIO_Pin_2;
-    gpio.GPIO_Mode = GPIO_Mode_OUT;
-    gpio.GPIO_OType = GPIO_OType_PP;
-    gpio.GPIO_Speed = GPIO_Speed_2MHz;
-    gpio.GPIO_PuPd = GPIO_PuPd_NOPULL;
-    GPIO_Init(GPIOB, &gpio);
+    config.GPIO_Pin = GPIO_Pin_2;
+    config.GPIO_Mode = GPIO_Mode_OUT;
+    config.GPIO_OType = GPIO_OType_PP;
+    config.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    config.GPIO_Speed = GPIO_Speed_2MHz;
+    GPIO_Init(GPIOB, &config);
 }
 
-/**
- * @brief 建立只供初始化等待使用的TIM5：16MHz/16=1MHz，1计数=1us。
- * @return 1为时钟及计数递增检查通过，0为不支持的时钟配置或计数器未运行。
- * 不启用TIM5中断、DMA或GPIO，独占TIM5的CNT/PSC/ARR，初始化结束即停止。
- * TIM1用于PWM、TIM3/4保留编码器，不与本时基共享计数器；不依赖调试器或SysTick。
+/** @brief 建立独立TIM5启动时基，1计数=1us；不使用其中断或GPIO。
+ * @return 1=16MHz APB1且CNT实际递增，0=不支持的时钟/停滞。
+ * 首次检查也有1024次上限，防止为了建立超时机制而无限等待。
  */
 static int startup_timer_init(void) {
     RCC_ClocksTypeDef clocks;
-    TIM_TimeBaseInitTypeDef timebase;
-    uint32_t first, probes;
+    TIM_TimeBaseInitTypeDef base;
+    uint32_t first, attempt;
     RCC_GetClocksFreq(&clocks);
-    if (clocks.HCLK_Frequency != 16000000u || clocks.PCLK1_Frequency != 16000000u)
-        return 0; /* APB1不分频，TIM5时钟才是16MHz；拒绝错误的微秒单位。 */
+    if (clocks.HCLK_Frequency != 16000000u || clocks.PCLK1_Frequency != 16000000u) return 0;
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);
     startup_timer_clocked = 1u;
     TIM_DeInit(TIM5);
-    TIM_TimeBaseStructInit(&timebase);
-    timebase.TIM_Prescaler = 15u;
-    timebase.TIM_Period = 0xffffffffu;
-    timebase.TIM_CounterMode = TIM_CounterMode_Up;
-    timebase.TIM_ClockDivision = TIM_CKD_DIV1;
-    TIM_TimeBaseInit(TIM5, &timebase);
+    TIM_TimeBaseStructInit(&base);
+    base.TIM_Prescaler = 15u;
+    base.TIM_Period = 0xffffffffu;
+    base.TIM_CounterMode = TIM_CounterMode_Up;
+    base.TIM_ClockDivision = TIM_CKD_DIV1;
+    TIM_TimeBaseInit(TIM5, &base);
     TIM_GenerateEvent(TIM5, TIM_EventSource_Update);
     TIM_Cmd(TIM5, ENABLE);
     first = TIM_GetCounter(TIM5);
-    /* 此检查本身也有次数上限，避免定时器没启动时卡死在“检查时基”。 */
-    for (probes = 0u; probes < 1024u; ++probes)
+    for (attempt = 0u; attempt < 1024u; ++attempt)
         if (TIM_GetCounter(TIM5) != first) return 1;
     return 0;
 }
 
-/**
- * @brief 检查一次启动等待的边界；started为TIM5起始us，polls为本等待轮询数。
- * @return 0继续等待；否则为应锁存的故障位。无符号减法处理32位计数回绕。
- * 正常超时依据硬件计时，不用g_motor_bench_ms；次数保护只处理时基失效，
- * 不是精确毫秒定时，也不能代替独立看门狗对CPU停滞的保护。
+/** @brief 启动等待限时判断；started单位us，polls为次数，fault为超时原因。
+ * @return 0=仍可等待，非零=锁存故障。无符号差支持计数回绕。
+ * 10ms硬件超时与次数上限同时使用，TIM5意外停滞也能退出。
  */
-static uint32_t startup_wait_fault(uint32_t started, uint32_t *polls, uint32_t timeout_fault) {
-    if ((uint32_t)(TIM_GetCounter(TIM5) - started) >= STARTUP_WAIT_US)
-        return timeout_fault;
+static uint32_t startup_wait_fault(uint32_t started, uint32_t *polls, uint32_t fault) {
+    if ((uint32_t)(TIM_GetCounter(TIM5) - started) >= STARTUP_WAIT_US) return fault;
     ++*polls;
     return *polls >= STARTUP_POLL_LIMIT ? MOTOR_BENCH_FAULT_STARTUP_TIMER : 0u;
 }
 
-/**
- * @brief 启动并配置IWDG，返回0成功或明确故障位；所有退出路径维持电机零驱动。
- * 顺序：验证TIM5→限时等待LSI→先Enable→解锁→写PR/RLR→限时等PVU/RVU→Reload。
- * 旧版先等更新再Enable，现场PVU不清，使SysTick永远无法启动。
- * F407 RM0090 21.4.4给出更新最多5个LSI周期，本版各留10ms窗口；
- * 先启动时计数从复位值0xFFF倒数，不提前Reload较短的249，避免压缩配置预算。
- * 启动后硬件不能软件关闭：失败只锁存错误、停止电机，后续SysTick喂狗保留诊断；
- * 若CPU/滴答也停滞，仍由IWDG复位。失败不会被当作正常启动，不允许人工试转。
+/** @brief 启动IWDG并有限等待寄存器更新，约250ms为LSI名义值。
+ * @return 0=就绪，其它为故障位。所有退出路径停止TIM5，失败保持零输出。
+ * 先使能IWDG，再写PR/RLR并等待PVU/RVU；不能在尚未启动时无限等更新位。
+ * 已启动的IWDG不能软件关闭；故障时滴答可喂狗保留灯态，CPU停滞则硬件复位。
  */
 static uint32_t watchdog_init(void) {
     uint32_t started, polls = 0u, fault = 0u;
-    if (!startup_timer_init()) {
-        fault = MOTOR_BENCH_FAULT_STARTUP_TIMER;
-        goto finished;
-    }
+    if (!startup_timer_init()) { fault = MOTOR_BENCH_FAULT_STARTUP_TIMER; goto done; }
     g_motor_bench_watchdog_stage = 1u;
     RCC_LSICmd(ENABLE);
     started = TIM_GetCounter(TIM5);
     while (RCC_GetFlagStatus(RCC_FLAG_LSIRDY) == RESET) {
         fault = startup_wait_fault(started, &polls, MOTOR_BENCH_FAULT_LSI_TIMEOUT);
-        if (fault != 0u) goto finished;
+        if (fault != 0u) goto done;
     }
     g_motor_bench_watchdog_stage = 2u;
-    IWDG_Enable(); /* 必须在等待状态位之前启动，继续使用原厂SPL接口。 */
+    IWDG_Enable();
     g_motor_bench_watchdog_started = 1u;
     g_motor_bench_watchdog_stage = 3u;
     IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
@@ -144,60 +125,60 @@ static uint32_t watchdog_init(void) {
     IWDG_SetReload(249u);
     started = TIM_GetCounter(TIM5);
     polls = 0u;
-    while (IWDG_GetFlagStatus(IWDG_FLAG_PVU) != RESET ||
-           IWDG_GetFlagStatus(IWDG_FLAG_RVU) != RESET) {
+    while (IWDG_GetFlagStatus(IWDG_FLAG_PVU) != RESET || IWDG_GetFlagStatus(IWDG_FLAG_RVU) != RESET) {
         fault = startup_wait_fault(started, &polls, MOTOR_BENCH_FAULT_IWDG_TIMEOUT);
-        if (fault != 0u) goto finished;
+        if (fault != 0u) goto done;
     }
     IWDG_ReloadCounter();
     g_motor_bench_watchdog_stage = 4u;
-finished:
+done:
     if (startup_timer_clocked != 0u) TIM_Cmd(TIM5, DISABLE);
     if (fault != 0u) motor_bench_pwm_stop();
     return fault;
 }
 
-/**
- * @brief 每1ms读取按键并完成停止/超时、输出和LED；结束后才喂独立看门狗。
- * 中断中不延时、不串口打印、不调用阻塞操作；原始按键停止优先于消抖。
- * 请求停止延迟通常为0–1ms加本中断执行时间，机械停稳时间必须另外测量。
+/** @brief 粘性故障统一锁定状态和真实输出；now单位ms，无返回值。
+ * 每次复用此路径都保持零请求，诊断帧不会因重复停止被覆盖。
+ */
+static void lock_fault(uint32_t now) {
+    g_motor_bench.output_mask = 0u;
+    g_motor_bench.state = MOTOR_BENCH_ABORTED;
+    motor_bench_pwm_diag_context(now, (uint32_t)g_motor_bench.state,
+                                 g_motor_bench_fault, MOTOR_BENCH_STOP_FAULT);
+    motor_bench_pwm_stop();
+}
+
+/** @brief 每1ms先处理KEY/500ms到期，再应用输出，最后喂狗；无阻塞操作。
+ * 停止读取原始KEY，通常0至1ms内撤驱动，不等待启动所用的30ms消抖。
+ * PWM适配器拒绝请求时新增故障位32并锁定，避免状态仍显示RUNNING。
  */
 void SysTick_Handler(void) {
     uint32_t now = ++g_motor_bench_ms;
     uint8_t raw = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
     motor_bench_state_t previous = g_motor_bench.state;
     motor_bench_stop_reason_t reason = MOTOR_BENCH_STOP_NONE;
-    if (g_motor_bench_fault != 0u) {
-        motor_bench_pwm_diag_context(now, (uint32_t)g_motor_bench.state,
-                                    g_motor_bench_fault, MOTOR_BENCH_STOP_FAULT);
-        motor_bench_pwm_stop();
-        GPIO_WriteBit(GPIOB, GPIO_Pin_2, (now / 100u) % 2u != 0u ? Bit_SET : Bit_RESET);
-    } else {
+    if (g_motor_bench_fault == 0u) {
         motor_bench_tick(&g_motor_bench, now, raw);
-        /* R3只解释已经发生的转换，不以诊断值参与控制。时间／状态先取真实值，
-         * 后由PWM层在实际启用／停止后读寄存器；不能拿此处的请求当成硬件证据。
-         */
         if (g_motor_bench.state == MOTOR_BENCH_ABORTED)
-            reason = previous == MOTOR_BENCH_RUNNING && raw != 0u ?
-                     MOTOR_BENCH_STOP_KEY : MOTOR_BENCH_STOP_LOGIC;
+            reason = previous == MOTOR_BENCH_RUNNING && raw != 0u ? MOTOR_BENCH_STOP_KEY : MOTOR_BENCH_STOP_LOGIC;
         else if (previous == MOTOR_BENCH_RUNNING && g_motor_bench.state != MOTOR_BENCH_RUNNING)
             reason = MOTOR_BENCH_STOP_TIMEOUT;
         motor_bench_pwm_diag_context(now, (uint32_t)g_motor_bench.state, 0u, reason);
-        motor_bench_pwm_apply(g_motor_bench.output_mask);
-        GPIO_WriteBit(GPIOB, GPIO_Pin_2,
-                      motor_bench_led(&g_motor_bench, now) != 0u ? Bit_SET : Bit_RESET);
+        if (!motor_bench_pwm_apply(g_motor_bench.output_mask)) g_motor_bench_fault |= MOTOR_BENCH_FAULT_PWM_REQUEST;
     }
-    /* LSI或启动时基失败时IWDG尚未启动，不能伪装成正常看门狗服务。 */
+    if (g_motor_bench_fault != 0u) lock_fault(now);
+    GPIO_WriteBit(GPIOB, GPIO_Pin_2,
+        (g_motor_bench_fault != 0u ? (now / 100u) % 2u : motor_bench_led(&g_motor_bench, now)) != 0u ? Bit_SET : Bit_RESET);
     if (g_motor_bench_watchdog_started != 0u) IWDG_ReloadCounter();
 }
 
-/** @brief CPU异常先关闭驱动，再等待IWDG复位；绝不从异常返回继续旧试转。 */
+/** @brief CPU异常先撤四脚驱动再等待IWDG，绝不从异常返回继续试转。 */
 static void fatal_stop(void) {
     __disable_irq();
     motor_bench_pwm_diag_context(g_motor_bench_ms, (uint32_t)g_motor_bench.state,
-                                g_motor_bench_fault, MOTOR_BENCH_STOP_EXCEPTION);
+                                 g_motor_bench_fault, MOTOR_BENCH_STOP_EXCEPTION);
     motor_bench_pwm_stop();
-    for (;;) { } /* 已启用IWDG时将复位；启用前异常则永久保持停止。 */
+    for (;;) { }
 }
 void NMI_Handler(void) { fatal_stop(); }
 void HardFault_Handler(void) { fatal_stop(); }
@@ -206,28 +187,22 @@ void BusFault_Handler(void) { fatal_stop(); }
 void UsageFault_Handler(void) { fatal_stop(); }
 
 int main(void) {
-    /* 电机GPIO低电平的建立优先于按键、LED和滴答，初始化中没有非零请求。 */
 #ifdef MOTOR_CONTINUOUS_A_TARGET
-    /* 独立持续测试，区别原R3；只改变运行时限和允许的桥，启动/故障保护仍共用。 */
-    g_motor_bench_revision = 0x020b1001u;
+    g_motor_bench_revision = 0x020b1002u; /* 参数/持续语义保留，驱动重写故升级版本。 */
 #else
-    g_motor_bench_revision = 0x020b0003u; /* R3活动／停止快照；R1保护与R2固定30%保留。 */
+    g_motor_bench_revision = 0x020b0004u; /* 新PWM：1kHz/50%，区别旧R3。 */
 #endif
-    g_motor_bench_fault = motor_bench_pwm_init() != 0 ? 0u : MOTOR_BENCH_FAULT_PWM_CLOCK;
+    /* 第一个外设初始化就是四脚主动低；按键、LED与看门狗在其后建立。 */
+    g_motor_bench_fault = motor_bench_pwm_init() ? 0u : MOTOR_BENCH_FAULT_PWM_CLOCK;
     controls_init();
     SystemCoreClockUpdate();
     motor_bench_init(&g_motor_bench, 0u);
     g_motor_bench_fault |= watchdog_init();
-    if (g_motor_bench_fault != 0u) {
-        motor_bench_pwm_stop();
-        g_motor_bench.output_mask = 0u;
-        g_motor_bench.state = MOTOR_BENCH_ABORTED;
-    }
-    /* 初始化失败也启动可用的滴答显示故障；不清故障、不进入READY、不允许试转。 */
+    if (g_motor_bench_fault != 0u) lock_fault(0u);
     if (SysTick_Config(SystemCoreClock / 1000u) != 0u) {
         g_motor_bench_fault |= MOTOR_BENCH_FAULT_SYSTICK;
         fatal_stop();
     }
-    NVIC_SetPriority(SysTick_IRQn, 0u); /* 本目标没有其他外设中断，监督优先。 */
+    NVIC_SetPriority(SysTick_IRQn, 0u);
     for (;;) __WFI();
 }

@@ -1,9 +1,9 @@
 /**
  * @file motor_direct_main.c
- * @brief 独立MotorDirect入口：普通GPIO固定电平，只A桥人工一次500ms。
+ * @brief 独立MotorDirect入口：普通GPIO固定电平，按目标宏选择单桥人工一次500ms。
  *
  * 本目标不链接PWM／board／UART，不启动TIM1，不把GPIO当电机电源。
- * PE9高、PE11／13／14低使AT8236 A桥满导通，强于原30%PWM；
+ * A目标PE9高，B目标PE13高；其余三脚低，选中桥满导通，强于原30%PWM；
  * 仅KEY长按达标再松开才发出一次500ms请求，超时完成或人工停止均锁定。
  * 沿用R1已修复的IWDG顺序、TIM5独立启动超时和SysTick监督；
  * TIM5只用于初始化等待，并非电机PWM，不能为了“不要PWM”删除看门狗时基。
@@ -12,8 +12,10 @@
 #include "motor_bench.h"
 #include "motor_direct_gpio.h"
 #include "stm32f4xx.h"
-#if !defined(MOTOR_DIRECT_A_TARGET) || defined(MOTOR_CONTINUOUS_A_TARGET)
-#error MotorDirect requires its own single-shot target macro
+#if (defined(MOTOR_DIRECT_A_TARGET) && defined(MOTOR_DIRECT_B_TARGET)) || \
+    (!defined(MOTOR_DIRECT_A_TARGET) && !defined(MOTOR_DIRECT_B_TARGET)) || \
+    defined(MOTOR_CONTINUOUS_A_TARGET)
+#error MotorDirect requires exactly one single-bridge target macro
 #endif
 
 uint32_t SystemCoreClock = HSI_VALUE;
@@ -193,7 +195,7 @@ void SysTick_Handler(void) {
             reason = MOTOR_DIRECT_STOP_TIMEOUT;
         motor_direct_gpio_diag_context(now, (uint32_t)g_motor_direct.state, 0u, reason);
         if (motor_direct_gpio_apply(g_motor_direct.output_mask) == 0) {
-            /* GPIO适配层拒绝B／AB／未初始化请求；先撤输出，再锁存故障。
+            /* GPIO适配层拒绝非当前目标桥／AB／未初始化请求；先撤输出，再锁存故障。
              * 后续滴答只走故障停止分支，不能因按键松开而重新启用。
              */
             g_motor_direct_fault |= MOTOR_DIRECT_FAULT_GPIO_REQUEST;
@@ -227,7 +229,11 @@ void UsageFault_Handler(void) { fatal_stop(); }
 
 int main(void) {
     /* 电机GPIO低电平的建立优先于按键、LED和滴答，初始化中没有非零请求。 */
-    g_motor_direct_revision = 0x020b2001u; /* 独立GPIO满导通单次版本，不是PWM持续版。 */
+#ifdef MOTOR_DIRECT_B_TARGET
+    g_motor_direct_revision = 0x020b2002u; /* B桥单次版本，便于与已验证的A版区分。 */
+#else
+    g_motor_direct_revision = 0x020b2001u; /* A桥单次版本，不是PWM持续版。 */
+#endif
     g_motor_direct_fault = motor_direct_gpio_init() != 0 ? 0u : MOTOR_DIRECT_FAULT_GPIO_CLOCK;
     controls_init();
     SystemCoreClockUpdate();
