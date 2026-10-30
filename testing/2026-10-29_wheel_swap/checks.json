@@ -1,0 +1,1338 @@
+{
+  "date": "2026-10-29 Asia/Shanghai",
+  "authorization": "user explicitly requested global document update; role remains 01",
+  "source": "current conversation human wheel swap report and explicit new physical naming clarification",
+  "branch": "codex/current-version-20261025",
+  "head": "0b0343577895d8eb03a337165da6ce9c5e433519",
+  "current_physical_names": {
+    "A": "left",
+    "B": "right"
+  },
+  "driver_software_channel_pairing": "pending current physical correspondence; not inferred from label",
+  "old_encoder_signs_and_CPR": "retained as 2026-10-25 original installation evidence",
+  "inherited_CPR_reference": {
+    "new_physical_A_left": 1058.6,
+    "new_physical_B_right": 1060.8
+  },
+  "forward_sign_derivation_only_if_phase_order_unchanged": {
+    "new_physical_A_left": 1,
+    "new_physical_B_right": -1
+  },
+  "new_installation_remeasurement": false,
+  "checks": {
+    "all_firmware_projects_options_and_original_encoder_evidence_unchanged": true,
+    "no_trailing_space_project_planning/project_status.md": true,
+    "link_0": true,
+    "link_1": true,
+    "link_2": true,
+    "link_3": true,
+    "link_4": true,
+    "link_5": true,
+    "link_6": true,
+    "link_7": true,
+    "link_8": true,
+    "link_9": true,
+    "link_10": true,
+    "link_11": true,
+    "link_12": true,
+    "link_13": true,
+    "link_14": true,
+    "link_15": true,
+    "link_16": true,
+    "link_17": true,
+    "link_18": true,
+    "link_19": true,
+    "link_20": true,
+    "link_21": true,
+    "link_22": true,
+    "link_23": true,
+    "link_24": true,
+    "link_25": true,
+    "link_26": true,
+    "link_27": true,
+    "link_28": true,
+    "link_29": true,
+    "link_30": true,
+    "link_31": true,
+    "link_32": true,
+    "link_33": true,
+    "link_34": true,
+    "link_35": true,
+    "link_36": true,
+    "link_37": true,
+    "link_38": true,
+    "link_39": true,
+    "link_40": true,
+    "link_41": true,
+    "link_42": true,
+    "link_43": true,
+    "link_44": true,
+    "link_45": true,
+    "link_46": true,
+    "link_47": true,
+    "link_48": true,
+    "link_49": true,
+    "link_50": true,
+    "link_51": true,
+    "link_52": true,
+    "link_53": true,
+    "link_54": true,
+    "link_55": true,
+    "link_56": true,
+    "link_57": true,
+    "link_58": true,
+    "link_59": true,
+    "link_60": true,
+    "link_61": true,
+    "link_62": true,
+    "link_63": true,
+    "link_64": true,
+    "link_65": true,
+    "link_66": true,
+    "link_67": true,
+    "link_68": true,
+    "no_trailing_space_project_planning/tasks/C-02D.md": true,
+    "link_69": true,
+    "link_70": true,
+    "link_71": true,
+    "link_72": true,
+    "link_73": true,
+    "no_trailing_space_project_planning/tasks/C-02C.md": true,
+    "link_74": true,
+    "link_75": true,
+    "link_76": true,
+    "link_77": true,
+    "link_78": true,
+    "link_79": true,
+    "link_80": true,
+    "link_81": true,
+    "link_82": true,
+    "link_83": true,
+    "link_84": true,
+    "link_85": true,
+    "link_86": true,
+    "link_87": true,
+    "link_88": true,
+    "link_89": true,
+    "link_90": true,
+    "link_91": true,
+    "link_92": true,
+    "link_93": true,
+    "link_94": true,
+    "link_95": true,
+    "link_96": true,
+    "link_97": true,
+    "link_98": true,
+    "no_trailing_space_control/docs/encoder_bench.md": true,
+    "link_99": true,
+    "link_100": true,
+    "link_101": true,
+    "link_102": true,
+    "link_103": true,
+    "link_104": true,
+    "link_105": true,
+    "link_106": true,
+    "link_107": true,
+    "link_108": true,
+    "link_109": true,
+    "link_110": true,
+    "link_111": true,
+    "link_112": true,
+    "link_113": true,
+    "no_trailing_space_control/README.md": true,
+    "link_114": true,
+    "link_115": true,
+    "link_116": true,
+    "link_117": true,
+    "link_118": true,
+    "link_119": true,
+    "link_120": true,
+    "link_121": true,
+    "link_122": true,
+    "link_123": true,
+    "link_124": true,
+    "link_125": true,
+    "link_126": true,
+    "link_127": true,
+    "link_128": true,
+    "link_129": true,
+    "link_130": true,
+    "link_131": true,
+    "link_132": true,
+    "link_133": true,
+    "link_134": true,
+    "link_135": true,
+    "link_136": true,
+    "link_137": true,
+    "link_138": true,
+    "link_139": true,
+    "link_140": true,
+    "link_141": true,
+    "link_142": true,
+    "link_143": true,
+    "link_144": true,
+    "no_trailing_space_hardware_preparation/wiring.md": true,
+    "link_145": true,
+    "link_146": true,
+    "link_147": true,
+    "link_148": true,
+    "link_149": true,
+    "link_150": true,
+    "link_151": true,
+    "link_152": true,
+    "link_153": true,
+    "link_154": true,
+    "link_155": true,
+    "link_156": true,
+    "link_157": true,
+    "link_158": true,
+    "link_159": true,
+    "link_160": true,
+    "link_161": true,
+    "link_162": true,
+    "link_163": true,
+    "link_164": true,
+    "no_trailing_space_hardware_preparation/README.md": true,
+    "link_165": true,
+    "link_166": true,
+    "link_167": true,
+    "link_168": true,
+    "link_169": true,
+    "link_170": true,
+    "link_171": true,
+    "link_172": true,
+    "link_173": true,
+    "link_174": true,
+    "link_175": true,
+    "link_176": true,
+    "link_177": true,
+    "link_178": true,
+    "link_179": true,
+    "link_180": true,
+    "link_181": true,
+    "link_182": true,
+    "link_183": true,
+    "link_184": true,
+    "link_185": true,
+    "link_186": true,
+    "link_187": true,
+    "link_188": true,
+    "link_189": true,
+    "link_190": true,
+    "link_191": true,
+    "link_192": true,
+    "link_193": true,
+    "link_194": true,
+    "link_195": true,
+    "link_196": true,
+    "link_197": true,
+    "link_198": true,
+    "no_trailing_space_control/docs/pin_plan.md": true,
+    "link_199": true,
+    "link_200": true,
+    "link_201": true,
+    "link_202": true,
+    "link_203": true,
+    "link_204": true,
+    "link_205": true,
+    "link_206": true,
+    "link_207": true,
+    "link_208": true,
+    "link_209": true,
+    "link_210": true,
+    "link_211": true,
+    "link_212": true,
+    "link_213": true,
+    "no_trailing_space_docs/hardware.md": true,
+    "link_214": true,
+    "link_215": true,
+    "link_216": true,
+    "link_217": true,
+    "link_218": true,
+    "link_219": true,
+    "no_trailing_space_docs/pinmap.md": true,
+    "link_220": true,
+    "link_221": true,
+    "link_222": true,
+    "link_223": true,
+    "link_224": true,
+    "no_trailing_space_docs/interfaces.md": true,
+    "link_225": true,
+    "link_226": true,
+    "link_227": true,
+    "link_228": true,
+    "link_229": true,
+    "link_230": true,
+    "link_231": true,
+    "link_232": true,
+    "link_233": true,
+    "link_234": true,
+    "link_235": true,
+    "link_236": true,
+    "no_trailing_space_docs/architecture.md": true,
+    "link_237": true,
+    "link_238": true,
+    "link_239": true,
+    "link_240": true,
+    "link_241": true,
+    "no_trailing_space_hardware_preparation/wheel_mapping.md": true,
+    "link_242": true,
+    "link_243": true,
+    "link_244": true,
+    "link_245": true,
+    "link_246": true,
+    "link_247": true,
+    "link_248": true,
+    "link_249": true,
+    "no_trailing_space_testing/2026-10-29_wheel_swap/record.md": true,
+    "link_250": true,
+    "link_251": true,
+    "new_physical_names_explicit": true,
+    "three_names_distinguished": true,
+    "software_pairing_not_guessed": true,
+    "inherited_left_1058_6_right_1060_8": true,
+    "sign_derivation_not_claimed_as_remeasurement": true,
+    "future_prompt_updated": true,
+    "competition_rules_and_score_support_recorded": true,
+    "global_status_date_and_authorization": true,
+    "no_unqualified_old_mapping_in_global_status": true,
+    "diff_check": true,
+    "branch_head_preserved": true,
+    "final_record_check_link_exists": true
+  },
+  "protected_files_count": 70,
+  "updated_document_sha256": {
+    "project_planning/project_status.md": "83058590e08549dcf28bd6f010c2e8299a541c780f4d26b7ec452f45675741ef",
+    "project_planning/tasks/C-02D.md": "563c751bfaf9716020461dd9f50dadbeb84abaafde73ef906edbb5383a6896a0",
+    "project_planning/tasks/C-02C.md": "46f959b046ae444ae78f683a692f18144ff6c17539a64a448db80387da39ff06",
+    "control/docs/encoder_bench.md": "1b8079aae0eefb33bde6f0bf6a2e55ddf55f96bb89e24da87b3217fcf0808556",
+    "control/README.md": "b1a656b7ab91d85df71a016c55722fe302ba87fe073fdd8f6557deb5699762c7",
+    "hardware_preparation/wiring.md": "f398b8cfafeda45884286b96659214972253fdffa084696af62075f31d4533fc",
+    "hardware_preparation/README.md": "e63226d04637591523816e9c487d9cd9ad3b01eb56e99e14ee4e8f21e5cf1fe5",
+    "control/docs/pin_plan.md": "39869eb615a0d36ed395ead9bf5d9f2f9e35c7db54f7362964c25a464dcf18bd",
+    "docs/hardware.md": "fe1f549c4d8915d74c33b1fad6795e667624e4326ebf6a825c4322c153285ac8",
+    "docs/pinmap.md": "7d2bdef7a9d57854197cc5cdec0313dd9db3400b9be14ac46c906da8acf384ac",
+    "docs/interfaces.md": "c0ccfc97877f882f2d0d3b08626e5cfb492a459782419ce0bff386119a779089",
+    "docs/architecture.md": "24bc98f76ecaee72b52e5fe92c53183feb07c14e6b2a0f2de3a9aaa2294d3c11",
+    "hardware_preparation/wheel_mapping.md": "0e4cbc82d3711cfcd3a930636993ef234c648f639f5194168c4e2bc21473a925",
+    "testing/2026-10-29_wheel_swap/record.md": "91b6ca331d32fa87792caf3ff9fa2793ef6ab396c63228234316f3f5ff8a1ba6"
+  },
+  "local_links": [
+    {
+      "file": "project_planning/project_status.md",
+      "target": "collaboration_standard.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "archive/2026-10-25_project_status_snapshot.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/ORG-02.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../docs/README.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/MDK-ARM/motor_pwm.uvprojx"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02C.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02D.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02C.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/V-01.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../competition/registration_status.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/chassis_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/H-03.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-29_wheel_swap/record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wiring.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/chassis_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/H-03.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/README.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/ORG-02.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02B-PWM-R4.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/board_self_test_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-20_motor_bench/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-25_motor_direct/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-25_motor_pwm/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-21_motor_bench/i05_measurement_results.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02C.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/V-01.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/README.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../report/README.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/charger_replacement.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/README.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/ORG-01.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/ORG-02.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../competition/registration_status.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "project_plan.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wiring.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/H-03.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/chassis_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/V-01.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02B-PWM-R4.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02C.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02D.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02B-PWM-R4.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-25_motor_pwm/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02C.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/C-02D.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-25_motor_direct/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/README.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../testing/2026-10-21_motor_bench/i05_measurement_results.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "version_handoff.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "tasks/G-04.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../hardware_preparation/i03_handoff.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/motor_bench_startup_issue.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/motor_bench_r2_task.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/motor_bench_r3_task.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../control/docs/motor_continuous.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "version_handoff.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "archive/2026-10-25_project_status_snapshot.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "../competition/registration_status.md"
+    },
+    {
+      "file": "project_planning/project_status.md",
+      "target": "organization_review.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02D.md",
+      "target": "C-02C.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02D.md",
+      "target": "../../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02D.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02D.md",
+      "target": "../../control/docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02D.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "C-02B-PWM-R4.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_motor_pwm/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/Core/Src/encoder_bench_main.c"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/App/Diagnostics/encoder_bench.c"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/Drivers_Custom/Encoder/encoder_hw.c"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/Algorithms/Encoder/encoder_counter.c"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/MDK-ARM/encoder_bench.uvprojx"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/Tests/Host/test_encoder_counter.c"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/Tests/Host/test_encoder_bench.c"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/tools/run_encoder_tests.ps1"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/tools/build_encoder_bench.ps1"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/docs/encoder_bench.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/software/README.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/software/checks.json"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../control/docs/encoder_bench.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/hand_turn/README.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/hand_turn/README.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/hand_turn/05_five_turns_a_b.png"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/hand_turn/06_b_forward_five_turns.png"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "C-02D.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "project_planning/tasks/C-02C.md",
+      "target": "../../testing/2026-10-29_wheel_swap/record.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../project_planning/tasks/C-02C.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../testing/2026-10-25_encoder/hand_turn/README.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../MDK-ARM/encoder_bench.uvprojx"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "pin_plan.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../hardware_preparation/dual_motor_wiring_guide.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../hardware_preparation/motor_wiring_self_check.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../testing/2026-10-25_encoder/software/tutorial_checks.json"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../tools/run_encoder_tests.ps1"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../tools/build_encoder_bench.ps1"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "../../testing/2026-10-25_encoder/software/README.md"
+    },
+    {
+      "file": "control/docs/encoder_bench.md",
+      "target": "pin_plan.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/tasks/C-02C.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/encoder_bench.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../testing/2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/tasks/C-02D.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "MDK-ARM/motor_pwm.uvprojx"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/motor_pwm.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/tasks/C-02B-PWM-R4.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../testing/2026-10-25_motor_pwm/acceptance_record.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "MDK-ARM/encoder_bench.uvprojx"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/encoder_bench.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "MDK-ARM/motor_pwm.uvprojx"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/motor_pwm.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "MDK-ARM/motor_direct.uvprojx"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/motor_direct.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "MDK-ARM/yeye_control.uvprojx"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/keil_quickstart.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/standard_library.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../docs/architecture.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../docs/interfaces.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/validation.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/project_status.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/tasks/ORG-02.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../hardware_preparation/board_self_test_record.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../testing/2026-10-25_motor_pwm/acceptance_record.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../testing/2026-10-21_motor_bench/r3_watch/README.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../testing/2026-10-24_motor_continuous/watch/README.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../testing/2026-10-25_motor_direct/acceptance_record.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/tasks/C-02C.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "control/README.md",
+      "target": "../project_planning/tasks/ORG-02.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "wheel_mapping.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "dual_motor_wiring_guide.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../project_planning/collaboration_standard.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../project_planning/project_status.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "source/generate_purchase_list.py"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "hardware_purchase_list.pdf"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/README.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/photo_01_driver.jpg"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/photo_02_motor.jpg"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/photo_03_controller.jpg"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/vendor_driver_stm32.pdf"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/vendor_driver_introduction.pdf"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "evidence/2026-10-18_i03/at8236_datasheet.pdf"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../control/Drivers_Custom/Board/board.h"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../control/Drivers_Custom/Board/board.c"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../control/docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "hardware_preparation/wiring.md",
+      "target": "../testing/README.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../project_planning/project_status.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "wheel_mapping.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../control/docs/motor_pwm.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../project_planning/tasks/C-02C.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../project_planning/tasks/C-02D.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "chassis_record.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "size/"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../project_planning/tasks/H-03.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "wiring.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../testing/2026-10-21_motor_bench/i05_measurement_results.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../testing/2026-10-24_motor_continuous/watch/README.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "board_self_test_record.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "evidence/2026-10-18_i03/README.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "i03_handoff.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "motor_dc_check.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "motor_scope_check.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../testing/2026-10-24_motor_continuous/scope_results.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "motor_wiring_self_check.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "i05_measurement_guide.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "i05_motor_power_diagnosis_task.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "dual_motor_wiring_guide.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "control_bringup_plan.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "charger_replacement.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../project_planning/organization_review.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "hardware_purchase_list.pdf"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "purchase_list_control.pdf"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "purchase_list_vision.pdf"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "purchase_list_hardware.pdf"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "hardware_modules_overview.pdf"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "archive/"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../control/docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../competition/README.md"
+    },
+    {
+      "file": "hardware_preparation/README.md",
+      "target": "../project_planning/README.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "encoder_bench.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../../hardware_preparation/wiring.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../../hardware_preparation/i03_handoff.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../Drivers_Custom/Board/board.h"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../Drivers_Custom/Board/board.c"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "motor_bench_startup_issue.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "motor_bench.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "motor_bench_r2_task.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "motor_bench.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../../hardware_preparation/motor_wiring_self_check.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "motor_direct.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../../hardware_preparation/dual_motor_wiring_guide.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "evidence/2026-10-18_c02a/README.md"
+    },
+    {
+      "file": "control/docs/pin_plan.md",
+      "target": "../../hardware_preparation/evidence/2026-10-18_i03/README.md"
+    },
+    {
+      "file": "docs/hardware.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "docs/hardware.md",
+      "target": "../hardware_preparation/wiring.md"
+    },
+    {
+      "file": "docs/hardware.md",
+      "target": "../hardware_preparation/README.md"
+    },
+    {
+      "file": "docs/hardware.md",
+      "target": "../hardware_preparation/evidence/2026-10-18_i03/README.md"
+    },
+    {
+      "file": "docs/hardware.md",
+      "target": "../testing/2026-10-21_motor_bench/i05_measurement_results.md"
+    },
+    {
+      "file": "docs/hardware.md",
+      "target": "../hardware_preparation/board_self_test_record.md"
+    },
+    {
+      "file": "docs/pinmap.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "docs/pinmap.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "docs/pinmap.md",
+      "target": "../hardware_preparation/wiring.md"
+    },
+    {
+      "file": "docs/pinmap.md",
+      "target": "../control/docs/evidence/2026-10-18_c02a/README.md"
+    },
+    {
+      "file": "docs/pinmap.md",
+      "target": "../hardware_preparation/evidence/2026-10-18_i03/README.md"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/Drivers_Custom/Board/board.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/Drivers_Custom/Communication/protocol.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/App/Car/car.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/App/Diagnostics/motor_bench.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/Drivers_Custom/Motor/motor_bench_pwm.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/Drivers_Custom/Motor/motor_direct_gpio.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/Drivers_Custom/Encoder/encoder_hw.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/Algorithms/Encoder/encoder_counter.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/App/Diagnostics/encoder_bench.h"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../control/docs/protocol_v1_draft.md"
+    },
+    {
+      "file": "docs/interfaces.md",
+      "target": "../project_planning/tasks/C-02D.md"
+    },
+    {
+      "file": "docs/architecture.md",
+      "target": "../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "docs/architecture.md",
+      "target": "../project_planning/project_status.md"
+    },
+    {
+      "file": "docs/architecture.md",
+      "target": "../project_planning/tasks/C-02C.md"
+    },
+    {
+      "file": "docs/architecture.md",
+      "target": "../project_planning/tasks/C-02D.md"
+    },
+    {
+      "file": "docs/architecture.md",
+      "target": "../project_planning/collaboration_standard.md"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../control/docs/pin_plan.md"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "wiring.md"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../testing/2026-10-29_wheel_swap/record.md"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../project_planning/tasks/C-02C.md"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../project_planning/tasks/C-02D.md"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../competition/比赛文档.pdf"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../competition/assets/track_figure_1.jpg"
+    },
+    {
+      "file": "hardware_preparation/wheel_mapping.md",
+      "target": "../competition/比赛文档.md"
+    },
+    {
+      "file": "testing/2026-10-29_wheel_swap/record.md",
+      "target": "../2026-10-25_encoder/acceptance_record.md"
+    },
+    {
+      "file": "testing/2026-10-29_wheel_swap/record.md",
+      "target": "../../hardware_preparation/wheel_mapping.md"
+    },
+    {
+      "file": "testing/2026-10-29_wheel_swap/record.md",
+      "target": "checks.json"
+    }
+  ],
+  "firmware_or_Keil_changes": false,
+  "build_or_host_model_run": false,
+  "hardware_operations": false,
+  "remote_or_cross_chat_operations": false
+}

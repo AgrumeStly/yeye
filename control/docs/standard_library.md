@@ -18,6 +18,8 @@ UART默认关闭；主控与硬件核对接线后再改BOARD_UART_ENABLE。原Ha
 
 2026-10-24新增[MotorDirect](motor_direct.md)独立入口：SPL普通GPIO固定PE9高、其余三控制脚低，不配置TIM1／AF／PWM；人工一次500ms后锁定。该目标仍使用TIM5建立R1看门狗初始化的独立超时时基，TIM／IWDG库及CMSIS SysTick不能因“不要PWM”而删除。原PWM与持续目标保留。
 
+2026-10-25 C-02C新增[EncoderBench](encoder_bench.md)，通过ENCODER_BENCH_TARGET单独引入已有SPL TIM／IWDG声明，不定义电机目标宏、不链接PWM。Drivers_Custom/Encoder使用TIM3／TIM4的编码器接口及输入滤波，Core保留TIM5启动等待与CMSIS SysTick；Algorithms/Encoder仅使用标准C数学，不包含STM32头。原库源码、原六目标和电机初始化保持不变，编码器实物标定待验。
+
 ## 初始化结构体的通用写法
 
 ```c

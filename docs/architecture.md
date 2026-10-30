@@ -1,5 +1,8 @@
 # 系统架构与软件分层
 
+2026-10-29安装变更：主控已换左右轮并重新命名物理A左／B右，旧前进转向在新位置成为后退；当前资源到物理轮的对应及参数沿用统一见[当前轮位](../hardware_preparation/wheel_mapping.md)。新物理A/B不等同驱动插口MOTOR-A/B或编码器软件a/b；原始软件通道不随命名自动改动，当前实际配对待核。本次不改固件／引脚，不把旧安装的手转或桥级转停证据外推为新安装动力通过。
+
+
 日期：2026-10-25（北京时间）。维护：00协调架构，01维护STM32，视觉／硬件各维护对应实现。
 依据：当前源码、六目标Keil配置、[模块状态](../project_planning/project_status.md)及主控确认的目录分层。以下区分现有实现与后续模块。
 
@@ -12,10 +15,10 @@ flowchart LR
     Protocol --> State[车辆状态与控制请求]
     State --> Motion[运动驱动与闭环：待实现整合]
     Motion --> Driver[AT8236与双电机]
-    Encoder[编码器：待读取与标定] --> Motion
+    Encoder[双编码器：采集与初版手转标定已交付] --> Motion
 ```
 
-该图描述系统连接方向，不代表完整链路已经验收。视觉正式脚本尚未在本仓库归档；HardwareBench的左右请求仍是演示值，编码器／PID未实现。当前电机诊断使用独立目标，不经过整车状态机。
+该图描述系统连接方向，不代表完整链路已经验收。视觉正式脚本尚未在本仓库归档；HardwareBench的左右请求仍是演示值，编码器采集与初版手转标定已交付，速度PID尚未实现。当前电机诊断使用独立目标，不经过整车状态机。2026-10-25主控已确认MotorPwm的A/B分别起转与自动停转；[C-02C](../project_planning/tasks/C-02C.md)已交付双编码器采集及初版标定，接续[C-02D](../project_planning/tasks/C-02D.md)封装运动Module与低速闭环；完整链路待实测。
 
 ## 仓库与主控工程的两层结构
 
@@ -37,7 +40,7 @@ yeye/
 │   │   ├── Motor/                PWM台架／GPIO诊断驱动
 │   │   └── Communication/        protocol.c/h：字节包编解码
 │   ├── Drivers/                  原版CMSIS、STM32定义与SPL
-│   ├── Algorithms/               纯算法落点；当前只有范围说明
+│   ├── Algorithms/               Encoder计数、回绕与时间换算纯算法
 │   ├── Tests/Host/               电脑测试及fake硬件边界
 │   ├── MDK-ARM/                  多目标／独立Direct工程和本机调试配置
 │   ├── tools/                    现有构建／测试脚本
@@ -65,7 +68,7 @@ yeye/
 | Tests | 电脑验证真实逻辑与硬件边界模型 | 不验证真实电压、波形、电机或整车表现 |
 | MDK-ARM | 设备、宏、目标排除、编译与调试配置 | SPL／ARMCC5沿用，CubeMX的.ioc不适用于当前来源 |
 
-后续新增编码器或传感器驱动时放Drivers_Custom/Encoder或Sensor；纯PID数学放Algorithms，轮速采样／PWM仍在驱动，车辆策略在App。目录说明不是新增功能任务。
+现有编码器驱动已在Drivers_Custom/Encoder，后续传感器驱动放对应Drivers_Custom目录；纯PID数学放Algorithms，轮速采样／PWM仍在驱动，车辆策略在App。目录说明不是新增功能任务。
 
 ## 六个现有目标
 
@@ -78,4 +81,4 @@ yeye/
 | MotorContinuous | motor_bench_main.c＋持续目标宏 | A桥持续诊断 |
 | MotorDirect | motor_direct_main.c | GPIO人工单次A诊断 |
 
-多个main由Keil逐目标显式排除，不能将Core/Src所有文件直接一起编译。对话职责继续由[协作标准](../project_planning/collaboration_standard.md)规定。
+另外保留MotorDirectB、MotorPwm与EncoderBench独立工程；MotorPwm与MotorBench复用重写后的PWM入口，不能因其不在原六目标下拉框中便打开旧工程。当前独立入口按control/README.md选择。多个main由Keil逐目标显式排除，不能将Core/Src所有文件直接一起编译。对话职责继续由[协作标准](../project_planning/collaboration_standard.md)规定。

@@ -1,0 +1,1 @@
+PASS EncoderBench: 241898 assertions in 12 real-main/SPL scenarios (R1, 10ms, dual reads, zero motor; no board)

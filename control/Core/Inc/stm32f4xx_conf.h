@@ -6,8 +6,8 @@
 #include "stm32f4xx_usart.h"
 #include "misc.h"
 
-/* 仅独立电机台架目标引入TIM与IWDG，原三个目标不增加外设配置或驱动依赖。 */
-#ifdef MOTOR_BENCH_TARGET
+/* 独立电机／手转编码器台架使用TIM与IWDG；原三个目标的包含边界不变。 */
+#if defined(MOTOR_BENCH_TARGET) || defined(ENCODER_BENCH_TARGET)
 #include "stm32f4xx_tim.h"
 #include "stm32f4xx_iwdg.h"
 #endif

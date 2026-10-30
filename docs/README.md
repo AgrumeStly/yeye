@@ -12,4 +12,4 @@
 | [tasks.md](tasks.md) | 当前任务、完整任务单和四对话接续入口 |
 | [test-log.md](test-log.md) | 软件验证与实物测试入口及证据层次 |
 
-主控工程的新入口为[多目标Keil工程](../control/MDK-ARM/yeye_control.uvprojx)和[MotorDirect独立入口](../control/MDK-ARM/motor_direct.uvprojx)。目录迁移范围及验证见[ORG-02](../project_planning/tasks/ORG-02.md)。
+当前已通过的A/B分步PWM基线为[MotorPwm独立入口](../control/MDK-ARM/motor_pwm.uvprojx)；后续开发从[多目标Keil工程](../control/MDK-ARM/yeye_control.uvprojx)与[C-02D运动接口任务](../project_planning/tasks/C-02D.md)接续，Direct独立入口保留为对照。目录迁移范围及验证见[ORG-02](../project_planning/tasks/ORG-02.md)，人工验收见[本次PWM记录](../testing/2026-10-25_motor_pwm/acceptance_record.md)。

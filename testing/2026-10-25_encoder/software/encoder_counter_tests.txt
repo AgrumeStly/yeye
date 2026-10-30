@@ -1,0 +1,1 @@
+PASS encoder counter: 8022 assertions (first, stationary, signs, wrap, dt, ambiguity, saturation, 2000 dual trajectories)

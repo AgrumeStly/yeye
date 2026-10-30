@@ -233,3 +233,22 @@ Direct BIN4376字节，SHA256 `6377f00d7f9ff812a6d22ccd5c86217cd0b694092a8dce7cd
 待主控：电池拔开纯Keil下载Verify、独立重启、无动力一次KEY确认500ms后慢闪锁定；通过后先断动力复位，悬空固定、退出调试，只一次A短时动作，再OFF拔电池。仍不转／仅抖动停止试验，不继续B／AB或延长；编码器／电流／温度／真实排针电平／输出电压／机械停稳未验证。仅本地保存，没有切分支、提交、上传、自动烧录、接电池或试转。
 
 2026-10-24工程入口修复：主控反馈没有MotorDirect，实际磁盘工程只有五目标、Keil路径正确；覆盖来源未确定。已保留现场工程／uvoptx至control/build/motor_direct_entry_repair，恢复多目标工程，并新增[单目标独立入口](../MDK-ARM/motor_direct.uvprojx)，沿用同一源码、宏、输出和已验证CMSIS-DAP配置。独立入口实际编译0错误0警告，Code3888／RO424／RW64／ZI1184。源码未变、BIN／HEX哈希未变；当前AXF调试哈希更新为142e7ccb7c3bc37dab12c979e391ab7fa3ae398c47e308a8549523a26f2c5d11，原125e0bf6…为前次构建历史。以入口修复前快照核对原五目标配置保留；没有重新运行未受影响的固件模型，没有烧录、操作板卡或上传。
+
+## 2026-10-25 C-02C：独立双编码器手转采集的软件验证
+
+软件交付完成，实物手转／轮侧／前进符号／每输出轮圈计数待验。本轮基线为codex/current-version-20261025、HEAD 0b0343577895d8eb03a337165da6ce9c5e433519，formal-2026-10-25解引用后相同。原MotorPwm A/B起转／停转已获主控确认，保持既有1kHz／50%／500ms，不回到旧故障排查。
+
+新增Core/Src/encoder_bench_main.c、App/Diagnostics/encoder_bench.c/h、Drivers_Custom/Encoder/encoder_hw.c/h、Algorithms/Encoder/encoder_counter.c/h和MDK-ARM/encoder_bench.uvprojx。唯一目标EncoderBench、revision 0x020C0001；TIM3 PC6/7 AF2及TIM4 PB6/7 AF2四倍频，实际CNT不在采样时清零，10ms调度送入纯数学模块。支持有符号增量／64位饱和累计、实际dt、整数counts/s与有效／丢窗状态；首样只建基线，dt0／>100ms／半量程歧义丢窗并留粘性标志。没有CPR常量或RPM输出，也未接入Car、PID、视觉或串口。
+
+| 检查 | 本轮实际结果与限制 |
+| --- | --- |
+| 纯算法 | 8022次断言通过，其中2000段独立已知双路轨迹；覆盖静止、正反向、两方向回绕、16位符号边界、32位时间回绕、dt0／100／101、半量程拒绝、负速率截断、int64正负饱和／冻结与两路互不污染 |
+| 真实入口集成 | 12场景241898次断言通过，编译实际Core／App／驱动／算法，只有SPL与内核边界为模型；覆盖R1的LSI／PVU／RVU／TIM5等待故障及回绕、错误时钟、读失败／SysTick失败、10ms首边界和真实两路读数，模型拒绝TIM1／非编码器AF／电机置高。断言数含循环，不等于独立场景数 |
+| 新ARM构建 | Keil5／ARMCC5.06u5，EncoderBench 0错误0警告；Code4500／RO424／RW60／ZI1236。BIN4984字节、SP0x20000510／Reset0x0800019D，实际AXF反汇编有编码器配置及CNT读取，没有PWM使能／CCR更新／电机SetBits调用 |
+| 既有兼容 | 原六目标、MotorPwm及MotorDirectB共8个既有目标本轮构建均0错误0警告；原Direct A独立工程未编辑，同入口的原六目标MotorDirect已编译，不重复同源构建。MotorPwm／MotorBench BIN均匹配已验收ea10fb83…；Continuous／Direct A BIN也匹配既有记录 |
+| 源码／工程保留 | 原.c／.h除SPL配置头外与开工哈希一致；配置头只增加ENCODER_BENCH_TARGET的TIM／IWDG包含条件，旧宏边界不变。全部既有Keil工程／本机uvoptx原字节保留，新入口另建且禁调试自动下载；R1六函数去注释和名称映射后代码相同；16份官方来源哈希匹配 |
+| 证据与文档 | 原始输出及源码／产物／兼容／链接检查清单归档至[本轮software](../../testing/2026-10-25_encoder/software/README.md)，详见checks.json；原有电机与协议模型逻辑未变，本轮不重复运行无关测试 |
+
+新BIN SHA256 e5587b20177dde0119215350b6b59f4e21d4820a3541945588a7a2e2ee5ea7f8。完整AXF／HEX大小、哈希和纯Keil入口见[encoder_bench.md](encoder_bench.md)，待填[实物验收](../../testing/2026-10-25_encoder/acceptance_record.md)明确隔离M1/M2、沿既有驱动3V3给编码器供电、F5持续Run、最少Watch、每侧3次整圈及反向核对。
+
+没有板卡连接、自动烧录、接电池、试转、跨聊天、提交、上传或分支变更。模型不证明实际AB脉冲解码／供电／滤波／轮侧／CPR；dt为SysTick软件时间，不保证暂停CPU期间的墙钟差，16位计数也不能检测多圈混叠。现场暂停／复位／flags非0必须作废该次整圈数据后重建基线；真实数据回来前不能宣称轮速闭环或整车通过。全局状态由00依据C-02C文件顺序汇总，01未修改project_status.md。
