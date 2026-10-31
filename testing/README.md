@@ -1,12 +1,13 @@
 # 联调、现场证据与验收
 
-更新：2026-10-25（北京时间）。归档：主控／02，视觉、硬件提供各自证据。
+更新：2026-10-30（北京时间，补同型号新板烧录及电机旋转反馈）。归档：主控／02，视觉、硬件提供各自证据。
 本目录已有下载、板内观察、电压与电机台架诊断记录；尚无整车跑圈或故障停车验收结果。全局结论查[项目状态](../project_planning/project_status.md)。
 
 ## 现有记录
 
 | 目录 | 已归档范围 | 边界 |
 | --- | --- | --- |
+| [2026-10-30_new_board_flash](2026-10-30_new_board_flash/record.md) | 同型号新主板烧录EncoderBench 0x020C0001，编译零错误零警告，Keil Programming Done／Verify OK；后续电机复测主控回报“旋转正常” | 电机反馈未逐项确认轮侧／前进方向、AB并转、自动停转及MotorPwm版本；编码器与整车仍未验，原烧录日志仅对应EncoderBench |
 | [2026-10-20_motor_bench](2026-10-20_motor_bench/acceptance_record.md) | 原版下载、启动故障与R1后绿灯恢复 | 自主启动完整变量／电机通过证据未齐 |
 | [2026-10-21_motor_bench](2026-10-21_motor_bench/no_rotation_record.md) | 原PWM／R2无动作、[静态电压续报](2026-10-21_motor_bench/i05_measurement_results.md)、[R3快照](2026-10-21_motor_bench/r3_watch/README.md) | 目录日期是建档日期，续报保留实际日期；板内启停不证明外部波形／起转 |
 | [2026-10-24_motor_continuous](2026-10-24_motor_continuous/watch/README.md) | 持续A启用／KEY停止配对Watch | 电机未转；[示波器结果表](2026-10-24_motor_continuous/scope_results.md)未填写，不算已测波形 |

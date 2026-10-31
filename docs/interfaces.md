@@ -8,8 +8,12 @@
 
 ## STM32内部C模块
 
+2026-10-30补充：已新增[独立SpeedMatch](../control/docs/speed_match.md)轮速调试实现，复用原编码器与PWM，未接入HardwareBench或跨板协议。两次单轮校准后才启用同目标RPM；软件交付与实车验收分开，详见[C-02F](../project_planning/tasks/C-02F.md)。
+
 | 模块／真实头文件 | 主要API | 调用约束与结果 |
 | --- | --- | --- |
+| [speed_pi.h](../control/Algorithms/Speed/speed_pi.h) | speed_pi_reset、speed_pi_config_valid、speed_pi_update | 纯PI数学，RPM与实际dt输入、0..500千分比输出，限幅／抗饱和，非法值拒绝并清积分 |
+| [speed_match.h](../control/App/Motion/speed_match.h) | speed_match_init、tick、sample、fault、led | 独立台架策略，1ms监督／20ms反馈；逐轮500ms识别、双轮默认3秒、共同RPM；正常重复须重新人工触发，故障锁定 |
 | [board.h](../control/Drivers_Custom/Board/board.h) | board_init、board_millis、board_uart_read、board_uart_fault、board_apply_requests | 主框架使用；时间为uint32毫秒。UART默认关闭；左右request为演示归一化请求，不是m/s、编码器闭环或真实PWM输出 |
 | [protocol.h](../control/Drivers_Custom/Communication/protocol.h) | protocol_crc16、protocol_encode、protocol_parser_init、protocol_push | 字节包编解码；push每次输入一个字节，只在完整验证帧时返回1。字段单位及错误处理见协议原文 |
 | [car.h](../control/App/Car/car.h) | car_init、car_receive、car_tick、car_transport_fault、car_state_name | 车辆状态和左右请求；now为本机uint32毫秒，串口故障通过transport_fault进入故障状态；尚无实际轮速反馈 |

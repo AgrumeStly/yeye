@@ -13,6 +13,8 @@
 
 | 场景 | 入口 |
 | --- | --- |
+| 编码器同速闭环／实时RPM／Watch调参（2026-10-30新增，实车待验） | [MDK-ARM/speed_match.uvprojx](MDK-ARM/speed_match.uvprojx)，目标SpeedMatch；[操作与软件证据](docs/speed_match.md) |
+| 双轮恒定前进3秒／左右输出修正（2026-10-30更新，实车待验） | [MDK-ARM/straight_test.uvprojx](MDK-ARM/straight_test.uvprojx)，目标StraightTest；[调参、操作与软件证据](docs/straight_test.md) |
 | 双编码器只读手转／整圈标定 | [MDK-ARM/encoder_bench.uvprojx](MDK-ARM/encoder_bench.uvprojx)，只有EncoderBench；[操作](docs/encoder_bench.md) |
 | 已通过的PWM分步测试／复现基线 | [MDK-ARM/motor_pwm.uvprojx](MDK-ARM/motor_pwm.uvprojx)，只有MotorPwm；[操作与结果](docs/motor_pwm.md) |
 | Direct A诊断对照 | [MDK-ARM/motor_direct.uvprojx](MDK-ARM/motor_direct.uvprojx)，只有MotorDirect；[人工步骤](docs/motor_direct.md) |

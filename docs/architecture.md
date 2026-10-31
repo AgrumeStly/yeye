@@ -1,5 +1,7 @@
 # 系统架构与软件分层
 
+2026-10-30补充：[SpeedMatch](../control/docs/speed_match.md)已新增独立双轮同速台架，纯PI在Algorithms/Speed，校准／轮速策略在App/Motion，复用原Drivers_Custom编码器和PWM。当前仅软件／模型交付，实车稳定性待验；后文“速度PID尚未实现”属于原10月25日状态，现以此补充区分独立PI已实现与HardwareBench／整车闭环尚未整合。全项目验收仍由00汇总。
+
 2026-10-29安装变更：主控已换左右轮并重新命名物理A左／B右，旧前进转向在新位置成为后退；当前资源到物理轮的对应及参数沿用统一见[当前轮位](../hardware_preparation/wheel_mapping.md)。新物理A/B不等同驱动插口MOTOR-A/B或编码器软件a/b；原始软件通道不随命名自动改动，当前实际配对待核。本次不改固件／引脚，不把旧安装的手转或桥级转停证据外推为新安装动力通过。
 
 
