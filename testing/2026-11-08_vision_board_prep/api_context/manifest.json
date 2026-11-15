@@ -1,0 +1,15 @@
+{
+  "references": {
+    "C:\\Users\\Agrum\\.kendryte\\k230_canmv_examples\\7b5a27e82b89a05b74ce1ece45504d18ba48f3ce95bf31d79791617e9c3b6aa6\\examples\\03-Machine\\uart1.py": "e8a77180bf9533a540128d3389290162b7031037b1b03e932105891c29df888b",
+    "C:\\Users\\Agrum\\.kendryte\\k230_canmv_examples\\7b5a27e82b89a05b74ce1ece45504d18ba48f3ce95bf31d79791617e9c3b6aa6\\examples\\08-Codes\\find_datamatrices.py": "d9086865fa8b0b218cc5069e3fc368f463b5f7bb80e7e041d094753773664ff8",
+    "C:\\Users\\Agrum\\.kendryte\\k230_canmv_examples\\7b5a27e82b89a05b74ce1ece45504d18ba48f3ce95bf31d79791617e9c3b6aa6\\examples\\22-Others\\read_image_for_display.py": "84da10110f75512203cf6e59b8b98adc5fcc4e50f3d16a2f70525c99cecb308e",
+    "C:\\Users\\Agrum\\.kendryte\\k230_canmv_stubs\\f6ca68a0ed02f8d29d27bcf9681581e9f71209bb\\media\\sensor.pyi": "e9beebadfe10b8b5559963ea8b66963e8a6a21289697e47e0506c3e4448ad4bc",
+    "C:\\Users\\Agrum\\.kendryte\\k230_canmv_stubs\\f6ca68a0ed02f8d29d27bcf9681581e9f71209bb\\machine.pyi": "5864cef2f1e294a92509dc8622bc1e245ae866d7c4981cd6d1dad8bc5156e322",
+    "C:\\Users\\Agrum\\.kendryte\\k230_canmv_stubs\\f6ca68a0ed02f8d29d27bcf9681581e9f71209bb\\image.pyi": "9a2cfcc02abd49d0280e186e8ee685f413a07faac4c784330bc69f53911dd185"
+  },
+  "cached_read_only": true,
+  "board_tools_called": false,
+  "examples_revision": "7b5a27e82b89a05b74ce1ece45504d18ba48f3ce95bf31d79791617e9c3b6aa6",
+  "stubs_revision": "f6ca68a0ed02f8d29d27bcf9681581e9f71209bb",
+  "actual_board_firmware": "Only prior recorded K230D-v1.8-0; not queried this turn"
+}

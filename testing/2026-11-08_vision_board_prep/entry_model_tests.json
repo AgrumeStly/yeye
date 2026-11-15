@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "checks": [
+    "default_idle_no_camera_or_uart",
+    "SD_reads_two_frames_without_camera",
+    "SD_packets_all_invalid",
+    "SD_timing_label_not_camera",
+    "diagnostic_not_fake_finish",
+    "live_model_takes_new_frame",
+    "live_cleanup_order",
+    "live_never_enables_valid_path",
+    "original_init_error_preserved",
+    "partial_init_attempts_all_cleanup",
+    "unverified_UART_refused_before_camera"
+  ],
+  "logs": {
+    "sd_model": [
+      {
+        "version": "observer-bench-bp1",
+        "source_kind": "sd_decode_not_camera",
+        "index": 1,
+        "acquire_ms": 10,
+        "buffer_copy_ms": 10,
+        "algorithm_ms": 10,
+        "to_uart_ms": 50,
+        "capture_age_before_uart_ms": 40,
+        "free_before": 1000000,
+        "free_after": 1000000,
+        "diagnostic_valid": false,
+        "deviation_px": null,
+        "deviation_normalized": null,
+        "threshold": 20,
+        "wire_valid": false,
+        "wire_hex": "a55a01010c0000000000000000000a00000091ef",
+        "control_ready": false,
+        "finish_state": "not_ported",
+        "uart_enabled": false
+      },
+      {
+        "version": "observer-bench-bp1",
+        "source_kind": "sd_decode_not_camera",
+        "index": 2,
+        "acquire_ms": 10,
+        "buffer_copy_ms": 10,
+        "algorithm_ms": 10,
+        "to_uart_ms": 50,
+        "capture_age_before_uart_ms": 40,
+        "free_before": 1000000,
+        "free_after": 1000000,
+        "diagnostic_valid": false,
+        "deviation_px": null,
+        "deviation_normalized": null,
+        "threshold": 20,
+        "wire_valid": false,
+        "wire_hex": "a55a01010c0100000000000000000a000000f2aa",
+        "control_ready": false,
+        "finish_state": "not_ported",
+        "uart_enabled": false
+      }
+    ],
+    "live_model": {
+      "events": [
+        "sensor_init",
+        "sensor_reset",
+        "display_init",
+        "media_init",
+        "sensor_run",
+        "snapshot",
+        "snapshot",
+        "sensor_stop",
+        "display_deinit",
+        "sleep",
+        "media_deinit"
+      ],
+      "diagnostics": [
+        {
+          "version": "observer-bench-bp1",
+          "source_kind": "live_snapshot_software_boundary",
+          "index": 1,
+          "acquire_ms": 10,
+          "buffer_copy_ms": 10,
+          "algorithm_ms": 10,
+          "to_uart_ms": 50,
+          "capture_age_before_uart_ms": 40,
+          "free_before": 1000000,
+          "free_after": 1000000,
+          "diagnostic_valid": false,
+          "deviation_px": null,
+          "deviation_normalized": null,
+          "threshold": 20,
+          "wire_valid": false,
+          "wire_hex": "a55a01010c0000000000000000000a00000091ef",
+          "control_ready": false,
+          "finish_state": "not_ported",
+          "uart_enabled": false
+        },
+        {
+          "version": "observer-bench-bp1",
+          "source_kind": "live_snapshot_software_boundary",
+          "index": 2,
+          "acquire_ms": 10,
+          "buffer_copy_ms": 10,
+          "algorithm_ms": 10,
+          "to_uart_ms": 50,
+          "capture_age_before_uart_ms": 40,
+          "free_before": 1000000,
+          "free_after": 1000000,
+          "diagnostic_valid": false,
+          "deviation_px": null,
+          "deviation_normalized": null,
+          "threshold": 20,
+          "wire_valid": false,
+          "wire_hex": "a55a01010c0100000000000000000a000000f2aa",
+          "control_ready": false,
+          "finish_state": "not_ported",
+          "uart_enabled": false
+        }
+      ]
+    },
+    "failed_init_cleanup": [
+      "sensor_init",
+      "sensor_reset",
+      "display_init",
+      "media_init",
+      "sensor_stop",
+      "display_deinit",
+      "sleep",
+      "media_deinit"
+    ]
+  },
+  "scope": "PC fake API model only; no real board or end-to-end performance"
+}

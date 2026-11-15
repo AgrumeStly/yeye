@@ -1,0 +1,93 @@
+{
+  "independent_replay_summary": {
+    "input_count": 325,
+    "processed_ok": 325,
+    "valid": 162,
+    "invalid": 163,
+    "read_failed": 0,
+    "overlay_count": 325,
+    "video_decoded_frames": 325,
+    "preview_fps": 10,
+    "preview_is_capture_fps": false,
+    "video_error": null,
+    "invalid_reasons": {
+      "reference_row_not_bracketed": 86,
+      "insufficient_pair_support": 56,
+      "low_pair_quality": 57,
+      "single_boundary_only_side_ambiguous": 70,
+      "pair_not_widening_toward_camera": 23
+    },
+    "algorithm_ms": {
+      "mean": 10.988904923076923,
+      "median": 10.8649,
+      "p95": 12.626420000000001,
+      "maximum": 21.7359
+    },
+    "timing_excludes": [
+      "image_read",
+      "drawing",
+      "image_write",
+      "video_encoding"
+    ],
+    "wall_seconds": 4.857469500042498,
+    "temporal_state": "none",
+    "interpretation": "output validity statistics, not accuracy; PC timing is not K230D or end-to-end latency"
+  },
+  "non_timing_mismatches": [],
+  "capture_files_unchanged": 651,
+  "baseline_output_files_unchanged": 663,
+  "invalid_to_valid": [
+    124,
+    281
+  ],
+  "valid_to_invalid": [],
+  "max_common_deviation_change_px": 1.0,
+  "failure_geometry_checks": [
+    {
+      "name": "real",
+      "valid": true
+    },
+    {
+      "name": "white",
+      "valid": false
+    },
+    {
+      "name": "real_again",
+      "valid": true
+    },
+    {
+      "name": "black",
+      "valid": false
+    },
+    {
+      "name": "none",
+      "valid": false
+    },
+    {
+      "name": "wrong_shape",
+      "valid": false
+    },
+    {
+      "name": "stripe",
+      "valid": false,
+      "ribbons": 1
+    },
+    {
+      "name": "wall",
+      "valid": false,
+      "ribbons": 0
+    },
+    {
+      "name": "parallel",
+      "valid": false,
+      "ribbons": 0
+    }
+  ],
+  "candidate_only_ribbon_frames": 197,
+  "source_sha256": {
+    "vision\\src\\offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision\\tools\\check_offline_replay.py": "e697351d6ce2516b87c54bbd92c27ed319609c1eb5330011cc61de56c1171e91",
+    "vision\\tools\\compare_offline.py": "17b27cdd8ca75954321f5a07158812f1ce0db0ef5031dc5befde29abf2059bc1",
+    "vision\\tools\\replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb"
+  }
+}

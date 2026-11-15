@@ -1,0 +1,259 @@
+{
+  "groups": [
+    {
+      "pose": "center",
+      "session": "v03_center_0002",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0002",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": [
+        {
+          "frame_id": 1,
+          "deviation_px": 0.0,
+          "left_inner_x": 80,
+          "right_inner_x": 239,
+          "pair_y_range": [
+            65,
+            215
+          ]
+        },
+        {
+          "frame_id": 2,
+          "deviation_px": 0.0,
+          "left_inner_x": 80,
+          "right_inner_x": 239,
+          "pair_y_range": [
+            65,
+            215
+          ]
+        },
+        {
+          "frame_id": 3,
+          "deviation_px": 0.0,
+          "left_inner_x": 80,
+          "right_inner_x": 239,
+          "pair_y_range": [
+            65,
+            215
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "offset_left",
+      "session": "v03_offset_left_0001",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001",
+        "frames": 3,
+        "pose_label": "offset_left",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": [
+        {
+          "frame_id": 1,
+          "deviation_px": 27.0,
+          "left_inner_x": 107,
+          "right_inner_x": 266,
+          "pair_y_range": [
+            65,
+            180
+          ]
+        },
+        {
+          "frame_id": 2,
+          "deviation_px": 27.5,
+          "left_inner_x": 107,
+          "right_inner_x": 267,
+          "pair_y_range": [
+            65,
+            180
+          ]
+        },
+        {
+          "frame_id": 3,
+          "deviation_px": 27.5,
+          "left_inner_x": 107,
+          "right_inner_x": 267,
+          "pair_y_range": [
+            65,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "offset_right",
+      "session": "v03_offset_right_0001",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001",
+        "frames": 3,
+        "pose_label": "offset_right",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": [
+        {
+          "frame_id": 1,
+          "deviation_px": -24.5,
+          "left_inner_x": 55,
+          "right_inner_x": 215,
+          "pair_y_range": [
+            65,
+            195
+          ]
+        },
+        {
+          "frame_id": 2,
+          "deviation_px": -24.5,
+          "left_inner_x": 55,
+          "right_inner_x": 215,
+          "pair_y_range": [
+            65,
+            195
+          ]
+        },
+        {
+          "frame_id": 3,
+          "deviation_px": -24.5,
+          "left_inner_x": 55,
+          "right_inner_x": 215,
+          "pair_y_range": [
+            65,
+            195
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "heading_left",
+      "session": "v03_heading_left_0001",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001",
+        "frames": 3,
+        "pose_label": "heading_left",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": [
+        {
+          "frame_id": 1,
+          "deviation_px": 32.0,
+          "left_inner_x": 109,
+          "right_inner_x": 274,
+          "pair_y_range": [
+            65,
+            195
+          ]
+        },
+        {
+          "frame_id": 2,
+          "deviation_px": 32.0,
+          "left_inner_x": 109,
+          "right_inner_x": 274,
+          "pair_y_range": [
+            65,
+            195
+          ]
+        },
+        {
+          "frame_id": 3,
+          "deviation_px": 32.0,
+          "left_inner_x": 109,
+          "right_inner_x": 274,
+          "pair_y_range": [
+            65,
+            195
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "heading_right",
+      "session": "v03_heading_right_0001",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001",
+        "frames": 3,
+        "pose_label": "heading_right",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": [
+        {
+          "frame_id": 1,
+          "deviation_px": -44.5,
+          "left_inner_x": 34,
+          "right_inner_x": 196,
+          "pair_y_range": [
+            65,
+            180
+          ]
+        },
+        {
+          "frame_id": 2,
+          "deviation_px": -44.5,
+          "left_inner_x": 34,
+          "right_inner_x": 196,
+          "pair_y_range": [
+            65,
+            180
+          ]
+        },
+        {
+          "frame_id": 3,
+          "deviation_px": -44.5,
+          "left_inner_x": 34,
+          "right_inner_x": 196,
+          "pair_y_range": [
+            65,
+            180
+          ]
+        }
+      ]
+    }
+  ],
+  "image_count": 15,
+  "source_file_count": 25,
+  "valid": 15,
+  "frozen_code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "parameter_sha256": "d34144aff88631d1a5d549483f13b5880e197011863e4b3e054150b29bac7afc",
+  "scope": "15 static frames only; posthoc visual audit is not independent accuracy ground truth"
+}

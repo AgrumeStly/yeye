@@ -1,0 +1,43 @@
+{
+  "log_begin": {
+    "event": "begin",
+    "duration_ms": 30000,
+    "automatic_motor_start": false,
+    "input_kind": "real_camera",
+    "log": "/sdcard/lap_runtime_logs/run_0001.jsonl",
+    "revision": "L1-R6-RUNTIME-1",
+    "drive_allowed": false
+  },
+  "log_end": {
+    "lap_acceptance": false,
+    "event": "completed"
+  },
+  "logged_samples": 43,
+  "highest_algorithm_index": 390,
+  "actual_total_frames": null,
+  "invalid_indices": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "all_wire_valid_false": true,
+  "all_drive_allowed_false": true,
+  "metrics": {
+    "processing_ms": {
+      "min": 37,
+      "median": 56,
+      "max": 58
+    },
+    "to_send_ms": {
+      "min": 39,
+      "median": 58,
+      "max": 75
+    },
+    "interval_ms": {
+      "min": 58,
+      "median": 74.0,
+      "max": 98
+    }
+  }
+}

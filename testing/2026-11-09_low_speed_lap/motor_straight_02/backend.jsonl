@@ -1,0 +1,67 @@
+{"at": 1794200215.935849, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1794200215.9582965, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1794200216.489873, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1794200216.4901114, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1794200216.4902463, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1794200216.4908571, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1794200216.4925234, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1794200216.492615, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1794200216.743024, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1794200216.9432633, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794200216.943695, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1794200216.9438045, "id": 2, "result": {"running": false}}
+{"at": 1794200216.9458072, "request": {"id": 3, "method": "runScript", "params": {"script_sha256": "872cf7115cae28a8fa341f9d1f025ff389cdcb3cd2fb5a5294ab505d1b410ee9"}}}
+{"at": 1794200217.1393044, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794200218.15617, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1794200218.1565063, "id": 3, "result": {"status": "ok"}}
+{"at": 1794200218.1566792, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[BENCH FIXTURE READY] straight NO CAMERA; NO START; suspended wheels; MCU run_ms must be 3000\r\n"}}
+{"at": 1794200220.2350998, "request": {"id": 4, "method": "scriptRunning", "params": {}}}
+{"at": 1794200220.235866, "id": 4, "result": {"running": true}}
+{"at": 1794200222.2859085, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1794200222.286752, "id": 5, "result": {"running": true}}
+{"at": 1794200224.3504362, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1794200224.3510125, "id": 6, "result": {"running": true}}
+{"at": 1794200226.4155734, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1794200226.4164813, "id": 7, "result": {"running": true}}
+{"at": 1794200228.5120268, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1794200228.512719, "id": 8, "result": {"running": true}}
+{"at": 1794200230.5790954, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1794200230.5795867, "id": 9, "result": {"running": true}}
+{"at": 1794200232.6184633, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1794200232.6190991, "id": 10, "result": {"running": true}}
+{"at": 1794200234.661177, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1794200234.6621387, "id": 11, "result": {"running": true}}
+{"at": 1794200236.7221756, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1794200236.7228997, "id": 12, "result": {"running": true}}
+{"at": 1794200238.7706773, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1794200238.771341, "id": 13, "result": {"running": true}}
+{"at": 1794200240.8631532, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1794200240.8638794, "id": 14, "result": {"running": true}}
+{"at": 1794200242.9185286, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1794200242.9189708, "id": 15, "result": {"running": true}}
+{"at": 1794200244.9665852, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1794200244.9673388, "id": 16, "result": {"running": true}}
+{"at": 1794200247.048415, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1794200247.0489478, "id": 17, "result": {"running": true}}
+{"at": 1794200249.1293027, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1794200249.1300616, "id": 18, "result": {"running": true}}
+{"at": 1794200251.2024488, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1794200251.205946, "id": 19, "result": {"running": true}}
+{"at": 1794200253.264387, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1794200253.265009, "id": 20, "result": {"running": true}}
+{"at": 1794200255.3251677, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1794200255.3259037, "id": 21, "result": {"running": true}}
+{"at": 1794200257.4077713, "request": {"id": 22, "method": "scriptRunning", "params": {}}}
+{"at": 1794200257.4084783, "id": 22, "result": {"running": true}}
+{"at": 1794200259.4876719, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1794200259.4884722, "id": 23, "result": {"running": true}}
+{"at": 1794200261.541896, "request": {"id": 24, "method": "scriptRunning", "params": {}}}
+{"at": 1794200261.5426111, "id": 24, "result": {"running": true}}
+{"at": 1794200262.8004637, "event": "scriptOutput", "params": {"text": "[MOTOR BENCH DONE] 870 fixture paths; no automatic START; no vision/lap acceptance\r\n"}}
+{"at": 1794200262.9032624, "event": "scriptOutput", "params": {"text": "CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794200263.0083206, "event": "scriptState", "params": {"state": "finished"}}
+{"at": 1794200263.0084043, "request": {"id": 25, "method": "scriptRunning", "params": {}}}
+{"at": 1794200263.0088003, "id": 25, "result": {"running": false}}
+{"at": 1794200263.008895, "request": {"id": 26, "method": "disconnectBoard", "params": {}}}
+{"at": 1794200263.4688065, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794200263.4705448, "id": 26, "result": {}}

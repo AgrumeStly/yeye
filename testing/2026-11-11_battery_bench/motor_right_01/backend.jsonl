@@ -1,0 +1,138 @@
+{"at": 1794385859.7831788, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1794385859.8063552, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1794385860.3353887, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1794385860.3355653, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1794385860.3358371, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1794385860.3362892, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1794385860.3380399, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1794385860.3381197, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1794385860.5885773, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1794385860.816715, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794385860.817018, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1794385860.8170624, "id": 2, "result": {"running": false}}
+{"at": 1794385860.8195608, "request": {"id": 3, "method": "runScript", "params": {"script_sha256": "a2fba56066dcb915e7768bf642355fa9087d6a79b86dd791947d8df1a4fdd73b"}}}
+{"at": 1794385861.0024564, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794385862.0242524, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1794385862.0243657, "id": 3, "result": {"status": "ok"}}
+{"at": 1794385862.024672, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[BENCH FIXTURE READY] right 120s input window; NO CAMERA; NO START; suspended wheels; MCU run_ms must be 3000\r\n"}}
+{"at": 1794385864.1360521, "request": {"id": 4, "method": "scriptRunning", "params": {}}}
+{"at": 1794385864.13691, "id": 4, "result": {"running": true}}
+{"at": 1794385866.232759, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1794385866.2335463, "id": 5, "result": {"running": true}}
+{"at": 1794385868.3344698, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1794385868.3352218, "id": 6, "result": {"running": true}}
+{"at": 1794385870.4344745, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1794385870.4352388, "id": 7, "result": {"running": true}}
+{"at": 1794385872.5414007, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1794385872.5418844, "id": 8, "result": {"running": true}}
+{"at": 1794385874.623285, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1794385874.6241643, "id": 9, "result": {"running": true}}
+{"at": 1794385876.735134, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1794385876.7359538, "id": 10, "result": {"running": true}}
+{"at": 1794385878.8467298, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1794385878.8473763, "id": 11, "result": {"running": true}}
+{"at": 1794385880.9480598, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1794385880.948564, "id": 12, "result": {"running": true}}
+{"at": 1794385883.0189366, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1794385883.019711, "id": 13, "result": {"running": true}}
+{"at": 1794385885.1254342, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1794385885.126236, "id": 14, "result": {"running": true}}
+{"at": 1794385887.19633, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1794385887.196993, "id": 15, "result": {"running": true}}
+{"at": 1794385889.2702522, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1794385889.2707903, "id": 16, "result": {"running": true}}
+{"at": 1794385891.3845732, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1794385891.385045, "id": 17, "result": {"running": true}}
+{"at": 1794385893.4911447, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1794385893.4919682, "id": 18, "result": {"running": true}}
+{"at": 1794385895.5777454, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1794385895.5783577, "id": 19, "result": {"running": true}}
+{"at": 1794385897.6818938, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1794385897.6827016, "id": 20, "result": {"running": true}}
+{"at": 1794385899.7680328, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1794385899.769122, "id": 21, "result": {"running": true}}
+{"at": 1794385901.8786314, "request": {"id": 22, "method": "scriptRunning", "params": {}}}
+{"at": 1794385901.8794136, "id": 22, "result": {"running": true}}
+{"at": 1794385903.96144, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1794385903.9621594, "id": 23, "result": {"running": true}}
+{"at": 1794385906.035455, "request": {"id": 24, "method": "scriptRunning", "params": {}}}
+{"at": 1794385906.0369, "id": 24, "result": {"running": true}}
+{"at": 1794385908.1131454, "request": {"id": 25, "method": "scriptRunning", "params": {}}}
+{"at": 1794385908.1138828, "id": 25, "result": {"running": true}}
+{"at": 1794385910.1851647, "request": {"id": 26, "method": "scriptRunning", "params": {}}}
+{"at": 1794385910.1858792, "id": 26, "result": {"running": true}}
+{"at": 1794385912.2775707, "request": {"id": 27, "method": "scriptRunning", "params": {}}}
+{"at": 1794385912.27835, "id": 27, "result": {"running": true}}
+{"at": 1794385914.3808522, "request": {"id": 28, "method": "scriptRunning", "params": {}}}
+{"at": 1794385914.3816397, "id": 28, "result": {"running": true}}
+{"at": 1794385916.465731, "request": {"id": 29, "method": "scriptRunning", "params": {}}}
+{"at": 1794385916.466216, "id": 29, "result": {"running": true}}
+{"at": 1794385918.5537481, "request": {"id": 30, "method": "scriptRunning", "params": {}}}
+{"at": 1794385918.5545654, "id": 30, "result": {"running": true}}
+{"at": 1794385920.6140873, "request": {"id": 31, "method": "scriptRunning", "params": {}}}
+{"at": 1794385920.6146061, "id": 31, "result": {"running": true}}
+{"at": 1794385922.7023935, "request": {"id": 32, "method": "scriptRunning", "params": {}}}
+{"at": 1794385922.7033706, "id": 32, "result": {"running": true}}
+{"at": 1794385924.771549, "request": {"id": 33, "method": "scriptRunning", "params": {}}}
+{"at": 1794385924.772224, "id": 33, "result": {"running": true}}
+{"at": 1794385926.8603082, "request": {"id": 34, "method": "scriptRunning", "params": {}}}
+{"at": 1794385926.8612044, "id": 34, "result": {"running": true}}
+{"at": 1794385928.9219985, "request": {"id": 35, "method": "scriptRunning", "params": {}}}
+{"at": 1794385928.9228127, "id": 35, "result": {"running": true}}
+{"at": 1794385931.0170217, "request": {"id": 36, "method": "scriptRunning", "params": {}}}
+{"at": 1794385931.0177715, "id": 36, "result": {"running": true}}
+{"at": 1794385933.0918305, "request": {"id": 37, "method": "scriptRunning", "params": {}}}
+{"at": 1794385933.0928197, "id": 37, "result": {"running": true}}
+{"at": 1794385935.1711917, "request": {"id": 38, "method": "scriptRunning", "params": {}}}
+{"at": 1794385935.1719453, "id": 38, "result": {"running": true}}
+{"at": 1794385937.2681015, "request": {"id": 39, "method": "scriptRunning", "params": {}}}
+{"at": 1794385937.268841, "id": 39, "result": {"running": true}}
+{"at": 1794385939.3513293, "request": {"id": 40, "method": "scriptRunning", "params": {}}}
+{"at": 1794385939.352053, "id": 40, "result": {"running": true}}
+{"at": 1794385941.447295, "request": {"id": 41, "method": "scriptRunning", "params": {}}}
+{"at": 1794385941.4480848, "id": 41, "result": {"running": true}}
+{"at": 1794385943.5561988, "request": {"id": 42, "method": "scriptRunning", "params": {}}}
+{"at": 1794385943.5571709, "id": 42, "result": {"running": true}}
+{"at": 1794385945.6350574, "request": {"id": 43, "method": "scriptRunning", "params": {}}}
+{"at": 1794385945.6361647, "id": 43, "result": {"running": true}}
+{"at": 1794385947.7471237, "request": {"id": 44, "method": "scriptRunning", "params": {}}}
+{"at": 1794385947.748103, "id": 44, "result": {"running": true}}
+{"at": 1794385949.8210592, "request": {"id": 45, "method": "scriptRunning", "params": {}}}
+{"at": 1794385949.8216999, "id": 45, "result": {"running": true}}
+{"at": 1794385951.906638, "request": {"id": 46, "method": "scriptRunning", "params": {}}}
+{"at": 1794385951.9074519, "id": 46, "result": {"running": true}}
+{"at": 1794385953.9765625, "request": {"id": 47, "method": "scriptRunning", "params": {}}}
+{"at": 1794385953.9774268, "id": 47, "result": {"running": true}}
+{"at": 1794385956.0634084, "request": {"id": 48, "method": "scriptRunning", "params": {}}}
+{"at": 1794385956.0641499, "id": 48, "result": {"running": true}}
+{"at": 1794385958.1453457, "request": {"id": 49, "method": "scriptRunning", "params": {}}}
+{"at": 1794385958.1461241, "id": 49, "result": {"running": true}}
+{"at": 1794385960.2305467, "request": {"id": 50, "method": "scriptRunning", "params": {}}}
+{"at": 1794385960.2313266, "id": 50, "result": {"running": true}}
+{"at": 1794385962.3043628, "request": {"id": 51, "method": "scriptRunning", "params": {}}}
+{"at": 1794385962.3051386, "id": 51, "result": {"running": true}}
+{"at": 1794385964.3913217, "request": {"id": 52, "method": "scriptRunning", "params": {}}}
+{"at": 1794385964.3921537, "id": 52, "result": {"running": true}}
+{"at": 1794385966.4736195, "request": {"id": 53, "method": "scriptRunning", "params": {}}}
+{"at": 1794385966.4743307, "id": 53, "result": {"running": true}}
+{"at": 1794385968.5618153, "request": {"id": 54, "method": "scriptRunning", "params": {}}}
+{"at": 1794385968.5627217, "id": 54, "result": {"running": true}}
+{"at": 1794385970.6463337, "request": {"id": 55, "method": "scriptRunning", "params": {}}}
+{"at": 1794385970.647077, "id": 55, "result": {"running": true}}
+{"at": 1794385972.7314262, "request": {"id": 56, "method": "scriptRunning", "params": {}}}
+{"at": 1794385972.7321575, "id": 56, "result": {"running": true}}
+{"at": 1794385974.8070855, "request": {"id": 57, "method": "scriptRunning", "params": {}}}
+{"at": 1794385974.807751, "id": 57, "result": {"running": true}}
+{"at": 1794385976.908287, "request": {"id": 58, "method": "scriptRunning", "params": {}}}
+{"at": 1794385976.909049, "id": 58, "result": {"running": true}}
+{"at": 1794385978.9689999, "request": {"id": 59, "method": "scriptRunning", "params": {}}}
+{"at": 1794385978.9697382, "id": 59, "result": {"running": true}}
+{"at": 1794385981.04488, "request": {"id": 60, "method": "scriptRunning", "params": {}}}
+{"at": 1794385981.0455086, "id": 60, "result": {"running": true}}
+{"at": 1794385981.7436569, "event": "scriptOutput", "params": {"text": "[MOTOR BENCH DONE] 2317 fixture paths; no automatic START; no vision/lap acceptance\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794385981.8515189, "event": "scriptState", "params": {"state": "finished"}}
+{"at": 1794385981.8516247, "request": {"id": 61, "method": "scriptRunning", "params": {}}}
+{"at": 1794385981.852005, "id": 61, "result": {"running": false}}
+{"at": 1794385981.8521051, "request": {"id": 62, "method": "disconnectBoard", "params": {}}}
+{"at": 1794385982.3048854, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794385982.3065958, "id": 62, "result": {}}

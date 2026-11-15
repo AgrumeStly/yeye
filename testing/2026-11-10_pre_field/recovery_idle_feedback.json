@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-10",
+  "task": "I-02-LOW-SPEED-LAP",
+  "operator_reply": "是",
+  "confirmation_context": "Keep K230 stable USB power and motor battery disconnected; manual Keil Reset CPU then Run on STM32, no download/KEY; after5s verify state/reason/received/PWM/UART totals/five categories0 and advancing g_speed_ms.",
+  "operator_confirmed_idle_values": {
+    "state": 0,
+    "reason": 0,
+    "received": 0,
+    "left_pwm": 0,
+    "right_pwm": 0,
+    "uart_total_errors": 0,
+    "overrun": 0,
+    "noise": 0,
+    "frame": 0,
+    "parity": 0,
+    "ring_full": 0,
+    "g_speed_ms_advancing": true
+  },
+  "basis": "Operator confirmation of explicit expected table; no separate screenshot or automated SWD readback for this step.",
+  "stable_K230_then_manual_STM32_reset_idle_check_passed_once": true,
+  "unpowered_session_checks_closed": true,
+  "I02_task_complete": false,
+  "electrical_fault_fixed": false,
+  "transient_electrical_root_cause_confirmed": false,
+  "battery_terminal_voltage_measured": false,
+  "battery_driven_logic_5V_verified": false,
+  "new_battery_motor_tests_passed": false,
+  "powered_RUN_source_loss_stop_verified": false,
+  "real_track_vision_verified": false,
+  "autonomous_lap_verified": false,
+  "new_tests_or_board_access_after_this_feedback": false
+}

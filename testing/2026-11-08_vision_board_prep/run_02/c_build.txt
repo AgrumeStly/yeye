@@ -1,0 +1,1 @@
+gcc -std=c99 -Wall -Wextra -Werror vision/tools/protocol_cross_harness.c control/Drivers_Custom/Communication/protocol.c control/App/Car/car.c -Icontrol/Drivers_Custom/Communication -Icontrol/App/Car -o testing\2026-11-08_vision_board_prep\run_02\protocol_cross.exe

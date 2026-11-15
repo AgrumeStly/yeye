@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "disabled_no_files",
+      "passed": true
+    },
+    {
+      "name": "invalid_payloads_rejected",
+      "passed": true
+    },
+    {
+      "name": "exact_jpeg_bytes_exclude_transport",
+      "passed": true
+    },
+    {
+      "name": "little_endian_frame_id_and_hash",
+      "passed": true
+    },
+    {
+      "name": "one_second_sampling",
+      "passed": true
+    },
+    {
+      "name": "five_image_cap_and_no_overwrite",
+      "passed": true
+    },
+    {
+      "name": "io_failure_disables_capture",
+      "passed": true
+    },
+    {
+      "name": "io_failure_reported",
+      "passed": true
+    }
+  ],
+  "physical_board_used": false,
+  "real_camera_images": false
+}

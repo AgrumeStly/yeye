@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "action": "deploy_fixed_runtime_candidate",
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "candidate_sha256": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8",
+  "runtime_version": "trace-v3",
+  "bytes": 36244,
+  "stat": {
+    "exists": true,
+    "type": "file",
+    "size": 36244,
+    "mtime": 1735690330
+  },
+  "backup_sha256": "838c5e9a4d14d42840c54526b1f3c4d4a848e93654de8bca5faf45f85fb2968f",
+  "exact_readback": true,
+  "main_py_written": true,
+  "script_executed": false,
+  "automatic_motor_start": false,
+  "physical_power_isolated": true,
+  "cold_boot_verified": false,
+  "ground_motion_verified": false
+}

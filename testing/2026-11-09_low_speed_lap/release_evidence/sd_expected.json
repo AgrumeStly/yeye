@@ -1,0 +1,1576 @@
+[
+  {
+    "file": "data_0001.jpg",
+    "sha256": "7f75c77c5d7282c40aa91a73841b89757a09b5f2dd24220ee4de7ea43b3d0f8d",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": 6,
+      "bend": 306,
+      "confidence": 0,
+      "threshold": 96,
+      "route": [
+        [
+          -0.010552154861915408,
+          8.00039671434629
+        ],
+        [
+          0.059260129125076166,
+          16.000092098859657
+        ],
+        [
+          0.12907241311206774,
+          23.99978748337303
+        ],
+        [
+          0.19888469709905932,
+          31.999482867886403
+        ],
+        [
+          0.2686969810860509,
+          39.99917825239977
+        ],
+        [
+          0.33850926507304246,
+          47.99887363691313
+        ],
+        [
+          0.40832154906003404,
+          55.998569021426505
+        ]
+      ],
+      "support": [
+        13,
+        12
+      ],
+      "anchors": [
+        [
+          -1.5052264808362372,
+          59.661523145843695,
+          73.5
+        ],
+        [
+          -0.6019507663725037,
+          54.63074779377612,
+          81.5
+        ],
+        [
+          -0.5642141924249021,
+          50.23073574227252,
+          89.5
+        ],
+        [
+          -0.5309299467431382,
+          46.34985661614092,
+          97.5
+        ],
+        [
+          -0.5013539651837525,
+          42.90135396518375,
+          105.5
+        ],
+        [
+          -0.4748992304873581,
+          39.816782704287284,
+          113.5
+        ],
+        [
+          -0.45109641489731994,
+          37.04142011834319,
+          121.5
+        ],
+        [
+          -0.4295657938349354,
+          34.53099105071263,
+          129.5
+        ],
+        [
+          -0.4099968364441633,
+          32.24928819993673,
+          137.5
+        ],
+        [
+          -0.3921331316187595,
+          30.16641452344932,
+          145.5
+        ],
+        [
+          -0.3757610901710641,
+          28.257465932154247,
+          153.5
+        ],
+        [
+          -0.3607013637628723,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          0.11560074926411562,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          0.1113115176500902,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          0.10732919254658387,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          0.10362197169585033,
+          20.690813144639,
+          193.5
+        ],
+        [
+          0.10016230002318573,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          0.09692618353152345,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          0.09389263203651381,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        -0.33181037009368275,
+        -28.812148512013092,
+        -0.6632251157578453,
+        0.6719517620178169
+      ],
+      "score": 2.8972330094561283
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0098.jpg",
+    "sha256": "7547d34b31e4e9dc2dadaf8f7d74dca88e6c93a38a81d80fa7e5d277d33a35fa",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 300,
+      "confidence": 0,
+      "threshold": 79,
+      "route": [
+        [
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          16.0
+        ],
+        [
+          0.0,
+          24.0
+        ],
+        [
+          0.0,
+          32.0
+        ],
+        [
+          0.0,
+          40.0
+        ],
+        [
+          0.0,
+          48.0
+        ],
+        [
+          0.0,
+          56.0
+        ]
+      ],
+      "support": [
+        12,
+        9
+      ],
+      "anchors": [
+        [
+          -0.45109641489731994,
+          37.04142011834319,
+          121.5
+        ],
+        [
+          -0.4295657938349354,
+          34.53099105071263,
+          129.5
+        ],
+        [
+          -0.956659285036381,
+          32.24928819993673,
+          137.5
+        ],
+        [
+          -0.9149773071104389,
+          30.16641452344932,
+          145.5
+        ],
+        [
+          -0.3757610901710641,
+          28.257465932154247,
+          153.5
+        ],
+        [
+          -0.3607013637628723,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          -0.34680224779234686,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          -0.3339345529502706,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          -0.3219875776397516,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          -0.310865915087551,
+          20.690813144639,
+          193.5
+        ],
+        [
+          -0.7011361001623001,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          -0.29077855059457036,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          -0.2816778961095414,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        0.0,
+        67.5,
+        0.0,
+        1.5707963267948966
+      ],
+      "score": 2.8312619684988514
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0100.jpg",
+    "sha256": "91995afe768267d059f8fc4c66261bbe26d89b54ef49c3e206809fd9ed9f5326",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 300,
+      "confidence": 0,
+      "threshold": 95,
+      "route": [
+        [
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          16.0
+        ],
+        [
+          0.0,
+          24.0
+        ],
+        [
+          0.0,
+          32.0
+        ],
+        [
+          0.0,
+          40.0
+        ],
+        [
+          0.0,
+          48.0
+        ],
+        [
+          0.0,
+          56.0
+        ]
+      ],
+      "support": [
+        31,
+        7
+      ],
+      "anchors": [
+        [
+          0.13666561214805442,
+          32.24928819993673,
+          137.5
+        ],
+        [
+          0.13071104387291985,
+          30.16641452344932,
+          145.5
+        ],
+        [
+          0.12525369672368805,
+          28.257465932154247,
+          153.5
+        ],
+        [
+          0.12023378792095743,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          0.11560074926411562,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          0.1113115176500902,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          0.10732919254658387,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          0.10362197169585033,
+          20.690813144639,
+          193.5
+        ],
+        [
+          0.10016230002318573,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          0.09692618353152345,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          0.09389263203651381,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        0.0,
+        60.0,
+        0.0,
+        1.5707963267948966
+      ],
+      "score": 3.118711739205332
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0109.jpg",
+    "sha256": "544a81c8984f1f8bb142a821c79c8cde5e20580c8efc8da4b2306cd817490d83",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 93,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [
+        [
+          1.9652127374899655,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          1.0018036588508117,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          0.5366459627329193,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          0.932597745262653,
+          20.690813144639,
+          193.5
+        ],
+        [
+          0.10016230002318573,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          0.4846309176576173,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          0.46946316018256906,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0111.jpg",
+    "sha256": "6a5928cb5dfd2488335e2ef341e4563ecee6b3a84d5d496ca649e1fc44776fe5",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 90,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [
+        [
+          0.5181098584792517,
+          20.690813144639,
+          193.5
+        ],
+        [
+          0.10016230002318573,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          0.09692618353152345,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          0.09389263203651381,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0120.jpg",
+    "sha256": "782c97b2f53b5ea9228125e4a112966e97d40ba38bed754d554196680cd56a23",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 96,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0142.jpg",
+    "sha256": "8ca217a39a3adafdd5c70409d53e3781a3ed995cedd44c9effb76af851ccb416",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 83,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0143.jpg",
+    "sha256": "e62ada8cf6ee2e239826ec5cf037b470342c14638dd014f400b52e5f5b3679b8",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 96,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0177.jpg",
+    "sha256": "f7a1a2911561af1ee38ee7735cb3608fc93a0952ca2db080a0aa083398098b38",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": -339,
+      "bend": 639,
+      "confidence": 0,
+      "threshold": 94,
+      "route": [
+        [
+          6.099192310640291,
+          18.72965170946396
+        ],
+        [
+          0.1540337068211386,
+          24.082696560334824
+        ],
+        [
+          -5.791124896998014,
+          29.43574141120569
+        ],
+        [
+          -11.736283500817166,
+          34.788786262076556
+        ],
+        [
+          -17.681442104636318,
+          40.14183111294742
+        ],
+        [
+          -23.62660070845547,
+          45.49487596381829
+        ],
+        [
+          -29.571759312274622,
+          50.847920814689154
+        ]
+      ],
+      "support": [
+        6,
+        12
+      ],
+      "anchors": [
+        [
+          -21.2882030861125,
+          59.661523145843695,
+          73.5
+        ],
+        [
+          -24.679981421272647,
+          54.63074779377612,
+          81.5
+        ],
+        [
+          -26.141924249020466,
+          50.23073574227252,
+          89.5
+        ],
+        [
+          -29.555100368701357,
+          46.34985661614092,
+          97.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        -38.11792480526466,
+        58.542922787816025,
+        -0.8377580409572781,
+        1.7976891295541595
+      ],
+      "score": 1.8209602616231815
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0191.jpg",
+    "sha256": "ab94e16edf7cd06ad6791889ee355a65dcf2a22d5ef646ca6ba1832c4b0f1b5b",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 100,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0271.jpg",
+    "sha256": "2546ec2309afe65a0de92039c613f108417c0480c41fc004710d111145514a86",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": 73,
+      "bend": 373,
+      "confidence": 0,
+      "threshold": 86,
+      "route": [
+        [
+          -2.738370676760054,
+          8.760783414550353
+        ],
+        [
+          -1.0750771502179806,
+          16.5859642204208
+        ],
+        [
+          0.5882163763240946,
+          24.411145026291244
+        ],
+        [
+          2.25150990286617,
+          32.23632583216169
+        ],
+        [
+          3.914803429408244,
+          40.061506638032135
+        ],
+        [
+          5.578096955950319,
+          47.88668744390258
+        ],
+        [
+          7.241390482492394,
+          55.711868249773026
+        ]
+      ],
+      "support": [
+        14,
+        4
+      ],
+      "anchors": [
+        [
+          2.434206165064634,
+          34.53099105071263,
+          129.5
+        ],
+        [
+          1.6992435703479578,
+          30.16641452344932,
+          145.5
+        ],
+        [
+          1.6282980574079446,
+          28.257465932154247,
+          153.5
+        ],
+        [
+          2.0439743946562765,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          1.9652127374899655,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          1.8922958000515333,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          1.8245962732919256,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          1.7615735188294557,
+          20.690813144639,
+          193.5
+        ],
+        [
+          1.3021099003014145,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          1.2600403859098048,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          1.2206042164746795,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        9.63237492689663,
+        66.9605656582118,
+        0.20943951023931956,
+        1.7976891295541595
+      ],
+      "score": 2.3020427643037658
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0275.jpg",
+    "sha256": "670c25fbccc46b5bde3dddbf857d339a17673db689493e9e328fdde2aa2423f6",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 94,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [
+        [
+          2.7827879412522547,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          1.8245962732919256,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          1.7615735188294557,
+          20.690813144639,
+          193.5
+        ],
+        [
+          1.7027591003941573,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          1.6477451200358988,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          1.5961747446207348,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0285.jpg",
+    "sha256": "418d5f58243e5004cf87b91a9c907fac0c87f23f3511277976c57dfa1fd6011e",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 91,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0300.jpg",
+    "sha256": "1c62586a400a023af7a4d560127d018767c196a80fecac4da7f0770b06351067",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 91,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0370.jpg",
+    "sha256": "e491dc39772564399c4500c7d590322e4b8c42b05a98346032eb51687fd70dcb",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 99,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0378.jpg",
+    "sha256": "ee3d9660f27ea05c947056ca1f2d37e540e502ebbf73e685b7104df948357ea8",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 100,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0392.jpg",
+    "sha256": "fa43089a4c223d7d69ecb4361e4a1415d73cf866932cb4223ddc9c926eafdc9a",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 100,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0408.jpg",
+    "sha256": "c5cf22f8e7608e18a3427bae65994af951470cfb5fce1c00b50d9c1dadd2950f",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 92,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0409.jpg",
+    "sha256": "3b2a8e3222f5222d2109cd0b304fc39fe68b87e3a505a40fa0f753dc9c43b9b9",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 94,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0419.jpg",
+    "sha256": "6d6dfe19a064983cac2343fa65de5109e45f4b0f7a4bedea98eed557cab23c95",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 99,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0421.jpg",
+    "sha256": "ffeea599234dea06874f6c5fdd7b35cbf1e2092c7bf097e6cc8f59149380b362",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": -13,
+      "bend": 313,
+      "confidence": 0,
+      "threshold": 98,
+      "route": [
+        [
+          1.4279660662398732,
+          12.121596669572828
+        ],
+        [
+          0.8002933004171136,
+          20.096935339437852
+        ],
+        [
+          0.1726205345943541,
+          28.072274009302873
+        ],
+        [
+          -0.45505223122840555,
+          36.0476126791679
+        ],
+        [
+          -1.082724997051165,
+          44.02295134903292
+        ],
+        [
+          -1.7103977628739244,
+          51.99829001889795
+        ],
+        [
+          -2.3380705286966843,
+          59.97362868876297
+        ]
+      ],
+      "support": [
+        13,
+        13
+      ],
+      "anchors": [
+        [
+          -0.6450970632155303,
+          59.661523145843695,
+          73.5
+        ],
+        [
+          0.2006502554575012,
+          54.63074779377612,
+          81.5
+        ],
+        [
+          0.18807139747496737,
+          50.23073574227252,
+          89.5
+        ],
+        [
+          -0.5309299467431382,
+          46.34985661614092,
+          97.5
+        ],
+        [
+          -0.5013539651837525,
+          42.90135396518375,
+          105.5
+        ],
+        [
+          0.15829974349578602,
+          39.816782704287284,
+          113.5
+        ],
+        [
+          0.15036547163244,
+          37.04142011834319,
+          121.5
+        ],
+        [
+          0.14318859794497849,
+          34.53099105071263,
+          129.5
+        ],
+        [
+          0.13666561214805442,
+          32.24928819993673,
+          137.5
+        ],
+        [
+          0.13071104387291985,
+          30.16641452344932,
+          145.5
+        ],
+        [
+          0.6262684836184402,
+          28.257465932154247,
+          153.5
+        ],
+        [
+          0.6011689396047871,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          0.578003746320578,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          1.0018036588508117,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          0.9659627329192547,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          1.2600403859098048,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          1.2206042164746795,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        1.4671956141037956,
+        11.623138002706265,
+        -0.7504915783575618,
+        0.6719517620178169
+      ],
+      "score": 2.8996073898784602
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0422.jpg",
+    "sha256": "12393d89678b99df2644e28b2f9f6c2323e025125d36ed42db55c1f3c231735d",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 98,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0457.jpg",
+    "sha256": "840a85da45c0c306ba3ed4692f9ce4876e606d65b14b997db72e020c6d4558f3",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 300,
+      "confidence": 0,
+      "threshold": 97,
+      "route": [
+        [
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          16.0
+        ],
+        [
+          0.0,
+          24.0
+        ],
+        [
+          0.0,
+          32.0
+        ],
+        [
+          0.0,
+          40.0
+        ],
+        [
+          0.0,
+          48.0
+        ],
+        [
+          0.0,
+          56.0
+        ]
+      ],
+      "support": [
+        30,
+        7
+      ],
+      "anchors": [
+        [
+          4.962060563870519,
+          37.04142011834319,
+          121.5
+        ],
+        [
+          -0.9149773071104389,
+          30.16641452344932,
+          145.5
+        ],
+        [
+          -0.8767758770658163,
+          28.257465932154247,
+          153.5
+        ],
+        [
+          -0.841636515446702,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          -1.2716082419052717,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          -0.7791806235506313,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          -0.751304347826087,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          -0.7253538018709523,
+          20.690813144639,
+          193.5
+        ],
+        [
+          -0.7011361001623001,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          -0.6784832847206642,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          -0.6572484242555967,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        0.0,
+        60.0,
+        0.0,
+        1.5707963267948966
+      ],
+      "score": 2.9781077074130984
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0483.jpg",
+    "sha256": "6d23b658e0ec2a6e8380d43cccd9fabfab16ec39a9b05c1053fac808aae015c8",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 96,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0508.jpg",
+    "sha256": "b76e56c64488dab58da8054678ed86c0e794eedf3e0d9c31410c707f4bb15f9f",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "current_pair",
+      "steering": -182,
+      "bend": 482,
+      "confidence": 0,
+      "threshold": 94,
+      "route": [
+        [
+          -1.3891854213354442,
+          7.878462024097672
+        ],
+        [
+          -2.7783708426708866,
+          15.756924048195334
+        ],
+        [
+          -4.167556264006329,
+          23.635386072293
+        ],
+        [
+          -5.5567416853417715,
+          31.51384809639066
+        ],
+        [
+          -6.945927106677215,
+          39.392310120488325
+        ],
+        [
+          -4.859744735975234,
+          44.83729341855015
+        ],
+        [
+          3.0187172881224305,
+          46.226478839885594
+        ]
+      ],
+      "support": [
+        19,
+        4
+      ],
+      "anchors": [
+        [
+          -2.2844419704981913,
+          26.501530754244364,
+          161.5
+        ],
+        [
+          -2.658817233074659,
+          24.88092052448488,
+          169.5
+        ],
+        [
+          -2.5601649059520746,
+          23.380572017521256,
+          177.5
+        ],
+        [
+          -2.468571428571429,
+          21.987577639751553,
+          185.5
+        ],
+        [
+          -2.3833053490045577,
+          20.690813144639,
+          193.5
+        ],
+        [
+          -2.3037329005332716,
+          19.480639925805704,
+          201.5
+        ],
+        [
+          -2.6170069553511333,
+          18.348665021314787,
+          209.5
+        ],
+        [
+          -2.5351010649858727,
+          17.287546185611824,
+          217.5
+        ]
+      ],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false,
+      "parameters": [
+        -7.814167995011865,
+        44.31634888554936,
+        -0.17453292519943295,
+        1.5707963267948966
+      ],
+      "score": 2.402095055243898
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0520.jpg",
+    "sha256": "8067f7669bca567ba1d69e8da2fa6f299e26f8fffcd9a30ea830ad43dbeb28c2",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 95,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0550.jpg",
+    "sha256": "5bce972f23612e222700e694131c705bbe027c336691f5d8d0d2cb8437adf202",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 100,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0560.jpg",
+    "sha256": "7ac7e11822a07fa5fed75127fab422df84fabe1500762f0930d01908d16a3793",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 97,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0571.jpg",
+    "sha256": "387d39dc786ebfdb17b41527908867e2cabade4def8f67574c2490018838bcf3",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 100,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  },
+  {
+    "file": "data_0578.jpg",
+    "sha256": "b93078b6c1b2bbfe4a7c9e1275577b21ad608dbe5c663270c13dc61eb61e0f41",
+    "result": {
+      "revision": "lite-lap-L1",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "confidence": 0,
+      "threshold": 100,
+      "route": [],
+      "support": [
+        0,
+        0
+      ],
+      "anchors": [],
+      "evidence_age_ms": 0,
+      "geometry_calibrated": false,
+      "control_ready": false
+    },
+    "wire_valid": false,
+    "note": "PC JPEG decode; compare board differences, not board/realtime acceptance"
+  }
+]

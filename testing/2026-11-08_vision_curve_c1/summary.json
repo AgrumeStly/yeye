@@ -1,0 +1,122 @@
+{
+  "frames": 358,
+  "groups": [
+    {
+      "session": "d01_straight_run01",
+      "frames": 325,
+      "fixed_reference_valid": 162,
+      "near_available": 0,
+      "turns": {
+        "none": 325
+      }
+    },
+    {
+      "session": "v03_center_0002",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 3,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_offset_left_0001",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 0,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_offset_right_0001",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 0,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_heading_left_0001",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 0,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_heading_right_0001",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 0,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_center_0007",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 3,
+      "turns": {
+        "right": 3
+      }
+    },
+    {
+      "session": "v03_center_0008",
+      "frames": 3,
+      "fixed_reference_valid": 0,
+      "near_available": 3,
+      "turns": {
+        "right": 3
+      }
+    },
+    {
+      "session": "v03_center_0009",
+      "frames": 3,
+      "fixed_reference_valid": 0,
+      "near_available": 0,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_center_0010",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 3,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_center_0011",
+      "frames": 3,
+      "fixed_reference_valid": 3,
+      "near_available": 3,
+      "turns": {
+        "none": 3
+      }
+    },
+    {
+      "session": "v03_center_0012",
+      "frames": 3,
+      "fixed_reference_valid": 0,
+      "near_available": 0,
+      "turns": {
+        "none": 3
+      }
+    }
+  ],
+  "fixed_reference_valid": 186,
+  "video_decoded_frames": 358,
+  "read_failed": 0,
+  "algorithm_ms": {
+    "mean": 26.52600810055866,
+    "p95": 39.904619999999994
+  },
+  "preview_fps": 10,
+  "scope": "published static/hand-pushed regression; not accuracy, motion, physical turn angle or control acceptance"
+}

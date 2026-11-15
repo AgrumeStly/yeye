@@ -1,0 +1,34 @@
+{
+  "firmware_revision": "0x02110007",
+  "fixture": "motor_bench_bundle_r2; synthetic straight, NOT CAMERA",
+  "image": "last_run_watch.png",
+  "last_run": {
+    "valid": 1,
+    "elapsed_ms": 3000,
+    "reason": "LAP_LIMIT (11)",
+    "left_target_rpm": 40,
+    "right_target_rpm": 40,
+    "left_rpm": 41.6508255,
+    "right_rpm": 40.4017258,
+    "left_pwm_before_stop_per_mille": 226,
+    "right_pwm_before_stop_per_mille": 221,
+    "left_boost_samples": 1,
+    "right_boost_samples": 1
+  },
+  "uart_errors_operator_reported": 0,
+  "post_run_timing_images": ["timing_watch.png", "uart_timing_watch.png"],
+  "post_run_timing": {
+    "counter_ready": 1,
+    "clock_hz": 16000000,
+    "systick_max_cycles": 3288,
+    "systick_max_us": 205.5,
+    "motion_lock_max_cycles": 716,
+    "motion_lock_max_us": 44.75,
+    "uart_isr_max_cycles": 195,
+    "uart_isr_max_us": 12.1875,
+    "uart_error_categories_all_zero": true
+  },
+  "physical_operator_report": "both wheels slowly rotated; subsequently explicitly confirmed both forward and both stopped",
+  "accepted_scope": "one suspended straight startup and automatic 3000ms drive removal",
+  "not_verified": ["continuous 500ms speed match", "physical differential steering", "ground operation", "real vision permission", "full lap"]
+}

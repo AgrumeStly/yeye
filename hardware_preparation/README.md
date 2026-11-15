@@ -1,12 +1,18 @@
 # 硬件准备与现场资料入口
 
-更新：2026-10-29（北京时间，补左右轮换位与新物理命名；10月26日底板记录保留）。资料提供：硬件；接收与现场归档：主控／02。
+更新：2026-11-10（北京时间，补新电池到货、OLED12864装车与接线，建立已部署硬件清单）。资料提供：硬件；接收与现场归档：主控／02。
 本目录保存采购历史、实际接线、结构、供电、测量和维护。已确认按清单采购的型号继续沿用，当前状态查[项目状态](../project_planning/project_status.md)，原始采购日期不改写。
 
 ## 1. 当前接续先看这里
 
 | 场景 | 入口与适用范围 |
 | --- | --- |
+| 两板杜邦线5V车载供电与脱机启动 | [onboard_power.md](onboard_power.md)：主控确认驱动5V/GND分别接两板5V/GND；当前仍为调试供电，切换／电压／冷启动待验；10秒无驱动启动候选及当前main.py备份已准备，尚未替换入口 |
+| 今晚宿舍复测与11-11场地准备 | [pre_field_checklist.md](pre_field_checklist.md)：新电池已安装／已充满、驱动供电正常；端电压未测。先恢复09版无动力零基线，再收包、悬空校准与重复启停／停车；到场先真实视觉及车载供电核对 |
+| 整车已部署硬件与新增到货 | [deployed_hardware.md](deployed_hardware.md)：现有车载模块、11-10新电池到货及OLED12864已装车；安装、电气与软件验收分别记录 |
+| OLED12864四线与点亮 | [oled_wiring.md](oled_wiring.md)：GND→GND、VDD→3V3、SCK→B08、SDA→B09；11-10独立OledBench实际0x3C应答／持续写帧，主控确认画面完全清晰，见[点亮记录](../testing/2026-11-10_oled_bench/record.md)；尚未接入运动 |
+| 动力电池替换与充电器采购 | [battery_record.md](battery_record.md)：亚博7.4V／2000mAh电池11-10已安装，主控确认驱动供电正常、已充满；端电压／动力运行待验，旧电池低压停用、UC2继续停用 |
+| K230D与STM32低速试跑通信三线 | [low_speed_lap_wiring.md](low_speed_lap_wiring.md)：GH串口2 T/R/G至A03/A02/GND，V不接；断电接线／无动力实物待验 |
 | 当前轮侧、前进方向与新A/B命名 | [wheel_mapping.md](wheel_mapping.md)：物理新A左／新B右，不等同驱动插口／软件a/b；10月25日标定为旧安装，实际新通道待对应 |
 | 已通过的电机基线与下一步 | [MotorPwm](../control/docs/motor_pwm.md)：A/B分别PWM起转与自动停转已由主控确认；[C-02C](../project_planning/tasks/C-02C.md)软件及初版手转标定已交付，下一项[C-02D](../project_planning/tasks/C-02D.md)为运动接口与低速闭环台架，硬件协助稳定悬空固定 |
 | 单层铝合金底板与装配准备 | [采购与图纸记录](chassis_record.md)：主控10-26确认已下单，到货／装车待验；原图在[size/](size/)，02按[H-03](../project_planning/tasks/H-03.md)准备布局，旧FR4安装坐标不自动适用 |
@@ -15,11 +21,13 @@
 | 首次板级双闪和下载读回 | [board_self_test_record.md](board_self_test_record.md)：2026-10-14记录，不代表电机、UART或整车验收 |
 | 型号／照片／厂家资料的来源 | [I-03证据索引](evidence/2026-10-18_i03/README.md)、[原交接](i03_handoff.md) |
 
-当前采用DAPLink单源5V供主板、独立2S供驱动的记录；具体接线按现行任务与规格核对。旧指南中“继续USB供主板”等属历史阶段，不能与DAPLink供电叠加。UC2已停用，旧采购/指南中的充电操作不作为当前入口。
+当前采用DAPLink单源5V供主板、独立2S供驱动的记录；具体接线按现行任务与规格核对。新电池11-10已装车，主控确认供电正常，端电压与动力运行另验，详见[电池记录](battery_record.md)。原Tattu低压停用。两块计算板脱离电脑的车载供电／冷启动尚待确认，见新操作单；旧指南的USB供电不能与DAPLink电源叠加。UC2已停用，旧采购/指南中的充电操作不作为当前入口。
 
-实际逐项清点表尚未建立，后续由硬件记录采购角色、保管角色、到货与电气验收；主控此前已确认原清单硬件到齐，不因此重复追问既定型号。10-26新下单铝合金底板单列采购状态，不计入此前到齐范围。现有接线确认与完整电气签核分别记录。
+部署入口已建立为[整车已部署硬件清单](deployed_hardware.md)，硬件后续补采购／保管角色及逐项电气证据；主控此前已确认原清单硬件到齐，不因此重复追问既定型号。10-26新下单铝合金底板仍单列，11-10电池到货与OLED装车单独更新，不推定底板或充电器同步到货。接线确认与完整电气签核分别记录。
 
 ## 2. 专项步骤与历史方案
+
+摄像头到货初装见[camera_mount_guide.md](camera_mount_guide.md)及[安装示意图](camera_mount_diagram.png)：2026-11-06工程建议起点，实际镜头、接口、视场与装车效果待核实，不视为已安装验收。
 
 下列页面保留原路径。只有当前任务明确采用的步骤才执行，不把多种方案串成一轮测试。
 
@@ -29,7 +37,7 @@
 - [i05_measurement_guide.md](i05_measurement_guide.md)、[原任务](i05_motor_power_diagnosis_task.md)：10-21分阶段测量边界，后来续报已有静态电压；不是“当前无实测”。
 - [dual_motor_wiring_guide.md](dual_motor_wiring_guide.md)：首次装配指南，混有不同阶段供电与已停用UC2的历史内容；依赖这些冲突的动作须先由02校正，不直接照旧段落操作。
 - [control_bringup_plan.md](control_bringup_plan.md)：历史推进顺序；其中未到货、PWM未实现和PA0/PA1端口为制定时起点，当前资源与状态看上述入口。
-- [charger_replacement.md](charger_replacement.md)：替代充电器历史建议，不代表已采购、到货或验证。
+- [charger_replacement.md](charger_replacement.md)：原800mAh电池的S65／C4替代充电器历史建议；本轮亚博电池及配套充电器的采购决定见[battery_record.md](battery_record.md)。
 
 本轮只整理导航和状态，以上技术正文待修项见[审查记录](../project_planning/organization_review.md)。
 

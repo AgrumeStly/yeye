@@ -1,0 +1,3 @@
+idx,name,ticks_ms,scene_id,distance_cm,mount_height_mm,pitch_deg,Lmean,exposure,awb_note,clean_bytes
+1,ref_0001.jpg,398446,c02_d020_center_hd,20,0,0.0,49,9997.351,default_auto,281335
+2,ref_0002.jpg,445111,c02_d020_center_hd,20,0,0.0,49,9997.351,default_auto,293189

@@ -1,0 +1,94 @@
+{
+  "scene": "77 degree right turn approach; center pose is operator label",
+  "distance_note": "forward_10cm_from_first_pose_operator_report_no_independent_measurement",
+  "frozen_code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "parameter_sha256": "d34144aff88631d1a5d549483f13b5880e197011863e4b3e054150b29bac7afc",
+  "source_manifest": [
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0008/data_0001.jpg",
+      "bytes": 11998,
+      "sha256": "99af05514b4331d7c4b9e92e1156475ab6c905d6075491c3e94cbb220af6dfbe"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0008/data_0002.jpg",
+      "bytes": 12031,
+      "sha256": "b68c7f02c1d86a04386c589a636952b2e9958bdf1fb7e5d3103a1d24abc0551c"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0008/data_0003.jpg",
+      "bytes": 11980,
+      "sha256": "64cab0ae89784997dd489e94dac02a1592c229d6c1d419b8f1f1ae17d1330c26"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0008/frames.jsonl",
+      "bytes": 993,
+      "sha256": "3531c2e779c1ca6b23064a0d3b08df135584aba0dc29dba029e72db04f59891d"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0008/session.json",
+      "bytes": 751,
+      "sha256": "cf2764574d805f6e5ed9012d369d995e3b94ea41253cad5ab8defa24c21210ce"
+    }
+  ],
+  "frames": [
+    {
+      "frame_id": 1,
+      "valid": false,
+      "quality": 0.8333,
+      "deviation_px": null,
+      "support_rows": [
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215
+      ]
+    },
+    {
+      "frame_id": 2,
+      "valid": false,
+      "quality": 0.8333,
+      "deviation_px": null,
+      "support_rows": [
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215
+      ]
+    },
+    {
+      "frame_id": 3,
+      "valid": false,
+      "quality": 0.8333,
+      "deviation_px": null,
+      "support_rows": [
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215
+      ]
+    }
+  ],
+  "scope": "3 static repeats of one pose; valid near-field pair does not establish turn path or drive acceptance"
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "offline bytes only; no serial port or motion",
+  "samples": {
+    "path_center": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 01 01 50 00 00 00 00 00 00 14 00 00 00 92 01"
+    },
+    "path_right": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 02 01 50 58 02 00 00 00 00 14 00 00 00 97 A4"
+    },
+    "path_left": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 03 01 50 A8 FD 00 00 00 00 14 00 00 00 7C 56"
+    },
+    "path_invalid": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 04 00 00 00 00 00 00 00 00 00 00 00 00 97 82"
+    },
+    "path_slow_101": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 05 01 50 00 00 00 00 00 00 65 00 00 00 FE 30"
+    },
+    "path_low_quality_39": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 06 01 27 00 00 00 00 00 00 14 00 00 00 B5 59"
+    },
+    "path_finish_candidate": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 07 03 50 00 00 00 00 00 00 14 00 00 00 13 88"
+    },
+    "start": {
+      "bytes": 20,
+      "hex": "A5 5A 01 02 0C 01 00 00 00 00 00 00 00 00 00 00 01 00 4D 12"
+    },
+    "stop": {
+      "bytes": 20,
+      "hex": "A5 5A 01 02 0C 02 00 00 00 00 00 00 00 00 00 00 02 00 BB 88"
+    },
+    "status": {
+      "bytes": 20,
+      "hex": "A5 5A 01 02 0C 03 00 00 00 00 00 00 00 00 00 00 03 00 E9 FE"
+    },
+    "path_sequence_255": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C FF 01 50 00 00 00 00 00 00 14 00 00 00 0F 51"
+    },
+    "path_sequence_0": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 00 01 50 00 00 00 00 00 00 14 00 00 00 F1 44"
+    },
+    "bad_crc": {
+      "bytes": 20,
+      "hex": "A5 5A 01 01 0C 02 01 50 59 02 00 00 00 00 14 00 00 00 97 A4"
+    }
+  },
+  "order_notes": "Reset software state between independent scenarios. Do not blindly transmit all fixtures as one script."
+}

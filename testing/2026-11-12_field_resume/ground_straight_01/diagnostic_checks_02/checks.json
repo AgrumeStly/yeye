@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "host_only": true,
+  "actual_armcc_dwarf_layout": {
+    "lap_diag_sample_t": [
+      60,
+      {
+        "at_ms": 0,
+        "dt_ms": 4,
+        "received": 8,
+        "path_at": 12,
+        "left_delta": 16,
+        "right_delta": 20,
+        "left_counts_per_s": 24,
+        "right_counts_per_s": 28,
+        "left_raw_rpm": 32,
+        "right_raw_rpm": 36,
+        "left_target": 40,
+        "right_target": 44,
+        "left_pwm": 48,
+        "right_pwm": 50,
+        "steering": 52,
+        "bend": 54,
+        "history": 56,
+        "single": 57,
+        "path_valid": 58,
+        "path_sequence": 59
+      }
+    ],
+    "lap_diag_view_t": [
+      1952,
+      {
+        "total_samples": 0,
+        "frozen": 4,
+        "stop_at_ms": 8,
+        "stop_reason": 12,
+        "left_channel": 16,
+        "right_channel": 20,
+        "left_sign": 24,
+        "right_sign": 28,
+        "samples": 32
+      }
+    ]
+  },
+  "ring_wrap_order_checked": true,
+  "negative_sample_retained": true,
+  "empty_trace_checked": true
+}

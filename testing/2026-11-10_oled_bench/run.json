@@ -1,0 +1,5 @@
+{
+  "action": "explicit SYSRESETREQ after verified OLED download",
+  "before": "State.RUNNING",
+  "after": "State.RUNNING"
+}

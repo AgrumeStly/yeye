@@ -1,0 +1,8 @@
+{
+  "mode": "uart_probe",
+  "port": "COM10",
+  "source_sha256": "da148829b19a3812a1b3e37d1a055553793cc2d97e54718be6721f81ed9bf8f2",
+  "started": "2026-11-09T12:25:24.136929+08:00",
+  "motor_start_permitted": false,
+  "main_py_written": false
+}

@@ -1,0 +1,35 @@
+{"at": 1794198323.1354249, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1794198323.1582234, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1794198323.6800146, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1794198323.6802192, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1794198323.6803434, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1794198323.6809406, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1794198323.6825888, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1794198323.6826394, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1794198323.9329402, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1794198324.1339014, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794198324.1343179, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1794198324.134393, "id": 2, "result": {"running": false}}
+{"at": 1794198324.1378045, "request": {"id": 3, "method": "runScript", "params": {"script_sha256": "da148829b19a3812a1b3e37d1a055553793cc2d97e54718be6721f81ed9bf8f2"}}}
+{"at": 1794198324.333736, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794198325.3532095, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1794198325.3532975, "id": 3, "result": {"status": "ok"}}
+{"at": 1794198325.3534267, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[INVALID_PATH_ONLY] 0 3 seconds; flags=0; no START\r\n"}}
+{"at": 1794198327.4148717, "request": {"id": 4, "method": "scriptRunning", "params": {}}}
+{"at": 1794198327.4158936, "id": 4, "result": {"running": true}}
+{"at": 1794198328.0985758, "event": "scriptOutput", "params": {"text": "[INVALID_PATH_ONLY] 600 3 seconds; flags=0; no START\r\n"}}
+{"at": 1794198329.644746, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1794198329.6455941, "id": 5, "result": {"running": true}}
+{"at": 1794198331.111317, "event": "scriptOutput", "params": {"text": "[INVALID_PATH_ONLY] -600 3 seconds; flags=0; no START\r\n"}}
+{"at": 1794198331.8780148, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1794198331.8786805, "id": 6, "result": {"running": true}}
+{"at": 1794198333.9574885, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1794198333.958406, "id": 7, "result": {"running": true}}
+{"at": 1794198334.2736542, "event": "scriptOutput", "params": {"text": "[UART PROBE DONE] check real STM32 parser/steering/flags/PWM; no movement acceptance\r\n"}}
+{"at": 1794198334.3796382, "event": "scriptOutput", "params": {"text": "CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794198334.3814852, "event": "scriptState", "params": {"state": "finished"}}
+{"at": 1794198334.381573, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1794198334.3821058, "id": 8, "result": {"running": false}}
+{"at": 1794198334.382216, "request": {"id": 9, "method": "disconnectBoard", "params": {}}}
+{"at": 1794198334.8428693, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794198334.843296, "id": 9, "result": {}}

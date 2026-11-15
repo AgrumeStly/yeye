@@ -1,0 +1,28 @@
+{
+  "input_count": 3,
+  "processed_ok": 3,
+  "valid": 3,
+  "invalid": 0,
+  "read_failed": 0,
+  "overlay_count": 3,
+  "video_decoded_frames": 3,
+  "preview_fps": 10,
+  "preview_is_capture_fps": false,
+  "video_error": null,
+  "invalid_reasons": {},
+  "algorithm_ms": {
+    "mean": 29.731733333333334,
+    "median": 24.0742,
+    "p95": 40.349709999999995,
+    "maximum": 42.1581
+  },
+  "timing_excludes": [
+    "image_read",
+    "drawing",
+    "image_write",
+    "video_encoding"
+  ],
+  "wall_seconds": 0.1827482000226155,
+  "temporal_state": "none",
+  "interpretation": "output validity statistics, not accuracy; PC timing is not K230D or end-to-end latency"
+}

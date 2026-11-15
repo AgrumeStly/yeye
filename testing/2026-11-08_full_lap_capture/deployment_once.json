@@ -1,0 +1,13 @@
+{
+  "deployed_ast_matches": true,
+  "source_sha256": "60b7889d938a3fc1270c41a4232c6ff2feb2de50ddf63f59cfc418a792cde6f7",
+  "deployed_sha256": "8d3a39b5de421a2b2f57c2ac3d154cb5f3bad37a2989a66023ecc6fb52682af4",
+  "board_port": "COM10",
+  "current_script_running": false,
+  "armed_for_next_power_on": true,
+  "arm_path": "/sdcard/full_lap_capture.arm",
+  "arm_token": "full_lap_once_v1\n",
+  "standby_executions_without_arm": 2,
+  "capture_directory_listing_unchanged": true,
+  "scope": "Saved/read back; real standby execution only. No physical power cycle or real full-lap capture."
+}

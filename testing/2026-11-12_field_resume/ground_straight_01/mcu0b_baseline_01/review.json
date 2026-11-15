@@ -1,0 +1,53 @@
+{
+  "accepted_as_application_baseline": false,
+  "flash_matches_candidate": true,
+  "bin_sha256": "1fc5ee49f6265499802fb6e5a3983542a4a60337a75fb8c05747d650433e4a28",
+  "samples": [
+    {
+      "cpu": "State.RUNNING",
+      "ms": 1229080643,
+      "revision": "0x68016041",
+      "state": 74,
+      "phase": 1134586120,
+      "timing": {
+        "counter_ready": 536917304,
+        "clock_hz": 604016640,
+        "systick_max_cycles": 4251252735,
+        "motion_lock_max_cycles": 604158216
+      },
+      "core": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0xa",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x1e000000"
+      }
+    },
+    {
+      "cpu": "State.RUNNING",
+      "ms": 1229080643,
+      "revision": "0x68016041",
+      "state": 74,
+      "phase": 1134586120,
+      "timing": {
+        "counter_ready": 536917304,
+        "clock_hz": 604016640,
+        "systick_max_cycles": 4251252735,
+        "motion_lock_max_cycles": 604158216
+      },
+      "core": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0xa",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x1e000000"
+      }
+    }
+  ],
+  "interpretation": "application initialization baseline absent after manual Flash Download; loader RAM residue possible, not proven; do not interpret decoded counters as actual faults",
+  "next_action": "operator RST once, no KEY, no Download, no automatic reset/halt/resume"
+}

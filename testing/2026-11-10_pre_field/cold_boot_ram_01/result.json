@@ -1,0 +1,41 @@
+{
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "remote_log": "/sdcard/lap_boot_checks/check_0001.jsonl",
+  "source_sha256": "c0eeed8e60c72cc87d8c3128146b4c2b5e884266e4c4e269490e6be8c4a74269",
+  "log_sha256": "556f0eaf2bed66473a7a165d1a8aac8c0627c0d8ad18c6ebb9826e883c6b54b4",
+  "frames": 144,
+  "processing_ms_min": 45,
+  "processing_ms_max": 57,
+  "interval_ms_max": 108,
+  "to_send_ms_max": 84,
+  "invalid_paths_only": true,
+  "main_py_written": false,
+  "physical_power_cycle_tested": false,
+  "battery_power_verified": false,
+  "motor_started": false,
+  "stm32_receive_verified": false
+}

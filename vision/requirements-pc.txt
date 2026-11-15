@@ -1,0 +1,5 @@
+# 电脑端离线分析与串口工具依赖，不安装到 CanMV 开发板。
+# 2026-11-06：在 Windows x64 / Python 3.13.6 独立环境验证。
+numpy==2.5.4
+opencv-python==5.0.0.93
+pyserial==3.5

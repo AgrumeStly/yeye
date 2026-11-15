@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-10",
+  "task": "I-02-LOW-SPEED-LAP",
+  "experiment": "Stable K230 physical power; invalid UART probe after manual STM32 reset and 5-second idle baseline",
+  "idle_baseline_operator_reply": "符合",
+  "operator_confirmed_idle_baseline": {
+    "state": 0,
+    "reason": 0,
+    "received": 0,
+    "left_pwm": 0,
+    "right_pwm": 0,
+    "uart_total_errors": 0,
+    "uart_five_error_categories": 0,
+    "g_speed_ms_advancing": true
+  },
+  "baseline_has_independent_screenshot": false,
+  "probe": {
+    "physical_K230_power_cycle_performed": false,
+    "backend_soft_reboots_logged": true,
+    "source": "vision/src/lap_uart_probe_canmv.py enabled in RAM work copy",
+    "port": "COM10",
+    "invalid_PATH_count_by_checked_program": 180,
+    "final_STOP_count_by_checked_program": 1,
+    "START_sent": false,
+    "valid_PATH_sent": false,
+    "normal_terminal_completion": true,
+    "process_exit_code": 0,
+    "main_py_changed": false
+  },
+  "STM32_after_probe_actual_values_pending": true,
+  "expected_after_probe": {
+    "accepted": 181,
+    "received": 180,
+    "state": 0,
+    "reason": 0,
+    "left_pwm": 0,
+    "right_pwm": 0,
+    "path_valid": 0,
+    "uart_total_errors": 0,
+    "uart_frame_errors": 0,
+    "uart_other_four_error_categories": 0
+  },
+  "root_cause_confirmed": false,
+  "firmware_changed": false,
+  "motor_started": false,
+  "next_step": "Read actual STM32 counters/diagnostics before any further reset or K230 power removal."
+}

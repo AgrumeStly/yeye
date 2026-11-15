@@ -1,0 +1,10 @@
+{
+  "purpose": "two additional separately triggered suspended straight runs to check new-battery startup repeatability",
+  "trial_numbers": [2, 3],
+  "manual_runs_requested": 2,
+  "per_run_mcu_limit_ms": 3000,
+  "target_rpm": [40, 40],
+  "operator_sequence": "one long KEY press/release per run; allow complete stop, save last-run image, wait at least five more seconds before next run; stop sequence on any abnormal behavior",
+  "automatic_start": false,
+  "result": "pending physical observations and separate final snapshots"
+}

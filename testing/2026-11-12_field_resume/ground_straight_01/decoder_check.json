@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "host-only snapshot decoder; no device connection",
+  "dwarf_layout_size": 40,
+  "distinctive_padding_check": {
+    "valid": 1,
+    "elapsed_ms": 3000,
+    "reason": 11,
+    "left_target": 31.75,
+    "right_target": 35.5,
+    "left_rpm": 30.25,
+    "right_rpm": 36.625,
+    "left_pwm": 195,
+    "right_pwm": 190,
+    "left_boost_samples": 1,
+    "right_boost_samples": 2
+  },
+  "empty_valid_check": 0,
+  "required_symbols_checked": true
+}

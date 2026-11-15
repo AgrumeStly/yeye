@@ -1,0 +1,244 @@
+{
+  "standby_lines": [
+    "[FULL_LAP_STANDBY] Not armed; existing captures untouched\r",
+    "[FULL_LAP_STANDBY] Not armed; existing captures untouched\r"
+  ],
+  "capture_directory_listing_unchanged": true,
+  "before": {
+    "entries": [
+      {
+        "name": "v03_center_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690048
+      },
+      {
+        "name": "v03_center_0002",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690250
+      },
+      {
+        "name": "v03_offset_left_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690608
+      },
+      {
+        "name": "v03_offset_right_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690812
+      },
+      {
+        "name": "v03_heading_left_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735691096
+      },
+      {
+        "name": "v03_heading_right_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735691256
+      },
+      {
+        "name": "v03_center_0003",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735692538
+      },
+      {
+        "name": "v03_center_0004",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735692850
+      },
+      {
+        "name": "v03_center_0005",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735693218
+      },
+      {
+        "name": "v03_center_0006",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735693684
+      },
+      {
+        "name": "v03_center_0007",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735694982
+      },
+      {
+        "name": "v03_center_0008",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735695438
+      },
+      {
+        "name": "v03_center_0009",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735695810
+      },
+      {
+        "name": "v03_center_0010",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735696068
+      },
+      {
+        "name": "v03_center_0011",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735696276
+      },
+      {
+        "name": "v03_center_0012",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735696584
+      },
+      {
+        "name": "push_board_smoke_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735698246
+      },
+      {
+        "name": "push_corner_77_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735689600
+      },
+      {
+        "name": "push_corner_77_0002",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735689600
+      }
+    ]
+  },
+  "after": {
+    "entries": [
+      {
+        "name": "v03_center_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690048
+      },
+      {
+        "name": "v03_center_0002",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690250
+      },
+      {
+        "name": "v03_offset_left_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690608
+      },
+      {
+        "name": "v03_offset_right_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735690812
+      },
+      {
+        "name": "v03_heading_left_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735691096
+      },
+      {
+        "name": "v03_heading_right_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735691256
+      },
+      {
+        "name": "v03_center_0003",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735692538
+      },
+      {
+        "name": "v03_center_0004",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735692850
+      },
+      {
+        "name": "v03_center_0005",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735693218
+      },
+      {
+        "name": "v03_center_0006",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735693684
+      },
+      {
+        "name": "v03_center_0007",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735694982
+      },
+      {
+        "name": "v03_center_0008",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735695438
+      },
+      {
+        "name": "v03_center_0009",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735695810
+      },
+      {
+        "name": "v03_center_0010",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735696068
+      },
+      {
+        "name": "v03_center_0011",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735696276
+      },
+      {
+        "name": "v03_center_0012",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735696584
+      },
+      {
+        "name": "push_board_smoke_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735698246
+      },
+      {
+        "name": "push_corner_77_0001",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735689600
+      },
+      {
+        "name": "push_corner_77_0002",
+        "type": "directory",
+        "size": 0,
+        "mtime": 1735689600
+      }
+    ]
+  },
+  "scope": "Ran saved main.py twice with no arm token; no camera capture, no new session. Not a physical USB power-cycle test."
+}

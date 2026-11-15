@@ -1,0 +1,20 @@
+{
+  "purpose": "positive-target feedforward floor candidate; hardware retest pending",
+  "LowSpeedLap": {"revision": "0x02110009", "run_ms": 3000, "bin_sha256": "7f3f7b5e8c676e321e23f3c2c2b6a88cd0e3821c5b8f80af9f608cce3224e2f9"},
+  "LowSpeedLapTrack": {"revision": "0x0211000A", "run_ms": 300000, "bin_sha256": "f7cc1c34a462a7599654bd664d0ee5ca12530fe6fc100cf60025baace547c2bb"},
+  "arm_build_errors": 0,
+  "arm_build_warnings": 0,
+  "program_size": {"code": 15120, "ro": 436, "rw": 240, "zi": 2728},
+  "control_model_assertions_passed": 316,
+  "uart_production_driver_host_checks": "PASS",
+  "min_feedforward_default_per_mille": 200,
+  "min_feedforward_allowed_range": [0, 300],
+  "locked_per_run": true,
+  "actual_output_may_reduce_to_zero": true,
+  "zero_target_output": 0,
+  "max_pwm_per_mille": 500,
+  "no_feedback_timeout_ms": 300,
+  "model_limit": "18 percent running deadzone and 42 percent breakaway are hypothetical regression parameters, not measured motor characteristics",
+  "physical_20_rpm_sustained_verified": false,
+  "assistant_flashed_board": false
+}

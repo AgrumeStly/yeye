@@ -1,0 +1,212 @@
+{
+  "checks": [
+    {
+      "name": "v03_heading_left_0001/data_0001.jpg_R5_failure_reproduced",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0001.jpg_real_pair_anchors_retained",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0001.jpg_first_frame_still_cannot_start",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0001.jpg_current_pair_second_frame",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0001.jpg_correct_correction_sign",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0001.jpg_no_invented_black_cells",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0002.jpg_R5_failure_reproduced",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0002.jpg_real_pair_anchors_retained",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0002.jpg_first_frame_still_cannot_start",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0002.jpg_current_pair_second_frame",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0002.jpg_correct_correction_sign",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0002.jpg_no_invented_black_cells",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0003.jpg_R5_failure_reproduced",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0003.jpg_real_pair_anchors_retained",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0003.jpg_first_frame_still_cannot_start",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0003.jpg_current_pair_second_frame",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0003.jpg_correct_correction_sign",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_left_0001/data_0003.jpg_no_invented_black_cells",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0001.jpg_R5_failure_reproduced",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0001.jpg_real_pair_anchors_retained",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0001.jpg_first_frame_still_cannot_start",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0001.jpg_current_pair_second_frame",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0001.jpg_correct_correction_sign",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0001.jpg_no_invented_black_cells",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0002.jpg_R5_failure_reproduced",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0002.jpg_real_pair_anchors_retained",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0002.jpg_first_frame_still_cannot_start",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0002.jpg_current_pair_second_frame",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0002.jpg_correct_correction_sign",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0002.jpg_no_invented_black_cells",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0003.jpg_R5_failure_reproduced",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0003.jpg_real_pair_anchors_retained",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0003.jpg_first_frame_still_cannot_start",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0003.jpg_current_pair_second_frame",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0003.jpg_correct_correction_sign",
+      "passed": true
+    },
+    {
+      "name": "v03_heading_right_0001/data_0003.jpg_no_invented_black_cells",
+      "passed": true
+    },
+    {
+      "name": "exactly_six_existing_yaw_images",
+      "passed": true
+    }
+  ],
+  "examples": [
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0001.jpg",
+      "raw_jpeg_sha256": "a531cb0bf42c7cdfe49f6abfe7aaed0d556ed7ef497296e80d6836721f701680",
+      "old_black_cells": 72,
+      "new_black_cells": 203,
+      "old_anchors": 0,
+      "new_anchors": 10,
+      "second_steering": 273
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0002.jpg",
+      "raw_jpeg_sha256": "c5e3eb9030d8483bd7780dd580d04991b3d9e54e0e0bc116e6ea9524744caebb",
+      "old_black_cells": 72,
+      "new_black_cells": 203,
+      "old_anchors": 0,
+      "new_anchors": 10,
+      "second_steering": 273
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0003.jpg",
+      "raw_jpeg_sha256": "fcb7a55daff64b7f04440267d9b65363d271c2e9a76e2305f2d6e3278d875455",
+      "old_black_cells": 72,
+      "new_black_cells": 202,
+      "old_anchors": 0,
+      "new_anchors": 10,
+      "second_steering": 273
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0001.jpg",
+      "raw_jpeg_sha256": "4a28351064237f76d97f7859a47537a50b6dfd148e336358fd9a699fe2e04dc3",
+      "old_black_cells": 62,
+      "new_black_cells": 200,
+      "old_anchors": 0,
+      "new_anchors": 9,
+      "second_steering": -364
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0002.jpg",
+      "raw_jpeg_sha256": "0588bf48dd7139ba07c568ca49830afbec63b1d1d1b0babd1c394ba9c98e4510",
+      "old_black_cells": 62,
+      "new_black_cells": 201,
+      "old_anchors": 0,
+      "new_anchors": 9,
+      "second_steering": -364
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0003.jpg",
+      "raw_jpeg_sha256": "30d0734de366baf334a96289d5f3d2d83647a8b2f2720ac3e7cafacac9f1ab27",
+      "old_black_cells": 63,
+      "new_black_cells": 201,
+      "old_anchors": 0,
+      "new_anchors": 9,
+      "second_steering": -364
+    }
+  ],
+  "candidate_sha256": "de2341cafcdadf2d843a566dafeef28ae4439c041aec15f7ee709e7afd738fcf",
+  "physical_board_used": false,
+  "camera_stream": false,
+  "ground_motion_verified": false
+}

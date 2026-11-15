@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "head": "a0733a8685db4c2b497539303bfe87fe1c1ebfe5",
+  "branch": "codex/current-version-20261025",
+  "replay_exit_code": 0,
+  "validation_exit_code": 0,
+  "comparison_exit_code": 0,
+  "syntax_exit_code": 0,
+  "diff_check_exit_code": 0,
+  "diff_check_stderr": "warning: in the working copy of 'control/Core/Src/speed_match_main.c', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'control/MDK-ARM/speed_match.uvprojx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'control/Tests/Host/test_speed_match_integration.c', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'control/docs/validation.md', CRLF will be replaced by LF the next time Git touches it\n",
+  "original_captures_unchanged": 651,
+  "baseline_and_audit_outputs_unchanged": 663,
+  "other_existing_shared_files_checked": 353,
+  "shared_hash_mismatches": [],
+  "authorized_changed_existing_files": [
+    "vision/src/offline_boundary.py",
+    "vision/tools/replay_offline.py",
+    "vision/tools/check_offline_replay.py",
+    "vision/docs/offline_replay.md",
+    "vision/README.md",
+    "project_planning/tasks/V-02.md"
+  ],
+  "new_code": "vision/tools/compare_offline.py",
+  "source_sha256": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/check_offline_replay.py": "e697351d6ce2516b87c54bbd92c27ed319609c1eb5330011cc61de56c1171e91",
+    "vision/tools/compare_offline.py": "17b27cdd8ca75954321f5a07158812f1ce0db0ef5031dc5befde29abf2059bc1"
+  },
+  "original_baseline_source_snapshot_matches": true,
+  "r1_overlay_count": 325,
+  "r1_video_decoded_frames": 325,
+  "comparison_video_decoded_frames": 325,
+  "new_file_whitespace_checked": true,
+  "document_local_links_checked": true,
+  "build_ignored_by_git": true,
+  "published_old_data_regression": true,
+  "new_independent_data": false,
+  "committed": false,
+  "uploaded": false,
+  "hardware_actions": false
+}

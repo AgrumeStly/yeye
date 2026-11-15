@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\push_full_lap_0001",
+  "frames": 732,
+  "scene": "full_lap",
+  "planned_duration_ms": 180000,
+  "capture_elapsed_ms": 180299,
+  "observed_interval_ms": {
+    "median": 224.0,
+    "p95": 523.0,
+    "maximum": 614
+  },
+  "observed_fps": 4.069634734972693,
+  "scope": "file integrity and software timing; not exposure rate, route truth, audible beep or battery acceptance"
+}

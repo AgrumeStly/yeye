@@ -1,0 +1,18 @@
+{
+  "source_hashes": {
+    "vision\\src\\capture_push_canmv.py": "53cb9db2c16b7b79e4ffbba682e7a732304569a2fc3175f93d7b058f79151b75",
+    "testing\\2026-11-08_push_capture\\deployed_main.py": "dbdc419a51152ce74370e62229d7efff66d11419cb22e4ce936b90caaa8857b6",
+    "vision\\tools\\verify_push_capture.py": "46310c958d81ae4e5a6e649ea035ff9b100c7e980ad6ecf837d770ee17910788",
+    "vision\\tools\\test_push_capture.py": "a13c07d2ebaec508946293a89b8f737d88eeb8033cf81bc4bfe8975fae5bca5b"
+  },
+  "deployed_path": "/sdcard/main.py",
+  "preexisting_main_py": false,
+  "preexisting_boot_py": false,
+  "semantic_ast_match_ignoring_docstrings": true,
+  "model_tests_passed": 13,
+  "short_board_capture_verified": true,
+  "board_script_running_after_save": false,
+  "cold_boot_and_battery_test": "pending operator",
+  "audible_beep_confirmation": "pending operator",
+  "motor_or_uart_code": false
+}

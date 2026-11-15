@@ -1,0 +1,9 @@
+{
+  "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+  "lite_lap_route.py": "81cae7eb5de26dc60a651328b4a38918ea9f68fd3237d30a0afa33219fe6956d",
+  "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+  "low_speed_lap_canmv.py": "712b72279328aba1ace3011e2eec8c89c2f77765f845a63a4b02420dea55d640",
+  "bundle_sha256": "54e71bcc4346710300c0302a77f6bba86609baca5c937772d4282fc874175f4d",
+  "grid_step": 6,
+  "state": "development; IDLE; UART disabled; ALLOW_DRIVE false; not board/lap acceptance"
+}

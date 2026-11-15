@@ -1,0 +1,25 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+[L1 INIT] precomputing local templates; no START
+[L1 READY] 1113 templates free_heap 3648192
+Traceback (most recent call last):
+  File "<stdin>", line 604, in <module>
+  File "<stdin>", line 564, in main
+  File "<stdin>", line 343, in update
+  File "<stdin>", line 221, in _grid
+TypeError: unsupported types for __mul__: 'array', 'int'
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

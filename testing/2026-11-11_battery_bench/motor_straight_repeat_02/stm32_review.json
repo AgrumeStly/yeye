@@ -1,0 +1,20 @@
+{
+  "firmware_revision": "0x02110009",
+  "battery_static_voltage_operator_reported": 8.38,
+  "first_baseline_trial": "../motor_straight_01/stm32_review.json",
+  "trial_02": {
+    "image": "trial_02_watch.png", "valid": 1, "elapsed_ms": 3000, "reason": "LAP_LIMIT (11)",
+    "target_rpm": [40, 40], "last_rpm": [40.057869, 41.9328308],
+    "pwm_before_stop_per_mille": [205, 193], "boost_samples": [1, 1],
+    "uart_errors_operator_reported": 0
+  },
+  "trial_03": {
+    "image": "trial_03_watch.png", "valid": 1, "elapsed_ms": 3000, "reason": "LAP_LIMIT (11)",
+    "target_rpm": [40, 40], "last_rpm": [41.1314087, 39.2592697],
+    "pwm_before_stop_per_mille": [202, 197], "boost_samples": [1, 1],
+    "uart_errors_operator_reported": 0
+  },
+  "source_of_trial_numbers": "operator labeled images as first/second of the two additional trials requested after the saved baseline",
+  "accepted_scope": "three new-battery suspended straight starts reached normal 3000ms LIMIT; last sample in each trial within 5 RPM of target",
+  "not_verified": ["continuous speed-match duration", "new-battery differential", "physical KEY emergency stop", "source-loss physical stop", "onboard logic power", "real vision", "full lap"]
+}

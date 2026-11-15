@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checks": [
+    "visible_start_line_never_triggers",
+    "arm_only_after_real_clear_time",
+    "two_frames_not_enough_without_150ms",
+    "same_event_no_duplicate",
+    "short_occlusion_merges_event",
+    "direct_image_gate_only_once",
+    "image_gate_no_repeat",
+    "absence_requires_600ms",
+    "absence_is_not_whole_vehicle_crossing",
+    "rearm_after_clear_second_id",
+    "road_loss_does_not_imply_passage",
+    "gap_timeout_returns_start_guard",
+    "time_reverse_clears",
+    "duplicate_time_clears",
+    "session_clears",
+    "bad_time_None",
+    "bad_time_nan",
+    "bad_time_True",
+    "bad_time_-1",
+    "spatial_negative_white",
+    "spatial_negative_black",
+    "spatial_negative_missing",
+    "both_real_passes_seen_once",
+    "only_reviewed_finish_windows_have_spatial_detections",
+    "real_curve_and_static_no_finish_false_positive",
+    "all_frames_whole_vehicle_unknown",
+    "causal_prefix_no_future",
+    "originals_frozen_sources_old_evidence_unchanged"
+  ],
+  "formal_frames": 1394,
+  "original_protected_files": 3616,
+  "manual_review": {
+    "reviewed_raw": "recovery_c2/finish_raw_01..04: initial1..9,405..426,569..586",
+    "reviewed_all_positive_overlays": "accepted/detections_01..02 and identical release, including old234",
+    "false_events_on_two_lap": 0,
+    "duplicate_events": 0,
+    "missed_visible_frames": [
+      "407/568/569: insufficient road/ROI/shape support",
+      "579..581: near-bottom support insufficient"
+    ],
+    "scope": "visual agent review, same-session development; not independent reliability or automatic parking"
+  }
+}

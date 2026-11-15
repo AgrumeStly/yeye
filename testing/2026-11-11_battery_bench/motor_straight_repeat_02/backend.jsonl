@@ -1,0 +1,597 @@
+{"at": 1794384865.2801123, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1794384865.30723, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1794384865.8386412, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1794384865.8388612, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1794384865.8390086, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1794384865.83958, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1794384865.8413384, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1794384865.8414328, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1794384866.0920298, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1794384866.3152678, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794384866.3156586, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1794384866.3157692, "id": 2, "result": {"running": false}}
+{"at": 1794384866.3190825, "request": {"id": 3, "method": "runScript", "params": {"script_sha256": "44e60b5164a2422fb090755449ab71b309f37e3571e80d589052c27a4014d4d0"}}}
+{"at": 1794384866.5019085, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794384867.5227818, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1794384867.5229044, "id": 3, "result": {"status": "ok"}}
+{"at": 1794384867.523365, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[BENCH FIXTURE READY] straight 600s input window; NO CAMERA; NO START; suspended wheels; MCU run_ms must be 3000\r\n"}}
+{"at": 1794384869.6133747, "request": {"id": 4, "method": "scriptRunning", "params": {}}}
+{"at": 1794384869.6141877, "id": 4, "result": {"running": true}}
+{"at": 1794384871.7114422, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1794384871.711945, "id": 5, "result": {"running": true}}
+{"at": 1794384873.7908905, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1794384873.791576, "id": 6, "result": {"running": true}}
+{"at": 1794384875.8936267, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1794384875.8941565, "id": 7, "result": {"running": true}}
+{"at": 1794384877.988506, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1794384877.9889994, "id": 8, "result": {"running": true}}
+{"at": 1794384880.0798943, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1794384880.0809343, "id": 9, "result": {"running": true}}
+{"at": 1794384882.17926, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1794384882.1800194, "id": 10, "result": {"running": true}}
+{"at": 1794384884.278205, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1794384884.2789776, "id": 11, "result": {"running": true}}
+{"at": 1794384886.3838341, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1794384886.3844826, "id": 12, "result": {"running": true}}
+{"at": 1794384888.4785888, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1794384888.4793065, "id": 13, "result": {"running": true}}
+{"at": 1794384890.5773156, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1794384890.5777555, "id": 14, "result": {"running": true}}
+{"at": 1794384892.6644912, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1794384892.6652644, "id": 15, "result": {"running": true}}
+{"at": 1794384894.757084, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1794384894.7576034, "id": 16, "result": {"running": true}}
+{"at": 1794384896.851449, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1794384896.85224, "id": 17, "result": {"running": true}}
+{"at": 1794384898.9383812, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1794384898.9390416, "id": 18, "result": {"running": true}}
+{"at": 1794384901.0387547, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1794384901.0398257, "id": 19, "result": {"running": true}}
+{"at": 1794384903.134724, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1794384903.1355078, "id": 20, "result": {"running": true}}
+{"at": 1794384905.2063596, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1794384905.2069895, "id": 21, "result": {"running": true}}
+{"at": 1794384907.2911613, "request": {"id": 22, "method": "scriptRunning", "params": {}}}
+{"at": 1794384907.2921405, "id": 22, "result": {"running": true}}
+{"at": 1794384909.3998785, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1794384909.400726, "id": 23, "result": {"running": true}}
+{"at": 1794384911.495136, "request": {"id": 24, "method": "scriptRunning", "params": {}}}
+{"at": 1794384911.496073, "id": 24, "result": {"running": true}}
+{"at": 1794384913.5965326, "request": {"id": 25, "method": "scriptRunning", "params": {}}}
+{"at": 1794384913.597121, "id": 25, "result": {"running": true}}
+{"at": 1794384915.7054765, "request": {"id": 26, "method": "scriptRunning", "params": {}}}
+{"at": 1794384915.7063959, "id": 26, "result": {"running": true}}
+{"at": 1794384917.7979712, "request": {"id": 27, "method": "scriptRunning", "params": {}}}
+{"at": 1794384917.798659, "id": 27, "result": {"running": true}}
+{"at": 1794384919.886002, "request": {"id": 28, "method": "scriptRunning", "params": {}}}
+{"at": 1794384919.8869157, "id": 28, "result": {"running": true}}
+{"at": 1794384921.9827955, "request": {"id": 29, "method": "scriptRunning", "params": {}}}
+{"at": 1794384921.9837112, "id": 29, "result": {"running": true}}
+{"at": 1794384924.0831184, "request": {"id": 30, "method": "scriptRunning", "params": {}}}
+{"at": 1794384924.0838335, "id": 30, "result": {"running": true}}
+{"at": 1794384926.1559625, "request": {"id": 31, "method": "scriptRunning", "params": {}}}
+{"at": 1794384926.1564627, "id": 31, "result": {"running": true}}
+{"at": 1794384928.2294154, "request": {"id": 32, "method": "scriptRunning", "params": {}}}
+{"at": 1794384928.2301552, "id": 32, "result": {"running": true}}
+{"at": 1794384930.31195, "request": {"id": 33, "method": "scriptRunning", "params": {}}}
+{"at": 1794384930.3126953, "id": 33, "result": {"running": true}}
+{"at": 1794384932.4112766, "request": {"id": 34, "method": "scriptRunning", "params": {}}}
+{"at": 1794384932.4119883, "id": 34, "result": {"running": true}}
+{"at": 1794384934.5057795, "request": {"id": 35, "method": "scriptRunning", "params": {}}}
+{"at": 1794384934.5067396, "id": 35, "result": {"running": true}}
+{"at": 1794384936.5815556, "request": {"id": 36, "method": "scriptRunning", "params": {}}}
+{"at": 1794384936.5822191, "id": 36, "result": {"running": true}}
+{"at": 1794384938.655045, "request": {"id": 37, "method": "scriptRunning", "params": {}}}
+{"at": 1794384938.6561422, "id": 37, "result": {"running": true}}
+{"at": 1794384940.757382, "request": {"id": 38, "method": "scriptRunning", "params": {}}}
+{"at": 1794384940.7583256, "id": 38, "result": {"running": true}}
+{"at": 1794384942.8266988, "request": {"id": 39, "method": "scriptRunning", "params": {}}}
+{"at": 1794384942.8274486, "id": 39, "result": {"running": true}}
+{"at": 1794384944.912021, "request": {"id": 40, "method": "scriptRunning", "params": {}}}
+{"at": 1794384944.9130003, "id": 40, "result": {"running": true}}
+{"at": 1794384947.007743, "request": {"id": 41, "method": "scriptRunning", "params": {}}}
+{"at": 1794384947.0086565, "id": 41, "result": {"running": true}}
+{"at": 1794384949.067551, "request": {"id": 42, "method": "scriptRunning", "params": {}}}
+{"at": 1794384949.0686722, "id": 42, "result": {"running": true}}
+{"at": 1794384951.1394863, "request": {"id": 43, "method": "scriptRunning", "params": {}}}
+{"at": 1794384951.140178, "id": 43, "result": {"running": true}}
+{"at": 1794384953.2452214, "request": {"id": 44, "method": "scriptRunning", "params": {}}}
+{"at": 1794384953.2461662, "id": 44, "result": {"running": true}}
+{"at": 1794384955.3314419, "request": {"id": 45, "method": "scriptRunning", "params": {}}}
+{"at": 1794384955.3321903, "id": 45, "result": {"running": true}}
+{"at": 1794384957.421025, "request": {"id": 46, "method": "scriptRunning", "params": {}}}
+{"at": 1794384957.4220417, "id": 46, "result": {"running": true}}
+{"at": 1794384959.5128098, "request": {"id": 47, "method": "scriptRunning", "params": {}}}
+{"at": 1794384959.5138798, "id": 47, "result": {"running": true}}
+{"at": 1794384961.5975506, "request": {"id": 48, "method": "scriptRunning", "params": {}}}
+{"at": 1794384961.5983021, "id": 48, "result": {"running": true}}
+{"at": 1794384963.6469033, "request": {"id": 49, "method": "scriptRunning", "params": {}}}
+{"at": 1794384963.64773, "id": 49, "result": {"running": true}}
+{"at": 1794384965.7082334, "request": {"id": 50, "method": "scriptRunning", "params": {}}}
+{"at": 1794384965.7089553, "id": 50, "result": {"running": true}}
+{"at": 1794384967.7929325, "request": {"id": 51, "method": "scriptRunning", "params": {}}}
+{"at": 1794384967.794036, "id": 51, "result": {"running": true}}
+{"at": 1794384969.8928435, "request": {"id": 52, "method": "scriptRunning", "params": {}}}
+{"at": 1794384969.8938422, "id": 52, "result": {"running": true}}
+{"at": 1794384971.9946487, "request": {"id": 53, "method": "scriptRunning", "params": {}}}
+{"at": 1794384971.995324, "id": 53, "result": {"running": true}}
+{"at": 1794384974.0695496, "request": {"id": 54, "method": "scriptRunning", "params": {}}}
+{"at": 1794384974.070553, "id": 54, "result": {"running": true}}
+{"at": 1794384976.1643631, "request": {"id": 55, "method": "scriptRunning", "params": {}}}
+{"at": 1794384976.1653101, "id": 55, "result": {"running": true}}
+{"at": 1794384978.2740126, "request": {"id": 56, "method": "scriptRunning", "params": {}}}
+{"at": 1794384978.2748559, "id": 56, "result": {"running": true}}
+{"at": 1794384980.3531008, "request": {"id": 57, "method": "scriptRunning", "params": {}}}
+{"at": 1794384980.353879, "id": 57, "result": {"running": true}}
+{"at": 1794384982.449831, "request": {"id": 58, "method": "scriptRunning", "params": {}}}
+{"at": 1794384982.4507568, "id": 58, "result": {"running": true}}
+{"at": 1794384984.552553, "request": {"id": 59, "method": "scriptRunning", "params": {}}}
+{"at": 1794384984.553305, "id": 59, "result": {"running": true}}
+{"at": 1794384986.6474173, "request": {"id": 60, "method": "scriptRunning", "params": {}}}
+{"at": 1794384986.648309, "id": 60, "result": {"running": true}}
+{"at": 1794384988.7098782, "request": {"id": 61, "method": "scriptRunning", "params": {}}}
+{"at": 1794384988.7105222, "id": 61, "result": {"running": true}}
+{"at": 1794384990.7932124, "request": {"id": 62, "method": "scriptRunning", "params": {}}}
+{"at": 1794384990.7939208, "id": 62, "result": {"running": true}}
+{"at": 1794384992.868461, "request": {"id": 63, "method": "scriptRunning", "params": {}}}
+{"at": 1794384992.8691666, "id": 63, "result": {"running": true}}
+{"at": 1794384994.9440112, "request": {"id": 64, "method": "scriptRunning", "params": {}}}
+{"at": 1794384994.9447503, "id": 64, "result": {"running": true}}
+{"at": 1794384997.0176861, "request": {"id": 65, "method": "scriptRunning", "params": {}}}
+{"at": 1794384997.0184987, "id": 65, "result": {"running": true}}
+{"at": 1794384999.1057463, "request": {"id": 66, "method": "scriptRunning", "params": {}}}
+{"at": 1794384999.10632, "id": 66, "result": {"running": true}}
+{"at": 1794385001.1852384, "request": {"id": 67, "method": "scriptRunning", "params": {}}}
+{"at": 1794385001.186239, "id": 67, "result": {"running": true}}
+{"at": 1794385003.2830014, "request": {"id": 68, "method": "scriptRunning", "params": {}}}
+{"at": 1794385003.2840698, "id": 68, "result": {"running": true}}
+{"at": 1794385005.3648775, "request": {"id": 69, "method": "scriptRunning", "params": {}}}
+{"at": 1794385005.3658803, "id": 69, "result": {"running": true}}
+{"at": 1794385007.4736536, "request": {"id": 70, "method": "scriptRunning", "params": {}}}
+{"at": 1794385007.4741323, "id": 70, "result": {"running": true}}
+{"at": 1794385009.5884597, "request": {"id": 71, "method": "scriptRunning", "params": {}}}
+{"at": 1794385009.5891373, "id": 71, "result": {"running": true}}
+{"at": 1794385011.6693194, "request": {"id": 72, "method": "scriptRunning", "params": {}}}
+{"at": 1794385011.670197, "id": 72, "result": {"running": true}}
+{"at": 1794385013.768003, "request": {"id": 73, "method": "scriptRunning", "params": {}}}
+{"at": 1794385013.7688308, "id": 73, "result": {"running": true}}
+{"at": 1794385015.8488297, "request": {"id": 74, "method": "scriptRunning", "params": {}}}
+{"at": 1794385015.8497357, "id": 74, "result": {"running": true}}
+{"at": 1794385017.937874, "request": {"id": 75, "method": "scriptRunning", "params": {}}}
+{"at": 1794385017.939158, "id": 75, "result": {"running": true}}
+{"at": 1794385020.0308275, "request": {"id": 76, "method": "scriptRunning", "params": {}}}
+{"at": 1794385020.0313728, "id": 76, "result": {"running": true}}
+{"at": 1794385022.1136196, "request": {"id": 77, "method": "scriptRunning", "params": {}}}
+{"at": 1794385022.114352, "id": 77, "result": {"running": true}}
+{"at": 1794385024.1988037, "request": {"id": 78, "method": "scriptRunning", "params": {}}}
+{"at": 1794385024.1997092, "id": 78, "result": {"running": true}}
+{"at": 1794385026.282106, "request": {"id": 79, "method": "scriptRunning", "params": {}}}
+{"at": 1794385026.2828925, "id": 79, "result": {"running": true}}
+{"at": 1794385028.3821726, "request": {"id": 80, "method": "scriptRunning", "params": {}}}
+{"at": 1794385028.3828728, "id": 80, "result": {"running": true}}
+{"at": 1794385030.4987373, "request": {"id": 81, "method": "scriptRunning", "params": {}}}
+{"at": 1794385030.4994354, "id": 81, "result": {"running": true}}
+{"at": 1794385032.5985358, "request": {"id": 82, "method": "scriptRunning", "params": {}}}
+{"at": 1794385032.5992675, "id": 82, "result": {"running": true}}
+{"at": 1794385034.6934438, "request": {"id": 83, "method": "scriptRunning", "params": {}}}
+{"at": 1794385034.6943026, "id": 83, "result": {"running": true}}
+{"at": 1794385036.7696471, "request": {"id": 84, "method": "scriptRunning", "params": {}}}
+{"at": 1794385036.7703836, "id": 84, "result": {"running": true}}
+{"at": 1794385038.8604593, "request": {"id": 85, "method": "scriptRunning", "params": {}}}
+{"at": 1794385038.8609555, "id": 85, "result": {"running": true}}
+{"at": 1794385040.9350154, "request": {"id": 86, "method": "scriptRunning", "params": {}}}
+{"at": 1794385040.9358082, "id": 86, "result": {"running": true}}
+{"at": 1794385043.0161493, "request": {"id": 87, "method": "scriptRunning", "params": {}}}
+{"at": 1794385043.0169764, "id": 87, "result": {"running": true}}
+{"at": 1794385045.1115944, "request": {"id": 88, "method": "scriptRunning", "params": {}}}
+{"at": 1794385045.112265, "id": 88, "result": {"running": true}}
+{"at": 1794385047.1925957, "request": {"id": 89, "method": "scriptRunning", "params": {}}}
+{"at": 1794385047.1934564, "id": 89, "result": {"running": true}}
+{"at": 1794385049.2778451, "request": {"id": 90, "method": "scriptRunning", "params": {}}}
+{"at": 1794385049.278685, "id": 90, "result": {"running": true}}
+{"at": 1794385051.3402584, "request": {"id": 91, "method": "scriptRunning", "params": {}}}
+{"at": 1794385051.3411686, "id": 91, "result": {"running": true}}
+{"at": 1794385053.405128, "request": {"id": 92, "method": "scriptRunning", "params": {}}}
+{"at": 1794385053.4078968, "id": 92, "result": {"running": true}}
+{"at": 1794385055.5022898, "request": {"id": 93, "method": "scriptRunning", "params": {}}}
+{"at": 1794385055.5028362, "id": 93, "result": {"running": true}}
+{"at": 1794385057.5730793, "request": {"id": 94, "method": "scriptRunning", "params": {}}}
+{"at": 1794385057.573807, "id": 94, "result": {"running": true}}
+{"at": 1794385059.662448, "request": {"id": 95, "method": "scriptRunning", "params": {}}}
+{"at": 1794385059.6633215, "id": 95, "result": {"running": true}}
+{"at": 1794385061.7669806, "request": {"id": 96, "method": "scriptRunning", "params": {}}}
+{"at": 1794385061.7679303, "id": 96, "result": {"running": true}}
+{"at": 1794385063.8513448, "request": {"id": 97, "method": "scriptRunning", "params": {}}}
+{"at": 1794385063.8522336, "id": 97, "result": {"running": true}}
+{"at": 1794385065.9608898, "request": {"id": 98, "method": "scriptRunning", "params": {}}}
+{"at": 1794385065.9619563, "id": 98, "result": {"running": true}}
+{"at": 1794385068.030783, "request": {"id": 99, "method": "scriptRunning", "params": {}}}
+{"at": 1794385068.0312583, "id": 99, "result": {"running": true}}
+{"at": 1794385070.1436121, "request": {"id": 100, "method": "scriptRunning", "params": {}}}
+{"at": 1794385070.1446211, "id": 100, "result": {"running": true}}
+{"at": 1794385072.2363634, "request": {"id": 101, "method": "scriptRunning", "params": {}}}
+{"at": 1794385072.2371256, "id": 101, "result": {"running": true}}
+{"at": 1794385074.3015275, "request": {"id": 102, "method": "scriptRunning", "params": {}}}
+{"at": 1794385074.3021698, "id": 102, "result": {"running": true}}
+{"at": 1794385076.3972142, "request": {"id": 103, "method": "scriptRunning", "params": {}}}
+{"at": 1794385076.398101, "id": 103, "result": {"running": true}}
+{"at": 1794385078.4818647, "request": {"id": 104, "method": "scriptRunning", "params": {}}}
+{"at": 1794385078.4828598, "id": 104, "result": {"running": true}}
+{"at": 1794385080.5754776, "request": {"id": 105, "method": "scriptRunning", "params": {}}}
+{"at": 1794385080.5760887, "id": 105, "result": {"running": true}}
+{"at": 1794385082.6740186, "request": {"id": 106, "method": "scriptRunning", "params": {}}}
+{"at": 1794385082.6748452, "id": 106, "result": {"running": true}}
+{"at": 1794385084.7874608, "request": {"id": 107, "method": "scriptRunning", "params": {}}}
+{"at": 1794385084.7880807, "id": 107, "result": {"running": true}}
+{"at": 1794385086.8722327, "request": {"id": 108, "method": "scriptRunning", "params": {}}}
+{"at": 1794385086.873, "id": 108, "result": {"running": true}}
+{"at": 1794385088.9881008, "request": {"id": 109, "method": "scriptRunning", "params": {}}}
+{"at": 1794385088.9888177, "id": 109, "result": {"running": true}}
+{"at": 1794385091.072985, "request": {"id": 110, "method": "scriptRunning", "params": {}}}
+{"at": 1794385091.0737581, "id": 110, "result": {"running": true}}
+{"at": 1794385093.1795852, "request": {"id": 111, "method": "scriptRunning", "params": {}}}
+{"at": 1794385093.1803725, "id": 111, "result": {"running": true}}
+{"at": 1794385095.274337, "request": {"id": 112, "method": "scriptRunning", "params": {}}}
+{"at": 1794385095.275019, "id": 112, "result": {"running": true}}
+{"at": 1794385097.3575833, "request": {"id": 113, "method": "scriptRunning", "params": {}}}
+{"at": 1794385097.3580863, "id": 113, "result": {"running": true}}
+{"at": 1794385099.4403293, "request": {"id": 114, "method": "scriptRunning", "params": {}}}
+{"at": 1794385099.4410675, "id": 114, "result": {"running": true}}
+{"at": 1794385101.5283353, "request": {"id": 115, "method": "scriptRunning", "params": {}}}
+{"at": 1794385101.5294204, "id": 115, "result": {"running": true}}
+{"at": 1794385103.6246963, "request": {"id": 116, "method": "scriptRunning", "params": {}}}
+{"at": 1794385103.625806, "id": 116, "result": {"running": true}}
+{"at": 1794385105.7234657, "request": {"id": 117, "method": "scriptRunning", "params": {}}}
+{"at": 1794385105.7246695, "id": 117, "result": {"running": true}}
+{"at": 1794385107.7832773, "request": {"id": 118, "method": "scriptRunning", "params": {}}}
+{"at": 1794385107.7839873, "id": 118, "result": {"running": true}}
+{"at": 1794385109.892117, "request": {"id": 119, "method": "scriptRunning", "params": {}}}
+{"at": 1794385109.8928876, "id": 119, "result": {"running": true}}
+{"at": 1794385111.9715714, "request": {"id": 120, "method": "scriptRunning", "params": {}}}
+{"at": 1794385111.9721885, "id": 120, "result": {"running": true}}
+{"at": 1794385114.0670145, "request": {"id": 121, "method": "scriptRunning", "params": {}}}
+{"at": 1794385114.067942, "id": 121, "result": {"running": true}}
+{"at": 1794385116.173716, "request": {"id": 122, "method": "scriptRunning", "params": {}}}
+{"at": 1794385116.1745727, "id": 122, "result": {"running": true}}
+{"at": 1794385118.2738562, "request": {"id": 123, "method": "scriptRunning", "params": {}}}
+{"at": 1794385118.2745814, "id": 123, "result": {"running": true}}
+{"at": 1794385120.3602169, "request": {"id": 124, "method": "scriptRunning", "params": {}}}
+{"at": 1794385120.3608253, "id": 124, "result": {"running": true}}
+{"at": 1794385122.4593842, "request": {"id": 125, "method": "scriptRunning", "params": {}}}
+{"at": 1794385122.4601462, "id": 125, "result": {"running": true}}
+{"at": 1794385124.5359902, "request": {"id": 126, "method": "scriptRunning", "params": {}}}
+{"at": 1794385124.536638, "id": 126, "result": {"running": true}}
+{"at": 1794385126.6300216, "request": {"id": 127, "method": "scriptRunning", "params": {}}}
+{"at": 1794385126.630699, "id": 127, "result": {"running": true}}
+{"at": 1794385128.7364278, "request": {"id": 128, "method": "scriptRunning", "params": {}}}
+{"at": 1794385128.7377775, "id": 128, "result": {"running": true}}
+{"at": 1794385130.7914865, "request": {"id": 129, "method": "scriptRunning", "params": {}}}
+{"at": 1794385130.7922049, "id": 129, "result": {"running": true}}
+{"at": 1794385132.876137, "request": {"id": 130, "method": "scriptRunning", "params": {}}}
+{"at": 1794385132.8768184, "id": 130, "result": {"running": true}}
+{"at": 1794385134.9783118, "request": {"id": 131, "method": "scriptRunning", "params": {}}}
+{"at": 1794385134.9788203, "id": 131, "result": {"running": true}}
+{"at": 1794385137.0819142, "request": {"id": 132, "method": "scriptRunning", "params": {}}}
+{"at": 1794385137.0824683, "id": 132, "result": {"running": true}}
+{"at": 1794385139.16979, "request": {"id": 133, "method": "scriptRunning", "params": {}}}
+{"at": 1794385139.170429, "id": 133, "result": {"running": true}}
+{"at": 1794385141.231517, "request": {"id": 134, "method": "scriptRunning", "params": {}}}
+{"at": 1794385141.2321484, "id": 134, "result": {"running": true}}
+{"at": 1794385143.319798, "request": {"id": 135, "method": "scriptRunning", "params": {}}}
+{"at": 1794385143.3204079, "id": 135, "result": {"running": true}}
+{"at": 1794385145.4274004, "request": {"id": 136, "method": "scriptRunning", "params": {}}}
+{"at": 1794385145.4280682, "id": 136, "result": {"running": true}}
+{"at": 1794385147.498107, "request": {"id": 137, "method": "scriptRunning", "params": {}}}
+{"at": 1794385147.498934, "id": 137, "result": {"running": true}}
+{"at": 1794385149.6053164, "request": {"id": 138, "method": "scriptRunning", "params": {}}}
+{"at": 1794385149.605945, "id": 138, "result": {"running": true}}
+{"at": 1794385151.69013, "request": {"id": 139, "method": "scriptRunning", "params": {}}}
+{"at": 1794385151.690682, "id": 139, "result": {"running": true}}
+{"at": 1794385153.762518, "request": {"id": 140, "method": "scriptRunning", "params": {}}}
+{"at": 1794385153.7634227, "id": 140, "result": {"running": true}}
+{"at": 1794385155.860284, "request": {"id": 141, "method": "scriptRunning", "params": {}}}
+{"at": 1794385155.8609595, "id": 141, "result": {"running": true}}
+{"at": 1794385157.955339, "request": {"id": 142, "method": "scriptRunning", "params": {}}}
+{"at": 1794385157.956277, "id": 142, "result": {"running": true}}
+{"at": 1794385160.0378168, "request": {"id": 143, "method": "scriptRunning", "params": {}}}
+{"at": 1794385160.038499, "id": 143, "result": {"running": true}}
+{"at": 1794385162.118776, "request": {"id": 144, "method": "scriptRunning", "params": {}}}
+{"at": 1794385162.1193566, "id": 144, "result": {"running": true}}
+{"at": 1794385164.2135668, "request": {"id": 145, "method": "scriptRunning", "params": {}}}
+{"at": 1794385164.214187, "id": 145, "result": {"running": true}}
+{"at": 1794385166.2954848, "request": {"id": 146, "method": "scriptRunning", "params": {}}}
+{"at": 1794385166.2961466, "id": 146, "result": {"running": true}}
+{"at": 1794385168.3921578, "request": {"id": 147, "method": "scriptRunning", "params": {}}}
+{"at": 1794385168.3929403, "id": 147, "result": {"running": true}}
+{"at": 1794385170.4872139, "request": {"id": 148, "method": "scriptRunning", "params": {}}}
+{"at": 1794385170.488025, "id": 148, "result": {"running": true}}
+{"at": 1794385172.5539656, "request": {"id": 149, "method": "scriptRunning", "params": {}}}
+{"at": 1794385172.5546055, "id": 149, "result": {"running": true}}
+{"at": 1794385174.6471355, "request": {"id": 150, "method": "scriptRunning", "params": {}}}
+{"at": 1794385174.648018, "id": 150, "result": {"running": true}}
+{"at": 1794385176.7136452, "request": {"id": 151, "method": "scriptRunning", "params": {}}}
+{"at": 1794385176.7143867, "id": 151, "result": {"running": true}}
+{"at": 1794385178.805446, "request": {"id": 152, "method": "scriptRunning", "params": {}}}
+{"at": 1794385178.8059962, "id": 152, "result": {"running": true}}
+{"at": 1794385180.8791819, "request": {"id": 153, "method": "scriptRunning", "params": {}}}
+{"at": 1794385180.8798301, "id": 153, "result": {"running": true}}
+{"at": 1794385182.967104, "request": {"id": 154, "method": "scriptRunning", "params": {}}}
+{"at": 1794385182.9679663, "id": 154, "result": {"running": true}}
+{"at": 1794385185.0400314, "request": {"id": 155, "method": "scriptRunning", "params": {}}}
+{"at": 1794385185.0411124, "id": 155, "result": {"running": true}}
+{"at": 1794385187.1358778, "request": {"id": 156, "method": "scriptRunning", "params": {}}}
+{"at": 1794385187.1366198, "id": 156, "result": {"running": true}}
+{"at": 1794385189.245658, "request": {"id": 157, "method": "scriptRunning", "params": {}}}
+{"at": 1794385189.246515, "id": 157, "result": {"running": true}}
+{"at": 1794385191.3537908, "request": {"id": 158, "method": "scriptRunning", "params": {}}}
+{"at": 1794385191.3545303, "id": 158, "result": {"running": true}}
+{"at": 1794385193.4459038, "request": {"id": 159, "method": "scriptRunning", "params": {}}}
+{"at": 1794385193.4470584, "id": 159, "result": {"running": true}}
+{"at": 1794385195.546029, "request": {"id": 160, "method": "scriptRunning", "params": {}}}
+{"at": 1794385195.5467908, "id": 160, "result": {"running": true}}
+{"at": 1794385197.6450868, "request": {"id": 161, "method": "scriptRunning", "params": {}}}
+{"at": 1794385197.646159, "id": 161, "result": {"running": true}}
+{"at": 1794385199.7377026, "request": {"id": 162, "method": "scriptRunning", "params": {}}}
+{"at": 1794385199.7384262, "id": 162, "result": {"running": true}}
+{"at": 1794385201.8094544, "request": {"id": 163, "method": "scriptRunning", "params": {}}}
+{"at": 1794385201.8102121, "id": 163, "result": {"running": true}}
+{"at": 1794385203.8983462, "request": {"id": 164, "method": "scriptRunning", "params": {}}}
+{"at": 1794385203.8990405, "id": 164, "result": {"running": true}}
+{"at": 1794385205.9843898, "request": {"id": 165, "method": "scriptRunning", "params": {}}}
+{"at": 1794385205.9852948, "id": 165, "result": {"running": true}}
+{"at": 1794385208.0832484, "request": {"id": 166, "method": "scriptRunning", "params": {}}}
+{"at": 1794385208.0840046, "id": 166, "result": {"running": true}}
+{"at": 1794385210.1635213, "request": {"id": 167, "method": "scriptRunning", "params": {}}}
+{"at": 1794385210.164541, "id": 167, "result": {"running": true}}
+{"at": 1794385212.2448473, "request": {"id": 168, "method": "scriptRunning", "params": {}}}
+{"at": 1794385212.2456222, "id": 168, "result": {"running": true}}
+{"at": 1794385214.3309214, "request": {"id": 169, "method": "scriptRunning", "params": {}}}
+{"at": 1794385214.3316283, "id": 169, "result": {"running": true}}
+{"at": 1794385216.4402244, "request": {"id": 170, "method": "scriptRunning", "params": {}}}
+{"at": 1794385216.441323, "id": 170, "result": {"running": true}}
+{"at": 1794385218.538199, "request": {"id": 171, "method": "scriptRunning", "params": {}}}
+{"at": 1794385218.5396588, "id": 171, "result": {"running": true}}
+{"at": 1794385220.6211472, "request": {"id": 172, "method": "scriptRunning", "params": {}}}
+{"at": 1794385220.6221313, "id": 172, "result": {"running": true}}
+{"at": 1794385222.703817, "request": {"id": 173, "method": "scriptRunning", "params": {}}}
+{"at": 1794385222.7049115, "id": 173, "result": {"running": true}}
+{"at": 1794385224.8037312, "request": {"id": 174, "method": "scriptRunning", "params": {}}}
+{"at": 1794385224.8047187, "id": 174, "result": {"running": true}}
+{"at": 1794385226.9136367, "request": {"id": 175, "method": "scriptRunning", "params": {}}}
+{"at": 1794385226.9147522, "id": 175, "result": {"running": true}}
+{"at": 1794385228.9851797, "request": {"id": 176, "method": "scriptRunning", "params": {}}}
+{"at": 1794385228.9858246, "id": 176, "result": {"running": true}}
+{"at": 1794385231.0841296, "request": {"id": 177, "method": "scriptRunning", "params": {}}}
+{"at": 1794385231.0848885, "id": 177, "result": {"running": true}}
+{"at": 1794385233.168967, "request": {"id": 178, "method": "scriptRunning", "params": {}}}
+{"at": 1794385233.1700366, "id": 178, "result": {"running": true}}
+{"at": 1794385235.2796986, "request": {"id": 179, "method": "scriptRunning", "params": {}}}
+{"at": 1794385235.2805095, "id": 179, "result": {"running": true}}
+{"at": 1794385237.3780613, "request": {"id": 180, "method": "scriptRunning", "params": {}}}
+{"at": 1794385237.3785388, "id": 180, "result": {"running": true}}
+{"at": 1794385239.4582832, "request": {"id": 181, "method": "scriptRunning", "params": {}}}
+{"at": 1794385239.4588344, "id": 181, "result": {"running": true}}
+{"at": 1794385241.544186, "request": {"id": 182, "method": "scriptRunning", "params": {}}}
+{"at": 1794385241.5449255, "id": 182, "result": {"running": true}}
+{"at": 1794385243.622367, "request": {"id": 183, "method": "scriptRunning", "params": {}}}
+{"at": 1794385243.623367, "id": 183, "result": {"running": true}}
+{"at": 1794385245.7352495, "request": {"id": 184, "method": "scriptRunning", "params": {}}}
+{"at": 1794385245.7359767, "id": 184, "result": {"running": true}}
+{"at": 1794385247.8016915, "request": {"id": 185, "method": "scriptRunning", "params": {}}}
+{"at": 1794385247.8027205, "id": 185, "result": {"running": true}}
+{"at": 1794385249.8976498, "request": {"id": 186, "method": "scriptRunning", "params": {}}}
+{"at": 1794385249.8983476, "id": 186, "result": {"running": true}}
+{"at": 1794385251.9934375, "request": {"id": 187, "method": "scriptRunning", "params": {}}}
+{"at": 1794385251.994491, "id": 187, "result": {"running": true}}
+{"at": 1794385254.0680115, "request": {"id": 188, "method": "scriptRunning", "params": {}}}
+{"at": 1794385254.0688493, "id": 188, "result": {"running": true}}
+{"at": 1794385256.1819026, "request": {"id": 189, "method": "scriptRunning", "params": {}}}
+{"at": 1794385256.1826391, "id": 189, "result": {"running": true}}
+{"at": 1794385258.2903128, "request": {"id": 190, "method": "scriptRunning", "params": {}}}
+{"at": 1794385258.2908428, "id": 190, "result": {"running": true}}
+{"at": 1794385260.3904393, "request": {"id": 191, "method": "scriptRunning", "params": {}}}
+{"at": 1794385260.3911242, "id": 191, "result": {"running": true}}
+{"at": 1794385262.4740903, "request": {"id": 192, "method": "scriptRunning", "params": {}}}
+{"at": 1794385262.4747794, "id": 192, "result": {"running": true}}
+{"at": 1794385264.5547144, "request": {"id": 193, "method": "scriptRunning", "params": {}}}
+{"at": 1794385264.5553412, "id": 193, "result": {"running": true}}
+{"at": 1794385266.671938, "request": {"id": 194, "method": "scriptRunning", "params": {}}}
+{"at": 1794385266.6727493, "id": 194, "result": {"running": true}}
+{"at": 1794385268.7449121, "request": {"id": 195, "method": "scriptRunning", "params": {}}}
+{"at": 1794385268.7456915, "id": 195, "result": {"running": true}}
+{"at": 1794385270.8329506, "request": {"id": 196, "method": "scriptRunning", "params": {}}}
+{"at": 1794385270.833518, "id": 196, "result": {"running": true}}
+{"at": 1794385272.9304261, "request": {"id": 197, "method": "scriptRunning", "params": {}}}
+{"at": 1794385272.9310315, "id": 197, "result": {"running": true}}
+{"at": 1794385275.019105, "request": {"id": 198, "method": "scriptRunning", "params": {}}}
+{"at": 1794385275.0199819, "id": 198, "result": {"running": true}}
+{"at": 1794385277.1052682, "request": {"id": 199, "method": "scriptRunning", "params": {}}}
+{"at": 1794385277.1059177, "id": 199, "result": {"running": true}}
+{"at": 1794385279.203342, "request": {"id": 200, "method": "scriptRunning", "params": {}}}
+{"at": 1794385279.2041686, "id": 200, "result": {"running": true}}
+{"at": 1794385281.3015, "request": {"id": 201, "method": "scriptRunning", "params": {}}}
+{"at": 1794385281.3021593, "id": 201, "result": {"running": true}}
+{"at": 1794385283.4124148, "request": {"id": 202, "method": "scriptRunning", "params": {}}}
+{"at": 1794385283.4129443, "id": 202, "result": {"running": true}}
+{"at": 1794385285.5104375, "request": {"id": 203, "method": "scriptRunning", "params": {}}}
+{"at": 1794385285.5115461, "id": 203, "result": {"running": true}}
+{"at": 1794385287.6133428, "request": {"id": 204, "method": "scriptRunning", "params": {}}}
+{"at": 1794385287.6141198, "id": 204, "result": {"running": true}}
+{"at": 1794385289.7141583, "request": {"id": 205, "method": "scriptRunning", "params": {}}}
+{"at": 1794385289.7148442, "id": 205, "result": {"running": true}}
+{"at": 1794385291.8130357, "request": {"id": 206, "method": "scriptRunning", "params": {}}}
+{"at": 1794385291.81378, "id": 206, "result": {"running": true}}
+{"at": 1794385293.924406, "request": {"id": 207, "method": "scriptRunning", "params": {}}}
+{"at": 1794385293.9253113, "id": 207, "result": {"running": true}}
+{"at": 1794385296.0252776, "request": {"id": 208, "method": "scriptRunning", "params": {}}}
+{"at": 1794385296.0257611, "id": 208, "result": {"running": true}}
+{"at": 1794385298.112501, "request": {"id": 209, "method": "scriptRunning", "params": {}}}
+{"at": 1794385298.1133502, "id": 209, "result": {"running": true}}
+{"at": 1794385300.1842535, "request": {"id": 210, "method": "scriptRunning", "params": {}}}
+{"at": 1794385300.1850033, "id": 210, "result": {"running": true}}
+{"at": 1794385302.2949827, "request": {"id": 211, "method": "scriptRunning", "params": {}}}
+{"at": 1794385302.2956305, "id": 211, "result": {"running": true}}
+{"at": 1794385304.3869941, "request": {"id": 212, "method": "scriptRunning", "params": {}}}
+{"at": 1794385304.3877108, "id": 212, "result": {"running": true}}
+{"at": 1794385306.4858537, "request": {"id": 213, "method": "scriptRunning", "params": {}}}
+{"at": 1794385306.4868557, "id": 213, "result": {"running": true}}
+{"at": 1794385308.586722, "request": {"id": 214, "method": "scriptRunning", "params": {}}}
+{"at": 1794385308.587535, "id": 214, "result": {"running": true}}
+{"at": 1794385310.700305, "request": {"id": 215, "method": "scriptRunning", "params": {}}}
+{"at": 1794385310.7009985, "id": 215, "result": {"running": true}}
+{"at": 1794385312.7943025, "request": {"id": 216, "method": "scriptRunning", "params": {}}}
+{"at": 1794385312.795203, "id": 216, "result": {"running": true}}
+{"at": 1794385314.8831153, "request": {"id": 217, "method": "scriptRunning", "params": {}}}
+{"at": 1794385314.8841279, "id": 217, "result": {"running": true}}
+{"at": 1794385316.9899402, "request": {"id": 218, "method": "scriptRunning", "params": {}}}
+{"at": 1794385316.9908028, "id": 218, "result": {"running": true}}
+{"at": 1794385319.0830321, "request": {"id": 219, "method": "scriptRunning", "params": {}}}
+{"at": 1794385319.0838306, "id": 219, "result": {"running": true}}
+{"at": 1794385321.1786299, "request": {"id": 220, "method": "scriptRunning", "params": {}}}
+{"at": 1794385321.1795738, "id": 220, "result": {"running": true}}
+{"at": 1794385323.293446, "request": {"id": 221, "method": "scriptRunning", "params": {}}}
+{"at": 1794385323.2943668, "id": 221, "result": {"running": true}}
+{"at": 1794385325.36518, "request": {"id": 222, "method": "scriptRunning", "params": {}}}
+{"at": 1794385325.3660204, "id": 222, "result": {"running": true}}
+{"at": 1794385327.4607117, "request": {"id": 223, "method": "scriptRunning", "params": {}}}
+{"at": 1794385327.4615803, "id": 223, "result": {"running": true}}
+{"at": 1794385329.5617352, "request": {"id": 224, "method": "scriptRunning", "params": {}}}
+{"at": 1794385329.562605, "id": 224, "result": {"running": true}}
+{"at": 1794385331.6426315, "request": {"id": 225, "method": "scriptRunning", "params": {}}}
+{"at": 1794385331.6433458, "id": 225, "result": {"running": true}}
+{"at": 1794385333.7406428, "request": {"id": 226, "method": "scriptRunning", "params": {}}}
+{"at": 1794385333.7413943, "id": 226, "result": {"running": true}}
+{"at": 1794385335.8260927, "request": {"id": 227, "method": "scriptRunning", "params": {}}}
+{"at": 1794385335.8266757, "id": 227, "result": {"running": true}}
+{"at": 1794385337.887156, "request": {"id": 228, "method": "scriptRunning", "params": {}}}
+{"at": 1794385337.8880641, "id": 228, "result": {"running": true}}
+{"at": 1794385339.9645305, "request": {"id": 229, "method": "scriptRunning", "params": {}}}
+{"at": 1794385339.9652622, "id": 229, "result": {"running": true}}
+{"at": 1794385342.05603, "request": {"id": 230, "method": "scriptRunning", "params": {}}}
+{"at": 1794385342.0565698, "id": 230, "result": {"running": true}}
+{"at": 1794385344.157137, "request": {"id": 231, "method": "scriptRunning", "params": {}}}
+{"at": 1794385344.1577442, "id": 231, "result": {"running": true}}
+{"at": 1794385346.2406526, "request": {"id": 232, "method": "scriptRunning", "params": {}}}
+{"at": 1794385346.241451, "id": 232, "result": {"running": true}}
+{"at": 1794385348.3202555, "request": {"id": 233, "method": "scriptRunning", "params": {}}}
+{"at": 1794385348.321234, "id": 233, "result": {"running": true}}
+{"at": 1794385350.4050362, "request": {"id": 234, "method": "scriptRunning", "params": {}}}
+{"at": 1794385350.406083, "id": 234, "result": {"running": true}}
+{"at": 1794385352.490042, "request": {"id": 235, "method": "scriptRunning", "params": {}}}
+{"at": 1794385352.4906058, "id": 235, "result": {"running": true}}
+{"at": 1794385354.587788, "request": {"id": 236, "method": "scriptRunning", "params": {}}}
+{"at": 1794385354.5885015, "id": 236, "result": {"running": true}}
+{"at": 1794385356.6761863, "request": {"id": 237, "method": "scriptRunning", "params": {}}}
+{"at": 1794385356.6769571, "id": 237, "result": {"running": true}}
+{"at": 1794385358.7494736, "request": {"id": 238, "method": "scriptRunning", "params": {}}}
+{"at": 1794385358.7501435, "id": 238, "result": {"running": true}}
+{"at": 1794385360.8333154, "request": {"id": 239, "method": "scriptRunning", "params": {}}}
+{"at": 1794385360.8341708, "id": 239, "result": {"running": true}}
+{"at": 1794385362.9269116, "request": {"id": 240, "method": "scriptRunning", "params": {}}}
+{"at": 1794385362.927634, "id": 240, "result": {"running": true}}
+{"at": 1794385365.0140908, "request": {"id": 241, "method": "scriptRunning", "params": {}}}
+{"at": 1794385365.0147655, "id": 241, "result": {"running": true}}
+{"at": 1794385367.101209, "request": {"id": 242, "method": "scriptRunning", "params": {}}}
+{"at": 1794385367.101988, "id": 242, "result": {"running": true}}
+{"at": 1794385369.190495, "request": {"id": 243, "method": "scriptRunning", "params": {}}}
+{"at": 1794385369.1911447, "id": 243, "result": {"running": true}}
+{"at": 1794385371.2732003, "request": {"id": 244, "method": "scriptRunning", "params": {}}}
+{"at": 1794385371.273846, "id": 244, "result": {"running": true}}
+{"at": 1794385373.37316, "request": {"id": 245, "method": "scriptRunning", "params": {}}}
+{"at": 1794385373.3737376, "id": 245, "result": {"running": true}}
+{"at": 1794385375.4782526, "request": {"id": 246, "method": "scriptRunning", "params": {}}}
+{"at": 1794385375.4790163, "id": 246, "result": {"running": true}}
+{"at": 1794385377.5737965, "request": {"id": 247, "method": "scriptRunning", "params": {}}}
+{"at": 1794385377.5746007, "id": 247, "result": {"running": true}}
+{"at": 1794385379.6725638, "request": {"id": 248, "method": "scriptRunning", "params": {}}}
+{"at": 1794385379.6734092, "id": 248, "result": {"running": true}}
+{"at": 1794385381.7835124, "request": {"id": 249, "method": "scriptRunning", "params": {}}}
+{"at": 1794385381.7845864, "id": 249, "result": {"running": true}}
+{"at": 1794385383.890759, "request": {"id": 250, "method": "scriptRunning", "params": {}}}
+{"at": 1794385383.8915749, "id": 250, "result": {"running": true}}
+{"at": 1794385385.961323, "request": {"id": 251, "method": "scriptRunning", "params": {}}}
+{"at": 1794385385.9622352, "id": 251, "result": {"running": true}}
+{"at": 1794385388.062929, "request": {"id": 252, "method": "scriptRunning", "params": {}}}
+{"at": 1794385388.0636985, "id": 252, "result": {"running": true}}
+{"at": 1794385390.1608438, "request": {"id": 253, "method": "scriptRunning", "params": {}}}
+{"at": 1794385390.16155, "id": 253, "result": {"running": true}}
+{"at": 1794385392.2672157, "request": {"id": 254, "method": "scriptRunning", "params": {}}}
+{"at": 1794385392.2678235, "id": 254, "result": {"running": true}}
+{"at": 1794385394.3794932, "request": {"id": 255, "method": "scriptRunning", "params": {}}}
+{"at": 1794385394.3804028, "id": 255, "result": {"running": true}}
+{"at": 1794385396.4762478, "request": {"id": 256, "method": "scriptRunning", "params": {}}}
+{"at": 1794385396.4769518, "id": 256, "result": {"running": true}}
+{"at": 1794385398.5710967, "request": {"id": 257, "method": "scriptRunning", "params": {}}}
+{"at": 1794385398.5718725, "id": 257, "result": {"running": true}}
+{"at": 1794385400.6729248, "request": {"id": 258, "method": "scriptRunning", "params": {}}}
+{"at": 1794385400.6738145, "id": 258, "result": {"running": true}}
+{"at": 1794385402.7575693, "request": {"id": 259, "method": "scriptRunning", "params": {}}}
+{"at": 1794385402.758312, "id": 259, "result": {"running": true}}
+{"at": 1794385404.850537, "request": {"id": 260, "method": "scriptRunning", "params": {}}}
+{"at": 1794385404.8512235, "id": 260, "result": {"running": true}}
+{"at": 1794385406.9208546, "request": {"id": 261, "method": "scriptRunning", "params": {}}}
+{"at": 1794385406.9215446, "id": 261, "result": {"running": true}}
+{"at": 1794385408.9963317, "request": {"id": 262, "method": "scriptRunning", "params": {}}}
+{"at": 1794385408.9970615, "id": 262, "result": {"running": true}}
+{"at": 1794385411.091928, "request": {"id": 263, "method": "scriptRunning", "params": {}}}
+{"at": 1794385411.0926185, "id": 263, "result": {"running": true}}
+{"at": 1794385413.1968117, "request": {"id": 264, "method": "scriptRunning", "params": {}}}
+{"at": 1794385413.197925, "id": 264, "result": {"running": true}}
+{"at": 1794385415.2655995, "request": {"id": 265, "method": "scriptRunning", "params": {}}}
+{"at": 1794385415.266316, "id": 265, "result": {"running": true}}
+{"at": 1794385417.3494716, "request": {"id": 266, "method": "scriptRunning", "params": {}}}
+{"at": 1794385417.3505857, "id": 266, "result": {"running": true}}
+{"at": 1794385419.459105, "request": {"id": 267, "method": "scriptRunning", "params": {}}}
+{"at": 1794385419.4598644, "id": 267, "result": {"running": true}}
+{"at": 1794385421.531335, "request": {"id": 268, "method": "scriptRunning", "params": {}}}
+{"at": 1794385421.531971, "id": 268, "result": {"running": true}}
+{"at": 1794385423.621234, "request": {"id": 269, "method": "scriptRunning", "params": {}}}
+{"at": 1794385423.6220222, "id": 269, "result": {"running": true}}
+{"at": 1794385425.7170327, "request": {"id": 270, "method": "scriptRunning", "params": {}}}
+{"at": 1794385425.7182107, "id": 270, "result": {"running": true}}
+{"at": 1794385427.802353, "request": {"id": 271, "method": "scriptRunning", "params": {}}}
+{"at": 1794385427.8030052, "id": 271, "result": {"running": true}}
+{"at": 1794385429.8879337, "request": {"id": 272, "method": "scriptRunning", "params": {}}}
+{"at": 1794385429.8885934, "id": 272, "result": {"running": true}}
+{"at": 1794385431.9829538, "request": {"id": 273, "method": "scriptRunning", "params": {}}}
+{"at": 1794385431.9834764, "id": 273, "result": {"running": true}}
+{"at": 1794385434.065586, "request": {"id": 274, "method": "scriptRunning", "params": {}}}
+{"at": 1794385434.0662854, "id": 274, "result": {"running": true}}
+{"at": 1794385436.1608062, "request": {"id": 275, "method": "scriptRunning", "params": {}}}
+{"at": 1794385436.161358, "id": 275, "result": {"running": true}}
+{"at": 1794385438.2608082, "request": {"id": 276, "method": "scriptRunning", "params": {}}}
+{"at": 1794385438.2615147, "id": 276, "result": {"running": true}}
+{"at": 1794385440.333138, "request": {"id": 277, "method": "scriptRunning", "params": {}}}
+{"at": 1794385440.3338675, "id": 277, "result": {"running": true}}
+{"at": 1794385442.4295108, "request": {"id": 278, "method": "scriptRunning", "params": {}}}
+{"at": 1794385442.4303737, "id": 278, "result": {"running": true}}
+{"at": 1794385444.5278244, "request": {"id": 279, "method": "scriptRunning", "params": {}}}
+{"at": 1794385444.5284948, "id": 279, "result": {"running": true}}
+{"at": 1794385446.6373506, "request": {"id": 280, "method": "scriptRunning", "params": {}}}
+{"at": 1794385446.6380785, "id": 280, "result": {"running": true}}
+{"at": 1794385448.7265806, "request": {"id": 281, "method": "scriptRunning", "params": {}}}
+{"at": 1794385448.7270744, "id": 281, "result": {"running": true}}
+{"at": 1794385450.8402421, "request": {"id": 282, "method": "scriptRunning", "params": {}}}
+{"at": 1794385450.8407345, "id": 282, "result": {"running": true}}
+{"at": 1794385452.935161, "request": {"id": 283, "method": "scriptRunning", "params": {}}}
+{"at": 1794385452.9358094, "id": 283, "result": {"running": true}}
+{"at": 1794385455.047115, "request": {"id": 284, "method": "scriptRunning", "params": {}}}
+{"at": 1794385455.0477111, "id": 284, "result": {"running": true}}
+{"at": 1794385457.1190994, "request": {"id": 285, "method": "scriptRunning", "params": {}}}
+{"at": 1794385457.119911, "id": 285, "result": {"running": true}}
+{"at": 1794385459.2140203, "request": {"id": 286, "method": "scriptRunning", "params": {}}}
+{"at": 1794385459.2148325, "id": 286, "result": {"running": true}}
+{"at": 1794385461.2851157, "request": {"id": 287, "method": "scriptRunning", "params": {}}}
+{"at": 1794385461.2857442, "id": 287, "result": {"running": true}}
+{"at": 1794385463.356752, "request": {"id": 288, "method": "scriptRunning", "params": {}}}
+{"at": 1794385463.357524, "id": 288, "result": {"running": true}}
+{"at": 1794385465.4555814, "request": {"id": 289, "method": "scriptRunning", "params": {}}}
+{"at": 1794385465.4564142, "id": 289, "result": {"running": true}}
+{"at": 1794385467.1261523, "event": "scriptOutput", "params": {"text": "[MOTOR BENCH DONE] 11546 fixture paths; no automatic START; no vision/lap acceptance\r\n"}}
+{"at": 1794385467.2351165, "event": "scriptOutput", "params": {"text": "CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794385467.3443236, "event": "scriptState", "params": {"state": "finished"}}
+{"at": 1794385467.34444, "request": {"id": 290, "method": "scriptRunning", "params": {}}}
+{"at": 1794385467.3450675, "id": 290, "result": {"running": false}}
+{"at": 1794385467.3452208, "request": {"id": 291, "method": "disconnectBoard", "params": {}}}
+{"at": 1794385467.796905, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794385467.7992337, "id": 291, "result": {}}

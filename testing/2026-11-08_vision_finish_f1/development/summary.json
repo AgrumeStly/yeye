@@ -1,0 +1,259 @@
+{
+  "groups": [
+    {
+      "session": "d01_straight_run01",
+      "frames": 325,
+      "spatial_visible_frames": [
+        234
+      ],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "unknown": 325
+      },
+      "algorithm_ms": {
+        "mean": 0.18694923076923073,
+        "p95": 0.48804000000000003
+      }
+    },
+    {
+      "session": "v03_center_0002",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.5868666666666668,
+        "p95": 0.67874
+      }
+    },
+    {
+      "session": "v03_offset_left_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.5448666666666666,
+        "p95": 0.59105
+      }
+    },
+    {
+      "session": "v03_offset_right_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.34863333333333335,
+        "p95": 0.37246
+      }
+    },
+    {
+      "session": "v03_heading_left_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.45103333333333334,
+        "p95": 0.59449
+      }
+    },
+    {
+      "session": "v03_heading_right_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.3052333333333333,
+        "p95": 0.32021
+      }
+    },
+    {
+      "session": "v03_center_0007",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.2968333333333333,
+        "p95": 0.29884999999999995
+      }
+    },
+    {
+      "session": "v03_center_0008",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.0083,
+        "p95": 0.00877
+      }
+    },
+    {
+      "session": "v03_center_0009",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.012133333333333335,
+        "p95": 0.015719999999999998
+      }
+    },
+    {
+      "session": "v03_center_0010",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.3577333333333333,
+        "p95": 0.37029999999999996
+      }
+    },
+    {
+      "session": "v03_center_0011",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.3442,
+        "p95": 0.36222000000000004
+      }
+    },
+    {
+      "session": "v03_center_0012",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.008766666666666667,
+        "p95": 0.00956
+      }
+    },
+    {
+      "session": "push_corner_77_0001",
+      "frames": 304,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "states": {
+        "initial_guard": 13,
+        "armed": 291
+      },
+      "algorithm_ms": {
+        "mean": 0.2943888157894737,
+        "p95": 0.45668499999999984
+      }
+    },
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "spatial_visible_frames": [
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578
+      ],
+      "seen_events": [
+        {
+          "frame": 409,
+          "ms": 70436,
+          "id": 1
+        },
+        {
+          "frame": 571,
+          "ms": 120537,
+          "id": 2
+        }
+      ],
+      "passage_events": [
+        {
+          "frame": 426,
+          "ms": 74901,
+          "id": 1
+        },
+        {
+          "frame": 582,
+          "ms": 124187,
+          "id": 2
+        }
+      ],
+      "states": {
+        "initial_guard": 13,
+        "armed": 684,
+        "candidate": 2,
+        "finish_line_seen": 22,
+        "temporarily_unobserved": 6,
+        "passed_observation_zone": 5
+      },
+      "algorithm_ms": {
+        "mean": 0.33765368852459016,
+        "p95": 0.7304299999999994
+      }
+    }
+  ],
+  "frames": 1394,
+  "video_decoded": 732,
+  "baseline": "No finish detector existed; frozen R1/C1 have no emitted finish events",
+  "evaluation": "All inspected development data; previous-installation line appearances are not negative ground truth"
+}

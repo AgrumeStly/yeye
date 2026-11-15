@@ -1,0 +1,17 @@
+{
+  "firmware_revision": "0x02110009",
+  "power_configuration": "new 2S motor battery, 8.38V static; DAPLink/USB logic power",
+  "image": "last_run_watch.png",
+  "fixture": "synthetic right +500, NOT CAMERA",
+  "valid": 1,
+  "elapsed_ms": 3000,
+  "reason": "LAP_LIMIT (11)",
+  "target_rpm": [60, 20],
+  "last_rpm": [61.3045464, 19.5409946],
+  "pwm_before_stop_per_mille": [218, 180],
+  "boost_samples": [1, 1],
+  "uart_errors_operator_reported": 0,
+  "physical_operator_report": "wheels matched expected both forward, left faster, right sustained, three-second stop",
+  "accepted_scope": "one new-battery suspended right differential run with normal three-second drive removal",
+  "not_verified": ["continuous speed-match duration", "ground turning", "onboard logic power", "physical KEY or source-loss stop", "real vision", "full lap"]
+}

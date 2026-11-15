@@ -1,0 +1,44 @@
+ M control/Algorithms/Speed/speed_pi.c
+ M control/Algorithms/Speed/speed_pi.h
+ M control/App/Motion/speed_match.c
+ M control/App/Motion/speed_match.h
+ M control/Core/Src/speed_match_main.c
+ M control/Drivers_Custom/Motor/straight_pwm.c
+ M control/Drivers_Custom/Motor/straight_pwm.h
+ M control/MDK-ARM/speed_match.uvprojx
+ M control/README.md
+ M control/Tests/Host/test_speed_match_integration.c
+ M control/docs/speed_match.md
+ M control/docs/validation.md
+ M docs/architecture.md
+ M docs/interfaces.md
+ M hardware_preparation/README.md
+ M project_planning/tasks/C-02F.md
+ M testing/README.md
+ M vision/README.md
+?? control/App/Motion/speed_sprint.c
+?? control/App/Motion/speed_sprint.h
+?? control/MDK-ARM/speed_sprint.uvprojx
+?? control/Tests/Host/speed_match_integration_harness.h
+?? control/Tests/Host/test_speed_sprint.c
+?? control/Tests/Host/test_speed_sprint_integration.c
+?? control/docs/speed_sprint.md
+?? control/tools/build_speed_sprint.ps1
+?? control/tools/run_speed_sprint_tests.ps1
+?? hardware_preparation/camera_mount_diagram.png
+?? hardware_preparation/camera_mount_diagram.svg
+?? hardware_preparation/camera_mount_guide.md
+?? hardware_preparation/source/generate_camera_mount_diagram.ps1
+?? project_planning/tasks/C-02G.md
+?? project_planning/tasks/V-02.md
+?? project_planning/vision_deepseek_handoff_prompt.md
+?? testing/2026-11-01_speed_sprint/
+?? testing/2026-11-07_capture_review/
+?? testing/2026-11-07_vision_offline/
+?? vision/.vscode/
+?? vision/PC_ENVIRONMENT.md
+?? vision/data/captures/
+?? vision/references/camera_sampling_and_race_workflow_2026-11-06.md
+?? vision/references/recognition_direction_2026-11-01.md
+?? vision/requirements-pc.txt
+?? vision/vision.code-workspace

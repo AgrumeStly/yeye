@@ -1,0 +1,19 @@
+{
+  "base_bundle_sha256": "de2341cafcdadf2d843a566dafeef28ae4439c041aec15f7ee709e7afd738fcf",
+  "candidate_sha256": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8",
+  "allow_drive": true,
+  "input_kind": "real_camera",
+  "input_window_ms": null,
+  "continuous_camera": true,
+  "per_frame_trace": true,
+  "motor_run_limit_changed": false,
+  "automatic_motor_start": false,
+  "main_py_deployed": false,
+  "board_tested": false,
+  "preserves": [
+    "all camera validity and age gates",
+    "startup and cleanup STOP",
+    "no automatic retry"
+  ],
+  "logs": "/sdcard/lap_runtime_logs/run_NNNN.jsonl"
+}

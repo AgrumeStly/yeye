@@ -1,0 +1,38 @@
+{
+  "passed": false,
+  "scope": "host review assertion only",
+  "assumption": "packet age >= to_send_ms - 3",
+  "first_frame": {
+    "copy_ms": 0,
+    "elapsed_ms": 0,
+    "valid": false,
+    "parameters": null,
+    "source": "unknown",
+    "interval_ms": null,
+    "free_heap": 3323424,
+    "acquire_ms": 27,
+    "drive_allowed": false,
+    "profile_ms": {
+      "search": 3,
+      "grid": 46,
+      "anchors": 1
+    },
+    "searched_candidates": 48,
+    "processing_ms": 50,
+    "to_send_ms": 81,
+    "index": 1,
+    "threshold": 35,
+    "bend": 0,
+    "score": null,
+    "wire_valid": false,
+    "wire_age_ms": 77,
+    "wire_sequence": 0,
+    "support": [
+      0,
+      0
+    ],
+    "steering": 0
+  },
+  "correction": "packet age ends before packet encoding/UART write; to_send_ms ends after write; compare acquisition+copy+processing instead",
+  "board_probe_repeated": false
+}

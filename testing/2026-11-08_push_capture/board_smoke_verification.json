@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "folder": "D:\\projects\\projectsyeye\\testing\\2026-11-08_push_capture\\board_smoke",
+  "frames": 25,
+  "scene": "board_smoke",
+  "planned_duration_ms": 3000,
+  "capture_elapsed_ms": 3001,
+  "observed_interval_ms": {
+    "median": 113.5,
+    "p95": 156.99999999999991,
+    "maximum": 182
+  },
+  "observed_fps": 8.498583569405099,
+  "scope": "file integrity and software timing; not exposure rate, route truth, audible beep or battery acceptance"
+}

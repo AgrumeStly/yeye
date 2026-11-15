@@ -1,0 +1,4 @@
+﻿PASS parser: CRC, split/concatenated frames, noise, corruption, truncation, format/range checks
+PASS state: explicit start/stop, demands, duplicate/old frames, timeout, no auto-restart, invalid path, delayed processing, transport error, counter wrap/reboot
+PASS end-to-end: wire bytes -> parser -> state; corrupted updates cannot keep vehicle running
+PASS all 55 checks

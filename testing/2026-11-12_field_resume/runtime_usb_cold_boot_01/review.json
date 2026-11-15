@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "name": "no_run_write_or_start_RPC",
+      "passed": true
+    },
+    {
+      "name": "deployed_main_hash_unchanged",
+      "passed": true
+    },
+    {
+      "name": "new_persistent_log_not_old_probe",
+      "passed": true
+    },
+    {
+      "name": "IDE_interrupt_arrived_during_attach_before_file_read",
+      "passed": true
+    },
+    {
+      "name": "actual_failure_is_external_readout_interruption",
+      "passed": true
+    },
+    {
+      "name": "reject_unproven_or_other_error_OSError('camera failed')",
+      "passed": true
+    },
+    {
+      "name": "reject_unproven_or_other_error_Exception('IDE interrupt',)",
+      "passed": true
+    },
+    {
+      "name": "reject_unproven_or_other_error_OSError('IDE interrupt')",
+      "passed": true
+    },
+    {
+      "name": "reject_unproven_or_other_error_Exception('unknown interrupt')",
+      "passed": true
+    },
+    {
+      "name": "real_camera_frames_precede_readout",
+      "passed": true
+    }
+  ],
+  "original_tool_passed": false,
+  "original_error": "RuntimeError('cold boot runtime recorded a non-interruption failure')",
+  "cold_boot_entry_evidenced": true,
+  "evidence_basis": "主控物理重启反馈＋新编号持久相机日志＋本会话无runScript／写入",
+  "source_sha256": "397d6a7d91983bffe7655704e727e458ca35f2b0910982dcdf53ad72e8aa5db1",
+  "runtime_log": {
+    "remote": "/sdcard/lap_runtime_logs/run_0002.jsonl",
+    "stat": {
+      "exists": true,
+      "type": "file",
+      "size": 45228,
+      "mtime": 1735689700
+    },
+    "bytes": 45228,
+    "sha256": "54207b6d6b856dacc6f578fbf9690e5ecdb6814fae0845c5dfa8428ab6ae372d",
+    "name": "run_0002.jsonl"
+  },
+  "logged_samples": 131,
+  "highest_observed_algorithm_index": 1280,
+  "actual_total_frames": null,
+  "invalid_logged_indices": [
+    1,
+    2,
+    3
+  ],
+  "logged_wire_valid": 128,
+  "metrics": {
+    "processing_ms": {
+      "min": 43,
+      "median": 56,
+      "max": 71
+    },
+    "to_send_ms": {
+      "min": 45,
+      "median": 58,
+      "max": 100
+    },
+    "interval_ms": {
+      "min": 68,
+      "median": 73.0,
+      "max": 120
+    }
+  },
+  "interrupted_by_readout": true,
+  "continuous_600s_verified": false,
+  "STM32_cold_boot_communication_verified": false,
+  "onboard_power_verified": false,
+  "motor_operated": false,
+  "lap_verified": false
+}

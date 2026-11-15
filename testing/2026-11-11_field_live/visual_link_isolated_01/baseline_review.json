@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-11",
+  "role": "整车联调执行对话，不接替00",
+  "source": "主控Keil截图baseline_watch.png及其他符合预期反馈",
+  "screenshot_values": {"revision": "0x02110009", "speed_fault": 0, "state": 0, "reason": 0, "received": 0, "path_valid": 0, "left_pwm": 0, "right_pwm": 0},
+  "operator_confirmed_other_expected_values": {"run_ms": 3000, "phase": 0, "calibrator_error": 0, "uart_errors": 0},
+  "physical_context": "最终场地直道，整车重新摆回中间；相机安装未变；按既定指导动力隔离及DAP/USB供电，未报告改接",
+  "independently_visible_power_measurement": false,
+  "motor_started": false
+}

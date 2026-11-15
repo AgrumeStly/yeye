@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-12",
+  "power_source": "新电池经驱动稳压5V并联供两板，DAP只作SWD、不提供电源，K230电脑USB不接",
+  "screenshot_values": {"straight_rpm": 40, "run_ms": 3000, "min_feedforward": 200},
+  "operator_confirmed_expected_values": {
+    "revision": "0x02110009", "state": 0, "reason": 0, "phase": 0, "calibrator_error": 0,
+    "uart_errors": 0, "left_pwm": 0, "right_pwm": 0, "received_progressing": true, "path_valid": 1
+  },
+  "values_source": "config_watch.png及对明确预期表的符合反馈；非所有字段独立截图",
+  "physical_context": "两组电机插头按标记恢复；两轮完全悬空，上电30秒静止且两板电源正常按主控确认",
+  "debug_entry_reset_independently_verified": false,
+  "motor_calibration_this_power_cycle": "pending",
+  "ground_or_lap_verified": false
+}

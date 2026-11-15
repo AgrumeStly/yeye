@@ -1,0 +1,157 @@
+{
+  "scene": "intended_77deg_exit_heading_dual_boundaries_visible_static_pose",
+  "distance_note": "exit_heading_operator_report_position_and_angle_unmeasured",
+  "frozen_code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "parameter_sha256": "d34144aff88631d1a5d549483f13b5880e197011863e4b3e054150b29bac7afc",
+  "source_manifest": [
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0010/data_0001.jpg",
+      "bytes": 13045,
+      "sha256": "d4a13464a547edc613c94a0c50832a6a68acd31ba51ff4a1c9064b795145729f"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0010/data_0002.jpg",
+      "bytes": 13127,
+      "sha256": "64bfb0c9484e8718c64cf64245fe60744c1bbe7836866726e0a20719a60f289f"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0010/data_0003.jpg",
+      "bytes": 13108,
+      "sha256": "45d490a803852ac0660bcd7d9a80d012e5b5393eb4ae8a5efc347317ae7fdbe6"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0010/frames.jsonl",
+      "bytes": 993,
+      "sha256": "09e976569602d2cf8c3d70257228a397e32da150603d727ab16db3aaeb41d049"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0010/session.json",
+      "bytes": 751,
+      "sha256": "cf2764574d805f6e5ed9012d369d995e3b94ea41253cad5ab8defa24c21210ce"
+    }
+  ],
+  "frames": [
+    {
+      "frame_id": 1,
+      "valid": true,
+      "quality": 1.0,
+      "deviation_px": -1.0,
+      "support_rows": [
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150,
+        155,
+        160,
+        165,
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215
+      ]
+    },
+    {
+      "frame_id": 2,
+      "valid": true,
+      "quality": 1.0,
+      "deviation_px": -1.0,
+      "support_rows": [
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150,
+        155,
+        160,
+        165,
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215
+      ]
+    },
+    {
+      "frame_id": 3,
+      "valid": true,
+      "quality": 1.0,
+      "deviation_px": -1.0,
+      "support_rows": [
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150,
+        155,
+        160,
+        165,
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215
+      ]
+    }
+  ],
+  "scope": "3 static repeats of one pose; valid near-field pair does not establish turn path or drive acceptance"
+}

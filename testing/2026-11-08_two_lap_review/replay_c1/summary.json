@@ -1,0 +1,24 @@
+{
+  "frames": 732,
+  "groups": [
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "fixed_reference_valid": 565,
+      "near_available": 567,
+      "turns": {
+        "none": 635,
+        "right": 97
+      }
+    }
+  ],
+  "fixed_reference_valid": 565,
+  "video_decoded_frames": 732,
+  "read_failed": 0,
+  "algorithm_ms": {
+    "mean": 29.087580874316938,
+    "p95": 43.34041
+  },
+  "preview_fps": 10,
+  "scope": "published static/hand-pushed regression; not accuracy, motion, physical turn angle or control acceptance"
+}

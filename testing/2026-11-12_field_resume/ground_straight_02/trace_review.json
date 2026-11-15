@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "scope": "actual second ground run; no new motion or reset",
+  "revision": "0x211000b",
+  "stop_reason": "LAP_NO_FEEDBACK",
+  "elapsed_ms": 2881,
+  "frozen_samples_identical": true,
+  "total_recorded_samples": 145,
+  "retained_samples": 32,
+  "trace_run_range_ms": [
+    2261,
+    2881
+  ],
+  "left_no_edge_ms": 300,
+  "right_no_edge_ms": 0,
+  "last_path_sequence": 126,
+  "left_target_during_last_300ms": [
+    9.181178092956543,
+    19.324520111083984
+  ],
+  "left_pwm_during_last_300ms": [
+    215,
+    255
+  ],
+  "current_pwm": [
+    0,
+    0
+  ],
+  "uart_errors": 0,
+  "hardware_fault": 0,
+  "timing_us": {
+    "systick_max_cycles": 218.3125,
+    "motion_lock_max_cycles": 81.1875
+  },
+  "limitations": [
+    "trace retains last 640ms, not full 2881ms",
+    "no edges proves missing encoder feedback, not by itself mechanical stall versus sensor failure",
+    "brief positive edges after 50 percent restart then no edges at lower PWM supports loaded low-speed/restart gap",
+    "need actual visual per-frame log to explain inner-wheel low target",
+    "no motor current or loaded voltage measurement; do not claim weak power source",
+    "first 2044ms REVERSE remains a separate preserved failure"
+  ]
+}

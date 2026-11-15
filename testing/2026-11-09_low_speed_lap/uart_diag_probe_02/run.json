@@ -1,0 +1,11 @@
+{
+  "mode": "uart_probe",
+  "port": "COM10",
+  "source_sha256": "2bbc80281d1868a354ec8b5f91643e13ff60a002a3e81da1dff6109f2eff15cc",
+  "started": "2026-11-09T18:11:19.356934+08:00",
+  "automatic_motor_start_permitted": false,
+  "operator_KEY_fixture_test": false,
+  "confirmed_suspended": false,
+  "confirmed_mcu_run_ms": null,
+  "main_py_written": false
+}

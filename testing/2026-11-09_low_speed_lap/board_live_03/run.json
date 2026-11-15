@@ -1,0 +1,8 @@
+{
+  "mode": "live_no_drive",
+  "port": "COM10",
+  "source_sha256": "6c3e1f8080572425aaeeaa281b5bedf3c210b1ab1abd5c14c16859597189bca6",
+  "started": "2026-11-09T12:35:18.265591+08:00",
+  "motor_start_permitted": false,
+  "main_py_written": false
+}

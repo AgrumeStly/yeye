@@ -1,0 +1,305 @@
+﻿session,frame_id,valid_y120,near_available,near_y_range,turn_hint,status,source_sha256
+push_corner_77_0001,1,True,True,"[75, 215]",right,paired_bend_observed,590e7a3ef83fbfc4f1cf9d13aaded2f56410e340352bb8f73aa257593d331499
+push_corner_77_0001,2,True,True,"[75, 215]",right,paired_bend_observed,08be77d139023f3886c58a2a31bdce304f6b368aa4f2eeeeca1f4b3fe45a9c71
+push_corner_77_0001,3,True,True,"[75, 215]",right,paired_bend_observed,8c66e776310e8beefd93fb80af09d245ca6208880423668b12769dd7edda2134
+push_corner_77_0001,4,True,True,"[75, 215]",right,paired_bend_observed,e486bff3da47ae592d129b8a64a7b1f66d390d17746b441542143403945bf44d
+push_corner_77_0001,5,True,True,"[75, 215]",right,paired_bend_observed,2da4056b95003125aa951ae49b190ed07cd707764c466aa919578f65fa251094
+push_corner_77_0001,6,True,True,"[75, 215]",right,paired_bend_observed,a94172c19513691341f86f2a803a101c353ef743dd4429ea58c56a1f7d685692
+push_corner_77_0001,7,True,True,"[75, 215]",right,paired_bend_observed,cbc8467d53cb6e5a1c8dcd526644b46d17bf72250a0028791a5c9771ee0fc988
+push_corner_77_0001,8,True,True,"[75, 215]",right,paired_bend_observed,b46d10457535833d897a95e257a7f01999fae868b7c9d222ef85ccbf9d9acfeb
+push_corner_77_0001,9,True,True,"[75, 215]",right,paired_bend_observed,01c7adb842a1ea0b80dafb6bd40aafb0a68206ce36a02750a1eac23c7d3d38ab
+push_corner_77_0001,10,True,True,"[85, 215]",,near_field_only,124e577b72882e1b42007981918cfa262ac47d1ed95791ce3c4283597abf2469
+push_corner_77_0001,11,True,True,"[75, 215]",right,paired_bend_observed,0f4e5bc3bbdf8497c5ffa5b37ee14f25a992969b11870014743e130c51729e00
+push_corner_77_0001,12,True,True,"[90, 215]",right,paired_bend_observed,1fd7c731e5ef8fd7776b76f5d50b8e5110b99c2951eca5fd8c49ae049e2421e4
+push_corner_77_0001,13,True,True,"[95, 215]",right,paired_bend_observed,a659b75d8c467d4355e70f0e3d26f44de48309d8f30e9fc8f2803efabfd792e7
+push_corner_77_0001,14,True,True,"[85, 215]",right,paired_bend_observed,bcae86133103eebd6b471e85795fa67a1644eda42ec7f16734b2dad676ff6b15
+push_corner_77_0001,15,True,True,"[100, 215]",right,paired_bend_observed,0fea5a6e049b2282b25aac7ab9071c6f345d55f50bf83fedb9eefe69cc40a6b2
+push_corner_77_0001,16,True,True,"[90, 215]",right,paired_bend_observed,cfd8d7cded1fa2112cf60c34286a27934624f0a4b00ea94394ffee5128e9efd9
+push_corner_77_0001,17,True,True,"[95, 215]",right,paired_bend_observed,38b81ffa933978dc36d5ad38715b5b4324ab165b50265fa15eefa55d2a34f3ad
+push_corner_77_0001,18,True,True,"[100, 215]",right,paired_bend_observed,5bac5007feb2287a567388b0718a9f21a07cd04a2c44b0df05f52a5ef6d3ea98
+push_corner_77_0001,19,True,True,"[100, 215]",right,paired_bend_observed,2d1dbea8c488a50bbea3861807ec275ff17ec6f8cab7fa614e46268c20781509
+push_corner_77_0001,20,True,True,"[100, 215]",right,paired_bend_observed,c4f0f4c2bc687b7890d27ce4b2b5de0f183dac3c4a9a6f02927d7fd1c8bbfaed
+push_corner_77_0001,21,True,True,"[115, 215]",right,paired_bend_observed,a2164e4c13b05bc424af9f1ca95cc4326d5da9b56fbb7a89444822539f633bf7
+push_corner_77_0001,22,True,True,"[115, 215]",right,paired_bend_observed,9e5de6346385ae0da0dda5ac5eb637672fa75a3cb56e0960ce877a836488318f
+push_corner_77_0001,23,False,True,"[150, 215]",right,paired_bend_observed,e529716a214d75d4118859e97236f536b2f95ceea04175f46a554796ada2f920
+push_corner_77_0001,24,False,True,"[150, 215]",right,paired_bend_observed,cd93721d9cc899a9de1e28bdc778b6676e8362cf87b7025be9f1f41f3f3f0d24
+push_corner_77_0001,25,False,True,"[140, 215]",right,paired_bend_observed,d2e57c2c3a62c6f4f0ec8ee2e348a3124c55eb8cceb03f9ef814e497e3056a62
+push_corner_77_0001,26,False,True,"[155, 215]",right,paired_bend_observed,0e215a373272a28d6647c87b23111283621572b51a1a05bf30c5fb90317c641e
+push_corner_77_0001,27,False,True,"[155, 215]",right,paired_bend_observed,73421b1dbfe6a25c910efa810488fe44e702c7dd4687111046d45a33eea467c0
+push_corner_77_0001,28,False,False,,,insufficient_observed_geometry,568f702650940fe0efba28c3669873fa649fb07f948120abdd85ea723a088163
+push_corner_77_0001,29,False,False,,,insufficient_observed_geometry,5caa96720f568e7472db06e5c02290601ceaeecad24501fea503f86c1fc7fb19
+push_corner_77_0001,30,False,False,,,insufficient_observed_geometry,d7150dd977fac651734d6eddf85105b0b312a6059ba095b8f0632165651cd9f2
+push_corner_77_0001,31,False,False,,,insufficient_observed_geometry,c43574d547d13aade9bc59be4ae7e0fed8d8711d534a01a8d771efa198922de8
+push_corner_77_0001,32,False,False,,,insufficient_observed_geometry,1cd7d1a3e617bf4a58d7ba6280957030f91baee688428a716da58a1940c55137
+push_corner_77_0001,33,False,False,,,insufficient_observed_geometry,0751e87545b279d7a4929da6839c594f65fdecfa93ea355f4a6a1b34c84f088b
+push_corner_77_0001,34,False,False,,,insufficient_observed_geometry,09b3040bccb8cb54b60bad57db900247a4289d9628a8ec8de6dd6ce9eb81a63e
+push_corner_77_0001,35,False,False,,,insufficient_observed_geometry,69840475fbed08fc7f50a6e5fca4241c76dc307e8da396f533ef4535d46e93c2
+push_corner_77_0001,36,False,False,,,insufficient_observed_geometry,e9e1433e9d2366eb4a129befb700cf6b6995a7a434d408a95c3855fd2c93b194
+push_corner_77_0001,37,False,False,,,insufficient_observed_geometry,9cb15f386740b9a8ba5cab283a15ae93919eabf1193722cfe610078ace797eb3
+push_corner_77_0001,38,False,False,,,insufficient_observed_geometry,fcafe366f52ef0915cb5cbc7cf11afc42d98386477b412a02f109703cab51e63
+push_corner_77_0001,39,False,False,,,insufficient_observed_geometry,2a9c63b0e1348edfa57c1c8209923f2448294402a9e8fd37c41216e9a1fa92ea
+push_corner_77_0001,40,False,False,,,insufficient_observed_geometry,6b65c65632764f8d01d79a96aabe135fe7326706c9588160bea37cee09095457
+push_corner_77_0001,41,False,False,,,insufficient_observed_geometry,2df0c5020a5cf9b5e47c566c3abba9ed9af83e24152c4baa6a8e0e32810e30d6
+push_corner_77_0001,42,False,False,,,insufficient_observed_geometry,218cb686ed3ba48d0d0e44ab8b1b0b51b141054405d327fb7b0624db3eef8624
+push_corner_77_0001,43,False,False,,,insufficient_observed_geometry,b3e517be6b392f33f1c6c4e3415736acb3bd381200d1e0c45fee9e7eb60c6493
+push_corner_77_0001,44,False,False,,,insufficient_observed_geometry,2cdd4937e42aed5c866a9a81920e2f65b63a696157a3b36e8fcc6cc5d181207e
+push_corner_77_0001,45,False,False,,,insufficient_observed_geometry,8d9a3af2f3bce559621c61539ca03a27cc0b1d6d2627955929881eabcd70d7d3
+push_corner_77_0001,46,False,False,,,insufficient_observed_geometry,2970264edd2908d2496a157c4092a2551893c5a6d14f30c33a1a1424934f461b
+push_corner_77_0001,47,False,False,,,insufficient_observed_geometry,afaae4fa68cd507c923ba5cf9f3bcc9d8cda9af6cfc3aa6d9106116dbdd01dae
+push_corner_77_0001,48,False,False,,,insufficient_observed_geometry,7936e6e3839e84a1ad952e465d8ae6789aa94bde3f7328478a2521cec5a68c8f
+push_corner_77_0001,49,False,False,,,insufficient_observed_geometry,bbbe2ca8b8b7c0d79eeff9fc3bdd57361e82464eaa1318e2b56c05f80702ad74
+push_corner_77_0001,50,False,False,,,insufficient_observed_geometry,deefc80c4c8660e36ec469c4473ecd1c7583be505ee195eb26fcde5869163111
+push_corner_77_0001,51,False,False,,,insufficient_observed_geometry,6a4bf76a5f777a784c002277c6c071f45bc9e49dca3494056aaf8deafd7927b6
+push_corner_77_0001,52,False,False,,,insufficient_observed_geometry,32bac894688c586c96debc88a7607c5a7a61f721be2847f0f7fcfa21d375d0a2
+push_corner_77_0001,53,False,False,,,insufficient_observed_geometry,cdd36bfbc27781782e8ae0b1ddb5aa7ef85282cd33ede1c69e744e40bdec8774
+push_corner_77_0001,54,False,False,,,insufficient_observed_geometry,0ece637643120ac36ca2fc23df535b3b227d4ef9dd4e0afef676303c2ebd1d8e
+push_corner_77_0001,55,True,False,,,insufficient_observed_geometry,acab2c7c7865bd0e663897373d2c623b9a3a260de265e3c94da165bf2ed8c958
+push_corner_77_0001,56,True,False,,,insufficient_observed_geometry,da2df82e44eb40ca97b2a44917fe3b4273b4b4d80fc22a04ced8a5c3284cbad0
+push_corner_77_0001,57,True,False,,,insufficient_observed_geometry,e45ca1a245e2abb2314c2ca6983bdb7e897730a6bb3762173c83639436d5b90e
+push_corner_77_0001,58,True,True,"[65, 210]",,near_field_only,849f953c88ebba45ccc2b61c960cea826ac847d4b44451359779cdd16470ea3d
+push_corner_77_0001,59,True,True,"[65, 210]",,near_field_only,2b01db915b07ae89cb698df9a299ca842a117c06bac637877d71537f72d7ea25
+push_corner_77_0001,60,True,True,"[65, 215]",,near_field_only,c10fe7e70a9d663aff958ee8269e2b271dbc317f0cc23fa01d7efbb0a6f7ffaa
+push_corner_77_0001,61,True,True,"[65, 215]",,near_field_only,05c2469de5122a621cef5d239da4d8584198975224874800aec2fa570c7c5725
+push_corner_77_0001,62,True,True,"[65, 215]",,near_field_only,c948672cb19f48652b4eb4a7bac833cfe286469742b6d6164d4e748133be3be5
+push_corner_77_0001,63,True,True,"[65, 215]",,near_field_only,bc40dc12708113149629161b4187823f36a02b4909246ff92c1e2ddd23877086
+push_corner_77_0001,64,True,True,"[65, 215]",,near_field_only,dfc4f46f7c1301866df7defc0c6444f55b51f414c62f8f124e945a55508af9c1
+push_corner_77_0001,65,True,True,"[65, 215]",,near_field_only,041d9e1a0f47da710d7beca2345f9dbe5d78ba37c857aafc75659fac03eb027c
+push_corner_77_0001,66,True,True,"[65, 215]",,near_field_only,58531e1f271baa37e2f14a555f350b5224fd1041461d683e99617027441b9490
+push_corner_77_0001,67,True,True,"[65, 215]",,near_field_only,f1ee2412f7f4d0f9f0088153ed6f7378e1b549917b638b0e1b124336bdc643f8
+push_corner_77_0001,68,True,True,"[65, 215]",,near_field_only,ce3b21d2f868dcb488b0aaa21d93a31bfc9de16c0aea38f585058fbef47945ac
+push_corner_77_0001,69,True,True,"[65, 215]",,near_field_only,32387bc0f3bd0b9fd1af06a843ef3c805078aeb8dc152c1a399e0c5bbc33d59d
+push_corner_77_0001,70,True,True,"[65, 215]",,near_field_only,148a272acd3e87b5c4f0d3cb69ce9fa3df1d7867f3f2ac01f37026c6a568e085
+push_corner_77_0001,71,True,True,"[65, 215]",,near_field_only,9c8b5f0c07c0ed3056bdcafa3ba932338b2a3432a43937704fd9bc20b110451f
+push_corner_77_0001,72,True,True,"[65, 215]",,near_field_only,b42f38736486951001f2e136cbdd15140bb8a939b9363d8d646aaa430f656b31
+push_corner_77_0001,73,True,True,"[65, 215]",,near_field_only,c1842eea53d2ec17044d1044a1f9f4bcf1ff438007b4cbbe3caeb862893fb47e
+push_corner_77_0001,74,True,True,"[65, 215]",,near_field_only,53117a4b830b7a21823029cada537610b492a990f2f321b753c455574efb0670
+push_corner_77_0001,75,True,True,"[65, 215]",,near_field_only,a60847695464a875743d893744d63521fe240bf29a0620d7efc6dc39937cba3e
+push_corner_77_0001,76,True,True,"[65, 215]",,near_field_only,e08952184d573ba998993a778a0ca684a77329621650ed56fba6f6e87fad5f1a
+push_corner_77_0001,77,True,True,"[65, 215]",,near_field_only,0cc56f9eb9fbbc03e5be46c2f4314a62148eba2884e892d6cef5ddaa124d6659
+push_corner_77_0001,78,True,True,"[65, 215]",,near_field_only,245ca854fc3b038b5e76368e89a8144ad4d7dbecd9b9ea7948aac06b1b253ef0
+push_corner_77_0001,79,True,True,"[65, 215]",,near_field_only,f5d2b49583c83fa548de0b33419f212f0bb31d498e046f38ada119f7dbc88fa1
+push_corner_77_0001,80,True,True,"[65, 215]",,near_field_only,47cc2b5d587ca381874dbc13a168fd7f1921b209e067d9b99e00ae4fe779a5ae
+push_corner_77_0001,81,True,True,"[65, 215]",,near_field_only,5ac10d674a395b8dd303971806cdb539e59b97d0516f6d52d3835d84f3090fa3
+push_corner_77_0001,82,True,True,"[65, 215]",,near_field_only,89208767b7873046b323e128ba85a91f6032e5809062dc612f9b53dbe34a3c86
+push_corner_77_0001,83,True,True,"[65, 215]",,near_field_only,ba6be4ddb558bcbeb1d49b985f3a4e904101e9fdfddf38d5b0e0b79e03d9b0f5
+push_corner_77_0001,84,True,True,"[65, 215]",,near_field_only,81333107a19f84abbc87498ace78e27cc185f8805a5bdb19e0c60d3d487884d2
+push_corner_77_0001,85,True,True,"[65, 215]",,near_field_only,8e5d0cbf34b2be49f7c50dd35b26670f4a59b056ba0efbc2f79510c53c2943be
+push_corner_77_0001,86,True,True,"[65, 215]",,near_field_only,a1cb4a7fc3627c0aa9e92cc79921a33055eeccdcfb86e3eba7fa31318b62243e
+push_corner_77_0001,87,True,True,"[65, 215]",,near_field_only,491bb68ea5cca106893976234f0ede9d37b6b21c96d65bff71f3ef1e3179c106
+push_corner_77_0001,88,True,True,"[65, 215]",,near_field_only,9259721df12a571ecd957d34b0f742f482b504f4424111fee41dfe1f524ffc85
+push_corner_77_0001,89,True,True,"[65, 215]",,near_field_only,7f3d9c06c7dc9348a23a5ffc89cd092eb4a358aaed23865771052053e21cd533
+push_corner_77_0001,90,True,True,"[65, 215]",,near_field_only,8b40834cd8d527e5e40d3a9e74c61745f925541c036d546f68b92386c8cbedfb
+push_corner_77_0001,91,True,True,"[65, 215]",,near_field_only,1e6ea3eb592c7a79d829f52cd09ae747cb1128af2bbe7d37588aac6dabba69c3
+push_corner_77_0001,92,True,True,"[65, 215]",,near_field_only,26e9fb2f678be9b2cede6e20632b84d108bc25c85b7d655b7498d699e7207f41
+push_corner_77_0001,93,True,True,"[65, 215]",,near_field_only,3ab9193e4049cfc5f9de6c54ec11bf26aef5961f7b8530a3e8d19e6bc4e3205c
+push_corner_77_0001,94,True,True,"[65, 215]",,near_field_only,a323895204db215fc7a467ea66cbbf54dabea6b602cbb12f6359c1929ecb91fa
+push_corner_77_0001,95,True,True,"[65, 215]",,near_field_only,28957d720326e2fe1fd3db281415cea0784d50cd9b6d36d0e0afebdaa18ccf98
+push_corner_77_0001,96,True,True,"[65, 215]",,near_field_only,3be17172f4d5495d8523d8e97ad83c35dede14c59e8ac828ef319e75688ffde5
+push_corner_77_0001,97,True,True,"[65, 215]",,near_field_only,96c944272875c532710cb747debcba9d077d040b3874bf486c7de85ef6d7ebe8
+push_corner_77_0001,98,True,True,"[65, 215]",,near_field_only,77071e6ee951f5aa9e08e419416622b5cad50a106bcc6dd3e4d233a4ef6433ab
+push_corner_77_0001,99,True,True,"[65, 215]",,near_field_only,14cfa4364cc64036208dbacd2b35be5410ec317cca1322c0f82a6a0672e08423
+push_corner_77_0001,100,True,True,"[65, 215]",,near_field_only,4fa392042341702a8120b79fa1934f1bf4de01a5fe26ff4a7181f625f60151a8
+push_corner_77_0001,101,True,True,"[65, 215]",,near_field_only,3cf2b23de195272980375b39966685c44278ace44598a764ae958a799f2ca5b7
+push_corner_77_0001,102,True,True,"[65, 215]",,near_field_only,307cfb3e9f349dcbf0aa3b4db12318d6e5c8d7f2098b883cc6b0e41fb73f529b
+push_corner_77_0001,103,True,True,"[65, 215]",,near_field_only,1e3ae6f8e4765baa03d1019ca9e6ffdd06123fd591fa2aba5975f2f57bcc2aa8
+push_corner_77_0001,104,True,True,"[65, 215]",,near_field_only,1b6c4ed9bcd3629640a447f1ed81c87577cbacdd8918c3af8c63a3c4b5ab7a96
+push_corner_77_0001,105,True,True,"[65, 215]",,near_field_only,6893af21794b356437ede489506d37e333a8cce39f61fc365ac2a7e89c9f85fb
+push_corner_77_0001,106,True,True,"[65, 215]",,near_field_only,43481939957ba284b998e8bec2253bac1c1db389a7f894df4e48636d1537086e
+push_corner_77_0001,107,True,True,"[65, 215]",,near_field_only,ac83f25968542f867033d94d81848901f0e9e8e5e5dbdbd2384aa306c53302fc
+push_corner_77_0001,108,True,True,"[65, 215]",,near_field_only,868d791020d5caa0e86cc9b2014224ab6b84fc98a03813df017a2cd04656b1ac
+push_corner_77_0001,109,True,True,"[65, 215]",,near_field_only,66624c271311cef97c5b3ce70d3fca03616b5b06dc4191f2f53cc6f31554dfa2
+push_corner_77_0001,110,True,True,"[65, 215]",,near_field_only,eb05b5d2b4e83b6a075a0c801072eb6fe701efc2db9b302c9f9ac9882650ff30
+push_corner_77_0001,111,True,True,"[65, 215]",,near_field_only,59f6335f4a9f90918083c3ef26e4bc56311d665fa4e347336f8dd2e7f692bccf
+push_corner_77_0001,112,True,True,"[65, 215]",,near_field_only,c7812fc420ca442fb4146ab1258727fb78e4a820eb49e670805b3264a0da3dd4
+push_corner_77_0001,113,True,True,"[65, 215]",,near_field_only,b41d1c4ed0b6f289ffefbdd66d8ff0f8a601d1cbcf4e7a18d50cae51cdd7c095
+push_corner_77_0001,114,True,True,"[65, 215]",,near_field_only,2219503ae4ebfb3f2adc8bad347489608826127342dd7a2abecdae8a7104d470
+push_corner_77_0001,115,True,True,"[65, 215]",,near_field_only,9a0d33568bbd1f8e76ebba25ae73a8829317626b2903e077ab2edbed23389371
+push_corner_77_0001,116,True,True,"[65, 215]",,near_field_only,f1fd92951bd07de69f2d3ad59ebc5e44a44e66d5dabfb8de7b80f1320dbcd542
+push_corner_77_0001,117,True,True,"[65, 215]",,near_field_only,80db88c77ce360ab1b47b579266ba85df40b848fa83ae65e1eaf1c6b82bd6d04
+push_corner_77_0001,118,True,True,"[65, 215]",,near_field_only,0948474081b77e85c22bf1920a4476f8b8fcfb6ad29aca6ad3f7b85591ae691f
+push_corner_77_0001,119,True,True,"[65, 215]",,near_field_only,3f126c94e713e535a5aacbc5d0419b16df164ca7fe15d516bae7dab0d4a99053
+push_corner_77_0001,120,True,True,"[65, 215]",,near_field_only,cab6b2ef49130da564c66e401a86b4cc9fce9e9d1efe969617c00018b90fa16f
+push_corner_77_0001,121,True,True,"[65, 215]",,near_field_only,7e31f7e4181a03997d1ff4a3f5f8a0d0ae1642f30b5a77f4155c4a0973bc1763
+push_corner_77_0001,122,True,True,"[65, 215]",,near_field_only,512e630875d720b17e75f3169f3661777e356c18a9f0baea4b77a13e42c5ee49
+push_corner_77_0001,123,True,True,"[65, 215]",,near_field_only,73beaa8cd2f85b057e284a18c2371849c6de23e6e1a78c2c7939823270a40f74
+push_corner_77_0001,124,True,True,"[65, 215]",,near_field_only,bc8620cde72ba65e6a69cc2ecedbd297d7b0f0df2b2bcec466094861676c99a4
+push_corner_77_0001,125,True,True,"[65, 215]",,near_field_only,d0584f286b495360a602f2839b4b96e14ae1800abd10979c7899ceb43c6cecd7
+push_corner_77_0001,126,True,True,"[65, 215]",,near_field_only,0df8daf6a6581cff342158025844e062078b9420a14c4735dba52546c9117b5b
+push_corner_77_0001,127,True,True,"[65, 215]",,near_field_only,6b13c9d875a5d3e68f55eec13e3dcd1357cfe97518b784d52f2a836cc4a28522
+push_corner_77_0001,128,True,True,"[65, 215]",,near_field_only,d89bb50d294d5759a13252c0871db25c33c3b83778c2e758aff69e2dcdc1c3c9
+push_corner_77_0001,129,True,True,"[65, 215]",,near_field_only,b0be1d28a0b307bdeffc474ab340221aeac76a2d4b21bec87b6499f87c115d08
+push_corner_77_0001,130,True,True,"[65, 215]",,near_field_only,a55b21fd230b3f45a6bfffa0bc4092988764265981163f96de9334d0ca256b9c
+push_corner_77_0001,131,True,True,"[65, 215]",,near_field_only,7a7724d09aa338dc326706f62932d71afff3dd268b82a27c805060f66362b79f
+push_corner_77_0001,132,True,True,"[65, 215]",,near_field_only,a5e22881d0daa54b10ccf872168c78929090ae059c275e2b34c49eaab6c9eaa8
+push_corner_77_0001,133,True,True,"[65, 215]",,near_field_only,49a28187647b9e1b87196b82c97fe68e2e91ce5900f0a668c94f40622a0e1a77
+push_corner_77_0001,134,True,True,"[65, 215]",,near_field_only,7dddb4aa34fe4f86d348f8f3886eab9a972dbeb2156c25a49caa54cff25b85cf
+push_corner_77_0001,135,True,True,"[65, 215]",,near_field_only,87955c0846c70ad719351e0e7dd420e93560027df286688f673a8c2ea9a66592
+push_corner_77_0001,136,True,True,"[65, 215]",,near_field_only,21eebc1137d811eda4b34de32c6d26b2532fa525523470406b2653b29ae991e2
+push_corner_77_0001,137,True,True,"[65, 215]",,near_field_only,1dbc41e60df18ffeff4bd12f8ddfcb1cea5ab453ed5138a2a16b01c203267523
+push_corner_77_0001,138,True,True,"[65, 215]",,near_field_only,b0c58fd3510f80265a07a7484d84e10aeefeec73bc8d24c62e237d710cca59c4
+push_corner_77_0001,139,True,True,"[65, 215]",,near_field_only,003d29fe92217d6ad95d6c57526ab41e1712b36639842f397738c40481199e86
+push_corner_77_0001,140,True,True,"[65, 215]",,near_field_only,cf8408b1e44a14bc0a655207f914179eb82964f576d9537c3ac3abfee9322e4a
+push_corner_77_0001,141,True,True,"[65, 215]",,near_field_only,fd26a3b3aa29278279347943f335cc8b0bcf6692ccd35f7555961266c89a2cc2
+push_corner_77_0001,142,True,True,"[65, 215]",,near_field_only,68e5e49dae86ff4da7a315e5f8fe591bdc6c8b82bfc7e339b99ccea9650a4877
+push_corner_77_0001,143,True,True,"[65, 215]",,near_field_only,af8b9a44f895cdad93d9cd81bc90cc6e59c4488f3a399b2f43bfe77ae77be11a
+push_corner_77_0001,144,True,True,"[65, 215]",,near_field_only,2163ed42e7146212272ff9e3bc6745ed7242cc2949e5d540ac3a1cbee57696ae
+push_corner_77_0001,145,True,True,"[65, 215]",,near_field_only,f7fd17cd7b7a0e2711ab827dbd35f6c67448ad8647318a184d77ea312a5916dd
+push_corner_77_0001,146,True,True,"[65, 215]",,near_field_only,4b2899c11a252d638f096df9b516640ef8a068ecea9e9668849a316fe9f46ebd
+push_corner_77_0001,147,True,True,"[65, 215]",,near_field_only,918ea9f3d522885927a866609073389b049bac501ec4105ce2f3f9c85d906e45
+push_corner_77_0001,148,True,True,"[65, 215]",,near_field_only,829294a9ecbdeb80b1423a3924aaf0eeeb0a7eae2a98ca7c7330dfbd6f5d4581
+push_corner_77_0001,149,True,True,"[65, 215]",,near_field_only,8813d8185c6ac2d5716250dc89e5645b2cae98d909c087373027a13b42698212
+push_corner_77_0001,150,True,True,"[65, 215]",,near_field_only,39ca111a8628bfb10aaa55db18585055a18920828b7eca2dd205d55366b95b6e
+push_corner_77_0001,151,True,True,"[65, 215]",,near_field_only,39873a6bbdfdc496b4c747562918cb404fbf302f835d45b78f423dc0f9d0bc69
+push_corner_77_0001,152,True,True,"[65, 215]",,near_field_only,8fb4405590fdaf67df78d4cb5c4d55fc75aa7777b3f195419ae26068122ddc51
+push_corner_77_0001,153,True,True,"[65, 215]",,near_field_only,825abbb5b98ce38656474d30192aa81257635acb970872edbeffdddbe47d5400
+push_corner_77_0001,154,True,True,"[65, 215]",,near_field_only,d03066453e19e784b93da00fcd6fbb7a157954d11ab1d38a0edcfd06dd826152
+push_corner_77_0001,155,True,True,"[65, 215]",,near_field_only,cf494d9852dd377dd4a9ddc0c1d6902af09af500f8d0ad7db00b7d0bc6f8900c
+push_corner_77_0001,156,True,True,"[65, 215]",,near_field_only,38e3facad1a7b48d66c91e95e7ac48c5d2b1ab3846fe95d7c0c3a694384a9cdf
+push_corner_77_0001,157,True,True,"[65, 215]",,near_field_only,234e1a9d429fb74393b185699bab6148dd16b1a5389f3ceae70bf7f619f900f8
+push_corner_77_0001,158,True,True,"[65, 215]",,near_field_only,0c88abcc8583d38bf08b0b3c184522f47e536a6949979dae0abcbb35505a1138
+push_corner_77_0001,159,True,True,"[65, 215]",,near_field_only,761e0973f36b1f695d2a5e9a44245833fe420066562566606aa8fa7b816a8136
+push_corner_77_0001,160,True,True,"[65, 215]",,near_field_only,c3d29de8faaf56a786478f5f85bab8f88548c54ee0a493aad0e8e46d5b051839
+push_corner_77_0001,161,True,True,"[65, 215]",,near_field_only,3d9da98dc94b194baca7604e9ef29b99430243428143db4a991e2b7f99246e8e
+push_corner_77_0001,162,True,True,"[65, 215]",,near_field_only,682ad78ec7a43ed13bc92d99b1c5c643daf1cb52ac68b6eb1b1623f0ac6ba78b
+push_corner_77_0001,163,True,True,"[65, 215]",,near_field_only,e229355f71242182f63cc8c6582e658685c32aa6c304bb242567de6c3a8f403f
+push_corner_77_0001,164,True,True,"[65, 215]",,near_field_only,9301b07abffae52263493ff3c72e73159ff2784e1f0d57633c4d14c43d583304
+push_corner_77_0001,165,True,True,"[65, 215]",,near_field_only,0fad093e42c3648fd00011ed0f3b54c28880601ae4313fb9b48beca122126115
+push_corner_77_0001,166,True,True,"[65, 215]",,near_field_only,fd2cde7a6f94ac8c14433358df11975f632f328b27511861c815d25ce905ff7e
+push_corner_77_0001,167,True,True,"[65, 215]",,near_field_only,80539753462c19cfc539cf36dbf3b2efbd4734357090573f1b5579b9273ae314
+push_corner_77_0001,168,True,True,"[65, 215]",,near_field_only,c4a6e2966f0a20d81ccede97edbeea29f1989f72689d2b76205cdcf7138380e5
+push_corner_77_0001,169,True,True,"[65, 215]",,near_field_only,f8ad42b7e7dfb46f8aeb1bf0466361ae135fa8bd25eb0b2ed55a37fad84a35e9
+push_corner_77_0001,170,True,True,"[65, 215]",,near_field_only,992519d946fc45ef3aae0cc72d4db8fde0ddf43e613a26357d5a63afb6b5230a
+push_corner_77_0001,171,True,True,"[65, 215]",,near_field_only,e6dc3cb0b3be50ca006a397724aed9053e56e9d749e69d90c98958977dbe9584
+push_corner_77_0001,172,True,True,"[65, 215]",,near_field_only,331983721fa144ee2190b8570924afbf30bade8d7a87af9a347e555faf1710bd
+push_corner_77_0001,173,True,True,"[65, 215]",,near_field_only,a20a7570cb1d6cf93f3b6d0b7ffbe61e53fcc1eeb25d2641847eb38614fb6968
+push_corner_77_0001,174,True,True,"[65, 215]",,near_field_only,732df02625d3a855b90e47dd61b85e3234dba82ee69976b492d6750faacf0796
+push_corner_77_0001,175,True,True,"[65, 215]",,near_field_only,1c49c42a2be17a4f0e45765392118e4f0edfc30846239e744e6b0d5479efc4de
+push_corner_77_0001,176,True,True,"[65, 215]",,near_field_only,08dd1e4b0b511c535f0c4402d99708d443d1b896601a587978069b95c9a63463
+push_corner_77_0001,177,True,True,"[65, 215]",,near_field_only,d49c058825f732454b08d82c96fe43ce1ffb271d0d7ce43c9d6f07eae0ecd052
+push_corner_77_0001,178,True,True,"[65, 215]",,near_field_only,6cf2e7b8e7ca19800ddfe50be57ec3ede5442d44302b99304021b55f29c4382b
+push_corner_77_0001,179,True,True,"[65, 215]",,near_field_only,b48abaef589e0ec1b38f0075c26a9f6803b240a46f525b33ad6abda6b3a30f6a
+push_corner_77_0001,180,True,True,"[65, 215]",,near_field_only,707cc86269e432155bf7270e23a256c1beb30319d6ad284e1f9b8df1c274d369
+push_corner_77_0001,181,True,True,"[65, 215]",,near_field_only,3796b05caae0cacc35efa5e43ec9560cea7a08a26a401b3dc8986d35e363c8e2
+push_corner_77_0001,182,True,True,"[65, 215]",,near_field_only,f889b10c59ed6fabb07f037af3d25d335f78b47c1216d7992284d336ee19f9d1
+push_corner_77_0001,183,True,True,"[65, 215]",,near_field_only,848dd7c92743f25f55b31400553bdfdc9be833bac774095fd26b0459027bec86
+push_corner_77_0001,184,True,True,"[65, 215]",,near_field_only,f06a141c0901bf21e259b6c9e9c7f7ee662b836ca0c0ac6b1d46e7f14d13886e
+push_corner_77_0001,185,True,True,"[65, 215]",,near_field_only,d1af9719f42befa47e753537a9b0d6a1b439b7ea146d3342568fcf241531870b
+push_corner_77_0001,186,True,True,"[65, 215]",,near_field_only,2f01849fb39c5849f1247622476da9081118933a557f269d2b94ea618d1a6f5a
+push_corner_77_0001,187,True,True,"[65, 215]",,near_field_only,d2d1d0f21d032656db01804a8c0409504a6dd2d16603a417d318436c9f6d4f0e
+push_corner_77_0001,188,True,True,"[65, 215]",,near_field_only,f410ac153a43d4e23d5bfa7c32afe47f12e5cf74cd79f8f068414a3a242768da
+push_corner_77_0001,189,True,True,"[65, 215]",,near_field_only,c2f6ed909032d77a9c3f8592d1e6f8cce103643c6d62f85a72b3ad0230ce4e22
+push_corner_77_0001,190,True,True,"[65, 215]",,near_field_only,d423132533472279e932bab9e5da4faee0b0e5dadf188d450ceb05719ba21c6b
+push_corner_77_0001,191,True,True,"[65, 215]",,near_field_only,f327dea20c55e9ab4ff2f700fb3ff6c7dce00568eda9148786d6b2151289f693
+push_corner_77_0001,192,True,True,"[65, 215]",,near_field_only,330cb7c2ce43c4cf0e23bc62b8785f976373e54b10a19e6bb6e8005f98a2bbdf
+push_corner_77_0001,193,True,True,"[65, 215]",,near_field_only,9d874157e3925386ec873f7564c5644ef7ff2f8258959435fbb67d1d890c7bee
+push_corner_77_0001,194,True,True,"[65, 215]",,near_field_only,7fa055950893e2542eec833a2590da01dab46110f07adc8bb89d6d353330d1b9
+push_corner_77_0001,195,True,True,"[65, 215]",,near_field_only,d6546fcb87a929b771201f87ea4dd5f16c729512410da04c68a8b18aa4a74efb
+push_corner_77_0001,196,True,True,"[65, 215]",,near_field_only,8fa8fac1c84bc47a77b67db4efc55716a64fb2d1d25b456f4905caf81e5db1b9
+push_corner_77_0001,197,True,True,"[65, 215]",,near_field_only,ff27cb719e8d387a083ab1f49dd529bb47db1732a733b0884b455e826d6d41f5
+push_corner_77_0001,198,True,True,"[65, 215]",,near_field_only,908354badca68c63433e90a54cd591e0a63773c06b7da476ababa974f73077fd
+push_corner_77_0001,199,True,True,"[65, 215]",,near_field_only,70c603cb4aed4dd568c4822e6b5139d8089ca525bee3ddd58a39af7ae35e3273
+push_corner_77_0001,200,True,True,"[65, 215]",,near_field_only,0a842ed5c08ef99460892b6129c9da130bc742e37ce5eb878d3f4e8cf5d4bb1a
+push_corner_77_0001,201,True,True,"[65, 215]",,near_field_only,dc9adb5012081d48ff74eae731fa8cd0610eed9624492ad538ee2f058c0c304f
+push_corner_77_0001,202,True,True,"[65, 215]",,near_field_only,0960823cd4cb254233a882b140ce38888889165b9031a06b939bfde0f371a1f0
+push_corner_77_0001,203,True,True,"[65, 215]",,near_field_only,5ffd3bd0e78210f35fe6237b4f5442c1e9288c20727d647240d0c872145cf96f
+push_corner_77_0001,204,True,True,"[65, 215]",,near_field_only,c38a2d6c32b530fc0c1899f59b7028731ff40d885030a1c9f6e48475e73a7c83
+push_corner_77_0001,205,True,True,"[65, 215]",,near_field_only,83413fad9e33e3d70769bfc7581a940e1baa4a231077087d994079b8ee795f97
+push_corner_77_0001,206,True,True,"[65, 215]",,near_field_only,dc7477126e1a473481be0397435bb5e01c92e17e2f104e9b518d4026d1c4e3ea
+push_corner_77_0001,207,True,True,"[65, 215]",,near_field_only,797cf83ddb06f298fa73f3714fcd3eed1c86cd3e71f7c5494e30ac7e16c190c2
+push_corner_77_0001,208,True,True,"[65, 215]",,near_field_only,7a8d4dda672bc0e7d9527ed334aee8642822cf6c14b2d72a07126c5f44a6cdba
+push_corner_77_0001,209,True,True,"[65, 215]",,near_field_only,7f6fe4339bd52148af8b95a8b97d5affed52ba9ae359fb633b892944d93b8cb0
+push_corner_77_0001,210,True,True,"[65, 215]",,near_field_only,afa059f5318956455e5de772ecbf938bd394a6bbf55b71bb30b38617cb4d1b15
+push_corner_77_0001,211,True,True,"[65, 215]",,near_field_only,3cacebe769d1c7f1e1e449149b38535104ee1ba55a827ccbde150431d302a013
+push_corner_77_0001,212,True,True,"[65, 215]",,near_field_only,31c839a07e66d7b0ea77db686918723450a58cc314dba80e26613c25be1dba60
+push_corner_77_0001,213,True,True,"[65, 215]",,near_field_only,32fe845fe75a074a92d587ec93417a614c42e5554ce38db6933efc87615a9402
+push_corner_77_0001,214,True,True,"[65, 215]",,near_field_only,44defcda93b004b7a0b9a6ad1f1843616043fb6e3ca469d9f1016c594f993e65
+push_corner_77_0001,215,True,True,"[65, 215]",,near_field_only,eadd8ebf4d40bb189bdcd59adc0e9c2854211e5e9b0c3b97b3bf52302f58ab05
+push_corner_77_0001,216,True,True,"[65, 215]",,near_field_only,a7fc023c3c6ba44e1692b70e350c8eacc62376cf3dd6ac2a5d3f55394eda9aac
+push_corner_77_0001,217,True,True,"[65, 215]",,near_field_only,42364d655ae891294e8ed3690adb482bcdff9139702567fde873d75f8319e96d
+push_corner_77_0001,218,True,True,"[65, 215]",,near_field_only,a8dbc2b7d29d90aa27e58e002e95d730de44c7d462cc01006693427e71144d2c
+push_corner_77_0001,219,True,True,"[65, 215]",,near_field_only,8ae1b45b0cc124dd25a182799f6ff1dad7b66b1d7832769602b652d766fa2fef
+push_corner_77_0001,220,True,True,"[65, 215]",,near_field_only,01a84bcfa514be3e959e6de866aac817bfe676e4c594a0232feeb7a6776f88cf
+push_corner_77_0001,221,True,True,"[65, 215]",,near_field_only,cfaf8ac2fab1aa22c814f58483ba72d50863da1495d6c3f741c9c0bd5791cbc1
+push_corner_77_0001,222,True,True,"[65, 215]",,near_field_only,b94d421ea6ba35fbc9b3420475a12f6bd08fd70e713e315ffc5aecd49a24d650
+push_corner_77_0001,223,True,True,"[65, 215]",,near_field_only,eeb4a92d36b7fb4d0819e6acb63178395e20692afbf9ae74e7452a602097b018
+push_corner_77_0001,224,True,True,"[65, 215]",,near_field_only,7961e93dfc01b782bbe6f3a98954ade18382be43232de06ec8e2fc4773621c87
+push_corner_77_0001,225,True,True,"[65, 215]",,near_field_only,8c1b0a0f8d44a3d28d29de2b913f8070c541741da9c4fbc2861d4b57a87358fc
+push_corner_77_0001,226,True,True,"[65, 215]",,near_field_only,4446fb28ef1b751e5307888e0bd986fc31904f9fee99d064f182f6dc992b90f2
+push_corner_77_0001,227,True,True,"[65, 215]",,near_field_only,984c724d1143d2c888f8e2a8107aa3490a483d2bfedeedddb808469510d921f3
+push_corner_77_0001,228,True,True,"[65, 215]",,near_field_only,7ab351666555f7eb77027aa7666771c0dc59d28ad557e80da737bb161f9af8b5
+push_corner_77_0001,229,True,True,"[65, 215]",,near_field_only,bd98d957bbae19f3423b1571ad5eaa66147ddb1620608221105fd46916687e5b
+push_corner_77_0001,230,True,True,"[65, 215]",,near_field_only,2cac3dc9a9c9da63ee3a4a61aab363b0944f137079fa7dd0698eb0baca20f82f
+push_corner_77_0001,231,True,True,"[65, 215]",,near_field_only,3f1f01b5e3637b5946dcaf46b6000bda34a4b34fcc0742143a7963b5e1e07be2
+push_corner_77_0001,232,True,True,"[65, 215]",,near_field_only,3e410f339cd81fc37476a15d5809e9fbdc0329bd7acda28c812c140a3f04a09f
+push_corner_77_0001,233,True,True,"[65, 215]",,near_field_only,b3be74c13cbbb8b17823a68409959fe19b35c93511b02fe032ce4a5192a3b3b7
+push_corner_77_0001,234,True,True,"[65, 215]",,near_field_only,359059e3e5d66dc8fe47e2551ed4674899a784dcf5c527ec4b2ca2bdbecd1d6b
+push_corner_77_0001,235,True,True,"[65, 215]",,near_field_only,4a5acb01334a9ce1b4a73e7df97ae4941b01720586499931d25087029a9a78c3
+push_corner_77_0001,236,True,True,"[65, 215]",,near_field_only,3a8db14b76bb9eabd2615e169307950159cc88f310fa083ff1845a4e4b928096
+push_corner_77_0001,237,True,True,"[65, 215]",,near_field_only,1626ad2b1f80cf1d9f47a6f3b7c4cca77148f7e2ee6f077a6bdbff7da26b0c46
+push_corner_77_0001,238,True,True,"[65, 215]",,near_field_only,b0a06694aa0a779d548fd01d3fbb9c7c4d3e8150b5bef63c042b3003416bc1e9
+push_corner_77_0001,239,True,True,"[65, 215]",,near_field_only,4fc7eb8d8600867d3fc7e2c6ea5480874371d1b4d6919d6c935e832922b8b7ed
+push_corner_77_0001,240,True,True,"[65, 215]",,near_field_only,03427dc4a953fa1b4cf42440a71feb8094f6c417dba8468653d40a10cdb88ebb
+push_corner_77_0001,241,True,True,"[65, 215]",,near_field_only,8dbbbdd1e402fe85c55ba5151bf5dace1bf36edfa97752e1d92a23abb30bf9a4
+push_corner_77_0001,242,True,True,"[65, 215]",,near_field_only,2899f141edccf11953fef6288e516afa97fa99076736a359bf205c68b41d8e3f
+push_corner_77_0001,243,True,True,"[65, 215]",,near_field_only,2512b9614361cf2863a393ce241dd247ef481e80131008509da44948848d05db
+push_corner_77_0001,244,True,True,"[65, 215]",,near_field_only,6142becfb4c015b5f3ab368f66f14489d17596943e62b3a2a6fa0ee5e724454b
+push_corner_77_0001,245,True,True,"[65, 215]",,near_field_only,943ca8a1980317a9ea15d93140e992fd8e5e0cf3faabbb28dcd83c4e95b6d875
+push_corner_77_0001,246,True,True,"[65, 215]",,near_field_only,a7d11709ec734a863635660273145a50d49afcffc0de751265f682eae24615e7
+push_corner_77_0001,247,True,True,"[65, 215]",,near_field_only,b6046eac490f804ac5f2d057fce712760fb7ded1b37728a92fceb4b909056016
+push_corner_77_0001,248,True,True,"[65, 215]",,near_field_only,536a60e55baadaaa460fb3acb5cce974411d5650609f4fbf892a1a226b4ef963
+push_corner_77_0001,249,True,True,"[65, 215]",,near_field_only,37ecec3b430ede8df4937fcb232b4d0be9e20a48850ac8296fec03edda9dfbfe
+push_corner_77_0001,250,True,True,"[65, 215]",,near_field_only,b26979537186ee960bf6530a793ccde4fad7f208f24d561b480b5054ccf3f27e
+push_corner_77_0001,251,True,True,"[65, 215]",,near_field_only,d3ee4a5231c47b5c40fd6fbb7f5173471725445dd103f9b9b8137d097b794a81
+push_corner_77_0001,252,True,True,"[65, 215]",,near_field_only,610adb16ce28ac213b92b85d4a72043b7aaa657de416683dfc1069bcecc6dda5
+push_corner_77_0001,253,True,True,"[65, 215]",,near_field_only,07cd3c8f9f3842dca5292f727834cbb3d46932732b9499f4e1cf19ff6e85a705
+push_corner_77_0001,254,True,True,"[65, 215]",,near_field_only,b394e5a7ac3281864655c33cc221919a870aa8434244f30733800439116e20d5
+push_corner_77_0001,255,True,True,"[65, 215]",,near_field_only,08a339f32e0ca71c478999e139477cfce26801d1f1332f6a31d15b73290fb1d6
+push_corner_77_0001,256,True,True,"[65, 215]",,near_field_only,057d2763a8edf9bfe1accdf3205cd5870ea89de494750080ab0f78a5575915e7
+push_corner_77_0001,257,True,True,"[65, 215]",,near_field_only,2af7b46070a4a3822fdffbc0cc1f6d4fda7c1cb041a1b6d5431d4ee323b8cbfd
+push_corner_77_0001,258,True,True,"[65, 215]",,near_field_only,aa663487d030fec5393643fb12647ba402314b4ee2981ba3aae9624fd70dc8c1
+push_corner_77_0001,259,True,True,"[65, 215]",,near_field_only,3fa191226f0a9bd58ac7ecf0972d55abfba00f09fe99c1c5296b101de5b45b1c
+push_corner_77_0001,260,True,True,"[65, 215]",,near_field_only,31535568cba97b8df02e3346f03a5ff0904951bda74efe4a0d4c70720b9ca0e3
+push_corner_77_0001,261,True,True,"[65, 215]",,near_field_only,e3121099b0947b027050abf856f1df9e8c76938fecaa3d2700a69923959dfc90
+push_corner_77_0001,262,True,True,"[65, 215]",,near_field_only,16d1b106ece4495879a98754649c4ffbc4935fe7f4f65ebee4842b70c824158f
+push_corner_77_0001,263,True,True,"[65, 215]",,near_field_only,ad05ea4d171f3ccc185638510d9e6687c6e739d87b08b0bbd5afd9a787074e01
+push_corner_77_0001,264,True,True,"[65, 215]",,near_field_only,284c406b49f3099a81ff37ae30ae1850c08f531303e354ae2f7b46c2ea4300de
+push_corner_77_0001,265,True,True,"[65, 215]",,near_field_only,e63513a139510318999dd05ac25c9f1bee0317ac7d8e4967f45f845a95cff0d1
+push_corner_77_0001,266,True,True,"[65, 215]",,near_field_only,84cb04e97c7e0cf3bd3ba8e10d795d751e48af628a2435428031e713d196d623
+push_corner_77_0001,267,True,True,"[65, 215]",,near_field_only,504a0fb62104d20eab3188516b1e7f03188143a1457ba79d0113cbb69b4659e3
+push_corner_77_0001,268,True,True,"[65, 215]",,near_field_only,ef73cc9ec01ad19ed856bca6f5c9e0df91aa6c4bfbae47890f2cd13d83eb54ba
+push_corner_77_0001,269,True,True,"[65, 215]",,near_field_only,dcbc8116d9dbe7c3f9b244fcbcf3764be7264a48b9df008c564e816bbd0c5aed
+push_corner_77_0001,270,True,True,"[65, 215]",,near_field_only,cf97304c43996e0afed190c8b19c8a6aee70989a3c296e4148b6bddb7ec0bf43
+push_corner_77_0001,271,True,True,"[65, 215]",,near_field_only,7438834b5dec0b07ceff14811d7f5c14db18ad87c0790206f344daab787c1e04
+push_corner_77_0001,272,True,True,"[65, 215]",,near_field_only,b862fd539289f069e22086d64d8b84dd6de2867f421558bf7867c3341a90e922
+push_corner_77_0001,273,True,True,"[65, 215]",,near_field_only,3ed546628df05dc3bd4cfecf8f96d27240a4d64a50b31ba4fce6d5eb8ae0770c
+push_corner_77_0001,274,True,True,"[65, 215]",,near_field_only,01f127940f1c05829081984ec80e98afb636b71699c6d9124b05d050a2e3f389
+push_corner_77_0001,275,True,True,"[65, 215]",,near_field_only,87b5022f06c894bd8f5509e5568af23bd5f03d52af114ca52dcf3eaa64139546
+push_corner_77_0001,276,True,True,"[65, 215]",,near_field_only,3f2e63b968c8291fc9b248150ed846e80615520eb6f8722f480f312f42505111
+push_corner_77_0001,277,True,True,"[65, 215]",,near_field_only,b32a2a8e05efe1481c45f92c93388d7e8ee36ef8088db03345c2cf8456e0b9a9
+push_corner_77_0001,278,True,True,"[65, 215]",,near_field_only,dcfd8ce0f68667c0ec2e6ba939ca662f294790ca86113a5e08166a2504c6185e
+push_corner_77_0001,279,True,True,"[65, 215]",,near_field_only,a5a8fc5911fe2fe66c15c09ff64a0671fa0dbd0a1936d007cdfa54b44d7e58d1
+push_corner_77_0001,280,True,True,"[65, 215]",,near_field_only,5ef720fac4d2244b44917d4dc6d8ac8ba600a3cba7e3edd708d31c8d2efe51a9
+push_corner_77_0001,281,True,True,"[65, 215]",,near_field_only,84336cbe15c5847ae0b10c0fe9133e89f3259da35d60b5ac855a0d00c54d5db4
+push_corner_77_0001,282,True,True,"[65, 215]",,near_field_only,f6ce1f805373d4efd8d92881f49c0b46b793157edb1c5f99a09d8d3968302eb9
+push_corner_77_0001,283,True,True,"[65, 215]",,near_field_only,322749a79bd393066f8ed1cc8f6fc325a4e0a7301c4f0b2848f6275710f6f216
+push_corner_77_0001,284,True,True,"[65, 215]",,near_field_only,13d94468570f28edeb0f582658c0ef1aaf314d09ca3c2d9c879d16bcaf5e761d
+push_corner_77_0001,285,True,True,"[65, 215]",,near_field_only,6effe03fac57b4d7fb8851079ec893ce25a88dbb80d15113c26e390b250ef8b3
+push_corner_77_0001,286,True,True,"[65, 215]",,near_field_only,dc840be2ac52bfb49d82a8e37a121c71aabbd76b676a76f09752d24c4d33a1da
+push_corner_77_0001,287,True,True,"[65, 215]",,near_field_only,093a0855c8a8404f88dcc25e21e88baffd64331eb97d93405b295801bb373dfc
+push_corner_77_0001,288,True,True,"[65, 215]",,near_field_only,0fbcd06ccd8490d69f5def33214c0d6128cc5b0bee68ac513585b174040ba589
+push_corner_77_0001,289,True,True,"[65, 215]",,near_field_only,5f11a3528a52216c06c226a2de8baf71b17c8df6903efca49f1d9c9821e73878
+push_corner_77_0001,290,True,True,"[65, 215]",,near_field_only,6902f3d6540c9e2430713b7e6841b43b8dac4a43d17883be5b9c5598835c3cdc
+push_corner_77_0001,291,True,True,"[65, 215]",,near_field_only,0caaa32213efa7c4d8e808af5850dfefd1c1672bdebb0ec4622c27a7cddb96ff
+push_corner_77_0001,292,True,True,"[65, 215]",,near_field_only,b5ae6f4a3e843d4acbbeda7b8af53b68daa0d0642f5df9bb65693a3af3ca15f7
+push_corner_77_0001,293,True,True,"[65, 215]",,near_field_only,f7cda23c18ea82232c71dd4a6ffa40de1377229500449af9ee6a5529a3a2f44c
+push_corner_77_0001,294,True,True,"[65, 215]",,near_field_only,8d0705bd9001c77f00f2b345c9dd98312143795d6234cebc45579ee053a54387
+push_corner_77_0001,295,True,True,"[65, 215]",,near_field_only,94f6fa0d49ea1a74255c1061bab1d3dd46158ed515597e6adf266fc51de475b2
+push_corner_77_0001,296,True,True,"[65, 215]",,near_field_only,49c6382e7cbc82a25a76818d8df593c8bbd6464830041001bfcf647626729a50
+push_corner_77_0001,297,True,True,"[65, 215]",,near_field_only,a8b8349eb71697551909dc7d9eefc4cb78be99ecb9889f57f322cb6ee5031ad0
+push_corner_77_0001,298,True,True,"[65, 215]",,near_field_only,2047a208b6d4cda480fd93ea762b8114e49861c9a6e90af09ad07ad461dd2f14
+push_corner_77_0001,299,True,True,"[65, 215]",,near_field_only,3f15f32a51fd3ac492e4b1f72a3dff7cd8ae912bf2bbd86e64dde8a2a3d35631
+push_corner_77_0001,300,True,True,"[65, 215]",,near_field_only,fe27db151be4bfa6d36c4000c6b17fce87c008a2c255e1d0543890baf9497be0
+push_corner_77_0001,301,True,True,"[65, 215]",,near_field_only,66deec246dfbd2c505d292d2dc2536bbcd3b7b3e33aa5d5da0d379f422813e70
+push_corner_77_0001,302,True,True,"[65, 215]",,near_field_only,57b90793e705ac1d267a910a5b58114ba98af42df389b8022eeab0317b24fefe
+push_corner_77_0001,303,True,True,"[65, 215]",,near_field_only,2e23d031e96e24445f9f35b352dfa412fdef2b21f41313bb17cdeb308ef86d5b
+push_corner_77_0001,304,True,True,"[65, 215]",,near_field_only,dcc5e42815311fe2973bc1870db4d8c47ad0bbe72d5a4f0da02b47172fadcd15

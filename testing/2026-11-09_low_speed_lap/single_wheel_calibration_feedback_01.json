@@ -1,0 +1,17 @@
+{
+  "source": "主控对具体两次单轮校准步骤的人工回复",
+  "user_reply": "均符合预期",
+  "confirmed_scope": {
+    "left_only_forward_then_drive_removed_about_500ms": true,
+    "right_only_forward_then_drive_removed_about_500ms": true,
+    "final_speed_match_phase": 2,
+    "final_speed_match_error": 0,
+    "final_lap_state": 1
+  },
+  "independent_raw_counts_or_RPM": null,
+  "CPR_recalibrated": false,
+  "ground_driving_verified": false,
+  "next_bench_user_reply": "run_ms为0x00000BB8，两轮完全悬空",
+  "next_bench_run_limit_ms": 3000,
+  "both_wheels_suspended_confirmed": true
+}

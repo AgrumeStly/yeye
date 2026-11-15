@@ -1,0 +1,7 @@
+{
+  "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+  "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+  "lap_motor_bench_canmv.py": "b53cd5b4b39765059145e27831c2783150981420bcff01d61bd13de0cf29da9c",
+  "bundle_sha256": "7cd144e54bc1986b288c798984e844c4ae2760b9b11e50e45c9cc416d35a33d1",
+  "purpose": "suspended 3-second motor chain fixture; NOT CAMERA; operator KEY only; no START"
+}

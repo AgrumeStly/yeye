@@ -1,0 +1,32 @@
+{
+  "purpose": "bounded startup boost and retained last-run result; physical retest pending",
+  "LowSpeedLap": {
+    "revision": "0x02110007",
+    "run_ms": 3000,
+    "bin_sha256": "16c602dce94e11b4bc46f15d9bbdeb22dcde10850b6830b1da2328f14841ab41"
+  },
+  "LowSpeedLapTrack": {
+    "revision": "0x02110008",
+    "run_ms": 300000,
+    "bin_sha256": "339a663f5a447d5368cd77bd50a94102ce7a35bc166de4ef8beb66f31735f2b2"
+  },
+  "arm_build_errors": 0,
+  "arm_build_warnings": 0,
+  "program_size": {"code": 14960, "ro": 436, "rw": 236, "zi": 2724},
+  "control_model_assertions_passed": 237,
+  "uart_production_driver_host_checks": "PASS",
+  "policy": {
+    "startup_max_ms_per_zero_to_positive_transition": 100,
+    "startup_pwm_per_mille": 500,
+    "release_on_first_encoder_delta": true,
+    "no_feedback_ms": 300,
+    "target_rpm": 40,
+    "zero_target_boost": false,
+    "stalled_positive_target_retrigger": false
+  },
+  "test_limit": "42 percent static breakaway used only as hypothetical regression plant; no measured vehicle threshold claimed",
+  "last_run_snapshot": "reason, elapsed_ms, target/RPM/PWM, boost sample counts; preserved after subsequent STOP",
+  "physical_startup_verified": false,
+  "physical_three_second_stop_verified": false,
+  "assistant_flashed_board": false
+}

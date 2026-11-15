@@ -1,0 +1,899 @@
+[
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_01.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 1
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 2
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 3
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 4
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 5
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 6
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 7
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 8
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 9
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 10
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 11
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 12
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 13
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 14
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 15
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 16
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_02.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 17
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 18
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 19
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 20
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 21
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 22
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 23
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 24
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 25
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 26
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 27
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 28
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 29
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 30
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 31
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 32
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_03.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 33
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 34
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 35
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 36
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 37
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 38
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 39
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 40
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 41
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 42
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 43
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 44
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 45
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 46
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 47
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 48
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_04.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 49
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 68
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 69
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 70
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 74
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 75
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 86
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 87
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 88
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 89
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 90
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 91
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 92
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 93
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 94
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 95
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_05.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 96
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 97
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 98
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 99
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 100
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 101
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 102
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 103
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 104
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 105
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 106
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 107
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 134
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 138
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 162
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 164
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_06.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 165
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 166
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 167
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 168
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 169
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 170
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 171
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 172
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 173
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 174
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 175
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 176
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 177
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 178
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 195
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 196
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_07.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 197
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 198
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 199
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 200
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 201
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 202
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 216
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 217
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 232
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 234
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 235
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 236
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 237
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 238
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 239
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 240
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_08.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 241
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 242
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 243
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 244
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 245
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 246
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 253
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 258
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 261
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 262
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 263
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 264
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 265
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 266
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 277
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 278
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_09.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 293
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 294
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 295
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 296
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 297
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 298
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 299
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 300
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 301
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 302
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 303
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 304
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 305
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 306
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 307
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 308
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_10.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 309
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 310
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 311
+      },
+      {
+        "session": "d01_straight_run01",
+        "frame_id": 322
+      },
+      {
+        "session": "v03_offset_left_0001",
+        "frame_id": 1
+      },
+      {
+        "session": "v03_offset_left_0001",
+        "frame_id": 2
+      },
+      {
+        "session": "v03_offset_left_0001",
+        "frame_id": 3
+      },
+      {
+        "session": "v03_offset_right_0001",
+        "frame_id": 1
+      },
+      {
+        "session": "v03_offset_right_0001",
+        "frame_id": 2
+      },
+      {
+        "session": "v03_offset_right_0001",
+        "frame_id": 3
+      },
+      {
+        "session": "v03_heading_left_0001",
+        "frame_id": 1
+      },
+      {
+        "session": "v03_heading_left_0001",
+        "frame_id": 2
+      },
+      {
+        "session": "v03_heading_left_0001",
+        "frame_id": 3
+      },
+      {
+        "session": "v03_heading_right_0001",
+        "frame_id": 1
+      },
+      {
+        "session": "v03_heading_right_0001",
+        "frame_id": 2
+      },
+      {
+        "session": "v03_heading_right_0001",
+        "frame_id": 3
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_11.jpg",
+    "frames": [
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 28
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 29
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 51
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 52
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 53
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 54
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 55
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 56
+      },
+      {
+        "session": "push_corner_77_0001",
+        "frame_id": 57
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 109
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 110
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 111
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 142
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 143
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 145
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 147
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_12.jpg",
+    "frames": [
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 148
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 191
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 192
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 193
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 275
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 276
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 300
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 301
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 378
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 379
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 380
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 392
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 408
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 409
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 419
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 420
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_recovery_c2/new_output_audit/new_13.jpg",
+    "frames": [
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 421
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 460
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 483
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 484
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 510
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 520
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 521
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 522
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 523
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 552
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 553
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 554
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 560
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 569
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 577
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame_id": 578
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "host_fake_only": true,
+  "drive_gate": false,
+  "duration_ms": 10000,
+  "preview": true,
+  "main_py_written": false,
+  "automatic_start": false
+}

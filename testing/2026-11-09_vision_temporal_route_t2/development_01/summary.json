@@ -1,0 +1,160 @@
+{
+  "groups": [
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "R1_valid": 565,
+      "C2_pair_frames": 606,
+      "P1_estimated_frames": 94,
+      "states": {
+        "current_supported_model": 732
+      },
+      "motion_available": 662,
+      "last_yaw_total_deg": 121.732,
+      "current_supported_without_C2": 126,
+      "unverified_prior_spans": [],
+      "map_transitions": [
+        {
+          "frame": 1,
+          "ms": 77,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 0.0,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 0,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 404,
+          "ms": 69116,
+          "initialized": true,
+          "node": "left_shoulder",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 84.44,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 0,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 445,
+          "ms": 80149,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 78.67,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 0,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 448,
+          "ms": 81075,
+          "initialized": true,
+          "node": "left_shoulder",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 80.4,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 0,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 451,
+          "ms": 81789,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 78.59,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 223,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 456,
+          "ms": 83425,
+          "initialized": true,
+          "node": "left_shoulder",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 81.19,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 1378,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 458,
+          "ms": 83885,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 78.8,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 1580,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 470,
+          "ms": 87417,
+          "initialized": true,
+          "node": "left_shoulder",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 85.19,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 2508,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 548,
+          "ms": 112707,
+          "initialized": true,
+          "node": "apex_77",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 120.67,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 5830,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 563,
+          "ms": 117826,
+          "initialized": true,
+          "node": "left_shoulder",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 117.17,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 8447,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 564,
+          "ms": 118095,
+          "initialized": true,
+          "node": "apex_77",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 118.9,
+          "state": "visual_motion_hypothesis",
+          "missing_motion_ms": 8407,
+          "whole_vehicle_finish_verified_by_camera": false
+        }
+      ],
+      "pc_algorithm_ms": {
+        "median": 70.6674,
+        "p95": 83.702275,
+        "max": 128.8672
+      },
+      "limitation": "model support counts are not accuracy, map correspondence or control acceptance"
+    }
+  ],
+  "total_frames": 732,
+  "note": "Both laps are development data. Metric plane outside central 20-60cm is an unvalidated model."
+}

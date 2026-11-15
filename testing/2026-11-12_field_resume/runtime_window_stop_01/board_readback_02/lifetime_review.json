@@ -1,0 +1,98 @@
+{
+  "first": {
+    "event": "begin",
+    "duration_ms": 600000,
+    "automatic_motor_start": false,
+    "input_kind": "real_camera",
+    "log": "/sdcard/lap_runtime_logs/run_0006.jsonl",
+    "revision": "L1-R6-RUNTIME-1",
+    "drive_allowed": true
+  },
+  "last": {
+    "lap_acceptance": false,
+    "event": "completed"
+  },
+  "logged_samples": 2588,
+  "highest_algorithm_index": 8470,
+  "invalid_samples": 1935,
+  "last_frames": [
+    {
+      "wire_valid": true,
+      "bend": 391,
+      "free_heap": 2661984,
+      "drive_allowed": true,
+      "profile_ms": {
+        "search": 17,
+        "grid": 35,
+        "anchors": 2
+      },
+      "searched_candidates": 55,
+      "support": [
+        12,
+        16
+      ],
+      "interval_ms": 72,
+      "valid": true,
+      "copy_ms": 0,
+      "to_send_ms": 56,
+      "index": 8450,
+      "steering": 91,
+      "acquire_ms": 0,
+      "source": "current_pair",
+      "processing_ms": 54
+    },
+    {
+      "wire_valid": true,
+      "bend": 391,
+      "free_heap": 2662176,
+      "drive_allowed": true,
+      "profile_ms": {
+        "search": 17,
+        "grid": 34,
+        "anchors": 2
+      },
+      "searched_candidates": 55,
+      "support": [
+        12,
+        16
+      ],
+      "interval_ms": 72,
+      "valid": true,
+      "copy_ms": 0,
+      "to_send_ms": 57,
+      "index": 8460,
+      "steering": 91,
+      "acquire_ms": 0,
+      "source": "current_pair",
+      "processing_ms": 53
+    },
+    {
+      "wire_valid": true,
+      "bend": 391,
+      "free_heap": 2656064,
+      "drive_allowed": true,
+      "profile_ms": {
+        "search": 17,
+        "grid": 36,
+        "anchors": 2
+      },
+      "searched_candidates": 55,
+      "support": [
+        12,
+        16
+      ],
+      "interval_ms": 72,
+      "valid": true,
+      "copy_ms": 0,
+      "to_send_ms": 57,
+      "index": 8470,
+      "steering": 91,
+      "acquire_ms": 0,
+      "source": "current_pair",
+      "processing_ms": 55
+    }
+  ],
+  "processing_max_ms": 67,
+  "interval_max_ms": 139,
+  "abnormal_events": []
+}

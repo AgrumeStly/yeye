@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\push_corner_77_0001",
+  "frames": 304,
+  "scene": "corner_77",
+  "planned_duration_ms": 45000,
+  "capture_elapsed_ms": 45131,
+  "observed_interval_ms": {
+    "median": 133.0,
+    "p95": 253.5999999999999,
+    "maximum": 350
+  },
+  "observed_fps": 6.748479921601818,
+  "scope": "file integrity and software timing; not exposure rate, route truth, audible beep or battery acceptance"
+}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "sequence_checks": [
+    {
+      "case": "real_valid",
+      "valid": true,
+      "reasons": [],
+      "centerline_count": 16
+    },
+    {
+      "case": "white",
+      "valid": false,
+      "reasons": [
+        "no_contrast_no_road"
+      ],
+      "centerline_count": 0
+    },
+    {
+      "case": "real_valid_again",
+      "valid": true,
+      "reasons": [],
+      "centerline_count": 16
+    },
+    {
+      "case": "black",
+      "valid": false,
+      "reasons": [
+        "no_contrast_no_road"
+      ],
+      "centerline_count": 0
+    },
+    {
+      "case": "read_failure",
+      "valid": false,
+      "reasons": [
+        "unsupported_image_shape_or_type"
+      ],
+      "centerline_count": 0
+    },
+    {
+      "case": "wrong_shape",
+      "valid": false,
+      "reasons": [
+        "unsupported_image_shape_or_type"
+      ],
+      "centerline_count": 0
+    }
+  ],
+  "captures_unchanged": 651,
+  "frame_lineage_checked": 325,
+  "overlays_decoded": 325,
+  "heldout_fresh_detector_matching": 125,
+  "detector_input_unchanged": true,
+  "synthetic_scope": "failure behavior only, not real-scene recognition evidence"
+}

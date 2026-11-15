@@ -1,0 +1,2051 @@
+{
+  "sessions": [
+    {
+      "name": "push_corner_77_0001",
+      "metadata": {
+        "jpeg_quality": 95,
+        "width": 320,
+        "firmware_version": "3.4.0; CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03",
+        "pixel_format": "grayscale",
+        "exposure_policy": "firmware_auto_not_locked",
+        "schema": 2,
+        "version": "push-capture-1",
+        "free_bytes_at_start": 112427008,
+        "vflip": false,
+        "interval_ms": 100,
+        "hmirror": false,
+        "prepare_ms": 15000,
+        "start_ticks_ms": 19952,
+        "elapsed_origin": "after_start_beep",
+        "saved_count": 304,
+        "max_frames": 1200,
+        "sensor_id": 2,
+        "clock_note": "software_snapshot_call_boundaries_not_exposure_time",
+        "capture_elapsed_ms": 45131,
+        "cleanup_errors": [],
+        "stop_reason": "duration_reached",
+        "scene": "corner_77",
+        "state": "complete",
+        "height": 240,
+        "planned_duration_ms": 45000,
+        "motion_source": "hand_push_not_autonomous"
+      },
+      "entries": [
+        {
+          "name": "frames.jsonl",
+          "type": "file",
+          "size": 99253,
+          "mtime": 1735689664
+        },
+        {
+          "name": "session.json",
+          "type": "file",
+          "size": 765,
+          "mtime": 1735689664
+        },
+        {
+          "name": "data_0001.jpg",
+          "type": "file",
+          "size": 12311,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0002.jpg",
+          "type": "file",
+          "size": 12266,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0003.jpg",
+          "type": "file",
+          "size": 12199,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0004.jpg",
+          "type": "file",
+          "size": 12297,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0005.jpg",
+          "type": "file",
+          "size": 12263,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0006.jpg",
+          "type": "file",
+          "size": 12264,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0007.jpg",
+          "type": "file",
+          "size": 12162,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0008.jpg",
+          "type": "file",
+          "size": 12112,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0009.jpg",
+          "type": "file",
+          "size": 11838,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0010.jpg",
+          "type": "file",
+          "size": 11329,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0011.jpg",
+          "type": "file",
+          "size": 11288,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0012.jpg",
+          "type": "file",
+          "size": 11363,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0013.jpg",
+          "type": "file",
+          "size": 11654,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0014.jpg",
+          "type": "file",
+          "size": 11751,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0015.jpg",
+          "type": "file",
+          "size": 11448,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0016.jpg",
+          "type": "file",
+          "size": 11595,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0017.jpg",
+          "type": "file",
+          "size": 11488,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0018.jpg",
+          "type": "file",
+          "size": 11673,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0019.jpg",
+          "type": "file",
+          "size": 11781,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0020.jpg",
+          "type": "file",
+          "size": 11296,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0021.jpg",
+          "type": "file",
+          "size": 11951,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0022.jpg",
+          "type": "file",
+          "size": 11808,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0023.jpg",
+          "type": "file",
+          "size": 11661,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0024.jpg",
+          "type": "file",
+          "size": 11776,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0025.jpg",
+          "type": "file",
+          "size": 11748,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0026.jpg",
+          "type": "file",
+          "size": 11699,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0027.jpg",
+          "type": "file",
+          "size": 11717,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0028.jpg",
+          "type": "file",
+          "size": 11548,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0029.jpg",
+          "type": "file",
+          "size": 11497,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0030.jpg",
+          "type": "file",
+          "size": 11552,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0031.jpg",
+          "type": "file",
+          "size": 11201,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0032.jpg",
+          "type": "file",
+          "size": 11270,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0033.jpg",
+          "type": "file",
+          "size": 11420,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0034.jpg",
+          "type": "file",
+          "size": 11534,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0035.jpg",
+          "type": "file",
+          "size": 11469,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0036.jpg",
+          "type": "file",
+          "size": 11565,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0037.jpg",
+          "type": "file",
+          "size": 11485,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0038.jpg",
+          "type": "file",
+          "size": 11608,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0039.jpg",
+          "type": "file",
+          "size": 11358,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0040.jpg",
+          "type": "file",
+          "size": 11341,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0041.jpg",
+          "type": "file",
+          "size": 11300,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0042.jpg",
+          "type": "file",
+          "size": 11346,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0043.jpg",
+          "type": "file",
+          "size": 10538,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0044.jpg",
+          "type": "file",
+          "size": 10097,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0045.jpg",
+          "type": "file",
+          "size": 10275,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0046.jpg",
+          "type": "file",
+          "size": 10250,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0047.jpg",
+          "type": "file",
+          "size": 10653,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0048.jpg",
+          "type": "file",
+          "size": 10728,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0049.jpg",
+          "type": "file",
+          "size": 10951,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0050.jpg",
+          "type": "file",
+          "size": 11059,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0051.jpg",
+          "type": "file",
+          "size": 11068,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0052.jpg",
+          "type": "file",
+          "size": 11339,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0053.jpg",
+          "type": "file",
+          "size": 11086,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0054.jpg",
+          "type": "file",
+          "size": 11336,
+          "mtime": 1735689624
+        },
+        {
+          "name": "data_0055.jpg",
+          "type": "file",
+          "size": 11198,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0056.jpg",
+          "type": "file",
+          "size": 11163,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0057.jpg",
+          "type": "file",
+          "size": 11128,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0058.jpg",
+          "type": "file",
+          "size": 11859,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0059.jpg",
+          "type": "file",
+          "size": 11727,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0060.jpg",
+          "type": "file",
+          "size": 12172,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0061.jpg",
+          "type": "file",
+          "size": 11490,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0062.jpg",
+          "type": "file",
+          "size": 11884,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0063.jpg",
+          "type": "file",
+          "size": 12613,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0064.jpg",
+          "type": "file",
+          "size": 12600,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0065.jpg",
+          "type": "file",
+          "size": 12122,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0066.jpg",
+          "type": "file",
+          "size": 12161,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0067.jpg",
+          "type": "file",
+          "size": 12449,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0068.jpg",
+          "type": "file",
+          "size": 12558,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0069.jpg",
+          "type": "file",
+          "size": 12707,
+          "mtime": 1735689626
+        },
+        {
+          "name": "data_0070.jpg",
+          "type": "file",
+          "size": 12164,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0071.jpg",
+          "type": "file",
+          "size": 11974,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0072.jpg",
+          "type": "file",
+          "size": 12427,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0073.jpg",
+          "type": "file",
+          "size": 12479,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0074.jpg",
+          "type": "file",
+          "size": 12434,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0075.jpg",
+          "type": "file",
+          "size": 12305,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0076.jpg",
+          "type": "file",
+          "size": 12379,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0077.jpg",
+          "type": "file",
+          "size": 12566,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0078.jpg",
+          "type": "file",
+          "size": 12168,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0079.jpg",
+          "type": "file",
+          "size": 12373,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0080.jpg",
+          "type": "file",
+          "size": 11928,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0081.jpg",
+          "type": "file",
+          "size": 12540,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0082.jpg",
+          "type": "file",
+          "size": 12772,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0083.jpg",
+          "type": "file",
+          "size": 12221,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0084.jpg",
+          "type": "file",
+          "size": 12301,
+          "mtime": 1735689628
+        },
+        {
+          "name": "data_0085.jpg",
+          "type": "file",
+          "size": 11309,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0086.jpg",
+          "type": "file",
+          "size": 11593,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0087.jpg",
+          "type": "file",
+          "size": 12452,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0088.jpg",
+          "type": "file",
+          "size": 11619,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0089.jpg",
+          "type": "file",
+          "size": 11568,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0090.jpg",
+          "type": "file",
+          "size": 12309,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0091.jpg",
+          "type": "file",
+          "size": 12323,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0092.jpg",
+          "type": "file",
+          "size": 11753,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0093.jpg",
+          "type": "file",
+          "size": 11866,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0094.jpg",
+          "type": "file",
+          "size": 12366,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0095.jpg",
+          "type": "file",
+          "size": 12637,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0096.jpg",
+          "type": "file",
+          "size": 12844,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0097.jpg",
+          "type": "file",
+          "size": 12830,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0098.jpg",
+          "type": "file",
+          "size": 12708,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0099.jpg",
+          "type": "file",
+          "size": 12683,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0100.jpg",
+          "type": "file",
+          "size": 12807,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0101.jpg",
+          "type": "file",
+          "size": 12843,
+          "mtime": 1735689630
+        },
+        {
+          "name": "data_0102.jpg",
+          "type": "file",
+          "size": 12847,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0103.jpg",
+          "type": "file",
+          "size": 12897,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0104.jpg",
+          "type": "file",
+          "size": 12898,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0105.jpg",
+          "type": "file",
+          "size": 12547,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0106.jpg",
+          "type": "file",
+          "size": 12803,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0107.jpg",
+          "type": "file",
+          "size": 12843,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0108.jpg",
+          "type": "file",
+          "size": 12845,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0109.jpg",
+          "type": "file",
+          "size": 12891,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0110.jpg",
+          "type": "file",
+          "size": 12838,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0111.jpg",
+          "type": "file",
+          "size": 12848,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0112.jpg",
+          "type": "file",
+          "size": 12840,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0113.jpg",
+          "type": "file",
+          "size": 12848,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0114.jpg",
+          "type": "file",
+          "size": 12902,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0115.jpg",
+          "type": "file",
+          "size": 12881,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0116.jpg",
+          "type": "file",
+          "size": 12827,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0117.jpg",
+          "type": "file",
+          "size": 12777,
+          "mtime": 1735689632
+        },
+        {
+          "name": "data_0118.jpg",
+          "type": "file",
+          "size": 12748,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0119.jpg",
+          "type": "file",
+          "size": 12750,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0120.jpg",
+          "type": "file",
+          "size": 12773,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0121.jpg",
+          "type": "file",
+          "size": 12757,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0122.jpg",
+          "type": "file",
+          "size": 12750,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0123.jpg",
+          "type": "file",
+          "size": 12771,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0124.jpg",
+          "type": "file",
+          "size": 12763,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0125.jpg",
+          "type": "file",
+          "size": 12723,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0126.jpg",
+          "type": "file",
+          "size": 12728,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0127.jpg",
+          "type": "file",
+          "size": 12793,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0128.jpg",
+          "type": "file",
+          "size": 12634,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0129.jpg",
+          "type": "file",
+          "size": 12066,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0130.jpg",
+          "type": "file",
+          "size": 12638,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0131.jpg",
+          "type": "file",
+          "size": 12496,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0132.jpg",
+          "type": "file",
+          "size": 12759,
+          "mtime": 1735689634
+        },
+        {
+          "name": "data_0133.jpg",
+          "type": "file",
+          "size": 12831,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0134.jpg",
+          "type": "file",
+          "size": 12814,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0135.jpg",
+          "type": "file",
+          "size": 12796,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0136.jpg",
+          "type": "file",
+          "size": 12760,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0137.jpg",
+          "type": "file",
+          "size": 12775,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0138.jpg",
+          "type": "file",
+          "size": 12749,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0139.jpg",
+          "type": "file",
+          "size": 12740,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0140.jpg",
+          "type": "file",
+          "size": 12814,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0141.jpg",
+          "type": "file",
+          "size": 12739,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0142.jpg",
+          "type": "file",
+          "size": 12750,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0143.jpg",
+          "type": "file",
+          "size": 12728,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0144.jpg",
+          "type": "file",
+          "size": 12753,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0145.jpg",
+          "type": "file",
+          "size": 12764,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0146.jpg",
+          "type": "file",
+          "size": 12745,
+          "mtime": 1735689636
+        },
+        {
+          "name": "data_0147.jpg",
+          "type": "file",
+          "size": 12695,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0148.jpg",
+          "type": "file",
+          "size": 12710,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0149.jpg",
+          "type": "file",
+          "size": 12724,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0150.jpg",
+          "type": "file",
+          "size": 12623,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0151.jpg",
+          "type": "file",
+          "size": 12694,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0152.jpg",
+          "type": "file",
+          "size": 12684,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0153.jpg",
+          "type": "file",
+          "size": 12699,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0154.jpg",
+          "type": "file",
+          "size": 12595,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0155.jpg",
+          "type": "file",
+          "size": 12545,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0156.jpg",
+          "type": "file",
+          "size": 12542,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0157.jpg",
+          "type": "file",
+          "size": 12604,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0158.jpg",
+          "type": "file",
+          "size": 12582,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0159.jpg",
+          "type": "file",
+          "size": 12630,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0160.jpg",
+          "type": "file",
+          "size": 12565,
+          "mtime": 1735689638
+        },
+        {
+          "name": "data_0161.jpg",
+          "type": "file",
+          "size": 12547,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0162.jpg",
+          "type": "file",
+          "size": 12556,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0163.jpg",
+          "type": "file",
+          "size": 12535,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0164.jpg",
+          "type": "file",
+          "size": 12623,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0165.jpg",
+          "type": "file",
+          "size": 12577,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0166.jpg",
+          "type": "file",
+          "size": 12566,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0167.jpg",
+          "type": "file",
+          "size": 12583,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0168.jpg",
+          "type": "file",
+          "size": 12547,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0169.jpg",
+          "type": "file",
+          "size": 12588,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0170.jpg",
+          "type": "file",
+          "size": 12602,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0171.jpg",
+          "type": "file",
+          "size": 12578,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0172.jpg",
+          "type": "file",
+          "size": 12623,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0173.jpg",
+          "type": "file",
+          "size": 12744,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0174.jpg",
+          "type": "file",
+          "size": 12703,
+          "mtime": 1735689640
+        },
+        {
+          "name": "data_0175.jpg",
+          "type": "file",
+          "size": 12726,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0176.jpg",
+          "type": "file",
+          "size": 12713,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0177.jpg",
+          "type": "file",
+          "size": 12761,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0178.jpg",
+          "type": "file",
+          "size": 12777,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0179.jpg",
+          "type": "file",
+          "size": 12751,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0180.jpg",
+          "type": "file",
+          "size": 12744,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0181.jpg",
+          "type": "file",
+          "size": 12689,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0182.jpg",
+          "type": "file",
+          "size": 12740,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0183.jpg",
+          "type": "file",
+          "size": 12774,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0184.jpg",
+          "type": "file",
+          "size": 12745,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0185.jpg",
+          "type": "file",
+          "size": 12734,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0186.jpg",
+          "type": "file",
+          "size": 12801,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0187.jpg",
+          "type": "file",
+          "size": 12731,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0188.jpg",
+          "type": "file",
+          "size": 12766,
+          "mtime": 1735689642
+        },
+        {
+          "name": "data_0189.jpg",
+          "type": "file",
+          "size": 12780,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0190.jpg",
+          "type": "file",
+          "size": 12737,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0191.jpg",
+          "type": "file",
+          "size": 12680,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0192.jpg",
+          "type": "file",
+          "size": 12744,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0193.jpg",
+          "type": "file",
+          "size": 12758,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0194.jpg",
+          "type": "file",
+          "size": 12735,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0195.jpg",
+          "type": "file",
+          "size": 12711,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0196.jpg",
+          "type": "file",
+          "size": 12682,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0197.jpg",
+          "type": "file",
+          "size": 12704,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0198.jpg",
+          "type": "file",
+          "size": 12680,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0199.jpg",
+          "type": "file",
+          "size": 12693,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0200.jpg",
+          "type": "file",
+          "size": 12698,
+          "mtime": 1735689644
+        },
+        {
+          "name": "data_0201.jpg",
+          "type": "file",
+          "size": 12655,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0202.jpg",
+          "type": "file",
+          "size": 12579,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0203.jpg",
+          "type": "file",
+          "size": 12565,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0204.jpg",
+          "type": "file",
+          "size": 12636,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0205.jpg",
+          "type": "file",
+          "size": 12581,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0206.jpg",
+          "type": "file",
+          "size": 12612,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0207.jpg",
+          "type": "file",
+          "size": 12623,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0208.jpg",
+          "type": "file",
+          "size": 12682,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0209.jpg",
+          "type": "file",
+          "size": 12708,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0210.jpg",
+          "type": "file",
+          "size": 12747,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0211.jpg",
+          "type": "file",
+          "size": 12697,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0212.jpg",
+          "type": "file",
+          "size": 12719,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0213.jpg",
+          "type": "file",
+          "size": 12696,
+          "mtime": 1735689646
+        },
+        {
+          "name": "data_0214.jpg",
+          "type": "file",
+          "size": 12714,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0215.jpg",
+          "type": "file",
+          "size": 12717,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0216.jpg",
+          "type": "file",
+          "size": 12637,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0217.jpg",
+          "type": "file",
+          "size": 12718,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0218.jpg",
+          "type": "file",
+          "size": 12739,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0219.jpg",
+          "type": "file",
+          "size": 12761,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0220.jpg",
+          "type": "file",
+          "size": 12732,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0221.jpg",
+          "type": "file",
+          "size": 12737,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0222.jpg",
+          "type": "file",
+          "size": 12783,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0223.jpg",
+          "type": "file",
+          "size": 12742,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0224.jpg",
+          "type": "file",
+          "size": 12700,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0225.jpg",
+          "type": "file",
+          "size": 12764,
+          "mtime": 1735689648
+        },
+        {
+          "name": "data_0226.jpg",
+          "type": "file",
+          "size": 12773,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0227.jpg",
+          "type": "file",
+          "size": 12743,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0228.jpg",
+          "type": "file",
+          "size": 12763,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0229.jpg",
+          "type": "file",
+          "size": 12768,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0230.jpg",
+          "type": "file",
+          "size": 12773,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0231.jpg",
+          "type": "file",
+          "size": 12771,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0232.jpg",
+          "type": "file",
+          "size": 12781,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0233.jpg",
+          "type": "file",
+          "size": 12743,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0234.jpg",
+          "type": "file",
+          "size": 12799,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0235.jpg",
+          "type": "file",
+          "size": 12749,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0236.jpg",
+          "type": "file",
+          "size": 12769,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0237.jpg",
+          "type": "file",
+          "size": 12709,
+          "mtime": 1735689650
+        },
+        {
+          "name": "data_0238.jpg",
+          "type": "file",
+          "size": 12787,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0239.jpg",
+          "type": "file",
+          "size": 12794,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0240.jpg",
+          "type": "file",
+          "size": 12740,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0241.jpg",
+          "type": "file",
+          "size": 12729,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0242.jpg",
+          "type": "file",
+          "size": 12779,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0243.jpg",
+          "type": "file",
+          "size": 12739,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0244.jpg",
+          "type": "file",
+          "size": 12768,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0245.jpg",
+          "type": "file",
+          "size": 12809,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0246.jpg",
+          "type": "file",
+          "size": 12775,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0247.jpg",
+          "type": "file",
+          "size": 12773,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0248.jpg",
+          "type": "file",
+          "size": 12768,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0249.jpg",
+          "type": "file",
+          "size": 12783,
+          "mtime": 1735689652
+        },
+        {
+          "name": "data_0250.jpg",
+          "type": "file",
+          "size": 12772,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0251.jpg",
+          "type": "file",
+          "size": 12827,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0252.jpg",
+          "type": "file",
+          "size": 12787,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0253.jpg",
+          "type": "file",
+          "size": 12752,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0254.jpg",
+          "type": "file",
+          "size": 12754,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0255.jpg",
+          "type": "file",
+          "size": 12776,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0256.jpg",
+          "type": "file",
+          "size": 12753,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0257.jpg",
+          "type": "file",
+          "size": 12720,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0258.jpg",
+          "type": "file",
+          "size": 12761,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0259.jpg",
+          "type": "file",
+          "size": 12710,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0260.jpg",
+          "type": "file",
+          "size": 12777,
+          "mtime": 1735689654
+        },
+        {
+          "name": "data_0261.jpg",
+          "type": "file",
+          "size": 12733,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0262.jpg",
+          "type": "file",
+          "size": 12778,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0263.jpg",
+          "type": "file",
+          "size": 12772,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0264.jpg",
+          "type": "file",
+          "size": 12752,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0265.jpg",
+          "type": "file",
+          "size": 12772,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0266.jpg",
+          "type": "file",
+          "size": 12734,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0267.jpg",
+          "type": "file",
+          "size": 12790,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0268.jpg",
+          "type": "file",
+          "size": 12744,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0269.jpg",
+          "type": "file",
+          "size": 12739,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0270.jpg",
+          "type": "file",
+          "size": 12781,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0271.jpg",
+          "type": "file",
+          "size": 12743,
+          "mtime": 1735689656
+        },
+        {
+          "name": "data_0272.jpg",
+          "type": "file",
+          "size": 12738,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0273.jpg",
+          "type": "file",
+          "size": 12826,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0274.jpg",
+          "type": "file",
+          "size": 12728,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0275.jpg",
+          "type": "file",
+          "size": 12760,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0276.jpg",
+          "type": "file",
+          "size": 12778,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0277.jpg",
+          "type": "file",
+          "size": 12745,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0278.jpg",
+          "type": "file",
+          "size": 12722,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0279.jpg",
+          "type": "file",
+          "size": 12749,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0280.jpg",
+          "type": "file",
+          "size": 12776,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0281.jpg",
+          "type": "file",
+          "size": 12752,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0282.jpg",
+          "type": "file",
+          "size": 12779,
+          "mtime": 1735689658
+        },
+        {
+          "name": "data_0283.jpg",
+          "type": "file",
+          "size": 12818,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0284.jpg",
+          "type": "file",
+          "size": 12840,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0285.jpg",
+          "type": "file",
+          "size": 12802,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0286.jpg",
+          "type": "file",
+          "size": 12810,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0287.jpg",
+          "type": "file",
+          "size": 12781,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0288.jpg",
+          "type": "file",
+          "size": 12797,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0289.jpg",
+          "type": "file",
+          "size": 12801,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0290.jpg",
+          "type": "file",
+          "size": 12749,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0291.jpg",
+          "type": "file",
+          "size": 12770,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0292.jpg",
+          "type": "file",
+          "size": 12769,
+          "mtime": 1735689660
+        },
+        {
+          "name": "data_0293.jpg",
+          "type": "file",
+          "size": 12762,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0294.jpg",
+          "type": "file",
+          "size": 12747,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0295.jpg",
+          "type": "file",
+          "size": 12792,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0296.jpg",
+          "type": "file",
+          "size": 12783,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0297.jpg",
+          "type": "file",
+          "size": 12752,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0298.jpg",
+          "type": "file",
+          "size": 12767,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0299.jpg",
+          "type": "file",
+          "size": 12764,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0300.jpg",
+          "type": "file",
+          "size": 12728,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0301.jpg",
+          "type": "file",
+          "size": 12708,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0302.jpg",
+          "type": "file",
+          "size": 12736,
+          "mtime": 1735689662
+        },
+        {
+          "name": "data_0303.jpg",
+          "type": "file",
+          "size": 12774,
+          "mtime": 1735689664
+        },
+        {
+          "name": "data_0304.jpg",
+          "type": "file",
+          "size": 12730,
+          "mtime": 1735689664
+        }
+      ]
+    },
+    {
+      "name": "push_corner_77_0002",
+      "metadata": {
+        "jpeg_quality": 95,
+        "width": 320,
+        "firmware_version": "3.4.0; CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03",
+        "pixel_format": "grayscale",
+        "exposure_policy": "firmware_auto_not_locked",
+        "schema": 2,
+        "version": "push-capture-1",
+        "free_bytes_at_start": 102268928,
+        "vflip": false,
+        "interval_ms": 100,
+        "hmirror": false,
+        "prepare_ms": 15000,
+        "start_ticks_ms": 19974,
+        "elapsed_origin": "after_start_beep",
+        "saved_count": 20,
+        "max_frames": 1200,
+        "sensor_id": 2,
+        "clock_note": "software_snapshot_call_boundaries_not_exposure_time",
+        "cleanup_errors": [],
+        "error": "IDE interrupt",
+        "scene": "corner_77",
+        "state": "failed",
+        "height": 240,
+        "planned_duration_ms": 45000,
+        "motion_source": "hand_push_not_autonomous"
+      },
+      "entries": [
+        {
+          "name": "frames.jsonl",
+          "type": "file",
+          "size": 6821,
+          "mtime": 1735689622
+        },
+        {
+          "name": "session.json",
+          "type": "file",
+          "size": 724,
+          "mtime": 1735689622
+        },
+        {
+          "name": "data_0001.jpg",
+          "type": "file",
+          "size": 13428,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0002.jpg",
+          "type": "file",
+          "size": 13493,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0003.jpg",
+          "type": "file",
+          "size": 13466,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0004.jpg",
+          "type": "file",
+          "size": 13477,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0005.jpg",
+          "type": "file",
+          "size": 13425,
+          "mtime": 1735689618
+        },
+        {
+          "name": "data_0006.jpg",
+          "type": "file",
+          "size": 13504,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0007.jpg",
+          "type": "file",
+          "size": 13485,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0008.jpg",
+          "type": "file",
+          "size": 13429,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0009.jpg",
+          "type": "file",
+          "size": 13396,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0010.jpg",
+          "type": "file",
+          "size": 13415,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0011.jpg",
+          "type": "file",
+          "size": 13443,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0012.jpg",
+          "type": "file",
+          "size": 13440,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0013.jpg",
+          "type": "file",
+          "size": 13447,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0014.jpg",
+          "type": "file",
+          "size": 13395,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0015.jpg",
+          "type": "file",
+          "size": 13440,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0016.jpg",
+          "type": "file",
+          "size": 13429,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0017.jpg",
+          "type": "file",
+          "size": 13435,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0018.jpg",
+          "type": "file",
+          "size": 13450,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0019.jpg",
+          "type": "file",
+          "size": 13435,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0020.jpg",
+          "type": "file",
+          "size": 13453,
+          "mtime": 1735689620
+        },
+        {
+          "name": "data_0021.jpg",
+          "type": "file",
+          "size": 13431,
+          "mtime": 1735689620
+        }
+      ]
+    }
+  ],
+  "terminal": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"text\": \"[PUSH_SAVED] 17 elapsed_ms 2041\\r\\n[PUSH_FAILED] IDE interrupt\\r\\ndeprecated function\\r\\nTraceback (most recent call last):\\r\\n  File \\\"<stdin>\\\", line 273, in <module>\\r\\n  File \\\"<stdin>\\\", line 268, in main\\r\\n  File \\\"<stdin>\\\", line 213, in main\\r\\n  File \\\"<stdin>\\\", line 24, in _sync\\r\\nException: IDE interrupt\\r\\nMPY: soft reboot\\r\\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\\r\\nType \\\"help()\\\" for more information.\\r\\n>>> \"\n}"
+      }
+    ]
+  }
+}

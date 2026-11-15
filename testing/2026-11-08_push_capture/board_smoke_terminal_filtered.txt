@@ -1,0 +1,10 @@
+Source: CanMV terminal_output tool, 2026-11-08; only [PUSH_*] / [BEEPER] lines retained from mixed historical terminal buffer.
+[PUSH_START] push-capture-1 board_smoke
+[BEEPER] k230d_canmv_lushanpi_lite GPIO 61 PWM1
+[PUSH_SESSION] /sdcard/captures/push_board_smoke_0001
+[PUSH_PREPARE] 1000
+[PUSH_RECORDING] 3000
+[PUSH_SAVED] 9 elapsed_ms 1012
+[PUSH_SAVED] 18 elapsed_ms 2071
+[PUSH_FILES_CLOSED] /sdcard/captures/push_board_smoke_0001 25
+[PUSH_DONE] /sdcard/captures/push_board_smoke_0001 saved 25

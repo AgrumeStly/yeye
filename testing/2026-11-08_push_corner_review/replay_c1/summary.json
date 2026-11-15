@@ -1,0 +1,24 @@
+{
+  "frames": 304,
+  "groups": [
+    {
+      "session": "push_corner_77_0001",
+      "frames": 304,
+      "fixed_reference_valid": 272,
+      "near_available": 274,
+      "turns": {
+        "right": 26,
+        "none": 278
+      }
+    }
+  ],
+  "fixed_reference_valid": 272,
+  "video_decoded_frames": 304,
+  "read_failed": 0,
+  "algorithm_ms": {
+    "mean": 29.4615259868421,
+    "p95": 41.115594999999985
+  },
+  "preview_fps": 10,
+  "scope": "published static/hand-pushed regression; not accuracy, motion, physical turn angle or control acceptance"
+}

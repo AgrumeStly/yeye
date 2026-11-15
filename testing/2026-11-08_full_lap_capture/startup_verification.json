@@ -1,0 +1,6 @@
+{
+  "tests_run": 21,
+  "passed": true,
+  "source_sha256": "60b7889d938a3fc1270c41a4232c6ff2feb2de50ddf63f59cfc418a792cde6f7",
+  "scope": "PC models, 180-second virtual window and read-only reconnect; not actual board full lap"
+}

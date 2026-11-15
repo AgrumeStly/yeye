@@ -1,0 +1,19 @@
+{
+  "python": "3.13.6",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4",
+  "algorithm_samples": 61,
+  "frame_window": [
+    90,
+    150
+  ],
+  "median_ms": 124.8051,
+  "p95_ms": 147.8093,
+  "max_ms": 151.5941,
+  "windows_process_memory": {
+    "peak_working_set_bytes": 165191680,
+    "working_set_bytes": 101150720
+  },
+  "code_sha256": "a050602633a4bc058b40ce92e5786324bf67c562e1309e833c86df2e8392d4d4",
+  "scope": "PC algorithm only, preloaded images; excludes capture, decode, rendering, UART. Not board performance."
+}

@@ -1,0 +1,11 @@
+{
+  "purpose": "resume only unfinished straight repeat trials after clarifying normal stop does not require CPU reset",
+  "trial_numbers": [2, 3],
+  "requested_action": "preserve calibration and Run; one long KEY press/release per remaining trial; complete stop and at least five-second additional wait before next; save each snapshot; stop on any abnormality",
+  "input_window_ms": 600000,
+  "mcu_per_run_limit_ms": 3000,
+  "automatic_start": false,
+  "firmware_changed": false,
+  "note": "if operator already reset CPU, recover actual phase before attempting any repeat; do not assume calibration is retained",
+  "result": "two distinct snapshots received: trials 2 and 3 both 3000ms LIMIT and UART errors0; see stm32_review.json"
+}

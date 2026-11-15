@@ -1,0 +1,11 @@
+{
+  "input_kind": "real_camera_runtime_r5",
+  "source_sha256": "2d0a535e0dc01ffd8748a5f982b83d426813eb409619cfc290de231e13b12567",
+  "configured_camera_window_ms": 600000,
+  "actual_window_completion": false,
+  "own_script_interrupted_after_physical_test": true,
+  "reason": "主控已完成单次KEY三秒LIMIT并报告轮子符合预期；结束本对话的剩余相机等待窗口，非600秒连续运行验收",
+  "script_running_after_stop": false,
+  "physical_trial_result": "一次真实相机悬空三秒运行及自动停止，当前PWM0和UART0按人工反馈确认",
+  "ground_lap_verified": false
+}

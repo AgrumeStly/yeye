@@ -1,0 +1,20 @@
+COMMAND: vision/.venv/Scripts/python.exe vision/tools/compare_offline.py
+EXIT_CODE: 0
+STDOUT:
+{
+  "baseline_valid": 160,
+  "r1_valid": 162,
+  "invalid_to_valid": [
+    124,
+    281
+  ],
+  "valid_to_invalid": [],
+  "unchanged_validity": 323,
+  "max_deviation_change_on_common_valid_px": 1.0,
+  "frames_with_supplemental_ribbons": 197,
+  "interpretation": "published old-data regression; validity/support counts are not accuracy",
+  "comparison_video_decoded_frames": 325,
+  "review_selected_frames": 37
+}
+
+STDERR:

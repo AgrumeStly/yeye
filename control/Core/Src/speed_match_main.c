@@ -4,6 +4,9 @@
  * 原逐轮校准500ms，成功后双轮同目标RPM；不连接UART或整车循迹状态机。
  */
 #include "speed_match.h"
+#ifdef SPEED_SPRINT_TARGET
+#include "speed_sprint.h"
+#endif
 #include "encoder_hw.h"
 #include "straight_pwm.h"
 #include "stm32f4xx.h"
@@ -149,18 +152,36 @@ void SysTick_Handler(void) {
             else {
                 encoder_counter_update(&g_speed_encoder_a, raw.a, now);
                 encoder_counter_update(&g_speed_encoder_b, raw.b, now);
+#ifdef SPEED_SPRINT_TARGET
+                /* 高速目标增加轮程限停与地面试验记录；原目标不进入该分支。 */
+                speed_sprint_sample(now, &g_speed_encoder_a.sample, &g_speed_encoder_b.sample);
+#else
                 speed_match_sample(now, &g_speed_encoder_a.sample, &g_speed_encoder_b.sample);
+#endif
             }
         }
+#ifdef SPEED_SPRINT_TARGET
+        speed_sprint_tick(now, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0));
+#else
         speed_match_tick(now, GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0));
+#endif
         if (!straight_pwm_apply(g_speed_match.left_pwm, g_speed_match.right_pwm))
             g_speed_fault |= MOTOR_BENCH_FAULT_PWM_REQUEST;
     }
     if (g_speed_fault != 0u) {
+#ifdef SPEED_SPRINT_TARGET
+        speed_sprint_fault(SPEED_ERROR_HARDWARE, now);
+#else
         speed_match_fault(SPEED_ERROR_HARDWARE, now);
+#endif
         straight_pwm_stop();
     }
+#ifdef SPEED_SPRINT_TARGET
+    /* 脱线地面试跑用车载KEY确认与绿灯报数，不依赖DAPLink／Watch保持连接。 */
+    GPIO_WriteBit(GPIOB, GPIO_Pin_2, speed_sprint_led(now) != 0u ? Bit_SET : Bit_RESET);
+#else
     GPIO_WriteBit(GPIOB, GPIO_Pin_2, speed_match_led(now) != 0u ? Bit_SET : Bit_RESET);
+#endif
     if (g_speed_watchdog_started != 0u) IWDG_ReloadCounter();
 }
 
@@ -178,14 +199,22 @@ void UsageFault_Handler(void) { fatal_stop(); }
 
 /** @brief 先撤PWM，再初始化编码器／状态与启动监督；默认只读采集，不自启。 */
 int main(void) {
+#ifdef SPEED_SPRINT_TARGET
+    g_speed_revision = 0x020f1002u;
+#else
     g_speed_revision = 0x020f0001u;
+#endif
     g_speed_fault = straight_pwm_init() ? 0u : MOTOR_BENCH_FAULT_PWM_CLOCK;
     if (!encoder_hw_init()) g_speed_fault |= 64u;
     controls_init();
     SystemCoreClockUpdate();
     encoder_counter_init(&g_speed_encoder_a);
     encoder_counter_init(&g_speed_encoder_b);
+#ifdef SPEED_SPRINT_TARGET
+    speed_sprint_init(0u);
+#else
     speed_match_init(0u);
+#endif
     g_speed_fault |= watchdog_init();
     if (g_speed_fault != 0u) speed_match_fault(SPEED_ERROR_HARDWARE, 0u);
     if (SysTick_Config(SystemCoreClock / 1000u) != 0u) {

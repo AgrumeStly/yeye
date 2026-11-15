@@ -86,7 +86,7 @@ int straight_pwm_apply(uint16_t left_duty, uint16_t right_duty) {
     uint32_t left_pulse, right_pulse;
     uint16_t pins;
     if (left_duty == 0u && right_duty == 0u) { if (running != 0u) straight_pwm_stop(); return 1; }
-    if (timer_ready == 0u || left_duty > 500u || right_duty > 500u) { straight_pwm_stop(); return 0; }
+    if (timer_ready == 0u || left_duty > STRAIGHT_MAX_DUTY || right_duty > STRAIGHT_MAX_DUTY) { straight_pwm_stop(); return 0; }
     if (running != 0u && (TIM1->BDTR & TIM_BDTR_MOE) == 0u) {
         straight_pwm_stop(); return 0;
     }

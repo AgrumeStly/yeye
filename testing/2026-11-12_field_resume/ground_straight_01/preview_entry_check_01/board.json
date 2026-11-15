@@ -1,0 +1,8 @@
+{
+  "board": {
+    "host_fake": true
+  },
+  "status": {
+    "running": false
+  }
+}

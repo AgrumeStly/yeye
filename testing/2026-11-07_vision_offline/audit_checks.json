@@ -1,0 +1,455 @@
+{
+  "replay_non_timing_mismatches": [],
+  "captures_unchanged": true,
+  "capture_files": 651,
+  "failure_sequence": [
+    {
+      "case": "valid",
+      "valid": true,
+      "empty_centerline": false,
+      "deviation": 22.5
+    },
+    {
+      "case": "white",
+      "valid": false,
+      "empty_centerline": true,
+      "deviation": null
+    },
+    {
+      "case": "valid_again",
+      "valid": true,
+      "empty_centerline": false,
+      "deviation": 22.5
+    },
+    {
+      "case": "black",
+      "valid": false,
+      "empty_centerline": true,
+      "deviation": null
+    },
+    {
+      "case": "none",
+      "valid": false,
+      "empty_centerline": true,
+      "deviation": null
+    },
+    {
+      "case": "wrong_size",
+      "valid": false,
+      "empty_centerline": true,
+      "deviation": null
+    }
+  ],
+  "diagnostics": [
+    {
+      "frame": 1,
+      "threshold": 97.0,
+      "runs_y120": [
+        [
+          45,
+          71,
+          27
+        ],
+        [
+          293,
+          319,
+          27
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 45,
+          "end": 71,
+          "lc": 59.5,
+          "rc": 57.5,
+          "width": 27
+        },
+        {
+          "start": 293,
+          "end": 319,
+          "lc": 58.0,
+          "rc": -1.0,
+          "width": 27
+        }
+      ],
+      "pair_y_range": [
+        65,
+        140
+      ],
+      "valid": true,
+      "reasons": []
+    },
+    {
+      "frame": 41,
+      "threshold": 99.0,
+      "runs_y120": [
+        [
+          58,
+          86,
+          29
+        ],
+        [
+          318,
+          319,
+          2
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 58,
+          "end": 86,
+          "lc": 66.0,
+          "rc": 63.5,
+          "width": 29
+        }
+      ],
+      "pair_y_range": [
+        65,
+        115
+      ],
+      "valid": false,
+      "reasons": [
+        "reference_row_not_bracketed"
+      ]
+    },
+    {
+      "frame": 61,
+      "threshold": 100.0,
+      "runs_y120": [],
+      "accepted_y120": [],
+      "pair_y_range": null,
+      "valid": false,
+      "reasons": [
+        "single_boundary_only_side_ambiguous"
+      ]
+    },
+    {
+      "frame": 111,
+      "threshold": 98.0,
+      "runs_y120": [
+        [
+          53,
+          79,
+          27
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 53,
+          "end": 79,
+          "lc": 53.0,
+          "rc": 49.0,
+          "width": 27
+        }
+      ],
+      "pair_y_range": [
+        90,
+        90
+      ],
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "frame": 171,
+      "threshold": 100.0,
+      "runs_y120": [
+        [
+          73,
+          101,
+          29
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 73,
+          "end": 101,
+          "lc": 64.0,
+          "rc": 63.5,
+          "width": 29
+        }
+      ],
+      "pair_y_range": [
+        65,
+        100
+      ],
+      "valid": false,
+      "reasons": [
+        "reference_row_not_bracketed"
+      ]
+    },
+    {
+      "frame": 211,
+      "threshold": 98.0,
+      "runs_y120": [
+        [
+          77,
+          106,
+          30
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 77,
+          "end": 106,
+          "lc": 64.5,
+          "rc": 64.0,
+          "width": 30
+        }
+      ],
+      "pair_y_range": [
+        90,
+        100
+      ],
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "frame": 251,
+      "threshold": 100.0,
+      "runs_y120": [
+        [
+          0,
+          37,
+          38
+        ],
+        [
+          200,
+          237,
+          38
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 0,
+          "end": 37,
+          "lc": -1.0,
+          "rc": 84.0,
+          "width": 38
+        },
+        {
+          "start": 200,
+          "end": 237,
+          "lc": 66.5,
+          "rc": 65.0,
+          "width": 38
+        }
+      ],
+      "pair_y_range": [
+        115,
+        125
+      ],
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "frame": 281,
+      "threshold": 100.0,
+      "runs_y120": [
+        [
+          28,
+          56,
+          29
+        ],
+        [
+          316,
+          319,
+          4
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 28,
+          "end": 56,
+          "lc": 68.0,
+          "rc": 71.0,
+          "width": 29
+        },
+        {
+          "start": 316,
+          "end": 319,
+          "lc": 50.0,
+          "rc": -1.0,
+          "width": 4
+        }
+      ],
+      "pair_y_range": [
+        125,
+        160
+      ],
+      "valid": false,
+      "reasons": [
+        "reference_row_not_bracketed"
+      ]
+    },
+    {
+      "frame": 301,
+      "threshold": 100.0,
+      "runs_y120": [
+        [
+          60,
+          87,
+          28
+        ],
+        [
+          318,
+          319,
+          2
+        ]
+      ],
+      "accepted_y120": [
+        {
+          "start": 60,
+          "end": 87,
+          "lc": 66.0,
+          "rc": 63.5,
+          "width": 28
+        }
+      ],
+      "pair_y_range": [
+        65,
+        115
+      ],
+      "valid": false,
+      "reasons": [
+        "reference_row_not_bracketed"
+      ]
+    }
+  ],
+  "replay_summary": {
+    "input_count": 325,
+    "processed_ok": 325,
+    "valid": 160,
+    "invalid": 165,
+    "read_failed": 0,
+    "overlay_count": 325,
+    "video_decoded_frames": 325,
+    "preview_fps": 10,
+    "preview_is_capture_fps": false,
+    "video_error": null,
+    "invalid_reasons": {
+      "reference_row_not_bracketed": 72,
+      "insufficient_pair_support": 50,
+      "low_pair_quality": 50,
+      "single_boundary_only_side_ambiguous": 83
+    },
+    "algorithm_ms": {
+      "mean": 3.268339692307692,
+      "median": 3.3276,
+      "p95": 4.410520000000001,
+      "maximum": 11.1904
+    },
+    "timing_excludes": [
+      "image_read",
+      "drawing",
+      "image_write",
+      "video_encoding"
+    ],
+    "wall_seconds": 2.251446499954909,
+    "temporal_state": "none",
+    "interpretation": "output validity statistics, not accuracy; PC timing is not K230D or end-to-end latency"
+  },
+  "source_sha256": {
+    "vision\\src\\offline_boundary.py": "b164e219915132f9063fb51c6395a5b68cf2c78f90e31ac6b933edd307878be4",
+    "vision\\tools\\replay_offline.py": "5ea03fdd9d26e9f9bb20ef701b8389fc953e8b52e9f01becc0e2c566e9e97c05",
+    "vision\\tools\\check_offline_replay.py": "b72c4b327bf4becfa41b8e5373a895acc38234e14f92a074bc6e9f6ffed28351"
+  },
+  "invalid_segments": [
+    [
+      38,
+      41,
+      4
+    ],
+    [
+      50,
+      67,
+      18
+    ],
+    [
+      76,
+      86,
+      11
+    ],
+    [
+      108,
+      124,
+      17
+    ],
+    [
+      143,
+      163,
+      21
+    ],
+    [
+      170,
+      172,
+      3
+    ],
+    [
+      179,
+      187,
+      9
+    ],
+    [
+      190,
+      197,
+      8
+    ],
+    [
+      203,
+      212,
+      10
+    ],
+    [
+      221,
+      231,
+      11
+    ],
+    [
+      247,
+      260,
+      14
+    ],
+    [
+      262,
+      262,
+      1
+    ],
+    [
+      267,
+      273,
+      7
+    ],
+    [
+      281,
+      297,
+      17
+    ],
+    [
+      301,
+      301,
+      1
+    ],
+    [
+      311,
+      320,
+      10
+    ],
+    [
+      323,
+      325,
+      3
+    ]
+  ],
+  "syntax_ast_passed": true
+}

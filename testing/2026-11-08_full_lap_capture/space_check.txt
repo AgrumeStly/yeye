@@ -1,0 +1,2 @@
+[FULL_LAP_SPACE] 101515264
+末次查询 script_running=false；本轮仅查询可用空间，未启动整圈采集。

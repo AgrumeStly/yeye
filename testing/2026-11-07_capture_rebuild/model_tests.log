@@ -1,0 +1,14 @@
+test_complete_session_wraparound_and_real_jpeg (__main__.CaptureTests.test_complete_session_wraparound_and_real_jpeg) ... ok
+test_corrupt_jpeg_never_logged_as_complete (__main__.CaptureTests.test_corrupt_jpeg_never_logged_as_complete) ... ok
+test_disk_full_stays_failed_and_releases_resources (__main__.CaptureTests.test_disk_full_stays_failed_and_releases_resources) ... ok
+test_interrupt_retains_partial_session (__main__.CaptureTests.test_interrupt_retains_partial_session) ... ok
+test_missing_card_has_no_camera_side_effects (__main__.CaptureTests.test_missing_card_has_no_camera_side_effects) ... ok
+test_path_label_rejected_before_io (__main__.CaptureTests.test_path_label_rejected_before_io) ... ok
+test_pc_check_detects_post_copy_corruption (__main__.CaptureTests.test_pc_check_detects_post_copy_corruption) ... ok
+test_preview_does_not_create_storage (__main__.CaptureTests.test_preview_does_not_create_storage) ... ok
+test_repeat_run_does_not_overwrite (__main__.CaptureTests.test_repeat_run_does_not_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.085s
+
+OK

@@ -1,0 +1,8 @@
+{
+  "vision/src/board_observer_core.py": "708ab92d73775f39ba4e18bd58cc5d45e0d0957ec87c63889d6e2145dbc8bd12",
+  "vision/src/vision_protocol.py": "a2a2a298bab5c2b7aad4707c97c2e66bf8f8f39a720f40b7239a697b2f00eaf6",
+  "vision/src/observer_bench_canmv.py": "b0486a8d2de16f27c4c1d0fb44ac1c91fea31351fb94bc7855de13732884ceda",
+  "D:/projects/projectsyeye/vision/tools/validate_board_preparation.py": "9673505e66bbc569b410231d7ac1ded40be0237acd7aa568f00793760ea119fe",
+  "vision/tools/protocol_cross_harness.c": "04853b4086d122255a4c8588d54ce92ddf99cfb17cd0397a89c16914a696d07a",
+  "vision/tools/build_observer_bundle.py": "174cf7f9eb3b3ec04784bc6fd9a66c293ee9514f90b5ed148dfe2dbf5ce2acff"
+}

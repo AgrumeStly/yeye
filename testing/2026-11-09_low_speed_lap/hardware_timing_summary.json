@@ -1,0 +1,62 @@
+{
+  "board_sd_02": {
+    "frames": 30,
+    "algorithm_min_ms": 252,
+    "algorithm_median_ms": 271.0,
+    "algorithm_max_ms": 782,
+    "interval_max_ms": 927,
+    "min_free_heap": 7072,
+    "wire_valid_count": 0,
+    "candidate_valid_count": 0
+  },
+  "board_sd_03": {
+    "frames": 30,
+    "algorithm_min_ms": 54,
+    "algorithm_median_ms": 70.5,
+    "algorithm_max_ms": 85,
+    "interval_max_ms": 262,
+    "min_free_heap": 3698560,
+    "wire_valid_count": 0,
+    "candidate_valid_count": 0
+  },
+  "board_live_01": {
+    "frames": 73,
+    "algorithm_min_ms": 115,
+    "algorithm_median_ms": 118,
+    "algorithm_max_ms": 121,
+    "interval_max_ms": 165,
+    "min_free_heap": 4317152,
+    "wire_valid_count": 0,
+    "candidate_valid_count": 0
+  },
+  "board_live_02": {
+    "frames": 145,
+    "algorithm_min_ms": 44,
+    "algorithm_median_ms": 51,
+    "algorithm_max_ms": 54,
+    "interval_max_ms": 96,
+    "min_free_heap": 3289824,
+    "wire_valid_count": 0,
+    "candidate_valid_count": 0
+  },
+  "board_sd_04": {
+    "frames": 30,
+    "algorithm_min_ms": 22,
+    "algorithm_median_ms": 31.5,
+    "algorithm_max_ms": 39,
+    "interval_max_ms": 222,
+    "min_free_heap": 2924288,
+    "wire_valid_count": 0,
+    "candidate_valid_count": 0
+  },
+  "board_live_03": {
+    "frames": 165,
+    "algorithm_min_ms": 41,
+    "algorithm_median_ms": 43,
+    "algorithm_max_ms": 47,
+    "interval_max_ms": 89,
+    "min_free_heap": 3302400,
+    "wire_valid_count": 0,
+    "candidate_valid_count": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "live_no_drive",
+  "port": "COM10",
+  "source_sha256": "6c3e1f8080572425aaeeaa281b5bedf3c210b1ab1abd5c14c16859597189bca6",
+  "started": "2026-11-11T19:13:00.500042+08:00",
+  "automatic_motor_start_permitted": false,
+  "operator_KEY_fixture_test": false,
+  "confirmed_suspended": false,
+  "confirmed_mcu_run_ms": null,
+  "input_window_ms": null,
+  "main_py_written": false
+}

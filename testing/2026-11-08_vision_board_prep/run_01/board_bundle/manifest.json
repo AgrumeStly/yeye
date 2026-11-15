@@ -1,0 +1,14 @@
+{
+  "sources": {
+    "vision/src/board_observer_core.py": "708ab92d73775f39ba4e18bd58cc5d45e0d0957ec87c63889d6e2145dbc8bd12",
+    "vision/src/vision_protocol.py": "a2a2a298bab5c2b7aad4707c97c2e66bf8f8f39a720f40b7239a697b2f00eaf6",
+    "vision/src/observer_bench_canmv.py": "b0486a8d2de16f27c4c1d0fb44ac1c91fea31351fb94bc7855de13732884ceda"
+  },
+  "bundle": "testing/2026-11-08_vision_board_prep/run_01/board_bundle/observer_bench_canmv.py",
+  "sha256": "4b8969c5571571d3f814c12697c481b692d9c50838b6e63842f285b55185d6f3",
+  "mode": "idle",
+  "UART_ENABLED": false,
+  "board_run": false,
+  "main_py_changed": false,
+  "control_ready": false
+}

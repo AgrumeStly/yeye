@@ -1,5 +1,7 @@
 # 模块API与跨板协议入口
 
+2026-11-10新增独立显示诊断：[oled_i2c.h](../control/Drivers_Custom/Display/oled_i2c.h)提供总线初始化、地址探测、SSD1306候选初始化及128字节页写入；[oled_pattern.h](../control/App/Diagnostics/oled_pattern.h)生成1024字节页排列图样。仅主循环调用，不能在控制／UART ISR阻塞刷新；无动力点亮已通过，运动集成另验，见[说明](../control/docs/oled_bench.md)。
+
 2026-10-29安装变更：主控已换左右轮并重新命名物理A左／B右，旧前进转向在新位置成为后退；当前资源到物理轮的对应及参数沿用统一见[当前轮位](../hardware_preparation/wheel_mapping.md)。新物理A/B不等同驱动插口MOTOR-A/B或编码器软件a/b；原始软件通道不随命名自动改动，当前实际配对待核。本次不改固件／引脚，不把旧安装的手转或桥级转停证据外推为新安装动力通过。
 
 
@@ -12,7 +14,9 @@
 
 | 模块／真实头文件 | 主要API | 调用约束与结果 |
 | --- | --- | --- |
-| [speed_pi.h](../control/Algorithms/Speed/speed_pi.h) | speed_pi_reset、speed_pi_config_valid、speed_pi_update | 纯PI数学，RPM与实际dt输入、0..500千分比输出，限幅／抗饱和，非法值拒绝并清积分 |
+| [lap_motion.h](../control/App/Motion/lap_motion.h)、[lap_link.h](../control/Drivers_Custom/Communication/lap_link.h) | lap_motion_init、tick、sample、receive、fault；lap_link_push | 2026-11-09独立低速试跑候选，动态左右RPM与真实撤驱动；v2局部转向与v1固定行偏差隔离，见[操作与边界](../control/docs/low_speed_lap.md)。板上／整圈待验 |
+| [speed_sprint.h](../control/App/Motion/speed_sprint.h) | speed_sprint_init、tick、sample、fault、led | 独立直线带载提速试验，复用校准与闭环，增加轮程限停、KEY地面确认和绿灯报数；[边界与证据](../control/docs/speed_sprint.md)，未接正式循迹或UART |
+| [speed_pi.h](../control/Algorithms/Speed/speed_pi.h) | speed_pi_reset、speed_pi_config_valid、speed_pi_update | 纯PI数学，RPM与实际dt输入，限幅／抗饱和；默认范围保留，SpeedSprint独立编译扩展范围，实际界限以头文件及[模块说明](../control/docs/speed_sprint.md)为准 |
 | [speed_match.h](../control/App/Motion/speed_match.h) | speed_match_init、tick、sample、fault、led | 独立台架策略，1ms监督／20ms反馈；逐轮500ms识别、双轮默认3秒、共同RPM；正常重复须重新人工触发，故障锁定 |
 | [board.h](../control/Drivers_Custom/Board/board.h) | board_init、board_millis、board_uart_read、board_uart_fault、board_apply_requests | 主框架使用；时间为uint32毫秒。UART默认关闭；左右request为演示归一化请求，不是m/s、编码器闭环或真实PWM输出 |
 | [protocol.h](../control/Drivers_Custom/Communication/protocol.h) | protocol_crc16、protocol_encode、protocol_parser_init、protocol_push | 字节包编解码；push每次输入一个字节，只在完整验证帧时返回1。字段单位及错误处理见协议原文 |

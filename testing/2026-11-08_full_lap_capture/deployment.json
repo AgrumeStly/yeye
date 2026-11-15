@@ -1,0 +1,14 @@
+{
+  "deployed_ast_matches": true,
+  "previous_main_matches_corner_source": true,
+  "hashes": {
+    "vision/src/capture_full_lap_canmv.py": "3494f4d892babf7fc00866b5eaac6ac39b9d473c713217dc7a23e1ae6fdfea3a",
+    "vision/src/capture_push_canmv.py": "53cb9db2c16b7b79e4ffbba682e7a732304569a2fc3175f93d7b058f79151b75",
+    "testing\\2026-11-08_full_lap_capture\\deployed_main.py": "afd1d86df49115ea2f43d532a2e84bd38981672ac890640af8a6a68a742eeeac",
+    "testing\\2026-11-08_full_lap_capture\\previous_main.py": "96e02f03c70b98aabb6e85008e506ff5f606028a85535f027fa7313fdd32227c"
+  },
+  "board_port": "COM10",
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "firmware": "v1.8-0",
+  "scope": "Saved and read back main.py; no full-lap capture started"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-12",
+  "input_kind": "deployed_R6_real_camera_main_autostart",
+  "power_source": "新电池经驱动稳压5V分支给STM32与K230，DAP仅SWD，K230电脑USB不接",
+  "calibration_feedback": {"left_500ms": "符合", "right_500ms_and_phase2_error0_state1_UART0": "符合"},
+  "screenshot_values": {
+    "valid": 1, "elapsed_ms": 3000, "reason": "LAP_LIMIT11",
+    "left_target_rpm": 31.7614498, "right_target_rpm": 35.4585495,
+    "left_rpm": 30.2387314, "right_rpm": 36.6081734,
+    "left_pwm_before_stop_permille": 195, "right_pwm_before_stop_permille": 190,
+    "left_boost_samples": 1, "right_boost_samples": 1
+  },
+  "operator_exact_feedback": "轮子正常转",
+  "current_zero_pwm_feedback": "主控先对停车后预期表回复符合，随后新原图再次确认当前左右PWM0",
+  "current_uart_errors_feedback": "主控补充UART错误原图为0，见runtime_window_stop_01",
+  "physical_stop_and_board_reset_feedback": "主控对停稳、两板未重启的明确预期表回复符合；随后单独纠正path_valid为0及received不递增",
+  "dynamic_supply_voltage": null,
+  "boundary": "只证明悬空单次RUN及末次快照；PWM是撤驱动前请求，不是当前值。末帧误差不当持续500ms统计，不当地面或完整一圈。"
+}

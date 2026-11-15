@@ -1,0 +1,176 @@
+COMMAND: vision/.venv/Scripts/python.exe vision/tools/check_offline_replay.py
+EXIT_CODE: 0
+STDOUT:
+{
+  "passed": true,
+  "sequence_checks": [
+    {
+      "case": "real_valid",
+      "valid": true,
+      "reasons": [],
+      "centerline_count": 16
+    },
+    {
+      "case": "white",
+      "valid": false,
+      "reasons": [
+        "no_contrast_no_road"
+      ],
+      "centerline_count": 0
+    },
+    {
+      "case": "real_valid_again",
+      "valid": true,
+      "reasons": [],
+      "centerline_count": 16
+    },
+    {
+      "case": "black",
+      "valid": false,
+      "reasons": [
+        "no_contrast_no_road"
+      ],
+      "centerline_count": 0
+    },
+    {
+      "case": "read_failure",
+      "valid": false,
+      "reasons": [
+        "unsupported_image_shape_or_type"
+      ],
+      "centerline_count": 0
+    },
+    {
+      "case": "wrong_shape",
+      "valid": false,
+      "reasons": [
+        "unsupported_image_shape_or_type"
+      ],
+      "centerline_count": 0
+    }
+  ],
+  "captures_unchanged": 651,
+  "frame_lineage_checked": 325,
+  "overlays_decoded": 325,
+  "published_regression_fresh_detector_matching": 125,
+  "detector_input_unchanged": true,
+  "geometry_checks": [
+    {
+      "case": "real_ambiguity_80",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "pair_not_widening_toward_camera",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "real_ambiguity_81",
+      "valid": false,
+      "reasons": [
+        "pair_not_widening_toward_camera",
+        "reference_row_not_bracketed"
+      ]
+    },
+    {
+      "case": "real_ambiguity_82",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "pair_not_widening_toward_camera",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "real_ambiguity_190",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "pair_not_widening_toward_camera",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "real_ambiguity_191",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "pair_not_widening_toward_camera",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "real_ambiguity_192",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "pair_not_widening_toward_camera",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "real_ambiguity_250",
+      "valid": false,
+      "reasons": [
+        "single_boundary_only_side_ambiguous"
+      ]
+    },
+    {
+      "case": "real_ambiguity_251",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "real_ambiguity_252",
+      "valid": false,
+      "reasons": [
+        "insufficient_pair_support",
+        "reference_row_not_bracketed",
+        "low_pair_quality"
+      ]
+    },
+    {
+      "case": "horizontal_single_stripe",
+      "valid": false,
+      "reasons": [
+        "unassigned_ribbon_only_no_pair"
+      ],
+      "ribbon_count": 1
+    },
+    {
+      "case": "top_wall",
+      "valid": false,
+      "reasons": [
+        "no_boundary_candidates"
+      ],
+      "ribbon_count": 0
+    },
+    {
+      "case": "parallel_false_pair",
+      "valid": false,
+      "reasons": [
+        "pair_not_widening_toward_camera"
+      ],
+      "ribbon_count": 0
+    }
+  ],
+  "baseline_successes_preserved": [
+    1,
+    31,
+    71,
+    131,
+    201,
+    241
+  ],
+  "synthetic_scope": "failure behavior only, not real-scene recognition evidence"
+}
+
+STDERR:

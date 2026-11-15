@@ -1,0 +1,22 @@
+{
+  "firmware_revision": "0x02110009",
+  "fixture": "synthetic left -500; NOT CAMERA",
+  "last_run_image": "last_run_watch.png",
+  "timing_image": "timing_watch.png",
+  "valid": 1,
+  "elapsed_ms": 3000,
+  "reason": "LAP_LIMIT (11)",
+  "left_target_rpm": 20,
+  "right_target_rpm": 60,
+  "left_rpm": 16.9267979,
+  "right_rpm": 59.5401344,
+  "left_pwm_before_stop_per_mille": 217,
+  "right_pwm_before_stop_per_mille": 268,
+  "left_boost_samples": 1,
+  "right_boost_samples": 1,
+  "uart_errors_operator_reported": 0,
+  "timing": {"counter_ready": 1, "clock_hz": 16000000, "systick_max_cycles": 3080, "systick_max_us": 192.5, "motion_lock_max_cycles": 697, "motion_lock_max_us": 43.5625},
+  "operator_report": "rotation matched expected both forward, right faster, left sustained, three-second stop",
+  "accepted_scope": "one suspended left differential three-second run; last-sample target errors within 5 RPM",
+  "not_verified": ["continuous speed-match duration", "ground turning", "physical source-loss stop", "real vision", "full lap"]
+}

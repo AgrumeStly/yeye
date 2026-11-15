@@ -1,0 +1,10 @@
+{
+  "purpose": "physical main-board KEY emergency stop during suspended straight RUN",
+  "firmware_revision": "0x02110009",
+  "operator_sequence": "one long KEY press/release to start; after observed rotation approximately one second, briefly press and release KEY once; keep K230 and main-board power and Run; do not reset before evidence",
+  "input_window_ms": 120000,
+  "mcu_per_run_limit_ms": 3000,
+  "expected": "early drive removal, latched LAP_KEY; saved elapsed_ms less than normal 3000ms LIMIT; physical observation required",
+  "automatic_start": false,
+  "result": "functional KEY stop passed: operator reports drive removed; retained snapshot LAP_KEY at 804ms, UART errors0; see stm32_review.json"
+}

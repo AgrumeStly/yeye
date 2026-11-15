@@ -1,0 +1,22 @@
+{
+  "purpose": "UART overrun candidate fix; physical retest pending",
+  "LowSpeedLap": {
+    "revision": "0x02110005",
+    "run_ms": 3000,
+    "bin_sha256": "816d2be7b013a5d8d322317716548c6d955314a2f8a3ada816cd0c295e19a17e"
+  },
+  "LowSpeedLapTrack": {
+    "revision": "0x02110006",
+    "run_ms": 300000,
+    "bin_sha256": "22a79da12a7561757868c95b37e4c26c22e7b1adb3bb996a4f54ff603f096d7d"
+  },
+  "arm_build_errors": 0,
+  "arm_build_warnings": 0,
+  "program_size": {"code": 14504, "ro": 436, "rw": 216, "zi": 2680},
+  "control_model_assertions_passed": 188,
+  "uart_production_driver_host_checks": "PASS; ring wrap/full, hardware error categories, retained first evidence, latch consumption, configured IRQ priority",
+  "target_disassembly": "BASEPRI_MAX enter and BASEPRI restore confirmed in built LowSpeedLap image",
+  "hardware_irq_timing_tested": false,
+  "physical_motor_run_accepted": false,
+  "source": "local uncommitted workspace; no flash, commit, or upload performed by assistant"
+}

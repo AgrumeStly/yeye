@@ -1,0 +1,284 @@
+{
+  "groups": [
+    {
+      "session": "d01_straight_run01",
+      "frames": 325,
+      "spatial_visible_frames": [
+        234
+      ],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "unknown": 325
+      },
+      "algorithm_ms": {
+        "mean": 0.18363015384615386,
+        "p95": 0.4423400000000001
+      }
+    },
+    {
+      "session": "v03_center_0002",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.731,
+        "p95": 0.95756
+      }
+    },
+    {
+      "session": "v03_offset_left_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.49446666666666667,
+        "p95": 0.5035200000000001
+      }
+    },
+    {
+      "session": "v03_offset_right_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.31556666666666666,
+        "p95": 0.32192
+      }
+    },
+    {
+      "session": "v03_heading_left_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.4359333333333333,
+        "p95": 0.654
+      }
+    },
+    {
+      "session": "v03_heading_right_0001",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.32216666666666666,
+        "p95": 0.33169
+      }
+    },
+    {
+      "session": "v03_center_0007",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.30219999999999997,
+        "p95": 0.31765
+      }
+    },
+    {
+      "session": "v03_center_0008",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.0083,
+        "p95": 0.00878
+      }
+    },
+    {
+      "session": "v03_center_0009",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.017266666666666666,
+        "p95": 0.02479
+      }
+    },
+    {
+      "session": "v03_center_0010",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.32676666666666665,
+        "p95": 0.34638
+      }
+    },
+    {
+      "session": "v03_center_0011",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.295,
+        "p95": 0.30351
+      }
+    },
+    {
+      "session": "v03_center_0012",
+      "frames": 3,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 3
+      },
+      "algorithm_ms": {
+        "mean": 0.007733333333333334,
+        "p95": 0.00788
+      }
+    },
+    {
+      "session": "push_corner_77_0001",
+      "frames": 304,
+      "spatial_visible_frames": [],
+      "seen_events": [],
+      "passage_events": [],
+      "gate_events": [],
+      "states": {
+        "initial_guard": 13,
+        "armed": 291
+      },
+      "algorithm_ms": {
+        "mean": 0.3000279605263158,
+        "p95": 0.468155
+      }
+    },
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "spatial_visible_frames": [
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578
+      ],
+      "seen_events": [
+        {
+          "frame": 409,
+          "ms": 70436,
+          "id": 1
+        },
+        {
+          "frame": 571,
+          "ms": 120537,
+          "id": 2
+        }
+      ],
+      "passage_events": [
+        {
+          "frame": 426,
+          "ms": 74901,
+          "id": 1
+        },
+        {
+          "frame": 582,
+          "ms": 124187,
+          "id": 2
+        }
+      ],
+      "gate_events": [
+        {
+          "frame": 421,
+          "ms": 73498,
+          "id": 1
+        },
+        {
+          "frame": 578,
+          "ms": 122790,
+          "id": 2
+        }
+      ],
+      "states": {
+        "initial_guard": 13,
+        "armed": 684,
+        "candidate": 2,
+        "finish_line_seen": 22,
+        "temporarily_unobserved": 6,
+        "near_marker_then_unobserved": 5
+      },
+      "algorithm_ms": {
+        "mean": 0.3426531420765027,
+        "p95": 0.7606149999999999
+      }
+    }
+  ],
+  "frames": 1394,
+  "video_decoded": 732,
+  "baseline": "No finish detector existed; frozen R1/C1 have no emitted finish events",
+  "evaluation": "All inspected development data; previous-installation line appearances are not negative ground truth"
+}

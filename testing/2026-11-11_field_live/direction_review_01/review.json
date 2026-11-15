@@ -1,0 +1,291 @@
+{
+  "frozen_r5_sha256": "54e71bcc4346710300c0302a77f6bba86609baca5c937772d4282fc874175f4d",
+  "reused_existing_checks": 42,
+  "images": [
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_center_0002\\data_0001.jpg",
+      "sha256": "934d435301fc9490035654ac492962691a149e2492822888e95d5d7403df8a2d",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_center_0002\\data_0002.jpg",
+      "sha256": "e9228ba101a804d4a6c93a65be7b41c585d9501090e958b28639366990ab3fe1",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_center_0002\\data_0003.jpg",
+      "sha256": "4a2cd81993722302843e292ccf1f4c1d8f3a9265d8df306881ba4344f64f1772",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0001.jpg",
+      "sha256": "a531cb0bf42c7cdfe49f6abfe7aaed0d556ed7ef497296e80d6836721f701680",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0002.jpg",
+      "sha256": "c5e3eb9030d8483bd7780dd580d04991b3d9e54e0e0bc116e6ea9524744caebb",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0003.jpg",
+      "sha256": "fcb7a55daff64b7f04440267d9b65363d271c2e9a76e2305f2d6e3278d875455",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0001.jpg",
+      "sha256": "4a28351064237f76d97f7859a47537a50b6dfd148e336358fd9a699fe2e04dc3",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0002.jpg",
+      "sha256": "0588bf48dd7139ba07c568ca49830afbec63b1d1d1b0babd1c394ba9c98e4510",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0003.jpg",
+      "sha256": "30d0734de366baf334a96289d5f3d2d83647a8b2f2720ac3e7cafacac9f1ab27",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001\\data_0001.jpg",
+      "sha256": "8b15e441177bd98ae7926a9659797d576318e22a992dd18762ac01475f86e9a2",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 286,
+      "bend": 286,
+      "support": [
+        13,
+        12
+      ],
+      "modeled_left_rpm": 44.819672,
+      "modeled_right_rpm": 24.884327999999996
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001\\data_0002.jpg",
+      "sha256": "f2326ff3a1636a9acff12b326bc38f17172f36aa034b8baf791e97a4294d36e2",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 286,
+      "bend": 286,
+      "support": [
+        13,
+        12
+      ],
+      "modeled_left_rpm": 44.819672,
+      "modeled_right_rpm": 24.884327999999996
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001\\data_0003.jpg",
+      "sha256": "5e6b7eb568b27903838d3190b21216d18f8c11144251b82106f2b950f0ac25bc",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 286,
+      "bend": 286,
+      "support": [
+        13,
+        12
+      ],
+      "modeled_left_rpm": 44.819672,
+      "modeled_right_rpm": 24.884327999999996
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001\\data_0001.jpg",
+      "sha256": "bbd285d6bb655a2a5d63e0f6c29ae92c0dc04be74901afbbc6abeb4e80f94d93",
+      "valid": true,
+      "source": "current_pair",
+      "steering": -273,
+      "bend": 573,
+      "support": [
+        12,
+        13
+      ],
+      "modeled_left_rpm": 21.581722,
+      "modeled_right_rpm": 37.790278
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001\\data_0002.jpg",
+      "sha256": "11b9cc4e9df343c0d3ddf79c575abbb86856d4b81f38061c059d3a46adc11e4f",
+      "valid": true,
+      "source": "current_pair",
+      "steering": -273,
+      "bend": 573,
+      "support": [
+        12,
+        13
+      ],
+      "modeled_left_rpm": 21.581722,
+      "modeled_right_rpm": 37.790278
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001\\data_0003.jpg",
+      "sha256": "c2f30b801a31afe3d0cba394f255d12c9dc61039c75efcd1ab43d3584c169341",
+      "valid": true,
+      "source": "current_pair",
+      "steering": -273,
+      "bend": 573,
+      "support": [
+        12,
+        13
+      ],
+      "modeled_left_rpm": 21.581722,
+      "modeled_right_rpm": 37.790278
+    },
+    {
+      "file": "testing\\2026-11-11_field_live\\straight_center_01\\preview\\preview_01_frame_00000001.jpg",
+      "sha256": "0636bd8cbf4a985f8a5337fdf2165d2f47b08e3cfc2bdc4d5570f9e20730a0df",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "testing\\2026-11-11_field_live\\straight_center_01\\preview\\preview_02_frame_00000032.jpg",
+      "sha256": "358cdb8fc6e369392cabc79a80eb880e97c077b29a3b76fd630209df46a83408",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    },
+    {
+      "file": "testing\\2026-11-11_field_live\\straight_center_01\\preview\\preview_03_frame_00000062.jpg",
+      "sha256": "2a916ab2647745e4eaf7d2ca9fdb31eff6999f9f762b6dcec1989e6d77b8ece2",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    },
+    {
+      "file": "testing\\2026-11-11_field_live\\straight_center_01\\preview\\preview_04_frame_00000092.jpg",
+      "sha256": "3bc992c4ce1b0380f57e1f1d502077c55c2c83611c043744c79e45b8cf9377f8",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    },
+    {
+      "file": "testing\\2026-11-11_field_live\\straight_center_01\\preview\\preview_05_frame_00000122.jpg",
+      "sha256": "2ef9cf1a68cf7c9fb285f1fcc01c2d9c76ef5c7b072b339b994037557e106503",
+      "valid": true,
+      "source": "current_pair",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        13,
+        13
+      ],
+      "modeled_left_rpm": 40.0,
+      "modeled_right_rpm": 40.0
+    }
+  ],
+  "input": "stored JPEG repeated at synthetic 0/50/100/150ms; not camera stream",
+  "direction": "right positive; left wheel target higher for positive steering",
+  "physical_direction_verified": false,
+  "new_camera_capture": false,
+  "limitations": "JPEG preview is not raw sensor bytes; IDE frame ids are not algorithm indices; old yaw samples may remain invalid in L1"
+}

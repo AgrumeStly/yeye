@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-09T12:20:57.518202+08:00",
+  "ports": [
+    {
+      "port": "COM5",
+      "description": "蓝牙链接上的标准串行 (COM5)",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "port": "COM3",
+      "description": "蓝牙链接上的标准串行 (COM3)",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "port": "COM4",
+      "description": "蓝牙链接上的标准串行 (COM4)",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "port": "COM6",
+      "description": "蓝牙链接上的标准串行 (COM6)",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "port": "COM9",
+      "description": "USB 串行设备 (COM9)",
+      "vid": 3368,
+      "pid": 516,
+      "serial_number": "00010001066CFF554954657287234218A5A5A5A597969908"
+    },
+    {
+      "port": "COM10",
+      "description": "USB 串行设备 (COM10)",
+      "vid": 4617,
+      "pid": 43985,
+      "serial_number": "001000000"
+    }
+  ],
+  "roles": {
+    "COM9": "DAPLink USB virtual serial; Keil uses CMSIS-DAP/SWD, not this COM port",
+    "COM10": "K230D CanMV USB development interface"
+  },
+  "stm32_flash_performed": false,
+  "swd_target_connectivity_verified": false
+}

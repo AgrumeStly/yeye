@@ -1,0 +1,10 @@
+{
+  "recorded_before_algorithm_implementation": true,
+  "input": "vision/data/captures/d01_straight_run01",
+  "development": [1, 200],
+  "held_out_validation": [201, 325],
+  "selection": "连续编号分段，不随机拆帧；不是独立圈；原图总览用于理解输入，留出片段不用于迭代参数",
+  "temporal_state": "算法设计为逐帧无状态；验证入口新建检测器；不存在历史宽度或路径回用",
+  "preview_fps": 10,
+  "preview_note": "人为预览速度，不代表真实采集帧率；损坏日志不参与处理"
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "source": "vision/data/captures/final_mount_20261108/push_corner_77_0002/data_0021.jpg",
+    "sha256": "0f1d1605472cc98077daf2fbf38df4baf75326cab59fe6f46f6b414a20c2af15",
+    "reason": "beyond_session_saved_count_or_missing_log",
+    "session_saved_count": 20,
+    "log_present": true
+  }
+]

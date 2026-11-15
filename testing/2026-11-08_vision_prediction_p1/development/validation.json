@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "protected_unchanged": 1398,
+  "actual_frames": 1394,
+  "predictions_labelled_separately": true,
+  "protocol_valid_always_false": true,
+  "max_observed_model_age_ms": 1494,
+  "original_hashes_unchanged": true
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-11",
+  "operator_request": "先暂停一会继续",
+  "input_kind": "real_camera_runtime_r6",
+  "source_sha256": "50b1c01c119a303d7e2c1d9c5cfb7fa4c23fd08cb296a7eaed2cbb35181183ff",
+  "preconditions": "主控对驱动ON、两轮完全悬空、phase2/error0/state1/UART0/PWM0/run_ms3000回复符合",
+  "instruction_already_issued": "只做一次KEY长按松开，最多三秒，保存g_lap_last、轮子表现和UART错误；不再启动或落地",
+  "operator_KEY_execution": "not_reported",
+  "physical_motion_result": "not_reported; do not count pass or assume not executed",
+  "cleanup": {"own_script_stopped": true, "running_verified_false": true, "connector_disconnected": true},
+  "physical_power_instruction": "已指导驱动OFF、拔XT30、保持车辆稳固悬空，不再按KEY",
+  "physical_power_action_confirmed": false,
+  "resume_requirement": "先核对物理隔离及是否已执行本次KEY；若已执行先保存g_lap_last和错误，勿直接复位。当前状态/phase不因过去校准而假定有效；连接器断开可能有已知UART瞬态，按实值处理。",
+  "main_py_written": false,
+  "stm32_firmware_changed": false,
+  "lap_verified": false
+}

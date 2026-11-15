@@ -1,0 +1,7 @@
+{
+  "source": "SWD attach read only",
+  "probe": "00010001066cff554954657287234218a5a5a5a597969908",
+  "bytes": 524288,
+  "sha256": "f3da431702364fbe594752350cd786a12ac6308b2846a410ab2a67e69fea2eee",
+  "vector": "980b00209d010008"
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "motor_straight",
+  "port": "COM10",
+  "source_sha256": "f286c3839e952fba10ccff821eb7f8c7e50476b62926b734efa93181805cff50",
+  "started": "2026-11-11T19:09:49.926825+08:00",
+  "automatic_motor_start_permitted": false,
+  "operator_KEY_fixture_test": true,
+  "confirmed_suspended": true,
+  "confirmed_mcu_run_ms": 3000,
+  "input_window_ms": 120000,
+  "main_py_written": false
+}

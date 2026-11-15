@@ -1,0 +1,29 @@
+{
+  "task": "V-04",
+  "model_tests_exit_code": 0,
+  "model_test_methods": 9,
+  "syntax_ast_passed": true,
+  "original_d01_files_unchanged": 651,
+  "r1_sources_unchanged": {
+    "vision/src/offline_boundary.py": true,
+    "vision/tools/replay_offline.py": true,
+    "vision/tools/check_offline_replay.py": true,
+    "vision/tools/compare_offline.py": true
+  },
+  "legacy_source_removed": [
+    "vision/reference_code/image.c",
+    "vision/reference_code/image.h",
+    "vision/reference_code/十字补线和最小二乘法.c"
+  ],
+  "new_source_sha256": {
+    "vision/src/capture_canmv.py": "0f508689714eb3a2a875e6f8e981f38caad7d395909519d4d9557fb4ad8a8732",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a",
+    "vision/tools/test_capture.py": "a3f7bba37684a309c6dbf81df8cefb7084f07d3955d0fe65233710041d6d0091"
+  },
+  "git_diff_check_exit_code": 0,
+  "git_diff_check_stderr": "warning: in the working copy of 'control/Core/Src/speed_match_main.c', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'control/MDK-ARM/speed_match.uvprojx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'control/Tests/Host/test_speed_match_integration.c', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'control/docs/validation.md', CRLF will be replaced by LF the next time Git touches it\n",
+  "board_run": false,
+  "hardware_actions": false,
+  "uploaded": false,
+  "firmware_compatibility": "not yet verified on actual board"
+}

@@ -1,0 +1,16 @@
+deprecated function
+Traceback (most recent call last):
+  File "<stdin>", line 726, in <module>
+  File "<stdin>", line 712, in _runtime_boot
+  File "<stdin>", line 601, in main
+  File "<stdin>", line 358, in update
+  File "<stdin>", line 270, in _grid
+Exception: IDE interrupt
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

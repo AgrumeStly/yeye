@@ -1,0 +1,70 @@
+{
+  "action": "probe",
+  "power_isolated_confirmed": true,
+  "main_py_written": false,
+  "automatic_motor_start": false,
+  "files": {
+    "/sdcard/main.py": {
+      "stat": {
+        "exists": true,
+        "type": "file",
+        "size": 35926,
+        "mtime": 1735689888
+      },
+      "local": "before_main.py",
+      "bytes": 35926,
+      "sha256": "838c5e9a4d14d42840c54526b1f3c4d4a848e93654de8bca5faf45f85fb2968f"
+    },
+    "/sdcard/boot.py": {
+      "stat": {
+        "exists": false,
+        "type": "file",
+        "size": 0,
+        "error": 1033
+      }
+    }
+  },
+  "passed": true,
+  "runtime_version": "trace-v3",
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "initial_status": {
+    "running": false
+  },
+  "source_sha256": "dac89185ef1e4d64550aee6028c0f1067edb8f2d1cd1f10b4737cb42d3110a19",
+  "runtime_log": {
+    "remote": "/sdcard/lap_runtime_logs/run_0011.jsonl",
+    "stat": {
+      "exists": true,
+      "type": "file",
+      "size": 191569,
+      "mtime": 1735690226
+    },
+    "bytes": 191569,
+    "sha256": "d3e9313c64b67ff12a753caff80f8f1286480e9a2adcdb1daf216d5cbdbcdca8",
+    "records": 382
+  }
+}

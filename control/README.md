@@ -13,6 +13,9 @@
 
 | 场景 | 入口 |
 | --- | --- |
+| OLED12864无动力点亮／图样与秒计数（2026-11-10） | [MDK-ARM/oled_bench.uvprojx](MDK-ARM/oled_bench.uvprojx)，目标OledBench；[说明](docs/oled_bench.md)，已编译／下载／0x3C实板持续写帧，主控确认画面完全清晰符合预期 |
+| 低速视觉差速试跑（2026-11-09独立候选，板上／整圈待验） | [MDK-ARM/low_speed_lap.uvprojx](MDK-ARM/low_speed_lap.uvprojx)，3秒LowSpeedLap／场地LowSpeedLapTrack；[步骤与限制](docs/low_speed_lap.md)、[I-02](../project_planning/tasks/I-02-LOW-SPEED-LAP.md) |
+| 比赛直线带载逐档提速／车载KEY确认与绿灯报数（2026-11-01新增，地面待验） | [MDK-ARM/speed_sprint.uvprojx](MDK-ARM/speed_sprint.uvprojx)，目标SpeedSprint；[脱线操作与边界](docs/speed_sprint.md) |
 | 编码器同速闭环／实时RPM／Watch调参（2026-10-30新增，实车待验） | [MDK-ARM/speed_match.uvprojx](MDK-ARM/speed_match.uvprojx)，目标SpeedMatch；[操作与软件证据](docs/speed_match.md) |
 | 双轮恒定前进3秒／左右输出修正（2026-10-30更新，实车待验） | [MDK-ARM/straight_test.uvprojx](MDK-ARM/straight_test.uvprojx)，目标StraightTest；[调参、操作与软件证据](docs/straight_test.md) |
 | 双编码器只读手转／整圈标定 | [MDK-ARM/encoder_bench.uvprojx](MDK-ARM/encoder_bench.uvprojx)，只有EncoderBench；[操作](docs/encoder_bench.md) |

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "protected_checks": [
+    {
+      "manifest": "testing/2026-11-08_vision_recovery_c2/protected_before.json",
+      "unchanged": 3616
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_curve_c1/protected_hashes.json",
+      "unchanged": 870
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_prediction_p1/release/protected_before.json",
+      "unchanged": 1398
+    }
+  ],
+  "old_boundary_videos_unchanged": true,
+  "P1_source_matches_release": true,
+  "manual_reviewed_natural_prediction_frames": 117,
+  "review_pages": 10,
+  "video_all_frames_decoded": 1798,
+  "source_frames_in_video": 732,
+  "new_source_hashes": {
+    "vision/src/offline_prediction.py": "9f6523b170c7e115987405ecb80c8546c64d0a444894d2fa4da750da9f701cac",
+    "vision/tools/replay_prediction.py": "1e58c8f6b72ac2e410c6bc093125ae8736c3bc2c248dd0867c42078613dd071a",
+    "vision/tools/make_prediction_preview.py": "0fb45a0ae4f2435cd5d52e5834b549b6e73594b0d92afe26e430c0a6b5890d23",
+    "vision/tools/validate_prediction.py": "241efeaa6eb132775250ca2f7ff5248f8c3eaf8dfca8edd1593009455a494d8f"
+  },
+  "branch": "codex/current-version-20261025",
+  "head": "a0733a8685db4c2b497539303bfe87fe1c1ebfe5",
+  "scope": "Offline local; no board/camera/UART/motors/main.py/protocol/remote/global-summary actions"
+}

@@ -1,0 +1,4 @@
+{"event": "begin", "revision": "L1-R6-RUNTIME-3-TRACE", "duration_ms": 0, "drive_allowed": true, "input_kind": "real_camera", "automatic_motor_start": false, "log": "D:\\projects\\projectsyeye\\testing\\2026-11-12_field_resume\\runtime_trace_checks_01\\model_sd/lap_runtime_logs/run_0001.jsonl"}
+{"index": 1, "source": "unknown", "wire_valid": false, "drive_allowed": true}
+{"index": 10, "source": "current_pair", "wire_valid": true, "drive_allowed": true}
+{"event": "completed", "lap_acceptance": false}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-11",
+  "evidence_kind": "operator_feedback",
+  "operator_exact_feedback": ["steering为0，bend为0", "符合预期"],
+  "prompt_context": "补核g_lap.received、path_valid、g_lap_uart_errors和左右PWM；窗口结束后的STOP会清path_valid",
+  "direct_numeric_feedback": {"steering": 0, "bend": 0},
+  "operator_confirmed_expectations": {"receiving_counter_progress": true, "uart_errors": 0, "left_pwm": 0, "right_pwm": 0, "valid_path_during_stream": true},
+  "independent_received_count": null,
+  "independent_path_valid_screenshot": false,
+  "boundary": "路径许可按符合预期作人工确认；未单独记录读数时刻，不能称独立截图或整窗逐帧接收证明",
+  "motor_operated": false,
+  "main_py_written": false,
+  "result": "真实相机有效路径动力隔离接收按人工反馈初验；悬空／地面／整圈未验"
+}

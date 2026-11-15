@@ -6,6 +6,14 @@
 #include "speed_match.h"
 #include <string.h>
 #include <float.h>
+/* 原目标继续直接使用锁定目标，保持既有数据布局和固件；斜坡只编入高速目标。 */
+#ifdef SPEED_SPRINT_TARGET
+#define CONTROL_TARGET_RPM g_speed_match.command_rpm
+#define FINAL_TARGET_REACHED (g_speed_match.command_rpm == config.target_rpm)
+#else
+#define CONTROL_TARGET_RPM config.target_rpm
+#define FINAL_TARGET_REACHED 1
+#endif
 /* 调试初值：共同目标60RPM，Kp=2千分比/RPM，Ki=4千分比/(RPM*s)，前馈30%。
  * 这些不是实车标定结果；停车时可用Keil Watch修改，下次KEY启动时统一锁定。
  * 前馈用于抵消常见静摩擦／基础驱动需求，左右PI分别修正动力差；不含D项。
@@ -42,6 +50,19 @@ static void zero_output(void) {
     g_speed_match.left_saturated = g_speed_match.right_saturated = 0u;
     speed_pi_reset(&left_pi); speed_pi_reset(&right_pi);
 }
+#ifdef SPEED_SPRINT_TARGET
+void speed_match_finish(uint32_t now) {
+    if (g_speed_match.state != SPEED_RUNNING) return;
+    g_speed_match.stop_ms = now;
+    save_run_result();
+    zero_output(); quiet_ms = 0u;
+    g_speed_match.state = SPEED_SETTLING; state_since = now;
+}
+void speed_match_cancel_start(uint32_t now) {
+    if (g_speed_match.state != SPEED_HOLDING && g_speed_match.state != SPEED_ARMED) return;
+    g_speed_match.state = SPEED_WAIT_RELEASE; state_since = now;
+}
+#endif
 void speed_match_fault(speed_match_error_t error, uint32_t now) {
     if (g_speed_match.state != SPEED_FAULT) {
         g_speed_match.error = error; g_speed_match.stop_ms = now;
@@ -106,18 +127,24 @@ static void start_run(uint32_t now) {
         g_speed_match.left_channel == g_speed_match.right_channel) {
         speed_match_fault(SPEED_ERROR_MAPPING, now); return;
     }
-    if (!finite_number(config.target_rpm) || config.target_rpm < 10.0f || config.target_rpm > 120.0f ||
+    if (!finite_number(config.target_rpm) || config.target_rpm < 10.0f || config.target_rpm > SPEED_PI_MAX_TARGET_RPM ||
         !speed_pi_config_valid(&config.pi) || config.run_ms < 500u || config.run_ms > 3000u) {
         speed_match_fault(SPEED_ERROR_CONFIG, now); return;
     }
     g_speed_match.active = config;
+#ifdef SPEED_SPRINT_TARGET
+    /* 高速候选也从低设定起步，每20ms提升至最终目标；不在起步瞬间请求450RPM。
+     * 前馈仍使用原30%，PI根据真实反馈增加输出，输出上限仅本独立目标扩展。
+     */
+    g_speed_match.command_rpm = 10.0f;
+#endif
     g_speed_match.state = SPEED_RUNNING;
     ++g_speed_match.runs;
     /* 起步只使用已停止时测得的速度，初始PWM仍受0..500限制。 */
     {
         uint16_t left, right;
-        if (!speed_pi_update(&left_pi, &config.pi, config.target_rpm, magnitude(g_speed_match.left_rpm), 20u, &left) ||
-            !speed_pi_update(&right_pi, &config.pi, config.target_rpm, magnitude(g_speed_match.right_rpm), 20u, &right)) {
+        if (!speed_pi_update(&left_pi, &config.pi, CONTROL_TARGET_RPM, magnitude(g_speed_match.left_rpm), 20u, &left) ||
+            !speed_pi_update(&right_pi, &config.pi, CONTROL_TARGET_RPM, magnitude(g_speed_match.right_rpm), 20u, &right)) {
             speed_match_fault(SPEED_ERROR_CONFIG, now); return;
         }
         g_speed_match.left_pwm = left; g_speed_match.right_pwm = right;
@@ -228,14 +255,21 @@ void speed_match_sample(uint32_t now, const encoder_sample_t *a, const encoder_s
     {
         uint16_t l, r;
         speed_match_config_t config = g_speed_match.active;
-        if (!speed_pi_update(&left_pi, &config.pi, config.target_rpm, magnitude(g_speed_match.left_rpm), dt, &l) ||
-            !speed_pi_update(&right_pi, &config.pi, config.target_rpm, magnitude(g_speed_match.right_rpm), dt, &r)) {
+#ifdef SPEED_SPRINT_TARGET
+        /* 300RPM/s即每个标准20ms窗口最多增加6RPM；最终目标和3秒时限均锁定。
+         * 达标判定仍与最终目标比较，斜坡中间的暂时同速不能记为高速达标。
+         */
+        g_speed_match.command_rpm += 300.0f * (float)dt / 1000.0f;
+        if (g_speed_match.command_rpm > config.target_rpm) g_speed_match.command_rpm = config.target_rpm;
+#endif
+        if (!speed_pi_update(&left_pi, &config.pi, CONTROL_TARGET_RPM, magnitude(g_speed_match.left_rpm), dt, &l) ||
+            !speed_pi_update(&right_pi, &config.pi, CONTROL_TARGET_RPM, magnitude(g_speed_match.right_rpm), dt, &r)) {
             speed_match_fault(SPEED_ERROR_CONFIG, now); return;
         }
         g_speed_match.left_pwm = l; g_speed_match.right_pwm = r;
-        g_speed_match.left_saturated = l == 500u ? 1u : 0u;
-        g_speed_match.right_saturated = r == 500u ? 1u : 0u;
-        if (magnitude(g_speed_match.difference_rpm) <= 5.0f &&
+        g_speed_match.left_saturated = l == SPEED_PI_MAX_DUTY ? 1u : 0u;
+        g_speed_match.right_saturated = r == SPEED_PI_MAX_DUTY ? 1u : 0u;
+        if (FINAL_TARGET_REACHED && magnitude(g_speed_match.difference_rpm) <= 5.0f &&
             magnitude(g_speed_match.left_rpm - config.target_rpm) <= 5.0f &&
             magnitude(g_speed_match.right_rpm - config.target_rpm) <= 5.0f)
             g_speed_match.matched_ms += dt;

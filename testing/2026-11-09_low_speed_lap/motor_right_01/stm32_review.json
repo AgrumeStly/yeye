@@ -1,0 +1,21 @@
+{
+  "firmware_revision": "0x02110007",
+  "fixture": "synthetic right +500, targets left60/right20; NOT CAMERA",
+  "last_run_image": "last_run_watch.png",
+  "uart_image": "uart_zero_watch.png",
+  "valid": 1,
+  "elapsed_ms": 460,
+  "reason": "LAP_NO_FEEDBACK (7)",
+  "left_target_rpm": 60,
+  "right_target_rpm": 20,
+  "left_rpm": 74.5325928,
+  "right_rpm": 0.0725680441,
+  "left_pwm_before_stop_per_mille": 276,
+  "right_pwm_before_stop_per_mille": 169,
+  "left_boost_samples": 1,
+  "right_boost_samples": 1,
+  "uart_errors": 0,
+  "operator_report": "right wheel lacked drive; left wheel turned faster; green LED fast blink",
+  "accepted": false,
+  "scope": "failed suspended differential trial; no claim of matched speeds or three-second completion"
+}

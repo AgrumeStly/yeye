@@ -1,0 +1,45 @@
+{
+  "config": {
+    "width_cm": 50.0,
+    "lateral_projection_gain": 48.0,
+    "history_ms": 1200,
+    "gap_ms": 700,
+    "history_max_frames": 6,
+    "max_flow_step_cm": 24.0,
+    "max_flow_yaw_deg": 35.0,
+    "min_flow_inliers": 10,
+    "flow_residual_cm": 2.0,
+    "fit_support_cm": 3.0,
+    "prediction_limit_ms": 1200,
+    "lap_limit": 1
+  },
+  "projection": [
+    [
+      48.0,
+      0.0,
+      -7656.0
+    ],
+    [
+      0.0,
+      -15.555555555555546,
+      7802.22222222222
+    ],
+    [
+      0.0,
+      1.0,
+      38.11111111111108
+    ]
+  ],
+  "projection_status": "central_1D_plus_unvalidated_lateral_plane_assumption",
+  "use_history": false,
+  "use_map": true,
+  "turns": [
+    90.0,
+    38.5,
+    103.0,
+    38.5,
+    90.0
+  ],
+  "initial": "whole vehicle right of start line, heading left, clockwise; operator confirmed",
+  "evaluation": "two laps observed; competition target one lap; no automatic STOP"
+}

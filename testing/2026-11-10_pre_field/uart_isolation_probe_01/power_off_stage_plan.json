@@ -1,0 +1,15 @@
+{
+  "stage": "K230 physical power removal only; observe before reconnect",
+  "baseline_source": "operator_feedback.json",
+  "pre_removal_uart_errors": 0,
+  "pre_removal_frame_errors": 0,
+  "pre_removal_state": 0,
+  "pre_removal_reason": 0,
+  "pre_removal_accepted": 181,
+  "pre_removal_received": 180,
+  "planned_operator_action": "Keep motor battery disconnected, STM32 DAPLink powered and Keil Run; remove only K230 computer Type-C; leave it disconnected, wait about 5 seconds; report STM32 diagnostics without reset or KEY.",
+  "assistant_reconnect_or_script_run_planned": false,
+  "power_removal_execution_confirmed": false,
+  "post_removal_results_pending": true,
+  "root_cause_confirmed": false
+}

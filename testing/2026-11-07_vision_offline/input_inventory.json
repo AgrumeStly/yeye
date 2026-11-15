@@ -1,0 +1,20 @@
+[
+  {
+    "prefix": "data",
+    "count": 325,
+    "continuous": true,
+    "shapes": {
+      "(240, 320)": 325
+    },
+    "failed": []
+  },
+  {
+    "prefix": "dbg",
+    "count": 325,
+    "continuous": true,
+    "shapes": {
+      "(240, 320)": 325
+    },
+    "failed": []
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "source": "control/build/firmware/low_speed_lap/low_speed_lap.axf",
+    "backup": "low_speed_lap.axf",
+    "sha256": "9a0b9857cf8c3ee23709e4a1881660a434cdcecb7726f4c3879db9739ddaf009",
+    "bytes": 491688
+  },
+  {
+    "source": "control/build/firmware/low_speed_lap/low_speed_lap.bin",
+    "backup": "low_speed_lap.bin",
+    "sha256": "7f3f7b5e8c676e321e23f3c2c2b6a88cd0e3821c5b8f80af9f608cce3224e2f9",
+    "bytes": 15796
+  },
+  {
+    "source": "control/App/Motion/lap_motion.c",
+    "backup": "lap_motion.c",
+    "sha256": "1ad2e5d0985ab9f2f24f3f37d8bb39b951211ee3ad6d23b9c72f265e47e1faa0",
+    "bytes": 15860
+  },
+  {
+    "source": "control/App/Motion/lap_motion.h",
+    "backup": "lap_motion.h",
+    "sha256": "d8149a816d0f414ce1543c5b2c30e3e695bc7f55d29ee81b02440448b1eaea9f",
+    "bytes": 3377
+  },
+  {
+    "source": "control/Core/Src/low_speed_lap_main.c",
+    "backup": "low_speed_lap_main.c",
+    "sha256": "11a08e272b0a331a4d6d9565cb3ed8b8c6302bab625556c8ceb5d1e948d08706",
+    "bytes": 12391
+  }
+]

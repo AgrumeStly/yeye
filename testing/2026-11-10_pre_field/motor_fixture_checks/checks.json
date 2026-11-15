@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "name": "straight_default_idle",
+      "passed": true
+    },
+    {
+      "name": "straight_bounded_paths",
+      "passed": true
+    },
+    {
+      "name": "default_120s_window_STOP_and_no_START",
+      "passed": true
+    },
+    {
+      "name": "straight_fixed_input",
+      "passed": true
+    },
+    {
+      "name": "straight_STOP_only",
+      "passed": true
+    },
+    {
+      "name": "straight_CRC",
+      "passed": true
+    },
+    {
+      "name": "straight_drain_before_deinit",
+      "passed": true
+    },
+    {
+      "name": "right_default_idle",
+      "passed": true
+    },
+    {
+      "name": "right_bounded_paths",
+      "passed": true
+    },
+    {
+      "name": "right_fixed_input",
+      "passed": true
+    },
+    {
+      "name": "right_STOP_only",
+      "passed": true
+    },
+    {
+      "name": "right_CRC",
+      "passed": true
+    },
+    {
+      "name": "right_drain_before_deinit",
+      "passed": true
+    },
+    {
+      "name": "left_default_idle",
+      "passed": true
+    },
+    {
+      "name": "left_bounded_paths",
+      "passed": true
+    },
+    {
+      "name": "left_fixed_input",
+      "passed": true
+    },
+    {
+      "name": "left_STOP_only",
+      "passed": true
+    },
+    {
+      "name": "left_CRC",
+      "passed": true
+    },
+    {
+      "name": "left_drain_before_deinit",
+      "passed": true
+    }
+  ],
+  "traces": {
+    "straight": {
+      "paths": 2400,
+      "steering": 0,
+      "commands": [
+        2,
+        2
+      ],
+      "virtual_ms": 120020,
+      "not_camera": true
+    },
+    "right": {
+      "paths": 200,
+      "steering": 500,
+      "commands": [
+        2,
+        2
+      ],
+      "virtual_ms": 10020,
+      "not_camera": true
+    },
+    "left": {
+      "paths": 200,
+      "steering": -500,
+      "commands": [
+        2,
+        2
+      ],
+      "virtual_ms": 10020,
+      "not_camera": true
+    }
+  },
+  "physical_motor_tested": false
+}

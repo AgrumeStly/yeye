@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "frame_count": 358,
+  "protected_files_unchanged": 870,
+  "frozen_source_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "candidate_code_hashes": {
+    "vision/src/offline_curve.py": "77950d7902a5422a1cda133d8fbf0f0fb6e1314d69b4bfcf7211e73a8927f09c",
+    "vision/tools/replay_curve_offline.py": "873d2a5f3231287187ea83c3969137d399f1e4cf748e8211384a239f0f3917c3",
+    "vision/tools/check_curve_offline.py": "d8f54e9085da9e5e4e9140800d00ac382576cb187ace21c1732e2fc0e93fadbc"
+  },
+  "r1_result_fields_identical": 358,
+  "invalid_reference_output_cleared": 172,
+  "negative_short_raw_pairs_excluded": 6,
+  "sequence_checks": [
+    {
+      "case": "entry",
+      "near_available": true,
+      "turn_hint": "right"
+    },
+    {
+      "case": "single_real_band",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "entry_again",
+      "near_available": true,
+      "turn_hint": "right"
+    },
+    {
+      "case": "text",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "white",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "black",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "none",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "wrong_shape",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "wrong_dtype",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "single_horizontal",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "wall",
+      "near_available": false,
+      "turn_hint": null
+    },
+    {
+      "case": "parallel_false_pair",
+      "near_available": false,
+      "turn_hint": null
+    }
+  ],
+  "mirror_turn_hint": "left",
+  "video_decoded_frames": 358,
+  "old_near_only": [],
+  "old_turn_hints": [],
+  "scope": "development regression on published data; candidate observations only; no full-turn/vehicle acceptance"
+}

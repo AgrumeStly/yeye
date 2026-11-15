@@ -1,0 +1,88 @@
+{
+  "probe": "00010001066cff554954657287234218a5a5a5a597969908",
+  "samples": [
+    {
+      "g_oled_revision": 0,
+      "g_oled_fault": 0,
+      "g_oled_stage": 0,
+      "g_oled_ms": 0,
+      "g_oled_address": 0,
+      "g_oled_ack_mask": 0,
+      "g_oled_frames": 0,
+      "g_oled_phase": 0,
+      "g_oled_seconds": 0,
+      "g_oled_motor_odr": 0,
+      "g_oled_watchdog_started": 0,
+      "g_oled_watchdog_stage": 0,
+      "bus": {
+        "error": 0,
+        "ack_bytes": 154897,
+        "nack_bytes": 0,
+        "recoveries": 0,
+        "idle_pins": 0
+      }
+    },
+    {
+      "g_oled_revision": 0,
+      "g_oled_fault": 0,
+      "g_oled_stage": 0,
+      "g_oled_ms": 0,
+      "g_oled_address": 0,
+      "g_oled_ack_mask": 0,
+      "g_oled_frames": 0,
+      "g_oled_phase": 0,
+      "g_oled_seconds": 0,
+      "g_oled_motor_odr": 0,
+      "g_oled_watchdog_started": 0,
+      "g_oled_watchdog_stage": 0,
+      "bus": {
+        "error": 0,
+        "ack_bytes": 0,
+        "nack_bytes": 0,
+        "recoveries": 0,
+        "idle_pins": 0
+      }
+    },
+    {
+      "g_oled_revision": 0,
+      "g_oled_fault": 0,
+      "g_oled_stage": 0,
+      "g_oled_ms": 0,
+      "g_oled_address": 0,
+      "g_oled_ack_mask": 0,
+      "g_oled_frames": 0,
+      "g_oled_phase": 0,
+      "g_oled_seconds": 0,
+      "g_oled_motor_odr": 0,
+      "g_oled_watchdog_started": 0,
+      "g_oled_watchdog_stage": 0,
+      "bus": {
+        "error": 0,
+        "ack_bytes": 0,
+        "nack_bytes": 0,
+        "recoveries": 0,
+        "idle_pins": 0
+      }
+    }
+  ],
+  "symbols": {
+    "g_oled_ms": 536870932,
+    "g_oled_fault": 536870936,
+    "g_oled_revision": 536870940,
+    "g_oled_watchdog_started": 536870944,
+    "g_oled_watchdog_stage": 536870948,
+    "g_oled_state": 536870952,
+    "g_oled_motor_odr": 536870956,
+    "g_oled_stage": 536870964,
+    "g_oled_address": 536870968,
+    "g_oled_ack_mask": 536870972,
+    "g_oled_frames": 536870976,
+    "g_oled_phase": 536870980,
+    "g_oled_seconds": 536870984,
+    "g_oled_bus": 536872012
+  },
+  "firmware_bytes": 5328,
+  "flash_matches_bin": true,
+  "bin_sha256": "9ecfbf606a5a545fe398108376d2ef3bc09b7b60744c825694e9702e1cc28067",
+  "runtime_checks_passed": false
+}

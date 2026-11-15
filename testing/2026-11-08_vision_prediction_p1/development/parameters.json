@@ -1,0 +1,27 @@
+{
+  "prediction": {
+    "max_width_age_ms": 1500,
+    "role_memory_ms": 700,
+    "capture_gap_ms": 700,
+    "min_points": 6,
+    "min_span_px": 25,
+    "component_area": 80,
+    "component_span": 25,
+    "role_margin_px": 10.0,
+    "role_base_gate_px": 12.0,
+    "role_max_gate_px": 55.0,
+    "edge_rate_px_s": 180.0,
+    "base_uncertainty_px": 4.0,
+    "uncertainty_growth_px_s": 20.0
+  },
+  "mask_test": {
+    "period_ms": 4000,
+    "hidden_phase_ms": [
+      2000,
+      3000
+    ],
+    "side": "alternates_by_time_window",
+    "truth": "current C2 accepted pair, held out of predictor",
+    "blind": false
+  }
+}

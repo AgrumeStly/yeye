@@ -1,0 +1,15 @@
+{
+  "firmware_revision": "0x02110009",
+  "image": "last_run_watch.png",
+  "valid": 1,
+  "elapsed_ms": 804,
+  "reason": "LAP_KEY (1)",
+  "target_rpm": [40, 40],
+  "last_rpm": [39.6054955, 39.8795319],
+  "pwm_before_stop_per_mille": [203, 200],
+  "boost_samples": [1, 1],
+  "uart_errors_operator_reported": 0,
+  "physical_operator_report": "drive removed after the instructed brief KEY press",
+  "accepted_scope": "physical KEY functional emergency stop before 3000ms normal limit",
+  "not_measured": ["button-edge-to-PWM-off latency", "source-loss stop", "ground braking distance"]
+}

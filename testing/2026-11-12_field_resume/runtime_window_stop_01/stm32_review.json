@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-12",
+  "evidence_kind": "三张原图及主控received不递增反馈",
+  "received": 7394, "received_progressing": false,
+  "state": "LAP_WAIT1", "reason": "LAP_KEY1", "uart_errors": 0,
+  "run_since_ms": 354647, "path_at_ms": 526599,
+  "left_target_rpm": 0, "right_target_rpm": 0, "left_pwm": 0, "right_pwm": 0,
+  "steering": 91, "bend": 391, "path_valid": 0, "history": 0, "single": 0,
+  "interpretation": "符合相机清理STOP后的待机形态；原main600000ms输入期限到期是待日志确认的首要假设，非已证实UART硬件故障",
+  "no_new_KEY_or_ground_motion": true
+}

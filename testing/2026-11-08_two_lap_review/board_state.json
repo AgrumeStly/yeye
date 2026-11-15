@@ -1,0 +1,14 @@
+{
+  "operator_report": {
+    "hand_pushed_laps": 2,
+    "finish": "entire vehicle crossed finish, then stopped",
+    "direction": "not newly confirmed in this message",
+    "audible_completion": "not explicitly confirmed"
+  },
+  "inventory_query": [
+    "[TWO_LAP_INVENTORY] {\"files\": 734, \"first\": [\"data_0001.jpg\"], \"other\": [\"frames.jsonl\", \"session.json\"], \"jpeg_count\": 732, \"arm_present\": false, \"last\": [\"data_0732.jpg\"]}\r"
+  ],
+  "list_dir_attempt": "io.listDir timed out after 10000ms; inventory read with os.listdir instead",
+  "new_session": "push_full_lap_0001",
+  "downloads_started": true
+}

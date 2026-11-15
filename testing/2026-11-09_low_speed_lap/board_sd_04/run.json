@@ -1,0 +1,8 @@
+{
+  "mode": "sd_replay",
+  "port": "COM10",
+  "source_sha256": "0fc8fca0e4150947cffe63e49bf0c49001ab05b5e3431154bece8b1e7e8ed55d",
+  "started": "2026-11-09T12:08:23.589887+08:00",
+  "motor_start_permitted": false,
+  "main_py_written": false
+}

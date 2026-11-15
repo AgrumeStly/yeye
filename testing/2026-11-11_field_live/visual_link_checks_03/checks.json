@@ -1,0 +1,227 @@
+{
+  "checks": [
+    {
+      "name": "reject_suspended",
+      "passed": true
+    },
+    {
+      "name": "reject_mcu_revision",
+      "passed": true
+    },
+    {
+      "name": "reject_mcu_run_ms",
+      "passed": true
+    },
+    {
+      "name": "reject_calibrated",
+      "passed": true
+    },
+    {
+      "name": "reject_isolated{}",
+      "passed": true
+    },
+    {
+      "name": "reject_sd_replay{}",
+      "passed": true
+    },
+    {
+      "name": "reject_fixture{}",
+      "passed": true
+    },
+    {
+      "name": "reject_no_drive{'window_ms': 999999}",
+      "passed": true
+    },
+    {
+      "name": "no_drive_live_camera_only",
+      "passed": true
+    },
+    {
+      "name": "no_drive_duration",
+      "passed": true
+    },
+    {
+      "name": "no_drive_no_preview_when_permitted",
+      "passed": true
+    },
+    {
+      "name": "no_drive_exact_hash",
+      "passed": true
+    },
+    {
+      "name": "no_drive_explicit_permission",
+      "passed": true
+    },
+    {
+      "name": "no_drive_signed_steering",
+      "passed": true
+    },
+    {
+      "name": "no_drive_invalid_geometry",
+      "passed": true
+    },
+    {
+      "name": "no_drive_slow_processing",
+      "passed": true
+    },
+    {
+      "name": "no_drive_old_camera",
+      "passed": true
+    },
+    {
+      "name": "no_drive_expired_history",
+      "passed": true
+    },
+    {
+      "name": "no_drive_only_STOP_commands",
+      "passed": true
+    },
+    {
+      "name": "no_drive_all_CRCs",
+      "passed": true
+    },
+    {
+      "name": "no_drive_all_other_R5_code_preserved",
+      "passed": true
+    },
+    {
+      "name": "isolated_live_camera_only",
+      "passed": true
+    },
+    {
+      "name": "isolated_duration",
+      "passed": true
+    },
+    {
+      "name": "isolated_no_preview_when_permitted",
+      "passed": true
+    },
+    {
+      "name": "isolated_exact_hash",
+      "passed": true
+    },
+    {
+      "name": "isolated_explicit_permission",
+      "passed": true
+    },
+    {
+      "name": "isolated_signed_steering",
+      "passed": true
+    },
+    {
+      "name": "isolated_invalid_geometry",
+      "passed": true
+    },
+    {
+      "name": "isolated_slow_processing",
+      "passed": true
+    },
+    {
+      "name": "isolated_old_camera",
+      "passed": true
+    },
+    {
+      "name": "isolated_expired_history",
+      "passed": true
+    },
+    {
+      "name": "isolated_only_STOP_commands",
+      "passed": true
+    },
+    {
+      "name": "isolated_all_CRCs",
+      "passed": true
+    },
+    {
+      "name": "isolated_all_other_R5_code_preserved",
+      "passed": true
+    },
+    {
+      "name": "suspended_live_camera_only",
+      "passed": true
+    },
+    {
+      "name": "suspended_duration",
+      "passed": true
+    },
+    {
+      "name": "suspended_no_preview_when_permitted",
+      "passed": true
+    },
+    {
+      "name": "suspended_exact_hash",
+      "passed": true
+    },
+    {
+      "name": "suspended_explicit_permission",
+      "passed": true
+    },
+    {
+      "name": "suspended_signed_steering",
+      "passed": true
+    },
+    {
+      "name": "suspended_invalid_geometry",
+      "passed": true
+    },
+    {
+      "name": "suspended_slow_processing",
+      "passed": true
+    },
+    {
+      "name": "suspended_old_camera",
+      "passed": true
+    },
+    {
+      "name": "suspended_expired_history",
+      "passed": true
+    },
+    {
+      "name": "suspended_only_STOP_commands",
+      "passed": true
+    },
+    {
+      "name": "suspended_all_CRCs",
+      "passed": true
+    },
+    {
+      "name": "suspended_all_other_R5_code_preserved",
+      "passed": true
+    },
+    {
+      "name": "live_link_isolated_exact_submitted_bytes",
+      "passed": true
+    },
+    {
+      "name": "live_link_isolated_only_bounded_RPCs",
+      "passed": true
+    },
+    {
+      "name": "live_link_isolated_closed",
+      "passed": true
+    },
+    {
+      "name": "live_link_isolated_missing_conditions_before_connection",
+      "passed": true
+    },
+    {
+      "name": "live_link_suspended_exact_submitted_bytes",
+      "passed": true
+    },
+    {
+      "name": "live_link_suspended_only_bounded_RPCs",
+      "passed": true
+    },
+    {
+      "name": "live_link_suspended_closed",
+      "passed": true
+    },
+    {
+      "name": "live_link_suspended_missing_conditions_before_connection",
+      "passed": true
+    }
+  ],
+  "physical_board_used": false,
+  "motor_verified": false,
+  "fake_session_only": true
+}

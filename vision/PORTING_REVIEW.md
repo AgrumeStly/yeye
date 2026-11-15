@@ -1,5 +1,7 @@
 # Vision porting review
 
+2026-11-07现行说明：主控明确要求删除旧残留视觉代码后重建；本页涉及的`reference_code/`内3份C源／头文件已删除。下文保留为历史审查证据，不作为当前可运行代码或交付入口；当前采集见`src/capture_canmv.py`及`docs/capture_canmv.md`，离线工具仍按V-02 R1使用。
+
 核验日期：2026-10-10。目标硬件：立创庐山派 Lite-K230D-CanMV + GC2093；天空星 STM32F407VET6 负责运动控制。
 
 ## 结论

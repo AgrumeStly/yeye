@@ -1,0 +1,30 @@
+{
+  "mode": "live_link_isolated",
+  "port": "COM10",
+  "source_sha256": "664428762ea755b3937defdb348aae74cbd8e3825129de4391ad1e686b4dccb1",
+  "started": "2026-11-11T19:46:40.260042+08:00",
+  "automatic_motor_start_permitted": false,
+  "operator_KEY_fixture_test": false,
+  "confirmed_suspended": false,
+  "confirmed_mcu_run_ms": null,
+  "input_window_ms": null,
+  "main_py_written": false,
+  "real_camera_link": {
+    "mode": "isolated",
+    "input_kind": "real_camera",
+    "input_window_ms": 120000,
+    "source_sha256": "664428762ea755b3937defdb348aae74cbd8e3825129de4391ad1e686b4dccb1",
+    "base_bundle": "r5",
+    "base_bundle_sha256": "54e71bcc4346710300c0302a77f6bba86609baca5c937772d4282fc874175f4d",
+    "frozen_r5_sha256": "54e71bcc4346710300c0302a77f6bba86609baca5c937772d4282fc874175f4d",
+    "confirmed_power_isolated": true,
+    "confirmed_suspended": false,
+    "confirmed_mcu_revision": null,
+    "confirmed_mcu_run_ms": null,
+    "confirmed_calibrated": false,
+    "automatic_motor_start_permitted": false,
+    "main_py_written": false,
+    "board_used": false,
+    "physical_result": "pending"
+  }
+}

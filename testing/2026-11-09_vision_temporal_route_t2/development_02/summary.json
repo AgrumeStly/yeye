@@ -1,0 +1,115 @@
+{
+  "groups": [
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "R1_valid": 565,
+      "C2_pair_frames": 606,
+      "P1_estimated_frames": 94,
+      "states": {
+        "current_supported_model": 721,
+        "history_prediction": 8,
+        "map_prior_only": 3
+      },
+      "motion_available": 662,
+      "last_yaw_total_deg": 121.732,
+      "current_supported_without_C2": 123,
+      "unverified_prior_spans": [
+        {
+          "first_frame": 294,
+          "last_frame": 294,
+          "frames": 1,
+          "first_ms": 44033,
+          "last_ms": 44033,
+          "sample_span_ms": 0,
+          "recovered_frame": 295,
+          "recovered_ms": 44230,
+          "until_recovery_ms": 197
+        },
+        {
+          "first_frame": 375,
+          "last_frame": 375,
+          "frames": 1,
+          "first_ms": 62020,
+          "last_ms": 62020,
+          "sample_span_ms": 0,
+          "recovered_frame": 376,
+          "recovered_ms": 62215,
+          "until_recovery_ms": 195
+        },
+        {
+          "first_frame": 378,
+          "last_frame": 378,
+          "frames": 1,
+          "first_ms": 62779,
+          "last_ms": 62779,
+          "sample_span_ms": 0,
+          "recovered_frame": 379,
+          "recovered_ms": 62977,
+          "until_recovery_ms": 198
+        }
+      ],
+      "map_transitions": [
+        {
+          "frame": 1,
+          "ms": 77,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 1,
+          "competition_lap_limit": 1,
+          "heading_deg": 0.0,
+          "state": "geometry_sequence_hypothesis",
+          "engaged": false,
+          "passed_node_count": 0,
+          "finish_observations": 0,
+          "finish_anchor_relocalized": false,
+          "competition_finish_seen": false,
+          "missing_motion_ms": 0,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 409,
+          "ms": 70436,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 2,
+          "competition_lap_limit": 1,
+          "heading_deg": 104.24,
+          "state": "geometry_sequence_hypothesis",
+          "engaged": false,
+          "passed_node_count": 5,
+          "finish_observations": 1,
+          "finish_anchor_relocalized": true,
+          "competition_finish_seen": true,
+          "missing_motion_ms": 605,
+          "whole_vehicle_finish_verified_by_camera": false
+        },
+        {
+          "frame": 571,
+          "ms": 120537,
+          "initialized": true,
+          "node": "bottom_left",
+          "lap_observation": 3,
+          "competition_lap_limit": 1,
+          "heading_deg": 125.27,
+          "state": "geometry_sequence_hypothesis",
+          "engaged": false,
+          "passed_node_count": 10,
+          "finish_observations": 2,
+          "finish_anchor_relocalized": true,
+          "competition_finish_seen": true,
+          "missing_motion_ms": 9868,
+          "whole_vehicle_finish_verified_by_camera": false
+        }
+      ],
+      "pc_algorithm_ms": {
+        "median": 60.816100000000006,
+        "p95": 89.730935,
+        "max": 123.3564
+      },
+      "limitation": "model support counts are not accuracy, map correspondence or control acceptance"
+    }
+  ],
+  "total_frames": 732,
+  "note": "Both laps are development data. Metric plane outside central 20-60cm is an unvalidated model."
+}

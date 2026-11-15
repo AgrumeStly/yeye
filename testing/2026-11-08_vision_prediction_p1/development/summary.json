@@ -1,0 +1,756 @@
+{
+  "groups": [
+    {
+      "session": "d01_straight_run01",
+      "frames": 325,
+      "direct_pairs": 148,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [
+        {
+          "first_frame": 50,
+          "last_frame": 67,
+          "frames": 18,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 68,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 71,
+          "last_frame": 73,
+          "frames": 3,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 74,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 76,
+          "last_frame": 85,
+          "frames": 10,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 86,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 108,
+          "last_frame": 133,
+          "frames": 26,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 134,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 135,
+          "last_frame": 137,
+          "frames": 3,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 138,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 139,
+          "last_frame": 161,
+          "frames": 23,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 162,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 163,
+          "last_frame": 163,
+          "frames": 1,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 164,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 179,
+          "last_frame": 194,
+          "frames": 16,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 195,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 203,
+          "last_frame": 215,
+          "frames": 13,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 216,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 218,
+          "last_frame": 231,
+          "frames": 14,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 232,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 233,
+          "last_frame": 233,
+          "frames": 1,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 234,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 247,
+          "last_frame": 252,
+          "frames": 6,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 253,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 254,
+          "last_frame": 257,
+          "frames": 4,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 258,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 259,
+          "last_frame": 260,
+          "frames": 2,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 261,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 267,
+          "last_frame": 276,
+          "frames": 10,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 277,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 279,
+          "last_frame": 292,
+          "frames": 14,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 293,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 312,
+          "last_frame": 321,
+          "frames": 10,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": 322,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        },
+        {
+          "first_frame": 323,
+          "last_frame": 325,
+          "frames": 3,
+          "first_ms": null,
+          "last_ms": null,
+          "sample_span_ms": null,
+          "recovered_frame": null,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        }
+      ],
+      "states": {
+        "missing_real_capture_time": 325
+      }
+    },
+    {
+      "session": "v03_center_0002",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_offset_left_0001",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_offset_right_0001",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_heading_left_0001",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_heading_right_0001",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_center_0007",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_center_0008",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_center_0009",
+      "frames": 3,
+      "direct_pairs": 0,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [
+        {
+          "first_frame": 1,
+          "last_frame": 3,
+          "frames": 3,
+          "first_ms": 5000,
+          "last_ms": 6016,
+          "sample_span_ms": 1016,
+          "recovered_frame": null,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        }
+      ],
+      "states": {
+        "no_unexpired_width_model": 3
+      }
+    },
+    {
+      "session": "v03_center_0010",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_center_0011",
+      "frames": 3,
+      "direct_pairs": 3,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [],
+      "states": {
+        "current_direct_observation": 3
+      }
+    },
+    {
+      "session": "v03_center_0012",
+      "frames": 3,
+      "direct_pairs": 0,
+      "prediction_frames": 0,
+      "predicted_without_any_C2_pair": 0,
+      "predicted_y120_when_R1_invalid": 0,
+      "prediction_spans": [],
+      "unknown_without_prediction": [
+        {
+          "first_frame": 1,
+          "last_frame": 3,
+          "frames": 3,
+          "first_ms": 5011,
+          "last_ms": 6027,
+          "sample_span_ms": 1016,
+          "recovered_frame": null,
+          "recovered_ms": null,
+          "until_recovery_ms": null
+        }
+      ],
+      "states": {
+        "no_unexpired_width_model": 3
+      }
+    },
+    {
+      "session": "push_corner_77_0001",
+      "frames": 304,
+      "direct_pairs": 283,
+      "prediction_frames": 23,
+      "predicted_without_any_C2_pair": 12,
+      "predicted_y120_when_R1_invalid": 10,
+      "prediction_spans": [
+        {
+          "first_frame": 18,
+          "last_frame": 19,
+          "frames": 2,
+          "first_ms": 2080,
+          "last_ms": 2194,
+          "sample_span_ms": 114,
+          "recovered_frame": 20,
+          "recovered_ms": 2389,
+          "until_recovery_ms": 309
+        },
+        {
+          "first_frame": 21,
+          "last_frame": 41,
+          "frames": 21,
+          "first_ms": 2501,
+          "last_ms": 4920,
+          "sample_span_ms": 2419,
+          "recovered_frame": 42,
+          "recovered_ms": 5034,
+          "until_recovery_ms": 2533
+        }
+      ],
+      "unknown_without_prediction": [
+        {
+          "first_frame": 42,
+          "last_frame": 50,
+          "frames": 9,
+          "first_ms": 5034,
+          "last_ms": 6094,
+          "sample_span_ms": 1060,
+          "recovered_frame": 51,
+          "recovered_ms": 6215,
+          "until_recovery_ms": 1181
+        }
+      ],
+      "states": {
+        "current_direct_observation": 272,
+        "historical_geometry_prediction": 23,
+        "no_unexpired_width_model": 9
+      }
+    },
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "direct_pairs": 606,
+      "prediction_frames": 98,
+      "predicted_without_any_C2_pair": 51,
+      "predicted_y120_when_R1_invalid": 37,
+      "prediction_spans": [
+        {
+          "first_frame": 93,
+          "last_frame": 122,
+          "frames": 30,
+          "first_ms": 11876,
+          "last_ms": 15612,
+          "sample_span_ms": 3736,
+          "recovered_frame": 123,
+          "recovered_ms": 15727,
+          "until_recovery_ms": 3851
+        },
+        {
+          "first_frame": 144,
+          "last_frame": 144,
+          "frames": 1,
+          "first_ms": 18591,
+          "last_ms": 18591,
+          "sample_span_ms": 0,
+          "recovered_frame": 145,
+          "recovered_ms": 18761,
+          "until_recovery_ms": 170
+        },
+        {
+          "first_frame": 177,
+          "last_frame": 185,
+          "frames": 9,
+          "first_ms": 23440,
+          "last_ms": 24666,
+          "sample_span_ms": 1226,
+          "recovered_frame": 186,
+          "recovered_ms": 24821,
+          "until_recovery_ms": 1381
+        },
+        {
+          "first_frame": 265,
+          "last_frame": 283,
+          "frames": 19,
+          "first_ms": 38238,
+          "last_ms": 41778,
+          "sample_span_ms": 3540,
+          "recovered_frame": 284,
+          "recovered_ms": 41936,
+          "until_recovery_ms": 3698
+        },
+        {
+          "first_frame": 381,
+          "last_frame": 381,
+          "frames": 1,
+          "first_ms": 63383,
+          "last_ms": 63383,
+          "sample_span_ms": 0,
+          "recovered_frame": 382,
+          "recovered_ms": 63750,
+          "until_recovery_ms": 367
+        },
+        {
+          "first_frame": 393,
+          "last_frame": 398,
+          "frames": 6,
+          "first_ms": 66423,
+          "last_ms": 67635,
+          "sample_span_ms": 1212,
+          "recovered_frame": 399,
+          "recovered_ms": 67848,
+          "until_recovery_ms": 1425
+        },
+        {
+          "first_frame": 419,
+          "last_frame": 420,
+          "frames": 2,
+          "first_ms": 73057,
+          "last_ms": 73274,
+          "sample_span_ms": 217,
+          "recovered_frame": 421,
+          "recovered_ms": 73498,
+          "until_recovery_ms": 441
+        },
+        {
+          "first_frame": 454,
+          "last_frame": 464,
+          "frames": 11,
+          "first_ms": 82777,
+          "last_ms": 85519,
+          "sample_span_ms": 2742,
+          "recovered_frame": 465,
+          "recovered_ms": 85970,
+          "until_recovery_ms": 3193
+        },
+        {
+          "first_frame": 479,
+          "last_frame": 482,
+          "frames": 4,
+          "first_ms": 90062,
+          "last_ms": 90798,
+          "sample_span_ms": 736,
+          "recovered_frame": 483,
+          "recovered_ms": 91273,
+          "until_recovery_ms": 1211
+        },
+        {
+          "first_frame": 505,
+          "last_frame": 514,
+          "frames": 10,
+          "first_ms": 98054,
+          "last_ms": 101252,
+          "sample_span_ms": 3198,
+          "recovered_frame": 515,
+          "recovered_ms": 101752,
+          "until_recovery_ms": 3698
+        },
+        {
+          "first_frame": 561,
+          "last_frame": 564,
+          "frames": 4,
+          "first_ms": 117011,
+          "last_ms": 118095,
+          "sample_span_ms": 1084,
+          "recovered_frame": 565,
+          "recovered_ms": 118454,
+          "until_recovery_ms": 1443
+        },
+        {
+          "first_frame": 577,
+          "last_frame": 577,
+          "frames": 1,
+          "first_ms": 122517,
+          "last_ms": 122517,
+          "sample_span_ms": 0,
+          "recovered_frame": 578,
+          "recovered_ms": 122790,
+          "until_recovery_ms": 273
+        }
+      ],
+      "unknown_without_prediction": [
+        {
+          "first_frame": 123,
+          "last_frame": 141,
+          "frames": 19,
+          "first_ms": 15727,
+          "last_ms": 18117,
+          "sample_span_ms": 2390,
+          "recovered_frame": 142,
+          "recovered_ms": 18236,
+          "until_recovery_ms": 2509
+        },
+        {
+          "first_frame": 146,
+          "last_frame": 146,
+          "frames": 1,
+          "first_ms": 18882,
+          "last_ms": 18882,
+          "sample_span_ms": 0,
+          "recovered_frame": 147,
+          "recovered_ms": 19001,
+          "until_recovery_ms": 119
+        },
+        {
+          "first_frame": 186,
+          "last_frame": 190,
+          "frames": 5,
+          "first_ms": 24821,
+          "last_ms": 25535,
+          "sample_span_ms": 714,
+          "recovered_frame": 191,
+          "recovered_ms": 25665,
+          "until_recovery_ms": 844
+        },
+        {
+          "first_frame": 284,
+          "last_frame": 299,
+          "frames": 16,
+          "first_ms": 41936,
+          "last_ms": 45138,
+          "sample_span_ms": 3202,
+          "recovered_frame": 300,
+          "recovered_ms": 45306,
+          "until_recovery_ms": 3370
+        },
+        {
+          "first_frame": 370,
+          "last_frame": 377,
+          "frames": 8,
+          "first_ms": 60774,
+          "last_ms": 62583,
+          "sample_span_ms": 1809,
+          "recovered_frame": 378,
+          "recovered_ms": 62779,
+          "until_recovery_ms": 2005
+        },
+        {
+          "first_frame": 399,
+          "last_frame": 407,
+          "frames": 9,
+          "first_ms": 67848,
+          "last_ms": 69991,
+          "sample_span_ms": 2143,
+          "recovered_frame": 408,
+          "recovered_ms": 70223,
+          "until_recovery_ms": 2375
+        },
+        {
+          "first_frame": 465,
+          "last_frame": 470,
+          "frames": 6,
+          "first_ms": 85970,
+          "last_ms": 87417,
+          "sample_span_ms": 1447,
+          "recovered_frame": 471,
+          "recovered_ms": 87655,
+          "until_recovery_ms": 1685
+        },
+        {
+          "first_frame": 515,
+          "last_frame": 519,
+          "frames": 5,
+          "first_ms": 101752,
+          "last_ms": 103042,
+          "sample_span_ms": 1290,
+          "recovered_frame": 520,
+          "recovered_ms": 103364,
+          "until_recovery_ms": 1612
+        },
+        {
+          "first_frame": 550,
+          "last_frame": 551,
+          "frames": 2,
+          "first_ms": 113250,
+          "last_ms": 113738,
+          "sample_span_ms": 488,
+          "recovered_frame": 552,
+          "recovered_ms": 114005,
+          "until_recovery_ms": 755
+        },
+        {
+          "first_frame": 565,
+          "last_frame": 568,
+          "frames": 4,
+          "first_ms": 118454,
+          "last_ms": 119495,
+          "sample_span_ms": 1041,
+          "recovered_frame": 569,
+          "recovered_ms": 119768,
+          "until_recovery_ms": 1314
+        }
+      ],
+      "states": {
+        "current_direct_observation": 559,
+        "historical_geometry_prediction": 98,
+        "no_unexpired_width_model": 66,
+        "role_or_support_insufficient": 9
+      }
+    }
+  ],
+  "masked_frames": 229,
+  "masked_output_frames": 198,
+  "mask_errors_all": {
+    "points": 5848,
+    "frames": 198,
+    "edge_px": {
+      "mean": 1.0961012311901506,
+      "median": 0.0,
+      "p95": 3.0,
+      "max": 36.0
+    },
+    "center_px": {
+      "mean": 0.5480506155950753,
+      "median": 0.0,
+      "p95": 1.5,
+      "max": 18.0
+    },
+    "age_ms": {
+      "max": 1348
+    },
+    "inferred_role_errors": 0
+  },
+  "mask_errors_moving_two_lap": {
+    "points": 2603,
+    "frames": 89,
+    "edge_px": {
+      "mean": 2.1087207068766807,
+      "median": 1.0,
+      "p95": 5.0,
+      "max": 36.0
+    },
+    "center_px": {
+      "mean": 1.0543603534383403,
+      "median": 0.5,
+      "p95": 2.5,
+      "max": 18.0
+    },
+    "age_ms": {
+      "max": 1315
+    },
+    "inferred_role_errors": 0
+  },
+  "mask_errors_corner": {
+    "points": 148,
+    "frames": 8,
+    "edge_px": {
+      "mean": 0.8783783783783784,
+      "median": 1.0,
+      "p95": 2.0,
+      "max": 9.0
+    },
+    "center_px": {
+      "mean": 0.4391891891891892,
+      "median": 0.5,
+      "p95": 1.0,
+      "max": 4.5
+    },
+    "age_ms": {
+      "max": 1033
+    },
+    "inferred_role_errors": 0
+  },
+  "scope": "Development only. Known-edge hiding is a proxy; actual missing boundaries have no pixel truth. No control acceptance."
+}

@@ -16,18 +16,19 @@ int speed_pi_update(speed_pi_t *pi, const speed_pi_config_t *c,
     float error, trial, output;
     *duty = 0u;
     if (!speed_pi_config_valid(c) || !finite_number(target) || !finite_number(measured) ||
-        !finite_number(pi->integral) || target < 0.0f || target > 120.0f ||
+        !finite_number(pi->integral) || target < 0.0f || target > SPEED_PI_MAX_TARGET_RPM ||
         measured < 0.0f || measured > 600.0f || dt_ms == 0u || dt_ms > 100u) {
         speed_pi_reset(pi); return 0;
     }
     if (target == 0.0f) { speed_pi_reset(pi); return 1; }
     error = target - measured;
-    trial = clamp(pi->integral + c->ki * error * ((float)dt_ms / 1000.0f), -500.0f, 500.0f);
+    trial = clamp(pi->integral + c->ki * error * ((float)dt_ms / 1000.0f),
+                  -(float)SPEED_PI_MAX_DUTY, (float)SPEED_PI_MAX_DUTY);
     output = c->feedforward + c->kp * error + trial;
     /* 在饱和方向不再积累；误差反向时允许积分退出饱和。 */
-    if (!((output > 500.0f && error > 0.0f) || (output < 0.0f && error < 0.0f)))
+    if (!((output > (float)SPEED_PI_MAX_DUTY && error > 0.0f) || (output < 0.0f && error < 0.0f)))
         pi->integral = trial;
-    output = clamp(c->feedforward + c->kp * error + pi->integral, 0.0f, 500.0f);
+    output = clamp(c->feedforward + c->kp * error + pi->integral, 0.0f, (float)SPEED_PI_MAX_DUTY);
     *duty = (uint16_t)(output + 0.5f);
     return 1;
 }

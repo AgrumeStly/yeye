@@ -1,0 +1,22 @@
+{
+  "frames": 732,
+  "states": {
+    "current_pair": 289,
+    "current_single_associated": 52,
+    "unknown": 391
+  },
+  "valid": 187,
+  "templates": 1113,
+  "pc_median_ms": 12.652350007556379,
+  "pc_p95_ms": 17.498544958652925,
+  "pc_max_ms": 25.785099947825074,
+  "source_hashes": {
+    "lite_lap_route.py": "f891231da8a313d529dcf895e7b1d1171a74fae9530cd14eb7e7adb39e7005b1",
+    "lap_protocol.py": "19954426271ae21f15e0ee387287daa98e456e55e5cbc7577a270f8fd756fde1",
+    "low_speed_lap_canmv.py": "7d87dcc285afbad0d3718d81720b16e162662118a1f5f65fe2db6477c1982667",
+    "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd"
+  },
+  "hardware_tested": false,
+  "autonomous_lap_tested": false,
+  "warning": "development images; counts are not accuracy; PC time is not board time; packet age=0 is simulated"
+}

@@ -1,0 +1,9 @@
+{
+  "board": {
+    "simulated": true,
+    "purpose": "host helper checks only"
+  },
+  "status": {
+    "running": false
+  }
+}

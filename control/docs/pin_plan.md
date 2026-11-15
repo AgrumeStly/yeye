@@ -1,5 +1,9 @@
 # C-02A 主控电机与编码器引脚资源方案
 
+> 2026-11-10实施完成：独立OledBench已使用PB8/PB9开漏GPIO软件I²C，不配置AF4或TIM4；0x3C实板应答、持续写帧与主控清晰画面确认均已取得，见[操作](oled_bench.md)及[证据](../../testing/2026-11-10_oled_bench/record.md)。下条“电气测量、I²C应答及驱动点亮待验”为此前接线阶段；其中I²C／独立点亮现已完成，电压与逐线导通仍未单独测量，运动集成仍未验收。
+
+> 2026-11-10 OLED分配与接线反馈：主控确认新增车载OLED12864，四针GND／VDD／SCK／SDA。分配PB8（B08，P2.21）作I2C1_SCL／AF4，PB9（B09，P2.20）作I2C1_SDA／AF4，供电采用主板3V3／GND；主控收到四线接法后确认“已接好线”，电气测量、I²C应答及驱动点亮待验。已核对当前源码未占用两脚；PB6／PB7保持TIM4编码器，PB8／PB9使用I²C不占用TIM4计数器，不得为OLED重配TIM4。来源与实物步骤见[OLED接线](../../hardware_preparation/oled_wiring.md)，安装状态见[已部署清单](../../hardware_preparation/deployed_hardware.md)。本次仅增加资源记录，未改外设初始化或固件。
+
 > 2026-10-29轮位／命名更新：MCU端口和本页AF表未改，但物理轮已互换，主控新A=左、新B=右。物理新A/B不能与驱动AIN/BIN、MOTOR-A/B或软件a/b混同；当前轮组／通道／方向及旧CPR参考沿用统一见[wheel_mapping.md](../../hardware_preparation/wheel_mapping.md)。以下10月25日及更早的左右或未标定措辞保留其历史阶段含义。
 
 

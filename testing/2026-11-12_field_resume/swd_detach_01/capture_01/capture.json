@@ -1,0 +1,191 @@
+{
+  "probe_id": "00010001066cff554954657287234218a5a5a5a597969908",
+  "reset_requested": false,
+  "halt_requested": false,
+  "resume_requested": false,
+  "flash_written": false,
+  "source_symbols": {
+    "g_speed_ms": {
+      "address": 536870996,
+      "size": 4
+    },
+    "g_speed_fault": {
+      "address": 536871000,
+      "size": 4
+    },
+    "g_speed_revision": {
+      "address": 536871004,
+      "size": 4
+    },
+    "g_speed_watchdog_started": {
+      "address": 536871008,
+      "size": 4
+    },
+    "g_speed_watchdog_stage": {
+      "address": 536871012,
+      "size": 4
+    },
+    "g_lap_config": {
+      "address": 536871048,
+      "size": 12
+    },
+    "g_lap_uart_errors": {
+      "address": 536871148,
+      "size": 4
+    },
+    "g_speed_match": {
+      "address": 536871152,
+      "size": 112
+    },
+    "g_lap": {
+      "address": 536871424,
+      "size": 68
+    },
+    "g_lap_last": {
+      "address": 536871492,
+      "size": 40
+    },
+    "g_lap_uart_diag": {
+      "address": 536872812,
+      "size": 40
+    }
+  },
+  "samples": [
+    {
+      "cpu_state": "State.RUNNING",
+      "dhcsr": "0x1010001",
+      "halted": false,
+      "g_speed_ms": 45565,
+      "g_speed_fault": 0,
+      "g_speed_revision": 34668553,
+      "g_speed_watchdog_started": 1,
+      "g_speed_watchdog_stage": 4,
+      "g_lap_uart_errors": 0,
+      "lap": {
+        "state": 0,
+        "reason": 0,
+        "run_since": 0,
+        "path_at": 45515,
+        "received": 678,
+        "rejected": 0,
+        "duplicates": 0,
+        "starts_rejected": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "steering": 0,
+        "bend": 0,
+        "path_valid": 0,
+        "history": 0,
+        "single": 0
+      },
+      "calibrator": {
+        "state": 1,
+        "error": 0,
+        "phase": 0
+      },
+      "config": {
+        "straight_rpm": 40.0,
+        "run_ms": 3000,
+        "min_feedforward": 200.0
+      },
+      "uart": {
+        "overrun": 0,
+        "noise": 0,
+        "frame": 0,
+        "parity": 0,
+        "ring_full": 0,
+        "first_mask": 0,
+        "last_mask": 0,
+        "first_at_ms": 0,
+        "last_at_ms": 0,
+        "isr_max_cycles": 194
+      },
+      "core_faults": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0x0",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x3e000003"
+      },
+      "gpio": {
+        "KEY_PA0": 0,
+        "PB2_ODR": 0
+      }
+    },
+    {
+      "cpu_state": "State.RUNNING",
+      "dhcsr": "0x1010001",
+      "halted": false,
+      "g_speed_ms": 47146,
+      "g_speed_fault": 0,
+      "g_speed_revision": 34668553,
+      "g_speed_watchdog_started": 1,
+      "g_speed_watchdog_stage": 4,
+      "g_lap_uart_errors": 0,
+      "lap": {
+        "state": 0,
+        "reason": 0,
+        "run_since": 0,
+        "path_at": 47121,
+        "received": 707,
+        "rejected": 0,
+        "duplicates": 0,
+        "starts_rejected": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "steering": 0,
+        "bend": 0,
+        "path_valid": 0,
+        "history": 0,
+        "single": 0
+      },
+      "calibrator": {
+        "state": 1,
+        "error": 0,
+        "phase": 0
+      },
+      "config": {
+        "straight_rpm": 40.0,
+        "run_ms": 3000,
+        "min_feedforward": 200.0
+      },
+      "uart": {
+        "overrun": 0,
+        "noise": 0,
+        "frame": 0,
+        "parity": 0,
+        "ring_full": 0,
+        "first_mask": 0,
+        "last_mask": 0,
+        "first_at_ms": 0,
+        "last_at_ms": 0,
+        "isr_max_cycles": 195
+      },
+      "core_faults": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0x0",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x3e000003"
+      },
+      "gpio": {
+        "KEY_PA0": 0,
+        "PB2_ODR": 0
+      }
+    }
+  ],
+  "flash_matches_bin": true,
+  "bin_sha256": "7f3f7b5e8c676e321e23f3c2c2b6a88cd0e3821c5b8f80af9f608cce3224e2f9"
+}

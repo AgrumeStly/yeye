@@ -1,0 +1,5 @@
+[UART PROBE IDLE] explicit ENABLED=True; motor power must remain disconnected
+[INVALID_PATH_ONLY] 0 3 seconds; flags=0; no START
+[INVALID_PATH_ONLY] 600 3 seconds; flags=0; no START
+[INVALID_PATH_ONLY] -600 3 seconds; flags=0; no START
+[UART PROBE DONE] check real STM32 parser/steering/flags/PWM; no movement acceptance

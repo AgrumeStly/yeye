@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "name": "central_calibration_three_points",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "projection_roundtrip",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "same_image_motion_zero",
+      "passed": true,
+      "details": {
+        "available": true,
+        "reason": null,
+        "inliers": 99,
+        "matches": 99,
+        "yaw_deg": 1.1948287012364878e-15,
+        "translation_cm": [
+          -1.7763568394002505e-15,
+          0.0
+        ],
+        "residual_cm": 1.4210854715202004e-14,
+        "fitted_scale": 1.0,
+        "span_cm": [
+          130.35964194106592,
+          57.51026748050158
+        ]
+      }
+    },
+    {
+      "name": "synthetic_known_ground_motion",
+      "passed": true,
+      "details": {
+        "available": true,
+        "reason": null,
+        "inliers": 43,
+        "matches": 50,
+        "yaw_deg": 2.952252789330022,
+        "translation_cm": [
+          0.9625521397081296,
+          -2.005616269866543
+        ],
+        "residual_cm": 0.16312568002935648,
+        "fitted_scale": 0.9997340555267653,
+        "span_cm": [
+          113.12872700607826,
+          54.69596974435579
+        ]
+      }
+    },
+    {
+      "name": "same_frame_history_used",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "gap_resets_and_revokes_start_map",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "backwards_clock_resets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "missing_clock_no_history_or_map",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "new_session_resets",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "blank_0_not_current_road",
+      "passed": true,
+      "details": "map_prior_only"
+    },
+    {
+      "name": "blank_255_not_current_road",
+      "passed": true,
+      "details": "map_prior_only"
+    },
+    {
+      "name": "real_text_not_current_road",
+      "passed": true,
+      "details": {
+        "parameters": [
+          6.072506026329679,
+          18.564426576334554,
+          0.29670597283903605
+        ],
+        "angle_deg": 90.0,
+        "corner_selected": true,
+        "loss": 4.117448640919469,
+        "straight_loss": 5.978685167100695,
+        "corner_loss": 4.117448640919469,
+        "current_side_support": [
+          0.6086956521739131,
+          0.0
+        ],
+        "visible_samples": 23,
+        "anchor_error_cm": null,
+        "association_error_cm": 14.766469998448322,
+        "last_supported_age_ms": 200
+      }
+    },
+    {
+      "name": "same_prefix_deterministic",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "all_checks_passed": true,
+  "masked_frames": 0,
+  "masked_points": 0,
+  "center_distance_px": null,
+  "mask_scope": "Known C2 midpoint hiding proxy; no hidden GT sent to predictor. Not actual missing-boundary truth.",
+  "code_sha256": "406133f73f8237343722dc31213b29a22e94f749a0aacceda5d11143cab6032f"
+}

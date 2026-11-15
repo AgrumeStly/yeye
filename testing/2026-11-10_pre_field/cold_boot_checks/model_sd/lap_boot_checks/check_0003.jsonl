@@ -1,0 +1,2 @@
+{"event": "begin", "version": "L1-BOOT-NODRIVE-1", "duration_ms": 10000, "drive_allowed": false, "log": "D:\\projects\\projectsyeye\\testing\\2026-11-10_pre_field\\cold_boot_checks\\model_sd/lap_boot_checks/check_0003.jsonl"}
+{"event": "failed", "error": "OSError('injected camera failure')"}

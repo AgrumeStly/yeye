@@ -1,0 +1,22 @@
+{
+  "battery_voltage_operator_reported": 8.38,
+  "power_configuration": "DAPLink powers STM32; computer USB powers K230; independent new 2S powers motor driver",
+  "firmware_revision": "0x02110009",
+  "fixture": "synthetic straight, NOT CAMERA",
+  "image": "last_run_watch.png",
+  "valid": 1,
+  "elapsed_ms": 3000,
+  "reason": "LAP_LIMIT (11)",
+  "left_target_rpm": 40,
+  "right_target_rpm": 40,
+  "left_rpm": 38.8627205,
+  "right_rpm": 42.2567825,
+  "left_pwm_before_stop_per_mille": 207,
+  "right_pwm_before_stop_per_mille": 193,
+  "left_boost_samples": 1,
+  "right_boost_samples": 1,
+  "uart_errors_operator_reported": 0,
+  "physical_operator_report": "both wheels rotated slowly",
+  "accepted_scope": "first new-battery suspended straight RUN completed 3000ms LIMIT; physical direction and settling to be explicitly confirmed with repeat trials",
+  "not_verified": ["repeatable startup", "continuous speed-match duration", "battery-powered logic boards", "source-loss physical stop", "ground operation", "real vision", "full lap"]
+}

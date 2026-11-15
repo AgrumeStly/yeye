@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-11-09T12:39:41.393936+08:00",
+  "source": "主控本对话原始文字",
+  "reported": {
+    "accepted": "0x000000B4",
+    "received": "0x000000B4",
+    "steering": "0xFDA8",
+    "g_lap_uart_errors": 0
+  },
+  "interpreted": {
+    "accepted_decimal": 180,
+    "received_decimal": 180,
+    "steering_signed_int16": -600
+  },
+  "STOP_initially_confirmed": false,
+  "followup_probe": "board_uart_probe_03",
+  "followup_user_reply": "符合预期",
+  "followup_expected_relation": "accepted=received+1 after STOP; no reset",
+  "followup_raw_counter_values": null,
+  "basic_UART_receive_confirmed": true,
+  "STOP_parse_relation_confirmed_by_user": true,
+  "motor_stop_with_power_verified": false
+}

@@ -1,0 +1,16 @@
+﻿source,y,left_inner_x_approx,right_inner_x_approx,reading_band_px,midpoint_x_approx,audit
+vision/data/captures/final_mount_20261108/v03_center_0002/data_0001.jpg,120,80,239,2,159.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_center_0002/data_0002.jpg,120,80,239,2,159.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_center_0002/data_0003.jpg,120,80,239,2,159.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_offset_left_0001/data_0001.jpg,120,107,267,2,187.0,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_offset_left_0001/data_0002.jpg,120,107,267,2,187.0,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_offset_left_0001/data_0003.jpg,120,107,267,2,187.0,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0001.jpg,120,55,215,2,135.0,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0002.jpg,120,55,215,2,135.0,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0003.jpg,120,55,215,2,135.0,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_heading_left_0001/data_0001.jpg,120,109,274,2,191.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_heading_left_0001/data_0002.jpg,120,109,274,2,191.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_heading_left_0001/data_0003.jpg,120,109,274,2,191.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_heading_right_0001/data_0001.jpg,120,34,197,2,115.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_heading_right_0001/data_0002.jpg,120,34,197,2,115.5,posthoc_visual_review_not_independent_ground_truth
+vision/data/captures/final_mount_20261108/v03_heading_right_0001/data_0003.jpg,120,34,197,2,115.5,posthoc_visual_review_not_independent_ground_truth

@@ -1,0 +1,39 @@
+COMMAND: vision/.venv/Scripts/python.exe vision/tools/replay_offline.py --input vision/data/captures/d01_straight_run01 --output vision/build/offline_v02_r1 --headless
+EXIT_CODE: 0
+STDOUT:
+{
+  "input_count": 325,
+  "processed_ok": 325,
+  "valid": 162,
+  "invalid": 163,
+  "read_failed": 0,
+  "overlay_count": 325,
+  "video_decoded_frames": 325,
+  "preview_fps": 10,
+  "preview_is_capture_fps": false,
+  "video_error": null,
+  "invalid_reasons": {
+    "reference_row_not_bracketed": 86,
+    "insufficient_pair_support": 56,
+    "low_pair_quality": 57,
+    "single_boundary_only_side_ambiguous": 70,
+    "pair_not_widening_toward_camera": 23
+  },
+  "algorithm_ms": {
+    "mean": 11.13631353846154,
+    "median": 11.0399,
+    "p95": 12.92192,
+    "maximum": 21.6982
+  },
+  "timing_excludes": [
+    "image_read",
+    "drawing",
+    "image_write",
+    "video_encoding"
+  ],
+  "wall_seconds": 4.8237542998977005,
+  "temporal_state": "none",
+  "interpretation": "output validity statistics, not accuracy; PC timing is not K230D or end-to-end latency"
+}
+
+STDERR:

@@ -1,0 +1,20 @@
+{
+  "firmware_revision": "0x02110005",
+  "stage": "motor power disconnected; before single-wheel calibration",
+  "timing_source": "timing_watch.png",
+  "uart_source": "uart_watch.png",
+  "counter_ready": 1,
+  "clock_hz": 16000000,
+  "systick_max_cycles": 1271,
+  "systick_max_us": 79.4375,
+  "motion_lock_max_cycles": 834,
+  "motion_lock_max_us": 52.125,
+  "uart_isr_max_cycles": 194,
+  "uart_isr_max_us": 12.125,
+  "uart_error_categories": {"overrun": 0, "noise": 0, "frame": 0, "parity": 0, "ring_full": 0},
+  "other_values_operator_confirmed_against_expected_table": {
+    "accepted": 181, "received": 180, "lap_state": 0, "lap_reason": 0, "uart_errors": 0
+  },
+  "scope": "short invalid-PATH receive probe only; timer reads exclude some measurement/exception tail overhead; not post-calibration or running motor timing",
+  "physical_dual_wheel_run_verified": false
+}

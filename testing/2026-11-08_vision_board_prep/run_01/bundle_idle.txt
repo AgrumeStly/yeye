@@ -1,0 +1,1 @@
+[IDLE] Set explicit sd_replay or live; UART disabled by default; no main.py deployment

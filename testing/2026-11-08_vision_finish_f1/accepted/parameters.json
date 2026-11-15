@@ -1,0 +1,21 @@
+{
+  "top": 65,
+  "bottom": 232,
+  "min_width": 8,
+  "max_width": 68,
+  "max_height": 14,
+  "min_aspect": 3.0,
+  "max_slope": 0.22,
+  "line_residual_px": 3.0,
+  "min_road_fraction": 0.32,
+  "min_gap_ratio": 0.25,
+  "max_gap_ratio": 2.5,
+  "initial_clear_ms": 1500,
+  "confirm_ms": 150,
+  "exit_y": 180,
+  "exit_clear_ms": 600,
+  "rearm_clear_ms": 1500,
+  "gap_reset_ms": 700,
+  "max_y_rate_px_s": 180.0,
+  "jump_margin_px": 25.0
+}

@@ -1,0 +1,15 @@
+{
+  "evidence_kind": "operator_feedback",
+  "physical_suspension": "主控回复已悬空",
+  "power_on_stationary": "主控对驱动OFF接XT30再ON、两轮静止及零PWM回复是",
+  "left_500ms_forward_only": "主控回复符合预期",
+  "right_500ms_forward_only": "主控回复符合预期",
+  "phase": 2,
+  "calibrator_error": 0,
+  "state": 1,
+  "uart_errors": 0,
+  "run_ms": 3000,
+  "values_source": "第二轮校准后明确预期表的人工确认，无独立截图",
+  "runtime": "冻结R5真实相机输入窗口600000ms，主板09单次3000ms；人工KEY，非fixture",
+  "physical_motion_result": "pending"
+}

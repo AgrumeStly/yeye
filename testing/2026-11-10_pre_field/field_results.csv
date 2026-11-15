@@ -1,0 +1,1 @@
+test_id,local_time,test_type,track_location,boundary_type,lighting,camera_mount,revision,vision_source_sha256,logic_power_source,battery_terminal_v,vehicle_length_cm,vehicle_width_cm,vehicle_height_cm,vehicle_weight_kg,clockwise,continuous_lap,elapsed_s,boundary_contacts,fully_outside,human_intervention,stop_reason,uart_errors,evidence_path,notes

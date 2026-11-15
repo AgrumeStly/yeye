@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "checks": [
+    "CRC_123456789",
+    "golden_path",
+    "golden_start",
+    "golden_stop",
+    "1000_packets_match_control_reference",
+    "short_writes_send_remaining_bytes",
+    "zero_none_or_oversize_write_fails",
+    "source_age_199_valid",
+    "source_age_200_invalid",
+    "processing_100_valid",
+    "processing_101_invalid",
+    "diagnostic_default_invalid",
+    "bad_timing_rejected",
+    "independent_sequences",
+    "path_wrap_255_to_0",
+    "C_START_requires_path",
+    "C_split_first_half_incomplete",
+    "C_split_completes",
+    "C_START_fresh_valid",
+    "C_right_positive_left_request_higher",
+    "C_left_negative_right_request_higher",
+    "C_duplicate_does_not_refresh",
+    "C_200ms_stream_timeout_fault_zero",
+    "C_recovery_does_not_restart",
+    "C_invalid_path_fault_immediate",
+    "C_bad_CRC_rejected",
+    "C_delayed_START_after_STOP_rejected",
+    "C_old_STOP_always_effective",
+    "C_sequence_wrap",
+    "C_old_path_rejected",
+    "C_reboot_baseline_after_200ms",
+    "C_transport_fault_zero",
+    "C_noise_concatenated_recovery",
+    "1394_real_recognition_packets_C_parser_accepts",
+    "sparse_capture_not_real_time_control",
+    "BP1_all_wire_paths_invalid",
+    "BP1_bad_or_no_contrast_0False",
+    "BP1_bad_or_no_contrast_0False",
+    "BP1_bad_or_no_contrast_76800True",
+    "BP1_bad_or_no_contrast_76800False",
+    "BP1_input_unmodified",
+    "3616_original_files_preserved",
+    "control_tracked_bytes_unchanged"
+  ],
+  "real_recognition_packets": 1394,
+  "recognition_valid": 837,
+  "finish_candidate_packets": 22,
+  "bp1_groups": [
+    {
+      "session": "d01_straight_run01",
+      "frames": 325,
+      "diagnostic_valid": 159,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0002",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_offset_left_0001",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_offset_right_0001",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_heading_left_0001",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_heading_right_0001",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0007",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0008",
+      "frames": 3,
+      "diagnostic_valid": 0,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0009",
+      "frames": 3,
+      "diagnostic_valid": 0,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0010",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0011",
+      "frames": 3,
+      "diagnostic_valid": 3,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "v03_center_0012",
+      "frames": 3,
+      "diagnostic_valid": 0,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "push_corner_77_0001",
+      "frames": 304,
+      "diagnostic_valid": 272,
+      "R1_invalid_BP1_diagnostic": 0
+    },
+    {
+      "session": "push_full_lap_0001",
+      "frames": 732,
+      "diagnostic_valid": 552,
+      "R1_invalid_BP1_diagnostic": 0
+    }
+  ],
+  "bp1_algorithm_ms": {
+    "mean": 3.639138235294117,
+    "p95": 4.4628499999999995
+  },
+  "PC_tracemalloc_bytes": {
+    "current": 48,
+    "peak": 153729,
+    "scope": "CPython allocations only; not MicroPython or media memory"
+  },
+  "originals_protected": 3616,
+  "control_tracked_protected": 136,
+  "first_sparse_fault": {
+    "frame": 10,
+    "capture_ms": 1190,
+    "state": 3,
+    "reason": 2
+  },
+  "scope": "Offline PC byte/model/diagnostic checks. No board, UART port, camera or motors opened. BP1 is not C2/F1 equivalent."
+}

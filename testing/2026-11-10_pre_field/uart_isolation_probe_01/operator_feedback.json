@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-10",
+  "operator_reply": "符合",
+  "confirmation_context": "After 9-second invalid-path probe, requested accepted181, received180, state/reason0, both PWM/path_valid0, UART total and all five error categories0, especially frame0.",
+  "confirmed_expected_values": {
+    "accepted": 181,
+    "received": 180,
+    "state": 0,
+    "reason": 0,
+    "left_pwm": 0,
+    "right_pwm": 0,
+    "path_valid": 0,
+    "uart_total_errors": 0,
+    "overrun": 0,
+    "noise": 0,
+    "frame": 0,
+    "parity": 0,
+    "ring_full": 0
+  },
+  "basis": "Operator confirmation of explicit expected table; paired with actual K230 probe terminal, no separate STM32 screenshot this step.",
+  "stable_physical_power_probe_passed": true,
+  "physical_power_cycle_performed_in_probe": false,
+  "backend_soft_reboots_included_in_probe": true,
+  "previous_cold_boot_FE_fault_resolved": false,
+  "firmware_changed": false,
+  "motor_started": false
+}

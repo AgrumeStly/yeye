@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "actual_camera_frames": 380,
+  "contiguous_indices": true,
+  "sequence_wrap_checked": true,
+  "elapsed_ms": [
+    0,
+    29971
+  ],
+  "all_drive_denied": true,
+  "processing_ms": [
+    23,
+    74
+  ],
+  "interval_ms": [
+    47,
+    149
+  ],
+  "age_ms": [
+    24,
+    77
+  ],
+  "completed": true,
+  "ground_verified": false
+}

@@ -1,0 +1,17 @@
+{
+  "source_sha256": "b2bee9389ffe7936e0d846f8f3e57201f36a8429dcc08e921416f65bf1e34c32",
+  "samples": 43,
+  "highest_index": 400,
+  "all_wire_valid_false": true,
+  "all_drive_allowed_false": true,
+  "processing_ms": [
+    43,
+    73
+  ],
+  "interval_ms": [
+    72,
+    121
+  ],
+  "normal_completion": true,
+  "real_above_10min_board_test": false
+}

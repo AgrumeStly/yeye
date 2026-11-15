@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "frames": 1394,
+  "frozen_fields_unchanged": 1394,
+  "groups": {
+    "d01_straight_run01": 325,
+    "v03_center_0002": 3,
+    "v03_offset_left_0001": 3,
+    "v03_offset_right_0001": 3,
+    "v03_heading_left_0001": 3,
+    "v03_heading_right_0001": 3,
+    "v03_center_0007": 3,
+    "v03_center_0008": 3,
+    "v03_center_0009": 3,
+    "v03_center_0010": 3,
+    "v03_center_0011": 3,
+    "v03_center_0012": 3,
+    "push_corner_77_0001": 304,
+    "push_full_lap_0001": 732
+  },
+  "protected": [
+    {
+      "manifest": "testing/2026-11-08_vision_recovery_c2/protected_before.json",
+      "unchanged": 3616,
+      "changed": []
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_curve_c1/protected_hashes.json",
+      "unchanged": 870,
+      "changed": []
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_prediction_p1/release/protected_before.json",
+      "unchanged": 1398,
+      "changed": []
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_board_prep/release/control_before.json",
+      "unchanged": 136,
+      "changed": []
+    }
+  ],
+  "T2_states": {
+    "current_supported_model": 675,
+    "history_prediction": 23,
+    "map_prior_only": 34
+  },
+  "C2_midpoint_distance_px": {
+    "points": 17262,
+    "median": 1.3942216173052664,
+    "p95": 5.681617595068383,
+    "max": 195.62367242535086
+  },
+  "route_visible_frames": 695,
+  "full_nominal_ground_route_frames": 732,
+  "unsupported_spans": [
+    {
+      "first_frame": 136,
+      "last_frame": 136,
+      "frames": 1,
+      "first_ms": 17495,
+      "last_ms": 17495,
+      "sample_span_ms": 0,
+      "recovered_frame": 137,
+      "recovered_ms": 17625,
+      "until_recovery_ms": 130
+    },
+    {
+      "first_frame": 294,
+      "last_frame": 300,
+      "frames": 7,
+      "first_ms": 44033,
+      "last_ms": 45306,
+      "sample_span_ms": 1273,
+      "recovered_frame": 301,
+      "recovered_ms": 45509,
+      "until_recovery_ms": 1476
+    },
+    {
+      "first_frame": 375,
+      "last_frame": 375,
+      "frames": 1,
+      "first_ms": 62020,
+      "last_ms": 62020,
+      "sample_span_ms": 0,
+      "recovered_frame": 376,
+      "recovered_ms": 62215,
+      "until_recovery_ms": 195
+    },
+    {
+      "first_frame": 378,
+      "last_frame": 378,
+      "frames": 1,
+      "first_ms": 62779,
+      "last_ms": 62779,
+      "sample_span_ms": 0,
+      "recovered_frame": 379,
+      "recovered_ms": 62977,
+      "until_recovery_ms": 198
+    },
+    {
+      "first_frame": 397,
+      "last_frame": 407,
+      "frames": 11,
+      "first_ms": 67427,
+      "last_ms": 69991,
+      "sample_span_ms": 2564,
+      "recovered_frame": 408,
+      "recovered_ms": 70223,
+      "until_recovery_ms": 2796
+    },
+    {
+      "first_frame": 466,
+      "last_frame": 470,
+      "frames": 5,
+      "first_ms": 86224,
+      "last_ms": 87417,
+      "sample_span_ms": 1193,
+      "recovered_frame": 471,
+      "recovered_ms": 87655,
+      "until_recovery_ms": 1431
+    },
+    {
+      "first_frame": 513,
+      "last_frame": 513,
+      "frames": 1,
+      "first_ms": 100995,
+      "last_ms": 100995,
+      "sample_span_ms": 0,
+      "recovered_frame": 514,
+      "recovered_ms": 101252,
+      "until_recovery_ms": 257
+    },
+    {
+      "first_frame": 515,
+      "last_frame": 519,
+      "frames": 5,
+      "first_ms": 101752,
+      "last_ms": 103042,
+      "sample_span_ms": 1290,
+      "recovered_frame": 520,
+      "recovered_ms": 103364,
+      "until_recovery_ms": 1612
+    },
+    {
+      "first_frame": 566,
+      "last_frame": 566,
+      "frames": 1,
+      "first_ms": 118729,
+      "last_ms": 118729,
+      "sample_span_ms": 0,
+      "recovered_frame": 567,
+      "recovered_ms": 119221,
+      "until_recovery_ms": 492
+    },
+    {
+      "first_frame": 568,
+      "last_frame": 568,
+      "frames": 1,
+      "first_ms": 119495,
+      "last_ms": 119495,
+      "sample_span_ms": 0,
+      "recovered_frame": 569,
+      "recovered_ms": 119768,
+      "until_recovery_ms": 273
+    }
+  ],
+  "interrupted_separate_frames": 20,
+  "held_known_midpoint_jump_gate": {
+    "threshold_px": 32,
+    "accepted_points": 1913,
+    "largest_distance_px": 27.906078190960486,
+    "bad_frames": [],
+    "passed": true,
+    "nominal_unknown_points": 635
+  },
+  "caveat": "Model-vs-C2 midpoint distance includes intentional corner smoothing; not true invisible-edge or safe-driving accuracy.",
+  "branch": "codex/current-version-20261025",
+  "head": "a0733a8685db4c2b497539303bfe87fe1c1ebfe5",
+  "physical_actions": false,
+  "uploaded": false,
+  "global_summary_updated": false
+}

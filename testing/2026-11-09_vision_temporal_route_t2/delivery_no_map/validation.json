@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "frames": 732,
+  "protected_unchanged": 737,
+  "all_protocol_invalid": true,
+  "fixed_reference_fields_preserved": true,
+  "source_sha256": "cdc72e18f684b6438516942f8bdc3a4016d631acf2ff99acf4d9a5ea319637c4",
+  "description": "Structural/protection checks only, not evidence of route correctness"
+}

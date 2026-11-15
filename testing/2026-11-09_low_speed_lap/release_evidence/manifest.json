@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-09T11:44:05.759391+08:00",
+  "head": "a0733a8685db4c2b497539303bfe87fe1c1ebfe5",
+  "source_hashes": {
+    "control/App/Motion/lap_motion.c": "36ab542ab0f371d4e3caaeff1e7d784216502f14d163fa4359b17e5e2e21066f",
+    "control/App/Motion/lap_motion.h": "f5196dfc77d4ea032cdffa20864e1f67c8eeef45d81bb4e448a6b93a25a920d6",
+    "control/Drivers_Custom/Communication/lap_link.c": "6bbdd5225db6d48987c009556a47ea55e86200134716f001d5f2aa217f701112",
+    "control/Drivers_Custom/Communication/lap_link.h": "092d2456fb8e01bd99e92499faafc2b5bdf354a235e4e85ba1e7bb7d14b177e6",
+    "control/Drivers_Custom/Communication/lap_uart.c": "6c3186e1e527d8d64073903669cebf401811563b64863bf3ec2a452901083cff",
+    "control/Drivers_Custom/Communication/lap_uart.h": "731f8e92f7389fb78a0f6be8fed1189a9ca467dcdc26349b3de1189df2278cac",
+    "control/Core/Src/low_speed_lap_main.c": "7c54e06459970237f6b40521c5050f19c61260f024f53673629f23c5d8283fac",
+    "control/MDK-ARM/low_speed_lap.uvprojx": "5c41d99bcac0020255ffe940780e9b35e9a15a20d5de9f8f11bfcec8f8646514",
+    "control/Tests/Host/test_lap_motion.c": "361de16405bc2e2005317846dd1f16b68e05e023095052ed20c727c325a4fd3d",
+    "control/Tests/Host/lap_packet_probe.c": "6de856b7dc005fbcf8f638fcca44068d82321d5847e77efd05c5254b12593aa9",
+    "vision/src/lite_lap_route.py": "49cd141e9a26b40a8f383dd150490975c789a8fed93bc1e96657beb7b69f7ba5",
+    "vision/src/lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+    "vision/src/low_speed_lap_canmv.py": "82c75986a8627e510e263377d1f0b94dff12f0415dc430bbbc947767315aaccc",
+    "vision/src/lap_uart_probe_canmv.py": "51f9dcd56c062d5927f15c3dd487e173583b1e97d543f5eff374593d14313f0b",
+    "vision/src/vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+    "control/App/Motion/speed_match.c": "fab7162b31303db8480913d87baa4eaaa6320056f0191ea02e7d2bcd8fa6f45f",
+    "control/Algorithms/Speed/speed_pi.c": "13e78ce6a783b15147338a65bf54370ab9c97d511ce2854a52a12c91f8b65bef",
+    "control/Drivers_Custom/Motor/straight_pwm.c": "792931cdd3a16365f1872122ec4e7e720af548cb38b6b6badebc74024303a49b",
+    "control/Drivers_Custom/Encoder/encoder_hw.c": "966c8f20e04005621fa707f17231bc7be701532dab39eb4babb08018af30c75a"
+  },
+  "firmware": {
+    "low_speed_lap": {
+      "bytes": 14524,
+      "sha256": "df1205a7165a644ba9c696d192e44a6964d029cc0131e7e690c757c82f88b279"
+    },
+    "low_speed_lap_track": {
+      "bytes": 14524,
+      "sha256": "9a9a2002d308c1e36b9d7cf3c8e6fd394d67a33ce393790360797834a0846ce2"
+    },
+    "speed_match": {
+      "bytes": 9828,
+      "sha256": "e247d769752ca35d3c269aab4243d06433a769df045426573cbab29ca1dc54a7"
+    }
+  },
+  "board_tested": false,
+  "uart_tested": false,
+  "powered_tested": false,
+  "autonomous_lap_passed": false,
+  "drive_permission_default": false,
+  "formal_rule": "competition/比赛文档.pdf section III, figure1/table1; goal basic60, evidence supports report20; no score claim"
+}

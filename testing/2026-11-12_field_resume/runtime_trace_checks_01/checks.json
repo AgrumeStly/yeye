@@ -1,0 +1,194 @@
+{
+  "checks": [
+    {
+      "name": "candidate_matches_current_generator",
+      "passed": true
+    },
+    {
+      "name": "expected_input_lifetime_live_not_automatic_START",
+      "passed": true
+    },
+    {
+      "name": "camera_continues_at_0",
+      "passed": true
+    },
+    {
+      "name": "camera_continues_at_300000",
+      "passed": true
+    },
+    {
+      "name": "camera_continues_at_600000",
+      "passed": true
+    },
+    {
+      "name": "camera_continues_at_600001",
+      "passed": true
+    },
+    {
+      "name": "camera_continues_at_1800000",
+      "passed": true
+    },
+    {
+      "name": "main_loop_uses_actual_lifetime_predicate",
+      "passed": true
+    },
+    {
+      "name": "bounded_probe_can_still_stop",
+      "passed": true
+    },
+    {
+      "name": "IDE_display_transmission_disabled",
+      "passed": true
+    },
+    {
+      "name": "previous_v2_exact_source_preserved",
+      "passed": true
+    },
+    {
+      "name": "_threshold_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "_grid_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "_pair_anchors_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "_anchor_distance_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "_template_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "LiteLapRoute_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "LapSender_logic_exactly_unchanged",
+      "passed": true
+    },
+    {
+      "name": "per_frame_trace_enabled",
+      "passed": true
+    },
+    {
+      "name": "real_session_clock_and_actual_wire_fields_logged",
+      "passed": true
+    },
+    {
+      "name": "trace_default_permission_still_denied",
+      "passed": true
+    },
+    {
+      "name": "trace_without_continuous_rejected",
+      "passed": true
+    },
+    {
+      "name": "generator_default_denies_drive",
+      "passed": true
+    },
+    {
+      "name": "real_sender_accepts_explicit_current_pair",
+      "passed": true
+    },
+    {
+      "name": "invalid_geometry_denies_drive",
+      "passed": true
+    },
+    {
+      "name": "slow_processing_denies_drive",
+      "passed": true
+    },
+    {
+      "name": "old_frame_denies_drive",
+      "passed": true
+    },
+    {
+      "name": "expired_history_denies_drive",
+      "passed": true
+    },
+    {
+      "name": "default_even_good_geometry_invalid",
+      "passed": true
+    },
+    {
+      "name": "commands_STOP_only",
+      "passed": true
+    },
+    {
+      "name": "all_actual_packet_CRCs",
+      "passed": true
+    },
+    {
+      "name": "begin_records_true_camera_permission_and_no_start",
+      "passed": true
+    },
+    {
+      "name": "original_frame_records_saved_in_order",
+      "passed": true
+    },
+    {
+      "name": "completion_not_lap_acceptance",
+      "passed": true
+    },
+    {
+      "name": "stream_cleared_after_success",
+      "passed": true
+    },
+    {
+      "name": "new_number_each_boot",
+      "passed": true
+    },
+    {
+      "name": "previous_log_bytes_preserved",
+      "passed": true
+    },
+    {
+      "name": "camera_exception_propagates_without_retry",
+      "passed": true
+    },
+    {
+      "name": "failure_saved_without_completion",
+      "passed": true
+    },
+    {
+      "name": "stream_cleared_after_failure",
+      "passed": true
+    },
+    {
+      "name": "MODE_refused_before_camera_and_log",
+      "passed": true
+    },
+    {
+      "name": "UART_ENABLED_refused_before_camera_and_log",
+      "passed": true
+    },
+    {
+      "name": "DURATION_MS_refused_before_camera_and_log",
+      "passed": true
+    },
+    {
+      "name": "SHOW_PREVIEW_refused_before_camera_and_log",
+      "passed": true
+    },
+    {
+      "name": "exhausted_slots_refuse_and_keep_evidence",
+      "passed": true
+    },
+    {
+      "name": "missing_SD_refused_before_camera",
+      "passed": true
+    }
+  ],
+  "candidate_sha256": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8",
+  "camera_replaced_by_model": true,
+  "physical_board_used": false,
+  "motor_verified": false,
+  "main_py_deployed": false,
+  "SD_timing_verified": false
+}

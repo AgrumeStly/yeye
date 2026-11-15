@@ -42,7 +42,9 @@ yeye/
 ├── vision/
 │   ├── README.md                  视觉和语音交付入口
 │   ├── PORTING_REVIEW.md           历史移植审查
-│   ├── reference_code/             C参考，非正式CanMV车载工程
+│   ├── src/                        新CanMV采集与电脑离线识别，运行环境分开
+│   ├── tools/                      电脑校验／回放／模型检查
+│   ├── docs/                       当前操作说明（旧C参考已按主控要求删除）
 │   ├── references/                 算法PDF资料
 │   └── data/                      离线样本
 ├── testing/                       按日期归档的现场证据及结果

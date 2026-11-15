@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "name": "10s_no_drive_configuration",
+      "passed": true
+    },
+    {
+      "name": "valid_geometry_still_sends_invalid_path",
+      "passed": true
+    },
+    {
+      "name": "command_is_STOP_only",
+      "passed": true
+    },
+    {
+      "name": "actual_packet_CRC",
+      "passed": true
+    },
+    {
+      "name": "begin_record_has_no_drive",
+      "passed": true
+    },
+    {
+      "name": "frames_saved_in_order",
+      "passed": true
+    },
+    {
+      "name": "completed_is_not_motor_acceptance",
+      "passed": true
+    },
+    {
+      "name": "stream_closed_after_success",
+      "passed": true
+    },
+    {
+      "name": "repeat_boot_uses_new_file",
+      "passed": true
+    },
+    {
+      "name": "previous_log_bytes_preserved",
+      "passed": true
+    },
+    {
+      "name": "camera_failure_propagated_and_saved",
+      "passed": true
+    },
+    {
+      "name": "no_completed_record_after_failure",
+      "passed": true
+    },
+    {
+      "name": "stream_closed_after_failure",
+      "passed": true
+    },
+    {
+      "name": "full_log_slots_refuse_without_overwrite",
+      "passed": true
+    },
+    {
+      "name": "drive_enable_configuration_rejected",
+      "passed": true
+    },
+    {
+      "name": "missing_SD_refuses_before_camera",
+      "passed": true
+    }
+  ],
+  "camera_replaced_by_model": true,
+  "board_tested": false,
+  "power_verified": false,
+  "main_py_deployed": false,
+  "motor_operated": false
+}

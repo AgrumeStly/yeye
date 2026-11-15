@@ -1,0 +1,20 @@
+{
+  "firmware_revision": "0x02110009",
+  "image": "startup_fault_watch.png",
+  "valid": 1,
+  "elapsed_ms": 312,
+  "reason": "LAP_NO_FEEDBACK (7)",
+  "left_target_rpm": 40,
+  "right_target_rpm": 40,
+  "left_rpm": -2.80259693e-45,
+  "right_rpm": 32.346386,
+  "left_pwm_before_stop_per_mille": 328,
+  "right_pwm_before_stop_per_mille": 236,
+  "left_boost_samples": 5,
+  "right_boost_samples": 1,
+  "operator_report": "right wheel moved briefly, left wheel did not rotate; stopped before operator could remove K230 USB",
+  "source_loss_performed": false,
+  "source_loss_stop_verified": false,
+  "uart_errors": null,
+  "scope": "intermittent left startup failure; supply and single-wheel repeatability to investigate; no software change made after this failure"
+}

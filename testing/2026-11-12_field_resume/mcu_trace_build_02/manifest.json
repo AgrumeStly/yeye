@@ -1,0 +1,90 @@
+{
+  "artifacts": [
+    {
+      "source": "control\\build\\firmware\\low_speed_lap\\low_speed_lap.axf",
+      "file": "low_speed_lap.axf",
+      "bytes": 493692,
+      "sha256": "b036ae2142b7ab939d13c950326c816852e3d42ed8b91d2a8b508879cf4a7329",
+      "revision": "0x0211000B",
+      "run_ms": 3000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap\\low_speed_lap.bin",
+      "file": "low_speed_lap.bin",
+      "bytes": 16084,
+      "sha256": "1fc5ee49f6265499802fb6e5a3983542a4a60337a75fb8c05747d650433e4a28",
+      "revision": "0x0211000B",
+      "run_ms": 3000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap\\low_speed_lap.hex",
+      "file": "low_speed_lap.hex",
+      "bytes": 45297,
+      "sha256": "bf4c91ccce0ff0c680898b39aa95deee9b022e5ddcd32863b8bbc4509f222d71",
+      "revision": "0x0211000B",
+      "run_ms": 3000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.axf",
+      "file": "low_speed_lap_track.axf",
+      "bytes": 494388,
+      "sha256": "41b10dd697a924b308a3fe23df5337d2f992dc1ab3bee9a9a33a3cff12f16b82",
+      "revision": "0x0211000C",
+      "run_ms": 300000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.bin",
+      "file": "low_speed_lap_track.bin",
+      "bytes": 16084,
+      "sha256": "f525047b839976e59a0612e2d53e810cfd8e76ec1a66f7c42cfb203c2ddead72",
+      "revision": "0x0211000C",
+      "run_ms": 300000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.hex",
+      "file": "low_speed_lap_track.hex",
+      "bytes": 45297,
+      "sha256": "89dbd1a3bbedbb4232177b1a546c9a6f5a2300ded050032725afc97578d69d0a",
+      "revision": "0x0211000C",
+      "run_ms": 300000
+    },
+    {
+      "source": "control/App/Motion/lap_motion.c",
+      "file": "lap_motion.c",
+      "bytes": 18643,
+      "sha256": "b9d9032cc868de0ab87894eb1fb59d8bc7c042bc3f6b41f8dce20f626580d6cc"
+    },
+    {
+      "source": "control/App/Motion/lap_motion.h",
+      "file": "lap_motion.h",
+      "bytes": 4556,
+      "sha256": "df16118e1b11933a8a55e20fe30728f6453520c5e7c626de7a6ff744a7c37e51"
+    },
+    {
+      "source": "control/Core/Src/low_speed_lap_main.c",
+      "file": "low_speed_lap_main.c",
+      "bytes": 12523,
+      "sha256": "947c9a6632d30bddb3d1400d6e5881424163d6205148c206f08ed77bcf1218dd"
+    },
+    {
+      "source": "control/Tests/Host/test_lap_motion.c",
+      "file": "test_lap_motion.c",
+      "bytes": 15406,
+      "sha256": "8e8f9b8dfd1bb44aa12e37a78182725221d825696b75e2ce01b12746c8c092c7"
+    },
+    {
+      "source": "control/tools/lap_swd_capture.py",
+      "file": "lap_swd_capture.py",
+      "bytes": 8793,
+      "sha256": "63d41469036c1600bb294a68d44f11bdf1fd7f7c2415c42b989401922d54ee5a"
+    }
+  ],
+  "flash_written": false,
+  "board_tested": false,
+  "host_model_assertions": 347,
+  "uart_host_checks_passed": true,
+  "arm_build_errors": 0,
+  "arm_build_warnings": 0,
+  "path_sequence_retained": true,
+  "previous_candidate_preserved": "../mcu_trace_build_01"
+}

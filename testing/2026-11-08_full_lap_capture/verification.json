@@ -1,0 +1,22 @@
+{
+  "long_window_model": {
+    "passed": true,
+    "folder": "C:\\Users\\Agrum\\AppData\\Local\\Temp\\tmpr6kl8o99\\captures\\push_full_lap_0001",
+    "frames": 1800,
+    "scene": "full_lap",
+    "planned_duration_ms": 180000,
+    "capture_elapsed_ms": 180000,
+    "observed_interval_ms": {
+      "median": 100.0,
+      "p95": 100.0,
+      "maximum": 100
+    },
+    "observed_fps": 10.0,
+    "scope": "file integrity and software timing; not exposure rate, route truth, audible beep or battery acceptance"
+  },
+  "tests_run": 14,
+  "passed": true,
+  "scope": "PC simulated hardware and clock, not board long capture or route acceptance",
+  "source_sha256": "3494f4d892babf7fc00866b5eaac6ac39b9d473c713217dc7a23e1ae6fdfea3a",
+  "original_source_sha256": "53cb9db2c16b7b79e4ffbba682e7a732304569a2fc3175f93d7b058f79151b75"
+}

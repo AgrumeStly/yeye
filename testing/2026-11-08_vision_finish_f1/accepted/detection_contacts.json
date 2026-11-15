@@ -1,0 +1,120 @@
+[
+  {
+    "path": "testing/2026-11-08_vision_finish_f1/accepted/detections_01.jpg",
+    "frames": [
+      {
+        "session": "d01_straight_run01",
+        "frame": 234
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 408
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 409
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 410
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 411
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 412
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 413
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 414
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 415
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 416
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 417
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 418
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 419
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 420
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 421
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 422
+      }
+    ]
+  },
+  {
+    "path": "testing/2026-11-08_vision_finish_f1/accepted/detections_02.jpg",
+    "frames": [
+      {
+        "session": "push_full_lap_0001",
+        "frame": 426
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 570
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 571
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 572
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 573
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 574
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 575
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 576
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 577
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 578
+      },
+      {
+        "session": "push_full_lap_0001",
+        "frame": 582
+      }
+    ]
+  }
+]

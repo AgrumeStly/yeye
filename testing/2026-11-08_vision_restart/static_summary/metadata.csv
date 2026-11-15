@@ -1,0 +1,16 @@
+﻿source,pose,instructed_offset_cm_right_positive,instructed_heading_deg_right_positive,exact_displacement_measured,exact_heading_measured,mount_height_mm_approx,mount_angle_deg_approx,mount_angle_reference,nearest_front_cm_approx,pose_source
+vision/data/captures/final_mount_20261108/v03_center_0002/data_0001.jpg,center,0,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_center_0002/data_0002.jpg,center,0,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_center_0002/data_0003.jpg,center,0,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_offset_left_0001/data_0001.jpg,offset_left,-5,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_offset_left_0001/data_0002.jpg,offset_left,-5,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_offset_left_0001/data_0003.jpg,offset_left,-5,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0001.jpg,offset_right,5,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0002.jpg,offset_right,5,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0003.jpg,offset_right,5,0,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_heading_left_0001/data_0001.jpg,heading_left,0,-5,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_heading_left_0001/data_0002.jpg,heading_left,0,-5,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_heading_left_0001/data_0003.jpg,heading_left,0,-5,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_heading_right_0001/data_0001.jpg,heading_right,0,5,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_heading_right_0001/data_0002.jpg,heading_right,0,5,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label
+vision/data/captures/final_mount_20261108/v03_heading_right_0001/data_0003.jpg,heading_right,0,5,False,False,200,50,not_confirmed,15,operator_followed_instructions_and_script_label

@@ -1,0 +1,21 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+[INVALID_PATH_ONLY] 0 3 seconds; flags=0; no START
+[INVALID_PATH_ONLY] 600 3 seconds; flags=0; no START
+[INVALID_PATH_ONLY] -600 3 seconds; flags=0; no START
+[UART PROBE DONE] check real STM32 parser/steering/flags/PWM; no movement acceptance
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

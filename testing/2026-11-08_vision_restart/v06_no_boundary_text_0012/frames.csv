@@ -1,0 +1,4 @@
+﻿frame_id,source,read_ok,valid,quality,left_state,right_state,reference_y,deviation_px,deviation_normalized,processing_ms,reasons
+1,vision\data\captures\final_mount_20261108\v03_center_0012\data_0001.jpg,True,False,0.25,visible,visible,120,,,41.8626,insufficient_pair_support;pair_not_widening_toward_camera;reference_row_not_bracketed;low_pair_quality
+2,vision\data\captures\final_mount_20261108\v03_center_0012\data_0002.jpg,True,False,0.25,visible,visible,120,,,22.5919,insufficient_pair_support;pair_not_widening_toward_camera;reference_row_not_bracketed;low_pair_quality
+3,vision\data\captures\final_mount_20261108\v03_center_0012\data_0003.jpg,True,False,0.25,visible,visible,120,,,21.975,insufficient_pair_support;pair_not_widening_toward_camera;reference_row_not_bracketed;low_pair_quality

@@ -1,0 +1,45 @@
+{
+  "frozen_r5_sha256": "54e71bcc4346710300c0302a77f6bba86609baca5c937772d4282fc874175f4d",
+  "reused_existing_checks": 42,
+  "images": [
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0001.jpg",
+      "sha256": "a531cb0bf42c7cdfe49f6abfe7aaed0d556ed7ef497296e80d6836721f701680",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "first_valid_synthetic_index": null,
+      "valid_synthetic_frames": 0,
+      "synthetic_frames": 50,
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0001.jpg",
+      "sha256": "4a28351064237f76d97f7859a47537a50b6dfd148e336358fd9a699fe2e04dc3",
+      "valid": false,
+      "source": "unknown",
+      "steering": 0,
+      "bend": 0,
+      "support": [
+        0,
+        0
+      ],
+      "first_valid_synthetic_index": null,
+      "valid_synthetic_frames": 0,
+      "synthetic_frames": 50,
+      "modeled_left_rpm": null,
+      "modeled_right_rpm": null
+    }
+  ],
+  "input": "stored JPEG repeated at synthetic 50ms intervals; not camera stream",
+  "direction": "right positive; left wheel target higher for positive steering",
+  "physical_direction_verified": false,
+  "new_camera_capture": false,
+  "limitations": "JPEG preview is not raw sensor bytes; IDE frame ids are not algorithm indices; old yaw samples may remain invalid in L1"
+}

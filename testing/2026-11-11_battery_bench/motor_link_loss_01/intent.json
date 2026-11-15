@@ -1,0 +1,12 @@
+{
+  "purpose": "physical K230 USB power loss during new-battery suspended straight RUN",
+  "firmware_revision": "0x02110009",
+  "operator_sequence": "one long KEY press/release; confirm both wheels rotating, after approximately one second remove only K230 USB; keep DAPLink/main-board and motor power; do not reset or reconnect before evidence",
+  "input_window_ms": 120000,
+  "mcu_per_run_limit_ms": 3000,
+  "expected": "early drive removal and latched fault; distinguish actual LAP_LINK from UART transport error",
+  "timeout_proof": "only LAP_LINK may establish last path reference to stop time; power-loss FE stop is separate evidence",
+  "backend_disconnect_expected": true,
+  "automatic_start": false,
+  "result": "power-loss transport-fault drive removal passed: LAP_TRANSPORT at 1570ms, FE2, current PWM0; operator confirms both stopped; pure link timeout not tested; see stm32_review.json"
+}

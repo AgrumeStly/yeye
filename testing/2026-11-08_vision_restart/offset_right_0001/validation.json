@@ -1,0 +1,249 @@
+{
+  "verification": {
+    "passed": true,
+    "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001",
+    "frames": 3,
+    "pose_label": "offset_right",
+    "actual_grayscale_size": [
+      320,
+      240
+    ],
+    "cleanup_errors": [],
+    "scope": "file integrity and image format only; not pose truth or board acceptance"
+  },
+  "source_files": [
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0001.jpg",
+      "bytes": 12138,
+      "sha256": "bbd285d6bb655a2a5d63e0f6c29ae92c0dc04be74901afbbc6abeb4e80f94d93"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0002.jpg",
+      "bytes": 12145,
+      "sha256": "11b9cc4e9df343c0d3ddf79c575abbb86856d4b81f38061c059d3a46adc11e4f"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_offset_right_0001/data_0003.jpg",
+      "bytes": 12153,
+      "sha256": "c2f30b801a31afe3d0cba394f255d12c9dc61039c75efcd1ab43d3584c169341"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_offset_right_0001/frames.jsonl",
+      "bytes": 1011,
+      "sha256": "53b32eb1ede4bd63d99ba870625d406ce50440af5b06a9ccf322582e34621465"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_offset_right_0001/session.json",
+      "bytes": 757,
+      "sha256": "6be085316f88037ff37b9c0b60900b78a67323f8db631eb5eb8f1f610fe34565"
+    }
+  ],
+  "code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/src/capture_canmv.py": "da7a23db31d3c5d2d1c0dce9f08d9c73bd9ca4349212423a01028833d41542fc",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "frozen_code_matches_center": {
+    "vision/src/offline_boundary.py": true,
+    "vision/tools/replay_offline.py": true,
+    "vision/tools/verify_capture.py": true
+  },
+  "parameters_match_center": true,
+  "software_intervals_ms": [
+    507,
+    508
+  ],
+  "sample_rows": [
+    {
+      "frame_id": 1,
+      "left": [
+        {
+          "x": 92,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 82,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 68,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 55,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 41,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "right": [
+        {
+          "x": 191,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 197,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 206,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 215,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 223,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "deviation_px": -24.5,
+      "deviation_normalized": -154,
+      "pair_y_range": [
+        65,
+        195
+      ]
+    },
+    {
+      "frame_id": 2,
+      "left": [
+        {
+          "x": 92,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 82,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 68,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 55,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 41,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "right": [
+        {
+          "x": 191,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 197,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 206,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 215,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 223,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "deviation_px": -24.5,
+      "deviation_normalized": -154,
+      "pair_y_range": [
+        65,
+        195
+      ]
+    },
+    {
+      "frame_id": 3,
+      "left": [
+        {
+          "x": 92,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 82,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 68,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 55,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 41,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "right": [
+        {
+          "x": 191,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 197,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 206,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 215,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 223,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "deviation_px": -24.5,
+      "deviation_normalized": -154,
+      "pair_y_range": [
+        65,
+        195
+      ]
+    }
+  ],
+  "scope": "Right-offset static samples. Displacement is an operator target, not an independently measured calibration. Algorithm points are not manual truth."
+}

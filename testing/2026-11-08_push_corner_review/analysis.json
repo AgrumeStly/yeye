@@ -1,0 +1,161 @@
+{
+  "verification": {
+    "passed": true,
+    "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\push_corner_77_0001",
+    "frames": 304,
+    "scene": "corner_77",
+    "planned_duration_ms": 45000,
+    "capture_elapsed_ms": 45131,
+    "observed_interval_ms": {
+      "median": 133.0,
+      "p95": 253.5999999999999,
+      "maximum": 350
+    },
+    "observed_fps": 6.748479921601818,
+    "scope": "file integrity and software timing; not exposure rate, route truth, audible beep or battery acceptance"
+  },
+  "source_files_preserved": 329,
+  "prior_files_preserved": 870,
+  "failed_session": {
+    "rejected": true,
+    "reason": "不是完整的手推采集会话",
+    "used_for_replay": false
+  },
+  "code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/src/offline_curve.py": "77950d7902a5422a1cda133d8fbf0f0fb6e1314d69b4bfcf7211e73a8927f09c",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/replay_curve_offline.py": "873d2a5f3231287187ea83c3969137d399f1e4cf748e8211384a239f0f3917c3",
+    "vision/tools/verify_push_capture.py": "46310c958d81ae4e5a6e649ea035ff9b100c7e980ad6ecf837d770ee17910788",
+    "vision/src/capture_push_canmv.py": "53cb9db2c16b7b79e4ffbba682e7a732304569a2fc3175f93d7b058f79151b75"
+  },
+  "manual_contact_sample_frames": [
+    1,
+    11,
+    21,
+    31,
+    41,
+    51,
+    61,
+    71,
+    81,
+    91,
+    101,
+    111,
+    121,
+    131,
+    141,
+    151,
+    161,
+    171,
+    181,
+    191,
+    201,
+    211,
+    221,
+    231,
+    241,
+    251,
+    261,
+    271,
+    281,
+    291,
+    301,
+    304
+  ],
+  "sheets": [
+    "testing\\2026-11-08_push_corner_review\\raw_contact_01.png",
+    "testing\\2026-11-08_push_corner_review\\overlay_contact_01.png",
+    "testing\\2026-11-08_push_corner_review\\raw_contact_02.png",
+    "testing\\2026-11-08_push_corner_review\\overlay_contact_02.png"
+  ],
+  "replay_summary": {
+    "frames": 304,
+    "groups": [
+      {
+        "session": "push_corner_77_0001",
+        "frames": 304,
+        "fixed_reference_valid": 272,
+        "near_available": 274,
+        "turns": {
+          "right": 26,
+          "none": 278
+        }
+      }
+    ],
+    "fixed_reference_valid": 272,
+    "video_decoded_frames": 304,
+    "read_failed": 0,
+    "algorithm_ms": {
+      "mean": 29.4615259868421,
+      "p95": 41.115594999999985
+    },
+    "preview_fps": 10,
+    "scope": "published static/hand-pushed regression; not accuracy, motion, physical turn angle or control acceptance"
+  },
+  "fixed_invalid_reasons": {
+    "reference_row_not_bracketed": 26,
+    "insufficient_pair_support": 16,
+    "pair_not_widening_toward_camera": 4,
+    "low_pair_quality": 16,
+    "single_boundary_only_side_ambiguous": 5
+  },
+  "fixed_valid_spans": [
+    {
+      "first_frame": 1,
+      "last_frame": 22,
+      "first_ms": 62,
+      "last_ms": 2663,
+      "frames": 22
+    },
+    {
+      "first_frame": 55,
+      "last_frame": 304,
+      "first_ms": 6756,
+      "last_ms": 44961,
+      "frames": 250
+    }
+  ],
+  "fixed_invalid_spans": [
+    {
+      "first_frame": 23,
+      "last_frame": 54,
+      "first_ms": 2781,
+      "last_ms": 6574,
+      "frames": 32
+    }
+  ],
+  "near_available_spans": [
+    {
+      "first_frame": 1,
+      "last_frame": 27,
+      "first_ms": 62,
+      "last_ms": 3214,
+      "frames": 27
+    },
+    {
+      "first_frame": 58,
+      "last_frame": 304,
+      "first_ms": 7126,
+      "last_ms": 44961,
+      "frames": 247
+    }
+  ],
+  "paired_bend_spans": [
+    {
+      "first_frame": 1,
+      "last_frame": 9,
+      "first_ms": 62,
+      "last_ms": 1012,
+      "frames": 9
+    },
+    {
+      "first_frame": 11,
+      "last_frame": 27,
+      "first_ms": 1309,
+      "last_ms": 3214,
+      "frames": 17
+    }
+  ],
+  "scope": "one operator-reported hand-pushed series; validity statistics only, not accuracy or automatic turn acceptance"
+}

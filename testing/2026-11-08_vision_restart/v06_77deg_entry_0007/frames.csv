@@ -1,0 +1,4 @@
+﻿frame_id,source,read_ok,valid,quality,left_state,right_state,reference_y,deviation_px,deviation_normalized,processing_ms,reasons
+1,vision\data\captures\final_mount_20261108\v03_center_0007\data_0001.jpg,True,True,0.9091,visible,visible,120,-5.333,-33,29.4167,
+2,vision\data\captures\final_mount_20261108\v03_center_0007\data_0002.jpg,True,True,0.9091,visible,visible,120,-5.333,-33,32.9401,
+3,vision\data\captures\final_mount_20261108\v03_center_0007\data_0003.jpg,True,True,0.9091,visible,visible,120,-5.333,-33,32.6278,

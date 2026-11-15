@@ -1,0 +1,107 @@
+{"at": 1794387194.90021, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1794387194.9269195, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1794387195.4477468, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1794387195.4479673, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1794387195.448078, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1794387195.4484158, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1794387195.4499083, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1794387195.449942, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1794387195.7001696, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1794387195.9282968, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794387195.928547, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1794387195.9285748, "id": 2, "result": {"running": false}}
+{"at": 1794387195.9323845, "request": {"id": 3, "method": "runScript", "params": {"script_sha256": "f286c3839e952fba10ccff821eb7f8c7e50476b62926b734efa93181805cff50"}}}
+{"at": 1794387196.11508, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1794387197.1400404, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1794387197.140373, "id": 3, "result": {"status": "ok"}}
+{"at": 1794387197.1414785, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[BENCH FIXTURE READY] straight 120s input window; NO CAMERA; NO START; suspended wheels; MCU run_ms must be 3000\r\n"}}
+{"at": 1794387199.236373, "request": {"id": 4, "method": "scriptRunning", "params": {}}}
+{"at": 1794387199.2369354, "id": 4, "result": {"running": true}}
+{"at": 1794387201.3312757, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1794387201.3319442, "id": 5, "result": {"running": true}}
+{"at": 1794387203.4182332, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1794387203.4190443, "id": 6, "result": {"running": true}}
+{"at": 1794387205.5295155, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1794387205.530136, "id": 7, "result": {"running": true}}
+{"at": 1794387207.6281698, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1794387207.62875, "id": 8, "result": {"running": true}}
+{"at": 1794387209.6990662, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1794387209.6999173, "id": 9, "result": {"running": true}}
+{"at": 1794387211.7869608, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1794387211.7876813, "id": 10, "result": {"running": true}}
+{"at": 1794387213.8804052, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1794387213.8812394, "id": 11, "result": {"running": true}}
+{"at": 1794387215.9913104, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1794387215.9923878, "id": 12, "result": {"running": true}}
+{"at": 1794387218.105887, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1794387218.1067934, "id": 13, "result": {"running": true}}
+{"at": 1794387220.2194579, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1794387220.2203915, "id": 14, "result": {"running": true}}
+{"at": 1794387222.315448, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1794387222.3162365, "id": 15, "result": {"running": true}}
+{"at": 1794387224.3883944, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1794387224.3892498, "id": 16, "result": {"running": true}}
+{"at": 1794387226.460311, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1794387226.4610567, "id": 17, "result": {"running": true}}
+{"at": 1794387228.5691707, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1794387228.5698173, "id": 18, "result": {"running": true}}
+{"at": 1794387230.664987, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1794387230.6655939, "id": 19, "result": {"running": true}}
+{"at": 1794387232.7356682, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1794387232.7364304, "id": 20, "result": {"running": true}}
+{"at": 1794387234.830994, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1794387234.8315713, "id": 21, "result": {"running": true}}
+{"at": 1794387236.9081116, "request": {"id": 22, "method": "scriptRunning", "params": {}}}
+{"at": 1794387236.908823, "id": 22, "result": {"running": true}}
+{"at": 1794387238.995733, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1794387238.9964616, "id": 23, "result": {"running": true}}
+{"at": 1794387241.095493, "request": {"id": 24, "method": "scriptRunning", "params": {}}}
+{"at": 1794387241.0963967, "id": 24, "result": {"running": true}}
+{"at": 1794387243.1975164, "request": {"id": 25, "method": "scriptRunning", "params": {}}}
+{"at": 1794387243.19829, "id": 25, "result": {"running": true}}
+{"at": 1794387245.300873, "request": {"id": 26, "method": "scriptRunning", "params": {}}}
+{"at": 1794387245.3017948, "id": 26, "result": {"running": true}}
+{"at": 1794387247.3694546, "request": {"id": 27, "method": "scriptRunning", "params": {}}}
+{"at": 1794387247.3703356, "id": 27, "result": {"running": true}}
+{"at": 1794387249.4517267, "request": {"id": 28, "method": "scriptRunning", "params": {}}}
+{"at": 1794387249.4525235, "id": 28, "result": {"running": true}}
+{"at": 1794387251.511432, "request": {"id": 29, "method": "scriptRunning", "params": {}}}
+{"at": 1794387251.51231, "id": 29, "result": {"running": true}}
+{"at": 1794387253.5880115, "request": {"id": 30, "method": "scriptRunning", "params": {}}}
+{"at": 1794387253.5887313, "id": 30, "result": {"running": true}}
+{"at": 1794387255.6560197, "request": {"id": 31, "method": "scriptRunning", "params": {}}}
+{"at": 1794387255.6567402, "id": 31, "result": {"running": true}}
+{"at": 1794387257.7557077, "request": {"id": 32, "method": "scriptRunning", "params": {}}}
+{"at": 1794387257.756877, "id": 32, "result": {"running": true}}
+{"at": 1794387259.8108315, "request": {"id": 33, "method": "scriptRunning", "params": {}}}
+{"at": 1794387259.811758, "id": 33, "result": {"running": true}}
+{"at": 1794387261.8948565, "request": {"id": 34, "method": "scriptRunning", "params": {}}}
+{"at": 1794387261.8956225, "id": 34, "result": {"running": true}}
+{"at": 1794387263.9806323, "request": {"id": 35, "method": "scriptRunning", "params": {}}}
+{"at": 1794387263.981301, "id": 35, "result": {"running": true}}
+{"at": 1794387266.0787518, "request": {"id": 36, "method": "scriptRunning", "params": {}}}
+{"at": 1794387266.079603, "id": 36, "result": {"running": true}}
+{"at": 1794387268.1675112, "request": {"id": 37, "method": "scriptRunning", "params": {}}}
+{"at": 1794387268.1683679, "id": 37, "result": {"running": true}}
+{"at": 1794387270.272995, "request": {"id": 38, "method": "scriptRunning", "params": {}}}
+{"at": 1794387270.2736766, "id": 38, "result": {"running": true}}
+{"at": 1794387272.3833878, "request": {"id": 39, "method": "scriptRunning", "params": {}}}
+{"at": 1794387272.384545, "id": 39, "result": {"running": true}}
+{"at": 1794387274.4421282, "request": {"id": 40, "method": "scriptRunning", "params": {}}}
+{"at": 1794387274.442791, "id": 40, "result": {"running": true}}
+{"at": 1794387276.528173, "request": {"id": 41, "method": "scriptRunning", "params": {}}}
+{"at": 1794387276.528936, "id": 41, "result": {"running": true}}
+{"at": 1794387278.6136441, "request": {"id": 42, "method": "scriptRunning", "params": {}}}
+{"at": 1794387278.6143377, "id": 42, "result": {"running": true}}
+{"at": 1794387280.6729772, "request": {"id": 43, "method": "scriptRunning", "params": {}}}
+{"at": 1794387280.6738365, "id": 43, "result": {"running": true}}
+{"at": 1794387282.7741375, "request": {"id": 44, "method": "scriptRunning", "params": {}}}
+{"at": 1794387282.7749636, "id": 44, "result": {"running": true}}
+{"at": 1794387283.5975275, "stderr": "[canmv-backend] board disconnected source=poller tx drain err=USBDBG TX_BUF_LEN (0x8E) request: USBDBG TX_BUF_LEN (0x8E) write (response field 4, payload 0 bytes): The device does not recognize the command.\n"}
+{"at": 1794387283.5977192, "event": "boardDisconnected", "params": {"message": "USBDBG TX_BUF_LEN (0x8E) request: USBDBG TX_BUF_LEN (0x8E) write (response field 4, payload 0 bytes): The device does not recognize the command.", "source": "poller tx drain"}}
+{"at": 1794387284.9067836, "request": {"id": 45, "method": "scriptRunning", "params": {}}}
+{"at": 1794387284.9075074, "id": 45, "result": {"running": false}}
+{"at": 1794387284.9076033, "request": {"id": 46, "method": "scriptRunning", "params": {}}}
+{"at": 1794387284.9080067, "id": 46, "result": {"running": false}}
+{"at": 1794387284.908113, "request": {"id": 47, "method": "disconnectBoard", "params": {}}}
+{"at": 1794387284.9085648, "id": 47, "result": {}}

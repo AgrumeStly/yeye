@@ -1,0 +1,158 @@
+{
+  "action": "cold_boot_readback",
+  "power_isolated_confirmed": true,
+  "main_py_written": false,
+  "automatic_motor_start": false,
+  "files": {
+    "/sdcard/main.py": {
+      "stat": {
+        "exists": true,
+        "type": "file",
+        "size": 35926,
+        "mtime": 1735689888
+      },
+      "local": "before_main.py",
+      "bytes": 35926,
+      "sha256": "838c5e9a4d14d42840c54526b1f3c4d4a848e93654de8bca5faf45f85fb2968f"
+    },
+    "/sdcard/boot.py": {
+      "stat": {
+        "exists": false,
+        "type": "file",
+        "size": 0,
+        "error": 1033
+      }
+    }
+  },
+  "passed": true,
+  "runtime_version": "continuous-v2",
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "initial_status": {
+    "running": false
+  },
+  "directory_listing": {
+    "entries": [
+      {
+        "name": "run_0001.jsonl",
+        "type": "file",
+        "size": 15049,
+        "mtime": 1735690282
+      },
+      {
+        "name": "run_0002.jsonl",
+        "type": "file",
+        "size": 45228,
+        "mtime": 1735689700
+      },
+      {
+        "name": "run_0003.jsonl",
+        "type": "file",
+        "size": 100918,
+        "mtime": 1735689798
+      },
+      {
+        "name": "run_0004.jsonl",
+        "type": "file",
+        "size": 11590,
+        "mtime": 1735689624
+      },
+      {
+        "name": "run_0005.jsonl",
+        "type": "file",
+        "size": 356490,
+        "mtime": 1735690018
+      },
+      {
+        "name": "run_0006.jsonl",
+        "type": "file",
+        "size": 875969,
+        "mtime": 1735690204
+      },
+      {
+        "name": "run_0007.jsonl",
+        "type": "file",
+        "size": 26702,
+        "mtime": 1735689656
+      },
+      {
+        "name": "run_0008.jsonl",
+        "type": "file",
+        "size": 15072,
+        "mtime": 1735689852
+      },
+      {
+        "name": "run_0009.jsonl",
+        "type": "file",
+        "size": 2796084,
+        "mtime": 1735692034
+      },
+      {
+        "name": "run_0010.jsonl",
+        "type": "file",
+        "size": 34314,
+        "mtime": 1735689680
+      }
+    ]
+  },
+  "selection": {
+    "expected_number": 9,
+    "selected": "run_0009.jsonl",
+    "latest": "run_0010.jsonl",
+    "power_origin_requires_operator_timeline": true
+  },
+  "runtime_log": {
+    "remote": "/sdcard/lap_runtime_logs/run_0009.jsonl",
+    "stat": {
+      "exists": true,
+      "type": "file",
+      "size": 2796084,
+      "mtime": 1735692034
+    },
+    "bytes": 2796084,
+    "sha256": "b93c84e6e89bc727833d48eae5d4275306cf887c3efc999b0b9cdca94935a495",
+    "name": "run_0009.jsonl"
+  },
+  "later_logs": [
+    {
+      "name": "run_0010.jsonl",
+      "stat": {
+        "exists": true,
+        "type": "file",
+        "size": 34314,
+        "mtime": 1735689680
+      },
+      "bytes": 34314,
+      "sha256": "998b8fed77e83b714d7a522d848a716a116c234794e672627ee7398d79ef3fc2"
+    }
+  ],
+  "runtime_samples": 8218,
+  "highest_observed_algorithm_index": 33240,
+  "log_failure_events": [],
+  "readout_interruption_possible": false,
+  "operator_physical_cold_boot_context_required": true,
+  "no_runScript_sent": true
+}

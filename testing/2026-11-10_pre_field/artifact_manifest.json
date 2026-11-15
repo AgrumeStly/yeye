@@ -1,0 +1,194 @@
+{
+  "created": "2026-11-10T21:20:51.502394+08:00",
+  "head": "a0733a8685db4c2b497539303bfe87fe1c1ebfe5",
+  "branch": "codex/current-version-20261025",
+  "workspace_dirty": true,
+  "workspace_status": " M DIRECTORY_GUIDE.md\n M control/Algorithms/Speed/speed_pi.c\n M control/Algorithms/Speed/speed_pi.h\n M control/App/Motion/speed_match.c\n M control/App/Motion/speed_match.h\n M control/Core/Src/speed_match_main.c\n M control/Drivers_Custom/Motor/straight_pwm.c\n M control/Drivers_Custom/Motor/straight_pwm.h\n M control/MDK-ARM/speed_match.uvprojx\n M control/README.md\n M control/Tests/Host/test_speed_match_integration.c\n M control/docs/pin_plan.md\n M control/docs/protocol_v1_draft.md\n M control/docs/speed_match.md\n M control/docs/validation.md\n M docs/architecture.md\n M docs/interfaces.md\n M hardware_preparation/README.md\n M hardware_preparation/charger_replacement.md\n M hardware_preparation/wiring.md\n M project_planning/tasks/C-02F.md\n M testing/README.md\n M vision/PORTING_REVIEW.md\n M vision/README.md\n D vision/reference_code/image.c\n D vision/reference_code/image.h\n D \"vision/reference_code/\\345\\215\\201\\345\\255\\227\\350\\241\\245\\347\\272\\277\\345\\222\\214\\346\\234\\200\\345\\260\\217\\344\\272\\214\\344\\271\\230\\346\\263\\225.c\"\n?? control/App/Diagnostics/oled_pattern.c\n?? control/App/Diagnostics/oled_pattern.h\n?? control/App/Motion/lap_motion.c\n?? control/App/Motion/lap_motion.h\n?? control/App/Motion/speed_sprint.c\n?? control/App/Motion/speed_sprint.h\n?? control/Core/Src/low_speed_lap_main.c\n?? control/Core/Src/oled_bench_main.c\n?? control/Drivers_Custom/Communication/lap_link.c\n?? control/Drivers_Custom/Communication/lap_link.h\n?? control/Drivers_Custom/Communication/lap_uart.c\n?? control/Drivers_Custom/Communication/lap_uart.h\n?? control/Drivers_Custom/Display/\n?? control/MDK-ARM/low_speed_lap.uvprojx\n?? control/MDK-ARM/oled_bench.uvprojx\n?? control/MDK-ARM/speed_sprint.uvprojx\n?? control/Tests/Host/lap_packet_probe.c\n?? control/Tests/Host/lap_uart_stub/\n?? control/Tests/Host/speed_match_integration_harness.h\n?? control/Tests/Host/test_lap_motion.c\n?? control/Tests/Host/test_lap_uart.c\n?? control/Tests/Host/test_speed_sprint.c\n?? control/Tests/Host/test_speed_sprint_integration.c\n?? control/docs/low_speed_lap.md\n?? control/docs/oled_bench.md\n?? control/docs/speed_sprint.md\n?? control/tools/build_low_speed_lap.py\n?? control/tools/build_oled_bench.py\n?? control/tools/build_speed_sprint.ps1\n?? control/tools/create_low_speed_project.py\n?? control/tools/oled_bench_probe.py\n?? control/tools/run_low_speed_lap_tests.ps1\n?? control/tools/run_speed_sprint_tests.ps1\n?? hardware_preparation/battery_record.md\n?? hardware_preparation/camera_mount_diagram.png\n?? hardware_preparation/camera_mount_diagram.svg\n?? hardware_preparation/camera_mount_guide.md\n?? hardware_preparation/deployed_hardware.md\n?? hardware_preparation/low_speed_lap_wiring.md\n?? hardware_preparation/low_speed_power_check.md\n?? hardware_preparation/oled_wiring.md\n?? hardware_preparation/pre_field_checklist.md\n?? hardware_preparation/source/generate_camera_mount_diagram.ps1\n?? hardware_preparation/source/prepare_pre_field_evidence.py\n?? project_planning/tasks/C-02G.md\n?? project_planning/tasks/C-OLED-01.md\n?? project_planning/tasks/I-02-LOW-SPEED-LAP.md\n?? project_planning/tasks/REVIEW-20261107.md\n?? project_planning/tasks/V-02.md\n?? project_planning/tasks/V-03.md\n?? project_planning/tasks/V-04.md\n?? project_planning/tasks/V-05.md\n?? project_planning/tasks/V-06.md\n?? project_planning/tasks/V-07.md\n?? project_planning/tasks/V-08.md\n?? project_planning/vision_deepseek_handoff_prompt.md\n?? testing/2026-11-01_speed_sprint/\n?? testing/2026-11-07_capture_rebuild/\n?? testing/2026-11-07_capture_review/\n?? testing/2026-11-07_vision_offline/\n?? testing/2026-11-08_boundary_preview/\n?? testing/2026-11-08_full_lap_capture/\n?? testing/2026-11-08_push_capture/\n?? testing/2026-11-08_push_corner_review/\n?? testing/2026-11-08_two_lap_review/\n?? testing/2026-11-08_vision_board_prep/\n?? testing/2026-11-08_vision_curve_c1/\n?? testing/2026-11-08_vision_finish_f1/\n?? testing/2026-11-08_vision_prediction_p1/\n?? testing/2026-11-08_vision_recovery_c2/\n?? testing/2026-11-08_vision_restart/\n?? testing/2026-11-08_vision_temporal_map_research/\n?? testing/2026-11-09_low_speed_lap/\n?? testing/2026-11-09_vision_temporal_route_t2/\n?? testing/2026-11-10_oled_bench/\n?? testing/2026-11-10_pre_field/\n?? vision/.vscode/\n?? vision/PC_ENVIRONMENT.md\n?? vision/data/captures/\n?? vision/docs/\n?? vision/references/camera_sampling_and_race_workflow_2026-11-06.md\n?? vision/references/recognition_direction_2026-11-01.md\n?? vision/requirements-pc.txt\n?? vision/requirements-review.txt\n?? vision/src/\n?? vision/tools/\n?? vision/vision.code-workspace\n",
+  "artifacts": {
+    "firmware/low_speed_lap.bin": {
+      "source": "control/build/firmware/low_speed_lap/low_speed_lap.bin",
+      "sha256": "7f3f7b5e8c676e321e23f3c2c2b6a88cd0e3821c5b8f80af9f608cce3224e2f9",
+      "bytes": 15796
+    },
+    "firmware/low_speed_lap.hex": {
+      "source": "control/build/firmware/low_speed_lap/low_speed_lap.hex",
+      "sha256": "79a6a88288640a530b1d2f5cdfc14f760a687a5255bd96bff1bcc81f9fe353b1",
+      "bytes": 44487
+    },
+    "software_logs/LowSpeedLap_build.log": {
+      "source": "control/build/firmware/LowSpeedLap_build.log",
+      "sha256": "365adf3d58d755e0ad8edb725d5debb681189e0202c22393857bedbab48af0a4",
+      "bytes": 232
+    },
+    "firmware/low_speed_lap_track.bin": {
+      "source": "control/build/firmware/low_speed_lap_track/low_speed_lap_track.bin",
+      "sha256": "f7cc1c34a462a7599654bd664d0ee5ca12530fe6fc100cf60025baace547c2bb",
+      "bytes": 15796
+    },
+    "firmware/low_speed_lap_track.hex": {
+      "source": "control/build/firmware/low_speed_lap_track/low_speed_lap_track.hex",
+      "sha256": "6827b3a3de3f6dacd1c0c96172156585c3c4ff7d673fa27b758f9be65cddb1ac",
+      "bytes": 44487
+    },
+    "software_logs/LowSpeedLapTrack_build.log": {
+      "source": "control/build/firmware/LowSpeedLapTrack_build.log",
+      "sha256": "185e08740cb0b82106b0c5e90903399e6e880d3783dc34aaa0bfcfd32c03021b",
+      "bytes": 249
+    },
+    "software_logs/control_model.log": {
+      "source": "control/build/low_speed_lap_tests.log",
+      "sha256": "a457cb722c45590b2011d991804cf8cc4dc339d4936f5f876bf7ccf70d6ebb6f",
+      "bytes": 180
+    },
+    "software_logs/uart_driver.log": {
+      "source": "control/build/low_speed_lap_uart_tests.log",
+      "sha256": "72dab1cbb5aad7bb78a0f7eedcd5b4277031847b47f49143acd24197c79f5fec",
+      "bytes": 240
+    },
+    "k230/board_bundle_runtime_r5/low_speed_lap_canmv.py": {
+      "source": "testing/2026-11-09_low_speed_lap/board_bundle_runtime_r5/low_speed_lap_canmv.py",
+      "sha256": "54e71bcc4346710300c0302a77f6bba86609baca5c937772d4282fc874175f4d",
+      "bytes": 32462
+    },
+    "k230/board_bundle_runtime_r5/manifest.json": {
+      "source": "testing/2026-11-09_low_speed_lap/board_bundle_runtime_r5/manifest.json",
+      "sha256": "8ce0a2af58e51edb724d5c97f5de09ddbf5579657119cf6e08d97b4e10ec28df",
+      "bytes": 575
+    },
+    "k230/motor_bench_bundle_r2/lap_motor_bench_canmv.py": {
+      "source": "testing/2026-11-09_low_speed_lap/motor_bench_bundle_r2/lap_motor_bench_canmv.py",
+      "sha256": "7cd144e54bc1986b288c798984e844c4ae2760b9b11e50e45c9cc416d35a33d1",
+      "bytes": 11331
+    },
+    "k230/motor_bench_bundle_r2/manifest.json": {
+      "source": "testing/2026-11-09_low_speed_lap/motor_bench_bundle_r2/manifest.json",
+      "sha256": "f73bfaa5d59dd7c1456b80e512a829bba6605443eeeb7aeeda056b70e3ce51e3",
+      "bytes": 470
+    }
+  },
+  "source_hashes": {
+    "control/Core/Inc/stm32f4xx_conf.h": "4186e2d13cc16c5d3fe26e68f34461db42f3da81d166f4265c905ceadcda7d38",
+    "control/Core/Src/board_self_test.c": "9bebe216ee7973afa8d9198cbf04fc90ade15e63556d6936236c90f07192e678",
+    "control/Core/Src/encoder_bench_main.c": "ad4be9fb4e3d257aa4e953c8e1944c8d911f49655a2faf47c9029250513b4a1b",
+    "control/Core/Src/logic_demo.c": "3dc649aa608ecf0588e588021abd9eb89162be9656c58a5a0f7b37ba466da6dc",
+    "control/Core/Src/low_speed_lap_main.c": "11a08e272b0a331a4d6d9565cb3ed8b8c6302bab625556c8ceb5d1e948d08706",
+    "control/Core/Src/main.c": "d70127e932ea2fd296dee92e84497b2d82f16e32b6e2e42da7328e14247401e8",
+    "control/Core/Src/motor_bench_main.c": "3d9dfd53b48551fd4a5313624f32af3271e6cfb0efc808e3a726567046d40a24",
+    "control/Core/Src/motor_direct_main.c": "72c8781a966bdda3d7d2d1e29bf7b11e2739018c255aa786b849080cc235991e",
+    "control/Core/Src/oled_bench_main.c": "fdff8e16b0ee1fb988240ab954b8bbe1c480c688696197de303fe6202b24cc08",
+    "control/Core/Src/speed_match_main.c": "0cb11a84a0189ae7e53ee3670c6a38e409140a046b4126e1a46b2b04b929a09d",
+    "control/Core/Src/straight_test_main.c": "25c0b10ee6991819cf66649012ab6174c3af557e297aa835469bd3e5f21415ca",
+    "control/Core/Startup/startup_stm32f407xx.s": "d08571a2abcb5e60c39ba453eb4c1ee94aee4e34e88ad0d22a5760021482e01d",
+    "control/App/Car/car.c": "4ab5803f802b7aa6db6d8eb713313e1c3e066e25f2bd5b2ff9647473db8d2eb0",
+    "control/App/Car/car.h": "88d7002a0ff3bd4fc4a938f1f9392a325d701c85dce9ce5a332441d33c7b1935",
+    "control/App/Diagnostics/encoder_bench.c": "54003417dbdde49d5a0d57d7c3e7df32fb357e68ff8d8ad40685c46481646125",
+    "control/App/Diagnostics/encoder_bench.h": "67615fafb5be021e555afacbb50bffa08454ea0441924c979631f19bf5c10b58",
+    "control/App/Diagnostics/motor_bench.c": "16e7579502c6e878b1eaf3361d4cb409a9c780d02c529b81e8ad89040794f05e",
+    "control/App/Diagnostics/motor_bench.h": "ae59c731d91121fb4a323a07e60448d3e6a0f37ea7d17233fbe5d479e29c7f9e",
+    "control/App/Diagnostics/oled_pattern.c": "e1d4f20f244de99a9f119ad5ffeeeff85b3130a7bea8bb07b55c13597463b75b",
+    "control/App/Diagnostics/oled_pattern.h": "d02fe84994beee42a84f1cb7d69f85ea67f9e5f99a3ffc6434c96d7d75edc7e2",
+    "control/App/Diagnostics/straight_test.c": "0d786d6994d2e3f91b57ad3698167c263bdfea708e21c872a04d5a990f4b0699",
+    "control/App/Diagnostics/straight_test.h": "bd05c1815003b93e0f20ad665ab9fded5478d76a1b07066efad6285c80992a15",
+    "control/App/Motion/lap_motion.c": "1ad2e5d0985ab9f2f24f3f37d8bb39b951211ee3ad6d23b9c72f265e47e1faa0",
+    "control/App/Motion/lap_motion.h": "d8149a816d0f414ce1543c5b2c30e3e695bc7f55d29ee81b02440448b1eaea9f",
+    "control/App/Motion/speed_match.c": "fab7162b31303db8480913d87baa4eaaa6320056f0191ea02e7d2bcd8fa6f45f",
+    "control/App/Motion/speed_match.h": "422e3ca02c72419bcff6eb5e6e3a5cb422431f200eab6fa3dfc46c5c2128f218",
+    "control/App/Motion/speed_sprint.c": "63efcadfeaff685f9fa26e09b0eedfb27776df969e8c5d70bac49d70451317f1",
+    "control/App/Motion/speed_sprint.h": "5878c112b0648417645446cd9192ef7213a74807abd4493c63c2d62384d0230f",
+    "control/Algorithms/Encoder/encoder_counter.c": "310d021a1125a2021d95899cb6464e5d87fccfaea17144f1fb8aa62ce03a39bc",
+    "control/Algorithms/Encoder/encoder_counter.h": "31f57783b279a49417fb75b449cbac8884d719343976ee6455e79bcd9fbc0884",
+    "control/Algorithms/Speed/speed_pi.c": "13e78ce6a783b15147338a65bf54370ab9c97d511ce2854a52a12c91f8b65bef",
+    "control/Algorithms/Speed/speed_pi.h": "5eb99585ffcd581d2de07e22a22d510d02c45909167800f081c73238670bf85f",
+    "control/Drivers_Custom/Board/board.c": "505c98f12c6acbbc1e3499586c007c03f43b5bfcf8a1b6c42a6683d0116e2468",
+    "control/Drivers_Custom/Board/board.h": "dc1ddab9a68425425d59a123fcd449128d23296955bc6b38def94ad39dba7fbc",
+    "control/Drivers_Custom/Communication/lap_link.c": "6bbdd5225db6d48987c009556a47ea55e86200134716f001d5f2aa217f701112",
+    "control/Drivers_Custom/Communication/lap_link.h": "092d2456fb8e01bd99e92499faafc2b5bdf354a235e4e85ba1e7bb7d14b177e6",
+    "control/Drivers_Custom/Communication/lap_uart.c": "9f8c16f4ef2283d3c705c2a222e9101999211a4c51b6d1c9eeb716ee4c015a9b",
+    "control/Drivers_Custom/Communication/lap_uart.h": "d841643a282fce1b1448d5fc2ed99cbd51488efb3c5d160377f8989f8399d076",
+    "control/Drivers_Custom/Communication/protocol.c": "34cbee78015d2102f28d88f8a9b0bed442fc8fb347ccf4910a60a8f6fa76265f",
+    "control/Drivers_Custom/Communication/protocol.h": "9e60706168e173d37ea16d749ab6d6afd39d3c506e4b21f3deb2e54f85ae1376",
+    "control/Drivers_Custom/Display/oled_i2c.c": "ed229f5dc72088dd130ed9a1b6a53ac5bda41639ddc93173f04990c92b0078c7",
+    "control/Drivers_Custom/Display/oled_i2c.h": "81dbe4dee123d1710e9d4d59388ca567826f90569fd2a77b9e63687fa05ea859",
+    "control/Drivers_Custom/Encoder/encoder_hw.c": "966c8f20e04005621fa707f17231bc7be701532dab39eb4babb08018af30c75a",
+    "control/Drivers_Custom/Encoder/encoder_hw.h": "5d27c700490c82fc8abdb4488833a45602c804ea35dcffa072f2254712d0041d",
+    "control/Drivers_Custom/Motor/motor_bench_pwm.c": "28295f9c814b66816beea98b03c60ccee4cc142e606261d3e7fc757e8fa28693",
+    "control/Drivers_Custom/Motor/motor_bench_pwm.h": "8148349bd8e53a271dd090f7da0d90f83dd75156faf79397dce5d7c53b8f3051",
+    "control/Drivers_Custom/Motor/motor_direct_gpio.c": "a21ee4688b80a8e2d6ec4fda49e683e5d9aaf50fded02d3ed976f28fac89d23b",
+    "control/Drivers_Custom/Motor/motor_direct_gpio.h": "ab7bbf40edef811cc3c2a2f5052ea00746f552b5820449274b0309521c0d63f5",
+    "control/Drivers_Custom/Motor/straight_pwm.c": "792931cdd3a16365f1872122ec4e7e720af548cb38b6b6badebc74024303a49b",
+    "control/Drivers_Custom/Motor/straight_pwm.h": "c3e04b544e8bc3621abe64d6cdcfc150db851bfdc4a399be452519c952ef6a35",
+    "control/Tests/Host/lap_packet_probe.c": "6de856b7dc005fbcf8f638fcca44068d82321d5847e77efd05c5254b12593aa9",
+    "control/Tests/Host/speed_match_integration_harness.h": "f6ca7f4113a12557d372c8c4038d986c4f9f2c3217f6032d66c9cab5c9560436",
+    "control/Tests/Host/test_control.c": "e63834e399f28ad4a3e49827acf09181fbee375bde6a45bfc4fee39ad7e92e1d",
+    "control/Tests/Host/test_encoder_bench.c": "c469be4e851d09d71fb9b1b76d913345c1d98747fadd7cbcf27b2e29bb62e80d",
+    "control/Tests/Host/test_encoder_counter.c": "67364bb2a794d7ac6d545af25d8df3e7d9ce9add19ab2f203c09ddaec2c63140",
+    "control/Tests/Host/test_lap_motion.c": "ba7190db64507df594b4a67767e684868842195afda6ae2808640e3934b02d07",
+    "control/Tests/Host/test_lap_uart.c": "b56c2714a20df670984964ed8715302653a39006192974548adea0128799dcde",
+    "control/Tests/Host/test_motor_bench.c": "04b5585f26c6d22e4ee3e6edaab2c3630d9d1a79f9bf446f25743d2d9b144b53",
+    "control/Tests/Host/test_motor_bench_pwm_diag.c": "cd9e18786ac2e407b8de8773095a35882b288084892215cc2a76c8bbfdfdb610",
+    "control/Tests/Host/test_motor_bench_startup.c": "da9ca443859008a2004e3ad3b401e3c65d9211b7ac1d3c176889430f7f7907fa",
+    "control/Tests/Host/test_motor_direct.c": "cb395709c1ff080fd601554a0deff073e850de029c5eb13ae355f85378260643",
+    "control/Tests/Host/test_motor_direct_startup.c": "04483211b1c03b1e9a37314ea18ae1d985c21023f8f9ea46ac7b181b4f339062",
+    "control/Tests/Host/test_speed_match.c": "5e8449847d760c57b4da226294d32a6d08cdedc9b148043e973e3942785785f5",
+    "control/Tests/Host/test_speed_match_integration.c": "646f80f206144bbecc15da5e7ab6870ef94eed006c720eb6ebb67b2622912156",
+    "control/Tests/Host/test_speed_sprint.c": "0980309dd57359313f5cb5430009f73353d1738e81a3b6325fd04755621c0252",
+    "control/Tests/Host/test_speed_sprint_integration.c": "499a55f3dead143c2e6e21f9fc16824d44427f1985cb6eb44ab0229058d4666b",
+    "control/Tests/Host/test_straight_integration.c": "f8b17fc58b3f8012f3d6b4312ab68861d627c6d1700da0e574790328fd13f7e1",
+    "control/Tests/Host/test_straight_test.c": "4f82d340318dec816ff5bc503e60c9d50a25fa7c1bbf50400c951e813c57f084",
+    "control/Tests/Host/lap_uart_stub/stm32f4xx.h": "7816b9fa8e44b91182b724117af224aa54315037fa954845eae3ecdcbe9b30a0",
+    "control/Tests/Host/fakes/encoder/stm32f4xx.h": "b2f4fb6313304f907121c9842cf2ebb2b446077bd792b60416ebadfa00d56cab",
+    "control/Tests/Host/fakes/motor_bench_pwm/stm32f4xx.h": "58b2d68e2c9b38b4c0002b2068995afc4791a1550743e6f58986165f1a5e2347",
+    "control/Tests/Host/fakes/motor_bench_startup/stm32f4xx.h": "9bdafc83086786e1e9562ec7577ca663771271fd2f5a1491cde8c38cf5fade47",
+    "control/Tests/Host/fakes/motor_direct/stm32f4xx.h": "7891cd87b65f1d1104f8bca9bcf8c965ae995a59e71989b550f35c8337cf39fa",
+    "control/MDK-ARM/low_speed_lap.uvprojx": "61a55c143ddd89835417c122fcfca2433ccacc4e08c8025913dc64fb1fc14253",
+    "vision/tools/canmv_lap_bench.py": "1f080a78d5340be90903771450d5fe9b8f960b817a75a617e61c26bed0d4c623",
+    "vision/src/lap_uart_probe_canmv.py": "123bc222ee3517b93a9b5c7cebabd9d32b8d50eda3efa6b73b3ea6883c111e90",
+    "competition/比赛文档.pdf": "e7af6ca7eee908ae5460710f1f91d0658c401de208e9e3e570d48d76fe45931d",
+    "hardware_preparation/pre_field_checklist.md": "54bbfe5f2ec538667bf96e666515e448eaef8d371acefc541a56ab57fc42cd56"
+  },
+  "checks": {
+    "motor_fixture_checks": 19,
+    "helper_checks": 18,
+    "vision_protocol_checks": 42
+  },
+  "control_assertions": 316,
+  "uart_host_checks_passed": true,
+  "enumerated_ports": [
+    {
+      "device": "COM5",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "device": "COM3",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "device": "COM4",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "device": "COM6",
+      "vid": null,
+      "pid": null,
+      "serial_number": null
+    },
+    {
+      "device": "COM9",
+      "vid": 3368,
+      "pid": 516,
+      "serial_number": "00010001066CFF554954657287234218A5A5A5A597969908"
+    }
+  ],
+  "hardware_flashed_this_run": false,
+  "motor_started_this_run": false,
+  "new_battery_motor_verified": false,
+  "disconnect_stop_verified": false,
+  "autonomous_lap_verified": false,
+  "purpose": "Local reproducible candidate copies; not hardware or race acceptance"
+}

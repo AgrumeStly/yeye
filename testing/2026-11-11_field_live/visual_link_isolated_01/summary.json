@@ -1,0 +1,48 @@
+{
+  "logged_samples": 167,
+  "highest_observed_algorithm_index": 1630,
+  "actual_total_frame_count": null,
+  "logging_rule": "every tenth valid frame and all invalid frames; metrics are logged samples",
+  "source_counts": {
+    "unknown": 3,
+    "current_pair": 164
+  },
+  "valid_logged_samples": 163,
+  "invalid_logged_indices": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "all_logged_wire_valid_false": false,
+  "all_logged_drive_allowed_false": false,
+  "valid_steering": {
+    "min": 0,
+    "median": 0,
+    "max": 43
+  },
+  "valid_bend": {
+    "min": 0,
+    "median": 0,
+    "max": 343
+  },
+  "processing_ms": {
+    "min": 27,
+    "median": 55,
+    "max": 59
+  },
+  "to_send_ms": {
+    "min": 30,
+    "median": 57,
+    "max": 72
+  },
+  "interval_ms": {
+    "min": 46,
+    "median": 73.0,
+    "max": 87
+  },
+  "min_logged_free_heap": 2288096,
+  "normal_completion": true,
+  "preview_frame_index_is_not_algorithm_index": true,
+  "preview": []
+}

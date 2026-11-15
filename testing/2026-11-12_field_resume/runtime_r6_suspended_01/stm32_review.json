@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "input_kind": "real_camera_runtime_r6",
+  "evidence": "last_run_watch.png及主控符合反馈",
+  "screenshot_values": {
+    "valid": 1, "elapsed_ms": 3000, "reason": "LAP_LIMIT11",
+    "left_target_rpm": 40, "right_target_rpm": 40,
+    "left_rpm": 40.739109, "right_rpm": 39.5514641,
+    "left_pwm_before_stop_permille": 196, "right_pwm_before_stop_permille": 196,
+    "left_boost_samples": 1, "right_boost_samples": 1
+  },
+  "operator_confirmed_context": "两轮向前、三秒内自动停稳；停后当前两PWM0、UART0按符合确认，无独立当前值截图",
+  "result": "本次R6真实相机悬空三秒正常结束初验通过",
+  "not_verified": ["连续误差统计", "大幅差速", "地面运动", "一整圈"],
+  "subsequent_physical_isolation": "主控确认驱动OFF、XT30断开、DAP/USB继续逻辑供电、不按KEY"
+}

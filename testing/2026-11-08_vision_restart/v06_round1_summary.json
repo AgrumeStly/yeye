@@ -1,0 +1,214 @@
+{
+  "groups": [
+    {
+      "name": "v06_77deg_entry_0007",
+      "scene": "77 degree right turn approach; center pose is operator label",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0007",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": 3,
+      "deviations_px": [
+        -5.333,
+        -5.333,
+        -5.333
+      ],
+      "reasons": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "v06_77deg_entry_0008",
+      "scene": "77 degree right turn approach; center pose is operator label",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0008",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 0,
+      "frames": 3,
+      "deviations_px": [
+        null,
+        null,
+        null
+      ],
+      "reasons": [
+        [
+          "reference_row_not_bracketed"
+        ],
+        [
+          "reference_row_not_bracketed"
+        ],
+        [
+          "reference_row_not_bracketed"
+        ]
+      ]
+    },
+    {
+      "name": "v06_77deg_mid_0009",
+      "scene": "intended_77deg_midturn_single_visible_boundary_pose_unverified",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0009",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 0,
+      "frames": 3,
+      "deviations_px": [
+        null,
+        null,
+        null
+      ],
+      "reasons": [
+        [
+          "insufficient_pair_support",
+          "reference_row_not_bracketed",
+          "low_pair_quality"
+        ],
+        [
+          "insufficient_pair_support",
+          "reference_row_not_bracketed",
+          "low_pair_quality"
+        ],
+        [
+          "insufficient_pair_support",
+          "reference_row_not_bracketed",
+          "low_pair_quality"
+        ]
+      ]
+    },
+    {
+      "name": "v06_77deg_exit_heading_0010",
+      "scene": "intended_77deg_exit_heading_dual_boundaries_visible_static_pose",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0010",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": 3,
+      "deviations_px": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "reasons": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "v06_77deg_exit_forward_0011",
+      "scene": "77deg_exit_forward_static_dual_boundaries",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0011",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 3,
+      "frames": 3,
+      "deviations_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reasons": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "v06_no_boundary_text_0012",
+      "scene": "no_credible_lane_text_and_logo_clutter_not_clean_blank_floor",
+      "verification": {
+        "passed": true,
+        "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0012",
+        "frames": 3,
+        "pose_label": "center",
+        "actual_grayscale_size": [
+          320,
+          240
+        ],
+        "cleanup_errors": [],
+        "scope": "file integrity and image format only; not pose truth or board acceptance"
+      },
+      "valid": 0,
+      "frames": 3,
+      "deviations_px": [
+        null,
+        null,
+        null
+      ],
+      "reasons": [
+        [
+          "insufficient_pair_support",
+          "pair_not_widening_toward_camera",
+          "reference_row_not_bracketed",
+          "low_pair_quality"
+        ],
+        [
+          "insufficient_pair_support",
+          "pair_not_widening_toward_camera",
+          "reference_row_not_bracketed",
+          "low_pair_quality"
+        ],
+        [
+          "insufficient_pair_support",
+          "pair_not_widening_toward_camera",
+          "reference_row_not_bracketed",
+          "low_pair_quality"
+        ]
+      ]
+    }
+  ],
+  "frame_count": 18,
+  "source_file_count": 30,
+  "frozen_code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "parameter_sha256": "d34144aff88631d1a5d549483f13b5880e197011863e4b3e054150b29bac7afc",
+  "scope": "6 static placements with 3 repeats each; not accuracy, continuous motion, turn-path or vehicle acceptance"
+}

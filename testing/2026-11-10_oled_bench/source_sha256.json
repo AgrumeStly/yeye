@@ -1,0 +1,10 @@
+{
+  "control/Core/Src/oled_bench_main.c": "fdff8e16b0ee1fb988240ab954b8bbe1c480c688696197de303fe6202b24cc08",
+  "control/App/Diagnostics/oled_pattern.c": "e1d4f20f244de99a9f119ad5ffeeeff85b3130a7bea8bb07b55c13597463b75b",
+  "control/App/Diagnostics/oled_pattern.h": "d02fe84994beee42a84f1cb7d69f85ea67f9e5f99a3ffc6434c96d7d75edc7e2",
+  "control/Drivers_Custom/Display/oled_i2c.c": "ed229f5dc72088dd130ed9a1b6a53ac5bda41639ddc93173f04990c92b0078c7",
+  "control/Drivers_Custom/Display/oled_i2c.h": "81dbe4dee123d1710e9d4d59388ca567826f90569fd2a77b9e63687fa05ea859",
+  "control/MDK-ARM/oled_bench.uvprojx": "9b0457d3151ef0f0da72e8e7c4b377a86e13aad020df0d7c6a604890fccfe2f2",
+  "control/tools/build_oled_bench.py": "5b6133b3f745c5eb0bae2df6cae4cf6bb5b13c04f55b25ac134d36f09bb28e21",
+  "control/tools/oled_bench_probe.py": "f7bc2720fe25c9c5ddcf1e43682f39e2d51a0a2bc5914c98f99194a804e31712"
+}

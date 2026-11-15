@@ -1,0 +1,402 @@
+{
+  "original_log": "run_0009.jsonl",
+  "bytes": 2796084,
+  "sha256": "b93c84e6e89bc727833d48eae5d4275306cf887c3efc999b0b9cdca94935a495",
+  "logged_samples": 8218,
+  "highest_logged_frame": 33240,
+  "sources": {
+    "unknown": 5280,
+    "current_pair": 2312,
+    "current_single_associated": 608,
+    "history": 18
+  },
+  "wire_valid_logged_samples": 2777,
+  "processing_ms": [
+    30,
+    77
+  ],
+  "events": [
+    {
+      "event": "begin",
+      "duration_ms": 0,
+      "automatic_motor_start": false,
+      "input_kind": "real_camera",
+      "log": "/sdcard/lap_runtime_logs/run_0009.jsonl",
+      "revision": "L1-R6-RUNTIME-2-CONTINUOUS",
+      "drive_allowed": true
+    }
+  ],
+  "large_adjacent_sampled_sign_changes": [
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 705,
+        "free_heap": 2666976,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 18,
+          "grid": 35,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          6,
+          14
+        ],
+        "interval_ms": 78,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 57,
+        "index": 9620,
+        "steering": -405,
+        "acquire_ms": 0,
+        "source": "current_pair",
+        "processing_ms": 55
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 505,
+        "free_heap": 2614432,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 18,
+          "grid": 49,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          9,
+          12
+        ],
+        "interval_ms": 82,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 71,
+        "index": 9630,
+        "steering": 205,
+        "acquire_ms": 0,
+        "source": "current_pair",
+        "processing_ms": 69
+      }
+    },
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 803,
+        "free_heap": 2860672,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 13,
+          "grid": 34,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          10,
+          12
+        ],
+        "interval_ms": 66,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 51,
+        "index": 15150,
+        "steering": -503,
+        "acquire_ms": 0,
+        "source": "current_single_associated",
+        "processing_ms": 49
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 469,
+        "free_heap": 2861024,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 12,
+          "grid": 34,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          2,
+          11
+        ],
+        "interval_ms": 67,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 51,
+        "index": 15160,
+        "steering": 169,
+        "acquire_ms": 0,
+        "source": "current_single_associated",
+        "processing_ms": 48
+      }
+    },
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 469,
+        "free_heap": 2861024,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 12,
+          "grid": 34,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          2,
+          11
+        ],
+        "interval_ms": 67,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 51,
+        "index": 15160,
+        "steering": 169,
+        "acquire_ms": 0,
+        "source": "current_single_associated",
+        "processing_ms": 48
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 809,
+        "free_heap": 2860128,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 12,
+          "grid": 30,
+          "anchors": 3
+        },
+        "searched_candidates": 55,
+        "support": [
+          10,
+          12
+        ],
+        "interval_ms": 65,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 48,
+        "index": 15170,
+        "steering": -509,
+        "acquire_ms": 1,
+        "source": "current_single_associated",
+        "processing_ms": 45
+      }
+    },
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 467,
+        "free_heap": 2899616,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 13,
+          "grid": 41,
+          "anchors": 1
+        },
+        "searched_candidates": 55,
+        "support": [
+          10,
+          9
+        ],
+        "interval_ms": 71,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 58,
+        "index": 18700,
+        "steering": 467,
+        "acquire_ms": 1,
+        "source": "current_single_associated",
+        "processing_ms": 55
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 534,
+        "free_heap": 2870656,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 13,
+          "grid": 45,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          9,
+          17
+        ],
+        "interval_ms": 74,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 62,
+        "index": 18710,
+        "steering": -234,
+        "acquire_ms": 0,
+        "source": "current_single_associated",
+        "processing_ms": 60
+      }
+    },
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 534,
+        "free_heap": 2889344,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 11,
+          "grid": 39,
+          "anchors": 3
+        },
+        "searched_candidates": 55,
+        "support": [
+          4,
+          18
+        ],
+        "interval_ms": 71,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 55,
+        "index": 20840,
+        "steering": -234,
+        "acquire_ms": 0,
+        "source": "current_single_associated",
+        "processing_ms": 53
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 747,
+        "free_heap": 2786592,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 15,
+          "grid": 38,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          10,
+          8
+        ],
+        "interval_ms": 71,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 57,
+        "index": 20850,
+        "steering": 447,
+        "acquire_ms": 0,
+        "source": "current_pair",
+        "processing_ms": 55
+      }
+    },
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 718,
+        "free_heap": 2912000,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 14,
+          "grid": 41,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          9,
+          11
+        ],
+        "interval_ms": 73,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 59,
+        "index": 21000,
+        "steering": 418,
+        "acquire_ms": 0,
+        "source": "current_single_associated",
+        "processing_ms": 57
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 526,
+        "free_heap": 2746976,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 17,
+          "grid": 43,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          11,
+          20
+        ],
+        "interval_ms": 79,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 64,
+        "index": 21010,
+        "steering": -226,
+        "acquire_ms": 0,
+        "source": "current_pair",
+        "processing_ms": 62
+      }
+    },
+    {
+      "before": {
+        "wire_valid": true,
+        "bend": 748,
+        "free_heap": 2886176,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 13,
+          "grid": 46,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          11,
+          13
+        ],
+        "interval_ms": 77,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 64,
+        "index": 30490,
+        "steering": -448,
+        "acquire_ms": 1,
+        "source": "current_single_associated",
+        "processing_ms": 61
+      },
+      "after": {
+        "wire_valid": true,
+        "bend": 505,
+        "free_heap": 2914656,
+        "drive_allowed": true,
+        "profile_ms": {
+          "search": 10,
+          "grid": 43,
+          "anchors": 2
+        },
+        "searched_candidates": 55,
+        "support": [
+          11,
+          2
+        ],
+        "interval_ms": 75,
+        "valid": true,
+        "copy_ms": 0,
+        "to_send_ms": 58,
+        "index": 30500,
+        "steering": 205,
+        "acquire_ms": 1,
+        "source": "current_single_associated",
+        "processing_ms": 55
+      }
+    }
+  ],
+  "limitations": [
+    "all invalid and each tenth valid frame logged; counts are not accuracy rates",
+    "no elapsed clock or original frames; exact 2044ms trial cannot be isolated",
+    "large sign changes elsewhere in long session do not prove the ground-trial cause",
+    "power cut ended session; absent completed does not imply camera exception",
+    "later run_0010 is USB boot and stored separately"
+  ]
+}

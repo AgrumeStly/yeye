@@ -1,0 +1,60 @@
+{
+  "power_source": "新电池经驱动稳压5V至两板（主控操作顺序）",
+  "logged_samples": 294,
+  "highest_observed_algorithm_index": 2640,
+  "actual_total_frames": null,
+  "valid_logged_samples": 262,
+  "invalid_logged_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    428,
+    429
+  ],
+  "failure_events": [],
+  "completed_event": false,
+  "metrics": {
+    "processing_ms": {
+      "min": 21,
+      "median": 54.0,
+      "max": 89
+    },
+    "to_send_ms": {
+      "min": 23,
+      "median": 57.0,
+      "max": 90
+    },
+    "interval_ms": {
+      "min": 41,
+      "median": 72,
+      "max": 111
+    }
+  }
+}

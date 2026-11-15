@@ -1,0 +1,88 @@
+{
+  "artifacts": [
+    {
+      "source": "control\\build\\firmware\\low_speed_lap\\low_speed_lap.axf",
+      "file": "low_speed_lap.axf",
+      "bytes": 493588,
+      "sha256": "833e11397387a1ce55dcc93c501a71604e8cf6249bb3a9289995a8a241875d02",
+      "revision": "0x0211000B",
+      "run_ms": 3000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap\\low_speed_lap.bin",
+      "file": "low_speed_lap.bin",
+      "bytes": 16060,
+      "sha256": "cb4d44a9d9a745481ce1cca4196d6ee6a98540d1462ceec461b7f8d079f6b522",
+      "revision": "0x0211000B",
+      "run_ms": 3000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap\\low_speed_lap.hex",
+      "file": "low_speed_lap.hex",
+      "bytes": 45223,
+      "sha256": "7190f1137a851c43a519b6fad96f36446cd879631663667a0a88e8124fafd4c0",
+      "revision": "0x0211000B",
+      "run_ms": 3000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.axf",
+      "file": "low_speed_lap_track.axf",
+      "bytes": 494284,
+      "sha256": "954cae54af969b6de6fa55ce683071530b45e89e853fbe6e9b926b435b82ec70",
+      "revision": "0x0211000C",
+      "run_ms": 300000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.bin",
+      "file": "low_speed_lap_track.bin",
+      "bytes": 16060,
+      "sha256": "fbcf2c14a0a28f597200eb1f14966def9d35b5d0601362adcb34a9175301dd38",
+      "revision": "0x0211000C",
+      "run_ms": 300000
+    },
+    {
+      "source": "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.hex",
+      "file": "low_speed_lap_track.hex",
+      "bytes": 45223,
+      "sha256": "5ac4701f388d1fe0f639b75d3d304ebe3636682cde6a8571dd9241beec84849f",
+      "revision": "0x0211000C",
+      "run_ms": 300000
+    },
+    {
+      "source": "control/App/Motion/lap_motion.c",
+      "file": "lap_motion.c",
+      "bytes": 18454,
+      "sha256": "6b750422c8616d42fe98ebd17521077a528c20d587308ec205d8b2449f988c91"
+    },
+    {
+      "source": "control/App/Motion/lap_motion.h",
+      "file": "lap_motion.h",
+      "bytes": 4501,
+      "sha256": "f9377a56bc59a35f39d4ef2d11b14d8e4f6e124cf8df401ae16cce5e093a206b"
+    },
+    {
+      "source": "control/Core/Src/low_speed_lap_main.c",
+      "file": "low_speed_lap_main.c",
+      "bytes": 12523,
+      "sha256": "947c9a6632d30bddb3d1400d6e5881424163d6205148c206f08ed77bcf1218dd"
+    },
+    {
+      "source": "control/Tests/Host/test_lap_motion.c",
+      "file": "test_lap_motion.c",
+      "bytes": 15339,
+      "sha256": "fcdfcc92a1766f4b238963d514f6a46bc503aa32af7578add52160ad226e7baa"
+    },
+    {
+      "source": "control/tools/lap_swd_capture.py",
+      "file": "lap_swd_capture.py",
+      "bytes": 8788,
+      "sha256": "93664eee30ffd26546629d6569bc4878ce59de48315ba593292fa591550af9eb"
+    }
+  ],
+  "flash_written": false,
+  "board_tested": false,
+  "host_model_assertions": 346,
+  "uart_host_checks_passed": true,
+  "arm_build_errors": 0,
+  "arm_build_warnings": 0
+}

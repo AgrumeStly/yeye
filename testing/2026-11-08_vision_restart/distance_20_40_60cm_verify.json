@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0005",
+  "frames": 3,
+  "pose_label": "center",
+  "actual_grayscale_size": [
+    320,
+    240
+  ],
+  "cleanup_errors": [],
+  "scope": "file integrity and image format only; not pose truth or board acceptance"
+}

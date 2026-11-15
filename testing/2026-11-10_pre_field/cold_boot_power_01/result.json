@@ -1,0 +1,36 @@
+{
+  "user_reported_physical_power_cycle": true,
+  "power_source": "existing computer USB Type-C",
+  "initial_status": {
+    "running": false
+  },
+  "installed_main_sha256": "c0eeed8e60c72cc87d8c3128146b4c2b5e884266e4c4e269490e6be8c4a74269",
+  "original_RAM_log_unchanged": true,
+  "log_names": [
+    "check_0001.jsonl",
+    "check_0002.jsonl"
+  ],
+  "new_log_count": 1,
+  "downloaded": [
+    {
+      "file": "check_0002.jsonl",
+      "sha256": "1d7e40fe358686818a9000f8e0622b1a7356529a42aa88166795c0a309d19654",
+      "bytes": 48003,
+      "frames": 143,
+      "complete": true,
+      "no_drive": true,
+      "processing_ms_min": 46,
+      "processing_ms_max": 57,
+      "interval_ms_max": 168,
+      "to_send_ms_max": 87
+    }
+  ],
+  "attachment_output_has_boot_log_marker": false,
+  "startup_check_passed": true,
+  "script_run_requested": false,
+  "remote_write_requested": false,
+  "motor_started": false,
+  "stm32_receive_checked_this_run": false,
+  "battery_power_verified": false,
+  "autonomous_lap_verified": false
+}

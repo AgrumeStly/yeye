@@ -1,0 +1,73 @@
+{
+  "logged_samples": 15,
+  "highest_observed_algorithm_index": 120,
+  "actual_total_frame_count": null,
+  "logging_rule": "every tenth valid frame and all invalid frames; metrics are logged samples",
+  "source_counts": {
+    "unknown": 2,
+    "current_pair": 13
+  },
+  "valid_logged_samples": 12,
+  "invalid_logged_indices": [
+    1,
+    2,
+    3
+  ],
+  "all_logged_wire_valid_false": true,
+  "all_logged_drive_allowed_false": true,
+  "valid_steering": {
+    "min": -55,
+    "median": -55.0,
+    "max": -55
+  },
+  "valid_bend": {
+    "min": 355,
+    "median": 355.0,
+    "max": 355
+  },
+  "processing_ms": {
+    "min": 45,
+    "median": 57,
+    "max": 68
+  },
+  "to_send_ms": {
+    "min": 46,
+    "median": 60,
+    "max": 97
+  },
+  "interval_ms": {
+    "min": 74,
+    "median": 77.0,
+    "max": 112
+  },
+  "min_logged_free_heap": 2295392,
+  "normal_completion": true,
+  "preview_frame_index_is_not_algorithm_index": true,
+  "preview": [
+    {
+      "file": "preview\\preview_01_frame_00000001.jpg",
+      "bytes": 1827,
+      "sha256": "0636bd8cbf4a985f8a5337fdf2165d2f47b08e3cfc2bdc4d5570f9e20730a0df"
+    },
+    {
+      "file": "preview\\preview_02_frame_00000032.jpg",
+      "bytes": 8875,
+      "sha256": "ddacbc317d83f3709f397670ee7e9c49b339b6bd8f5cad24ca89ed4b0f0f92e1"
+    },
+    {
+      "file": "preview\\preview_03_frame_00000062.jpg",
+      "bytes": 8919,
+      "sha256": "275cac5b8dcf8263a5ceb2ca623f0e7452dbe3ad71e21ce8640e63f562605bff"
+    },
+    {
+      "file": "preview\\preview_04_frame_00000093.jpg",
+      "bytes": 8870,
+      "sha256": "aa7734694a679f10403b1e3be58cff6f0c3181ef36c73dde1aa65bda1c853cbe"
+    },
+    {
+      "file": "preview\\preview_05_frame_00000123.jpg",
+      "bytes": 8844,
+      "sha256": "134f66e0705f7e55254ab3293e6692b6891d71d38e1b2ac0159312d3e9d9d9a3"
+    }
+  ]
+}

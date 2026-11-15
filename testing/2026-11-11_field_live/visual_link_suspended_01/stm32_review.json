@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-11",
+  "evidence_kind": "last_run_watch.png及主控轮子符合预期反馈",
+  "input_kind": "real_camera_runtime_r5",
+  "suspended_only": true,
+  "manual_KEY": true,
+  "screenshot_values": {
+    "valid": 1, "elapsed_ms": 3000, "reason": "LAP_LIMIT11",
+    "left_target_rpm": 39.6526489, "right_target_rpm": 40.1313553,
+    "left_rpm": 40.3884392, "right_rpm": 39.9326859,
+    "left_pwm_before_stop_permille": 201, "right_pwm_before_stop_permille": 197,
+    "left_boost_samples": 1, "right_boost_samples": 1
+  },
+  "operator_feedback": "轮子符合预期，按单次KEY／两轮前进／3秒内自动停稳操作上下文记录",
+  "current_pwm_and_uart_feedback": "主控在驱动OFF并补核当前PWM0及UART0的明确步骤后回复是，按人工确认记录，无独立数值截图",
+  "not_verified": ["连续500ms误差统计", "地面纠偏", "完整一圈", "车载逻辑供电"],
+  "boundary": "快照是撤驱动前末次值，不是当前PWM；末帧目标差约0.48RPM，不声称大幅差速实物验证"
+}

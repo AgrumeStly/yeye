@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "name": "motor_straight_exact_checked_scenario",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_exact_recorded_source",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_hash_and_no_automatic_start",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_closed",
+      "passed": true
+    },
+    {
+      "name": "motor_right_exact_checked_scenario",
+      "passed": true
+    },
+    {
+      "name": "motor_right_exact_recorded_source",
+      "passed": true
+    },
+    {
+      "name": "motor_right_hash_and_no_automatic_start",
+      "passed": true
+    },
+    {
+      "name": "motor_right_closed",
+      "passed": true
+    },
+    {
+      "name": "motor_left_exact_checked_scenario",
+      "passed": true
+    },
+    {
+      "name": "motor_left_exact_recorded_source",
+      "passed": true
+    },
+    {
+      "name": "motor_left_hash_and_no_automatic_start",
+      "passed": true
+    },
+    {
+      "name": "motor_left_closed",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_short_window",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_short_gate_retained",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_short_hash",
+      "passed": true
+    },
+    {
+      "name": "motor_right_short_window",
+      "passed": true
+    },
+    {
+      "name": "motor_right_short_gate_retained",
+      "passed": true
+    },
+    {
+      "name": "motor_right_short_hash",
+      "passed": true
+    },
+    {
+      "name": "motor_left_short_window",
+      "passed": true
+    },
+    {
+      "name": "motor_left_short_gate_retained",
+      "passed": true
+    },
+    {
+      "name": "motor_left_short_hash",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_not_suspended_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_wrong_limit_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_straight_bad_window_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_right_not_suspended_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_right_wrong_limit_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_right_bad_window_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_left_not_suspended_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_left_wrong_limit_before_connection",
+      "passed": true
+    },
+    {
+      "name": "motor_left_bad_window_before_connection",
+      "passed": true
+    }
+  ],
+  "physical_board_used": false,
+  "motor_run_verified": false
+}

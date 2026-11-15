@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000"><rect width="1600" height="1000" fill="white"/>
+<text x='55' y='70' font-family='Microsoft YaHei, sans-serif' font-size='38' fill='#0f172a'>摄像头初装：镜头中心离地 18 cm，向下俯视 40°</text>
+<text x='58' y='113' font-family='Microsoft YaHei, sans-serif' font-size='22' fill='#64748b'>工程建议起点 · 实拍后微调 · 非比赛指定参数 · 2026-11-06</text>
+<rect x='45' y='145' width='940' height='610' rx='4' fill='#f8fafc'/>
+<rect x='1010' y='145' width='545' height='610' rx='4' fill='#f8fafc'/>
+<text x='70' y='192' font-family='Microsoft YaHei, sans-serif' font-size='27' fill='#0f172a'>侧视：高度从地面量，角度从水平线量</text>
+<text x='1035' y='192' font-family='Microsoft YaHei, sans-serif' font-size='27' fill='#0f172a'>俯视：车头居中，朝正前方</text>
+<line x1='160' y1='275' x2='945' y2='275' stroke='#dc2626' stroke-width='2' stroke-dasharray="10 7"/>
+<text x='175' y='258' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#dc2626'>整车最高点 ≤25 cm（含支架、线束）</text>
+<line x1='165' y1='650' x2='945' y2='650' stroke='#475569' stroke-width='4'/>
+<text x='885' y='687' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#334155'>地面</text>
+<rect x='215' y='580' width='290' height='28' rx='4' fill='#64748b'/>
+<circle cx='270' cy='620' r='29' fill='#1e293b'/>
+<circle cx='452' cy='620' r='29' fill='#1e293b'/>
+<rect x='315' y='520' width='100' height='60' rx='4' fill='#94a3b8'/>
+<text x='318' y='558' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#ffffff'>车体</text>
+<rect x='450' y='385' width='16' height='195' rx='4' fill='#475569'/>
+<line x1='460' y1='395' x2='490' y2='380' stroke='#475569' stroke-width='10'/>
+<rect x='470' y='354' width='35' height='40' rx='4' fill='#0f766e'/>
+<circle cx='490' cy='380' r='10' fill='#14b8a6'/>
+<text x='290' y='349' font-family='Microsoft YaHei, sans-serif' font-size='24' fill='#0f766e'>镜头中心</text>
+<line x1='425' y1='350' x2='482' y2='375' stroke='#0f766e' stroke-width='2'/>
+<line x1='490' y1='380' x2='490' y2='650' stroke='#94a3b8' stroke-width='2' stroke-dasharray="10 7"/>
+<line x1='145' y1='380' x2='460' y2='380' stroke='#94a3b8' stroke-width='2' stroke-dasharray="10 7"/>
+<line x1='145' y1='515' x2='145' y2='380' stroke='#2563eb' stroke-width='3'/>
+<line x1='145' y1='380' x2='151.524483011668' y2='393.50670653529' stroke='#2563eb' stroke-width='3'/>
+<line x1='145' y1='380' x2='138.475516988332' y2='393.50670653529' stroke='#2563eb' stroke-width='3'/>
+<line x1='145' y1='515' x2='145' y2='650' stroke='#2563eb' stroke-width='3'/>
+<line x1='145' y1='650' x2='138.475516988332' y2='636.49329346471' stroke='#2563eb' stroke-width='3'/>
+<line x1='145' y1='650' x2='151.524483011668' y2='636.49329346471' stroke='#2563eb' stroke-width='3'/>
+<text x='70' y='492' font-family='Microsoft YaHei, sans-serif' font-size='27' fill='#2563eb'>18 cm</text>
+<line x1='490' y1='380' x2='920' y2='380' stroke='#94a3b8' stroke-width='2' stroke-dasharray="10 7"/>
+<text x='795' y='366' font-family='Microsoft YaHei, sans-serif' font-size='22' fill='#64748b'>水平参考线</text>
+<line x1='490' y1='380' x2='811.773470000437' y2='650' stroke='#ea580c' stroke-width='5'/>
+<line x1='811.773470000437' y1='650' x2='797.232875674728' y2='646.316100346756' stroke='#ea580c' stroke-width='5'/>
+<line x1='811.773470000437' y1='650' x2='805.62058935375' y2='636.32001243613' stroke='#ea580c' stroke-width='5'/>
+<text x='674' y='518' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#c2410c'>镜头朝向／光轴</text>
+<line x1='595' y1='380' x2='594.936036837005' y2='383.664447153763' stroke='#ea580c' stroke-width='3'/>
+<line x1='594.936036837005' y1='383.664447153763' x2='594.744225277282' y2='387.324429743133' stroke='#ea580c' stroke-width='3'/>
+<line x1='594.744225277282' y1='387.324429743133' x2='594.424799013669' y2='390.975488643104' stroke='#ea580c' stroke-width='3'/>
+<line x1='594.424799013669' y1='390.975488643104' x2='593.978147217865' y2='394.613175600807' stroke='#ea580c' stroke-width='3'/>
+<line x1='593.978147217865' y1='394.613175600807' x2='593.404814066282' y2='398.233058655028' stroke='#ea580c' stroke-width='3'/>
+<line x1='593.404814066282' y1='398.233058655028' x2='592.70549807705' y2='401.830727535865' stroke='#ea580c' stroke-width='3'/>
+<line x1='592.70549807705' y1='401.830727535865' x2='591.88105125898' y2='405.401799037965' stroke='#ea580c' stroke-width='3'/>
+<line x1='591.88105125898' y1='405.401799037965' x2='590.932478073523' y2='408.941922360785' stroke='#ea580c' stroke-width='3'/>
+<line x1='590.932478073523' y1='408.941922360785' x2='589.860934210991' y2='412.446784409369' stroke='#ea580c' stroke-width='3'/>
+<line x1='589.860934210991' y1='412.446784409369' x2='588.66772518252' y2='415.912115049195' stroke='#ea580c' stroke-width='3'/>
+<line x1='588.66772518252' y1='415.912115049195' x2='587.354304729513' y2='419.333692308671' stroke='#ea580c' stroke-width='3'/>
+<line x1='587.354304729513' y1='419.333692308671' x2='585.922273052473' y2='422.707347522959' stroke='#ea580c' stroke-width='3'/>
+<line x1='585.922273052473' y1='422.707347522959' x2='584.373374861413' y2='426.028970412853' stroke='#ea580c' stroke-width='3'/>
+<line x1='584.373374861413' y1='426.028970412853' x2='582.709497250187' y2='429.294514092519' stroke='#ea580c' stroke-width='3'/>
+<line x1='582.709497250187' y1='429.294514092519' x2='580.932667397366' y2='432.5' stroke='#ea580c' stroke-width='3'/>
+<line x1='580.932667397366' y1='432.5' x2='579.045050096425' y2='435.641522744487' stroke='#ea580c' stroke-width='3'/>
+<line x1='579.045050096425' y1='435.641522744487' x2='577.048945118279' y2='438.715254864428' stroke='#ea580c' stroke-width='3'/>
+<line x1='577.048945118279' y1='438.715254864428' x2='574.946784409369' y2='441.71745149071' stroke='#ea580c' stroke-width='3'/>
+<line x1='574.946784409369' y1='441.71745149071' x2='572.741129128706' y2='444.644454909194' stroke='#ea580c' stroke-width='3'/>
+<line x1='572.741129128706' y1='444.644454909194' x2='570.434666527493' y2='447.492699017087' stroke='#ea580c' stroke-width='3'/>
+<text x='601' y='433' font-family='Microsoft YaHei, sans-serif' font-size='28' fill='#c2410c'>40° 向下</text>
+<circle cx='811.773470000437' cy='650' r='6' fill='#ea580c'/>
+<line x1='490' y1='698' x2='811.773470000437' y2='698' stroke='#2563eb' stroke-width='2'/>
+<line x1='811.773470000437' y1='698' x2='798.266763465146' y2='704.524483011669' stroke='#2563eb' stroke-width='2'/>
+<line x1='811.773470000437' y1='698' x2='798.266763465146' y2='691.475516988331' stroke='#2563eb' stroke-width='2'/>
+<line x1='811.773470000437' y1='698' x2='490' y2='698' stroke='#2563eb' stroke-width='2'/>
+<line x1='490' y1='698' x2='503.50670653529' y2='691.475516988331' stroke='#2563eb' stroke-width='2'/>
+<line x1='490' y1='698' x2='503.50670653529' y2='704.524483011669' stroke='#2563eb' stroke-width='2'/>
+<text x='528' y='731' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#2563eb'>约 21.5 cm（光轴落地点）</text>
+<line x1='255' y1='688' x2='385' y2='688' stroke='#334155' stroke-width='3'/>
+<line x1='385' y1='688' x2='371.49329346471' y2='694.524483011669' stroke='#334155' stroke-width='3'/>
+<line x1='385' y1='688' x2='371.49329346471' y2='681.475516988331' stroke='#334155' stroke-width='3'/>
+<text x='255' y='732' font-family='Microsoft YaHei, sans-serif' font-size='22' fill='#334155'>车头方向</text>
+<rect x='1150' y='440' width='280' height='245' rx='4' fill='#cbd5e1'/>
+<rect x='1115' y='565' width='35' height='95' rx='4' fill='#1e293b'/>
+<rect x='1430' y='565' width='35' height='95' rx='4' fill='#1e293b'/>
+<line x1='1290' y1='250' x2='1290' y2='710' stroke='#94a3b8' stroke-width='2' stroke-dasharray="10 7"/>
+<rect x='1255' y='415' width='70' height='38' rx='4' fill='#0f766e'/>
+<circle cx='1290' cy='423' r='10' fill='#14b8a6'/>
+<line x1='1290' y1='400' x2='1290' y2='265' stroke='#0f766e' stroke-width='5'/>
+<line x1='1290' y1='265' x2='1296.52448301167' y2='278.50670653529' stroke='#0f766e' stroke-width='5'/>
+<line x1='1290' y1='265' x2='1283.47551698833' y2='278.50670653529' stroke='#0f766e' stroke-width='5'/>
+<text x='1320' y='328' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#0f766e'>正前方</text>
+<text x='1180' y='515' font-family='Microsoft YaHei, sans-serif' font-size='25' fill='#0f172a'>摄像头左右居中</text>
+<text x='1190' y='553' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#334155'>支架固定在底板</text>
+<text x='1090' y='738' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#334155'>左右不歪，画面方向由视觉核对</text>
+<rect x='45' y='785' width='1510' height='165' rx='4' fill='#eff6ff'/>
+<text x='70' y='833' font-family='Microsoft YaHei, sans-serif' font-size='28' fill='#1e40af'>安装顺序：断电接排线 → 支架可调固定 → 静态看图 → 锁紧并复查</text>
+<text x='70' y='876' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#334155'>调节余量：离地 16–20 cm；俯角 35–50°。支架抬高量需扣除底板离地高度及镜头安装偏置。</text>
+<text x='70' y='918' font-family='Microsoft YaHei, sans-serif' font-size='23' fill='#334155'>先看清前方约 30–50 cm 的道路和边界；画面底部不一定能同时容纳整条 50 cm 宽车道。</text>
+<text x='55' y='985' font-family='Microsoft YaHei, sans-serif' font-size='20' fill='#64748b'>示意图非加工图；未表示镜头完整视场，安装尺寸与清晰度须以实物确认。</text>
+</svg>

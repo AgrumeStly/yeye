@@ -1,0 +1,10 @@
+{
+  "purpose": "manual power removal of K230 during suspended three-second straight run",
+  "firmware_revision": "0x02110009",
+  "fixture": "same checked synthetic straight input; no START command",
+  "operator_sequence": "one long KEY press/release; after observed rotation approximately one second, remove K230 USB only; keep DAPLink/main-board power",
+  "expected_controller_behavior": "early drive removal and latched fault; record actual reason",
+  "timeout_proof": "only if LAP_LINK, compare g_speed_match.stop_ms against g_lap.path_at; early transport error must be recorded separately",
+  "backend_disconnect_expected_if_K230_unplugged": true,
+  "result": "pending operator observation and STM32 evidence"
+}

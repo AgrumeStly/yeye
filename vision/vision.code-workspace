@@ -1,0 +1,34 @@
+{
+  "folders": [
+    { "name": "vision", "path": "." }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "terminal.integrated.env.windows": {
+      "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+      "PATH": "${workspaceFolder}/.venv/Scripts;${env:PATH}"
+    },
+    "files.exclude": {
+      "**/__pycache__": true,
+      ".venv": true
+    },
+    "python.analysis.extraPaths": [
+      "C:\\Users\\Agrum\\.kendryte\\k230_canmv_stubs\\f6ca68a0ed02f8d29d27bcf9681581e9f71209bb",
+      "c:\\Users\\Agrum\\AppData\\Local\\Temp\\canmv-vscode-Agrum\\a918e6c16d0dfdfa\\remote",
+      "c:\\Users\\Agrum\\AppData\\Local\\Temp\\canmv-vscode-Agrum\\a918e6c16d0dfdfa\\remote\\sdcard",
+      "c:\\Users\\Agrum\\AppData\\Local\\Temp\\canmv-vscode-Agrum\\a918e6c16d0dfdfa\\remote\\data",
+      "c:\\Users\\Agrum\\AppData\\Local\\Temp\\canmv-vscode-Agrum\\a918e6c16d0dfdfa\\remote\\udisk"
+    ],
+    "python.analysis.stubPath": "C:\\Users\\Agrum\\.kendryte\\k230_canmv_pylance\\a918e6c16d0dfdfa\\typings",
+    "python.analysis.diagnosticSeverityOverrides": {
+      "reportMissingModuleSource": "none"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "kendryte747.canmv-vscode",
+      "ms-python.python",
+      "ms-python.vscode-pylance"
+    ]
+  }
+}

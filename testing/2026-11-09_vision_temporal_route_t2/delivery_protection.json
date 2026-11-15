@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "source_files_match": 8,
+  "reviewed_frames": 388,
+  "reviewed_pages": 33,
+  "formal_regression_frames": 1394,
+  "all_source_video_frames": 732,
+  "prior_P1_video_unchanged": true,
+  "protected": [
+    {
+      "manifest": "testing/2026-11-08_vision_recovery_c2/protected_before.json",
+      "unchanged": 3616,
+      "changed": []
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_curve_c1/protected_hashes.json",
+      "unchanged": 870,
+      "changed": []
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_prediction_p1/release/protected_before.json",
+      "unchanged": 1398,
+      "changed": []
+    },
+    {
+      "manifest": "testing/2026-11-08_vision_board_prep/release/control_before.json",
+      "unchanged": 136,
+      "changed": []
+    }
+  ],
+  "original_git_entries_preserved": 65,
+  "missing_initial_entries": [],
+  "cwd": "D:\\projects\\projectsyeye",
+  "branch": "codex/current-version-20261025",
+  "head": "a0733a8685db4c2b497539303bfe87fe1c1ebfe5",
+  "status": " M DIRECTORY_GUIDE.md\n M control/Algorithms/Speed/speed_pi.c\n M control/Algorithms/Speed/speed_pi.h\n M control/App/Motion/speed_match.c\n M control/App/Motion/speed_match.h\n M control/Core/Src/speed_match_main.c\n M control/Drivers_Custom/Motor/straight_pwm.c\n M control/Drivers_Custom/Motor/straight_pwm.h\n M control/MDK-ARM/speed_match.uvprojx\n M control/README.md\n M control/Tests/Host/test_speed_match_integration.c\n M control/docs/speed_match.md\n M control/docs/validation.md\n M docs/architecture.md\n M docs/interfaces.md\n M hardware_preparation/README.md\n M project_planning/tasks/C-02F.md\n M testing/README.md\n M vision/PORTING_REVIEW.md\n M vision/README.md\n D vision/reference_code/image.c\n D vision/reference_code/image.h\n D \"vision/reference_code/\\345\\215\\201\\345\\255\\227\\350\\241\\245\\347\\272\\277\\345\\222\\214\\346\\234\\200\\345\\260\\217\\344\\272\\214\\344\\271\\230\\346\\263\\225.c\"\n?? control/App/Motion/speed_sprint.c\n?? control/App/Motion/speed_sprint.h\n?? control/MDK-ARM/speed_sprint.uvprojx\n?? control/Tests/Host/speed_match_integration_harness.h\n?? control/Tests/Host/test_speed_sprint.c\n?? control/Tests/Host/test_speed_sprint_integration.c\n?? control/docs/speed_sprint.md\n?? control/tools/build_speed_sprint.ps1\n?? control/tools/run_speed_sprint_tests.ps1\n?? hardware_preparation/camera_mount_diagram.png\n?? hardware_preparation/camera_mount_diagram.svg\n?? hardware_preparation/camera_mount_guide.md\n?? hardware_preparation/source/generate_camera_mount_diagram.ps1\n?? project_planning/tasks/C-02G.md\n?? project_planning/tasks/REVIEW-20261107.md\n?? project_planning/tasks/V-02.md\n?? project_planning/tasks/V-03.md\n?? project_planning/tasks/V-04.md\n?? project_planning/tasks/V-05.md\n?? project_planning/tasks/V-06.md\n?? project_planning/tasks/V-07.md\n?? project_planning/tasks/V-08.md\n?? project_planning/vision_deepseek_handoff_prompt.md\n?? testing/2026-11-01_speed_sprint/\n?? testing/2026-11-07_capture_rebuild/\n?? testing/2026-11-07_capture_review/\n?? testing/2026-11-07_vision_offline/\n?? testing/2026-11-08_boundary_preview/\n?? testing/2026-11-08_full_lap_capture/\n?? testing/2026-11-08_push_capture/\n?? testing/2026-11-08_push_corner_review/\n?? testing/2026-11-08_two_lap_review/\n?? testing/2026-11-08_vision_board_prep/\n?? testing/2026-11-08_vision_curve_c1/\n?? testing/2026-11-08_vision_finish_f1/\n?? testing/2026-11-08_vision_prediction_p1/\n?? testing/2026-11-08_vision_recovery_c2/\n?? testing/2026-11-08_vision_restart/\n?? testing/2026-11-08_vision_temporal_map_research/\n?? testing/2026-11-09_vision_temporal_route_t2/\n?? vision/.vscode/\n?? vision/PC_ENVIRONMENT.md\n?? vision/data/captures/\n?? vision/docs/\n?? vision/references/camera_sampling_and_race_workflow_2026-11-06.md\n?? vision/references/recognition_direction_2026-11-01.md\n?? vision/requirements-pc.txt\n?? vision/requirements-review.txt\n?? vision/src/\n?? vision/tools/\n?? vision/vision.code-workspace\n",
+  "video_sha256": "e6c3378e6ee274c13598d4e5a76d6120cb334187dfb5cb3845a92012da8a6833",
+  "actual_mp4_stills": [
+    {
+      "ms": 14000,
+      "file": "actual_mp4_014000ms.jpg",
+      "sha256": "ffd32bc0d84b8c5938c138aaf1d0dffa7f8d9b296f592290013845fb2e46d63d"
+    },
+    {
+      "ms": 86500,
+      "file": "actual_mp4_086500ms.jpg",
+      "sha256": "f82a373c1d7f2929a9e0ce01cd7240ab7f4f71d008eb99ff8f38037121ddf8d0"
+    },
+    {
+      "ms": 120600,
+      "file": "actual_mp4_120600ms.jpg",
+      "sha256": "3be636a2a2435cec233191dc099f8531cef01e5d8caa79d21df0cadc8fbe157f"
+    }
+  ],
+  "verification_script_sha256": "2c4937f476be535b1c80f096a29835210c9122d0f16a93e2d7be41b3ec9898f9",
+  "physical_actions": false,
+  "uploads": false,
+  "commits": false,
+  "global_summary_updated": false
+}

@@ -1,0 +1,50 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+[L1 INIT] precomputing local templates; no START
+[L1 READY] 1113 templates free_heap 3648160
+{"wire_valid": false, "bend": 306, "free_heap": 2475712, "drive_allowed": false, "support": [13, 12], "interval_ms": null, "valid": false, "copy_ms": 0, "to_send_ms": 827, "index": 1, "steering": 6, "acquire_ms": 44, "source": "current_pair", "processing_ms": 782}
+{"wire_valid": false, "bend": 300, "free_heap": 2558912, "drive_allowed": false, "support": [12, 9], "interval_ms": 842, "valid": false, "copy_ms": 0, "to_send_ms": 785, "index": 2, "steering": 0, "acquire_ms": 64, "source": "current_pair", "processing_ms": 721}
+{"wire_valid": false, "bend": 300, "free_heap": 4559168, "drive_allowed": false, "support": [31, 7], "interval_ms": 801, "valid": false, "copy_ms": 0, "to_send_ms": 758, "index": 3, "steering": 0, "acquire_ms": 65, "source": "current_pair", "processing_ms": 693}
+{"wire_valid": false, "bend": 0, "free_heap": 4127040, "drive_allowed": false, "support": [0, 0], "interval_ms": 772, "valid": false, "copy_ms": 0, "to_send_ms": 610, "index": 4, "steering": 0, "acquire_ms": 67, "source": "unknown", "processing_ms": 543}
+{"wire_valid": false, "bend": 0, "free_heap": 2147712, "drive_allowed": false, "support": [0, 0], "interval_ms": 627, "valid": false, "copy_ms": 0, "to_send_ms": 597, "index": 5, "steering": 0, "acquire_ms": 67, "source": "unknown", "processing_ms": 529}
+{"wire_valid": false, "bend": 0, "free_heap": 1419808, "drive_allowed": false, "support": [0, 0], "interval_ms": 613, "valid": false, "copy_ms": 0, "to_send_ms": 341, "index": 6, "steering": 0, "acquire_ms": 68, "source": "unknown", "processing_ms": 272}
+{"wire_valid": false, "bend": 0, "free_heap": 2024768, "drive_allowed": false, "support": [0, 0], "interval_ms": 357, "valid": false, "copy_ms": 0, "to_send_ms": 340, "index": 7, "steering": 0, "acquire_ms": 73, "source": "unknown", "processing_ms": 267}
+{"wire_valid": false, "bend": 0, "free_heap": 3011456, "drive_allowed": false, "support": [0, 0], "interval_ms": 356, "valid": false, "copy_ms": 0, "to_send_ms": 345, "index": 8, "steering": 0, "acquire_ms": 74, "source": "unknown", "processing_ms": 271}
+{"wire_valid": false, "bend": 0, "free_heap": 1616352, "drive_allowed": false, "support": [0, 0], "interval_ms": 360, "valid": false, "copy_ms": 0, "to_send_ms": 332, "index": 9, "steering": 0, "acquire_ms": 80, "source": "unknown", "processing_ms": 252}
+{"wire_valid": false, "bend": 0, "free_heap": 2080768, "drive_allowed": false, "support": [0, 0], "interval_ms": 348, "valid": false, "copy_ms": 0, "to_send_ms": 352, "index": 10, "steering": 0, "acquire_ms": 83, "source": "unknown", "processing_ms": 268}
+{"wire_valid": false, "bend": 373, "free_heap": 4619008, "drive_allowed": false, "support": [14, 4], "interval_ms": 368, "valid": false, "copy_ms": 0, "to_send_ms": 793, "index": 11, "steering": 73, "acquire_ms": 101, "source": "current_pair", "processing_ms": 692}
+{"wire_valid": false, "bend": 0, "free_heap": 246240, "drive_allowed": false, "support": [0, 0], "interval_ms": 807, "valid": false, "copy_ms": 0, "to_send_ms": 649, "index": 12, "steering": 0, "acquire_ms": 101, "source": "unknown", "processing_ms": 547}
+{"wire_valid": false, "bend": 0, "free_heap": 1684576, "drive_allowed": false, "support": [0, 0], "interval_ms": 665, "valid": false, "copy_ms": 0, "to_send_ms": 365, "index": 13, "steering": 0, "acquire_ms": 106, "source": "unknown", "processing_ms": 259}
+{"wire_valid": false, "bend": 0, "free_heap": 1385856, "drive_allowed": false, "support": [0, 0], "interval_ms": 381, "valid": false, "copy_ms": 0, "to_send_ms": 379, "index": 14, "steering": 0, "acquire_ms": 111, "source": "unknown", "processing_ms": 268}
+{"wire_valid": false, "bend": 0, "free_heap": 2950208, "drive_allowed": false, "support": [0, 0], "interval_ms": 396, "valid": false, "copy_ms": 0, "to_send_ms": 401, "index": 15, "steering": 0, "acquire_ms": 129, "source": "unknown", "processing_ms": 271}
+{"wire_valid": false, "bend": 0, "free_heap": 2095712, "drive_allowed": false, "support": [0, 0], "interval_ms": 416, "valid": false, "copy_ms": 0, "to_send_ms": 409, "index": 16, "steering": 0, "acquire_ms": 132, "source": "unknown", "processing_ms": 276}
+{"wire_valid": false, "bend": 0, "free_heap": 1784928, "drive_allowed": false, "support": [0, 0], "interval_ms": 425, "valid": false, "copy_ms": 0, "to_send_ms": 405, "index": 17, "steering": 0, "acquire_ms": 137, "source": "unknown", "processing_ms": 267}
+{"wire_valid": false, "bend": 0, "free_heap": 1598080, "drive_allowed": false, "support": [0, 0], "interval_ms": 421, "valid": false, "copy_ms": 0, "to_send_ms": 410, "index": 18, "steering": 0, "acquire_ms": 143, "source": "unknown", "processing_ms": 266}
+{"wire_valid": false, "bend": 0, "free_heap": 1659840, "drive_allowed": false, "support": [0, 0], "interval_ms": 426, "valid": false, "copy_ms": 0, "to_send_ms": 411, "index": 19, "steering": 0, "acquire_ms": 142, "source": "unknown", "processing_ms": 269}
+{"wire_valid": false, "bend": 313, "free_heap": 7072, "drive_allowed": false, "support": [12, 13], "interval_ms": 427, "valid": false, "copy_ms": 0, "to_send_ms": 911, "index": 20, "steering": -13, "acquire_ms": 145, "source": "current_pair", "processing_ms": 765}
+{"wire_valid": false, "bend": 313, "free_heap": 27072, "drive_allowed": false, "support": [13, 13], "interval_ms": 927, "valid": false, "copy_ms": 0, "to_send_ms": 905, "index": 21, "steering": -13, "acquire_ms": 147, "source": "current_pair", "processing_ms": 757}
+{"wire_valid": false, "bend": 0, "free_heap": 1778528, "drive_allowed": false, "support": [0, 0], "interval_ms": 922, "valid": false, "copy_ms": 0, "to_send_ms": 400, "index": 22, "steering": 0, "acquire_ms": 146, "source": "unknown", "processing_ms": 254}
+{"wire_valid": false, "bend": 300, "free_heap": 4541920, "drive_allowed": false, "support": [30, 7], "interval_ms": 416, "valid": false, "copy_ms": 0, "to_send_ms": 877, "index": 23, "steering": 0, "acquire_ms": 157, "source": "current_pair", "processing_ms": 720}
+{"wire_valid": false, "bend": 0, "free_heap": 1633024, "drive_allowed": false, "support": [0, 0], "interval_ms": 892, "valid": false, "copy_ms": 1, "to_send_ms": 416, "index": 24, "steering": 0, "acquire_ms": 163, "source": "unknown", "processing_ms": 252}
+{"wire_valid": false, "bend": 482, "free_heap": 2947872, "drive_allowed": false, "support": [19, 4], "interval_ms": 432, "valid": false, "copy_ms": 0, "to_send_ms": 757, "index": 25, "steering": -182, "acquire_ms": 175, "source": "current_pair", "processing_ms": 582}
+{"wire_valid": false, "bend": 0, "free_heap": 1628000, "drive_allowed": false, "support": [0, 0], "interval_ms": 773, "valid": false, "copy_ms": 0, "to_send_ms": 444, "index": 26, "steering": 0, "acquire_ms": 175, "source": "unknown", "processing_ms": 268}
+{"wire_valid": false, "bend": 0, "free_heap": 2951040, "drive_allowed": false, "support": [0, 0], "interval_ms": 460, "valid": false, "copy_ms": 0, "to_send_ms": 436, "index": 27, "steering": 0, "acquire_ms": 164, "source": "unknown", "processing_ms": 272}
+{"wire_valid": false, "bend": 0, "free_heap": 1854688, "drive_allowed": false, "support": [0, 0], "interval_ms": 451, "valid": false, "copy_ms": 0, "to_send_ms": 424, "index": 28, "steering": 0, "acquire_ms": 166, "source": "unknown", "processing_ms": 258}
+{"wire_valid": false, "bend": 0, "free_heap": 1548320, "drive_allowed": false, "support": [0, 0], "interval_ms": 440, "valid": false, "copy_ms": 0, "to_send_ms": 422, "index": 29, "steering": 0, "acquire_ms": 167, "source": "unknown", "processing_ms": 254}
+{"wire_valid": false, "bend": 0, "free_heap": 1887744, "drive_allowed": false, "support": [0, 0], "interval_ms": 438, "valid": false, "copy_ms": 0, "to_send_ms": 430, "index": 30, "steering": 0, "acquire_ms": 169, "source": "unknown", "processing_ms": 261}
+[L1 DONE] no autonomous lap/physical stop acceptance implied
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

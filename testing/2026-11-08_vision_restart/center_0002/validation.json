@@ -1,0 +1,224 @@
+{
+  "verification": {
+    "passed": true,
+    "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\v03_center_0002",
+    "frames": 3,
+    "pose_label": "center",
+    "actual_grayscale_size": [
+      320,
+      240
+    ],
+    "cleanup_errors": [],
+    "scope": "file integrity and image format only; not pose truth or board acceptance"
+  },
+  "source_files": [
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0002/data_0001.jpg",
+      "bytes": 12718,
+      "sha256": "934d435301fc9490035654ac492962691a149e2492822888e95d5d7403df8a2d"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0002/data_0002.jpg",
+      "bytes": 12669,
+      "sha256": "e9228ba101a804d4a6c93a65be7b41c585d9501090e958b28639366990ab3fe1"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0002/data_0003.jpg",
+      "bytes": 12662,
+      "sha256": "4a2cd81993722302843e292ccf1f4c1d8f3a9265d8df306881ba4344f64f1772"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0002/frames.jsonl",
+      "bytes": 987,
+      "sha256": "98b4672e6613e7e90627c13345c5b478b1f71d7456f80dccf2f71e1f3d0d0adc"
+    },
+    {
+      "path": "vision/data/captures/final_mount_20261108/v03_center_0002/session.json",
+      "bytes": 751,
+      "sha256": "cf2764574d805f6e5ed9012d369d995e3b94ea41253cad5ab8defa24c21210ce"
+    }
+  ],
+  "code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/src/capture_canmv.py": "3f8b03a67b59024f50bfb826e89d4ca2d20db91b9c824587809039ddb7fad28f",
+    "vision/tools/verify_capture.py": "72c62633e89f977ae997a2d71a78a759d165b87dd48faacbffaab6ecfb39e17a"
+  },
+  "sample_rows": [
+    {
+      "frame_id": 1,
+      "left": [
+        {
+          "x": 109,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 101,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 91,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 80,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 70,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "right": [
+        {
+          "x": 205,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 214,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 226,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 239,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 251,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "deviation_px": 0.0
+    },
+    {
+      "frame_id": 2,
+      "left": [
+        {
+          "x": 109,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 101,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 91,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 80,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 70,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "right": [
+        {
+          "x": 205,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 214,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 226,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 239,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 251,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "deviation_px": 0.0
+    },
+    {
+      "frame_id": 3,
+      "left": [
+        {
+          "x": 109,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 101,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 91,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 80,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 70,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "right": [
+        {
+          "x": 205,
+          "y": 65,
+          "state": "visible"
+        },
+        {
+          "x": 214,
+          "y": 80,
+          "state": "visible"
+        },
+        {
+          "x": 226,
+          "y": 100,
+          "state": "visible"
+        },
+        {
+          "x": 239,
+          "y": 120,
+          "state": "visible"
+        },
+        {
+          "x": 251,
+          "y": 140,
+          "state": "visible"
+        }
+      ],
+      "deviation_px": 0.0
+    }
+  ],
+  "scope": "Only centered static samples. Algorithm points are not independent manual ground truth."
+}

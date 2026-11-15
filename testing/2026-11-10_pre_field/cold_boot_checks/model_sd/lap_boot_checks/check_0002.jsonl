@@ -1,0 +1,4 @@
+{"event": "begin", "version": "L1-BOOT-NODRIVE-1", "duration_ms": 10000, "drive_allowed": false, "log": "D:\\projects\\projectsyeye\\testing\\2026-11-10_pre_field\\cold_boot_checks\\model_sd/lap_boot_checks/check_0002.jsonl"}
+{"index": 1, "source": "unknown", "wire_valid": false, "drive_allowed": false}
+{"index": 10, "source": "unknown", "wire_valid": false, "drive_allowed": false}
+{"event": "completed", "motor_acceptance": false}

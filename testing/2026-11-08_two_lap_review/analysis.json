@@ -1,0 +1,362 @@
+{
+  "verification": {
+    "passed": true,
+    "folder": "D:\\projects\\projectsyeye\\vision\\data\\captures\\final_mount_20261108\\push_full_lap_0001",
+    "frames": 732,
+    "scene": "full_lap",
+    "planned_duration_ms": 180000,
+    "capture_elapsed_ms": 180299,
+    "observed_interval_ms": {
+      "median": 224.0,
+      "p95": 523.0,
+      "maximum": 614
+    },
+    "observed_fps": 4.069634734972693,
+    "scope": "file integrity and software timing; not exposure rate, route truth, audible beep or battery acceptance"
+  },
+  "source_files": 734,
+  "prior_protected_files": 870,
+  "code_hashes": {
+    "vision/src/offline_boundary.py": "7726b85e0907d88bf3061e7f019d24589d5d7bd5ef212bb59ed4c3bb315c0657",
+    "vision/src/offline_curve.py": "77950d7902a5422a1cda133d8fbf0f0fb6e1314d69b4bfcf7211e73a8927f09c",
+    "vision/tools/replay_offline.py": "23e8cfb6a9bd8a3cab6ac6f16607b9ad29958a13e49fcb9b29e69f0a3ef2f7cb",
+    "vision/tools/replay_curve_offline.py": "873d2a5f3231287187ea83c3969137d399f1e4cf748e8211384a239f0f3917c3",
+    "vision/tools/verify_push_capture.py": "46310c958d81ae4e5a6e649ea035ff9b100c7e980ad6ecf837d770ee17910788",
+    "vision/src/capture_full_lap_canmv.py": "60b7889d938a3fc1270c41a4232c6ff2feb2de50ddf63f59cfc418a792cde6f7"
+  },
+  "replay_summary": {
+    "frames": 732,
+    "groups": [
+      {
+        "session": "push_full_lap_0001",
+        "frames": 732,
+        "fixed_reference_valid": 565,
+        "near_available": 567,
+        "turns": {
+          "none": 635,
+          "right": 97
+        }
+      }
+    ],
+    "fixed_reference_valid": 565,
+    "video_decoded_frames": 732,
+    "read_failed": 0,
+    "algorithm_ms": {
+      "mean": 29.087580874316938,
+      "p95": 43.34041
+    },
+    "preview_fps": 10,
+    "scope": "published static/hand-pushed regression; not accuracy, motion, physical turn angle or control acceptance"
+  },
+  "contact_sheets": [
+    "testing\\2026-11-08_two_lap_review\\raw_contact_01.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_02.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_03.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_04.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_05.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_06.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_07.jpg",
+    "testing\\2026-11-08_two_lap_review\\raw_contact_08.jpg"
+  ],
+  "contact_sample_frame_ids": [
+    1,
+    7,
+    13,
+    19,
+    25,
+    31,
+    37,
+    43,
+    49,
+    55,
+    61,
+    67,
+    73,
+    79,
+    85,
+    91,
+    97,
+    103,
+    109,
+    115,
+    121,
+    127,
+    133,
+    139,
+    145,
+    151,
+    157,
+    163,
+    169,
+    175,
+    181,
+    187,
+    193,
+    199,
+    205,
+    211,
+    217,
+    223,
+    229,
+    235,
+    241,
+    247,
+    253,
+    259,
+    265,
+    271,
+    277,
+    283,
+    289,
+    295,
+    301,
+    307,
+    313,
+    319,
+    325,
+    331,
+    337,
+    343,
+    349,
+    355,
+    361,
+    367,
+    373,
+    379,
+    385,
+    391,
+    397,
+    403,
+    409,
+    415,
+    421,
+    427,
+    433,
+    439,
+    445,
+    451,
+    457,
+    463,
+    469,
+    475,
+    481,
+    487,
+    493,
+    499,
+    505,
+    511,
+    517,
+    523,
+    529,
+    535,
+    541,
+    547,
+    553,
+    559,
+    565,
+    571,
+    577,
+    583,
+    589,
+    595,
+    601,
+    607,
+    613,
+    619,
+    625,
+    631,
+    637,
+    643,
+    649,
+    655,
+    661,
+    667,
+    673,
+    679,
+    685,
+    691,
+    697,
+    703,
+    709,
+    715,
+    721,
+    727,
+    732
+  ],
+  "fixed_invalid_spans": [
+    {
+      "first_frame": 100,
+      "last_frame": 142,
+      "first_ms": 12769,
+      "last_ms": 18236,
+      "frames": 43
+    },
+    {
+      "first_frame": 177,
+      "last_frame": 190,
+      "first_ms": 23440,
+      "last_ms": 25535,
+      "frames": 14
+    },
+    {
+      "first_frame": 271,
+      "last_frame": 300,
+      "first_ms": 39399,
+      "last_ms": 45306,
+      "frames": 30
+    },
+    {
+      "first_frame": 370,
+      "last_frame": 377,
+      "first_ms": 60774,
+      "last_ms": 62583,
+      "frames": 8
+    },
+    {
+      "first_frame": 381,
+      "last_frame": 407,
+      "first_ms": 63383,
+      "last_ms": 69991,
+      "frames": 27
+    },
+    {
+      "first_frame": 457,
+      "last_frame": 469,
+      "first_ms": 83660,
+      "last_ms": 86958,
+      "frames": 13
+    },
+    {
+      "first_frame": 480,
+      "last_frame": 483,
+      "first_ms": 90307,
+      "last_ms": 91273,
+      "frames": 4
+    },
+    {
+      "first_frame": 508,
+      "last_frame": 519,
+      "first_ms": 99052,
+      "last_ms": 103042,
+      "frames": 12
+    },
+    {
+      "first_frame": 550,
+      "last_frame": 551,
+      "first_ms": 113250,
+      "last_ms": 113738,
+      "frames": 2
+    },
+    {
+      "first_frame": 555,
+      "last_frame": 568,
+      "first_ms": 115067,
+      "last_ms": 119495,
+      "frames": 14
+    }
+  ],
+  "near_missing_spans": [
+    {
+      "first_frame": 109,
+      "last_frame": 148,
+      "first_ms": 13916,
+      "last_ms": 19122,
+      "frames": 40
+    },
+    {
+      "first_frame": 177,
+      "last_frame": 193,
+      "first_ms": 23440,
+      "last_ms": 25929,
+      "frames": 17
+    },
+    {
+      "first_frame": 275,
+      "last_frame": 301,
+      "first_ms": 40270,
+      "last_ms": 45509,
+      "frames": 27
+    },
+    {
+      "first_frame": 370,
+      "last_frame": 381,
+      "first_ms": 60774,
+      "last_ms": 63383,
+      "frames": 12
+    },
+    {
+      "first_frame": 392,
+      "last_frame": 409,
+      "first_ms": 66222,
+      "last_ms": 70436,
+      "frames": 18
+    },
+    {
+      "first_frame": 419,
+      "last_frame": 421,
+      "first_ms": 73057,
+      "last_ms": 73498,
+      "frames": 3
+    },
+    {
+      "first_frame": 460,
+      "last_frame": 470,
+      "first_ms": 84346,
+      "last_ms": 87417,
+      "frames": 11
+    },
+    {
+      "first_frame": 479,
+      "last_frame": 484,
+      "first_ms": 90062,
+      "last_ms": 91543,
+      "frames": 6
+    },
+    {
+      "first_frame": 510,
+      "last_frame": 523,
+      "first_ms": 99921,
+      "last_ms": 104405,
+      "frames": 14
+    },
+    {
+      "first_frame": 550,
+      "last_frame": 554,
+      "first_ms": 113250,
+      "last_ms": 114545,
+      "frames": 5
+    },
+    {
+      "first_frame": 560,
+      "last_frame": 569,
+      "first_ms": 116740,
+      "last_ms": 119768,
+      "frames": 10
+    },
+    {
+      "first_frame": 577,
+      "last_frame": 578,
+      "first_ms": 122517,
+      "last_ms": 122790,
+      "frames": 2
+    }
+  ],
+  "fixed_invalid_reasons": {
+    "reference_row_not_bracketed": 115,
+    "insufficient_pair_support": 64,
+    "pair_not_widening_toward_camera": 27,
+    "low_pair_quality": 64,
+    "single_boundary_only_side_ambiguous": 47
+  },
+  "software_time_video": {
+    "path": "testing\\2026-11-08_two_lap_review\\raw_software_time.mp4",
+    "frames": 1803,
+    "fps": 10,
+    "note": "software-time resampling with repeated frames, not 10fps exposure"
+  },
+  "operator_report": {
+    "hand_pushed_laps": 2,
+    "finish": "entire vehicle over finish then stopped"
+  },
+  "scope": "file integrity and frozen algorithm outputs, not verified route truth, accuracy or autonomous laps"
+}

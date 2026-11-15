@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "name": "only_one_fixed_main_write",
+      "passed": true
+    },
+    {
+      "name": "exact_before_and_after_files",
+      "passed": true
+    },
+    {
+      "name": "no_run_START_or_delete_RPC",
+      "passed": true
+    },
+    {
+      "name": "readback_and_unverified_cold_boot_distinct",
+      "passed": true
+    },
+    {
+      "name": "continuous_upgrade_exact_source_and_true_prior_backup",
+      "passed": true
+    },
+    {
+      "name": "continuous_upgrade_never_runs_source",
+      "passed": true
+    },
+    {
+      "name": "wrong_approval_rejected_at_correct_stage",
+      "passed": true
+    },
+    {
+      "name": "wrong_approval_has_no_RPC",
+      "passed": true
+    },
+    {
+      "name": "running_script_rejected_at_correct_stage",
+      "passed": true
+    },
+    {
+      "name": "unknown_main_rejected_at_correct_stage",
+      "passed": true
+    },
+    {
+      "name": "unknown_main_evidence_saved",
+      "passed": true
+    },
+    {
+      "name": "unknown_boot_rejected_at_correct_stage",
+      "passed": true
+    },
+    {
+      "name": "bad_readback_rejected_at_correct_stage",
+      "passed": true
+    }
+  ],
+  "fake_session_only": true,
+  "physical_board_used": false
+}
