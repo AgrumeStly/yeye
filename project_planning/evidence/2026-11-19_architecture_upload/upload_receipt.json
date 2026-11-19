@@ -1,0 +1,121 @@
+{
+  "captured_at_utc": "2026-11-19T08:09:47.040106+00:00",
+  "source": "actual tool command transcript plus local Git reads",
+  "branch": "codex/current-version-20261025",
+  "origin": "https://github.com/AgrumeStly/yeye.git",
+  "base_commit": "62b4f288b27c4e3fa9f6d213c07be186e502f43c",
+  "primary_commit": "bdc38c6a465c2a07f6f191b563c29ed8f886e495",
+  "github_commit": "https://github.com/AgrumeStly/yeye/commit/bdc38c6a465c2a07f6f191b563c29ed8f886e495",
+  "primary_changed_paths": [
+    "AGENTS.md",
+    "DIRECTORY_GUIDE.md",
+    "README.md",
+    "control/README.md",
+    "control/docs/motor_bench_r2_task.md",
+    "control/docs/motor_bench_r3_task.md",
+    "control/docs/right_angle.md",
+    "control/docs/right_angle_racing.md",
+    "control/docs/straight_assist.md",
+    "docs/README.md",
+    "docs/architecture.md",
+    "docs/tasks.md",
+    "hardware_preparation/control_bringup_plan.md",
+    "hardware_preparation/i03_handoff.md",
+    "hardware_preparation/i05_motor_power_diagnosis_task.md",
+    "project_planning/README.md",
+    "project_planning/agent_initialization_prompts.md",
+    "project_planning/archive/2026-11-19_collaboration_standard.md",
+    "project_planning/archive/2026-11-19_project_status.md",
+    "project_planning/collaboration_standard.md",
+    "project_planning/evidence/2026-11-19_architecture_upload/file_manifest.json",
+    "project_planning/evidence/2026-11-19_architecture_upload/initial_state.json",
+    "project_planning/evidence/2026-11-19_architecture_upload/local_dependencies.json",
+    "project_planning/evidence/2026-11-19_architecture_upload/static_checks.json",
+    "project_planning/evidence/2026-11-19_task_architecture/git_status_before.txt",
+    "project_planning/evidence/2026-11-19_task_architecture/original_document_hashes.json",
+    "project_planning/evidence/2026-11-19_task_architecture/task_inventory.json",
+    "project_planning/evidence/2026-11-19_task_architecture/validation.json",
+    "project_planning/evidence/2026-11-19_task_architecture/walkthrough.md",
+    "project_planning/project_status.md",
+    "project_planning/roadmap.md",
+    "project_planning/tasks/C-02B-PWM-R4.md",
+    "project_planning/tasks/C-02C.md",
+    "project_planning/tasks/C-02D.md",
+    "project_planning/tasks/C-02E.md",
+    "project_planning/tasks/C-02F.md",
+    "project_planning/tasks/C-02G.md",
+    "project_planning/tasks/C-OLED-01.md",
+    "project_planning/tasks/G-03.md",
+    "project_planning/tasks/G-04.md",
+    "project_planning/tasks/G-05.md",
+    "project_planning/tasks/G-06.md",
+    "project_planning/tasks/G-07.md",
+    "project_planning/tasks/H-03.md",
+    "project_planning/tasks/I-02-LOW-SPEED-LAP.md",
+    "project_planning/tasks/I-03-STRAIGHT-ASSIST.md",
+    "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+    "project_planning/tasks/ORG-01.md",
+    "project_planning/tasks/ORG-02.md",
+    "project_planning/tasks/ORG-03-TASK-ARCHITECTURE.md",
+    "project_planning/tasks/README.md",
+    "project_planning/tasks/REVIEW-20261107.md",
+    "project_planning/tasks/TASK-20261119-01-architecture-upload.md",
+    "project_planning/tasks/V-01.md",
+    "project_planning/tasks/V-02.md",
+    "project_planning/tasks/V-03.md",
+    "project_planning/tasks/V-04.md",
+    "project_planning/tasks/V-05.md",
+    "project_planning/tasks/V-06.md",
+    "project_planning/tasks/V-07.md",
+    "project_planning/tasks/V-08.md",
+    "project_planning/version_handoff.md",
+    "testing/2026-11-18_right_angle/resume_20261119.md",
+    "testing/README.md",
+    "vision/README.md"
+  ],
+  "primary_changed_file_count": 65,
+  "commands": [
+    {
+      "command": "git fetch origin codex/current-version-20261025",
+      "exit_code": 0,
+      "output": "From https://github.com/AgrumeStly/yeye\n * branch codex/current-version-20261025 -> FETCH_HEAD"
+    },
+    {
+      "command": "git rev-list --left-right --count HEAD...FETCH_HEAD (before commit)",
+      "exit_code": 0,
+      "output": "0\t0"
+    },
+    {
+      "command": "git diff --cached --check (before primary commit)",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "git push origin HEAD:refs/heads/codex/current-version-20261025",
+      "exit_code": 0,
+      "output": "To https://github.com/AgrumeStly/yeye.git\n   62b4f28..bdc38c6 HEAD -> codex/current-version-20261025"
+    },
+    {
+      "command": "git ls-remote --heads origin codex/current-version-20261025 (after primary push; escalated network retry)",
+      "exit_code": 0,
+      "output": "bdc38c6a465c2a07f6f191b563c29ed8f886e495\trefs/heads/codex/current-version-20261025"
+    },
+    {
+      "command": "git diff bdc38c6a465c2a07f6f191b563c29ed8f886e495^ bdc38c6a465c2a07f6f191b563c29ed8f886e495 --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "environment_events": [
+    "Initial sandbox git add failed to create .git/index.lock; approved escalation succeeded.",
+    "Post-push sandbox ls-remote failed to connect to github.com; approved escalated retry returned matching full commit."
+  ],
+  "followup_delivery_record_paths": [
+    "project_planning/tasks/TASK-20261119-01-architecture-upload.md",
+    "project_planning/version_handoff.md",
+    "project_planning/evidence/2026-11-19_architecture_upload/preservation.json",
+    "project_planning/evidence/2026-11-19_architecture_upload/upload_receipt.json"
+  ],
+  "final_delivery_commit": "Includes this receipt; final full hash and fresh ls-remote result reported to 主控 in final response and saved locally under tmp/architecture_upload_20261119/final_verification.json, avoiding self-referential commits.",
+  "acceptance": "待主控验收；Git成功不代表车辆或其它设备验收。"
+}

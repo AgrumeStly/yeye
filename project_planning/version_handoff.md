@@ -1,12 +1,14 @@
 # 版本与设备交接记录
 
-## 当前任务：新项目架构上传（2026-11-19，执行中）
+## 当前任务：新项目架构上传（2026-11-19，待主控验收）
 
-主控已转交[TASK-20261119-01-architecture-upload](tasks/TASK-20261119-01-architecture-upload.md)，明确本次架构提交、推送与远端核对授权。版本上传执行对话核对目录`D:/projects/projectsyeye`、分支`codex/current-version-20261025`、起始HEAD `62b4f288b27c4e3fa9f6d213c07be186e502f43c`及origin `https://github.com/AgrumeStly/yeye.git`；暂存区为空，无git进程／index.lock。实际fetch及ls-remote确认同名远端起始提交一致，领先／落后0／0；尚待新提交上传后核对。
+主控已转交[TASK-20261119-01-architecture-upload](tasks/TASK-20261119-01-architecture-upload.md)，明确本次架构提交、推送与远端核对授权。版本上传执行对话核对目录`D:/projects/projectsyeye`、分支`codex/current-version-20261025`、起始HEAD `62b4f288b27c4e3fa9f6d213c07be186e502f43c`及origin `https://github.com/AgrumeStly/yeye.git`；暂存区为空，无git进程／index.lock。实际fetch及ls-remote确认同名远端起始提交一致，领先／落后0／0。
+
+架构主提交[`bdc38c6a465c2a07f6f191b563c29ed8f886e495`](https://github.com/AgrumeStly/yeye/commit/bdc38c6a465c2a07f6f191b563c29ed8f886e495)含65份文件，已普通推送；提交后实时ls-remote返回同一完整提交号。[实际命令收据](evidence/2026-11-19_architecture_upload/upload_receipt.json)及[保留核对](evidence/2026-11-19_architecture_upload/preservation.json)已归档。本段与任务的结果回填追加提交并推送，最终完整提交号及最终远端同号核对在执行对话最终回报给出，另存本地忽略路径tmp/architecture_upload_20261119/final_verification.json，避免自引用循环提交。
 
 本次限定61份许可架构文件及本任务文字／JSON证据，含新协作标准3.2、本地Git规则、路线图、任务迁移、ORG-03验收和I-04 LINK2／200ms接续；首页补齐新总管已登记事实及上传边界。[实际清单](evidence/2026-11-19_architecture_upload/file_manifest.json)、[静态检查](evidence/2026-11-19_architecture_upload/static_checks.json)、[范围外591个文件哈希](evidence/2026-11-19_architecture_upload/initial_state.json)及[逐项依赖](evidence/2026-11-19_architecture_upload/local_dependencies.json)为核对入口。原五份迁移证据不改写，不跑固件／视觉／硬件测试。
 
-这是文档架构上传，不能据此恢复完整最新实车环境：直道／首弯源码、算法／测试／工具、协议本地变更、Keil工程、wheel_mapping实跑映射、相机发布包、原始照片／日志、IDE／Obsidian设置等保留本地，不夹带上传。技术／历史链接在候选树中有69处缺失（42个目标），另31处目标存在旧版但本地修改未上传；部分历史目标本地也不存在，依赖JSON逐项标识。build／tmp、固件及本机配置继续单独保留。本任务当前区是执行结果入口；全局状态保留总管转交前快照，主控验收后由总管更新。
+这是文档架构上传，不能据此恢复完整最新实车环境：直道／首弯源码、算法／测试／工具、协议本地变更、Keil工程、wheel_mapping实跑映射、相机发布包、原始照片／日志、IDE／Obsidian设置等保留本地，不夹带上传。范围外591个起始内容差异文件哈希一致；另yeye_control.uvprojx是起始status已显示M而文本diff无差异的共享工程项，未编辑／暂存，单列保留，共592条状态记录。技术／历史链接在候选树中有69处缺失（42个目标），另31处目标存在旧版但本地修改未上传；部分历史目标本地也不存在，依赖JSON逐项标识。build／tmp、固件及本机配置继续单独保留。本任务当前区是执行结果入口；全局状态保留总管转交前快照，主控验收后由总管更新。仅完成资料及版本检查，未操作硬件；主控仍须明确验收上传成果，Git同号不代表车辆或其它设备通过。
 
 ## 历史接续：G-07当前版本上传（2026-11-15）
 
