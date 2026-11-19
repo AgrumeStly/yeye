@@ -1,4 +1,33 @@
+# 视觉与语音入口
+
+2026-11-19整理；本轮未改视觉实现、部署或相机状态。现有记录显示主控承担视觉／语音，不再等待旧成员交付。
+
+- 当前配合[首弯任务](../project_planning/tasks/I-04-RIGHT-ANGLE.md)，视觉最终归档[release_r6_final](../testing/2026-11-18_right_angle/release_r6_final/README.md)，与STM32 v5配对。
+- 最后归档为相机已停止；不能把旧“已自动启动”当实时状态。[11月19日接续](../testing/2026-11-18_right_angle/resume_20261119.md)先查LINK新鲜度与日志保存，不沿用前次PATH原因。
+- V-02至V-08保存电脑识别、最终安装采图、距离参照、T2路线、F1终点与BP1诊断的限定证据；它们不自动等于板上整车验收。
+- 语音和全车越线自动停车仍缺完整验收；[阶段与任务索引](../project_planning/project_status.md)为唯一全局入口。
+
+## 历史入口与技术说明（原文保留）
+
+以下“当前R4／R5／已启动／最新”等为当时过程记录，不能覆盖上方版本和接续。
+
 # 视觉与语音开发
+
+2026-11-18收工：主控要求保存当前截图和进度、明天继续。R6最后实跑858ms以LINK2／源年龄200ms停止，当前视觉已停止；[已核实的停车截图](../testing/2026-11-18_right_angle/ground_05_stopped_view/frame.jpg)由主机直接保存，原SD短日志／PGM为0字节，长日志后段也缺失，原因待核实。[明天接续记录](../testing/2026-11-18_right_angle/resume_20261119.md)。最终代码仍release_r6_final，不把下文历史“已自动启动”当作现在或明天仍在运行。
+
+2026-11-18当前R6：主控已跑到弯中，2861ms因LAP_PATH停，真实触发前后图均已保存。横边清楚但六个轴向邻居失配；新增按需8个耦合恢复候选，当前12格／75%支持及700ms界限不变。近区当前L／有效出口关联加大右转，不再只给100或0。155项检查通过；K230同图旧后帧失效，新后帧75ms有效，700ms仍到期。[最终文件](../testing/2026-11-18_right_angle/release_r6_final/right_angle_drive.py)、[证据和停车截图](../testing/2026-11-18_right_angle/midturn_r6/record.md)。主控0x02120012无需重刷，R6最终已自动启动live_drive_08；动态过弯／触线仍待复跑，以下为历史。
+
+2026-11-18 R5生命周期补正：主控第二次KEY不动／慢闪时，旧视觉已到10分钟退出，旧状态文件仍显示running=True。正式副本及主机保持到人工停止，退出覆盖状态为False，无动力预览仍10分钟。识别、路径及v5协议算法字节不变；STM32无需重刷，保持供电且已完成双轮测试无需重做。[当前最终文件](../testing/2026-11-18_right_angle/release_r5_continuous/right_angle_drive.py)、[证据](../testing/2026-11-18_right_angle/lifecycle_r5/record.md)。本轮新自动视觉live_drive_06已连续ready，主板本次启动被拒绝的RAM尚未读取。
+
+2026-11-18当前R5：主控实跑再次566ms以LAP_PATH停止，原留证3组在试跑前用尽；在已留存的相邻清晰赛道图中复现“黑墙接上左边界→整段外侧L被旧网格删除”。现新增首弯独立corner_grid，只剥离上沿厚背景，保留细长道路边，旧直道／旧整圈网格不改。实图旧0行参照、新8行，K230稳定43..44ms、146项检查通过；[最终R5文件](../testing/2026-11-18_right_angle/release_r5/right_angle_drive.py)、[证据](../testing/2026-11-18_right_angle/wall_r5/record.md)。仍v5、STM32 0x02120012不变，R5已可自动启动；动态复跑仍待主控，不把其它时间留图当本次触发原图。
+
+2026-11-18当前R4：按主控“左纵＋前横即可右转，复用预测视频，不强求中线，优先快过弯”要求，新增当前L独立预测和外入切弯圆弧。仍为基础Python板上实现，复用T2二维几何，实测／预测来源分开；两端改v5、STM32 0x02120012，旧v4不能混接。[最终入口](../control/docs/right_angle_racing.md)、[证据](../testing/2026-11-18_right_angle/racing_r4/record.md)。本版动态过弯和触线仍待主控实跑；以下R1..R3为历史。
+
+2026-11-18首个左侧直角弯：新增独立v4程序，顺时针右转90°，当前直道／弯道模型、提前减速、当前关联单侧折角短过渡及出弯回正；最终[right_angle_drive.py](../testing/2026-11-18_right_angle/release/right_angle_drive.py)与STM32 RightAngle配对。[直接试跑步骤](../control/docs/right_angle.md)、[软件证据及未测边界](../testing/2026-11-18_right_angle/record.md)。不增加初始化测试矩阵，保留必要轮子配对；动力过弯仍待主控试跑，未自动部署或改main.py。
+
+同日R2最新启动要求：STM32更新0x02120011，取消逐轮配对，第一次KEY一次双轮悬空1秒，下一次KEY地面直接跑。K230上述v4单文件字节不变，无需换视觉程序；旧“必要轮子配对”流程已被替代，详见[新版两步操作](../control/docs/right_angle.md)。
+
+2026-11-18直道独立开发：当前双边直线观测＋位置／方向微调，与STM32编码器PI配对，见[直道程序与步骤](../control/docs/straight_assist.md)、[I-03任务](../project_planning/tasks/I-03-STRAIGHT-ASSIST.md)。视觉R2＋固件0x02120002已实际完成一次80RPM／2秒地面正常直行，主控反馈约半段左侧斜直道、状态良好且无明显摇摆；原始数据和单次范围见本轮记录，重复性／提速／整圈仍另验。
 
 2026-11-09实板推进：[无动力运行／实际超时／修复／UART发送端记录](../testing/2026-11-09_low_speed_lap/hardware_runtime_review.md)已归档。当前CanMV副本为`testing/2026-11-09_low_speed_lap/board_bundle_runtime_r4/low_speed_lap_canmv.py`，已修数组兼容、采用6像素网格和每帧48候选；默认驱动许可关闭。STM32实际收包、赛道识别／动力／一圈仍待验，不能把宿舍unknown画面的44..54ms运行当赛道通过；下文初始release为历史电脑候选。
 

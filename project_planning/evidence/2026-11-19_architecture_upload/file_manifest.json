@@ -1,0 +1,522 @@
+{
+  "base_commit": "62b4f288b27c4e3fa9f6d213c07be186e502f43c",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -3,12 +3,15 @@",
+        "@@ -20,3 +23,8 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "DIRECTORY_GUIDE.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,3 +1,13 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,43 +1,24 @@"
+      ],
+      "review": "README current registry/default commit/upload boundary corrected"
+    },
+    {
+      "path": "control/README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,3 +1,18 @@",
+        "@@ -13,6 +28,8 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "control/docs/motor_bench_r2_task.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "control/docs/motor_bench_r3_task.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "control/docs/right_angle.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,56 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "control/docs/right_angle_racing.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,54 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "control/docs/straight_assist.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,78 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "docs/README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -9,7 +9,7 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "docs/architecture.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,3 +1,9 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "docs/tasks.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,11 +1,11 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "hardware_preparation/control_bringup_plan.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,3 +1,7 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "hardware_preparation/i03_handoff.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "hardware_preparation/i05_motor_power_diagnosis_task.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,38 +1,19 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/agent_initialization_prompts.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,96 +1,40 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/archive/2026-11-19_collaboration_standard.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,107 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/archive/2026-11-19_project_status.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,100 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/collaboration_standard.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,105 +1,53 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_architecture_upload/file_manifest.json",
+      "status": "added",
+      "hunks": [],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_architecture_upload/initial_state.json",
+      "status": "added",
+      "hunks": [],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_architecture_upload/local_dependencies.json",
+      "status": "added",
+      "hunks": [],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_architecture_upload/static_checks.json",
+      "status": "added",
+      "hunks": [],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_task_architecture/git_status_before.txt",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,599 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_task_architecture/original_document_hashes.json",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,51 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_task_architecture/task_inventory.json",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,250 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_task_architecture/validation.json",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,135 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/evidence/2026-11-19_task_architecture/walkthrough.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,13 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/project_status.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,98 +1,82 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/roadmap.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,14 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-02B-PWM-R4.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-02C.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-02D.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-02E.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-02F.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-02G.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/C-OLED-01.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/G-03.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/G-04.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/G-05.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/G-06.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/G-07.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/H-03.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/I-02-LOW-SPEED-LAP.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/I-03-STRAIGHT-ASSIST.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,74 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,141 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/ORG-01.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/ORG-02.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/ORG-03-TASK-ARCHITECTURE.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,40 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,68 +1,47 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/REVIEW-20261107.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/TASK-20261119-01-architecture-upload.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,85 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-01.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@",
+        "@@ -31,4 +65,4 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-02.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-03.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-04.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-05.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-06.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-07.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/tasks/V-08.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,39 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "project_planning/version_handoff.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,6 +1,14 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "status": "added",
+      "hunks": [
+        "@@ -0,0 +1,38 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "testing/README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,3 +1,16 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    },
+    {
+      "path": "vision/README.md",
+      "status": "modified",
+      "hunks": [
+        "@@ -1,5 +1,34 @@"
+      ],
+      "review": "explicit task allowlist; architecture documentation, current facts, history or upload evidence"
+    }
+  ],
+  "count": 65,
+  "scope": "documentation and textual management evidence only"
+}

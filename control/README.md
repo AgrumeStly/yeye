@@ -1,3 +1,18 @@
+# 主控开发入口
+
+2026-11-19整理；本轮未改代码、工程、固件或参数。
+
+- 当前成果任务：[首弯I-04](../project_planning/tasks/I-04-RIGHT-ANGLE.md)，[当前操作单](docs/right_angle_racing.md)，工程RightAngle，归档版本0x02120012／v5。
+- 最后真实结果为858ms LINK2停止，未完整过弯；[接续记录](../testing/2026-11-18_right_angle/resume_20261119.md)优先于旧操作。已匹配此版本时无需重刷；设备本轮未实查。
+- [独立直道](../project_planning/tasks/I-03-STRAIGHT-ASSIST.md)一次80RPM／2秒已确认；历史直道旧单轮配对流程不再作为当前试跑流程。
+- SpeedMatch闭环与OLED已有各自交付；HardwareBench老目标的“未整合”不代表全库无闭环。工程分层及SPL继续沿用。
+- 当前映射只查[wheel_mapping](../hardware_preparation/wheel_mapping.md)。一次双轮悬空后一次上道，KEY及保护保留。
+- [全局阶段和任务](../project_planning/project_status.md)由总管维护，模块任务由主控转交的执行对话维护。
+
+## 历史入口与技术说明（原文保留）
+
+以下原文中的“当前／最新”、未实现及旧测试步骤仅属于原日期／目标；不作为当前首弯操作指令。
+
 # 主控开发：STM32 SPL分层工程
 
 更新：2026-10-25（北京时间，ORG-02）。维护：主控／01。
@@ -13,6 +28,8 @@
 
 | 场景 | 入口 |
 | --- | --- |
+| 左侧首个直角弯／L形预测与快过弯候选（2026-11-18 R4） | [MDK-ARM/right_angle.uvprojx](MDK-ARM/right_angle.uvprojx)，目标RightAngle，0x02120012／v5；一次双轮悬空1秒，再次KEY地面80RPM／12秒；[最终文件与步骤](docs/right_angle_racing.md) |
+| 编码器稳速＋视觉微调直道（2026-11-18，02版单次地面2秒正常，主控确认无明显摇摆） | [MDK-ARM/straight_assist.uvprojx](MDK-ARM/straight_assist.uvprojx)，目标StraightAssist，0x02120002／80RPM／2秒；[视觉单文件及步骤](docs/straight_assist.md)、[实测](../testing/2026-11-18_straight_assist/ground_03_capture/review.json) |
 | OLED12864无动力点亮／图样与秒计数（2026-11-10） | [MDK-ARM/oled_bench.uvprojx](MDK-ARM/oled_bench.uvprojx)，目标OledBench；[说明](docs/oled_bench.md)，已编译／下载／0x3C实板持续写帧，主控确认画面完全清晰符合预期 |
 | 低速视觉差速试跑（2026-11-09独立候选，板上／整圈待验） | [MDK-ARM/low_speed_lap.uvprojx](MDK-ARM/low_speed_lap.uvprojx)，3秒LowSpeedLap／场地LowSpeedLapTrack；[步骤与限制](docs/low_speed_lap.md)、[I-02](../project_planning/tasks/I-02-LOW-SPEED-LAP.md) |
 | 比赛直线带载逐档提速／车载KEY确认与绿灯报数（2026-11-01新增，地面待验） | [MDK-ARM/speed_sprint.uvprojx](MDK-ARM/speed_sprint.uvprojx)，目标SpeedSprint；[脱线操作与边界](docs/speed_sprint.md) |

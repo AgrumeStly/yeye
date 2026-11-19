@@ -1,3 +1,9 @@
+# 架构适用性说明
+
+2026-11-19：工程分层及SPL保留；SpeedMatch闭环、LowSpeedLap整合和RightAngle独立目标已有后续实现。当前任务、验收范围与责任按[全局状态](../project_planning/project_status.md)及[协作标准](../project_planning/collaboration_standard.md)。下方六目标／未实现描述为原版本边界，不代表当前全库状态；当前首弯操作以模块首页链接为准。
+
+## 架构原文与历史补充
+
 # 系统架构与软件分层
 
 2026-11-10补充：[独立OledBench](../control/docs/oled_bench.md)已完成显示点亮与主控画面确认；Drivers_Custom/Display负责SPL开漏I²C，App/Diagnostics负责图样，Core独立入口负责零电机输出／启动监督／分页面刷新。未接入运动程序，实板证据见[点亮记录](../testing/2026-11-10_oled_bench/record.md)。

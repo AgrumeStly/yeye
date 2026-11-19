@@ -9,7 +9,7 @@
 | [pinmap.md](pinmap.md) | MCU资源与实物针脚资料入口 |
 | [hardware.md](hardware.md) | 已确认型号、接线、供电和硬件版本入口 |
 | [interfaces.md](interfaces.md) | C模块API索引、调用约束与跨板协议入口 |
-| [tasks.md](tasks.md) | 当前任务、完整任务单和四对话接续入口 |
+| [tasks.md](tasks.md) | 当前任务、统一任务格式和新总管／执行接续入口 |
 | [test-log.md](test-log.md) | 软件验证与实物测试入口及证据层次 |
 
-当前已通过的A/B分步PWM基线为[MotorPwm独立入口](../control/MDK-ARM/motor_pwm.uvprojx)；后续开发从[多目标Keil工程](../control/MDK-ARM/yeye_control.uvprojx)与[C-02D运动接口任务](../project_planning/tasks/C-02D.md)接续，Direct独立入口保留为对照。目录迁移范围及验证见[ORG-02](../project_planning/tasks/ORG-02.md)，人工验收见[本次PWM记录](../testing/2026-10-25_motor_pwm/acceptance_record.md)。
+当前工程任务以[全局状态](../project_planning/project_status.md)和首弯接续为准；旧MotorPwm为历史基础，不能据旧导航重启C-02D。工程分层与迁移来源见[ORG-02](../project_planning/tasks/ORG-02.md)。

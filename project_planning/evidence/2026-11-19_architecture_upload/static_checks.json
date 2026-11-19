@@ -1,0 +1,20 @@
+{
+  "scope": "candidate index",
+  "utf8_failures": [],
+  "conflict_markers": [],
+  "unexpected_staged_paths": [],
+  "retained_content_changes": [],
+  "original_migration_evidence_changes": [],
+  "architecture_missing_links": [],
+  "missing_link_count": 69,
+  "missing_unique_targets": 42,
+  "modified_dependency_link_count": 31,
+  "reused_evidence": "../2026-11-19_task_architecture/validation.json; original report not rerun or rewritten",
+  "status_consistency": {
+    "collaboration_standard": "3.2",
+    "ORG-03": "已验收",
+    "I-04": "进行中，未通过，858ms LINK2 / 200ms",
+    "project_status": "总管转交前快照保留；上传任务最新结果以任务当前区为准"
+  },
+  "firmware_vision_hardware_tests": "not run; outside scope"
+}

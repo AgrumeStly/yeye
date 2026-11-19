@@ -1,0 +1,250 @@
+[
+  {
+    "id": "C-02B-PWM-R4",
+    "path": "project_planning/tasks/C-02B-PWM-R4.md",
+    "stage": "S1",
+    "status": "已验收",
+    "summary": "主控确认A/B分步PWM起转、自动停转和灯态；不含闭环或整圈。",
+    "next": "保留为已验收基础，不重复旧逐轮流程。"
+  },
+  {
+    "id": "C-02C",
+    "path": "project_planning/tasks/C-02C.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "软件及原安装手转标定经旧00采用；10月29日已换位，不能把旧通道当当前映射。",
+    "next": "总管核对历史主控验收范围；当前安装只引用wheel_mapping。"
+  },
+  {
+    "id": "C-02D",
+    "path": "project_planning/tasks/C-02D.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "通用motion接口任务未有整体交付验收；C-02F专项及后续整合不自动满足原API要求。",
+    "next": "总管决定保留的接口缺口是否仍需交付，明确后再分配，不重启旧校准。"
+  },
+  {
+    "id": "C-02E",
+    "path": "project_planning/tasks/C-02E.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "3秒直行修正版软件交付；旧跑偏反馈保留，新版实车走直缺验收。",
+    "next": "总管核对该独立工具是否仍需验收；不因历史操作单自动复测。"
+  },
+  {
+    "id": "C-02F",
+    "path": "project_planning/tasks/C-02F.md",
+    "stage": "S1",
+    "status": "已验收",
+    "summary": "SpeedMatch软件及主控反馈的悬空同速重复初验；不含地面走直。",
+    "next": "复用已确认基础；地面行为以独立直道和当前首弯任务为准。"
+  },
+  {
+    "id": "C-02G",
+    "path": "project_planning/tasks/C-02G.md",
+    "stage": "S3",
+    "status": "待主控验收",
+    "summary": "SpeedSprint软件／模型交付；最高带载同速及地面停车距离待实测。",
+    "next": "等待总管安排提速阶段；不以450RPM软件上限作为实测速度。"
+  },
+  {
+    "id": "C-OLED-01",
+    "path": "project_planning/tasks/C-OLED-01.md",
+    "stage": "S1",
+    "status": "已验收",
+    "summary": "独立OLED软件、实板通信与主控目视画面确认；未集成运动界面。",
+    "next": "保存原证据；运动界面需求若新增，由总管另定成果任务。"
+  },
+  {
+    "id": "G-03",
+    "path": "project_planning/tasks/G-03.md",
+    "stage": "S0",
+    "status": "待核实",
+    "summary": "已有当次版本保存／上传或接续记录；本轮不联网核验，其它设备实际接收与主控验收按原文区分。",
+    "next": "仅作历史版本交接来源；新同步任务需要主控本次明确上传授权。"
+  },
+  {
+    "id": "G-04",
+    "path": "project_planning/tasks/G-04.md",
+    "stage": "S0",
+    "status": "待核实",
+    "summary": "已有当次版本保存／上传或接续记录；本轮不联网核验，其它设备实际接收与主控验收按原文区分。",
+    "next": "仅作历史版本交接来源；新同步任务需要主控本次明确上传授权。"
+  },
+  {
+    "id": "G-05",
+    "path": "project_planning/tasks/G-05.md",
+    "stage": "S0",
+    "status": "待核实",
+    "summary": "已有当次版本保存／上传或接续记录；本轮不联网核验，其它设备实际接收与主控验收按原文区分。",
+    "next": "仅作历史版本交接来源；新同步任务需要主控本次明确上传授权。"
+  },
+  {
+    "id": "G-06",
+    "path": "project_planning/tasks/G-06.md",
+    "stage": "S0",
+    "status": "待核实",
+    "summary": "已有当次版本保存／上传或接续记录；本轮不联网核验，其它设备实际接收与主控验收按原文区分。",
+    "next": "仅作历史版本交接来源；新同步任务需要主控本次明确上传授权。"
+  },
+  {
+    "id": "G-07",
+    "path": "project_planning/tasks/G-07.md",
+    "stage": "S0",
+    "status": "待核实",
+    "summary": "已有当次版本保存／上传或接续记录；本轮不联网核验，其它设备实际接收与主控验收按原文区分。",
+    "next": "仅作历史版本交接来源；新同步任务需要主控本次明确上传授权。"
+  },
+  {
+    "id": "H-03",
+    "path": "project_planning/tasks/H-03.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "原任务为底板资料布局与适配准备；后来最终车型已使用，不证明原装配清单全部签核。",
+    "next": "总管核对当前结构、尺寸重量及本任务交付缺口，避免从采购重新开始。"
+  },
+  {
+    "id": "I-02-LOW-SPEED-LAP",
+    "path": "project_planning/tasks/I-02-LOW-SPEED-LAP.md",
+    "stage": "S2",
+    "status": "进行中",
+    "summary": "原低速一圈链路两次地面未通过；11月12日最后定位左轮NO_FEEDBACK，不等于当前首弯LINK故障。",
+    "next": "总管先核对与I-03直道、I-04首弯的缺口关系，不并行恢复旧实跑。"
+  },
+  {
+    "id": "I-03-STRAIGHT-ASSIST",
+    "path": "project_planning/tasks/I-03-STRAIGHT-ASSIST.md",
+    "stage": "S2",
+    "status": "已验收",
+    "summary": "独立直道80RPM／2秒一次地面实跑，主控反馈无明显摇摆；不含重复性、提速和整圈。",
+    "next": "保留基线，当前推进首弯，不重新下载或复测同一次直道。"
+  },
+  {
+    "id": "I-04-RIGHT-ANGLE",
+    "path": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+    "stage": "S2",
+    "status": "进行中",
+    "summary": "11月18日最后实跑858ms以LINK2／源年龄200ms停止，未进弯；此前PATH故障不能代替本次原因。",
+    "next": "先读取11月19日接续记录，定位日志保存与处理／发送间隔；不放宽新鲜度保护，不先加转向。"
+  },
+  {
+    "id": "ORG-01",
+    "path": "project_planning/tasks/ORG-01.md",
+    "stage": "S0",
+    "status": "已关闭",
+    "summary": "旧四对话协作体系已本地交付；本轮主控明确选择新总管＋成果任务方式，旧方式被替代。",
+    "next": "只供历史溯源；新协作按ORG-03，不再恢复旧00分工。"
+  },
+  {
+    "id": "ORG-02",
+    "path": "project_planning/tasks/ORG-02.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "STM32物理分层和迁移检查已交付；原任务Keil使用体验的明确验收待核对。",
+    "next": "保留工程路径，不重新迁移或重复构建。"
+  },
+  {
+    "id": "REVIEW-20261107",
+    "path": "project_planning/tasks/REVIEW-20261107.md",
+    "stage": "S0",
+    "status": "待核实",
+    "summary": "11月7日资料盘点已保存；是历史阶段判断，不是当前状态或主控验收。",
+    "next": "总管需要历史依据时查阅；不照搬旧下一步。"
+  },
+  {
+    "id": "V-01",
+    "path": "project_planning/tasks/V-01.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "10月25日已有采图归档／固定包任务；后续已推进采集及真实UART，原任务范围的验收未归并。",
+    "next": "总管对照后续视觉及首弯证据处理原缺口，不重建采图程序。"
+  },
+  {
+    "id": "V-02",
+    "path": "project_planning/tasks/V-02.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "离线工具及R1限定修正通过原对话独立审核；独立审核不替代主控明确验收。",
+    "next": "主控可按既有回放验收电脑阶段，无需再次全量重跑。"
+  },
+  {
+    "id": "V-03",
+    "path": "project_planning/tasks/V-03.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "最终安装五姿态15张及静态分析交付；不能推定动态识别通过。",
+    "next": "主控按已有图像与分析确认限定范围，不追加姿态矩阵。"
+  },
+  {
+    "id": "V-04",
+    "path": "project_planning/tasks/V-04.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "板上预览、v2保存下载校验已有证据；旧应用清理等原范围缺口保留。",
+    "next": "总管与主控确认剩余清理是否仍需完成，不自动连接板卡。"
+  },
+  {
+    "id": "V-05",
+    "path": "project_planning/tasks/V-05.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "静态纵向参照及留出距离点交付；不构成全图横向或完整逆透视标定。",
+    "next": "主控验收现有报告；安装变化时另记适用性，不盲目补拍。"
+  },
+  {
+    "id": "V-06",
+    "path": "project_planning/tasks/V-06.md",
+    "stage": "S2",
+    "status": "待主控验收",
+    "summary": "弯道原图、C1/C2/P1及T2电脑候选和两圈回放已交付；T2不直接控制车辆。",
+    "next": "主控按已有视频验收电脑范围；实车首弯继续I-04-RIGHT-ANGLE。"
+  },
+  {
+    "id": "V-07",
+    "path": "project_planning/tasks/V-07.md",
+    "stage": "S4",
+    "status": "待主控验收",
+    "summary": "F1终点观测及时间事件回放交付；虚线消失不证明整车越线，自动停车未验。",
+    "next": "保留观测证据，终点停车整合由总管在S4定义任务。"
+  },
+  {
+    "id": "V-08",
+    "path": "project_planning/tasks/V-08.md",
+    "stage": "S1",
+    "status": "待主控验收",
+    "summary": "BP1诊断子集、封包和电脑互通准备交付；完整移植和板上验收缺口保留。",
+    "next": "总管核对与后续v5链路的差异，不照旧步骤重发20字节包或自动上板。"
+  },
+  {
+    "id": "C-02B-R2",
+    "path": "control/docs/motor_bench_r2_task.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "30%软件交付，后续实测A无动作；不以后来PWM成功改写本版失败。",
+    "next": "只用于历史定位，不重新安排旧单轮试跑。"
+  },
+  {
+    "id": "C-02B-R3",
+    "path": "control/docs/motor_bench_r3_task.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "软件诊断及活动／停止快照有记录，旧版未起转；旧根因未确证。",
+    "next": "保留原始证据，不重启旧诊断矩阵。"
+  },
+  {
+    "id": "I-03-HARDWARE-HANDOFF",
+    "path": "hardware_preparation/i03_handoff.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "旧00验收资料整理；实物签核与主控最终验收仍须区分。",
+    "next": "按现行接线和映射查事实，不再使用简称I-03。"
+  },
+  {
+    "id": "I-05-MOTOR-POWER-DIAGNOSIS",
+    "path": "hardware_preparation/i05_motor_power_diagnosis_task.md",
+    "stage": "S1",
+    "status": "待核实",
+    "summary": "后续I-05有静态测量及持续版记录；旧无动作根因未独立确认，现版A/B已转。",
+    "next": "只在出现新供电异常且证据相关时安排补测，不重启整套定位。"
+  }
+]

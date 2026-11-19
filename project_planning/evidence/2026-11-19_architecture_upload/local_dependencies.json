@@ -1,0 +1,612 @@
+{
+  "note": "逐项列出Markdown链接在候选树中缺失的目标，以及存在旧提交但最新本地修改未上传的链接目标。含历史引用；本次不补传技术内容。内联代码依赖另以initial_state.json及交接说明为准。",
+  "missing_from_candidate_tree": [
+    {
+      "source": "control/README.md",
+      "line": 31,
+      "target": "control/MDK-ARM/right_angle.uvprojx",
+      "local_exists": true
+    },
+    {
+      "source": "control/README.md",
+      "line": 32,
+      "target": "control/MDK-ARM/straight_assist.uvprojx",
+      "local_exists": true
+    },
+    {
+      "source": "control/README.md",
+      "line": 32,
+      "target": "testing/2026-11-18_straight_assist/ground_03_capture/review.json",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 13,
+      "target": "testing/2026-11-18_right_angle/release_r3/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 13,
+      "target": "testing/2026-11-18_right_angle/vision_r3/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 17,
+      "target": "control/MDK-ARM/right_angle.uvprojx",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 17,
+      "target": "testing/2026-11-18_right_angle/release_r2/right_angle.hex",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 18,
+      "target": "testing/2026-11-18_right_angle/release_r3/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 40,
+      "target": "testing/2026-11-18_right_angle/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 9,
+      "target": "control/MDK-ARM/right_angle.uvprojx",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 9,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/right_angle.hex",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 10,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 26,
+      "target": "vision/src/right_angle_racing.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 26,
+      "target": "vision/src/right_angle_route.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 26,
+      "target": "control/Algorithms/Speed/corner_guide.c",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 34,
+      "target": "testing/2026-11-18_right_angle/ground_02_capture/capture.json",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 34,
+      "target": "testing/2026-11-18_right_angle/ground_02_capture/camera/stop_window.json",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 34,
+      "target": "testing/2026-11-18_right_angle/ground_02_repositioned_view/frame.png",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 38,
+      "target": "testing/2026-11-18_right_angle/racing_r4/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 46,
+      "target": "testing/2026-11-18_right_angle/ground_05_stopped_view/frame.jpg",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 48,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/README.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 48,
+      "target": "testing/2026-11-18_right_angle/ground_04_stopped_view/frame.png",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 48,
+      "target": "testing/2026-11-18_right_angle/midturn_r6/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 52,
+      "target": "testing/2026-11-18_right_angle/release_r5/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 52,
+      "target": "testing/2026-11-18_right_angle/wall_r5/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 54,
+      "target": "testing/2026-11-18_right_angle/release_r5_continuous/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 54,
+      "target": "testing/2026-11-18_right_angle/lifecycle_r5/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/straight_assist.md",
+      "line": 9,
+      "target": "testing/2026-11-18_straight_assist/ground_03_capture/review.json",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/straight_assist.md",
+      "line": 11,
+      "target": "testing/2026-11-18_straight_assist/vision_bundle_r2/straight_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/straight_assist.md",
+      "line": 17,
+      "target": "control/MDK-ARM/straight_assist.uvprojx",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/straight_assist.md",
+      "line": 19,
+      "target": "testing/2026-11-18_straight_assist/vision_bundle_r2/straight_preview.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/straight_assist.md",
+      "line": 20,
+      "target": "testing/2026-11-18_straight_assist/vision_bundle_r2/straight_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/straight_assist.md",
+      "line": 74,
+      "target": "testing/2026-11-18_straight_assist/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-03-STRAIGHT-ASSIST.md",
+      "line": 15,
+      "target": "testing/2026-11-18_straight_assist/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-03-STRAIGHT-ASSIST.md",
+      "line": 59,
+      "target": "testing/2026-11-18_straight_assist/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 17,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/README.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 79,
+      "target": "testing/2026-11-18_right_angle/release",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 79,
+      "target": "testing/2026-11-18_right_angle/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 94,
+      "target": "testing/2026-11-18_right_angle/release_r2/right_angle.hex",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 94,
+      "target": "testing/2026-11-18_right_angle/startup_r2/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 100,
+      "target": "testing/2026-11-18_right_angle/live_drive_01/run.json",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 100,
+      "target": "testing/2026-11-18_right_angle/live_drive_01/status.json",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 106,
+      "target": "testing/2026-11-18_right_angle/vision_r3/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 122,
+      "target": "testing/2026-11-18_right_angle/racing_r4/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 132,
+      "target": "testing/2026-11-18_right_angle/wall_r5/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/V-06.md",
+      "line": 147,
+      "target": "testing/2026-11-09_vision_temporal_route_t2/delivery_video/two_lap_temporal_recommended_route.mp4",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/V-07.md",
+      "line": 47,
+      "target": "testing/2026-11-08_vision_finish_f1/release",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/V-08.md",
+      "line": 47,
+      "target": "testing/2026-11-08_vision_board_prep/release/validation.json",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 7,
+      "target": "testing/2026-11-18_right_angle/ground_05_stopped_view/frame.jpg",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 8,
+      "target": "testing/2026-11-18_right_angle/ground_05_direct_photo/result.json",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 10,
+      "target": "testing/2026-11-18_right_angle/ground_05_stopped_view/backend.jsonl",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 14,
+      "target": "testing/2026-11-18_right_angle/ground_05_capture/capture.json",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 24,
+      "target": "testing/2026-11-18_right_angle/ground_05_evidence_fetch/run_0012.jsonl",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 24,
+      "target": "testing/2026-11-18_right_angle/ground_05_evidence_fetch/preservation_review.json",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 26,
+      "target": "testing/2026-11-18_right_angle/ground_05_capture/session_close.json",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 32,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "testing/2026-11-18_right_angle/resume_20261119.md",
+      "line": 32,
+      "target": "testing/2026-11-18_right_angle/midturn_r6/sha256_final.json",
+      "local_exists": true
+    },
+    {
+      "source": "testing/README.md",
+      "line": 7,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/README.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 5,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/README.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 16,
+      "target": "testing/2026-11-18_right_angle/ground_05_stopped_view/frame.jpg",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 18,
+      "target": "testing/2026-11-18_right_angle/release_r6_final/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 18,
+      "target": "testing/2026-11-18_right_angle/midturn_r6/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 20,
+      "target": "testing/2026-11-18_right_angle/release_r5_continuous/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 20,
+      "target": "testing/2026-11-18_right_angle/lifecycle_r5/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 22,
+      "target": "testing/2026-11-18_right_angle/release_r5/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 22,
+      "target": "testing/2026-11-18_right_angle/wall_r5/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 24,
+      "target": "testing/2026-11-18_right_angle/racing_r4/record.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 26,
+      "target": "testing/2026-11-18_right_angle/release/right_angle_drive.py",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 26,
+      "target": "testing/2026-11-18_right_angle/record.md",
+      "local_exists": true
+    }
+  ],
+  "candidate_contains_older_dependency": [
+    {
+      "source": "control/README.md",
+      "line": 9,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/README.md",
+      "line": 23,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/README.md",
+      "line": 84,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle.md",
+      "line": 21,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "control/docs/right_angle_racing.md",
+      "line": 30,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "docs/architecture.md",
+      "line": 17,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_collaboration_standard.md",
+      "line": 52,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 11,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 19,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 27,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 39,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 40,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 60,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 63,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/archive/2026-11-19_project_status.md",
+      "line": 64,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/collaboration_standard.md",
+      "line": 22,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/collaboration_standard.md",
+      "line": 22,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02C.md",
+      "line": 15,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02C.md",
+      "line": 39,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02C.md",
+      "line": 206,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02D.md",
+      "line": 43,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02D.md",
+      "line": 74,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02D.md",
+      "line": 105,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02F.md",
+      "line": 15,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/C-02F.md",
+      "line": 43,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/G-05.md",
+      "line": 15,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/G-05.md",
+      "line": 52,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/G-06.md",
+      "line": 75,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "line": 93,
+      "target": "hardware_preparation/wheel_mapping.md",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 76,
+      "target": "vision/vision.code-workspace",
+      "local_exists": true
+    },
+    {
+      "source": "vision/README.md",
+      "line": 89,
+      "target": "control/docs/protocol_v1_draft.md",
+      "local_exists": true
+    }
+  ],
+  "ignored_environment_dependencies": [
+    "control/build/firmware/right_angle/right_angle.*",
+    "local Keil/debugger configuration",
+    "ignored build/tmp original logs and backups; not enumerated or cleaned"
+  ]
+}
