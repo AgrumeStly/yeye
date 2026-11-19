@@ -1,0 +1,14 @@
+{
+  "branch": "codex/current-version-20261025",
+  "source_commit": "f1f930b063eb4af33473d4a0ccc3f46e44db9b67",
+  "release_sha256": "23c812b040d4b71faa986616ae2cfb3cf1fca3c7090ef99b27b36ddc75d8f96b",
+  "checks": 188,
+  "all_passed": true,
+  "release_manifest_matches_both_checks": true,
+  "board_deployed": false,
+  "board_timing_verified": false,
+  "new_vehicle_run_performed": false,
+  "protocol_unchanged": true,
+  "firmware_bin_sha256": "2fb9d362ac92ae7b8a20e696cfddde6ff7a6435e0648c5f3ca186102efdca5f4",
+  "departure_photo_sha256": "a47550c067fac342e341a5d6031486792b87f6c2a513a3e62fdf28f55ff3e49c"
+}

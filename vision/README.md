@@ -1,10 +1,10 @@
 # 视觉与语音入口
 
-2026-11-19主控明确存储约定：程序保留/sdcard，照片、采样数据和日志写/data，不再把新首弯数据写入程序分区。当前首弯使用[release_r7_storage](../testing/2026-11-18_right_angle/release_r7_storage/README.md)，[数据迁移及接续证据](../testing/2026-11-18_right_angle/storage_migration_record.md)记录现场状态；下方R6及更早发布属于原版本路径，历史原件保留。
+2026-11-19主控明确存储约定：程序保留/sdcard，照片、采样数据和日志写/data。当前新候选为[release_r8_entry](../testing/2026-11-18_right_angle/release_r8_entry/README.md)，188项离线检查通过、尚未部署；[最新接续](../testing/2026-11-18_right_angle/entry_r8_record.md)记录撤离后状态和待验。R7实测及/data迁移原件保留。
 
 2026-11-19接续首弯并完成/data迁移和无动力真实保存检查；识别／转向及v5保护保持原版，主控承担视觉／语音。
 
-- 当前配合[首弯任务](../project_planning/tasks/I-04-RIGHT-ANGLE.md)，视觉R7与STM32首弯12／v5已实际配对；本轮2041ms以PATH3停车，提前转向待修正。[本次实证与撤离接续](../testing/2026-11-18_right_angle/ground_06_record.md)记录最新状态，视觉已停，暂仅离线修正。
+- 当前配合[首弯任务](../project_planning/tasks/I-04-RIGHT-ANGLE.md)，R8已离线修正提前强转；最近真实R7／STM32首弯12的2041ms PATH3失败保留，尚无R8整车通过。视觉已停，主控返回后再核对和复跑。
 - 最后归档为相机已停止；不能把旧“已自动启动”当实时状态。[11月19日接续](../testing/2026-11-18_right_angle/resume_20261119.md)先查LINK新鲜度与日志保存，不沿用前次PATH原因。
 - V-02至V-08保存电脑识别、最终安装采图、距离参照、T2路线、F1终点与BP1诊断的限定证据；它们不自动等于板上整车验收。
 - 语音和全车越线自动停车仍缺完整验收；[阶段与任务索引](../project_planning/project_status.md)为唯一全局入口。

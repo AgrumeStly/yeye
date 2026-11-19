@@ -1,0 +1,27 @@
+{
+  "vision/src/right_angle_racing.py": {
+    "before_sha256": "1bc8460f5595e72163b479308bb8dd7e0118256651dd60d224c421e465e290ff",
+    "after_sha256": "488fd84eb5f2c23714acad624b17baff4895065148eb0c69044b48f04799dbb1",
+    "original_baseline_path": "testing\\2026-11-18_right_angle\\midturn_r6\\source_final\\vision\\src\\right_angle_racing.py"
+  },
+  "vision/src/right_angle_route.py": {
+    "before_sha256": "c050a49a2cd518d1693b0fa945940f6b6a9062ae0d2a100f6720eb5d0c0d4579",
+    "after_sha256": "408a920919571df658c91b13216f2ff1ef7cc92a88fe391a396ee9319d37a924",
+    "original_baseline_path": "testing\\2026-11-18_right_angle\\midturn_r6\\source_final\\vision\\src\\right_angle_route.py"
+  },
+  "vision/src/right_angle_canmv.py": {
+    "before_sha256": "1f86bfa79e0e0a5faaa887adb998d12cf7d9fb3e4db511caceb9f1979b270ddc",
+    "after_sha256": "99d2bebbf08e4398b57df19018090107a9df38f5c360c7240774ccbf0e5dc72b",
+    "original_baseline_path": "testing\\2026-11-18_right_angle\\storage_source_changes\\vision\\src\\right_angle_canmv.py"
+  },
+  "vision/tools/run_right_angle_live.py": {
+    "before_sha256": "4cf66d530fa0d87714cd14d949cd5e68c5e06ba41590f328b3a5e350e2274d41",
+    "after_sha256": "535b277d55029e5df0dae6fd094425ca8ca3e22e73333d59cd3a63bb60461852",
+    "original_baseline_path": "testing\\2026-11-18_right_angle\\storage_source_changes\\vision\\tools\\run_right_angle_live.py"
+  },
+  "vision/tools/check_right_angle.py": {
+    "before_sha256": "05a24ee9d1de0d01c3114057eb19bc367856f7bee14a50bfe243b5d87db691c6",
+    "after_sha256": "872b337f9ef16c9c1381eeef6c1b648ca8211e4fdfa38711092f6e2993531770",
+    "original_baseline_path": "testing\\2026-11-18_right_angle\\midturn_r6\\source_final\\vision\\tools\\check_right_angle.py"
+  }
+}

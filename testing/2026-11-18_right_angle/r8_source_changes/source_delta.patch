@@ -1,0 +1,192 @@
+--- a/vision/src/right_angle_racing.py
++++ b/vision/src/right_angle_racing.py
+@@ -11,36 +11,59 @@
+ RACING_TRACK = 14.0  # 名义控制轮距代理量；未归档实测，不当作硬件尺寸事实。
+ 
+ 
+-def corner_turn_floor(parameters):
+-    """返回已确认右弯进入近区时的最小差速请求，单位千分比，范围0..650。
++def _racing_point(distance, radius, outset):
++    """按连续弧长返回局部路线点(x,z)，坐标及弧长均为投影代理单位。
+ 
+-    仅由调用方在当前L或有效的当前出口边关联下使用，不能单独授予路径许可。
+-    旧版24点纯追踪可能仍落在入弯直线上，近角点时只给100甚至0，车头继续
+-    逼近横边。现在按当前角点纵向距离55..15逐步给300..650，保持向右切弯。
+-    yaw接近-75度时取消此下限，让出口观测接管回正；没有固定时间盲转。
+-    数字都是待实跑的投影代理参数，主板仍限制轮速、PWM和关联700ms期限。
++    distance=0是入弯直线与圆弧的切点；负值在入口直道，正值先走圆弧，
++    超过四分之一圆周后进入出口直道。三个区间位置／切向连续，不按离散
++    点号跳转，也不把相机看到角点等同于车辆已经到达入弯点。
+     """
+-    _, cz, yaw, angle = parameters
+-    if abs(angle-math.pi/2) > 0.01 or cz > 55 or yaw <= -math.radians(75):
+-        return 0
+-    progress = max(0.0, min(1.0, (55-cz)/40))
+-    return int(round(300+350*progress))
++    tangent = outset-radius
++    arc_length = radius*math.pi/2
++    if distance < 0:
++        return -outset, tangent+distance
++    if distance <= arc_length:
++        angle = distance/radius
++        return radius-outset-radius*math.cos(angle), tangent+radius*math.sin(angle)
++    return radius-outset+distance-arc_length, outset
+ 
+ 
+ def racing_route(parameters):
+     """返回当前模型的推荐线、差速请求及圆弧曲率，右正。
+ 
+     parameters=(cx,cz,yaw,angle)来自当前观测模板；先外侧准备，再用圆弧
+-    连接两条路段。对折角用路径参考点最近位置向前24代理单位取纯追踪点，
+-    差速比≈轮距*x/(x²+z²)。无固定转弯时间，也不把角点本身直接设为冲刺目标。
++    连接两条路段。先把车头原点投影到入口直线／圆弧／出口直线，取真正
++    最近点的连续弧长，再前视24代理单位。避免旧离散最近点带来的4单位
++    跳动，更不使用角点纵距55..15强制施加30%..65%右转。
++    返回路线、差速千分比、最近点阶段及距离；差速比≈轮距*x/(x²+z²)。
++    左右符号由当前路线决定；只有调用方已确认的当前路径才能授予许可。
++    不使用KEY后的累计时间，未知角度返回None，几何仍未标定为实际厘米。
+     """
+     cx,cz,yaw,angle = parameters
+     if abs(angle-math.pi/2) > 0.01:
+         return None
+     u=(math.sin(yaw),math.cos(yaw)); n=(u[1],-u[0])
+     radius=RACING_RADIUS; offset=RACING_OUTSET
++    # 车辆原点在入弯道路局部坐标中的位置。比较三段的最近候选，不能仅
++    # 根据角点在相机坐标中的cz判断何时转弯；车头已经偏转时cz尤其不足。
++    qx = -cx*n[0]-cz*n[1]
++    qz = -cx*u[0]-cz*u[1]
++    tangent=offset-radius
++    arc_length=radius*math.pi/2
++    angle_on_arc=max(0.0,min(math.pi/2,math.atan2(qz-tangent,radius-offset-qx)))
++    choices=((min(0.0,qz-tangent),(-offset,min(qz,tangent))),
++             (radius*angle_on_arc,(radius-offset-radius*math.cos(angle_on_arc),
++                                   tangent+radius*math.sin(angle_on_arc))),
++             (arc_length+max(0.0,qx-(radius-offset)),(max(qx,radius-offset),offset)))
++    nearest_distance, _ = min(choices,key=lambda item:(item[1][0]-qx)**2+(item[1][1]-qz)**2)
++    phase='entry' if nearest_distance<0 else ('arc' if nearest_distance<arc_length else 'exit')
++    route=[]
++    for ahead in (8,16,24,32,40,48,56):
++        x,z=_racing_point(nearest_distance+ahead,radius,offset)
++        route.append((cx+x*n[0]+z*u[0],cz+x*n[1]+z*u[1]))
++    # nominal_path仅供现有图示／静态包络检查，控制使用上方连续投影路线。
++    # 保留原名义圆弧，不通过扩大半径或车道假设来掩盖提前转向。
+     local=[]
+-    tangent=offset-radius
+     for along in range(-140,int(tangent),4):
+         local.append((-offset,float(along)))
+     for degree in range(0,91,5):
+@@ -49,19 +72,9 @@
+     for along in range(int(radius-offset)+4,146,4):
+         local.append((float(along),offset))
+     points=[(cx+x*n[0]+z*u[0],cz+x*n[1]+z*u[1]) for x,z in local]
+-    nearest=min(range(len(points)),key=lambda i:points[i][0]**2+points[i][1]**2)
+-    route=[]; wanted=(8,16,24,32,40,48,56); distance=0.0; j=0
+-    for i in range(nearest+1,len(points)):
+-        ax,az=points[i-1];bx,bz=points[i]
+-        step=math.sqrt((bx-ax)**2+(bz-az)**2)
+-        while j<len(wanted) and distance+step>=wanted[j]:
+-            fraction=(wanted[j]-distance)/max(step,0.001)
+-            route.append((ax+(bx-ax)*fraction,az+(bz-az)*fraction));j+=1
+-        distance+=step
+-        if j==len(wanted):break
+-    if len(route)<7:return None
+     x,z=route[2]
+     ratio=RACING_TRACK*x/max(25.0,x*x+z*z)
+     ratio=max(-0.65,min(0.65,ratio))
+     return dict(route=route,nominal_path=points,steering=int(round(ratio*1000)),radius=radius,
+-                outset=offset,lookahead=24,geometry_calibrated=False)
++                outset=offset,lookahead=24,geometry_calibrated=False,phase=phase,
++                projection_s=nearest_distance,entry_distance=max(0.0,-nearest_distance))
+--- a/vision/src/right_angle_route.py
++++ b/vision/src/right_angle_route.py
+@@ -6,7 +6,7 @@
+ 投影仍是候选代理坐标，不能把模板宽度当作实测车体余量。
+ """
+ import math
+-from right_angle_racing import racing_route, corner_turn_floor
++from right_angle_racing import racing_route
+ from right_angle_grid import corner_grid
+ from lite_lap_route import (_threshold, _grid, _pair_anchors, _template,
+                             _anchor_distance, _hypot, _point, _pixel)
+@@ -306,19 +306,19 @@
+             if self.racing is not None:
+                 route = self.racing['route']; steering = self.racing['steering']
+                 out['racing_radius'] = self.racing['radius']; out['racing_outset'] = self.racing['outset']
++                out['racing_phase'] = self.racing['phase']
++                out['arc_entry_distance'] = self.racing['entry_distance']
++                out['route_projection_s'] = self.racing['projection_s']
++                stage = 'approach' if self.racing['phase']=='entry' else ('turn' if self.racing['phase']=='arc' else 'exit')
+         source = 'current_pair' if best_dual else ('current_corner_predicted' if best_corner == 2 else 'current_corner_associated')
+         if not best_dual:
+-            # 当前L确认右弯后，远处先给轻微预置；近处下方按当前几何加强右转。
+-            steering = max(100 if best_corner == 2 else 0,steering)
+-        # 当前双侧也可能同时具备L证据；近区不能继续用外侧准备的左转请求。
+-        # 出口弱关联仍须本帧>=12格、75%命中且最近L<700ms，不能用此下限续租。
+-        # 先确认当前路径再调差速；白图／无支持早已返回，不会按旧方向盲走。
+-        floor = corner_turn_floor(best[4]) if best_corner else 0
+-        if floor:
+-            steering = max(floor, steering)
+-            risk = 1.0
+-            stage = 'turn'
+-        out['turn_floor'] = floor
++            # v5单侧L／弱关联只允许右转或直行，不扩大协议到未经确认的左转。
++            # 推荐点仍在入口直道时不额外给10%右转；真正到达圆弧后，右转量
++            # 由连续路线自然增大。双侧路径保留有符号修正，允许及时回正。
++            steering = max(0,steering)
++        # R7实跑出现100→371及负修正→508的切换，来自距离下限覆盖路线。
++        # R8取消该下限；留0字段便于与旧逐帧证据比较，不以历史L强行续转。
++        out['turn_floor'] = 0
+         out.update(valid=valid, source=source, steering=steering,
+                    bend=int(round(risk*1000)), confidence=75 if best_dual else (60 if best_corner == 2 else 45), stage=stage,
+                    corner_observed=best_corner==2, corner_age_ms=0 if self.corner_at is None else now-self.corner_at,
+--- a/vision/src/right_angle_canmv.py
++++ b/vision/src/right_angle_canmv.py
+@@ -70,7 +70,7 @@
+     try:
+         name, log = _open_log()
+         print('[RIGHT ANGLE LOG]', name, 'ALLOW_DRIVE', ALLOW_DRIVE, 'NO AUTO START')
+-        _write_log(log, json.dumps(dict(event='begin', revision='RIGHT-ANGLE-V5-RACING-7-DATA', allow_drive=ALLOW_DRIVE,
++        _write_log(log, json.dumps(dict(event='begin', revision='RIGHT-ANGLE-V5-RACING-8-ARC', allow_drive=ALLOW_DRIVE,
+                                   duration_ms=DURATION_MS)) + '\n')
+         log.flush()
+         mapping = FPIOA()
+--- a/vision/tools/run_right_angle_live.py
++++ b/vision/tools/run_right_angle_live.py
+@@ -21,7 +21,7 @@
+     args.output.mkdir(parents=True, exist_ok=False)
+     source, manifest = build(True)
+     root = Path(__file__).resolve().parents[2]
+-    reviewed = root/'testing/2026-11-18_right_angle/release_r7_storage/right_angle_drive.py'
++    reviewed = root/'testing/2026-11-18_right_angle/release_r8_entry/right_angle_drive.py'
+     if source.encode('utf-8') != reviewed.read_bytes():
+         raise RuntimeError('current generator differs from reviewed release; no script executed')
+     (args.output/'executed_source.py').write_bytes(source.encode('utf-8'))
+--- a/vision/tools/check_right_angle.py
++++ b/vision/tools/check_right_angle.py
+@@ -100,12 +100,14 @@
+     check('approach_detected', any(row['result']['valid'] and row['result']['stage']=='approach' for row in sequence))
+     singles = [row['result'] for row in sequence if row['result']['valid'] and row['result']['source']=='current_corner_predicted']
+     check('current_corner_single_transition', bool(singles) and all(r['bend']==1000 for r in singles))
+-    check('right_turn_command_seen', bool(singles) and all(r['steering']>=100 for r in singles))
++    # R8取消独立L的10%起步下限，远处入口可以直行；真正的弧段仍须出现右转。
++    check('current_L_direction_and_arc_turn_seen', bool(singles) and all(r['steering']>=0 for r in singles)
++          and any(r['steering']>0 and r.get('racing_phase')=='arc' for r in singles))
+     check('blank_after_corner_revokes', not detector.update(bytes((255,))*76800,1800)['valid'])
+     # 当前左纵＋前横L可独立初始化，不依赖先前双侧或历史路宽。
+     detector = ns['RightAngleRoute']()
+     for t in (0,40,80): r = detector.update(pixels(lap_folder/'data_0116.jpg'),t)
+-    check('current_L_can_initialize', r['valid'] and r['source']=='current_corner_predicted' and r['corner_observed'] and r['steering']>=100, r)
++    check('current_L_can_initialize', r['valid'] and r['source']=='current_corner_predicted' and r['corner_observed'] and r['steering']>=0, r)
+     check('current_L_has_racing_prediction', r['path_kind']=='racing_arc_prediction' and r['racing_radius']==30 and r['racing_outset']==5)
+     detector=ns['RightAngleRoute']()
+     for t in (0,40,80): blind=detector.update(pixels(lap_folder/'data_0126.jpg'),t)
+@@ -148,7 +150,8 @@
+         check('actual_midturn_before_supported',first['valid'] and first['source']=='current_corner_associated',first)
+         check('actual_midturn_coupled_update_supported',second['valid'] and second['source']=='current_corner_associated',second)
+         check('actual_midturn_current_support',second['support'][0]>=12 and second['anchors']==0,second)
+-        check('actual_midturn_continues_right',300<=first['steering']<=650 and 300<=second['steering']<=650,second)
++        # 保留真实弯中右转支持，不再把被撤销的300下限当作验收条件。
++        check('actual_midturn_continues_right',0<first['steering']<=650 and 0<second['steering']<=650,second)
+         check('actual_midturn_does_not_renew_L',detector.corner_at==0 and second['corner_age_ms']==544)
+         check('actual_midturn_within_lease',detector.update(after,640)['valid'])
+         check('actual_midturn_still_bounded',not detector.update(after,700)['valid'])
