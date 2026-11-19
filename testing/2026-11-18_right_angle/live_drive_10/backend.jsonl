@@ -1,0 +1,620 @@
+{"at": 1795096602.4045167, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1795096602.4562974, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1795096602.991328, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1795096602.9914958, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1795096602.9917274, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1795096602.99223, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1795096602.9940486, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1795096602.994153, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1795096602.9942312, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1795096603.4155982, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795096603.415974, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1795096603.4161825, "id": 2, "result": {"running": false}}
+{"at": 1795096603.4162796, "request": {"id": 3, "method": "scriptRunning", "params": {}}}
+{"at": 1795096603.416817, "id": 3, "result": {"running": false}}
+{"at": 1795096603.4171367, "request": {"id": 4, "method": "runScript", "params": {"script_sha256": "23c812b040d4b71faa986616ae2cfb3cf1fca3c7090ef99b27b36ddc75d8f96b"}}}
+{"at": 1795096603.601112, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795096604.6282344, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1795096604.6283617, "id": 4, "result": {"status": "ok"}}
+{"at": 1795096604.6293302, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[RIGHT ANGLE LOG] /data/right_angle_logs/run_0005.jsonl ALLOW_DRIVE True NO AUTO START\r\nfind sensor gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 24, output 1920x1080@60\r\ndeprecated function\r\n"}}
+{"at": 1795096606.4733431, "event": "scriptOutput", "params": {"text": "sensor(0), mode 0, buffer_num 4, buffer_size 0\r\n"}}
+{"at": 1795096607.57558, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096607.8416073, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1795096607.8424492, "id": 5, "result": {"running": true}}
+{"at": 1795096608.5612984, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096609.4384599, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096610.3096836, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096611.0787282, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1795096611.0795467, "id": 6, "result": {"running": true}}
+{"at": 1795096611.188819, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096612.1715267, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096613.0437684, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096613.9078646, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096614.1588807, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1795096614.1599007, "id": 7, "result": {"running": true}}
+{"at": 1795096614.8928685, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 82\r\n"}}
+{"at": 1795096615.7651372, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096616.6417458, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096617.1700287, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1795096617.1707819, "id": 8, "result": {"running": true}}
+{"at": 1795096617.6249604, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096618.4986851, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096619.4761293, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096620.2628715, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1795096620.2636428, "id": 9, "result": {"running": true}}
+{"at": 1795096620.3426297, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096621.214625, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096622.0888784, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096623.0704591, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096623.3334217, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1795096623.3342526, "id": 10, "result": {"running": true}}
+{"at": 1795096623.9367163, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096624.8929775, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096625.7801337, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096626.5717306, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1795096626.5726469, "id": 11, "result": {"running": true}}
+{"at": 1795096626.6493123, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096627.5223124, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096628.500938, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096629.3714786, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096629.6346428, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1795096629.6356819, "id": 12, "result": {"running": true}}
+{"at": 1795096630.2428977, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096631.2256238, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096632.0951867, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096632.8867724, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1795096632.8876412, "id": 13, "result": {"running": true}}
+{"at": 1795096633.0751333, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096633.9452155, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096634.8053327, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096635.7841232, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096636.0479522, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1795096636.0488052, "id": 14, "result": {"running": true}}
+{"at": 1795096636.7631347, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096637.6331117, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096638.5022197, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096639.2910295, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1795096639.292114, "id": 15, "result": {"running": true}}
+{"at": 1795096639.368534, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096640.3359094, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096641.2095404, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096642.0805247, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096642.3444755, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1795096642.3454041, "id": 16, "result": {"running": true}}
+{"at": 1795096643.0581276, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096643.9297912, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096644.7860396, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096645.5816681, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1795096645.5828164, "id": 17, "result": {"running": true}}
+{"at": 1795096645.7698998, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096646.644964, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096647.5119936, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096648.497623, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096648.762766, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1795096648.7637367, "id": 18, "result": {"running": true}}
+{"at": 1795096649.3711643, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096650.2442844, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096651.2255073, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096652.0202932, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1795096652.0212696, "id": 19, "result": {"running": true}}
+{"at": 1795096652.0987973, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096653.0778363, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096653.9542134, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096654.8312047, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096655.095093, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1795096655.09632, "id": 20, "result": {"running": true}}
+{"at": 1795096655.700353, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096656.6833997, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 82\r\n"}}
+{"at": 1795096657.5526114, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096658.3320167, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1795096658.3328795, "id": 21, "result": {"running": true}}
+{"at": 1795096658.4261963, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096659.2968278, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096660.2746117, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096661.1454773, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096661.411233, "request": {"id": 22, "method": "scriptRunning", "params": {}}}
+{"at": 1795096661.4123013, "id": 22, "result": {"running": true}}
+{"at": 1795096662.0177958, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096663.0011654, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096663.8740304, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096664.6488297, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1795096664.649793, "id": 23, "result": {"running": true}}
+{"at": 1795096664.7431395, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096665.7207134, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096666.579547, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096667.4538112, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096667.716731, "request": {"id": 24, "method": "scriptRunning", "params": {}}}
+{"at": 1795096667.7178218, "id": 24, "result": {"running": true}}
+{"at": 1795096668.4318454, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096669.3065524, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 82\r\n"}}
+{"at": 1795096670.180177, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096670.9732833, "request": {"id": 25, "method": "scriptRunning", "params": {}}}
+{"at": 1795096670.9742303, "id": 25, "result": {"running": true}}
+{"at": 1795096671.1620975, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096672.0323207, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096673.0171123, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096673.8917217, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096674.143094, "request": {"id": 26, "method": "scriptRunning", "params": {}}}
+{"at": 1795096674.1438727, "id": 26, "result": {"running": true}}
+{"at": 1795096674.7636929, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096675.636868, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096676.5106428, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096677.2894914, "request": {"id": 27, "method": "scriptRunning", "params": {}}}
+{"at": 1795096677.2903833, "id": 27, "result": {"running": true}}
+{"at": 1795096677.4917037, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096678.3631897, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096679.2380388, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096680.2176533, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096680.4799218, "request": {"id": 28, "method": "scriptRunning", "params": {}}}
+{"at": 1795096680.4808571, "id": 28, "result": {"running": true}}
+{"at": 1795096681.0885513, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096681.9565604, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096682.8278954, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096683.622528, "request": {"id": 29, "method": "scriptRunning", "params": {}}}
+{"at": 1795096683.6232681, "id": 29, "result": {"running": true}}
+{"at": 1795096683.81284, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096684.6838555, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096685.5551262, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096686.535899, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096686.799303, "request": {"id": 30, "method": "scriptRunning", "params": {}}}
+{"at": 1795096686.8000722, "id": 30, "result": {"running": true}}
+{"at": 1795096687.4067702, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096688.2762818, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096689.2601907, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096690.037957, "request": {"id": 31, "method": "scriptRunning", "params": {}}}
+{"at": 1795096690.0387979, "id": 31, "result": {"running": true}}
+{"at": 1795096690.115823, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096691.101217, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096691.9721105, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096692.8413763, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096693.1045387, "request": {"id": 32, "method": "scriptRunning", "params": {}}}
+{"at": 1795096693.105456, "id": 32, "result": {"running": true}}
+{"at": 1795096693.7115424, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096694.6918309, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096695.5582647, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096696.3257792, "request": {"id": 33, "method": "scriptRunning", "params": {}}}
+{"at": 1795096696.326402, "id": 33, "result": {"running": true}}
+{"at": 1795096696.43489, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096697.309982, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096698.2916155, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096699.1635149, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096699.427337, "request": {"id": 34, "method": "scriptRunning", "params": {}}}
+{"at": 1795096699.4282606, "id": 34, "result": {"running": true}}
+{"at": 1795096700.035408, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096701.0154867, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096701.888344, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096702.665767, "request": {"id": 35, "method": "scriptRunning", "params": {}}}
+{"at": 1795096702.666581, "id": 35, "result": {"running": true}}
+{"at": 1795096702.7603755, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096703.7420647, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096704.6122522, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096705.5993211, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096705.86251, "request": {"id": 36, "method": "scriptRunning", "params": {}}}
+{"at": 1795096705.8632205, "id": 36, "result": {"running": true}}
+{"at": 1795096706.4775693, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096707.3412602, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096708.2434957, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096709.035079, "request": {"id": 37, "method": "scriptRunning", "params": {}}}
+{"at": 1795096709.0359504, "id": 37, "result": {"running": true}}
+{"at": 1795096709.1137834, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096710.094007, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096710.9696243, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096711.8407395, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096712.1048517, "request": {"id": 38, "method": "scriptRunning", "params": {}}}
+{"at": 1795096712.105608, "id": 38, "result": {"running": true}}
+{"at": 1795096712.7124674, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 81\r\n"}}
+{"at": 1795096713.6915836, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096714.5625925, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096715.3555892, "request": {"id": 39, "method": "scriptRunning", "params": {}}}
+{"at": 1795096715.356479, "id": 39, "result": {"running": true}}
+{"at": 1795096715.4352536, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096716.4167585, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096717.2838376, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096718.1603162, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096718.4125068, "request": {"id": 40, "method": "scriptRunning", "params": {}}}
+{"at": 1795096718.4136958, "id": 40, "result": {"running": true}}
+{"at": 1795096719.1495402, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096720.020954, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096720.8952274, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096721.4246995, "request": {"id": 41, "method": "scriptRunning", "params": {}}}
+{"at": 1795096721.4254076, "id": 41, "result": {"running": true}}
+{"at": 1795096721.7667308, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 78\r\n"}}
+{"at": 1795096722.7479718, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n"}}
+{"at": 1795096723.6191266, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 74\r\n"}}
+{"at": 1795096724.4922864, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 73\r\n"}}
+{"at": 1795096724.4926338, "request": {"id": 42, "method": "scriptRunning", "params": {}}}
+{"at": 1795096724.493226, "id": 42, "result": {"running": true}}
+{"at": 1795096725.363263, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096726.3444219, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795096727.21502, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096727.730023, "request": {"id": 43, "method": "scriptRunning", "params": {}}}
+{"at": 1795096727.7305481, "id": 43, "result": {"running": true}}
+{"at": 1795096728.0895658, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 68\r\n"}}
+{"at": 1795096728.8548648, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 46\r\n"}}
+{"at": 1795096729.6176782, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096730.3805501, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096730.9081333, "request": {"id": 44, "method": "scriptRunning", "params": {}}}
+{"at": 1795096730.9090343, "id": 44, "result": {"running": true}}
+{"at": 1795096731.2526894, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096732.0171008, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 70\r\n"}}
+{"at": 1795096732.8853707, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096733.7552288, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096734.006933, "request": {"id": 45, "method": "scriptRunning", "params": {}}}
+{"at": 1795096734.0077035, "id": 45, "result": {"running": true}}
+{"at": 1795096734.5216203, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096735.28576, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 74\r\n"}}
+{"at": 1795096735.9375663, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 42\r\n"}}
+{"at": 1795096736.4777021, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 44\r\n"}}
+{"at": 1795096737.1366627, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096737.1368694, "request": {"id": 46, "method": "scriptRunning", "params": {}}}
+{"at": 1795096737.1372356, "id": 46, "result": {"running": true}}
+{"at": 1795096737.8983927, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 67\r\n"}}
+{"at": 1795096738.875918, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_01\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 68\r\n"}}
+{"at": 1795096739.6397505, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 70\r\n"}}
+{"at": 1795096740.1660242, "request": {"id": 47, "method": "scriptRunning", "params": {}}}
+{"at": 1795096740.1668484, "id": 47, "result": {"running": true}}
+{"at": 1795096740.5076146, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 68\r\n"}}
+{"at": 1795096741.2711587, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 44\r\n"}}
+{"at": 1795096742.1457925, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 71\r\n"}}
+{"at": 1795096742.8017511, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 41\r\n"}}
+{"at": 1795096743.3172858, "request": {"id": 48, "method": "scriptRunning", "params": {}}}
+{"at": 1795096743.3182364, "id": 48, "result": {"running": true}}
+{"at": 1795096743.5684378, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 70\r\n"}}
+{"at": 1795096744.3296394, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 76\r\n"}}
+{"at": 1795096745.091878, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 42\r\n"}}
+{"at": 1795096745.747932, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 69\r\n"}}
+{"at": 1795096746.405204, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795096746.4055393, "request": {"id": 49, "method": "scriptRunning", "params": {}}}
+{"at": 1795096746.4061801, "id": 49, "result": {"running": true}}
+{"at": 1795096747.1701002, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096747.6075063, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096748.046379, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096748.574126, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096749.012315, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096749.4480834, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096749.448464, "request": {"id": 50, "method": "scriptRunning", "params": {}}}
+{"at": 1795096749.4490867, "id": 50, "result": {"running": true}}
+{"at": 1795096749.8855734, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 33\r\n"}}
+{"at": 1795096750.321907, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096750.7588196, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096751.1935732, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096751.7384665, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 29\r\n"}}
+{"at": 1795096752.1773534, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096752.6146617, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096752.6151032, "request": {"id": 51, "method": "scriptRunning", "params": {}}}
+{"at": 1795096752.615609, "id": 51, "result": {"running": true}}
+{"at": 1795096753.0521886, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096753.6010911, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096754.039139, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096754.4671655, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 29\r\n"}}
+{"at": 1795096755.018615, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096755.4562504, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096755.7214859, "request": {"id": 52, "method": "scriptRunning", "params": {}}}
+{"at": 1795096755.7224333, "id": 52, "result": {"running": true}}
+{"at": 1795096755.8936799, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096756.32732, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096756.7663505, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096757.2031713, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096757.6421046, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096758.186635, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096758.6263611, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096758.8914883, "request": {"id": 53, "method": "scriptRunning", "params": {}}}
+{"at": 1795096758.892276, "id": 53, "result": {"running": true}}
+{"at": 1795096759.0616007, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 31\r\n"}}
+{"at": 1795096759.499534, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 32\r\n"}}
+{"at": 1795096759.9332845, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 30\r\n"}}
+{"at": 1795096760.574268, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 68\r\n"}}
+{"at": 1795096761.0126011, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -188 valid True ms 69\r\n"}}
+{"at": 1795096761.6676016, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_02\r\n"}}
+{"at": 1795096761.8875415, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 44\r\n"}}
+{"at": 1795096762.15349, "request": {"id": 54, "method": "scriptRunning", "params": {}}}
+{"at": 1795096762.154283, "id": 54, "result": {"running": true}}
+{"at": 1795096762.8686512, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -457 valid True ms 89\r\n"}}
+{"at": 1795096763.4154665, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_03\r\n"}}
+{"at": 1795096764.073764, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] stabilizing stage turn err 567 valid False ms 56\r\n"}}
+{"at": 1795096764.953798, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_04\r\n"}}
+{"at": 1795096765.1720614, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 90\r\n"}}
+{"at": 1795096765.1724136, "request": {"id": 55, "method": "scriptRunning", "params": {}}}
+{"at": 1795096765.1754715, "id": 55, "result": {"running": true}}
+{"at": 1795096766.1484666, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 90\r\n"}}
+{"at": 1795096767.2332506, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 79\r\n"}}
+{"at": 1795096768.2781253, "request": {"id": 56, "method": "scriptRunning", "params": {}}}
+{"at": 1795096768.279056, "id": 56, "result": {"running": true}}
+{"at": 1795096768.324606, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 87\r\n"}}
+{"at": 1795096769.310721, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] stabilizing stage approach err 203 valid False ms 96\r\n"}}
+{"at": 1795096769.8528094, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_05\r\n"}}
+{"at": 1795096770.5084736, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] stabilizing stage approach err -432 valid False ms 83\r\n"}}
+{"at": 1795096771.054387, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_06\r\n"}}
+{"at": 1795096771.3195248, "request": {"id": 57, "method": "scriptRunning", "params": {}}}
+{"at": 1795096771.3204932, "id": 57, "result": {"running": true}}
+{"at": 1795096771.6015215, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -257 valid True ms 92\r\n"}}
+{"at": 1795096772.1444383, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_07\r\n"}}
+{"at": 1795096772.6908467, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096773.0198498, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /data/right_angle_logs/run_0005_loss_08\r\n"}}
+{"at": 1795096773.7826102, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -175 valid True ms 92\r\n"}}
+{"at": 1795096774.5630827, "request": {"id": 58, "method": "scriptRunning", "params": {}}}
+{"at": 1795096774.5662715, "id": 58, "result": {"running": true}}
+{"at": 1795096774.6569242, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096775.528235, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 89\r\n"}}
+{"at": 1795096776.1864429, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096776.8434706, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096777.3864481, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 43\r\n"}}
+{"at": 1795096777.6502626, "request": {"id": 59, "method": "scriptRunning", "params": {}}}
+{"at": 1795096777.65117, "id": 59, "result": {"running": true}}
+{"at": 1795096777.932059, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096778.467972, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096779.1313128, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096779.6770952, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096780.2234244, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096780.751723, "request": {"id": 60, "method": "scriptRunning", "params": {}}}
+{"at": 1795096780.752388, "id": 60, "result": {"running": true}}
+{"at": 1795096780.7675958, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 43\r\n"}}
+{"at": 1795096781.3119462, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096781.8595235, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096782.4059145, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096782.9518323, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096783.498837, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096783.764442, "request": {"id": 61, "method": "scriptRunning", "params": {}}}
+{"at": 1795096783.765297, "id": 61, "result": {"running": true}}
+{"at": 1795096784.0447044, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096784.5750268, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096785.1190584, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096785.6633422, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096786.2067463, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096786.7521334, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096787.0134113, "request": {"id": 62, "method": "scriptRunning", "params": {}}}
+{"at": 1795096787.0140605, "id": 62, "result": {"running": true}}
+{"at": 1795096787.2933378, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096787.9477637, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096788.4940734, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096789.0447826, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096789.6979043, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096790.2282698, "request": {"id": 63, "method": "scriptRunning", "params": {}}}
+{"at": 1795096790.2289596, "id": 63, "result": {"running": true}}
+{"at": 1795096790.245076, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096790.7928002, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096791.4469888, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096791.9942243, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096792.5409586, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096793.0878196, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096793.3507454, "request": {"id": 64, "method": "scriptRunning", "params": {}}}
+{"at": 1795096793.351541, "id": 64, "result": {"running": true}}
+{"at": 1795096793.7386875, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 38\r\n"}}
+{"at": 1795096794.286153, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096794.8312583, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096795.3748872, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096795.9153066, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096796.4308784, "request": {"id": 65, "method": "scriptRunning", "params": {}}}
+{"at": 1795096796.4316182, "id": 65, "result": {"running": true}}
+{"at": 1795096796.4630198, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096797.005537, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096797.5529127, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096798.2054095, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096798.7504938, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096799.2955754, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096799.5588071, "request": {"id": 66, "method": "scriptRunning", "params": {}}}
+{"at": 1795096799.559626, "id": 66, "result": {"running": true}}
+{"at": 1795096799.8420813, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096800.3856642, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096800.9308631, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096801.5851972, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096802.1312485, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096802.6590106, "request": {"id": 67, "method": "scriptRunning", "params": {}}}
+{"at": 1795096802.6600301, "id": 67, "result": {"running": true}}
+{"at": 1795096802.674651, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096803.2176542, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096803.7629533, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096804.309686, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096804.9647815, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096805.5080345, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096805.770495, "request": {"id": 68, "method": "scriptRunning", "params": {}}}
+{"at": 1795096805.7714, "id": 68, "result": {"running": true}}
+{"at": 1795096806.0527437, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096806.5962658, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096807.1424737, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 40\r\n"}}
+{"at": 1795096807.690299, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096808.2389627, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096808.8929272, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 39\r\n"}}
+{"at": 1795096808.893326, "request": {"id": 69, "method": "scriptRunning", "params": {}}}
+{"at": 1795096808.8938882, "id": 69, "result": {"running": true}}
+{"at": 1795096809.439559, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096809.9831176, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 42\r\n"}}
+{"at": 1795096810.5272465, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 41\r\n"}}
+{"at": 1795096811.297002, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -48 valid True ms 87\r\n"}}
+{"at": 1795096812.0593305, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096812.0597825, "request": {"id": 70, "method": "scriptRunning", "params": {}}}
+{"at": 1795096812.0604143, "id": 70, "result": {"running": true}}
+{"at": 1795096812.6044102, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096813.1502707, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096813.6957188, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096814.2445781, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n"}}
+{"at": 1795096814.7964854, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096815.324871, "request": {"id": 71, "method": "scriptRunning", "params": {}}}
+{"at": 1795096815.325668, "id": 71, "result": {"running": true}}
+{"at": 1795096815.452111, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096815.994522, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096816.5387874, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096817.0837653, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096817.6303704, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096818.177356, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096818.4404778, "request": {"id": 72, "method": "scriptRunning", "params": {}}}
+{"at": 1795096818.441378, "id": 72, "result": {"running": true}}
+{"at": 1795096818.7221622, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096819.3820364, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096819.927304, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096820.4691474, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096821.1234593, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096821.6513624, "request": {"id": 73, "method": "scriptRunning", "params": {}}}
+{"at": 1795096821.6519995, "id": 73, "result": {"running": true}}
+{"at": 1795096821.7759562, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096822.3232384, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096822.8701177, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096823.4180436, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096823.9656043, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096824.5130882, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096824.7787867, "request": {"id": 74, "method": "scriptRunning", "params": {}}}
+{"at": 1795096824.7796216, "id": 74, "result": {"running": true}}
+{"at": 1795096825.0624704, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n"}}
+{"at": 1795096825.6072206, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096826.15704, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096826.81449, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096827.3600879, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096827.8751504, "request": {"id": 75, "method": "scriptRunning", "params": {}}}
+{"at": 1795096827.8758967, "id": 75, "result": {"running": true}}
+{"at": 1795096827.9067292, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096828.4485168, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096828.9950662, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096829.5411732, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096830.0856285, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096830.6309986, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096830.892939, "request": {"id": 76, "method": "scriptRunning", "params": {}}}
+{"at": 1795096830.8938603, "id": 76, "result": {"running": true}}
+{"at": 1795096831.1757288, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096831.720683, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096832.2668834, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096832.9064171, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096833.4531622, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096833.968778, "request": {"id": 77, "method": "scriptRunning", "params": {}}}
+{"at": 1795096833.9694448, "id": 77, "result": {"running": true}}
+{"at": 1795096834.0003936, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096834.544979, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096835.0890725, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n"}}
+{"at": 1795096835.6379745, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096836.181775, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096836.7302778, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096836.9953907, "request": {"id": 78, "method": "scriptRunning", "params": {}}}
+{"at": 1795096836.9962153, "id": 78, "result": {"running": true}}
+{"at": 1795096837.2757533, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096837.9275086, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096838.4657915, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096839.0033126, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096839.5529568, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096840.0681026, "request": {"id": 79, "method": "scriptRunning", "params": {}}}
+{"at": 1795096840.0689516, "id": 79, "result": {"running": true}}
+{"at": 1795096840.0997033, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096840.642608, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096841.297357, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096841.843574, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096842.3897734, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096842.9331596, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096843.1839864, "request": {"id": 80, "method": "scriptRunning", "params": {}}}
+{"at": 1795096843.1847162, "id": 80, "result": {"running": true}}
+{"at": 1795096843.4757833, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096844.0294428, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096844.572605, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096845.1177723, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n"}}
+{"at": 1795096845.665386, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n"}}
+{"at": 1795096846.1926248, "request": {"id": 81, "method": "scriptRunning", "params": {}}}
+{"at": 1795096846.1935668, "id": 81, "result": {"running": true}}
+{"at": 1795096846.2085724, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n"}}
+{"at": 1795096846.8603213, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 80\r\n"}}
+{"at": 1795096847.733717, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096848.2772715, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096848.8259032, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096849.3401086, "request": {"id": 82, "method": "scriptRunning", "params": {}}}
+{"at": 1795096849.3422105, "id": 82, "result": {"running": true}}
+{"at": 1795096849.3711762, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096850.0098076, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096850.5525248, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096851.2055485, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096851.7520385, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096852.296051, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096852.5592942, "request": {"id": 83, "method": "scriptRunning", "params": {}}}
+{"at": 1795096852.5602663, "id": 83, "result": {"running": true}}
+{"at": 1795096852.9513364, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096853.500128, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096854.0444028, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096854.6849911, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096855.3377707, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096855.6033194, "request": {"id": 84, "method": "scriptRunning", "params": {}}}
+{"at": 1795096855.603812, "id": 84, "result": {"running": true}}
+{"at": 1795096855.883858, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096856.4289324, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096856.9748619, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096857.6269143, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096858.172426, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096858.6977937, "request": {"id": 85, "method": "scriptRunning", "params": {}}}
+{"at": 1795096858.698598, "id": 85, "result": {"running": true}}
+{"at": 1795096858.8202698, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096859.3666186, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096860.0065944, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096860.54725, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096861.0905027, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096861.7503726, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096861.7508073, "request": {"id": 86, "method": "scriptRunning", "params": {}}}
+{"at": 1795096861.7524352, "id": 86, "result": {"running": true}}
+{"at": 1795096862.298639, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096862.9519694, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096863.4983435, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096864.0451586, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096864.588814, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096864.853622, "request": {"id": 87, "method": "scriptRunning", "params": {}}}
+{"at": 1795096864.8544827, "id": 87, "result": {"running": true}}
+{"at": 1795096865.246748, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096865.7922194, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096866.4484208, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096866.9928482, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096867.5446765, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096868.0745356, "request": {"id": 88, "method": "scriptRunning", "params": {}}}
+{"at": 1795096868.0752244, "id": 88, "result": {"running": true}}
+{"at": 1795096868.1990404, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096868.745645, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096869.3993306, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096869.9458766, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096870.493896, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096871.1415315, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096871.1419048, "request": {"id": 89, "method": "scriptRunning", "params": {}}}
+{"at": 1795096871.1427026, "id": 89, "result": {"running": true}}
+{"at": 1795096871.6879952, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096872.232539, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096872.894201, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 47\r\n"}}
+{"at": 1795096873.4391544, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096873.9862468, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096874.251662, "request": {"id": 90, "method": "scriptRunning", "params": {}}}
+{"at": 1795096874.2522702, "id": 90, "result": {"running": true}}
+{"at": 1795096874.6441262, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096875.1869526, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096875.7318668, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 46\r\n"}}
+{"at": 1795096876.3863795, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096877.0425136, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096877.3066688, "request": {"id": 91, "method": "scriptRunning", "params": {}}}
+{"at": 1795096877.307518, "id": 91, "result": {"running": true}}
+{"at": 1795096877.5710757, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096878.1201248, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096878.7794588, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096879.3279288, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096879.8728673, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096880.4007134, "request": {"id": 92, "method": "scriptRunning", "params": {}}}
+{"at": 1795096880.4016051, "id": 92, "result": {"running": true}}
+{"at": 1795096880.5248406, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096881.0650852, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n"}}
+{"at": 1795096881.608118, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096882.2644083, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096882.80949, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096883.463628, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096883.4640896, "request": {"id": 93, "method": "scriptRunning", "params": {}}}
+{"at": 1795096883.464687, "id": 93, "result": {"running": true}}
+{"at": 1795096884.0099, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096884.6642585, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096885.2093644, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096885.7536464, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096886.3031712, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 45\r\n"}}
+{"at": 1795096886.5674155, "request": {"id": 94, "method": "scriptRunning", "params": {}}}
+{"at": 1795096886.5681572, "id": 94, "result": {"running": true}}
+{"at": 1795096886.9570255, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 44\r\n"}}
+{"at": 1795096887.502309, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096888.155236, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 43\r\n"}}
+{"at": 1795096888.6993804, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096889.4650064, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 93\r\n"}}
+{"at": 1795096889.7287774, "request": {"id": 95, "method": "scriptRunning", "params": {}}}
+{"at": 1795096889.7295406, "id": 95, "result": {"running": true}}
+{"at": 1795096890.3357909, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -165 valid True ms 92\r\n"}}
+{"at": 1795096891.2045379, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n"}}
+{"at": 1795096891.4686146, "request": {"id": 96, "method": "stopScript", "params": {}}}
+{"at": 1795096892.386781, "event": "scriptOutput", "params": {"text": "deprecated function\r\nTraceback (most recent call last):\r\n  File \"<stdin>\", line 1089, in <module>\r\n  File \"<stdin>\", line 1011, in main\r\n  File \"<stdin>\", line 795, in update\r\n  File \"<stdin>\", line 665, in evaluate\r\n  File \"<stdin>\", line 596, in _current_anchor_distance\r\nException: IDE interrupt\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795096892.3869994, "id": 96, "result": {}}
+{"at": 1795096892.3870478, "request": {"id": 97, "method": "scriptRunning", "params": {}}}
+{"at": 1795096892.3875933, "id": 97, "result": {"running": false}}
+{"at": 1795096892.3877368, "request": {"id": 98, "method": "disconnectBoard", "params": {}}}
+{"at": 1795096892.8387296, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795096892.8393347, "id": 98, "result": {}}

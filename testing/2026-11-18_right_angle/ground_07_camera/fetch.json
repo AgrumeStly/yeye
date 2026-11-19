@@ -1,0 +1,167 @@
+{
+  "files": [
+    {
+      "remote": "/data/right_angle_logs/run_0005.jsonl",
+      "bytes": 3188034,
+      "sha256": "a7a2e25b2ee6bcc01a5f0fc9f8fdacaa4472cdb654bbdbd7dc95092382e2a91b"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_01_before.pgm",
+      "bytes": 76815,
+      "sha256": "0c896d31149cefba61218ce580387146468ee1dc9a9095d2d90bd47f5a3dc826"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_01_after.pgm",
+      "bytes": 76815,
+      "sha256": "075ce973fc0107fdaa0a489684feb22263d229bce2656414fe622e68b5af69a5"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_02_before.pgm",
+      "bytes": 76815,
+      "sha256": "cad10f4bf0f0b2eb9632d3d5a4c63cf44a91fa5f629872a5f8228fc774f7ffa9"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_02_after.pgm",
+      "bytes": 76815,
+      "sha256": "1d835da2df023d6547d36534673055bde2f10a36088ff802c936bbc576939970"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_03_before.pgm",
+      "bytes": 76815,
+      "sha256": "c1eeab9a492cff6e7c1846332560b7365950db7fd15f13de33fefac9ba3c048c"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_03_after.pgm",
+      "bytes": 76815,
+      "sha256": "0cba5bcaaf00d34f596b2a29f20b4d8acc518d66016bba1fbf946f297824d92c"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_04_before.pgm",
+      "bytes": 76815,
+      "sha256": "d666f8bbce5bd7a011c8420466ddaf0dd3c7619a726a465948e7daf14a10de3c"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_04_after.pgm",
+      "bytes": 76815,
+      "sha256": "fb34360c73d403298072f2ee212b17ec94a019883cc695c0a93754f0e464f5ea"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_05_before.pgm",
+      "bytes": 76815,
+      "sha256": "726f82b44840b81c602da799a692c4ae09f82a5e555149ad8068dc96230d7ed1"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_05_after.pgm",
+      "bytes": 76815,
+      "sha256": "6ca016633f81d230fa25ea09058132b6bf1ae40668a3094e880a1328b22a9e13"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_06_before.pgm",
+      "bytes": 76815,
+      "sha256": "99320d437ca2394afd5ebb07ef6791b1951d7346b9a3a2e03340a38074bead6e"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_06_after.pgm",
+      "bytes": 76815,
+      "sha256": "eb285a828c0acf1edd62bc0ee7806413acb0ec8d7801cc8f990819a96fe087bf"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_07_before.pgm",
+      "bytes": 76815,
+      "sha256": "c6601079c38b639615341ec136d2d14ce8f83cfebfb2112acd2f20e96cf8e230"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_07_after.pgm",
+      "bytes": 76815,
+      "sha256": "02559292db5e5dc131926ada2cf27d37bf1fcbb53ef50002158d1d23421ef86b"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_08_before.pgm",
+      "bytes": 76815,
+      "sha256": "06211aed176694e2e9ca799091e4b9eb864434b81d7bfbd8cc0fc227dcdc1078"
+    },
+    {
+      "remote": "/data/right_angle_logs/run_0005_loss_08_after.pgm",
+      "bytes": 76815,
+      "sha256": "c809d03851c026534de8bb7571894689e84543ac086de497fe3b5d95a88a1553"
+    }
+  ],
+  "no_start": true,
+  "no_camera_run": true,
+  "no_board_write": true,
+  "loss_events": [
+    {
+      "after_index": 1480,
+      "event": "path_lost",
+      "after_sequence": 199,
+      "reason": "no_current_pair",
+      "before_sequence": 198,
+      "prefix": "/data/right_angle_logs/run_0005_loss_01",
+      "before_index": 1479
+    },
+    {
+      "after_index": 1896,
+      "event": "path_lost",
+      "after_sequence": 103,
+      "reason": "no_current_pair",
+      "before_sequence": 102,
+      "prefix": "/data/right_angle_logs/run_0005_loss_02",
+      "before_index": 1895
+    },
+    {
+      "after_index": 1914,
+      "event": "path_lost",
+      "after_sequence": 121,
+      "reason": "no_current_pair",
+      "before_sequence": 120,
+      "prefix": "/data/right_angle_logs/run_0005_loss_03",
+      "before_index": 1913
+    },
+    {
+      "after_index": 1928,
+      "event": "path_lost",
+      "after_sequence": 135,
+      "reason": "no_current_pair",
+      "before_sequence": 134,
+      "prefix": "/data/right_angle_logs/run_0005_loss_04",
+      "before_index": 1927
+    },
+    {
+      "after_index": 1972,
+      "event": "path_lost",
+      "after_sequence": 179,
+      "reason": "no_current_pair",
+      "before_sequence": 178,
+      "prefix": "/data/right_angle_logs/run_0005_loss_05",
+      "before_index": 1971
+    },
+    {
+      "after_index": 1984,
+      "event": "path_lost",
+      "after_sequence": 191,
+      "reason": "no_current_pair",
+      "before_sequence": 190,
+      "prefix": "/data/right_angle_logs/run_0005_loss_06",
+      "before_index": 1983
+    },
+    {
+      "after_index": 1994,
+      "event": "path_lost",
+      "after_sequence": 201,
+      "reason": "ready",
+      "before_sequence": 200,
+      "prefix": "/data/right_angle_logs/run_0005_loss_07",
+      "before_index": 1993
+    },
+    {
+      "after_index": 2001,
+      "event": "path_lost",
+      "after_sequence": 208,
+      "reason": "ready",
+      "before_sequence": 207,
+      "prefix": "/data/right_angle_logs/run_0005_loss_08",
+      "before_index": 2000
+    }
+  ],
+  "completed": true
+}

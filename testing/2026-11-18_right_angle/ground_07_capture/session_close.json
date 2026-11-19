@@ -1,0 +1,19 @@
+{
+  "saved_at_unix": 1795097173.6436555,
+  "camera_running": false,
+  "stm32_reset_by_agent": false,
+  "motor_start_by_agent": false,
+  "ground_runs": 1,
+  "elapsed_ms": 499,
+  "reason": 2,
+  "last_read_pwm": [
+    0,
+    0
+  ],
+  "stopped_view": {
+    "file": "ground_07_stopped_view\\frame.pgm",
+    "sha256": "0f1108d4d2b8f7dd8006c0562ee9c033e47aeed23e2011b018ead366515df10f",
+    "trigger_exposure": false
+  },
+  "next_action": "Correct blocking logging before a separately resumed trial; no repeat run scheduled"
+}

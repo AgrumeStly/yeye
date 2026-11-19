@@ -1,0 +1,294 @@
+{
+  "user_report": "这一次走一点就停下了，然后绿灯快闪",
+  "actual_revision": "0x2120012",
+  "last_run": {
+    "valid": 1,
+    "elapsed_ms": 499,
+    "reason": 2,
+    "left_target": 67.18399810791016,
+    "right_target": 84.81599426269531,
+    "left_rpm": 83.95201110839844,
+    "right_rpm": 94.51192474365234,
+    "left_pwm": 242,
+    "right_pwm": 401,
+    "left_boost_samples": 1,
+    "right_boost_samples": 1
+  },
+  "frozen_trace_summary": {
+    "total_samples": 25,
+    "frozen": 1,
+    "stop_at_ms": 109631,
+    "stop_reason": 2,
+    "left_channel": 1,
+    "right_channel": 2,
+    "left_sign": 1,
+    "right_sign": -1
+  },
+  "wire_errors": {
+    "overrun": 0,
+    "noise": 0,
+    "frame": 0,
+    "parity": 0,
+    "ring_full": 0,
+    "first_mask": 0,
+    "last_mask": 0,
+    "first_at_ms": 0,
+    "last_at_ms": 0,
+    "isr_max_cycles": 196
+  },
+  "json_lines": 4045,
+  "frames": 4036,
+  "repeated_sequence_candidates": [
+    {
+      "index": 2777,
+      "all_packet_fields_match": true,
+      "offsets_ms": [
+        -101884,
+        -101893,
+        -101909,
+        -101908,
+        -101910,
+        -101913,
+        -101909,
+        -101912
+      ],
+      "offset_range_ms": 29
+    },
+    {
+      "index": 3033,
+      "all_packet_fields_match": true,
+      "offsets_ms": [
+        -116355,
+        -116353,
+        -116355,
+        -116352,
+        -116351,
+        -116369,
+        -116367,
+        -116366
+      ],
+      "offset_range_ms": 18
+    },
+    {
+      "index": 3289,
+      "all_packet_fields_match": true,
+      "offsets_ms": [
+        -130625,
+        -130625,
+        -130626,
+        -130626,
+        -130626,
+        -130627,
+        -130627,
+        -130628
+      ],
+      "offset_range_ms": 3
+    },
+    {
+      "index": 3545,
+      "all_packet_fields_match": false,
+      "offsets_ms": [
+        -145914,
+        -145914,
+        -145917,
+        -145930,
+        -145936,
+        -145941,
+        -145941,
+        -145945
+      ],
+      "offset_range_ms": 31
+    },
+    {
+      "index": 3801,
+      "all_packet_fields_match": false,
+      "offsets_ms": [
+        -160923,
+        -160925,
+        -160930,
+        -160931,
+        -160938,
+        -160940,
+        -160941,
+        -160956
+      ],
+      "offset_range_ms": 33
+    }
+  ],
+  "matched_last_frame": {
+    "profile_ms": {
+      "search": 11,
+      "grid": 25,
+      "anchors": 1
+    },
+    "send_interval_ms": 52,
+    "stage": "approach",
+    "arc_entry_distance": 51.0,
+    "processing_ms": 38,
+    "bend": 200,
+    "wire_valid": true,
+    "valid": true,
+    "route_projection_s": -51.0,
+    "corner_observed": false,
+    "path_kind": "racing_arc_prediction",
+    "parameters": [
+      0.0,
+      76.0,
+      0.0,
+      1.570796
+    ],
+    "previous_gc_ms": 6,
+    "reason": "ready",
+    "evidence_ms": 1,
+    "confidence": 75,
+    "racing_radius": 30.0,
+    "racing_phase": "entry",
+    "support": [
+      12,
+      11
+    ],
+    "index": 3289,
+    "recovery_candidates": 0,
+    "source": "current_pair",
+    "geometry_calibrated": false,
+    "measured_edges": "pair",
+    "racing_outset": 5.0,
+    "score": 2.77214,
+    "anchors": 11,
+    "turn_floor": 0,
+    "previous_log_ms": 4,
+    "interval_ms": 52,
+    "corner_age_ms": 0,
+    "steering": -116,
+    "search_mode": "tracking",
+    "acquire_ms": 0,
+    "path_sequence": 216,
+    "elapsed_ms": 240059,
+    "to_send_ms": 40,
+    "path_visibility": "projected",
+    "searched_candidates": 46
+  },
+  "next_frame": {
+    "profile_ms": {
+      "search": 50,
+      "grid": 25,
+      "anchors": 1
+    },
+    "send_interval_ms": 164,
+    "stage": "approach",
+    "route_projection_s": -47.0,
+    "processing_ms": 77,
+    "bend": 289,
+    "route": [
+      [
+        -5.0,
+        8.0
+      ],
+      [
+        -5.0,
+        16.0
+      ],
+      [
+        -5.0,
+        24.0
+      ],
+      [
+        -5.0,
+        32.0
+      ],
+      [
+        -5.0,
+        40.0
+      ],
+      [
+        -4.983334,
+        47.99982
+      ],
+      [
+        -3.660095,
+        55.86561
+      ]
+    ],
+    "valid": true,
+    "wire_valid": true,
+    "arc_entry_distance": 47.0,
+    "path_kind": "racing_arc_prediction",
+    "corner_observed": false,
+    "parameters": [
+      0.0,
+      72.0,
+      0.0,
+      1.570796
+    ],
+    "previous_gc_ms": 5,
+    "reason": "ready",
+    "confidence": 75,
+    "evidence_ms": 3,
+    "racing_radius": 30.0,
+    "racing_phase": "entry",
+    "support": [
+      13,
+      11
+    ],
+    "index": 3290,
+    "recovery_candidates": 0,
+    "source": "current_pair",
+    "geometry_calibrated": false,
+    "measured_edges": "pair",
+    "racing_outset": 5.0,
+    "score": 2.792648,
+    "anchors": 11,
+    "turn_floor": 0,
+    "previous_log_ms": 78,
+    "interval_ms": 124,
+    "corner_age_ms": 0,
+    "steering": -116,
+    "search_mode": "tracking",
+    "acquire_ms": 1,
+    "path_sequence": 217,
+    "elapsed_ms": 240183,
+    "to_send_ms": 80,
+    "path_visibility": "projected",
+    "searched_candidates": 46
+  },
+  "source_to_mcu_offsets_ms": [
+    -130625,
+    -130625,
+    -130626,
+    -130626,
+    -130626,
+    -130627,
+    -130627,
+    -130628
+  ],
+  "source_age_at_stop_ms": 200,
+  "next_send_mcu_estimate_ms": [
+    109635,
+    109638
+  ],
+  "next_send_after_stop_ms": [
+    4,
+    7
+  ],
+  "whole_session_maxima_ms": {
+    "processing_ms": 180,
+    "to_send_ms": 183,
+    "send_interval_ms": 280,
+    "previous_log_ms": 84,
+    "previous_gc_ms": 9,
+    "evidence_ms": 205
+  },
+  "stopped_view": {
+    "file": "ground_07_stopped_view\\frame.pgm",
+    "sha256": "0f1108d4d2b8f7dd8006c0562ee9c033e47aeed23e2011b018ead366515df10f",
+    "trigger_exposure": false
+  },
+  "conclusion": "499ms LINK2；最后路径源年龄200ms。帧3289发送后日志耗时78ms，叠加下一帧77ms处理，下一有效包发送约晚于停车4..7ms；本窗口无路径许可失效事件。",
+  "limitations": [
+    "78ms是序列化、write及可能流内部刷新的合计，不单独证明显式flush或存储介质硬件故障。",
+    "帧3289不是10倍数，未调用每10帧的显式flush；因此仅减少显式flush频率不足以证明修复。",
+    "关联为8个源时间偏移的范围估计，未改写原时钟，不声称示波器级到达精度。",
+    "本次LINK触发时无同步曝光图；8组原图对应更早路径失效，停车后照片单列。",
+    "未完成首弯，触边与完全出界未取得主控单独确认，不写零触边或通过。"
+  ]
+}

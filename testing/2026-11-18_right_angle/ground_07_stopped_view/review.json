@@ -1,0 +1,15 @@
+{
+  "frames": 83,
+  "geometry_valid": 80,
+  "all_wire_invalid": true,
+  "max_processing_ms": 142,
+  "max_to_send_ms": 145,
+  "max_interval_ms": 153,
+  "source_log": "/data/right_angle_logs/run_0006.jsonl",
+  "max_send_interval_ms": 130,
+  "max_log_ms": 31,
+  "max_gc_ms": 7,
+  "max_evidence_ms": 62,
+  "source_sha256": "e8eff917135fb2302464b1dcd7567ff1c89dde21cffba5cce3d82ba4c7d77fb7",
+  "motor_started": false
+}
