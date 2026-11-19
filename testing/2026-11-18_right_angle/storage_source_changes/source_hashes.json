@@ -1,0 +1,16 @@
+{
+  "vision/src/right_angle_canmv.py": {
+    "before_sha256": "57496bdf7dc73f74cbba7ef0fbe28c15b36f470eefb75164d277f7c73710a59a",
+    "after_sha256": "1f86bfa79e0e0a5faaa887adb998d12cf7d9fb3e4db511caceb9f1979b270ddc",
+    "baseline": "testing\\2026-11-18_right_angle\\midturn_r6\\source_final\\vision\\src\\right_angle_canmv.py"
+  },
+  "vision/tools/run_right_angle_live.py": {
+    "before_sha256": "38fb9eff83b3db72c28892fdcdcdbe2b8763f766bf73bd6d704de705aa97de9b",
+    "after_sha256": "4cf66d530fa0d87714cd14d949cd5e68c5e06ba41590f328b3a5e350e2274d41",
+    "baseline": "testing\\2026-11-18_right_angle\\midturn_r6\\source_final\\vision\\tools\\run_right_angle_live.py"
+  },
+  "vision/tools/probe_right_angle_timing.py": {
+    "after_sha256": "b46d9ffc4a8e6e5d3b90df73b3154be84ccec9db38fea07d97dacaa444cffe1d",
+    "baseline": "untracked shared host tool; before-image not archived this turn; full current snapshot only"
+  }
+}

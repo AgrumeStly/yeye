@@ -1,0 +1,16 @@
+[
+  {
+    "destination_mismatch": false,
+    "deleted_only_after_verified": true,
+    "programs_unchanged": true,
+    "invalid_names_retained": true,
+    "copied_bytes_match": true
+  },
+  {
+    "destination_mismatch": true,
+    "deleted_only_after_verified": true,
+    "programs_unchanged": true,
+    "invalid_names_retained": true,
+    "copied_bytes_match": true
+  }
+]

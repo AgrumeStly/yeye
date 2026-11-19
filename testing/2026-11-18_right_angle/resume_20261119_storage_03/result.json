@@ -1,0 +1,39 @@
+{
+  "no_uart": true,
+  "no_camera": true,
+  "no_sd_write": true,
+  "no_start": true,
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "initial_status": {
+    "running": false
+  },
+  "final_status": {
+    "running": false
+  },
+  "terminal": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> \r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> \r\n>>> \r\nRESUME_UNAME (sysname='rt-smart', nodename='rt-smart', release='v1.8-0-gc2d1f5c', version='v1.8-0-gc2d1f5c on 2026-07-03', machine='k230d_canmv_lushanpi_lite')\r\nRESUME_FILE_STAT /sdcard [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 0, 8038528]\r\nRESUME_VFS /sdcard [512, 512, 1023744, 0, 0, 0, 0, 0, 0, 255]\r\nRESUME_RAW_DIRECTORY /sdcard 15\r\nRESUME_RAW_ENTRY (b'libs', 16384, 0)\r\nRESUME_RAW_ENTRY (b'revision.txt', 32768, 0)\r\nRESUME_RAW_ENTRY (b'res', 16384, 0)\r\nRESUME_RAW_ENTRY (b'examples', 16384, 0)\r\nRESUME_RAW_ENTRY (b'System Volume Information', 16384, 0)\r\nRESUME_RAW_ENTRY (b'captures', 16384, 0)\r\nRESUME_RAW_ENTRY (b'mcp_script.py', 32768, 0)\r\nRESUME_RAW_ENTRY (b'vision_classify.py', 32768, 0)\r\nRESUME_RAW_ENTRY (b'main_false.py', 32768, 0)\r\nRESUME_RAW_ENTRY (b'main.py', 32768, 0)\r\nRESUME_RAW_ENTRY (b'lap_boot_checks', 16384, 0)\r\nRESUME_RAW_ENTRY (b'lap_runtime_logs', 16384, 0)\r\nRESUME_FILE_STAT /data [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 0, 8038528]\r\nRESUME_VFS /data [512, 512, 13496256, 13448704, 13448704, 0, 0, 0, 0, 255]\r\nRESUME_RAW_DIRECTORY /data 5\r\nRESUME_RAW_ENTRY (b'System Volume Information', 16384, 0)\r\nRESUME_RAW_ENTRY (b'captures', 16384, 0)\r\nRESUME_RAW_ENTRY (b'models', 16384, 0)\r\nRESUME_RAW_ENTRY (b'final_sampling_gc2093', 16384, 0)\r\nRESUME_RAW_ENTRY (b'_probe.txt', 32768, 0)\r\nRESUME_FILE_ERROR /data/right_angle_logs [Errno 2] ENOENT\r\nRESUME_FILE_STAT /sdcard/right_angle_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735694668, 8038528]\r\nRESUME_VFS /sdcard/right_angle_logs [512, 512, 1023744, 0, 0, 0, 0, 0, 0, 255]\r\nRESUME_RAW_DIRECTORY /sdcard/right_angle_logs 1\r\nRESUME_RAW_ENTRY (b'\\xae.`%.!(', 16384, 0)\r\nRESUME_FILE_STAT /sdcard/captures [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735690046, 8038528]\r\nRESUME_VFS /sdcard/captures [512, 512, 1023744, 0, 0, 0, 0, 0, 0, 255]\r\nRESUME_RAW_DIRECTORY /sdcard/captures 20\r\nRESUME_RAW_ENTRY (b'v03_center_0001', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0002', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_offset_left_0001', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_offset_right_0001', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_heading_left_0001', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_heading_right_0001', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0003', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0004', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0005', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0006', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0007', 16384, 0)\r\nRESUME_RAW_ENTRY (b'v03_center_0008', 16384, 0)\r\nRESUME_FILE_STAT /sdcard/straight_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735689890, 8038528]\r\nRESUME_VFS /sdcard/straight_logs [512, 512, 1023744, 0, 0, 0, 0, 0, 0, 255]\r\nRESUME_RAW_DIRECTORY /sdcard/straight_logs 9\r\nRESUME_RAW_ENTRY (b'run_0001.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0002.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0003.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0004.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0005.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0006.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0007.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0008.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0009.jsonl', 32768, 0)\r\nRESUME_FILE_STAT /sdcard/lap_runtime_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735690248, 8038528]\r\nRESUME_VFS /sdcard/lap_runtime_logs [512, 512, 1023744, 0, 0, 0, 0, 0, 0, 255]\r\nRESUME_RAW_DIRECTORY /sdcard/lap_runtime_logs 14\r\nRESUME_RAW_ENTRY (b'run_0001.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0002.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0003.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0004.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0005.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0006.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0007.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0008.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0009.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0010.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0011.jsonl', 32768, 0)\r\nRESUME_RAW_ENTRY (b'run_0012.jsonl', 32768, 0)\r\nRESUME_READ_ONLY_DONE\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> ",
+  "completed": true
+}

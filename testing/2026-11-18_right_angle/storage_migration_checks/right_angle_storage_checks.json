@@ -1,0 +1,12 @@
+{
+  "short_log_write_rejected": true,
+  "data_partition_and_increment_without_overwrite": true,
+  "storage_error_not_hidden": true,
+  "right_angle_grid.py_unchanged": true,
+  "right_angle_route.py_unchanged": true,
+  "right_angle_racing.py_unchanged": true,
+  "right_angle_protocol.py_unchanged": true,
+  "right_angle_preview.py_matches_generator": true,
+  "right_angle_drive.py_matches_generator": true,
+  "preview_never_grants_drive": true
+}

@@ -1,0 +1,36 @@
+{
+  "totals": {
+    "bytes": 43104268,
+    "errors": 1,
+    "removed": 1197,
+    "skipped": 1,
+    "copied": 1197
+  },
+  "event": "finished",
+  "sdcard_vfs": [
+    512,
+    512,
+    1023744,
+    132288,
+    132288,
+    0,
+    0,
+    0,
+    0,
+    255
+  ],
+  "data_vfs": [
+    512,
+    512,
+    13496256,
+    13311360,
+    13311360,
+    0,
+    0,
+    0,
+    0,
+    255
+  ],
+  "host_verified_deletion_pairs": 1197,
+  "no_program_deleted": true
+}

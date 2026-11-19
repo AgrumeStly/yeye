@@ -1,0 +1,41 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+RESUME_UNAME (sysname='rt-smart', nodename='rt-smart', release='v1.8-0-gc2d1f5c', version='v1.8-0-gc2d1f5c on 2026-07-03', machine='k230d_canmv_lushanpi_lite')
+RESUME_FILE_STAT / [16384, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+RESUME_DIRECTORY / 8 ["bin", "sdcard", "data", "udisk", "dev", "proc", "etc", "tmp"]
+RESUME_FILE_STAT /sdcard [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 0, 8038528]
+RESUME_DIRECTORY /sdcard 15 ["libs", "revision.txt", "res", "examples", "System Volume Information", "captures", "mcp_script.py", "vision_classify.py", "main_false.py", "main.py", "lap_boot_checks", "lap_runtime_logs", "straight_logs", "right_angle_logs", "qoder_scripts"]
+RESUME_ENTRY libs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1783044252, 8038528]
+RESUME_ENTRY revision.txt [33206, 8137728, 0, 0, 5711832, 0, 40, 5711832, 1783044252, 8038528]
+RESUME_ENTRY res [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1783044252, 8038528]
+RESUME_ENTRY examples [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1783044252, 8038528]
+RESUME_ENTRY System Volume Information [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1792254882, 8038528]
+RESUME_ENTRY captures [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735690046, 8038528]
+RESUME_ENTRY mcp_script.py [33206, 8137728, 0, 0, 5711832, 0, 191, 5711832, 1735690200, 8038528]
+RESUME_ENTRY vision_classify.py [33206, 8137728, 0, 0, 5711832, 0, 3832, 5711832, 1735690130, 8038528]
+RESUME_ENTRY main_false.py [33206, 8137728, 0, 0, 5711832, 0, 5039, 5711832, 1735689604, 8038528]
+RESUME_ENTRY main.py [33206, 8137728, 0, 0, 5711832, 0, 36244, 5711832, 1735690330, 8038528]
+RESUME_ENTRY lap_boot_checks [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735690932, 8038528]
+RESUME_ENTRY lap_runtime_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735690248, 8038528]
+RESUME_ENTRY straight_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735689890, 8038528]
+RESUME_ENTRY right_angle_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735694668, 8038528]
+RESUME_ENTRY qoder_scripts [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735692196, 8038528]
+RESUME_FILE_STAT /sdcard/right_angle_logs [16895, 8137728, 0, 0, 5711832, 0, 0, 5711832, 1735694668, 8038528]
+Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+UnicodeError: 
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

@@ -1,0 +1,12 @@
+{
+  "main_py_written": false,
+  "script_executed": false,
+  "stm32_reset": false,
+  "no_start": true,
+  "completed": true,
+  "program_path": "/sdcard/right_angle_drive_r7.py",
+  "program_bytes": 53657,
+  "program_sha256": "a91cd793735222bc2e15f7acca6f272425b7bd3ee96cde8cf13b5ccd15b9470b",
+  "main_unchanged": true,
+  "main_sha256": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8"
+}

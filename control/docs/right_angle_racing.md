@@ -1,13 +1,15 @@
-# 当前首弯操作：R6视觉／v5控制
+# 当前首弯操作：R7数据分区／v5控制
 
-2026-11-19整理。当前归档STM32 0x02120012、视觉release_r6_final；最后实跑858ms以LINK2／源年龄200ms停车，尚未进弯，不能标记过弯成功。
+2026-11-19接续。新视觉[release_r7_storage](../../testing/2026-11-18_right_angle/release_r7_storage/README.md)将照片／日志保存至/data/right_angle_logs，程序放/sdcard；识别、转向及v5保护与R6一致，STM32仍使用0x02120012。最后首弯实跑858ms以LINK2／源年龄200ms停车，未验收过弯。
+
+主控已从直道03切回首弯0x02120012，双轮1000ms通过；一次地面2041ms以PATH3停车，提前转向问题退回。完整日志和触发图已保存，[本次失败与撤离接续](../../testing/2026-11-18_right_angle/ground_06_record.md)为最新入口。主控暂离，视觉已停；当前离线修正入弯策略，不自动重启或试跑。1197个数据文件迁移及/data保存已完成，异常旧目录保留，见[迁移记录](../../testing/2026-11-18_right_angle/storage_migration_record.md)。
 
 先读[11月19日接续](../../testing/2026-11-18_right_angle/resume_20261119.md)定位日志及发送间隔，再按主控当前授权恢复；不放宽保护或直接增加转向。最后视觉已停止，当前设备状态须重新核对。主控KEY／RST，默认一次双轮悬空后一次上道。
 
 ## 当前使用
 
 1. 先按接续记录核对实际板上版本；已确认0x02120012时无需重刷。仅确需更新且获主控本次授权时，主控在Keil5打开[RightAngle工程](../MDK-ARM/right_angle.uvprojx)，目标 **RightAngle**，用 **Flash → Download** 下载本版。版本`g_speed_revision=0x02120012`。两端须匹配v5；从旧v4迁移才需要更新STM32；[最终HEX](../../testing/2026-11-18_right_angle/release_r6_final/right_angle.hex)。
-2. K230运行[R6最终right_angle_drive.py](../../testing/2026-11-18_right_angle/release_r6_final/right_angle_drive.py)，或者让代理自动启动；脚本不发START、不改main.py。正式相机持续到人工停止，主板动作期限仍独立；无动力预览保持10分钟。代理后台占COM10时不重复用CanMV连接。
+2. K230运行[R7最终right_angle_drive.py](../../testing/2026-11-18_right_angle/release_r7_storage/right_angle_drive.py)，或者让代理自动启动；程序可存/sdcard/right_angle_drive_r7.py，照片／日志只写/data/right_angle_logs。脚本不发START、不改main.py。正式相机持续到人工停止，主板动作期限仍独立；无动力预览保持10分钟。代理后台占COM10时不重复用CanMV连接。
 3. 主控只做**一次双轮悬空测试**：长按实物KEY（PA0／WKUP）约1～2秒松开，两轮同时前进1秒并停。保持供电、不复位，放到当前L形可见或弯前直道位置，当前许可有效后下一次KEY直接上道。没有左右单轮测试或额外初始化矩阵。
 
 默认直道80RPM、满弯平均最高60RPM、单次12秒、PWM上限50%。巡航只在停止时改40..80RPM，下次KEY锁定。最大轮速目标112RPM，转弯差速最多65%，内轮保持前进。速度是轮速目标，不是实测地面速度；本版动态通过、触边和重复性尚待主控验证，不能称已经最快。
@@ -29,7 +31,7 @@
 
 v5明确区分当前双侧、当前L预测和当前出口弱关联，见[协议源](protocol_v1_draft.md)。当前L可以启动地面，弱关联不能冷启动；接收源年龄仍小于200ms，发送处理不超过100ms、源年龄小于150ms。KEY／STOP、编码器、反向／超速、300ms无反馈、50%PWM和IWDG保护保留，恢复图像不自动恢复车辆。
 
-自动缓存最近有效原始灰度图。在有效→无效切换时，先发无效包撤许可，再将前后两张PGM和真实序号保存到当前`/sdcard/right_angle_logs/run_NNNN_loss_XX_*`，R5将上限从3次改为100次（约15MB），避免摆车阶段就用完名额，不覆盖旧图。正常帧不向SD写图像，避免留证拖慢正常转向。不能保证超过100次后仍有新原图，需按真实序号核对，不用其它时间的图片替代触发帧。
+自动缓存最近有效原始灰度图。在有效→无效切换时，先发无效包撤许可，再将前后两张PGM和真实序号保存到当前`/data/right_angle_logs/run_NNNN_loss_XX_*`，上限100次（约15MB），不覆盖旧图。正常帧不写图像。R7逐帧记录send_interval_ms、evidence_ms、previous_log_ms和previous_gc_ms，用真实峰值区分处理和发送后停顿；最后一帧没有后续记录的耗时不补造。超过100次后仍需如实记录触发图缺失，不能用其它时间的图片替代。
 
 本轮第二次短跑已保存：[716ms原始MCU记录](../../testing/2026-11-18_right_angle/ground_02_capture/capture.json)、[原视觉窗口](../../testing/2026-11-18_right_angle/ground_02_capture/camera/stop_window.json)。确认是LAP_PATH，停止帧双边锚点由9降0；未保存当时原图。事后墙边照片已由主控明确为挪车后的位置，不能用来解释该次停车；[重新摆好后的图](../../testing/2026-11-18_right_angle/ground_02_repositioned_view/frame.png)另存。R4解决已确认的L形预测逻辑缺口，不声称已证明所有短停原因。
 

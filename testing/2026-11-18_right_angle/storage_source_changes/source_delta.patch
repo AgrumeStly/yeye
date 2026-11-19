@@ -1,0 +1,124 @@
+--- a/vision/src/right_angle_canmv.py
++++ b/vision/src/right_angle_canmv.py
+@@ -19,8 +19,12 @@
+ 
+ 
+ def _open_log():
+-    """只在SD新建递增日志，不覆盖原件；SD异常抛出并退出。"""
+-    folder = '/sdcard/right_angle_logs'
++    """在/data数据分区新建递增日志，不覆盖原件；异常抛出并退出。
++
++    /sdcard仅保存程序。照片与逐帧日志共同使用/data，避免程序分区写满
++    后出现零字节证据文件；存储异常不放宽主板200ms新鲜度保护。
++    """
++    folder = '/data/right_angle_logs'
+     try:
+         os.stat(folder)
+     except OSError as exc:
+@@ -35,7 +39,18 @@
+             if not exc.args or exc.args[0] != 2:
+                 raise
+             return name, open(name, 'w')
+-    raise RuntimeError('straight log slots exhausted')
++    raise RuntimeError('right-angle log slots exhausted')
++
++
++def _write_log(log, text):
++    """写入一条完整JSON文本；短写立即报错，不能把空文件当成功留证。
++
++    参数log为当前/data文本流，text为已序列化且带换行的ASCII JSON文本；
++    无返回值。写入返回的字符数必须完整，错误由主循环finally撤许可／清理。
++    不逐帧sync，避免全分区同步阻塞下一帧；仍沿用每10帧flush。
++    """
++    if log.write(text) != len(text):
++        raise OSError('incomplete /data right-angle log write')
+ 
+ 
+ def main():
+@@ -55,7 +70,7 @@
+     try:
+         name, log = _open_log()
+         print('[RIGHT ANGLE LOG]', name, 'ALLOW_DRIVE', ALLOW_DRIVE, 'NO AUTO START')
+-        log.write(json.dumps(dict(event='begin', revision='RIGHT-ANGLE-V5-RACING-6', allow_drive=ALLOW_DRIVE,
++        _write_log(log, json.dumps(dict(event='begin', revision='RIGHT-ANGLE-V5-RACING-7-DATA', allow_drive=ALLOW_DRIVE,
+                                   duration_ms=DURATION_MS)) + '\n')
+         log.flush()
+         mapping = FPIOA()
+@@ -80,6 +95,9 @@
+         origin = time.ticks_ms()
+         index = 0
+         previous = None
++        previous_sent = None
++        previous_log_ms = None
++        previous_gc_ms = None
+         last_valid_frame = None
+         loss_count = 0
+         while DURATION_MS == 0 or time.ticks_diff(time.ticks_ms(), origin) < DURATION_MS:
+@@ -96,8 +114,9 @@
+             packet = sender.path(result, time.ticks_diff(processed, copied), time.ticks_diff(processed, started))
+             sent = time.ticks_ms()
+             index += 1
++            evidence_started = sent
+             # 仅缓存最近有效原图，失效包已经发出后再保存前后PGM，不能延迟停车。
+-            # 最多100次切换留证（约15MB），避免试跑前摆车就耗尽3组名额。
++            # 最多100次切换留证（约15MB），照片和日志均保存到/data数据分区。
+             # 文件名来自当前新编号日志，不覆盖旧图，不改像素。
+             # 正常有效循环仅增加一个76800字节副本，无SD图像写入。
+             if packet[6] & 1:
+@@ -109,13 +128,14 @@
+                     with open(prefix + suffix, 'wb') as snapshot:
+                         snapshot.write(b'P5\n320 240\n255\n')
+                         snapshot.write(raw)
+-                log.write(json.dumps(dict(event='path_lost', prefix=prefix,
++                _write_log(log, json.dumps(dict(event='path_lost', prefix=prefix,
+                     before_index=last_valid_frame[1], before_sequence=last_valid_frame[2],
+                     after_index=index, after_sequence=packet[5], reason=result['reason'])) + '\n')
+                 log.flush()
+                 print('[RIGHT ANGLE LOSS]', prefix)
+                 last_valid_frame = None
+             record = dict(result)
++            evidence_finished = time.ticks_ms()
+             # 每帧保留真实序号／来源／处理年龄等证据；完整7点路线每10帧存一次，
+             # 减少JSON／SD负担。几何计算及UART封包仍逐帧执行，不降低控制更新率。
+             if index % 10 != 0:
+@@ -124,16 +144,27 @@
+                           path_sequence=packet[5], wire_valid=bool(packet[6] & 1),
+                           acquire_ms=time.ticks_diff(acquired, started), processing_ms=time.ticks_diff(processed, copied),
+                           to_send_ms=time.ticks_diff(sent, started),
+-                          interval_ms=None if previous is None else time.ticks_diff(started, previous))
++                          interval_ms=None if previous is None else time.ticks_diff(started, previous),
++                          send_interval_ms=None if previous_sent is None else time.ticks_diff(sent, previous_sent),
++                          evidence_ms=time.ticks_diff(evidence_finished, evidence_started),
++                          previous_log_ms=previous_log_ms, previous_gc_ms=previous_gc_ms)
++            # 发送后留证、JSON／文件写入及垃圾回收也占用下一帧的新鲜度预算。
++            # 写入／回收耗时在下一条记录中回填，避免仅记录图像处理平均值。
++            # 均用ticks_diff处理时钟回绕；没有下一帧时不补造最后一次耗时。
+             previous = started
+-            log.write(json.dumps(record) + '\n')
++            previous_sent = sent
++            logging_started = time.ticks_ms()
++            _write_log(log, json.dumps(record) + '\n')
+             if index % 10 == 0:
+                 log.flush()
+                 print('[RIGHT ANGLE]', result['reason'], 'stage', result['stage'], 'err', result['steering'], 'valid', bool(packet[6] & 1), 'ms', record['to_send_ms'])
+             if SHOW_PREVIEW and not ALLOW_DRIVE:
+                 Display.show_image(frame)
++            previous_log_ms = time.ticks_diff(time.ticks_ms(), logging_started)
+             del pixels, frame
++            collection_started = time.ticks_ms()
+             gc.collect()
++            previous_gc_ms = time.ticks_diff(time.ticks_ms(), collection_started)
+     finally:
+         if sender is not None:
+             try:
+--- a/vision/tools/run_right_angle_live.py
++++ b/vision/tools/run_right_angle_live.py
+@@ -21,7 +21,7 @@
+     args.output.mkdir(parents=True, exist_ok=False)
+     source, manifest = build(True)
+     root = Path(__file__).resolve().parents[2]
+-    reviewed = root/'testing/2026-11-18_right_angle/release_r6_final/right_angle_drive.py'
++    reviewed = root/'testing/2026-11-18_right_angle/release_r7_storage/right_angle_drive.py'
+     if source.encode('utf-8') != reviewed.read_bytes():
+         raise RuntimeError('current generator differs from reviewed release; no script executed')
+     (args.output/'executed_source.py').write_bytes(source.encode('utf-8'))

@@ -1,0 +1,24 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+RESUME_INVENTORY captures [434, 5198912, [["/sdcard/captures", "(b'push_full_lap_0001', 16384, 0)", "Exception('IDE interrupt',)"]]]
+RESUME_INVENTORY lap_boot_checks [7, 259751, []]
+RESUME_INVENTORY lap_runtime_logs [14, 17236009, []]
+RESUME_INVENTORY straight_logs [9, 11163330, []]
+RESUME_INVENTORY right_angle_logs [0, 0, [["/sdcard/right_angle_logs", "(b'\\xae.`%.!(', 16384, 0)", "UnicodeError()"]]]
+RESUME_READ_ONLY_DONE
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
