@@ -1,3 +1,46 @@
+# 原始CanMV终端含CR/CR/LF；与PGM像素一样按原字节保留。
+# 仅约束本轮新增证据，不改写旧发布及共享源码。
+resume_20261119_*/terminal.txt binary
+storage_*/terminal.txt binary
+.gitattributes text eol=lf
+resume_20261119_*/backend.jsonl -text whitespace=cr-at-eol
+storage_*/backend.jsonl -text whitespace=cr-at-eol
+storage_camera_check_01/camera.jsonl -text
+storage_camera_check_01/frame.pgm binary
+storage_source_changes/source_delta.patch -text -whitespace
+storage_program_deploy_01/before_main.py -text -whitespace
+storage_migration_02_host.txt binary
+storage_pre_camera_mcu_01_host.txt binary
+ground_06_*/terminal.txt binary
+ground_06_*/backend.jsonl -text whitespace=cr-at-eol
+ground_06_*/*.pgm binary
+ground_06_camera/run_0002.jsonl -text whitespace=cr-at-eol
+ground_06_stopped_view/camera.jsonl -text whitespace=cr-at-eol
+ground_06_departure_view/camera.jsonl -text whitespace=cr-at-eol
+ground_06*_host.txt binary
+r7_*_host.txt binary
+live_drive_09/terminal.txt binary
+live_drive_09/backend.jsonl -text whitespace=cr-at-eol
+live_drive_09_host.txt binary
+# 源快照哈希来自实际文件字节；不以换行归一化改变来源记录。
+storage_source_changes/vision/** -text whitespace=cr-at-eol
+r8_source_changes/before/** -text -whitespace
+r8_source_changes/after/** -text -whitespace
+r8_source_changes/source_delta.patch -text -whitespace
+vision_r8_*_host.txt binary
+ground_06*/terminal.txt binary
+ground_06*/backend.jsonl -text whitespace=cr-at-eol
+ground_06_camera/run_0002.jsonl -text whitespace=cr-at-eol
+ground_06*/camera.jsonl -text whitespace=cr-at-eol
+ground_06*/*.pgm binary
+ground_06*_host.txt binary
+r7*_host.txt binary
+live_drive_09/terminal.txt binary
+live_drive_09/backend.jsonl -text whitespace=cr-at-eol
+live_drive_09_host.txt binary
+live_drive_09/terminal.txt binary
+live_drive_09/backend.jsonl -text whitespace=cr-at-eol
+
 # 仅本轮原始设备／后端证据保留原字节，避免autocrlf改写PGM像素及下载哈希。
 /ground_07_camera/** -text
 /ground_07_capture/** -text
