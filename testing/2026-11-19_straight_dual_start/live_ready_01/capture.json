@@ -1,0 +1,67 @@
+{
+  "probe_id": "00010001066cff554954657287234218a5a5a5a597969908",
+  "reset_requested": false,
+  "halt_requested": false,
+  "resume_requested": false,
+  "flash_written": false,
+  "source_symbols": {
+    "g_speed_ms": {
+      "address": 536870996,
+      "size": 4
+    },
+    "g_speed_fault": {
+      "address": 536871000,
+      "size": 4
+    },
+    "g_speed_revision": {
+      "address": 536871004,
+      "size": 4
+    },
+    "g_speed_watchdog_started": {
+      "address": 536871008,
+      "size": 4
+    },
+    "g_speed_watchdog_stage": {
+      "address": 536871012,
+      "size": 4
+    },
+    "g_lap_config": {
+      "address": 536871048,
+      "size": 12
+    },
+    "g_lap_uart_errors": {
+      "address": 536871156,
+      "size": 4
+    },
+    "g_speed_match": {
+      "address": 536871160,
+      "size": 112
+    },
+    "g_lap_timing": {
+      "address": 536871416,
+      "size": 16
+    },
+    "g_corner_startup": {
+      "address": 536871448,
+      "size": 32
+    },
+    "g_lap": {
+      "address": 536871480,
+      "size": 68
+    },
+    "g_lap_last": {
+      "address": 536871548,
+      "size": 40
+    },
+    "g_lap_diag": {
+      "address": 536871588,
+      "size": 1952
+    },
+    "g_lap_uart_diag": {
+      "address": 536874820,
+      "size": 40
+    }
+  },
+  "samples": [],
+  "error": "TransferError('SWD/JTAG communication failure (No ACK); check USB cable, reduce debugger clock')"
+}

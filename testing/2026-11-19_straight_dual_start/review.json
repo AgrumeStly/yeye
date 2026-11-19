@@ -1,0 +1,72 @@
+{
+  "revision": "0x02120003",
+  "bin_sha256": "44aa78ec12deb3443bb85f1347f4cd6ce17ed2ac1877e1727d748b9c35525c16",
+  "old_binaries_identical": {
+    "control\\build\\firmware\\straight_assist\\straight_assist.bin": {
+      "before_sha256": "361a5842ddbd52047c097dc4b0167bb9ee8dd293508b6604a6a52355af4bd848",
+      "after_sha256": "361a5842ddbd52047c097dc4b0167bb9ee8dd293508b6604a6a52355af4bd848"
+    },
+    "control\\build\\firmware\\right_angle\\right_angle.bin": {
+      "before_sha256": "2fb9d362ac92ae7b8a20e696cfddde6ff7a6435e0648c5f3ca186102efdca5f4",
+      "after_sha256": "2fb9d362ac92ae7b8a20e696cfddde6ff7a6435e0648c5f3ca186102efdca5f4"
+    },
+    "control\\build\\firmware\\low_speed_lap\\low_speed_lap.bin": {
+      "before_sha256": "1fc5ee49f6265499802fb6e5a3983542a4a60337a75fb8c05747d650433e4a28",
+      "after_sha256": "1fc5ee49f6265499802fb6e5a3983542a4a60337a75fb8c05747d650433e4a28"
+    },
+    "control\\build\\firmware\\low_speed_lap_track\\low_speed_lap_track.bin": {
+      "before_sha256": "f525047b839976e59a0612e2d53e810cfd8e76ec1a66f7c42cfb203c2ddead72",
+      "after_sha256": "f525047b839976e59a0612e2d53e810cfd8e76ec1a66f7c42cfb203c2ddead72"
+    }
+  },
+  "flash_matches_bin": true,
+  "ground_last_run": {
+    "valid": 1,
+    "elapsed_ms": 2000,
+    "reason": 11,
+    "left_target": 82.42359161376953,
+    "right_target": 77.576416015625,
+    "left_rpm": 88.58551025390625,
+    "right_rpm": 83.84152221679688,
+    "left_pwm": 262,
+    "right_pwm": 259,
+    "left_boost_samples": 1,
+    "right_boost_samples": 1
+  },
+  "startup": {
+    "stage": 2,
+    "bench_ms": 1000,
+    "completed": 1,
+    "ground_runs": 2,
+    "left_counts": 1173,
+    "right_counts": 1178,
+    "starts_blocked": 1,
+    "blocked_reason": 0
+  },
+  "ground_starts_rejected": 1,
+  "hardware_fault": 0,
+  "uart_errors": 0,
+  "retained_ground_samples": 32,
+  "retained_time_since_run_ms": [
+    1377,
+    1997
+  ],
+  "retained_all_current_pair": true,
+  "latest_left_right_measured_rpm": [
+    88.58551025390625,
+    83.84152221679688
+  ],
+  "current_pwm": [
+    0,
+    0
+  ],
+  "main_control_feedback": "双轮悬空：正常；地面复跑：正常",
+  "sd_camera_log_bytes": 0,
+  "visual_sd_log_complete": false,
+  "distance_measured": false,
+  "boundary_contacts_quantified": false,
+  "full_lap_accepted": false,
+  "automatic_motor_start": false,
+  "flash_written_by_agent": false,
+  "local_commit_scope": "new project/tools/tests/docs/evidence plus exact task delta patch; shared implementation left unstaged because it depends on pre-existing uncommitted StraightAssist/RightAngle work"
+}

@@ -1,0 +1,287 @@
+{
+  "probe_id": "00010001066cff554954657287234218a5a5a5a597969908",
+  "reset_requested": false,
+  "halt_requested": false,
+  "resume_requested": false,
+  "flash_written": false,
+  "source_symbols": {
+    "g_speed_ms": {
+      "address": 536870996,
+      "size": 4
+    },
+    "g_speed_fault": {
+      "address": 536871000,
+      "size": 4
+    },
+    "g_speed_revision": {
+      "address": 536871004,
+      "size": 4
+    },
+    "g_speed_watchdog_started": {
+      "address": 536871008,
+      "size": 4
+    },
+    "g_speed_watchdog_stage": {
+      "address": 536871012,
+      "size": 4
+    },
+    "g_lap_config": {
+      "address": 536871048,
+      "size": 12
+    },
+    "g_lap_uart_errors": {
+      "address": 536871156,
+      "size": 4
+    },
+    "g_speed_match": {
+      "address": 536871160,
+      "size": 112
+    },
+    "g_lap_timing": {
+      "address": 536871416,
+      "size": 16
+    },
+    "g_corner_startup": {
+      "address": 536871448,
+      "size": 32
+    },
+    "g_lap": {
+      "address": 536871480,
+      "size": 68
+    },
+    "g_lap_last": {
+      "address": 536871548,
+      "size": 40
+    },
+    "g_lap_diag": {
+      "address": 536871588,
+      "size": 1952
+    },
+    "g_lap_uart_diag": {
+      "address": 536874820,
+      "size": 40
+    }
+  },
+  "samples": [
+    {
+      "capture_time_utc": "2026-11-19T12:55:46.193440+00:00",
+      "cpu_state": "State.RUNNING",
+      "dhcsr": "0x1010001",
+      "halted": false,
+      "g_speed_ms": 1229080643,
+      "g_speed_fault": 1229152321,
+      "g_speed_revision": 1744920641,
+      "g_speed_watchdog_started": 252249865,
+      "g_speed_watchdog_stage": 1757503489,
+      "g_lap_uart_errors": 1134586120,
+      "lap": {
+        "state": 248,
+        "reason": 0,
+        "run_since": 134222600,
+        "path_at": 134235588,
+        "received": 536871160,
+        "rejected": 4728,
+        "duplicates": 134222616,
+        "starts_rejected": 1114636288,
+        "left_target": 2.0,
+        "right_target": 4.0,
+        "left_rpm": 300.0,
+        "right_rpm": 4.203895392974451e-42,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "steering": 0,
+        "bend": 0,
+        "path_valid": 0,
+        "history": 0,
+        "single": 0
+      },
+      "last_run": {
+        "valid": 0,
+        "elapsed_ms": 0,
+        "reason": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "left_boost_samples": 0,
+        "right_boost_samples": 16000000
+      },
+      "corner_startup": {
+        "stage": 536871160,
+        "bench_ms": 536870932,
+        "completed": 536870936,
+        "ground_runs": 1086324736,
+        "left_counts": 1090519040,
+        "right_counts": 1133903872,
+        "starts_blocked": 134235340,
+        "blocked_reason": 536870912
+      },
+      "diagnostic_trace": {
+        "total_samples": 0,
+        "frozen": 0,
+        "stop_at_ms": 0,
+        "stop_reason": 0,
+        "left_channel": 0,
+        "right_channel": 0,
+        "left_sign": 0,
+        "right_sign": 0,
+        "samples": []
+      },
+      "timing": {
+        "counter_ready": 536871060,
+        "clock_hz": 536917264,
+        "systick_max_cycles": 2269661445,
+        "motion_lock_max_cycles": 1703446280
+      },
+      "calibrator": {
+        "state": 8,
+        "error": 97,
+        "phase": 251659776
+      },
+      "config": {
+        "straight_rpm": 9.141122334038943e-36,
+        "run_ms": 1627472657,
+        "min_feedforward": 61472.0
+      },
+      "uart": {
+        "overrun": 0,
+        "noise": 0,
+        "frame": 0,
+        "parity": 0,
+        "ring_full": 0,
+        "first_mask": 0,
+        "last_mask": 0,
+        "first_at_ms": 196,
+        "last_at_ms": 0,
+        "isr_max_cycles": 0
+      },
+      "core_faults": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0xa",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x1e000000"
+      },
+      "gpio": {
+        "KEY_PA0": 0,
+        "PB2_ODR": 0
+      }
+    },
+    {
+      "capture_time_utc": "2026-11-19T12:55:47.317433+00:00",
+      "cpu_state": "State.RUNNING",
+      "dhcsr": "0x1010001",
+      "halted": false,
+      "g_speed_ms": 1229080643,
+      "g_speed_fault": 1229152321,
+      "g_speed_revision": 1744920641,
+      "g_speed_watchdog_started": 252249865,
+      "g_speed_watchdog_stage": 1757503489,
+      "g_lap_uart_errors": 1134586120,
+      "lap": {
+        "state": 248,
+        "reason": 0,
+        "run_since": 134222600,
+        "path_at": 134235588,
+        "received": 536871160,
+        "rejected": 4728,
+        "duplicates": 134222616,
+        "starts_rejected": 1114636288,
+        "left_target": 2.0,
+        "right_target": 4.0,
+        "left_rpm": 300.0,
+        "right_rpm": 4.203895392974451e-42,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "steering": 0,
+        "bend": 0,
+        "path_valid": 0,
+        "history": 0,
+        "single": 0
+      },
+      "last_run": {
+        "valid": 0,
+        "elapsed_ms": 0,
+        "reason": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "left_boost_samples": 0,
+        "right_boost_samples": 16000000
+      },
+      "corner_startup": {
+        "stage": 536871160,
+        "bench_ms": 536870932,
+        "completed": 536870936,
+        "ground_runs": 1086324736,
+        "left_counts": 1090519040,
+        "right_counts": 1133903872,
+        "starts_blocked": 134235340,
+        "blocked_reason": 536870912
+      },
+      "diagnostic_trace": {
+        "total_samples": 0,
+        "frozen": 0,
+        "stop_at_ms": 0,
+        "stop_reason": 0,
+        "left_channel": 0,
+        "right_channel": 0,
+        "left_sign": 0,
+        "right_sign": 0,
+        "samples": []
+      },
+      "timing": {
+        "counter_ready": 536871060,
+        "clock_hz": 536917264,
+        "systick_max_cycles": 2269661445,
+        "motion_lock_max_cycles": 1703446280
+      },
+      "calibrator": {
+        "state": 8,
+        "error": 97,
+        "phase": 251659776
+      },
+      "config": {
+        "straight_rpm": 9.141122334038943e-36,
+        "run_ms": 1627472657,
+        "min_feedforward": 61472.0
+      },
+      "uart": {
+        "overrun": 0,
+        "noise": 0,
+        "frame": 0,
+        "parity": 0,
+        "ring_full": 0,
+        "first_mask": 0,
+        "last_mask": 0,
+        "first_at_ms": 196,
+        "last_at_ms": 0,
+        "isr_max_cycles": 0
+      },
+      "core_faults": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0xa",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x1e000000"
+      },
+      "gpio": {
+        "KEY_PA0": 0,
+        "PB2_ODR": 0
+      }
+    }
+  ],
+  "flash_matches_bin": true,
+  "bin_sha256": "44aa78ec12deb3443bb85f1347f4cd6ce17ed2ac1877e1727d748b9c35525c16",
+  "application_baseline_plausible": false,
+  "error": "RuntimeError('application initialization baseline absent; raw capture preserved')"
+}

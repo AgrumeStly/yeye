@@ -1,0 +1,282 @@
+--- a/control/App/Motion/lap_motion.c
++++ b/control/App/Motion/lap_motion.c
+@@ -1,5 +1,5 @@
+ /** @file lap_motion.c
+- * @brief 低速试跑应用策略。原目标逐轮校准；首弯目标沿用实证映射并做一次双轮测试。
++ * @brief 低速试跑应用策略。原目标逐轮校准；首弯／直道适配版沿用实证映射做双轮测试。
+  * 校准结束后不让原共同目标／3秒策略参与巡航；左右独立PI仍用原数学模块。
+  * 视觉偏差右正：右转时左轮更快、右轮减速，最大只前进不带电换向。
+  */
+@@ -44,6 +44,10 @@
+ #define LAP_MAX_CRUISE 60.0f
+ #define LAP_MAX_RUN_MS 300000u
+ #endif
++#ifdef STRAIGHT_DUAL_START_TARGET
++/* 复用首弯已实现的双轮启动状态，独立于直道PI及视觉策略；不更改既有取证布局。 */
++volatile corner_startup_t g_corner_startup;
++#endif
+ volatile lap_view_t g_lap;
+ volatile lap_result_t g_lap_last;
+ volatile lap_diag_view_t g_lap_diag;
+@@ -68,11 +72,13 @@
+     previous_target[0] = previous_target[1] = 0.0f;
+     boost_pending[0] = boost_pending[1] = 0u;
+     speed_pi_reset(&left_pi); speed_pi_reset(&right_pi);
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+     /* 被KEY／STOP／故障提前打断的双轮测试不能解锁上道；正常完成先置stage2。
+      * 这里只复位测试阶段，保留净计数及停止快照供定位，不重置已核实通道。
+      */
+     if (g_corner_startup.stage == 1u && g_lap.state != LAP_RUNNING) g_corner_startup.stage = 0u;
++#endif
++#ifdef RIGHT_ANGLE_TARGET
+     {
+         corner_guide_t empty;
+         corner_guide_reset(&empty); g_corner_guide = empty;
+@@ -130,10 +136,12 @@
+     edge_at[0] = edge_at[1] = now;
+ #ifdef RIGHT_ANGLE_TARGET
+     corner_pair_at = now; corner_pair_seen = 0u;
++#endif
++#ifdef LAP_DUAL_STARTUP
+     memset((void *)&g_corner_startup, 0, sizeof(g_corner_startup));
+ #endif
+     zero(); speed_match_init(now);
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+     /* 当前接线已在直道实跑确认，不再把首次KEY送进单轮校准器。
+      * 上电仍零PWM；下一次KEY只是受限双轮测试，完整通过后才开放地面启动。
+      */
+@@ -155,7 +163,7 @@
+ /** @brief 悬空双轮测试与地面循迹分别监督；原目标始终返回0。
+  * 双轮测试只豁免视觉许可，KEY、编码器、方向、过速、无反馈及硬件保护不变。
+  */
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+ static int bench_running(void) {
+     return g_lap.state == LAP_RUNNING && g_corner_startup.stage == 1u;
+ }
+@@ -166,7 +174,7 @@
+ }
+ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
+     uint8_t type = b[3], index = (uint8_t)(type - 1u), delta;
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+     if (g_lap.state == LAP_RUNNING && !bench_running() && !fresh(now)) lap_motion_fault(LAP_LINK, now);
+ #else
+     if (g_lap.state == LAP_RUNNING && !fresh(now)) lap_motion_fault(LAP_LINK, now);
+@@ -243,7 +251,7 @@
+     }
+     if (g_lap.path_valid == 0u) corner_pair_seen = 0u;
+ #endif
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+     if (g_lap.state == LAP_RUNNING && !bench_running() && g_lap.path_valid == 0u) lap_motion_fault(LAP_PATH, now);
+ #else
+     if (g_lap.state == LAP_RUNNING && g_lap.path_valid == 0u) lap_motion_fault(LAP_PATH, now);
+@@ -266,14 +274,14 @@
+     if ((uint32_t)(now - raw_at) >= 30u) stable = key;
+     if (g_lap.state == LAP_RUNNING) {
+         if (key != 0u) { lap_motion_fault(LAP_KEY, now); return; }
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+         if (!bench_running() && !fresh(now)) { lap_motion_fault(LAP_LINK, now); return; }
+ #else
+         if (!fresh(now)) { lap_motion_fault(LAP_LINK, now); return; }
+ #endif
+         if (!have_sample || (uint32_t)(now - last_sample) > 60u) { lap_motion_fault(LAP_ENCODER, now); return; }
+         if ((uint32_t)(now - g_lap.run_since) >= g_lap.active.run_ms) {
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+             if (bench_running()) {
+                 /* 完整1秒后再核对两轮确实均有正反馈；零转、反向及异常已更早被保护。
+                  * 不用相机有效／按键次数代替电机反馈，也不在测试结束时自动上道。
+@@ -297,7 +305,7 @@
+         /* 正常时限／远程STOP后需松键停稳再重新人工触发；故障必须复位。 */
+         if (key == 0u && quiet_ms >= 500u) { g_lap.state = LAP_WAIT; state_at = now; }
+     } else if (g_lap.state == LAP_WAIT) {
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+         /* 按下即可计长按时长，启动资格在松开时统一检查。
+          * 避免上电后先等待1秒再开始计长按，使第一次正常手势被静默吃掉。
+          * 上电按住超过5秒仍由下方卡键保护锁定，绝不自动运行。
+@@ -315,10 +323,14 @@
+             held = raw_at - state_at;
+             if (g_lap.state == LAP_ARMED && held >= 1000u && held < 5000u) {
+                 lap_config_t config = g_lap_config;
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+                 int is_bench = g_corner_startup.stage == 0u;
+                 if (!have_sample || quiet_ms < 500u ||
+-                    (!is_bench && (!fresh(now) || g_lap.history != 0u))) {
++                    (!is_bench && (!fresh(now) || g_lap.history != 0u
++#ifdef STRAIGHT_DUAL_START_TARGET
++                        || g_lap.single != 0u
++#endif
++                        ))) {
+                     ++g_lap.starts_rejected; ++g_corner_startup.starts_blocked;
+                     g_corner_startup.blocked_reason = !have_sample || quiet_ms < 500u ? LAP_ENCODER : LAP_PATH;
+                     g_lap.state = LAP_WAIT; state_at = now; return;
+@@ -333,10 +345,10 @@
+                     !finitef(config.min_feedforward) || config.min_feedforward < 0.0f || config.min_feedforward > 300.0f) {
+                     lap_motion_fault(LAP_CONFIG, now); return;
+                 }
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+                 if (is_bench) {
+                     /* 首次只运行1秒、两轮同目标60RPM，不读取视觉转向；须由主控悬空。
+-                     * 后续启动才使用原60RPM／12秒地面配置，参数不会被本测试覆盖。
++                     * 后续启动才使用目标原地面配置：直道80RPM／2秒、首弯80RPM／12秒。
+                      */
+                     config.straight_rpm = 60.0f; config.run_ms = 1000u;
+                     g_corner_startup.stage = 1u;
+@@ -440,12 +452,12 @@
+     diag_sample(now, dt, left, right, raw_left, raw_right);
+     if (absf(raw_left) > 600.0f || absf(raw_right) > 600.0f) { lap_motion_fault(LAP_OVERSPEED, now); return; }
+     if (raw_left < -5.0f || raw_right < -5.0f) { lap_motion_fault(LAP_REVERSE, now); return; }
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+     if (!bench_running() && !fresh(now)) { lap_motion_fault(LAP_LINK, now); return; }
+ #else
+     if (!fresh(now)) { lap_motion_fault(LAP_LINK, now); return; }
+ #endif
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef LAP_DUAL_STARTUP
+     if (bench_running()) {
+         /* 固定已知左右映射，累计正向净计数；反向／过速检查已在上面执行。
+          * 相机抖动、无路径或弯道大差速不应影响悬空双轮同速测试。
+@@ -454,6 +466,8 @@
+         g_corner_startup.right_counts += right->delta * g_speed_match.right_sign;
+         targets[0] = targets[1] = 60.0f;
+     } else
++#endif
++#ifdef RIGHT_ANGLE_TARGET
+     {
+         corner_guide_t guide = g_corner_guide;
+         if (!corner_guide_update(&guide, g_lap.active.straight_rpm, g_lap.steering,
+--- a/control/App/Motion/lap_motion.h
++++ b/control/App/Motion/lap_motion.h
+@@ -6,6 +6,10 @@
+ #ifndef YEYE_LAP_MOTION_H
+ #define YEYE_LAP_MOTION_H
+ #include "speed_match.h"
++/* 仅首弯及本次直道适配目标复用双轮启动监督；旧直道目标保留原行为。 */
++#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
++#define LAP_DUAL_STARTUP 1
++#endif
+ typedef enum { LAP_CALIBRATION, LAP_WAIT, LAP_HOLD, LAP_ARMED, LAP_RUNNING, LAP_STOPPED, LAP_FAULT } lap_state_t;
+ typedef enum { LAP_OK, LAP_KEY, LAP_LINK, LAP_PATH, LAP_ENCODER, LAP_REVERSE, LAP_OVERSPEED,
+                LAP_NO_FEEDBACK, LAP_CONFIG, LAP_HARDWARE, LAP_TRANSPORT, LAP_LIMIT } lap_reason_t;
+@@ -68,8 +72,8 @@
+ extern volatile lap_view_t g_lap;
+ extern volatile lap_result_t g_lap_last;
+ extern volatile lap_diag_view_t g_lap_diag;
+-#ifdef RIGHT_ANGLE_TARGET
+-/** @brief 首弯启动监督，与g_lap既有布局独立，便于保留旧取证工具。
++#ifdef LAP_DUAL_STARTUP
++/** @brief 首弯／直道适配版共用启动监督，与g_lap既有布局独立，便于保留旧取证工具。
+  * stage：0等首次双轮悬空测试，1正在测试，2测试完成可上道；所有时间ms。
+  * completed只在两轮反馈及完整1秒测试均通过后置1；复位后须重新双轮测试。
+  * blocked_reason是最近一次KEY被拒绝的lap_reason_t数值，不锁故障。
+@@ -84,7 +88,7 @@
+ #endif
+ void lap_motion_init(uint32_t now);
+ /** @brief 1ms监督KEY／200ms通信／运行上限；长按1..3秒后松开启动，5秒卡键故障。
+- * 原目标前两次单轮配对；首弯目标第一次KEY双轮悬空1秒，下一次KEY上道。
++ * 原目标前两次单轮配对；首弯／直道适配目标第一次KEY双轮悬空1秒，下一次KEY上道。
+  * 首弯v5上道允许当前双侧或当前L形预测，弱关联不能冷启动；旧目标保持双边要求。
+  * 首次双轮测试不依赖相机，不跟随弯道差速。
+  */
+--- a/control/App/Motion/speed_match.c
++++ b/control/App/Motion/speed_match.c
+@@ -82,11 +82,11 @@
+     memset(cal_sum, 0, sizeof(cal_sum)); memset(cal_abs, 0, sizeof(cal_abs));
+     zero_output();
+ }
+-#ifdef RIGHT_ANGLE_TARGET
++#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
+ int speed_match_use_verified_mapping(void) {
+     /* 两轮同时转动无法唯一辨认哪个编码器属于左轮；不能借双轮测试猜映射。
+      * 这里直接沿用已实际跑通直道的Flash/RAM冻结环证据，原始a/b采集不变。
+-     * 仅本首弯目标编入此入口，原SpeedMatch／直道目标仍保留原来的行为。
++     * 仅首弯及直道双轮启动目标编入此入口，原SpeedMatch／直道目标行为不变。
+      */
+     if (g_speed_match.state != SPEED_WAIT_RELEASE || g_speed_match.phase != 0u ||
+         g_speed_match.left_pwm != 0u || g_speed_match.right_pwm != 0u) return 0;
+--- a/control/App/Motion/speed_match.h
++++ b/control/App/Motion/speed_match.h
+@@ -45,8 +45,8 @@
+ extern volatile speed_match_view_t g_speed_match;
+ /** @brief 清状态／PI及通道映射；上电不动。now单位ms，指针参数均须有效。 */
+ void speed_match_init(uint32_t now);
+-#ifdef RIGHT_ANGLE_TARGET
+-/** @brief 首弯专用：装载当前安装已实跑核实的映射，取消逐轮重新配对。
++#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
++/** @brief 首弯／直道双轮启动专用：装载当前安装已实跑核实的映射，取消逐轮重新配对。
+  * 无参数，返回1表示成功；只能在init后的零输出等待状态调用，否则返回0。
+  * 依据2026-11-18 ground_03_capture：左TIM3/+1，右TIM4/-1。
+  * 只安装已知配置，不把本次双轮测试称作重新识别左右通道；接线改变后须更新证据。
+--- a/control/Core/Src/low_speed_lap_main.c
++++ b/control/Core/Src/low_speed_lap_main.c
+@@ -1,7 +1,7 @@
+ /** @file low_speed_lap_main.c
+  * @brief 低速循迹／独立直道的编译期入口，复用原PWM、编码器采集及计数算法。
+  * HSI16MHz、TIM1输出、TIM3/4编码器、TIM5启动限时、IWDG及KEY停止均保留。
+- * 原目标前两次KEY逐轮校准；RightAngle R2首次KEY双轮悬空1秒，下一次上道。
++ * 原目标前两次KEY逐轮校准；首弯及直道适配版首次KEY双轮悬空1秒，下一次上道。
+  * 地面UART断流仍由1ms监督撤驱动，悬空仅豁免视觉许可，不豁免电机保护。
+  */
+ #include "lap_motion.h"
+@@ -226,7 +226,9 @@
+ 
+ /** @brief 先撤PWM，再初始化编码器／状态与启动监督；默认只读采集，不自启。 */
+ int main(void) {
+-#ifdef RIGHT_ANGLE_TARGET
++#ifdef STRAIGHT_DUAL_START_TARGET
++    g_speed_revision = 0x02120003u; /* 直道R2控制不变；沿用实证映射，首次KEY双轮1秒。 */
++#elif defined(RIGHT_ANGLE_TARGET)
+     g_speed_revision = 0x02120012u; /* 首弯R4/v5：当前L形预测可启动，大半径前进圆弧。 */
+ #elif defined(STRAIGHT_ASSIST_TARGET)
+     g_speed_revision = 0x02120002u; /* 独立直道v3：加入编码器差速补偿，减轻快轮超调。 */
+--- a/control/tools/lap_swd_capture.py
++++ b/control/tools/lap_swd_capture.py
+@@ -128,12 +128,16 @@
+     global AXF
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--output', type=Path, required=True)
+-    parser.add_argument('--profile', choices=('lap', 'straight', 'right-angle'), default='lap',
++    parser.add_argument('--frequency', type=int, default=1000000, choices=(100000, 1000000),
++                        help='SWD read clock in Hz; 100kHz retries an unstable physical link without reset')
++    parser.add_argument('--profile', choices=('lap', 'straight', 'straight-dual', 'right-angle'), default='lap',
+                         help='straight selects StraightAssist AXF and revision, never writes Flash')
+     parser.add_argument('--image', type=Path, help='archived AXF plus adjacent BIN; Flash must match before RAM decode')
+     args = parser.parse_args()
+     if args.profile == 'straight':
+         AXF = ROOT/'control/build/firmware/straight_assist/straight_assist.axf'
++    elif args.profile == 'straight-dual':
++        AXF = ROOT/'control/build/firmware/straight_dual_start/straight_dual_start.axf'
+     elif args.profile == 'right-angle':
+         AXF = ROOT/'control/build/firmware/right_angle/right_angle.axf'
+     if args.image is not None:
+@@ -141,8 +145,10 @@
+         if AXF.suffix.lower() != '.axf' or not AXF.is_file() or not AXF.with_suffix('.bin').is_file():
+             raise ValueError('AXF and adjacent BIN required')
+     revisions = (0x02120002,) if args.profile == 'straight' else (0x02110009, 0x0211000B)
+-    minimum_rpm, maximum_rpm = (40, 100) if args.profile == 'straight' else (10, 60)
+-    maximum_run = 3000 if args.profile == 'straight' else 300000
++    if args.profile == 'straight-dual':
++        revisions = (0x02120003,)
++    minimum_rpm, maximum_rpm = (40, 100) if args.profile in ('straight', 'straight-dual') else (10, 60)
++    maximum_run = 3000 if args.profile in ('straight', 'straight-dual') else 300000
+     if args.profile == 'right-angle':
+         revisions = (0x02120010, 0x02120011, 0x02120012)
+         minimum_rpm, maximum_rpm, maximum_run = 40, 80, 15000
+@@ -151,7 +157,7 @@
+     result = dict(probe_id=PROBE_ID, reset_requested=False, halt_requested=False, resume_requested=False,
+                   flash_written=False, source_symbols=addresses, samples=[])
+     session = ConnectHelper.session_with_chosen_probe(blocking=False, unique_id=PROBE_ID,
+-        options={'target_override': 'cortex_m', 'connect_mode': 'attach', 'frequency': 1000000,
++        options={'target_override': 'cortex_m', 'connect_mode': 'attach', 'frequency': args.frequency,
+                  'auto_unlock': False, 'resume_on_disconnect': False})
+     if session is None:
+         raise RuntimeError('expected CMSIS-DAP not available; no other probe selected')

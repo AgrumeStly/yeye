@@ -1,0 +1,390 @@
+{"at": 1795093035.6023104, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1795093035.6469145, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1795093036.1816251, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1795093036.1818116, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1795093036.1820796, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1795093036.182436, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1795093036.1841938, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1795093036.1842716, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1795093036.1843438, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1795093037.1667166, "event": "scriptOutput", "params": {"text": "deprecated function\r\nTraceback (most recent call last):\r\n  File \"<stdin>\", line 730, in <module>\r\n  File \"<stdin>\", line 716, in _runtime_boot\r\n  File \"<stdin>\", line 625, in main\r\nException: IDE interrupt\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795093037.167274, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1795093037.1673708, "id": 2, "result": {"running": false}}
+{"at": 1795093037.1675217, "request": {"id": 3, "method": "runScript", "params": {"script_sha256": "3bdfd1603182740ced8035b2a0f793eb88bb9d0f38756ece0f15e80348db86b4"}}}
+{"at": 1795093037.3520987, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795093038.3682055, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1795093038.3683317, "id": 3, "result": {"status": "ok"}}
+{"at": 1795093038.3686283, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[STRAIGHT LOG] /sdcard/straight_logs/run_0009.jsonl ALLOW_DRIVE True NO AUTO START\r\nfind sensor gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 24, output 1920x1080@60\r\ndeprecated function\r\n"}}
+{"at": 1795093040.2069066, "event": "scriptOutput", "params": {"text": "sensor(0), mode 0, buffer_num 4, buffer_size 0\r\n"}}
+{"at": 1795093041.4060924, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -220 valid True ms 34\r\n"}}
+{"at": 1795093041.4064386, "request": {"id": 4, "method": "scriptRunning", "params": {}}}
+{"at": 1795093041.4070706, "id": 4, "result": {"running": true}}
+{"at": 1795093042.4949903, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093043.592312, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093044.5737202, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093044.5741463, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1795093044.5748866, "id": 5, "result": {"running": true}}
+{"at": 1795093045.6590743, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093046.7562656, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093047.7710857, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1795093047.7717638, "id": 6, "result": {"running": true}}
+{"at": 1795093047.8485346, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093048.8274486, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093049.9168723, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093050.945666, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1795093050.9465315, "id": 7, "result": {"running": true}}
+{"at": 1795093050.992789, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -48 valid True ms 31\r\n"}}
+{"at": 1795093052.084522, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -48 valid True ms 32\r\n"}}
+{"at": 1795093053.0672264, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093054.1214118, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1795093054.1221528, "id": 8, "result": {"running": true}}
+{"at": 1795093054.1533358, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093055.2481549, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093056.3393142, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093057.3230228, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093057.3234096, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1795093057.3239818, "id": 9, "result": {"running": true}}
+{"at": 1795093058.4139223, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 35\r\n"}}
+{"at": 1795093059.5081937, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093060.4882052, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093060.4885442, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1795093060.4890268, "id": 10, "result": {"running": true}}
+{"at": 1795093061.5771031, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093062.660403, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093063.6886616, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1795093063.6895316, "id": 11, "result": {"running": true}}
+{"at": 1795093063.7505252, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093064.8440783, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093065.8253336, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093066.8836348, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1795093066.8845398, "id": 12, "result": {"running": true}}
+{"at": 1795093066.9155147, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093068.011903, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093068.9906497, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093070.047464, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1795093070.0484455, "id": 13, "result": {"running": true}}
+{"at": 1795093070.0789833, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093071.173595, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093072.2628787, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093073.0562763, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1795093073.0572002, "id": 14, "result": {"running": true}}
+{"at": 1795093073.2428966, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093074.3378317, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093075.41113, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093076.1893368, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1795093076.189918, "id": 15, "result": {"running": true}}
+{"at": 1795093076.5011148, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093077.5868008, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 35\r\n"}}
+{"at": 1795093078.5719502, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093079.3522048, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1795093079.3529978, "id": 16, "result": {"running": true}}
+{"at": 1795093079.6609325, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093080.7582495, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093081.847645, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093082.372298, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1795093082.3730097, "id": 17, "result": {"running": true}}
+{"at": 1795093082.8262174, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093083.9293897, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093085.022879, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093085.5353916, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1795093085.5360475, "id": 18, "result": {"running": true}}
+{"at": 1795093086.099104, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093087.0792968, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093088.1712499, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093088.6754951, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1795093088.676173, "id": 19, "result": {"running": true}}
+{"at": 1795093089.26571, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093090.3554106, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093091.3428283, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093091.8580992, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1795093091.8588557, "id": 20, "result": {"running": true}}
+{"at": 1795093092.420989, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 35\r\n"}}
+{"at": 1795093093.5114143, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093094.6095176, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093094.871759, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1795093094.872511, "id": 21, "result": {"running": true}}
+{"at": 1795093095.6968, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093096.669092, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093097.7698464, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093098.0318248, "request": {"id": 22, "method": "scriptRunning", "params": {}}}
+{"at": 1795093098.032636, "id": 22, "result": {"running": true}}
+{"at": 1795093098.85846, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093099.8391645, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093100.9280624, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 33\r\n"}}
+{"at": 1795093101.19232, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1795093101.1931567, "id": 23, "result": {"running": true}}
+{"at": 1795093102.0196478, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093103.0966923, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093104.0787928, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 31\r\n"}}
+{"at": 1795093104.3413603, "request": {"id": 24, "method": "scriptRunning", "params": {}}}
+{"at": 1795093104.34213, "id": 24, "result": {"running": true}}
+{"at": 1795093105.1656575, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093106.258528, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093107.3466282, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093107.347003, "request": {"id": 25, "method": "scriptRunning", "params": {}}}
+{"at": 1795093107.3476567, "id": 25, "result": {"running": true}}
+{"at": 1795093108.4220762, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 34\r\n"}}
+{"at": 1795093109.3998494, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093110.435099, "request": {"id": 26, "method": "scriptRunning", "params": {}}}
+{"at": 1795093110.43608, "id": 26, "result": {"running": true}}
+{"at": 1795093110.4975746, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 32\r\n"}}
+{"at": 1795093111.5877767, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 32\r\n"}}
+{"at": 1795093112.6657758, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -35 valid True ms 35\r\n"}}
+{"at": 1795093113.4492419, "request": {"id": 27, "method": "scriptRunning", "params": {}}}
+{"at": 1795093113.4503217, "id": 27, "result": {"running": true}}
+{"at": 1795093113.7632701, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 32\r\n"}}
+{"at": 1795093114.8482869, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -35 valid True ms 35\r\n"}}
+{"at": 1795093115.9363961, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -35 valid True ms 35\r\n"}}
+{"at": 1795093116.4648652, "request": {"id": 28, "method": "scriptRunning", "params": {}}}
+{"at": 1795093116.465755, "id": 28, "result": {"running": true}}
+{"at": 1795093117.026207, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -44 valid True ms 33\r\n"}}
+{"at": 1795093118.009487, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 31\r\n"}}
+{"at": 1795093119.0975084, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 32\r\n"}}
+{"at": 1795093119.6252928, "request": {"id": 29, "method": "scriptRunning", "params": {}}}
+{"at": 1795093119.6261523, "id": 29, "result": {"running": true}}
+{"at": 1795093120.186108, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 31\r\n"}}
+{"at": 1795093121.2769575, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 33\r\n"}}
+{"at": 1795093122.2536738, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 32\r\n"}}
+{"at": 1795093122.7815073, "request": {"id": 30, "method": "scriptRunning", "params": {}}}
+{"at": 1795093122.7822223, "id": 30, "result": {"running": true}}
+{"at": 1795093123.3427267, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 34\r\n"}}
+{"at": 1795093124.412451, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 34\r\n"}}
+{"at": 1795093125.5002484, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 34\r\n"}}
+{"at": 1795093126.026783, "request": {"id": 31, "method": "scriptRunning", "params": {}}}
+{"at": 1795093126.027504, "id": 31, "result": {"running": true}}
+{"at": 1795093126.476529, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 34\r\n"}}
+{"at": 1795093127.569913, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 34\r\n"}}
+{"at": 1795093128.6615405, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -38 valid True ms 32\r\n"}}
+{"at": 1795093129.1915455, "request": {"id": 32, "method": "scriptRunning", "params": {}}}
+{"at": 1795093129.1923063, "id": 32, "result": {"running": true}}
+{"at": 1795093129.754068, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 32\r\n"}}
+{"at": 1795093130.729973, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -48 valid True ms 31\r\n"}}
+{"at": 1795093131.8200226, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err 30 valid True ms 32\r\n"}}
+{"at": 1795093132.3453069, "request": {"id": 33, "method": "scriptRunning", "params": {}}}
+{"at": 1795093132.3462756, "id": 33, "result": {"running": true}}
+{"at": 1795093132.9054875, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -7 valid True ms 32\r\n"}}
+{"at": 1795093133.8842604, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -1 valid True ms 32\r\n"}}
+{"at": 1795093134.9750478, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -7 valid True ms 31\r\n"}}
+{"at": 1795093135.504048, "request": {"id": 34, "method": "scriptRunning", "params": {}}}
+{"at": 1795093135.5048, "id": 34, "result": {"running": true}}
+{"at": 1795093136.0613563, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -1 valid True ms 34\r\n"}}
+{"at": 1795093137.0432525, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -9 valid True ms 34\r\n"}}
+{"at": 1795093138.1330578, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -1 valid True ms 33\r\n"}}
+{"at": 1795093138.648712, "request": {"id": 35, "method": "scriptRunning", "params": {}}}
+{"at": 1795093138.6497211, "id": 35, "result": {"running": true}}
+{"at": 1795093139.2266347, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -3 valid True ms 33\r\n"}}
+{"at": 1795093140.2113674, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -3 valid True ms 34\r\n"}}
+{"at": 1795093141.3032045, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093141.8195298, "request": {"id": 36, "method": "scriptRunning", "params": {}}}
+{"at": 1795093141.8199692, "id": 36, "result": {"running": true}}
+{"at": 1795093142.3962576, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 32\r\n"}}
+{"at": 1795093143.483185, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 31\r\n"}}
+{"at": 1795093144.574165, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093144.8380327, "request": {"id": 37, "method": "scriptRunning", "params": {}}}
+{"at": 1795093144.8388443, "id": 37, "result": {"running": true}}
+{"at": 1795093145.5564632, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093146.6357722, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 34\r\n"}}
+{"at": 1795093147.726491, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 33\r\n"}}
+{"at": 1795093147.9905877, "request": {"id": 38, "method": "scriptRunning", "params": {}}}
+{"at": 1795093147.9911327, "id": 38, "result": {"running": true}}
+{"at": 1795093148.7069225, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 34\r\n"}}
+{"at": 1795093149.800107, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 32\r\n"}}
+{"at": 1795093150.8758504, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 32\r\n"}}
+{"at": 1795093151.1397717, "request": {"id": 39, "method": "scriptRunning", "params": {}}}
+{"at": 1795093151.1407278, "id": 39, "result": {"running": true}}
+{"at": 1795093151.9686904, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 32\r\n"}}
+{"at": 1795093152.9531665, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 32\r\n"}}
+{"at": 1795093154.035128, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 33\r\n"}}
+{"at": 1795093154.3005965, "request": {"id": 40, "method": "scriptRunning", "params": {}}}
+{"at": 1795093154.3014994, "id": 40, "result": {"running": true}}
+{"at": 1795093155.1269403, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 33\r\n"}}
+{"at": 1795093156.1088278, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 31\r\n"}}
+{"at": 1795093157.2021534, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 34\r\n"}}
+{"at": 1795093157.4659128, "request": {"id": 41, "method": "scriptRunning", "params": {}}}
+{"at": 1795093157.4666388, "id": 41, "result": {"running": true}}
+{"at": 1795093158.295523, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 33\r\n"}}
+{"at": 1795093159.2733204, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093160.3651898, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -2 valid True ms 33\r\n"}}
+{"at": 1795093160.6292, "request": {"id": 42, "method": "scriptRunning", "params": {}}}
+{"at": 1795093160.6301079, "id": 42, "result": {"running": true}}
+{"at": 1795093161.459028, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093162.442734, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093163.5369442, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 33\r\n"}}
+{"at": 1795093163.7884827, "request": {"id": 43, "method": "scriptRunning", "params": {}}}
+{"at": 1795093163.7892246, "id": 43, "result": {"running": true}}
+{"at": 1795093164.6287198, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 31\r\n"}}
+{"at": 1795093165.6112857, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 33\r\n"}}
+{"at": 1795093166.7023757, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 32\r\n"}}
+{"at": 1795093166.965216, "request": {"id": 44, "method": "scriptRunning", "params": {}}}
+{"at": 1795093166.9666202, "id": 44, "result": {"running": true}}
+{"at": 1795093167.7921505, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093168.8829393, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093169.866357, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 32\r\n"}}
+{"at": 1795093170.1174326, "request": {"id": 45, "method": "scriptRunning", "params": {}}}
+{"at": 1795093170.1183696, "id": 45, "result": {"running": true}}
+{"at": 1795093170.9589653, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 32\r\n"}}
+{"at": 1795093172.044569, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 33\r\n"}}
+{"at": 1795093173.131783, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -3 valid True ms 32\r\n"}}
+{"at": 1795093173.132267, "request": {"id": 46, "method": "scriptRunning", "params": {}}}
+{"at": 1795093173.1328418, "id": 46, "result": {"running": true}}
+{"at": 1795093174.1029978, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -7 valid True ms 32\r\n"}}
+{"at": 1795093175.1968675, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -3 valid True ms 32\r\n"}}
+{"at": 1795093176.2530293, "request": {"id": 47, "method": "scriptRunning", "params": {}}}
+{"at": 1795093176.2539153, "id": 47, "result": {"running": true}}
+{"at": 1795093176.2852337, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -7 valid True ms 32\r\n"}}
+{"at": 1795093177.2686238, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 32\r\n"}}
+{"at": 1795093178.3591857, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -2 valid True ms 31\r\n"}}
+{"at": 1795093179.416659, "request": {"id": 48, "method": "scriptRunning", "params": {}}}
+{"at": 1795093179.4178672, "id": 48, "result": {"running": true}}
+{"at": 1795093179.4477317, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -2 valid True ms 33\r\n"}}
+{"at": 1795093180.4121046, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 32\r\n"}}
+{"at": 1795093181.5039308, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 31\r\n"}}
+{"at": 1795093182.5477736, "request": {"id": 49, "method": "scriptRunning", "params": {}}}
+{"at": 1795093182.5485322, "id": 49, "result": {"running": true}}
+{"at": 1795093182.5957167, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -8 valid True ms 33\r\n"}}
+{"at": 1795093183.6856863, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -5 valid True ms 34\r\n"}}
+{"at": 1795093184.6583657, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -351 valid True ms 32\r\n"}}
+{"at": 1795093185.6673148, "request": {"id": 50, "method": "scriptRunning", "params": {}}}
+{"at": 1795093185.6680663, "id": 50, "result": {"running": true}}
+{"at": 1795093185.7460306, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -42 valid True ms 35\r\n"}}
+{"at": 1795093186.8396738, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -292 valid True ms 35\r\n"}}
+{"at": 1795093187.818635, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -292 valid True ms 34\r\n"}}
+{"at": 1795093188.8644083, "request": {"id": 51, "method": "scriptRunning", "params": {}}}
+{"at": 1795093188.865182, "id": 51, "result": {"running": true}}
+{"at": 1795093188.9112797, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -292 valid True ms 31\r\n"}}
+{"at": 1795093189.9880867, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -292 valid True ms 33\r\n"}}
+{"at": 1795093190.972461, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -292 valid True ms 32\r\n"}}
+{"at": 1795093192.0015342, "request": {"id": 52, "method": "scriptRunning", "params": {}}}
+{"at": 1795093192.0027006, "id": 52, "result": {"running": true}}
+{"at": 1795093192.1747055, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -286 valid True ms 32\r\n"}}
+{"at": 1795093193.1537867, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -292 valid True ms 32\r\n"}}
+{"at": 1795093194.238424, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -75 valid True ms 32\r\n"}}
+{"at": 1795093195.0193343, "request": {"id": 53, "method": "scriptRunning", "params": {}}}
+{"at": 1795093195.020061, "id": 53, "result": {"running": true}}
+{"at": 1795093195.3298018, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err 50 valid True ms 34\r\n"}}
+{"at": 1795093196.4159732, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -63 valid True ms 36\r\n"}}
+{"at": 1795093197.512173, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 35\r\n"}}
+{"at": 1795093198.0252752, "request": {"id": 54, "method": "scriptRunning", "params": {}}}
+{"at": 1795093198.0260708, "id": 54, "result": {"running": true}}
+{"at": 1795093198.6048663, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -63 valid True ms 36\r\n"}}
+{"at": 1795093199.6928446, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -63 valid True ms 35\r\n"}}
+{"at": 1795093200.772086, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -66 valid True ms 37\r\n"}}
+{"at": 1795093201.0368063, "request": {"id": 55, "method": "scriptRunning", "params": {}}}
+{"at": 1795093201.0372896, "id": 55, "result": {"running": true}}
+{"at": 1795093201.86281, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -63 valid True ms 35\r\n"}}
+{"at": 1795093202.8443255, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -63 valid True ms 36\r\n"}}
+{"at": 1795093203.9322996, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -63 valid True ms 35\r\n"}}
+{"at": 1795093204.1960883, "request": {"id": 56, "method": "scriptRunning", "params": {}}}
+{"at": 1795093204.1967442, "id": 56, "result": {"running": true}}
+{"at": 1795093205.021394, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err 8 valid True ms 33\r\n"}}
+{"at": 1795093206.1139681, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err 37 valid True ms 34\r\n"}}
+{"at": 1795093207.2043006, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093207.2047057, "request": {"id": 57, "method": "scriptRunning", "params": {}}}
+{"at": 1795093207.2052207, "id": 57, "result": {"running": true}}
+{"at": 1795093208.3003843, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -53 valid True ms 34\r\n"}}
+{"at": 1795093209.283832, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -53 valid True ms 34\r\n"}}
+{"at": 1795093210.3241837, "request": {"id": 58, "method": "scriptRunning", "params": {}}}
+{"at": 1795093210.3251386, "id": 58, "result": {"running": true}}
+{"at": 1795093210.3723412, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -53 valid True ms 36\r\n"}}
+{"at": 1795093211.4605393, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -53 valid True ms 35\r\n"}}
+{"at": 1795093212.5515127, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -59 valid True ms 36\r\n"}}
+{"at": 1795093213.331843, "request": {"id": 59, "method": "scriptRunning", "params": {}}}
+{"at": 1795093213.3325284, "id": 59, "result": {"running": true}}
+{"at": 1795093213.6418962, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -51 valid True ms 35\r\n"}}
+{"at": 1795093214.7351112, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 34\r\n"}}
+{"at": 1795093215.8328435, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 36\r\n"}}
+{"at": 1795093216.36107, "request": {"id": 60, "method": "scriptRunning", "params": {}}}
+{"at": 1795093216.3618534, "id": 60, "result": {"running": true}}
+{"at": 1795093216.9234185, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -52 valid True ms 32\r\n"}}
+{"at": 1795093218.021177, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 34\r\n"}}
+{"at": 1795093219.0979664, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 33\r\n"}}
+{"at": 1795093219.610997, "request": {"id": 61, "method": "scriptRunning", "params": {}}}
+{"at": 1795093219.6117008, "id": 61, "result": {"running": true}}
+{"at": 1795093220.186055, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 35\r\n"}}
+{"at": 1795093221.1655064, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093222.2520425, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -48 valid True ms 33\r\n"}}
+{"at": 1795093222.7661467, "request": {"id": 62, "method": "scriptRunning", "params": {}}}
+{"at": 1795093222.766892, "id": 62, "result": {"running": true}}
+{"at": 1795093223.342812, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -48 valid True ms 35\r\n"}}
+{"at": 1795093224.4173074, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093225.5107496, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093226.0125024, "request": {"id": 63, "method": "scriptRunning", "params": {}}}
+{"at": 1795093226.0133593, "id": 63, "result": {"running": true}}
+{"at": 1795093226.6052308, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093227.6962543, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093228.783473, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093229.0452917, "request": {"id": 64, "method": "scriptRunning", "params": {}}}
+{"at": 1795093229.0460126, "id": 64, "result": {"running": true}}
+{"at": 1795093229.7624831, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093230.8521287, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093231.939998, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093232.2023776, "request": {"id": 65, "method": "scriptRunning", "params": {}}}
+{"at": 1795093232.2031782, "id": 65, "result": {"running": true}}
+{"at": 1795093233.0309935, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093234.1163282, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093235.2095852, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093235.2099886, "request": {"id": 66, "method": "scriptRunning", "params": {}}}
+{"at": 1795093235.210502, "id": 66, "result": {"running": true}}
+{"at": 1795093236.2986097, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093237.3924904, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093238.449169, "request": {"id": 67, "method": "scriptRunning", "params": {}}}
+{"at": 1795093238.4498446, "id": 67, "result": {"running": true}}
+{"at": 1795093238.4802113, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093239.4626956, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093240.5554886, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093241.5851936, "request": {"id": 68, "method": "scriptRunning", "params": {}}}
+{"at": 1795093241.5866127, "id": 68, "result": {"running": true}}
+{"at": 1795093241.6329424, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093242.7245674, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093243.812278, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 33\r\n"}}
+{"at": 1795093244.5926168, "request": {"id": 69, "method": "scriptRunning", "params": {}}}
+{"at": 1795093244.5933785, "id": 69, "result": {"running": true}}
+{"at": 1795093244.9030201, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093245.9790766, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093247.0729804, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093247.8529298, "request": {"id": 70, "method": "scriptRunning", "params": {}}}
+{"at": 1795093247.853584, "id": 70, "result": {"running": true}}
+{"at": 1795093248.1648169, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093249.2552373, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093250.348003, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -57 valid True ms 35\r\n"}}
+{"at": 1795093250.864319, "request": {"id": 71, "method": "scriptRunning", "params": {}}}
+{"at": 1795093250.865179, "id": 71, "result": {"running": true}}
+{"at": 1795093251.4251173, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -50 valid True ms 34\r\n"}}
+{"at": 1795093252.4107957, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -53 valid True ms 36\r\n"}}
+{"at": 1795093253.5025299, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -51 valid True ms 34\r\n"}}
+{"at": 1795093254.0180628, "request": {"id": 72, "method": "scriptRunning", "params": {}}}
+{"at": 1795093254.0189245, "id": 72, "result": {"running": true}}
+{"at": 1795093254.5919988, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093255.6797628, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093256.7671087, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093257.0311606, "request": {"id": 73, "method": "scriptRunning", "params": {}}}
+{"at": 1795093257.0319438, "id": 73, "result": {"running": true}}
+{"at": 1795093257.8521504, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093258.9470518, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -51 valid True ms 35\r\n"}}
+{"at": 1795093259.9302845, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093260.193832, "request": {"id": 74, "method": "scriptRunning", "params": {}}}
+{"at": 1795093260.1946118, "id": 74, "result": {"running": true}}
+{"at": 1795093261.0211325, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093262.1008203, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 36\r\n"}}
+{"at": 1795093263.1934261, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093263.456756, "request": {"id": 75, "method": "scriptRunning", "params": {}}}
+{"at": 1795093263.4575384, "id": 75, "result": {"running": true}}
+{"at": 1795093264.2837842, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093265.3714833, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 35\r\n"}}
+{"at": 1795093266.4557676, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093266.719423, "request": {"id": 76, "method": "scriptRunning", "params": {}}}
+{"at": 1795093266.7203305, "id": 76, "result": {"running": true}}
+{"at": 1795093267.5451272, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093268.5249135, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 37\r\n"}}
+{"at": 1795093269.7258263, "event": "scriptOutput", "params": {"text": "[STRAIGHT] ready err -54 valid True ms 34\r\n"}}
+{"at": 1795093269.7260695, "request": {"id": 77, "method": "scriptRunning", "params": {}}}
+{"at": 1795093269.7264032, "id": 77, "result": {"running": true}}
+{"at": 1795093269.9909518, "request": {"id": 78, "method": "stopScript", "params": {}}}
+{"at": 1795093270.755234, "event": "scriptOutput", "params": {"text": "deprecated function\r\nTraceback (most recent call last):\r\n  File \"<stdin>\", line 551, in <module>\r\n  File \"<stdin>\", line 522, in main\r\nException: IDE interrupt\r\n"}}
+{"at": 1795093270.7564216, "id": 78, "result": {}}
+{"at": 1795093270.7564905, "request": {"id": 79, "method": "scriptRunning", "params": {}}}
+{"at": 1795093270.7565713, "event": "scriptOutput", "params": {"text": "MPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795093270.7569563, "id": 79, "result": {"running": false}}
+{"at": 1795093270.7570605, "request": {"id": 80, "method": "disconnectBoard", "params": {}}}
+{"at": 1795093271.207551, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795093271.2081254, "id": 80, "result": {}}

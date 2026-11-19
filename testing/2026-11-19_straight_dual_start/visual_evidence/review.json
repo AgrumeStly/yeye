@@ -1,0 +1,16 @@
+{
+  "remote": "/sdcard/straight_logs/run_0009.jsonl",
+  "main_py_written": false,
+  "script_started": false,
+  "automatic_motor_start": false,
+  "status": {
+    "running": false
+  },
+  "stat": {
+    "exists": true,
+    "type": "file",
+    "size": 0,
+    "mtime": 1735690672
+  },
+  "error": "RuntimeError('invalid log metadata; preserve failure')"
+}
