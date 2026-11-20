@@ -12,14 +12,14 @@
 - SpeedMatch闭环、视觉采集／离线识别和真实UART已有后续证据，旧“闭环未实现／视觉未归档”不再作为全局现状。HardwareBench老目标边界不等于独立试跑目标边界。
 - 语音、全车越线后自动停车、完整圈及报告终稿尚未形成完整实证；结构尺寸／重量等历史缺证仍按原证据核对，不以本次当前进度验收补造测量或未实施能力。
 - 主控现已明确语音接续交给队友电脑上的本地dsh，沿用现有K230麦克风和扬声器。AI阅读入口为[AI_HANDOFF.md](../AI_HANDOFF.md)和[语音交接](voice_handoff.md)；本次只整理文档并上传，队友本机环境、方案、实现及验证由视觉与dsh继续。当前研发目标拒绝远程START，STATUS无实际动作回执，交接已列明，未改接口。
-- 当前本地分支codex/current-version-20261025，HEAD 82e237ed3e127b0bebc1846d932f7e9b3c28b05e；相对本地远端跟踪引用领先5次成果提交，另有共享未提交原位源码及未跟踪依赖。GitHub元数据核对默认分支仍为main，本轮总管未推送或更新main。
-- 上次[74a45ef架构上传](tasks/TASK-20261119-01-architecture-upload.md)已由主控本次统一验收；其67份文件仅为当次文档范围。现授权通过新发布任务整理完整原位实现与依赖到main，解决此前仅有patch／快照、默认clone仍是旧版的问题。
+- 完整当前版与AI语音交接主提交[15adcc5c1093a3162f27907457687c75e0fd8121](https://github.com/AgrumeStly/yeye/commit/15adcc5c1093a3162f27907457687c75e0fd8121)已同步到开发分支及默认main；补齐此前未提交原位源码与依赖，保留5次已有成果提交。普通clone自动选main且干净，614份非交付回填内容和553份现场原件核对通过；结果回填随后随正常提交同步main，最终号在发布回报中给出。
+- 上次[74a45ef架构上传](tasks/TASK-20261119-01-architecture-upload.md)已验收，其文档范围作为历史保留。当前完整发布及未随库内容见[发布任务](tasks/TASK-20261119-02-current-version-main.md)；本机UI／用户路径配置、忽略环境和认证保留本地，未编辑运行源码或进行新功能验证。
 
 ## 下一步与管理边界
 
 主控已指定本对话为新总管，并于2026-11-19明确“org-03验收通过”。总管已核对[ORG-03架构交付](tasks/ORG-03-TASK-ARCHITECTURE.md)及归档检查，登记该管理架构成果已验收；该结论不扩大到车辆能力或其它S0任务。
 
-唯一下一步：[完整当前版本发布到main](tasks/TASK-20261119-02-current-version-main.md)按主控本次直接指派进行中，纳入指导dsh接续语音的两份文档。本次完整版本归档、上传、main同步及普通clone核对已获授权；本对话完成文档与发布，其余开发工作交给队友与dsh，不再安排本机语音实现任务。
+唯一下一步：队友从默认main普通clone，读取[AI_HANDOFF.md](../AI_HANDOFF.md)并在本地dsh接续语音。[本次发布](tasks/TASK-20261119-02-current-version-main.md)已完成文档、版本上传和普通clone核对，资料／版本交付待主控确认；队友环境、方案、实现及验证均交接收方继续，不再安排本机语音实现任务。
 
 S2工程后续继续[I-04-RIGHT-ANGLE原任务](tasks/I-04-RIGHT-ANGLE.md)的同步日志阻塞修复；当前发布不修改算法、放宽保护或恢复设备动作，不重复索取已确认阶段成果的验收。
 
@@ -64,7 +64,7 @@ S2工程后续继续[I-04-RIGHT-ANGLE原任务](tasks/I-04-RIGHT-ANGLE.md)的同
 | I-05-MOTOR-POWER-DIAGNOSIS | S1 | 待核实 | [记录](../hardware_preparation/i05_motor_power_diagnosis_task.md) |
 | ORG-03-TASK-ARCHITECTURE | S0 | 已验收 | [记录](tasks/ORG-03-TASK-ARCHITECTURE.md) |
 | TASK-20261119-01-architecture-upload | S0 | 已验收 | [记录](tasks/TASK-20261119-01-architecture-upload.md) |
-| TASK-20261119-02-current-version-main | S0 | 进行中 | [记录](tasks/TASK-20261119-02-current-version-main.md) |
+| TASK-20261119-02-current-version-main | S0 | 待主控验收 | [记录](tasks/TASK-20261119-02-current-version-main.md) |
 
 ## 旧全局登记、无独立任务单的缺口
 

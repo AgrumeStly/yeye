@@ -4342,5 +4342,12 @@
       "working_sha256": "baead4c97636b05c9f729c3297ef0dc52a8199a38ae0c950b957065c10146729"
     }
   ],
-  "metadata_self_hashes": "Release metadata files are staged explicitly; no self-referential file hash or commit ID is required."
+  "metadata_self_hashes": "Release metadata files are staged explicitly; no self-referential file hash or commit ID is required.",
+  "primary_release_commit": "15adcc5c1093a3162f27907457687c75e0fd8121",
+  "delivery_metadata_updates": [
+    "project_planning/project_status.md",
+    "project_planning/tasks/TASK-20261119-02-current-version-main.md",
+    "project_planning/version_handoff.md"
+  ],
+  "manifest_phase": "Primary release snapshot. Later delivery metadata updates are documented separately and do not change runtime or evidence files."
 }

@@ -1,6 +1,12 @@
 # 版本与设备交接记录
 
-## 当前任务：完整当前版本及AI语音交接发布到main（2026-11-20，进行中）
+## 当前交付：完整当前版本及AI语音交接已发布到main（2026-11-20）
+
+当前版本主提交[`15adcc5c1093a3162f27907457687c75e0fd8121`](https://github.com/AgrumeStly/yeye/commit/15adcc5c1093a3162f27907457687c75e0fd8121)已普通atomic推送至main及原开发分支。已核对远端默认HEAD指向main且同号，并从GitHub运行不指定分支的普通clone：main、HEAD同号、工作区干净；614份非交付回填文件树与清单一致、553份现场原件字节哈希一致、26个AI交接本地链接可定位。当前任务、状态与收据随后随交付回填提交继续同步main，最终号在发布回报给出，避免自引用循环提交。
+
+队友只需普通clone后从根目录[AI_HANDOFF.md](../AI_HANDOFF.md)交给本地dsh；细节见[voice_handoff](voice_handoff.md)。既有原位源码与历史未跟踪依赖已归档，本机UI／用户路径配置、环境及认证没有随传。本轮未修改运行实现、安装语音环境、运行功能测试／构建或操作板卡；后续方案、队友本机环境、语音实现和验证交队友与dsh。
+
+核对入口：[实际清单](evidence/2026-11-19_current_version_main/file_manifest.json)、[静态检查](evidence/2026-11-19_current_version_main/static_checks.json)、[普通clone](evidence/2026-11-19_current_version_main/clone_verification.json)、[上传收据](evidence/2026-11-19_current_version_main/upload_receipt.json)。下方“尚未执行／进行中”均保留各自较早时点，不覆盖本段已完成发布事实。
 
 2026-11-20主控明确本对话整理指导AI的文档并上传，后续本机环境、语音方案、实现和验证交队友与本地dsh。根目录[AI_HANDOFF.md](../AI_HANDOFF.md)及[语音交接](voice_handoff.md)已整理，沿用现有K230麦克风和扬声器；本次既有版本发布继续原任务ID，不新开语音开发任务。下述11月19日“待转交／尚未执行”为当时状态，实际本轮提交与远端核对结果完成后补充。
 

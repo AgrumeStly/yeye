@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-20261119-02-current-version-main",
+  "date": "2026-11-20",
+  "origin": "https://github.com/AgrumeStly/yeye.git",
+  "primary_commit": "15adcc5c1093a3162f27907457687c75e0fd8121",
+  "primary_changed_files": 619,
+  "development_branch": "codex/current-version-20261025",
+  "default_branch": "main",
+  "commands": [
+    {
+      "command": "git push --atomic origin HEAD:refs/heads/codex/current-version-20261025 HEAD:refs/heads/main",
+      "exit_code": 0,
+      "output": "To https://github.com/AgrumeStly/yeye.git\n   74a45ef..15adcc5  HEAD -> codex/current-version-20261025\n   82640ab..15adcc5  HEAD -> main"
+    },
+    {
+      "command": "git ls-remote --symref origin HEAD refs/heads/main refs/heads/codex/current-version-20261025",
+      "exit_code": 0,
+      "output": "ref: refs/heads/main\tHEAD\n15adcc5c1093a3162f27907457687c75e0fd8121\tHEAD\n15adcc5c1093a3162f27907457687c75e0fd8121\trefs/heads/codex/current-version-20261025\n15adcc5c1093a3162f27907457687c75e0fd8121\trefs/heads/main"
+    },
+    {
+      "command": "git clone --quiet https://github.com/AgrumeStly/yeye.git C:/Users/Agrum/AppData/Local/Temp/yeye-handoff-20261120",
+      "exit_code": 0,
+      "note": "Initial sandbox network attempt failed; explicit approved network retry succeeded. No branch option was passed."
+    }
+  ],
+  "clone_verification": "clone_verification.json",
+  "clone_result": {
+    "branch": "main",
+    "head": "15adcc5c1093a3162f27907457687c75e0fd8121",
+    "clean": true,
+    "matched_non_delivery_metadata_paths": 614,
+    "byte_preserved_field_evidence_files": 553,
+    "handoff_local_links": 26,
+    "errors": []
+  },
+  "excluded_local_changes": [
+    ".obsidian/appearance.json",
+    ".obsidian/graph.json",
+    "vision/vision.code-workspace"
+  ],
+  "status_only_project_file": {
+    "path": "control/MDK-ARM/yeye_control.uvprojx",
+    "note": "Pre-existing status M with no textual diff; not edited. Not counted as a new runtime change."
+  },
+  "runtime_code_edits_in_publishing_task": false,
+  "firmware_tests_builds_hardware_actions": "not performed",
+  "delivery_metadata_note": "Task/status/handoff and these receipts are appended in a normal delivery commit and pushed to both branches. The final full commit and final remote/clone verification are returned in the delivery response and retained locally without a self-referential commit loop."
+}

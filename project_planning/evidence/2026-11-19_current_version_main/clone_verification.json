@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-20",
+  "clone_command": "git clone --quiet https://github.com/AgrumeStly/yeye.git C:/Users/Agrum/AppData/Local/Temp/yeye-handoff-20261120",
+  "clone_branch": "main",
+  "clone_head": "15adcc5c1093a3162f27907457687c75e0fd8121",
+  "clone_clean": true,
+  "checked_manifest_paths": 614,
+  "raw_evidence_files_checked": 553,
+  "handoff_local_links_checked": 26,
+  "delivery_metadata_paths_excluded_from_primary_hash_comparison": [
+    "project_planning/project_status.md",
+    "project_planning/tasks/TASK-20261119-02-current-version-main.md",
+    "project_planning/version_handoff.md"
+  ],
+  "errors": [],
+  "scope": "Default branch, published file tree and raw evidence preservation only; no firmware tests, builds or hardware actions."
+}
