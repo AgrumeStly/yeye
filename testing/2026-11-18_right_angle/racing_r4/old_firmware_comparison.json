@@ -1,0 +1,17 @@
+[
+  {
+    "current": "control/build/firmware/straight_assist/straight_assist.bin",
+    "prior": "testing/2026-11-18_straight_assist/firmware_v2_evidence/straight_assist.bin",
+    "identical": true
+  },
+  {
+    "current": "control/build/firmware/low_speed_lap/low_speed_lap.bin",
+    "prior": "testing/2026-11-12_field_resume/mcu_trace_build_02/low_speed_lap.bin",
+    "identical": true
+  },
+  {
+    "current": "control/build/firmware/low_speed_lap_track/low_speed_lap_track.bin",
+    "prior": "testing/2026-11-12_field_resume/mcu_trace_build_02/low_speed_lap_track.bin",
+    "identical": true
+  }
+]

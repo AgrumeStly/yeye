@@ -1,0 +1,391 @@
+{
+  "frames": [
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 0,
+      "ms": 73,
+      "valid": false,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 1,
+      "ms": 86,
+      "valid": false,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 2,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 3,
+      "ms": 83,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 4,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 5,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 6,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 7,
+      "ms": 83,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 8,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 9,
+      "ms": 83,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 10,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 11,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 12,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 13,
+      "ms": 83,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 14,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": null,
+      "label": "old",
+      "index": 15,
+      "ms": 84,
+      "valid": true,
+      "mode": null
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 43,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 0,
+      "ms": 74,
+      "valid": false,
+      "mode": "acquire"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 16,
+        "grid": 29,
+        "anchors": 1
+      },
+      "label": "new",
+      "index": 1,
+      "ms": 46,
+      "valid": false,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 1
+      },
+      "label": "new",
+      "index": 2,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 3,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 4,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 9,
+        "grid": 29,
+        "anchors": 1
+      },
+      "label": "new",
+      "index": 5,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 9,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 6,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 7,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 8,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 9,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 1
+      },
+      "label": "new",
+      "index": 10,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 11,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 12,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 13,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 28,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 14,
+      "ms": 38,
+      "valid": true,
+      "mode": "tracking"
+    },
+    {
+      "bend": 556,
+      "source": "current_pair",
+      "profile": {
+        "search": 8,
+        "grid": 29,
+        "anchors": 2
+      },
+      "label": "new",
+      "index": 15,
+      "ms": 39,
+      "valid": true,
+      "mode": "tracking"
+    }
+  ],
+  "uart_initialized": false,
+  "motor_started": false,
+  "source_kind": "stored SD frame; processing timing only"
+}

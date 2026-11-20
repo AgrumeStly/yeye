@@ -1,0 +1,38 @@
+{
+  "firmware_revision": "0x2120012",
+  "flash_matches_bin": true,
+  "stopped_run": {
+    "valid": 1,
+    "elapsed_ms": 2861,
+    "reason": 3,
+    "left_target": 69.84000396728516,
+    "right_target": 50.159996032714844,
+    "left_rpm": 65.83863830566406,
+    "right_rpm": 47.382808685302734,
+    "left_pwm": 315,
+    "right_pwm": 231,
+    "left_boost_samples": 1,
+    "right_boost_samples": 1
+  },
+  "corner_startup": {
+    "stage": 2,
+    "bench_ms": 1000,
+    "completed": 1,
+    "ground_runs": 1,
+    "left_counts": 1163,
+    "right_counts": 1167,
+    "starts_blocked": 5,
+    "blocked_reason": 0
+  },
+  "speed_fault": 0,
+  "uart_errors": 0,
+  "trigger_before_index": 1315,
+  "trigger_after_index": 1316,
+  "trigger_before_sequence": 34,
+  "trigger_after_sequence": 35,
+  "loss_event_count": 1,
+  "current_stopped_view": "../ground_04_stopped_view/frame.png",
+  "trigger_before_image": "run_0009_loss_01_before.png",
+  "trigger_after_image": "run_0009_loss_01_after.png",
+  "key_or_reset_sent": false
+}

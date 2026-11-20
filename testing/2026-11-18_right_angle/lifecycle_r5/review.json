@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "preview_bounded": true,
+    "drive_continuous": true,
+    "geometry_unchanged": true,
+    "host_survives_630_seconds": true,
+    "manual_stop_observed": true,
+    "final_status_false": true,
+    "one_script_only": true,
+    "stop_cleanup": true
+  },
+  "simulated_host_seconds": 1610,
+  "calls": [
+    "connectBoard",
+    "scriptRunning",
+    "scriptRunning",
+    "runScript",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "scriptRunning",
+    "stopScript",
+    "scriptRunning",
+    "close"
+  ],
+  "ground_run_performed": false
+}

@@ -1,0 +1,16 @@
+{
+  "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+  "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+  "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+  "right_angle_racing.py": "1bc8460f5595e72163b479308bb8dd7e0118256651dd60d224c421e465e290ff",
+  "right_angle_grid.py": "8f3d6414ba198bebf7bd530f47a256034031319ec748912176b4251c53ff63d6",
+  "right_angle_route.py": "448e80ed1115105a1761268fd51f07ee468b1335656fc1b5c2f69a90e80eedf5",
+  "right_angle_protocol.py": "e2396458daf44fefcf0bc10d87dfc0f932175bb1d5b00e096c77608bd998a908",
+  "right_angle_canmv.py": "57496bdf7dc73f74cbba7ef0fbe28c15b36f470eefb75164d277f7c73710a59a",
+  "bundle_sha256": "2a0b3c44845e4dfee664f067555d0fb4abea090cd4d2b542a919c0a2dfa3303f",
+  "wire_version": 5,
+  "grid_step": 6,
+  "allow_drive": false,
+  "automatic_motor_start": false,
+  "duration_ms": 600000
+}

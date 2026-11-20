@@ -1,0 +1,33 @@
+{
+  "frames": 4867,
+  "log_sha256": "e679a24e796a010dc8ecb7326f2bfa5dc44e3ba14e5b2f7f0714aafe81cdbddd",
+  "losses": [
+    {
+      "after_index": 1278,
+      "event": "path_lost",
+      "after_sequence": 253,
+      "reason": "no_current_pair",
+      "before_sequence": 252,
+      "prefix": "/sdcard/right_angle_logs/run_0007_loss_01",
+      "before_index": 1277
+    },
+    {
+      "after_index": 1296,
+      "event": "path_lost",
+      "after_sequence": 15,
+      "reason": "ready",
+      "before_sequence": 14,
+      "prefix": "/sdcard/right_angle_logs/run_0007_loss_02",
+      "before_index": 1295
+    },
+    {
+      "after_index": 2245,
+      "event": "path_lost",
+      "after_sequence": 196,
+      "reason": "no_current_pair",
+      "before_sequence": 195,
+      "prefix": "/sdcard/right_angle_logs/run_0007_loss_03",
+      "before_index": 2244
+    }
+  ]
+}

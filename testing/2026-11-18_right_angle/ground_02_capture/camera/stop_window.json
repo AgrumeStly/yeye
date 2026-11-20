@@ -1,0 +1,374 @@
+[
+  {
+    "wire_valid": true,
+    "elapsed_ms": 260684,
+    "profile_ms": {
+      "search": 10,
+      "grid": 28,
+      "anchors": 2
+    },
+    "valid": true,
+    "parameters": [
+      1.102686e-06,
+      74.0,
+      1.490116e-08,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "path_sequence": 202,
+    "acquire_ms": 0,
+    "processing_ms": 40,
+    "to_send_ms": 44,
+    "interval_ms": 51,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "search_mode": "tracking",
+    "source": "current_pair",
+    "bend": 244,
+    "searched_candidates": 46,
+    "anchors": 11,
+    "score": 2.653342,
+    "steering": 0,
+    "support": [
+      12,
+      11
+    ],
+    "index": 4555
+  },
+  {
+    "wire_valid": true,
+    "elapsed_ms": 260737,
+    "profile_ms": {
+      "search": 9,
+      "grid": 28,
+      "anchors": 2
+    },
+    "valid": true,
+    "parameters": [
+      1.102686e-06,
+      74.0,
+      1.490116e-08,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "path_sequence": 203,
+    "acquire_ms": 0,
+    "processing_ms": 39,
+    "to_send_ms": 41,
+    "interval_ms": 53,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "search_mode": "tracking",
+    "source": "current_pair",
+    "bend": 244,
+    "searched_candidates": 46,
+    "anchors": 10,
+    "score": 2.475731,
+    "steering": 0,
+    "support": [
+      10,
+      11
+    ],
+    "index": 4556
+  },
+  {
+    "wire_valid": true,
+    "elapsed_ms": 260786,
+    "profile_ms": {
+      "search": 8,
+      "grid": 30,
+      "anchors": 2
+    },
+    "valid": true,
+    "parameters": [
+      -5.204636,
+      64.06958,
+      -0.1745329,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "path_sequence": 204,
+    "acquire_ms": 0,
+    "processing_ms": 41,
+    "to_send_ms": 43,
+    "interval_ms": 49,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "search_mode": "tracking",
+    "source": "current_pair",
+    "bend": 465,
+    "searched_candidates": 46,
+    "anchors": 10,
+    "score": 2.207742,
+    "steering": -71,
+    "support": [
+      14,
+      10
+    ],
+    "index": 4557
+  },
+  {
+    "wire_valid": true,
+    "elapsed_ms": 260837,
+    "profile_ms": {
+      "search": 51,
+      "grid": 26,
+      "anchors": 5
+    },
+    "valid": true,
+    "parameters": [
+      -8.15906,
+      63.54864,
+      -0.1745329,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "path_sequence": 205,
+    "acquire_ms": 0,
+    "processing_ms": 84,
+    "to_send_ms": 86,
+    "interval_ms": 51,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "search_mode": "tracking",
+    "source": "current_pair",
+    "bend": 477,
+    "searched_candidates": 46,
+    "anchors": 10,
+    "score": 2.571275,
+    "steering": -126,
+    "support": [
+      18,
+      10
+    ],
+    "index": 4558
+  },
+  {
+    "wire_valid": true,
+    "elapsed_ms": 260932,
+    "profile_ms": {
+      "search": 17,
+      "grid": 30,
+      "anchors": 1
+    },
+    "valid": true,
+    "parameters": [
+      -8.15906,
+      63.54864,
+      -0.1745329,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "path_sequence": 206,
+    "acquire_ms": 1,
+    "processing_ms": 49,
+    "to_send_ms": 52,
+    "interval_ms": 95,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "search_mode": "tracking",
+    "source": "current_pair",
+    "bend": 477,
+    "searched_candidates": 46,
+    "anchors": 9,
+    "score": 2.695264,
+    "steering": -126,
+    "support": [
+      17,
+      11
+    ],
+    "index": 4559
+  },
+  {
+    "processing_ms": 75,
+    "to_send_ms": 79,
+    "anchors": 9,
+    "stage": "approach",
+    "profile_ms": {
+      "search": 43,
+      "grid": 29,
+      "anchors": 3
+    },
+    "route": [
+      [
+        1.565237,
+        8.399406
+      ],
+      [
+        0.1760516,
+        16.27787
+      ],
+      [
+        -1.213134,
+        24.15633
+      ],
+      [
+        -2.602319,
+        32.03479
+      ],
+      [
+        -3.991504,
+        39.91325
+      ],
+      [
+        -5.38069,
+        47.79172
+      ],
+      [
+        -6.769875,
+        55.67018
+      ]
+    ],
+    "valid": true,
+    "elapsed_ms": 260993,
+    "interval_ms": 61,
+    "index": 4560,
+    "searched_candidates": 46,
+    "confidence": 75,
+    "wire_valid": true,
+    "geometry_calibrated": false,
+    "support": [
+      20,
+      9
+    ],
+    "acquire_ms": 1,
+    "source": "current_pair",
+    "parameters": [
+      -7.464467,
+      59.60941,
+      -0.1745329,
+      1.570796
+    ],
+    "bend": 564,
+    "reason": "ready",
+    "score": 2.673865,
+    "steering": -126,
+    "path_sequence": 207,
+    "search_mode": "tracking"
+  },
+  {
+    "processing_ms": 47,
+    "elapsed_ms": 261143,
+    "profile_ms": {
+      "search": 19,
+      "grid": 27,
+      "anchors": 1
+    },
+    "valid": false,
+    "path_sequence": 208,
+    "geometry_calibrated": false,
+    "to_send_ms": 50,
+    "acquire_ms": 1,
+    "interval_ms": 150,
+    "stage": "unknown",
+    "reason": "no_current_pair",
+    "confidence": 0,
+    "search_mode": "fallback",
+    "searched_candidates": 134,
+    "bend": 0,
+    "anchors": 0,
+    "wire_valid": false,
+    "index": 4561,
+    "steering": 0,
+    "support": [
+      0,
+      0
+    ],
+    "source": "unknown"
+  },
+  {
+    "processing_ms": 69,
+    "elapsed_ms": 261198,
+    "profile_ms": {
+      "search": 41,
+      "grid": 27,
+      "anchors": 1
+    },
+    "valid": false,
+    "path_sequence": 209,
+    "geometry_calibrated": false,
+    "to_send_ms": 72,
+    "acquire_ms": 0,
+    "interval_ms": 55,
+    "stage": "unknown",
+    "reason": "no_current_pair",
+    "confidence": 0,
+    "search_mode": "acquire",
+    "searched_candidates": 115,
+    "bend": 0,
+    "anchors": 0,
+    "wire_valid": false,
+    "index": 4562,
+    "steering": 0,
+    "support": [
+      0,
+      0
+    ],
+    "source": "unknown"
+  },
+  {
+    "processing_ms": 70,
+    "elapsed_ms": 261278,
+    "profile_ms": {
+      "search": 40,
+      "grid": 28,
+      "anchors": 2
+    },
+    "valid": false,
+    "path_sequence": 210,
+    "geometry_calibrated": false,
+    "to_send_ms": 73,
+    "acquire_ms": 0,
+    "interval_ms": 80,
+    "stage": "unknown",
+    "reason": "no_current_pair",
+    "confidence": 0,
+    "search_mode": "acquire",
+    "searched_candidates": 115,
+    "bend": 0,
+    "anchors": 0,
+    "wire_valid": false,
+    "index": 4563,
+    "steering": 0,
+    "support": [
+      0,
+      0
+    ],
+    "source": "unknown"
+  },
+  {
+    "processing_ms": 70,
+    "elapsed_ms": 261362,
+    "profile_ms": {
+      "search": 43,
+      "grid": 25,
+      "anchors": 1
+    },
+    "valid": false,
+    "path_sequence": 211,
+    "geometry_calibrated": false,
+    "to_send_ms": 72,
+    "acquire_ms": 0,
+    "interval_ms": 84,
+    "stage": "unknown",
+    "reason": "no_current_pair",
+    "confidence": 0,
+    "search_mode": "acquire",
+    "searched_candidates": 115,
+    "bend": 0,
+    "anchors": 0,
+    "wire_valid": false,
+    "index": 4564,
+    "steering": 0,
+    "support": [
+      0,
+      0
+    ],
+    "source": "unknown"
+  }
+]

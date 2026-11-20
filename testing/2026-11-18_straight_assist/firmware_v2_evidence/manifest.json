@@ -1,0 +1,37 @@
+{
+  "revision": "0x02120002",
+  "flashed_by_agent": false,
+  "ground_validated": false,
+  "sources": {
+    "control/Algorithms/Speed/straight_guide.c": "a51dc831c9163b02f777e56cf4e8bacc1c3983a7002d8136e8c546938088ebdc",
+    "control/Algorithms/Speed/straight_guide.h": "1af5a89796553260a8afb2aea215f08c5a24a1d11cb866038a9c12322ca4b00a",
+    "control/App/Motion/lap_motion.c": "1748abc7eb11ea8e50e1774fad19e17794142fe4b072985eff569f12e2181197",
+    "control/App/Motion/speed_match.c": "7690a5fb688e484ef04e5d0d4ebca48da8a060a540a6a2e4df6f2152811b6be8",
+    "control/Core/Src/low_speed_lap_main.c": "c63be707ce660717bccdb119c5e288885a77b1b6f78b1eb3d25c28f0ff8ff16c",
+    "control/Tests/Host/test_lap_motion.c": "d521aae2d39906c3fd3527ed12a449f5d457d90c2c042d02cc6062da58e4a634",
+    "control/Tests/Host/test_straight_assist.c": "86a8fab3aec6127e527b06a3303ed02e1fcbbe5d020098a63e89ca5b2d771148",
+    "control/tools/lap_swd_capture.py": "df6c1a35225f77456dc454234a6fc6a7e44f2a04f4e0f2628beb1c36845f9c80"
+  },
+  "artifacts": {
+    "straight_assist.axf": {
+      "sha256": "c239004f0b7eee06c3fe8e4948bf3fb56fe46728857984ed9063e8b19e9e329b",
+      "bytes": 502248
+    },
+    "straight_assist.bin": {
+      "sha256": "361a5842ddbd52047c097dc4b0167bb9ee8dd293508b6604a6a52355af4bd848",
+      "bytes": 17440
+    },
+    "straight_assist.hex": {
+      "sha256": "fe8519486c905c1e5701be92b7e11051e62ec5353f441bcc8ad4c361db9a5807",
+      "bytes": 49101
+    },
+    "build.log": {
+      "sha256": "7a5acc599ff0490c0c9938cecdfd52703ba96984d42062a773b061337dab9f09",
+      "bytes": 468
+    }
+  },
+  "legacy_BIN_identical": {
+    "low_speed_lap": true,
+    "low_speed_lap_track": true
+  }
+}

@@ -1,0 +1,1 @@
+Initial reduced-refinement optimization failed existing check right_turn_command_seen. Final implementation restored 27-point refinement and added same-frame full-search fallback. Final 131 checks pass; see vision_r3_checks_final/review.json.

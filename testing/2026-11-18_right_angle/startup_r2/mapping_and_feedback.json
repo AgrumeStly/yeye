@@ -1,0 +1,15 @@
+{
+  "source": "testing\\2026-11-18_straight_assist\\ground_03_capture\\capture.json",
+  "source_sha256": "a0710fc7e4488d0e73558dc60afc28bc1fec4db94f0660370b9c2e449ecc25bd",
+  "mapping": {
+    "left_channel": 1,
+    "right_channel": 2,
+    "left_sign": 1,
+    "right_sign": -1
+  },
+  "actual_new_board_capture": false,
+  "Keil_detected_running": true,
+  "new_fault_reason_read": false,
+  "operator_feedback": "about 10cm from right boundary corner; first long KEY no motion; second green rapid flash",
+  "reason_limitation": "old calibration and initial KEY timing branches identified in source; exact current hardware fault not captured"
+}

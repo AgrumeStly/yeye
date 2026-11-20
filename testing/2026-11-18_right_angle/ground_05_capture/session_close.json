@@ -1,0 +1,31 @@
+{
+  "saved_at_utc": "2026-11-18T12:27:36.612005+00:00",
+  "user_requested_stop_until_tomorrow": true,
+  "photo": "ground_05_stopped_view/frame.jpg",
+  "photo_bytes": 8006,
+  "photo_sha256": "5e5bbbaf5d946ca600443a3a939dbb9935950023ae83e89fae531fa38bdc8c53",
+  "photo_source": "direct official CanMV preview; SD file was empty; selected fifth frame after sensor warmup",
+  "photo_kind": "current stopped view, not actual trigger exposure",
+  "last_run": {
+    "valid": 1,
+    "elapsed_ms": 858,
+    "reason": 2,
+    "left_target": 60.38719940185547,
+    "right_target": 84.25279998779297,
+    "left_rpm": 81.05690002441406,
+    "right_rpm": 102.17877960205078,
+    "left_pwm": 126,
+    "right_pwm": 318,
+    "left_boost_samples": 1,
+    "right_boost_samples": 1
+  },
+  "flash_matches_bin": true,
+  "actual_mcu_revision": "0x2120012",
+  "camera_stopped": true,
+  "reset_sent": false,
+  "start_sent": false,
+  "firmware_changed_this_turn": false,
+  "code_upload_performed": false,
+  "vision_source_sha256": "abcf10e5b0c391eb71487f111035a33fba37916b914251f75513255945e7a5f0",
+  "next_day": "2026-11-19 Asia/Shanghai"
+}

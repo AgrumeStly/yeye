@@ -1,0 +1,1092 @@
+{
+  "frames_parsed": 7359,
+  "loss_events_parsed": 100,
+  "incomplete_lines": [
+    {
+      "line": 7461,
+      "bytes": 232
+    }
+  ],
+  "estimated_stop_utc": 1795004568.4474,
+  "host_near_stop": [
+    {
+      "at": 1795003584.0631742,
+      "event": "scriptOutput",
+      "params": {
+        "text": "\r\n>>> \r\n[RIGHT ANGLE LOG] /sdcard/right_angle_logs/run_0012.jsonl ALLOW_DRIVE True NO AUTO START\r\nfind sensor gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 24, output 1920x1080@60\r\ndeprecated function\r\n"
+      }
+    },
+    {
+      "at": 1795004567.3475518,
+      "event": "scriptOutput",
+      "params": {
+        "text": "[RIGHT ANGLE] ready stage approach err -138 valid True ms 42\r\n"
+      }
+    },
+    {
+      "at": 1795004568.4370716,
+      "event": "scriptOutput",
+      "params": {
+        "text": "[RIGHT ANGLE] ready stage approach err -116 valid True ms 95\r\n"
+      }
+    },
+    {
+      "at": 1795004569.525581,
+      "event": "scriptOutput",
+      "params": {
+        "text": "[RIGHT ANGLE] ready stage turn err 378 valid True ms 35\r\n"
+      }
+    }
+  ],
+  "sequence_138_candidates": [
+    {
+      "processing_ms": 87,
+      "elapsed_ms": 14113,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 42,
+        "grid": 43,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 89,
+      "interval_ms": 99,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 139,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 88,
+      "elapsed_ms": 39998,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 40,
+        "grid": 46,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 1,
+      "to_send_ms": 93,
+      "interval_ms": 99,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 395,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 87,
+      "elapsed_ms": 65994,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 40,
+        "grid": 45,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 89,
+      "interval_ms": 107,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 651,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 88,
+      "elapsed_ms": 91977,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 41,
+        "grid": 45,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 1,
+      "to_send_ms": 91,
+      "interval_ms": 102,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 907,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 91,
+      "elapsed_ms": 118367,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 43,
+        "grid": 46,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 93,
+      "interval_ms": 99,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 1163,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 90,
+      "elapsed_ms": 145270,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 42,
+        "grid": 47,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 92,
+      "interval_ms": 101,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 1419,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 88,
+      "elapsed_ms": 172567,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 41,
+        "grid": 46,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 90,
+      "interval_ms": 102,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 1675,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 90,
+      "elapsed_ms": 199454,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 42,
+        "grid": 46,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 92,
+      "interval_ms": 113,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 1931,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 85,
+      "elapsed_ms": 225834,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 40,
+        "grid": 43,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 1,
+      "to_send_ms": 89,
+      "interval_ms": 98,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 2187,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 55,
+      "recovery_candidates": 0,
+      "steering": 624,
+      "corner_age_ms": 340,
+      "search_mode": "tracking",
+      "index": 2443,
+      "support": [
+        17,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 624,
+      "anchors": 0,
+      "racing_radius": 30.0,
+      "source": "current_corner_associated",
+      "measured_edges": "associated_left",
+      "acquire_ms": 0,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 1.186,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 251375,
+      "parameters": [
+        -21.20431,
+        17.95486,
+        0.1745329,
+        1.570796
+      ],
+      "corner_observed": false,
+      "to_send_ms": 58,
+      "interval_ms": 106,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 10,
+        "grid": 44,
+        "anchors": 1
+      },
+      "confidence": 45
+    },
+    {
+      "processing_ms": 55,
+      "recovery_candidates": 0,
+      "steering": 624,
+      "corner_age_ms": 418,
+      "search_mode": "tracking",
+      "index": 2699,
+      "support": [
+        17,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 624,
+      "anchors": 0,
+      "racing_radius": 30.0,
+      "source": "current_corner_associated",
+      "measured_edges": "associated_left",
+      "acquire_ms": 1,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 1.186,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 279311,
+      "parameters": [
+        -21.20431,
+        17.95486,
+        0.1745329,
+        1.570796
+      ],
+      "corner_observed": false,
+      "to_send_ms": 58,
+      "interval_ms": 96,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 11,
+        "grid": 43,
+        "anchors": 1
+      },
+      "confidence": 45
+    },
+    {
+      "processing_ms": 90,
+      "elapsed_ms": 306031,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 42,
+        "grid": 46,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 92,
+      "interval_ms": 96,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 2955,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 91,
+      "elapsed_ms": 333721,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 42,
+        "grid": 47,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 94,
+      "interval_ms": 105,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 3211,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 87,
+      "elapsed_ms": 360323,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 40,
+        "grid": 44,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 1,
+      "to_send_ms": 90,
+      "interval_ms": 99,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 3467,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 87,
+      "elapsed_ms": 386997,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 40,
+        "grid": 46,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 89,
+      "interval_ms": 105,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 0,
+      "index": 3723,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 90,
+      "elapsed_ms": 412638,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 41,
+        "grid": 47,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 92,
+      "interval_ms": 98,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 3979,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 49,
+      "recovery_candidates": 0,
+      "steering": 650,
+      "corner_age_ms": 573,
+      "search_mode": "tracking",
+      "index": 4235,
+      "support": [
+        14,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 650,
+      "anchors": 0,
+      "racing_radius": 30.0,
+      "source": "current_corner_associated",
+      "measured_edges": "associated_left",
+      "acquire_ms": 0,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 1.065333,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 439101,
+      "parameters": [
+        -2.117027,
+        10.22341,
+        0.08726647,
+        1.570796
+      ],
+      "corner_observed": false,
+      "to_send_ms": 51,
+      "interval_ms": 101,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 3,
+        "grid": 44,
+        "anchors": 2
+      },
+      "confidence": 45
+    },
+    {
+      "processing_ms": 93,
+      "elapsed_ms": 466363,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 43,
+        "grid": 49,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 95,
+      "interval_ms": 106,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 4491,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 86,
+      "recovery_candidates": 0,
+      "steering": 650,
+      "corner_age_ms": 0,
+      "search_mode": "acquire",
+      "index": 4747,
+      "support": [
+        15,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 650,
+      "anchors": 0,
+      "racing_radius": 30.0,
+      "source": "current_corner_predicted",
+      "measured_edges": "left_and_front",
+      "acquire_ms": 1,
+      "valid": false,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "stabilizing",
+      "score": 1.45,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": false,
+      "elapsed_ms": 492937,
+      "parameters": [
+        -3.207365,
+        11.21217,
+        0.2617994,
+        1.570796
+      ],
+      "corner_observed": true,
+      "to_send_ms": 89,
+      "interval_ms": 103,
+      "searched_candidates": 130,
+      "profile_ms": {
+        "search": 39,
+        "grid": 45,
+        "anchors": 1
+      },
+      "confidence": 60
+    },
+    {
+      "processing_ms": 67,
+      "elapsed_ms": 517473,
+      "recovery_candidates": 8,
+      "profile_ms": {
+        "search": 16,
+        "grid": 49,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 71,
+      "interval_ms": 73,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "fallback",
+      "searched_candidates": 130,
+      "bend": 0,
+      "anchors": 3,
+      "index": 5003,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 58,
+      "elapsed_ms": 541317,
+      "recovery_candidates": 0,
+      "profile_ms": {
+        "search": 8,
+        "grid": 48,
+        "anchors": 2
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 60,
+      "interval_ms": 68,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "acquire",
+      "searched_candidates": 103,
+      "bend": 0,
+      "anchors": 3,
+      "index": 5259,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 54,
+      "recovery_candidates": 0,
+      "steering": 650,
+      "corner_age_ms": 0,
+      "search_mode": "tracking",
+      "index": 5515,
+      "support": [
+        15,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 650,
+      "anchors": 0,
+      "racing_radius": 30.0,
+      "source": "current_corner_predicted",
+      "measured_edges": "left_and_front",
+      "acquire_ms": 0,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 1.45,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 564810,
+      "parameters": [
+        -5.10561,
+        10.48488,
+        0.08726647,
+        1.570796
+      ],
+      "corner_observed": true,
+      "to_send_ms": 56,
+      "interval_ms": 67,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 5,
+        "grid": 48,
+        "anchors": 1
+      },
+      "confidence": 60
+    },
+    {
+      "processing_ms": 51,
+      "recovery_candidates": 0,
+      "steering": 535,
+      "corner_age_ms": 0,
+      "search_mode": "tracking",
+      "index": 5771,
+      "support": [
+        16,
+        0
+      ],
+      "path_visibility": "projected",
+      "turn_floor": 535,
+      "anchors": 0,
+      "racing_radius": 30.0,
+      "source": "current_corner_predicted",
+      "measured_edges": "left_and_front",
+      "acquire_ms": 1,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 1.268,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 588772,
+      "parameters": [
+        -0.548223,
+        28.15492,
+        0.08726647,
+        1.570796
+      ],
+      "corner_observed": true,
+      "to_send_ms": 54,
+      "interval_ms": 70,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 3,
+        "grid": 46,
+        "anchors": 2
+      },
+      "confidence": 60
+    },
+    {
+      "processing_ms": 67,
+      "elapsed_ms": 612119,
+      "recovery_candidates": 8,
+      "profile_ms": {
+        "search": 22,
+        "grid": 44,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 69,
+      "interval_ms": 62,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "fallback",
+      "searched_candidates": 157,
+      "bend": 0,
+      "anchors": 3,
+      "index": 6027,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 49,
+      "recovery_candidates": 0,
+      "steering": 624,
+      "corner_age_ms": 658,
+      "search_mode": "tracking",
+      "index": 6283,
+      "support": [
+        16,
+        0
+      ],
+      "path_visibility": "projected",
+      "turn_floor": 624,
+      "anchors": 3,
+      "racing_radius": 30.0,
+      "source": "current_corner_associated",
+      "measured_edges": "associated_left",
+      "acquire_ms": 1,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 0.8458941,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 635540,
+      "parameters": [
+        2.682209e-07,
+        18.0,
+        1.490116e-08,
+        1.570796
+      ],
+      "corner_observed": false,
+      "to_send_ms": 52,
+      "interval_ms": 65,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 4,
+        "grid": 43,
+        "anchors": 1
+      },
+      "confidence": 45
+    },
+    {
+      "processing_ms": 66,
+      "elapsed_ms": 660330,
+      "recovery_candidates": 8,
+      "profile_ms": {
+        "search": 21,
+        "grid": 44,
+        "anchors": 1
+      },
+      "valid": false,
+      "geometry_calibrated": false,
+      "path_sequence": 138,
+      "acquire_ms": 0,
+      "to_send_ms": 69,
+      "interval_ms": 74,
+      "stage": "unknown",
+      "reason": "no_current_pair",
+      "confidence": 0,
+      "search_mode": "fallback",
+      "searched_candidates": 157,
+      "bend": 0,
+      "anchors": 3,
+      "index": 6539,
+      "source": "unknown",
+      "steering": 0,
+      "support": [
+        0,
+        0
+      ],
+      "wire_valid": false
+    },
+    {
+      "processing_ms": 88,
+      "recovery_candidates": 0,
+      "steering": 650,
+      "corner_age_ms": 0,
+      "search_mode": "acquire",
+      "index": 6795,
+      "support": [
+        14,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 650,
+      "anchors": 3,
+      "racing_radius": 30.0,
+      "source": "current_corner_predicted",
+      "measured_edges": "left_and_front",
+      "acquire_ms": 0,
+      "valid": false,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "stabilizing",
+      "score": 0.3771432,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": false,
+      "elapsed_ms": 684293,
+      "parameters": [
+        -3.207365,
+        11.21217,
+        0.2617994,
+        1.570796
+      ],
+      "corner_observed": true,
+      "to_send_ms": 90,
+      "interval_ms": 113,
+      "searched_candidates": 130,
+      "profile_ms": {
+        "search": 40,
+        "grid": 45,
+        "anchors": 2
+      },
+      "confidence": 60
+    },
+    {
+      "processing_ms": 52,
+      "recovery_candidates": 0,
+      "steering": 637,
+      "corner_age_ms": 616,
+      "search_mode": "tracking",
+      "index": 7051,
+      "support": [
+        12,
+        0
+      ],
+      "path_visibility": "predicted_near_blind",
+      "turn_floor": 637,
+      "anchors": 3,
+      "racing_radius": 30.0,
+      "source": "current_corner_associated",
+      "measured_edges": "associated_left",
+      "acquire_ms": 0,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 0.4237052,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 707658,
+      "parameters": [
+        -2.240114,
+        16.49187,
+        0.4363323,
+        1.570796
+      ],
+      "corner_observed": false,
+      "to_send_ms": 54,
+      "interval_ms": 73,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 4,
+        "grid": 47,
+        "anchors": 1
+      },
+      "confidence": 45
+    },
+    {
+      "processing_ms": 49,
+      "recovery_candidates": 0,
+      "steering": 624,
+      "corner_age_ms": 546,
+      "search_mode": "tracking",
+      "index": 7307,
+      "support": [
+        16,
+        0
+      ],
+      "path_visibility": "projected",
+      "turn_floor": 624,
+      "anchors": 3,
+      "racing_radius": 30.0,
+      "source": "current_corner_associated",
+      "measured_edges": "associated_left",
+      "acquire_ms": 1,
+      "valid": true,
+      "racing_outset": 5.0,
+      "bend": 1000,
+      "reason": "ready",
+      "score": 0.7458086,
+      "stage": "turn",
+      "path_kind": "racing_arc_prediction",
+      "path_sequence": 138,
+      "geometry_calibrated": false,
+      "wire_valid": true,
+      "elapsed_ms": 730196,
+      "parameters": [
+        -1.568803,
+        17.93151,
+        -0.08726645,
+        1.570796
+      ],
+      "corner_observed": false,
+      "to_send_ms": 52,
+      "interval_ms": 67,
+      "searched_candidates": 46,
+      "profile_ms": {
+        "search": 4,
+        "grid": 43,
+        "anchors": 2
+      },
+      "confidence": 45
+    }
+  ]
+}

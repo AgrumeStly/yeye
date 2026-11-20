@@ -11,6 +11,7 @@
 | 查角色和更新责任 | [协作标准](collaboration_standard.md) |
 | 验收本次重构 | [ORG-03](tasks/ORG-03-TASK-ARCHITECTURE.md) |
 | 查设备与历史版本 | [版本交接](version_handoff.md)；历史上传授权不续期 |
+| 队友／本地dsh继续语音开发 | [AI接续入口](../AI_HANDOFF.md)、[K230语音交接](voice_handoff.md) |
 
 日常流程：总管定义 → 主控转交 → 执行记录 → 主控验收 → 反馈总管 → 下一任务。任务中断与退回沿用原ID。
 

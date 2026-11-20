@@ -1,7 +1,8 @@
 /** @file low_speed_lap_main.c
- * @brief 低速视觉差速独立入口，复用原PWM、编码器采集及计数算法。
+ * @brief 低速循迹／独立直道的编译期入口，复用原PWM、编码器采集及计数算法。
  * HSI16MHz、TIM1输出、TIM3/4编码器、TIM5启动限时、IWDG及KEY停止均保留。
- * 前两次KEY逐轮500ms校准；之后KEY启动视觉差速，UART断流由1ms监督撤驱动。
+ * 原目标前两次KEY逐轮校准；首弯及直道适配版首次KEY双轮悬空1秒，下一次上道。
+ * 地面UART断流仍由1ms监督撤驱动，悬空仅豁免视觉许可，不豁免电机保护。
  */
 #include "lap_motion.h"
 #include "lap_link.h"
@@ -225,7 +226,13 @@ void UsageFault_Handler(void) { fatal_stop(); }
 
 /** @brief 先撤PWM，再初始化编码器／状态与启动监督；默认只读采集，不自启。 */
 int main(void) {
-#ifdef LAP_TRACK_TARGET
+#ifdef STRAIGHT_DUAL_START_TARGET
+    g_speed_revision = 0x02120003u; /* 直道R2控制不变；沿用实证映射，首次KEY双轮1秒。 */
+#elif defined(RIGHT_ANGLE_TARGET)
+    g_speed_revision = 0x02120012u; /* 首弯R4/v5：当前L形预测可启动，大半径前进圆弧。 */
+#elif defined(STRAIGHT_ASSIST_TARGET)
+    g_speed_revision = 0x02120002u; /* 独立直道v3：加入编码器差速补偿，减轻快轮超调。 */
+#elif defined(LAP_TRACK_TARGET)
     g_speed_revision = 0x0211000Cu; /* Track诊断版：保持300000ms上限，未放行实车。 */
 #else
     g_speed_revision = 0x0211000Bu; /* 三秒诊断版：增加停车前原始编码器取证环。 */

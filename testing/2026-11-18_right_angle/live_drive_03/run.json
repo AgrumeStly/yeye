@@ -1,0 +1,22 @@
+{
+  "port": "COM10",
+  "manifest": {
+    "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+    "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+    "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+    "right_angle_racing.py": "d2c682a57d93d6a25f7e811c0f144cfd4e9f6a7964f3d02ad67b073a66a7f8f5",
+    "right_angle_route.py": "732795c194be5b5a9461a283b271f83fe004937801afbf5c5bd550bf0037ba60",
+    "right_angle_protocol.py": "e2396458daf44fefcf0bc10d87dfc0f932175bb1d5b00e096c77608bd998a908",
+    "right_angle_canmv.py": "af9e814730a173ee9429cecffa923f6172586771ef0b7317771c927818f5f706",
+    "bundle_sha256": "ad175dee8151e11e9fa54d666a4ecb62a34a93db669b03764e4e0b61d39565b9",
+    "wire_version": 5,
+    "grid_step": 6,
+    "allow_drive": true,
+    "automatic_motor_start": false
+  },
+  "source_sha256": "ad175dee8151e11e9fa54d666a4ecb62a34a93db669b03764e4e0b61d39565b9",
+  "main_py_written": false,
+  "automatic_motor_start": false,
+  "operator_camera_start_authorized": true,
+  "completed": false
+}

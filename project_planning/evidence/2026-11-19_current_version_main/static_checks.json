@@ -1,0 +1,146 @@
+{
+  "task_id": "TASK-20261119-02-current-version-main",
+  "date": "2026-11-20",
+  "scope": "Release static verification only; no firmware/vision tests, builds or hardware actions.",
+  "manifest_entries": 617,
+  "candidate_changed_paths": 618,
+  "working_files_match_manifest": true,
+  "excluded_machine_files_unchanged": true,
+  "index_blobs_match_manifest": true,
+  "staged_whitespace_exit": 0,
+  "handoff_links": [
+    {
+      "from": "AI_HANDOFF.md",
+      "target": "AGENTS.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "AI_HANDOFF.md",
+      "target": ".agent/skill/grill-me/SKILL.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "AI_HANDOFF.md",
+      "target": "project_planning/collaboration_standard.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "AI_HANDOFF.md",
+      "target": "project_planning/project_status.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "AI_HANDOFF.md",
+      "target": "project_planning/voice_handoff.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "AI_HANDOFF.md",
+      "target": "competition/比赛文档.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "competition/比赛文档.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "competition/比赛文档.pdf",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "project_planning/project_status.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "project_planning/tasks/I-03-STRAIGHT-ASSIST.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "project_planning/tasks/I-04-RIGHT-ANGLE.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "docs/architecture.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "control/README.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "vision/README.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "control/docs/protocol_v1_draft.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "control/App/Motion/lap_motion.c",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "control/App/Motion/lap_motion.h",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "vision/src/straight_protocol.py",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "vision/src/right_angle_protocol.py",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "testing/2026-11-18_right_angle/r8_field_record.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "hardware_preparation/wiring.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "control/docs/pin_plan.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "hardware_preparation/source/generate_purchase_list.py",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "vision/PC_ENVIRONMENT.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "vision/docs/capture_canmv.md",
+      "in_candidate_tree": true
+    },
+    {
+      "from": "project_planning/voice_handoff.md",
+      "target": "AI_HANDOFF.md",
+      "in_candidate_tree": true
+    }
+  ],
+  "errors": [],
+  "historical_evidence_policy": "Raw field logs, images, binaries and frozen source files retain bytes; Markdown keeps LF and authored-whitespace checks.",
+  "firmware_evidence": "Existing applicable records retained; no new functional pass asserted."
+}

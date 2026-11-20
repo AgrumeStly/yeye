@@ -1,0 +1,29 @@
+{
+  "script_running": {
+    "running": false
+  },
+  "/sdcard/right_angle_logs/run_0012.jsonl": {
+    "exists": true,
+    "type": "file",
+    "size": 4554752,
+    "mtime": 1735701048
+  },
+  "/sdcard/right_angle_logs/run_0013.jsonl": {
+    "exists": true,
+    "type": "file",
+    "size": 0,
+    "mtime": 1735701090
+  },
+  "/sdcard/right_angle_logs/run_0013_view.pgm": {
+    "exists": true,
+    "type": "file",
+    "size": 0,
+    "mtime": 1735701086
+  },
+  "/sdcard/right_angle_logs/run_0009.jsonl": {
+    "exists": true,
+    "type": "file",
+    "size": 1256568,
+    "mtime": 1735699642
+  }
+}

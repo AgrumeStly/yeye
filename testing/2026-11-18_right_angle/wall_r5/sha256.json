@@ -1,0 +1,16 @@
+{
+  "vision/src/right_angle_grid.py": "8f3d6414ba198bebf7bd530f47a256034031319ec748912176b4251c53ff63d6",
+  "vision/src/right_angle_route.py": "381f7fa3e90af5a06525fe148b858ef6ea6b512d60dac4b01296f14754279eff",
+  "vision/src/right_angle_canmv.py": "b1370d90247634578503d455663aac0e73811b8a5b10b822e810d4564544f772",
+  "vision/tools/prepare_right_angle_bundle.py": "69f47622c2aff76542285be9a606450997b372a3e6af782022d5facbe2b28c4b",
+  "vision/tools/run_right_angle_live.py": "870f46b4daa82076f77e296a67d4da28875587a1ff086cb4b07fa1b2a844f539",
+  "vision/tools/check_right_angle.py": "163670f77b4a7627732b4c61adc8d3a2542dfa4c7dd28366dd7454f1463391b8",
+  "vision/tools/benchmark_right_angle.py": "329c773beef7456da7412312fbf2233954440d4bba94af38da3b6ed4da979540",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle.axf": "c0c0468df04c866521292a518bf5ad67d6f72c0d874cdac7cf73ffa1f8dc9adf",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle.bin": "2fb9d362ac92ae7b8a20e696cfddde6ff7a6435e0648c5f3ca186102efdca5f4",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle.hex": "71b6f45bcdc680aa2c9e025381f063fd96cdc42de9ec9a7ea20291917977d66e",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle_drive.py": "b4896451b10fb3ae551aca081e759d554ad8d8d80d61f886e0848e8a2cfa2730",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle_drive.py.manifest.json": "7d9a768036ea8926586c520ddbf1211d07410cd7c5750ada363e7d6e1be7f544",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle_preview.py": "4c3003836c989d6210f8f67aaaa8897f24a82278d0b5696e665e910d077ce4fa",
+  "testing\\2026-11-18_right_angle\\release_r5\\right_angle_preview.py.manifest.json": "835495b6712577a15c56dc4fa420afedcbc88d94cf4e8b0b28cfc86681e719e0"
+}

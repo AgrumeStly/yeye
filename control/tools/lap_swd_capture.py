@@ -29,8 +29,10 @@ def symbols():
              'g_speed_match', 'g_lap_uart_errors', 'g_lap_uart_diag', 'g_lap_diag', 'g_lap_timing')
     with AXF.open('rb') as stream:
         table = ELFFile(stream).get_section_by_name('.symtab')
-        found = {s.name: dict(address=int(s['st_value']), size=int(s['st_size'])) for s in table.iter_symbols() if s.name in names}
-    if set(found) != set(names) and set(found) != set(names)-{'g_lap_diag'}:
+        found = {s.name: dict(address=int(s['st_value']), size=int(s['st_size'])) for s in table.iter_symbols()
+                 if s.name in names or s.name == 'g_corner_startup'}
+    required_found = set(found)-{'g_corner_startup'}
+    if required_found != set(names) and required_found != set(names)-{'g_lap_diag'}:
         raise RuntimeError('required LowSpeedLap symbols absent')
     # ARMCC当前工程使用短枚举，不能按主机int大小推算state/reason偏移。
     for name, size in (('g_lap', 68), ('g_lap_config', 12), ('g_lap_last', 40), ('g_lap_uart_diag', 40), ('g_speed_match', 112)):
@@ -38,6 +40,8 @@ def symbols():
             raise RuntimeError('struct layout changed: '+name)
     if found['g_lap_timing']['size'] != 16 or ('g_lap_diag' in found and found['g_lap_diag']['size'] != 1952):
         raise RuntimeError('timing or diagnostic layout changed')
+    if 'g_corner_startup' in found and found['g_corner_startup']['size'] != 32:
+        raise RuntimeError('corner startup layout changed')
     return found
 
 
@@ -97,6 +101,10 @@ def capture(target, addresses):
                   cpu_state=str(target.get_state()), dhcsr=hex(dhcsr), halted=bool(dhcsr & (1 << 17)), **single)
     result['lap'] = lap_view(data('g_lap'))
     result['last_run'] = lap_result_view(data('g_lap_last'))
+    if 'g_corner_startup' in addresses:
+        result['corner_startup'] = dict(zip(('stage', 'bench_ms', 'completed', 'ground_runs',
+            'left_counts', 'right_counts', 'starts_blocked', 'blocked_reason'),
+            struct.unpack('<4I2i2I', data('g_corner_startup'))))
     if 'g_lap_diag' in addresses:
         result['diagnostic_trace'] = diagnostic_view(data('g_lap_diag'))
     result['timing'] = dict(zip(('counter_ready','clock_hz','systick_max_cycles','motion_lock_max_cycles'),
@@ -117,15 +125,39 @@ def capture(target, addresses):
 
 
 def main():
+    global AXF
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--frequency', type=int, default=1000000, choices=(100000, 1000000),
+                        help='SWD read clock in Hz; 100kHz retries an unstable physical link without reset')
+    parser.add_argument('--profile', choices=('lap', 'straight', 'straight-dual', 'right-angle'), default='lap',
+                        help='straight selects StraightAssist AXF and revision, never writes Flash')
+    parser.add_argument('--image', type=Path, help='archived AXF plus adjacent BIN; Flash must match before RAM decode')
     args = parser.parse_args()
+    if args.profile == 'straight':
+        AXF = ROOT/'control/build/firmware/straight_assist/straight_assist.axf'
+    elif args.profile == 'straight-dual':
+        AXF = ROOT/'control/build/firmware/straight_dual_start/straight_dual_start.axf'
+    elif args.profile == 'right-angle':
+        AXF = ROOT/'control/build/firmware/right_angle/right_angle.axf'
+    if args.image is not None:
+        AXF = args.image.resolve()
+        if AXF.suffix.lower() != '.axf' or not AXF.is_file() or not AXF.with_suffix('.bin').is_file():
+            raise ValueError('AXF and adjacent BIN required')
+    revisions = (0x02120002,) if args.profile == 'straight' else (0x02110009, 0x0211000B)
+    if args.profile == 'straight-dual':
+        revisions = (0x02120003,)
+    minimum_rpm, maximum_rpm = (40, 100) if args.profile in ('straight', 'straight-dual') else (10, 60)
+    maximum_run = 3000 if args.profile in ('straight', 'straight-dual') else 300000
+    if args.profile == 'right-angle':
+        revisions = (0x02120010, 0x02120011, 0x02120012)
+        minimum_rpm, maximum_rpm, maximum_run = 40, 80, 15000
     addresses = symbols()
     args.output.mkdir(parents=True, exist_ok=False)
     result = dict(probe_id=PROBE_ID, reset_requested=False, halt_requested=False, resume_requested=False,
                   flash_written=False, source_symbols=addresses, samples=[])
     session = ConnectHelper.session_with_chosen_probe(blocking=False, unique_id=PROBE_ID,
-        options={'target_override': 'cortex_m', 'connect_mode': 'attach', 'frequency': 1000000,
+        options={'target_override': 'cortex_m', 'connect_mode': 'attach', 'frequency': args.frequency,
                  'auto_unlock': False, 'resume_on_disconnect': False})
     if session is None:
         raise RuntimeError('expected CMSIS-DAP not available; no other probe selected')
@@ -146,15 +178,15 @@ def main():
             # Flash下载成功不代表应用已经执行初始化；下载算法也可能占用RAM。
             # 保存原始读数后检查版本、枚举和布局不变量，避免把指令残留当故障。
             result['application_baseline_plausible'] = all(
-                sample['g_speed_revision'] in (0x02110009, 0x0211000B)
+                sample['g_speed_revision'] in revisions
                 and 0 <= sample['lap']['state'] <= 6 and 0 <= sample['lap']['reason'] <= 11
                 and sample['calibrator']['phase'] <= 2
                 and sample['last_run']['valid'] in (0, 1)
                 and sample['timing']['counter_ready'] == 1
                 and sample['timing']['clock_hz'] == 16000000
                 and math.isfinite(sample['config']['straight_rpm'])
-                and 10 <= sample['config']['straight_rpm'] <= 60
-                and 500 <= sample['config']['run_ms'] <= 300000
+                and minimum_rpm <= sample['config']['straight_rpm'] <= maximum_rpm
+                and 500 <= sample['config']['run_ms'] <= maximum_run
                 and math.isfinite(sample['config']['min_feedforward'])
                 and 0 <= sample['config']['min_feedforward'] <= 300
                 for sample in result['samples'])

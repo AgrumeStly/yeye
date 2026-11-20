@@ -1,0 +1,57 @@
+{
+  "port": "COM10",
+  "manifest": {
+    "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+    "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+    "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+    "right_angle_racing.py": "d2c682a57d93d6a25f7e811c0f144cfd4e9f6a7964f3d02ad67b073a66a7f8f5",
+    "right_angle_grid.py": "8f3d6414ba198bebf7bd530f47a256034031319ec748912176b4251c53ff63d6",
+    "right_angle_route.py": "381f7fa3e90af5a06525fe148b858ef6ea6b512d60dac4b01296f14754279eff",
+    "right_angle_protocol.py": "e2396458daf44fefcf0bc10d87dfc0f932175bb1d5b00e096c77608bd998a908",
+    "right_angle_canmv.py": "b1370d90247634578503d455663aac0e73811b8a5b10b822e810d4564544f772",
+    "bundle_sha256": "b4896451b10fb3ae551aca081e759d554ad8d8d80d61f886e0848e8a2cfa2730",
+    "wire_version": 5,
+    "grid_step": 6,
+    "allow_drive": true,
+    "automatic_motor_start": false
+  },
+  "source_sha256": "b4896451b10fb3ae551aca081e759d554ad8d8d80d61f886e0848e8a2cfa2730",
+  "main_py_written": false,
+  "automatic_motor_start": false,
+  "operator_camera_start_authorized": true,
+  "completed": false,
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "initial_status": {
+    "running": false
+  },
+  "started": true,
+  "current_status": {
+    "running": true
+  },
+  "last_observed_at": 1795002889.943526,
+  "terminal_tail": " -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 42\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 39\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 41\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 40\r\n[RIGHT ANGLE] ready stage approach err -116 valid True ms 38\r\n"
+}

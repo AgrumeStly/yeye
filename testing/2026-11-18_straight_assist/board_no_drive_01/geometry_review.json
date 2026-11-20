@@ -1,0 +1,11 @@
+{
+  "execution_completed": true,
+  "all_wire_invalid": true,
+  "frames": 204,
+  "geometry_valid": 67,
+  "last_2s_frames": 40,
+  "last_2s_geometry_valid": 0,
+  "stable_current_geometry_passed": false,
+  "motor_test_performed": false,
+  "ground_test_performed": false
+}

@@ -1,0 +1,10 @@
+{
+  "remote": "/sdcard/right_angle_logs/run_0001.jsonl",
+  "bytes": 2993481,
+  "sha256": "ee46d21c9da904e5296bc427f5884abd13f1c913448216d4effde51efbcb50cd",
+  "frames": 7781,
+  "valid": 219,
+  "max_processing": 105,
+  "max_interval": 197,
+  "max_to_send": 109
+}

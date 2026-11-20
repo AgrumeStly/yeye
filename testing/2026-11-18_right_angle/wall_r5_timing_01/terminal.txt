@@ -1,0 +1,50 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 0, "ms": 67, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 1, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 2, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 3, "ms": 67, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 4, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 5, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 6, "ms": 67, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 7, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 8, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 9, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 10, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 11, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 12, "ms": 67, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 13, "ms": 68, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 14, "ms": 67, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": null, "label": "old", "steering": 0, "source": "unknown", "index": 15, "ms": 67, "bend": 0, "valid": false}
+TIMING_FRAME {"mode": "acquire", "profile": {"search": 50, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 0, "ms": 87, "bend": 556, "valid": false}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 50, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 1, "ms": 87, "bend": 556, "valid": false}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 37, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 2, "ms": 46, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 3, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 34, "anchors": 2}, "label": "new", "steering": -116, "source": "current_pair", "index": 4, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 7, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 5, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 6, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 42, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 7, "ms": 79, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 44, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 8, "ms": 80, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 9, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 34, "anchors": 2}, "label": "new", "steering": -116, "source": "current_pair", "index": 10, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 11, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 34, "anchors": 2}, "label": "new", "steering": -116, "source": "current_pair", "index": 12, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 13, "ms": 44, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 7, "grid": 34, "anchors": 2}, "label": "new", "steering": -116, "source": "current_pair", "index": 14, "ms": 43, "bend": 556, "valid": true}
+TIMING_FRAME {"mode": "tracking", "profile": {"search": 8, "grid": 35, "anchors": 1}, "label": "new", "steering": -116, "source": "current_pair", "index": 15, "ms": 44, "bend": 556, "valid": true}
+TIMING_DONE NO_UART NO_START
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

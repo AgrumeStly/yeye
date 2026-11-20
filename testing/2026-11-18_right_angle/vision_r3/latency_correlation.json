@@ -1,0 +1,126 @@
+{
+  "sequence74": {
+    "wire_valid": true,
+    "elapsed_ms": 354138,
+    "path_sequence": 74,
+    "valid": true,
+    "parameters": [
+      0.0,
+      60.0,
+      0.0,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "processing_ms": 93,
+    "acquire_ms": 0,
+    "to_send_ms": 96,
+    "interval_ms": 104,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "score": 2.988564,
+    "source": "current_pair",
+    "bend": 556,
+    "searched_candidates": 122,
+    "anchors": 8,
+    "index": 4939,
+    "steering": 0,
+    "support": [
+      31,
+      7
+    ],
+    "route": [
+      [
+        0.0,
+        8.0
+      ],
+      [
+        0.0,
+        16.0
+      ],
+      [
+        0.0,
+        24.0
+      ],
+      [
+        0.0,
+        32.0
+      ],
+      [
+        0.0,
+        40.0
+      ],
+      [
+        0.0,
+        48.0
+      ],
+      [
+        0.0,
+        56.0
+      ]
+    ]
+  },
+  "sequence75": {
+    "wire_valid": true,
+    "elapsed_ms": 354255,
+    "path_sequence": 75,
+    "valid": true,
+    "parameters": [
+      0.0,
+      60.0,
+      0.0,
+      1.570796
+    ],
+    "geometry_calibrated": false,
+    "processing_ms": 94,
+    "acquire_ms": 0,
+    "to_send_ms": 96,
+    "interval_ms": 117,
+    "stage": "approach",
+    "reason": "ready",
+    "confidence": 75,
+    "score": 2.983887,
+    "source": "current_pair",
+    "bend": 556,
+    "searched_candidates": 122,
+    "anchors": 8,
+    "index": 4940,
+    "steering": 0,
+    "support": [
+      31,
+      7
+    ],
+    "route": [
+      [
+        0.0,
+        8.0
+      ],
+      [
+        0.0,
+        16.0
+      ],
+      [
+        0.0,
+        24.0
+      ],
+      [
+        0.0,
+        32.0
+      ],
+      [
+        0.0,
+        40.0
+      ],
+      [
+        0.0,
+        48.0
+      ],
+      [
+        0.0,
+        56.0
+      ]
+    ]
+  },
+  "next_ready_age_ms": 215,
+  "mcu_expiry_ms": 200
+}

@@ -1,0 +1,5 @@
+# 历史现场证据和冻结发布保留原字节，不以Git换行转换改写哈希。
+* -text -whitespace
+*.md text eol=lf whitespace
+.gitattributes text eol=lf whitespace
+.gitattributes text eol=lf

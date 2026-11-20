@@ -5,6 +5,7 @@
 | 日常问题 | 入口 |
 | --- | --- |
 | 现在做到哪，下一步是什么 | [当前状态与全部任务](project_planning/project_status.md) |
+| 队友用本地dsh继续语音开发 | [AI接续入口](AI_HANDOFF.md) → [K230语音交接](project_planning/voice_handoff.md) |
 | 各阶段要交付什么 | [阶段路线图](project_planning/roadmap.md) |
 | 新建总管／执行对话、反馈验收 | [启动与反馈提示词](project_planning/agent_initialization_prompts.md) |
 | 一项任务怎样定义、完成和中断接续 | [任务格式](project_planning/tasks/README.md) |
@@ -21,4 +22,4 @@
 
 执行任务完成可交付改动及适用检查后默认按明确范围做本地Git提交；上传当前改动需主控本次明确要求。共享checkout写入、Keil保存／构建、分支与硬件动作串行。被忽略的build／tmp可能有唯一原始日志或Flash备份，不据目录名删除。换设备按[版本交接](project_planning/version_handoff.md)核对本地未同步及工具环境。
 
-本次为文档架构上传。最新直道／首弯实现、固件、相机发布包及现场附件仍有本地待同步内容，技术链接的缺口见[上传任务](project_planning/tasks/TASK-20261119-01-architecture-upload.md)及[版本交接](project_planning/version_handoff.md)；仅凭本次提交不能恢复完整最新实车环境。
+当前完整版本与默认main发布情况见[发布任务](project_planning/tasks/TASK-20261119-02-current-version-main.md)及[版本交接](project_planning/version_handoff.md)。队友从仓库根目录的[AI_HANDOFF.md](AI_HANDOFF.md)交给本地dsh接续；本机环境、语音方案、实现和验证在队友电脑继续处理。工具安装、模型获取及板上文件状态以交接说明和实际设备为准，不随Git自动恢复。

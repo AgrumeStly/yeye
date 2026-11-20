@@ -82,6 +82,20 @@ void speed_match_init(uint32_t now) {
     memset(cal_sum, 0, sizeof(cal_sum)); memset(cal_abs, 0, sizeof(cal_abs));
     zero_output();
 }
+#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
+int speed_match_use_verified_mapping(void) {
+    /* 两轮同时转动无法唯一辨认哪个编码器属于左轮；不能借双轮测试猜映射。
+     * 这里直接沿用已实际跑通直道的Flash/RAM冻结环证据，原始a/b采集不变。
+     * 仅首弯及直道双轮启动目标编入此入口，原SpeedMatch／直道目标行为不变。
+     */
+    if (g_speed_match.state != SPEED_WAIT_RELEASE || g_speed_match.phase != 0u ||
+        g_speed_match.left_pwm != 0u || g_speed_match.right_pwm != 0u) return 0;
+    g_speed_match.left_channel = 1u; g_speed_match.right_channel = 2u;
+    g_speed_match.left_sign = 1; g_speed_match.right_sign = -1;
+    g_speed_match.phase = 2u;
+    return 1;
+}
+#endif
 
 /** @brief 校准时仅一个编码器通道应有脉冲；至少20 counts且另一通道≤3。
  * 净变化须≥总变化90%，拒绝明显往复／噪声；这些是队内诊断阈值，不是官方规则。
@@ -242,9 +256,18 @@ void speed_match_sample(uint32_t now, const encoder_sample_t *a, const encoder_s
     if (g_speed_match.state == SPEED_RUNNING && (left_raw < -5.0f || right_raw < -5.0f)) {
         speed_match_fault(SPEED_ERROR_REVERSE, now); return;
     }
-    /* 一阶低通alpha=1/4，20ms采样时减少量化抖动，响应有约数十ms延迟。 */
+    /* 原目标一阶低通alpha=1/4；独立直道下方采用1/2，均使用20ms实际采样。 */
+#if defined(STRAIGHT_ASSIST_TARGET) || defined(RIGHT_ANGLE_TARGET)
+    /* 独立直道版缩短轮速反馈延迟，20ms窗口alpha=1/2；原台架仍1/4。
+     * 实物左轮超调表明原滤波滞后与起步积分叠加，快轮减PWM来得太迟。
+     * 原始反向／超速仍在未滤波数据上检查，不因改滤波而放宽。
+     */
+    g_speed_match.left_rpm += (left_raw - g_speed_match.left_rpm) * 0.5f;
+    g_speed_match.right_rpm += (right_raw - g_speed_match.right_rpm) * 0.5f;
+#else
     g_speed_match.left_rpm += (left_raw - g_speed_match.left_rpm) * 0.25f;
     g_speed_match.right_rpm += (right_raw - g_speed_match.right_rpm) * 0.25f;
+#endif
     g_speed_match.difference_rpm = g_speed_match.left_rpm - g_speed_match.right_rpm;
     if (g_speed_match.state != SPEED_RUNNING) return;
     if (left->delta != 0) last_edge[0] = now;

@@ -1,0 +1,11 @@
+{
+  "frames": 89,
+  "geometry_valid": 86,
+  "all_wire_invalid": true,
+  "max_processing_ms": 83,
+  "max_to_send_ms": 87,
+  "max_interval_ms": 101,
+  "source_log": "/sdcard/right_angle_logs/run_0005.jsonl",
+  "source_sha256": "c811b7e42d208599128e914cf339bbd498a0880c344c866b52a2db3f1be9bd70",
+  "motor_started": false
+}

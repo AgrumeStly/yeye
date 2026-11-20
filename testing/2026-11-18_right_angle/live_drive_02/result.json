@@ -1,0 +1,56 @@
+{
+  "port": "COM10",
+  "manifest": {
+    "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+    "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+    "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+    "right_angle_route.py": "5790fa548e2f21aa00a1dcb6ccb7b1df74d9bb8e0576123fd79f0b6a3f654fcc",
+    "right_angle_protocol.py": "dbf28fee3ae99181c26c9b47ca2f73d31c5115dfad2adb6a6341c63b14bfc333",
+    "right_angle_canmv.py": "bb23e37e64ca791c540bf1e4ebc1113c0abbb9de7a3526d0c2b8862a0def0448",
+    "bundle_sha256": "bf3ba0b68ccaa9368af6238dd11fb2c2d318cd127e6ad4144bdb430658ce60de",
+    "wire_version": 4,
+    "grid_step": 6,
+    "allow_drive": true,
+    "automatic_motor_start": false
+  },
+  "source_sha256": "bf3ba0b68ccaa9368af6238dd11fb2c2d318cd127e6ad4144bdb430658ce60de",
+  "main_py_written": false,
+  "automatic_motor_start": false,
+  "operator_camera_start_authorized": true,
+  "completed": false,
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "initial_status": {
+    "running": false
+  },
+  "started": true,
+  "current_status": {
+    "running": true
+  },
+  "last_observed_at": 1794999656.478902,
+  "terminal_tail": "unknown err 0 valid False ms 46\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 80\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 88\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 82\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 50\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 39\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 69\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 49\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 50\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 54\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 50\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 53\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 53\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 51\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 52\r\n",
+  "stopped_by_control_file": true
+}

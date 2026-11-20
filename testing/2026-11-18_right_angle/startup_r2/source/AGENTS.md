@@ -1,0 +1,27 @@
+# Workspace preferences
+
+- **比赛要求强制遵循 `competition/比赛文档.pdf`，可检索全文见 `competition/比赛文档.md`。** 制定需求、方案、接口、实现、测试、报告或验收标准前，必须读取相关比赛条款、赛道图和评分表；项目计划、历史约定及改进方案均须符合比赛文档。转写与原文冲突以 PDF 为准，正式补充通知须归档来源并明确替代条款；未明确的规则标记待核实，不自行补造。
+- **一切改进的目的都是在符合比赛要求的前提下取得更高的比赛总分。** 每项改进必须说明对应比赛条款／评分项、预期得分收益或避免的扣分／失败风险，以及验证指标和证据；基础能力、可靠性、维护性及学习安排也须说明如何支撑比赛得分。结合完赛成功率、碰线扣分、用时、额外功能和报告评分确定优先级；不得以违背比赛要求换取速度或功能。不把队内目标、预测收益或软件检查当作官方规则或实测得分。
+- Project skills are stored in `.agent/skill/`, with Codex discovery entries in `.agents/skills/`. For every project task, consult `.agent/skill/grill-me/SKILL.md` by default without requiring an explicit invocation. Use its interview workflow for material unresolved planning or design decisions; carry out clear, already-authorized work directly. Explicit `grilling` requests use `.agent/skill/grilling/SKILL.md`.
+- At the start of project work, read `project_planning/collaboration_standard.md` for conversation ownership and authoritative document sources, and `project_planning/project_status.md` for current progress and evidence. Read the assigned task and relevant module documents before implementation. For multi-turn or cross-chat work, use `project_planning/tasks/README.md`; save detailed results in the task and module evidence, then let 00 update the global summary sequentially.
+- 00 项目总指挥 coordinates the whole project: goals, role assignments, schedule, interfaces, deliverables, risks, and acceptance. 主控's implementation work remains control firmware and final integration; 视觉 owns vision and speech implementation, and 硬件 owns hardware preparation. 01 handles control firmware, 02 handles vehicle integration and assembly, and 03 handles GitHub and device handoffs.
+- 主控 brings priorities, scope/interface changes, and cross-module issues to the existing 00. Clear module tasks may go directly to 01 or 02. Execution chats save results in files; 00 reads those files, checks evidence, updates the global summary, and provides a complete prompt when another chat is needed. Each prompt includes scope, dependencies, acceptance criteria, current authorization, and required evidence. 主控 triggers handoffs; generating a prompt does not authorize cross-chat messaging or remote operations.
+- Conversation identity follows 主控's current assignment and the registry in `project_planning/collaboration_standard.md`; reading a shared document never makes a chat 00. The 2026-10-25 organization chat handles ORG-01 and the explicitly requested ORG-02 directory migration; the existing 00 remains the coordinator. Management-only maintenance preserves engineering paths; explicit migrations update project, tests, tools and documentation together. Protocol and original evidence keep their authoritative paths. Chats sharing one checkout also share files and the current Git branch; serialize writes, Keil saves/builds, branch changes, and hardware operations.
+- STM32 development uses `control/Core/`, `control/App/`, `control/Drivers_Custom/`, `control/Drivers/`, `control/Algorithms/`, `control/Tests/` and `control/MDK-ARM/`. Start from `docs/architecture.md` and `control/README.md`; preserve SPL and the six existing target behaviors. New mathematical algorithms belong in Algorithms, hardware adapters in Drivers_Custom, and application policy in App. Root `docs/` routes to existing specifications and evidence rather than duplicating parameter tables or the UART protocol.
+- Save and verify changes locally by default. Push to GitHub or update remote pull requests only when 主控 explicitly requests uploading the current changes; past upload requests do not authorize automatic uploads in later tasks.
+- Use English names for all new folders in this workspace. Keep existing folders English-named when reorganizing files.
+- Store smart-car hardware preparation documents in `hardware_preparation/`, editable generators in `hardware_preparation/source/`, and superseded documents in `hardware_preparation/archive/`.
+- In conversation and shared team documents, address members by role: 主控, 视觉, 硬件. Use explicit roles instead of first- or second-person pronouns, and identify the responsible role for role-specific steps.
+- Write detailed Chinese comments in newly written or modified main application code so beginners can follow it. Document module and function purposes, parameters and units, return values, key processing steps and design reasons, boundary and error handling, and relevant hardware, interrupt, and timing constraints. Prioritize initialization, communication, state machines, and control algorithms; update comments whenever the corresponding code changes.
+
+## 主控开发与人工验证（2026-10-23补充）
+
+- 沿用已确认的 STM32 标准外设库（SPL）工程；改外设初始化前读取 `control/docs/standard_library.md`，保留该文档区分 SPL 外设与 CMSIS 内核支持的边界。不要仅为简化讲解迁移库或删除必要的时序/故障保护。
+- 给主控的下载、调试指导优先采用当前工程的 Keil5 图形界面及已确认下载器，写清工程、目标、菜单和预期现象；确需更换链路时说明具体原因。代理自己的构建/检查仍可使用命令行。操作步骤使用实物丝印，例如 KEY，并在首次出现时注明它与 WKUP 的对应关系。
+
+以上源自标准库和中文注释要求、Keil操作纠正及KEY称呼反馈；不改变既有职责、上传授权或技能启用状态。
+
+## 主控试跑流程（2026-11-18补充）
+
+- 主控明确要求以后不再安排左右轮分别测试，默认流程为**一次双轮悬空测试，随后一次上道直接试跑**。当前已跑通的接线／编码器映射直接沿用已归档实证，不每次重新逐轮识别，不追加初始化测试矩阵。
+- 硬件接线或轮组安装实际改变、已有映射失效时，先说明具体变化和所需核实项；不能用双轮同时转动猜测左右映射，也不能静默恢复逐轮测试流程。KEY急停、失线／超时／反馈异常保护保留。

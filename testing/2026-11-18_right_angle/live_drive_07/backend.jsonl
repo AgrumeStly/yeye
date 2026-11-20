@@ -1,0 +1,130 @@
+{"at": 1795003485.617213, "request": {"id": 1, "method": "connectBoard", "params": {"port": "COM10", "baudRate": 12000000}}}
+{"at": 1795003485.6518462, "stderr": "[canmv-backend] connect requested port=\"COM10\" baud=12000000\n"}
+{"at": 1795003486.178946, "stderr": "[canmv-backend] connect serial open succeeded port=\"COM10\"; DTR attach edge and input drain completed\n"}
+{"at": 1795003486.1793106, "stderr": "[canmv-backend] handshake sync succeeded\n"}
+{"at": 1795003486.1795118, "stderr": "[canmv-backend] handshake firmware probe succeeded: v0.4.0\n"}
+{"at": 1795003486.1799736, "stderr": "[canmv-backend] capabilities negotiation succeeded: version=2 flags=0x000003FF firmware=K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c elapsed=1ms\n"}
+{"at": 1795003486.1822793, "stderr": "[canmv-backend] connect handshake result protocol=2 capability_protocol=true firmware=\"K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c\" arch=\"[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]\"\n"}
+{"at": 1795003486.1829948, "id": 1, "result": {"archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]", "boardName": "CanMV K230D Lushanpi Lite - 128M", "boardType": "K230D", "capabilities": {"deleteFile": true, "fileExec": true, "listDir": true, "listDirPaged": false, "mkdir": true, "readFile": true, "renameFile": true, "replInput": true, "rmdir": true, "rmdirRecursive": false, "virtualTouch": true, "writeFile": true}, "fwVersion": "v1.8-0", "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c", "memorySize": "", "port": "COM10", "protocolVersion": 2, "repl": ""}}
+{"at": 1795003486.1831467, "request": {"id": 2, "method": "scriptRunning", "params": {}}}
+{"at": 1795003486.659932, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795003486.6635175, "event": "boardReady", "params": {"state": "ready"}}
+{"at": 1795003486.6636102, "id": 2, "result": {"running": false}}
+{"at": 1795003486.6636596, "request": {"id": 3, "method": "scriptRunning", "params": {}}}
+{"at": 1795003486.6647344, "id": 3, "result": {"running": false}}
+{"at": 1795003486.6650445, "request": {"id": 4, "method": "runScript", "params": {"script_sha256": "27bf7033b11a2c31693abebd40584279b6a0d482ec6785d910c3e59985a456ca"}}}
+{"at": 1795003486.843898, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795003487.8688304, "event": "scriptState", "params": {"state": "started"}}
+{"at": 1795003487.8689575, "id": 4, "result": {"status": "ok"}}
+{"at": 1795003487.8740053, "event": "scriptOutput", "params": {"text": "\r\n>>> \r\n[RIGHT ANGLE LOG] /sdcard/right_angle_logs/run_0011.jsonl ALLOW_DRIVE True NO AUTO START\r\nfind sensor gc2093_csi2\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000, type 24, output 1920x1080@60\r\ndeprecated function\r\n"}}
+{"at": 1795003489.7209556, "event": "scriptOutput", "params": {"text": "sensor(0), mode 0, buffer_num 4, buffer_size 0\r\n"}}
+{"at": 1795003490.9189143, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_01\r\n"}}
+{"at": 1795003490.9215827, "request": {"id": 5, "method": "scriptRunning", "params": {}}}
+{"at": 1795003490.9221678, "id": 5, "result": {"running": true}}
+{"at": 1795003491.029, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 94\r\n"}}
+{"at": 1795003492.006267, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 89\r\n"}}
+{"at": 1795003493.0978525, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003494.0771117, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003494.079317, "request": {"id": 6, "method": "scriptRunning", "params": {}}}
+{"at": 1795003494.080123, "id": 6, "result": {"running": true}}
+{"at": 1795003495.0538955, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 95\r\n"}}
+{"at": 1795003496.1434734, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 620 valid True ms 60\r\n"}}
+{"at": 1795003496.3623927, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_02\r\n"}}
+{"at": 1795003497.1529768, "request": {"id": 7, "method": "scriptRunning", "params": {}}}
+{"at": 1795003497.153758, "id": 7, "result": {"running": true}}
+{"at": 1795003497.3398771, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 94\r\n"}}
+{"at": 1795003498.4237752, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003499.4000332, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003500.1789565, "request": {"id": 8, "method": "scriptRunning", "params": {}}}
+{"at": 1795003500.18038, "id": 8, "result": {"running": true}}
+{"at": 1795003500.380758, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_03\r\n"}}
+{"at": 1795003500.4903104, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003501.471356, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003502.5576282, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003503.349514, "request": {"id": 9, "method": "scriptRunning", "params": {}}}
+{"at": 1795003503.3524637, "id": 9, "result": {"running": true}}
+{"at": 1795003503.5362132, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795003504.6240604, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003505.6010222, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003506.3965027, "request": {"id": 10, "method": "scriptRunning", "params": {}}}
+{"at": 1795003506.3974884, "id": 10, "result": {"running": true}}
+{"at": 1795003506.695827, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 617 valid False ms 106\r\n"}}
+{"at": 1795003507.1260877, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_04\r\n"}}
+{"at": 1795003507.8857434, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795003508.870689, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003509.6644683, "request": {"id": 11, "method": "scriptRunning", "params": {}}}
+{"at": 1795003509.6652596, "id": 11, "result": {"running": true}}
+{"at": 1795003509.9595575, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003510.9389777, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795003511.917566, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003512.7082095, "request": {"id": 12, "method": "scriptRunning", "params": {}}}
+{"at": 1795003512.7088463, "id": 12, "result": {"running": true}}
+{"at": 1795003513.0050378, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003513.9863236, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795003514.965073, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003515.751243, "request": {"id": 13, "method": "scriptRunning", "params": {}}}
+{"at": 1795003515.7529664, "id": 13, "result": {"running": true}}
+{"at": 1795003516.0479457, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 93\r\n"}}
+{"at": 1795003517.0254493, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003518.116917, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003518.9107027, "request": {"id": 14, "method": "scriptRunning", "params": {}}}
+{"at": 1795003518.9115407, "id": 14, "result": {"running": true}}
+{"at": 1795003519.0962675, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 91\r\n"}}
+{"at": 1795003520.0768046, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 90\r\n"}}
+{"at": 1795003520.7326145, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_05\r\n"}}
+{"at": 1795003521.386866, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 622 valid True ms 72\r\n"}}
+{"at": 1795003521.8217733, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_06\r\n"}}
+{"at": 1795003522.085078, "request": {"id": 15, "method": "scriptRunning", "params": {}}}
+{"at": 1795003522.0861852, "id": 15, "result": {"running": true}}
+{"at": 1795003522.4744737, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 650 valid True ms 90\r\n"}}
+{"at": 1795003522.8020873, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_07\r\n"}}
+{"at": 1795003523.7866144, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 624 valid True ms 56\r\n"}}
+{"at": 1795003524.330671, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_08\r\n"}}
+{"at": 1795003524.9864554, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_09\r\n"}}
+{"at": 1795003525.096084, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 650 valid False ms 105\r\n"}}
+{"at": 1795003525.0982697, "request": {"id": 16, "method": "scriptRunning", "params": {}}}
+{"at": 1795003525.0995638, "id": 16, "result": {"running": true}}
+{"at": 1795003526.0733411, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_10\r\n"}}
+{"at": 1795003526.1808786, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795003527.3834689, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_11\r\n[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 97\r\n"}}
+{"at": 1795003528.1785142, "request": {"id": 17, "method": "scriptRunning", "params": {}}}
+{"at": 1795003528.1793902, "id": 17, "result": {"running": true}}
+{"at": 1795003528.5854504, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_12\r\n"}}
+{"at": 1795003528.804182, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 89\r\n"}}
+{"at": 1795003529.5676365, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_13\r\n"}}
+{"at": 1795003529.8945484, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] stabilizing stage turn err 650 valid False ms 89\r\n"}}
+{"at": 1795003530.766067, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_14\r\n"}}
+{"at": 1795003530.9858572, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] stabilizing stage turn err 650 valid False ms 105\r\n"}}
+{"at": 1795003531.249347, "request": {"id": 18, "method": "scriptRunning", "params": {}}}
+{"at": 1795003531.250115, "id": 18, "result": {"running": true}}
+{"at": 1795003531.4218786, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_15\r\n"}}
+{"at": 1795003532.2918692, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 592 valid True ms 55\r\n"}}
+{"at": 1795003532.728441, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_16\r\n"}}
+{"at": 1795003533.6018953, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 650 valid False ms 107\r\n"}}
+{"at": 1795003534.0367527, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_17\r\n"}}
+{"at": 1795003534.302704, "request": {"id": 19, "method": "scriptRunning", "params": {}}}
+{"at": 1795003534.3048453, "id": 19, "result": {"running": true}}
+{"at": 1795003534.9099162, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 624 valid False ms 108\r\n"}}
+{"at": 1795003535.3434508, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_18\r\n"}}
+{"at": 1795003536.1046937, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 622 valid True ms 73\r\n"}}
+{"at": 1795003536.5410845, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_19\r\n"}}
+{"at": 1795003537.1917632, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 650 valid False ms 107\r\n"}}
+{"at": 1795003537.4562094, "request": {"id": 20, "method": "scriptRunning", "params": {}}}
+{"at": 1795003537.4570963, "id": 20, "result": {"running": true}}
+{"at": 1795003537.62625, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_20\r\n"}}
+{"at": 1795003538.388653, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 92\r\n"}}
+{"at": 1795003539.4755008, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 89\r\n"}}
+{"at": 1795003540.3440006, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] ready stage turn err 608 valid True ms 54\r\n"}}
+{"at": 1795003540.6063378, "request": {"id": 21, "method": "scriptRunning", "params": {}}}
+{"at": 1795003540.6071281, "id": 21, "result": {"running": true}}
+{"at": 1795003540.6637015, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE LOSS] /sdcard/right_angle_logs/run_0011_loss_21\r\n"}}
+{"at": 1795003541.4278295, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] no_current_pair stage unknown err 0 valid False ms 89\r\n"}}
+{"at": 1795003542.40919, "event": "scriptOutput", "params": {"text": "[RIGHT ANGLE] stabilizing stage turn err 650 valid False ms 102\r\n"}}
+{"at": 1795003542.9339366, "request": {"id": 22, "method": "stopScript", "params": {}}}
+{"at": 1795003543.8053753, "event": "scriptOutput", "params": {"text": "deprecated function\r\nTraceback (most recent call last):\r\n  File \"<stdin>\", line 1025, in <module>\r\n  File \"<stdin>\", line 960, in main\r\n  File \"<stdin>\", line 639, in update\r\n  File \"<stdin>\", line 493, in corner_grid\r\nException: IDE interrupt\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795003543.8070915, "id": 22, "result": {}}
+{"at": 1795003543.807148, "request": {"id": 23, "method": "scriptRunning", "params": {}}}
+{"at": 1795003543.807432, "id": 23, "result": {"running": false}}
+{"at": 1795003543.8074787, "request": {"id": 24, "method": "disconnectBoard", "params": {}}}
+{"at": 1795003544.2588904, "event": "scriptOutput", "params": {"text": "\r\nMPY: soft reboot\r\nCanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D\r\nType \"help()\" for more information.\r\n>>> "}}
+{"at": 1795003544.2608495, "id": 24, "result": {}}

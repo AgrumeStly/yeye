@@ -18,12 +18,24 @@ static uint16_t raw_a, raw_b;
 static float ls, rs, fa, fb;
 static uint8_t sequence;
 static int feed, valid_path, steer, bend, history, mode, reverse_mapping;
+#ifdef RIGHT_ANGLE_TARGET
+static int corner_flags;
+#endif
 static unsigned checks;
 #define CHECK(e) do { ++checks; assert(e); } while (0)
 static void put16(uint8_t *p, uint16_t v) { p[0]=(uint8_t)v; p[1]=(uint8_t)(v>>8); }
 static void packet(uint8_t *p) {
     memset(p,0,20); p[0]=0xa5; p[1]=0x5a; p[2]=2; p[3]=1; p[4]=12; p[5]=sequence++;
+#ifdef STRAIGHT_ASSIST_TARGET
+    p[2]=3; /* 同一真实编码器／电机替身可复用于直道v3的独立检查入口。 */
+#endif
+#ifdef RIGHT_ANGLE_TARGET
+    p[2]=5; /* 首弯v5：当前L形预测，保留其它旧目标原封包。 */
+#endif
     p[6]=(uint8_t)((valid_path?1:0)|(history?4:0)); p[7]=80;
+#ifdef RIGHT_ANGLE_TARGET
+    if (corner_flags) p[6]=(uint8_t)((valid_path?1:0)|corner_flags);
+#endif
     put16(p+8,(uint16_t)steer); put16(p+12,(uint16_t)bend); put16(p+14,20);
     put16(p+18,protocol_crc16(p,18));
 }
@@ -59,6 +71,18 @@ static void sample(void) {
     }
     if(mode==1) ls=rs=0;
     if(mode==2) rs=0;
+#ifdef STRAIGHT_ASSIST_TARGET
+    if(mode==7) {
+        /* 仅为早期带载瞬态的近似模型，系数来自ground_02的137..557ms原始记录。
+         * 该短段拟合不能外推为稳态电机参数或实测性能；用于暴露左右增益／惯性
+         * 不同的起步偏航风险。旧目标及原有电机替身完全不使用此分支。
+         */
+        ls=0.97566627f*previous_left+0.04646166f*(float)g_lap.left_pwm-14.25056101f;
+        rs=0.94432472f*previous_right+0.06451199f*(float)g_lap.right_pwm-24.95763819f;
+        if(ls<0.0f) ls=0.0f;
+        if(rs<0.0f) rs=0.0f;
+    }
+#endif
     fa+=ls*1058.6f/3000.0f; fb+=rs*1060.8f/3000.0f;
     da=(int)fa; db=(int)fb; fa-=(float)da; fb-=(float)db;
     if(mode==3) { da=-da; db=-db; }
@@ -81,6 +105,9 @@ static void ticks(unsigned n, uint8_t key) {
 static void init(uint32_t start, int mapping) {
     now=sampled=start; reverse_mapping=mapping; raw_a=raw_b=0; ls=rs=fa=fb=0;
     feed=1; valid_path=1; steer=bend=history=mode=0; sequence=0;
+#ifdef RIGHT_ANGLE_TARGET
+    corner_flags=0;
+#endif
     encoder_counter_init(&a); encoder_counter_init(&b); lap_link_init(&parser); lap_motion_init(now);
     g_lap_config.straight_rpm=40; g_lap_config.run_ms=3000;
     g_lap_config.min_feedforward=200;

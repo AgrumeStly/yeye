@@ -1,0 +1,62 @@
+{
+  "source_sha256": "4df340453fc451d430efb96b385d3bf9bb5c2ff108729ea4e229b0dde97d913c",
+  "parent_manifest": {
+    "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+    "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+    "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+    "straight_route.py": "2060c7051dd2129d429d4776e0903fb121f8a0a95758c54ac24ffc948aa9de6e",
+    "straight_protocol.py": "f0a69a1976760771790ba5eb1300dc64d9e6de7f1d51fe4c1baefff81ab36af0",
+    "straight_assist_canmv.py": "d7ca5b45bca25a549c9bc0cd24deae03a7fe47a3816d4a7edffd5925551b9a94",
+    "bundle_sha256": "e993606d6b4e8cfc6139279c78684250f2bcaaa5a7fc6386dccf1c4f34c1df9a",
+    "allow_drive": false,
+    "wire_version": 3,
+    "grid_step": 6,
+    "automatic_motor_start": false
+  },
+  "main_py_written": false,
+  "automatic_motor_start": false,
+  "allow_drive": false,
+  "confirmed_suspended": true,
+  "passed": true,
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "initial_status": {
+    "running": false
+  },
+  "main_sha256_before": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8",
+  "frames": 147,
+  "valid_geometry": 0,
+  "scope": "diagnostic execution only; not motor or ground acceptance",
+  "stable_geometry_last_2s": false,
+  "motion_ready": false,
+  "source_log": "/sdcard/straight_logs/run_0005.jsonl",
+  "all_wire_invalid": true,
+  "main_bytes_unchanged": true,
+  "max_processing_ms": 66,
+  "max_to_send_ms": 77,
+  "max_interval_ms": 81,
+  "preview_frames": 5
+}

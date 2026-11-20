@@ -1,0 +1,21 @@
+{
+  "control/App/Motion/lap_motion.c": "9ee618bf0141fa0e127904c0b9b6ba6132636bf8716e95f951f7ccc6bfa9afc9",
+  "control/App/Motion/lap_motion.h": "0c3c9ce1b74a65083816e92cdfb8cd938f8895a6eb705021cbf148077aeba43e",
+  "control/App/Motion/speed_match.c": "4e51c775fccf9b336542187ec044e55c546041612121f8e79dec468b64efabb7",
+  "control/App/Motion/speed_match.h": "7cc1b466ca6caad90679b0775547ec11bd990e1759f4198f0024ef560932939d",
+  "control/Core/Src/low_speed_lap_main.c": "5ace2c538bbd67deccd1cf70418b8907d102f41fc56a364763b75571e1732d6d",
+  "control/Tests/Host/test_right_angle.c": "f67e10fefd2ed8ca1e1fe40d9c75deb5e015924845f9b5eb0cf4d4741c6f7b92",
+  "control/tools/lap_swd_capture.py": "c22c10b94d89892f066b72defd7790381438fd9e429fba997925d804b185cab0",
+  "control/MDK-ARM/right_angle.uvprojx": "4c4fccd4e2022bab9d5f1eebe39ea012c02478d02dc0501d0b041e85c9a88ff2",
+  "control/docs/right_angle.md": "7e8bdbd5526966e036cab916fa1c384a686e5a0be3523f6416e3d4c473feee16",
+  "AGENTS.md": "2c6030e8132ce2380ec6a21b1d9c280c4496711a9e1dd1ab57f48ec081dfc21c",
+  "hardware_preparation/wheel_mapping.md": "913dcdce2c29aa4c55a44372bc77b420e2e383fe491cb4baa732f475973e7a07",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle.axf": "a7a1cab5a531bff0d54fe38879e1bcddea132e5aad5608dfa6320dc1b4035dc7",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle.bin": "fcee8644d5a2fe1e439fbe56eb0293a7156e4123a7dff8a32ffd4b4a8dcc28fc",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle.hex": "4d8ccdf222052e7150f3ab4b7142d5682d9d7e5e488e9eb68d5b5ba4693b5c48",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle_drive.py": "c26b0e7252f4d678f8d99eaf75d06b01070098c65cc3a4dc88c5c304165c886e",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle_drive.py.manifest.json": "8a6a51453a900130ddc45b183af7dcc58b6b0b077383cedb482e0b88a54af78f",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle_preview.py": "1cd5c59c5f5152f540734fb87e43ac4893f3d73d2443bc17b7230791e537a1cf",
+  "testing\\2026-11-18_right_angle\\release_r2\\right_angle_preview.py.manifest.json": "9179821ad43dc748f5a03c1397a1944e3b0df2f48d50b01f6defca74029bb201",
+  "control/docs/protocol_v1_draft.md": "07c509485ea3266ac30093c9fc2bfdd3c592dc4f7eb912ccbb9eaaf45f539ca4"
+}

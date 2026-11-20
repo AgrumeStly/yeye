@@ -1,0 +1,33 @@
+{
+  "actual_revision": "0x2120011",
+  "flash_matches_bin": true,
+  "fault_reason": "LAP_LINK",
+  "elapsed_ms": 155,
+  "startup": {
+    "stage": 2,
+    "bench_ms": 1000,
+    "completed": 1,
+    "ground_runs": 1,
+    "left_counts": 1162,
+    "right_counts": 1163,
+    "starts_blocked": 3,
+    "blocked_reason": 0
+  },
+  "hardware_fault": 0,
+  "uart_errors": 0,
+  "final_path_at": 39623,
+  "stop_at": 39823,
+  "source_age_at_stop_ms": 200,
+  "frame_sequences": [
+    73,
+    73,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74
+  ],
+  "capture_writes_or_reset": false,
+  "operator_feedback": "near corner KEY no action/no fast blink; moved back, KEY briefly moved then fast blink; no RST between"
+}

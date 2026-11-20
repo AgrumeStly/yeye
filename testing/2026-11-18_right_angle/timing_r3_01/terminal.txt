@@ -1,0 +1,50 @@
+
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+>>> 
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 0, "ms": 73, "valid": false, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 1, "ms": 86, "valid": false, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 2, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 3, "ms": 83, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 4, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 5, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 6, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 7, "ms": 83, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 8, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 9, "ms": 83, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 10, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 11, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 12, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 13, "ms": 83, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 14, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": null, "label": "old", "index": 15, "ms": 84, "valid": true, "mode": null}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 43, "grid": 28, "anchors": 2}, "label": "new", "index": 0, "ms": 74, "valid": false, "mode": "acquire"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 16, "grid": 29, "anchors": 1}, "label": "new", "index": 1, "ms": 46, "valid": false, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 1}, "label": "new", "index": 2, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 2}, "label": "new", "index": 3, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 28, "anchors": 2}, "label": "new", "index": 4, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 9, "grid": 29, "anchors": 1}, "label": "new", "index": 5, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 9, "grid": 28, "anchors": 2}, "label": "new", "index": 6, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 28, "anchors": 2}, "label": "new", "index": 7, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 2}, "label": "new", "index": 8, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 2}, "label": "new", "index": 9, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 1}, "label": "new", "index": 10, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 28, "anchors": 2}, "label": "new", "index": 11, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 28, "anchors": 2}, "label": "new", "index": 12, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 2}, "label": "new", "index": 13, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 28, "anchors": 2}, "label": "new", "index": 14, "ms": 38, "valid": true, "mode": "tracking"}
+TIMING_FRAME {"bend": 556, "source": "current_pair", "profile": {"search": 8, "grid": 29, "anchors": 2}, "label": "new", "index": 15, "ms": 39, "valid": true, "mode": "tracking"}
+TIMING_DONE NO_UART NO_START
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 
+MPY: soft reboot
+CanMV v1.8-0-gc2d1f5c(based on Micropython e00a144) on 2026-07-03; k230d_canmv_lushanpi_lite with K230D
+Type "help()" for more information.
+>>> 

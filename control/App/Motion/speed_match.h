@@ -45,6 +45,14 @@ extern volatile speed_match_config_t g_speed_config;
 extern volatile speed_match_view_t g_speed_match;
 /** @brief 清状态／PI及通道映射；上电不动。now单位ms，指针参数均须有效。 */
 void speed_match_init(uint32_t now);
+#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
+/** @brief 首弯／直道双轮启动专用：装载当前安装已实跑核实的映射，取消逐轮重新配对。
+ * 无参数，返回1表示成功；只能在init后的零输出等待状态调用，否则返回0。
+ * 依据2026-11-18 ground_03_capture：左TIM3/+1，右TIM4/-1。
+ * 只安装已知配置，不把本次双轮测试称作重新识别左右通道；接线改变后须更新证据。
+ */
+int speed_match_use_verified_mapping(void);
+#endif
 /** @brief 每1ms调用；raw_key为KEY原始电平。先停机监督，再进行按键启动。 */
 void speed_match_tick(uint32_t now, uint8_t raw_key);
 /** @brief 复用现有encoder_counter结果；a/b为本次采样，必须每20ms调用。

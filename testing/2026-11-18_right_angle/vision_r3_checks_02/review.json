@@ -1,0 +1,8039 @@
+{
+  "checks": [
+    {
+      "name": "drive_explicit_no_preview",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preview_no_permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_center_00021_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.8712839290315992
+      }
+    },
+    {
+      "name": "v03_center_00021_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.8712839290315992
+      }
+    },
+    {
+      "name": "v03_center_00021_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_center_00022_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.877284067923703
+      }
+    },
+    {
+      "name": "v03_center_00022_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.877284067923703
+      }
+    },
+    {
+      "name": "v03_center_00022_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_center_00023_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.877284067923703
+      }
+    },
+    {
+      "name": "v03_center_00023_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.877284067923703
+      }
+    },
+    {
+      "name": "v03_center_00023_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_offset_left_00011_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "name": "v03_offset_left_00011_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "name": "v03_offset_left_00011_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_offset_left_00012_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "name": "v03_offset_left_00012_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "name": "v03_offset_left_00012_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_offset_left_00013_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "name": "v03_offset_left_00013_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "name": "v03_offset_left_00013_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_offset_right_00011_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "name": "v03_offset_right_00011_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "name": "v03_offset_right_00011_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_offset_right_00012_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "name": "v03_offset_right_00012_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "name": "v03_offset_right_00012_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_offset_right_00013_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "name": "v03_offset_right_00013_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "name": "v03_offset_right_00013_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_heading_left_00011_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "name": "v03_heading_left_00011_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "name": "v03_heading_left_00011_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_heading_left_00012_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "name": "v03_heading_left_00012_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "name": "v03_heading_left_00012_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_heading_left_00013_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "name": "v03_heading_left_00013_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "name": "v03_heading_left_00013_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_heading_right_00011_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.882428349230754
+      }
+    },
+    {
+      "name": "v03_heading_right_00011_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.882428349230754
+      }
+    },
+    {
+      "name": "v03_heading_right_00011_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_heading_right_00012_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.8872163336539187
+      }
+    },
+    {
+      "name": "v03_heading_right_00012_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.8872163336539187
+      }
+    },
+    {
+      "name": "v03_heading_right_00012_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_heading_right_00013_stable_gate",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.882428349230754
+      }
+    },
+    {
+      "name": "v03_heading_right_00013_direction",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.882428349230754
+      }
+    },
+    {
+      "name": "v03_heading_right_00013_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_center_0009_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v03_center_0012_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_0_no_hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reacquire_needs_stability_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_80_no_hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reacquire_needs_stability_80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "uniform_255_no_hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reacquire_needs_stability_255",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gap_revokes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "clock_reverse_revokes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bad_buffer_revokes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "approach_detected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current_corner_single_transition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "right_turn_command_seen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "blank_after_corner_revokes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_cannot_initialize",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v4_crc_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v4_crc_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "v4_crc_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "history_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "processing_deadline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "image_age_deadline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_image_age_deadline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preview_packet_invalid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "production_v4_isolation",
+      "passed": true,
+      "detail": [
+        "1 0 1 188 2",
+        "1 1 9 188 2",
+        "2 0 0 0 0"
+      ]
+    }
+  ],
+  "manifest": {
+    "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+    "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+    "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+    "right_angle_route.py": "5790fa548e2f21aa00a1dcb6ccb7b1df74d9bb8e0576123fd79f0b6a3f654fcc",
+    "right_angle_protocol.py": "dbf28fee3ae99181c26c9b47ca2f73d31c5115dfad2adb6a6341c63b14bfc333",
+    "right_angle_canmv.py": "19290761e895f59165521d876bed7c1aa82c5518e5dcbc12372b0788cf0d632d",
+    "bundle_sha256": "b977930feee8987c5a193f3228032974554575f0c56cf0868c490d2cccf6ea5f",
+    "wire_version": 4,
+    "grid_step": 6,
+    "allow_drive": true,
+    "automatic_motor_start": false
+  },
+  "static_observations": [
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_center_0002\\data_0001.jpg",
+      "sha256": "63d5f77cac8b0d1020183677ca5c5086114f9b72fc693fab485f01d7f8a435e1",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.8712839290315992
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_center_0002\\data_0002.jpg",
+      "sha256": "4a6e1ffa5e06fcb80bd2fb74760ded2937f77d6b5ecbfb76e421d67afbbfe746",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.877284067923703
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_center_0002\\data_0003.jpg",
+      "sha256": "9a2edcb66fadc3bdab5e0d3828faa421636dbc7a76c0110529a85cbbce1606d6",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.877284067923703
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001\\data_0001.jpg",
+      "sha256": "61e6910b9e27be18aee92acff3c468736648206cf9f59e0a28bc1bd1c7b838f3",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001\\data_0002.jpg",
+      "sha256": "bb7cbade68f67c26fadcd49a733d17121b9bda4da26f7a183807ea92ecd58212",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_left_0001\\data_0003.jpg",
+      "sha256": "7dc4d89f5ac210aa89661aebb41536c557fe036c0f68647066267aafdcd7319d",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 286,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          9.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            9.0,
+            8.0
+          ],
+          [
+            9.0,
+            16.0
+          ],
+          [
+            9.0,
+            24.0
+          ],
+          [
+            9.0,
+            32.0
+          ],
+          [
+            9.0,
+            40.0
+          ],
+          [
+            9.0,
+            48.0
+          ],
+          [
+            9.0,
+            56.0
+          ]
+        ],
+        "score": 2.897449551665814
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001\\data_0001.jpg",
+      "sha256": "916c937068a42e5bcbc6cca93ba2aa3d2a11e140e9ea2b2564a5889c1e12483c",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001\\data_0002.jpg",
+      "sha256": "19c9908c0a93373f3c0d2a0a256fdff0c833201e8b9106defc6308a8ee2f724b",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_offset_right_0001\\data_0003.jpg",
+      "sha256": "016550058fe9bdad9e823458b6b305ee5adcd77cce73df43a7c9aba5574e409f",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -193,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          -6.0,
+          54.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            -6.0,
+            8.0
+          ],
+          [
+            -6.0,
+            16.0
+          ],
+          [
+            -6.0,
+            24.0
+          ],
+          [
+            -6.0,
+            32.0
+          ],
+          [
+            -6.0,
+            40.0
+          ],
+          [
+            -6.0,
+            48.0
+          ],
+          [
+            -6.0,
+            56.0
+          ]
+        ],
+        "score": 2.8666505629240753
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0001.jpg",
+      "sha256": "614b7f037d925fda4df6cf4e4d92c1704671a88eb24b4ac40ce98fc8b378ea16",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0002.jpg",
+      "sha256": "7ba81dcadf80e6652cff89b259a56fb216cb78b3c2bc7efdfb073b4937db1e8e",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_left_0001\\data_0003.jpg",
+      "sha256": "a2469e62c5455b1351e42f2433c3bd0adb84bb8c171c7dce4d1b22ce5ed4ef4f",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          12
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.97622843553612,
+          52.15999461960969,
+          0.2617993877991494,
+          0.0
+        ],
+        "route": [
+          [
+            2.070552360820164,
+            7.727406610312542
+          ],
+          [
+            4.14110472164033,
+            15.454813220625091
+          ],
+          [
+            6.211657082460496,
+            23.182219830937633
+          ],
+          [
+            8.282209443280662,
+            30.909626441250182
+          ],
+          [
+            10.352761804100828,
+            38.637033051562724
+          ],
+          [
+            12.423314164920994,
+            46.364439661875274
+          ],
+          [
+            14.49386652574116,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.8968287846727927
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0001.jpg",
+      "sha256": "d364f745f570134d4e14c4b50c8077f51d94729731057e4d0b0def562f0c5e82",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.882428349230754
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0002.jpg",
+      "sha256": "8e0b4893d2680f1a26aa14c8958eb3a52b9829e08a3af03790a988ccca6a3d71",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.8872163336539187
+      }
+    },
+    {
+      "file": "vision\\data\\captures\\final_mount_20261108\\v03_heading_right_0001\\data_0003.jpg",
+      "sha256": "75240ba61c86dbf25c8d22d957b1ed4222a0c76635e1607b52e8e6723fa3d53f",
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          14
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          -17.101007166283434,
+          46.98463103929542,
+          -0.3490658503988659,
+          0.0
+        ],
+        "route": [
+          [
+            -2.7361611466053475,
+            7.517540966287271
+          ],
+          [
+            -5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            -8.208483439816048,
+            22.552622898861802
+          ],
+          [
+            -10.944644586421397,
+            30.07016386514907
+          ],
+          [
+            -13.680805733026748,
+            37.58770483143634
+          ],
+          [
+            -16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            -19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.882428349230754
+      }
+    }
+  ],
+  "retimed_branch_checks": [
+    {
+      "frame": 81,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          10
+        ],
+        "reason": "stabilizing",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 13,
+        "search_mode": "acquire",
+        "parameters": [
+          0.0,
+          50.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.698121473973551
+      }
+    },
+    {
+      "frame": 82,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          11,
+          10
+        ],
+        "reason": "stabilizing",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          50.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.49882035602381
+      }
+    },
+    {
+      "frame": 83,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.539609800469288
+      }
+    },
+    {
+      "frame": 84,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.598134470779655
+      }
+    },
+    {
+      "frame": 85,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.598823556374008
+      }
+    },
+    {
+      "frame": 86,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.6095824590961203
+      }
+    },
+    {
+      "frame": 87,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.4965041034346607
+      }
+    },
+    {
+      "frame": 88,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.4890610714461507
+      }
+    },
+    {
+      "frame": 89,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          8
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          50.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.3833997693875326
+      }
+    },
+    {
+      "frame": 90,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          46.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.5506782144635065
+      }
+    },
+    {
+      "frame": 91,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 111,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 134,
+        "anchors": 11,
+        "search_mode": "fallback",
+        "parameters": [
+          0.0,
+          80.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6957303877754253
+      }
+    },
+    {
+      "frame": 92,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 111,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          80.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.67007573476985
+      }
+    },
+    {
+      "frame": 93,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 111,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          80.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6957303877754253
+      }
+    },
+    {
+      "frame": 94,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 200,
+        "confidence": 75,
+        "support": [
+          12,
+          11
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          76.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.7053892799142174
+      }
+    },
+    {
+      "frame": 95,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 511,
+        "confidence": 75,
+        "support": [
+          31,
+          5
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          62.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6584581000189225
+      }
+    },
+    {
+      "frame": 96,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 289,
+        "confidence": 75,
+        "support": [
+          12,
+          11
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          72.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6585734116640447
+      }
+    },
+    {
+      "frame": 97,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 378,
+        "confidence": 75,
+        "support": [
+          12,
+          9
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          68.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.646496848606578
+      }
+    },
+    {
+      "frame": 98,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 467,
+        "confidence": 75,
+        "support": [
+          31,
+          7
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          64.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9802949075779592
+      }
+    },
+    {
+      "frame": 99,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 39,
+        "bend": 689,
+        "confidence": 75,
+        "support": [
+          29,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            2.0,
+            54.0
+          ]
+        ],
+        "score": 2.762231166562724
+      }
+    },
+    {
+      "frame": 100,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 600,
+        "confidence": 75,
+        "support": [
+          30,
+          6
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 8,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          58.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9701562556559074
+      }
+    },
+    {
+      "frame": 101,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 600,
+        "confidence": 75,
+        "support": [
+          30,
+          6
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          58.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9670605216309403
+      }
+    },
+    {
+      "frame": 102,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 39,
+        "bend": 689,
+        "confidence": 75,
+        "support": [
+          29,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          54.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            2.0,
+            54.0
+          ]
+        ],
+        "score": 2.7096234762478595
+      }
+    },
+    {
+      "frame": 103,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 600,
+        "confidence": 75,
+        "support": [
+          29,
+          6
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          58.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.8831223014191893
+      }
+    },
+    {
+      "frame": 104,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 600,
+        "confidence": 75,
+        "support": [
+          30,
+          6
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          58.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.926918638829542
+      }
+    },
+    {
+      "frame": 105,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 91,
+        "bend": 605,
+        "confidence": 75,
+        "support": [
+          28,
+          5
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 8,
+        "search_mode": "tracking",
+        "parameters": [
+          5.055033079364174,
+          57.77929248932124,
+          0.08726646259971647,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            1.3944918839625307,
+            15.939115169467932
+          ],
+          [
+            2.091737825943796,
+            23.908672754201895
+          ],
+          [
+            2.7889837679250613,
+            31.878230338935857
+          ],
+          [
+            3.486229709906327,
+            39.84778792366983
+          ],
+          [
+            4.183475651887592,
+            47.81734550840379
+          ],
+          [
+            4.8807215938688575,
+            55.78690309313775
+          ]
+        ],
+        "score": 2.825440446338119
+      }
+    },
+    {
+      "frame": 106,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 91,
+        "bend": 605,
+        "confidence": 75,
+        "support": [
+          28,
+          5
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          5.055033079364174,
+          57.77929248932124,
+          0.08726646259971647,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            1.3944918839625307,
+            15.939115169467932
+          ],
+          [
+            2.091737825943796,
+            23.908672754201895
+          ],
+          [
+            2.7889837679250613,
+            31.878230338935857
+          ],
+          [
+            3.486229709906327,
+            39.84778792366983
+          ],
+          [
+            4.183475651887592,
+            47.81734550840379
+          ],
+          [
+            4.8807215938688575,
+            55.78690309313775
+          ]
+        ],
+        "score": 2.905661304258811
+      }
+    },
+    {
+      "frame": 107,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 91,
+        "bend": 605,
+        "confidence": 75,
+        "support": [
+          27,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          5.055033079364174,
+          57.77929248932124,
+          0.08726646259971647,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            1.3944918839625307,
+            15.939115169467932
+          ],
+          [
+            2.091737825943796,
+            23.908672754201895
+          ],
+          [
+            2.7889837679250613,
+            31.878230338935857
+          ],
+          [
+            3.486229709906327,
+            39.84778792366983
+          ],
+          [
+            4.183475651887592,
+            47.81734550840379
+          ],
+          [
+            4.8807215938688575,
+            55.78690309313775
+          ]
+        ],
+        "score": 2.6122434382599775
+      }
+    },
+    {
+      "frame": 108,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 182,
+        "bend": 620,
+        "confidence": 75,
+        "support": [
+          19,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 6,
+        "search_mode": "tracking",
+        "parameters": [
+          10.071594304681959,
+          57.118849674708066,
+          0.17453292519943295,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            1.3891854213354442,
+            7.878462024097672
+          ],
+          [
+            2.7783708426708866,
+            15.756924048195337
+          ],
+          [
+            4.167556264006329,
+            23.635386072293002
+          ],
+          [
+            5.5567416853417715,
+            31.513848096390664
+          ],
+          [
+            6.945927106677214,
+            39.39231012048833
+          ],
+          [
+            8.335112528012656,
+            47.27077214458599
+          ],
+          [
+            9.724297949348099,
+            55.149234168683655
+          ]
+        ],
+        "score": 2.2216116621865067
+      }
+    },
+    {
+      "frame": 109,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 235,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          23,
+          3
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 5,
+        "search_mode": "tracking",
+        "parameters": [
+          3.0,
+          48.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            3.0,
+            8.0
+          ],
+          [
+            3.0,
+            16.0
+          ],
+          [
+            3.0,
+            24.0
+          ],
+          [
+            3.0,
+            32.0
+          ],
+          [
+            3.0,
+            40.0
+          ],
+          [
+            3.0,
+            48.0
+          ],
+          [
+            11.0,
+            48.0
+          ]
+        ],
+        "score": 1.744408304505923
+      }
+    },
+    {
+      "frame": 110,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 396,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          25,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 134,
+        "anchors": 4,
+        "search_mode": "fallback",
+        "parameters": [
+          0.0,
+          40.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            8.0,
+            40.0
+          ],
+          [
+            16.0,
+            40.0
+          ]
+        ],
+        "score": 1.171912525047051
+      }
+    },
+    {
+      "frame": 111,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 396,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          25,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 3,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          40.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            8.0,
+            40.0
+          ],
+          [
+            16.0,
+            40.0
+          ]
+        ],
+        "score": 1.2808636403800353
+      }
+    },
+    {
+      "frame": 112,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 744,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          21,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 134,
+        "anchors": 0,
+        "search_mode": "fallback",
+        "parameters": [
+          0.0,
+          30.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            2.0,
+            30.0
+          ],
+          [
+            10.0,
+            30.0
+          ],
+          [
+            18.0,
+            30.0
+          ],
+          [
+            26.0,
+            30.0
+          ]
+        ],
+        "score": 1.1401488698022422
+      }
+    },
+    {
+      "frame": 113,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 744,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          21,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          30.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            2.0,
+            30.0
+          ],
+          [
+            10.0,
+            30.0
+          ],
+          [
+            18.0,
+            30.0
+          ],
+          [
+            26.0,
+            30.0
+          ]
+        ],
+        "score": 1.258
+      }
+    },
+    {
+      "frame": 114,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 744,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          21,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          30.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            2.0,
+            30.0
+          ],
+          [
+            10.0,
+            30.0
+          ],
+          [
+            18.0,
+            30.0
+          ],
+          [
+            26.0,
+            30.0
+          ]
+        ],
+        "score": 1.258
+      }
+    },
+    {
+      "frame": 115,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 744,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          21,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          30.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            2.0,
+            30.0
+          ],
+          [
+            10.0,
+            30.0
+          ],
+          [
+            18.0,
+            30.0
+          ],
+          [
+            26.0,
+            30.0
+          ]
+        ],
+        "score": 1.258
+      }
+    },
+    {
+      "frame": 116,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 744,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          21,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          30.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            2.0,
+            30.0
+          ],
+          [
+            10.0,
+            30.0
+          ],
+          [
+            18.0,
+            30.0
+          ],
+          [
+            26.0,
+            30.0
+          ]
+        ],
+        "score": 1.258
+      }
+    },
+    {
+      "frame": 117,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 744,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          21,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          30.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            2.0,
+            30.0
+          ],
+          [
+            10.0,
+            30.0
+          ],
+          [
+            18.0,
+            30.0
+          ],
+          [
+            26.0,
+            30.0
+          ]
+        ],
+        "score": 1.258
+      }
+    },
+    {
+      "frame": 118,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 892,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          20,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          26.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            6.0,
+            26.0
+          ],
+          [
+            14.0,
+            26.0
+          ],
+          [
+            22.0,
+            26.0
+          ],
+          [
+            30.0,
+            26.000000000000004
+          ]
+        ],
+        "score": 1.192859547920897
+      }
+    },
+    {
+      "frame": 119,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 892,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          20,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          26.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            6.0,
+            26.0
+          ],
+          [
+            14.0,
+            26.0
+          ],
+          [
+            22.0,
+            26.0
+          ],
+          [
+            30.0,
+            26.000000000000004
+          ]
+        ],
+        "score": 1.2399999999999998
+      }
+    },
+    {
+      "frame": 120,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 892,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          20,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          26.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            6.0,
+            26.0
+          ],
+          [
+            14.0,
+            26.0
+          ],
+          [
+            22.0,
+            26.0
+          ],
+          [
+            30.0,
+            26.000000000000004
+          ]
+        ],
+        "score": 1.2399999999999998
+      }
+    },
+    {
+      "frame": 121,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 1000,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          19,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          22.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            2.0,
+            22.0
+          ],
+          [
+            10.0,
+            22.0
+          ],
+          [
+            18.0,
+            22.0
+          ],
+          [
+            26.0,
+            22.0
+          ],
+          [
+            34.0,
+            22.000000000000004
+          ]
+        ],
+        "score": 1.1512893218813454
+      }
+    },
+    {
+      "frame": 122,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 1000,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          19,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          22.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            2.0,
+            22.0
+          ],
+          [
+            10.0,
+            22.0
+          ],
+          [
+            18.0,
+            22.0
+          ],
+          [
+            26.0,
+            22.0
+          ],
+          [
+            34.0,
+            22.000000000000004
+          ]
+        ],
+        "score": 1.222
+      }
+    },
+    {
+      "frame": 123,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 1000,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          19,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          22.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            2.0,
+            22.0
+          ],
+          [
+            10.0,
+            22.0
+          ],
+          [
+            18.0,
+            22.0
+          ],
+          [
+            26.0,
+            22.0
+          ],
+          [
+            34.0,
+            22.000000000000004
+          ]
+        ],
+        "score": 1.222
+      }
+    },
+    {
+      "frame": 124,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 1000,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          19,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          22.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            2.0,
+            22.0
+          ],
+          [
+            10.0,
+            22.0
+          ],
+          [
+            18.0,
+            22.0
+          ],
+          [
+            26.0,
+            22.0
+          ],
+          [
+            34.0,
+            22.000000000000004
+          ]
+        ],
+        "score": 1.222
+      }
+    },
+    {
+      "frame": 125,
+      "result": {
+        "valid": true,
+        "source": "current_single_associated",
+        "steering": 1000,
+        "bend": 1000,
+        "confidence": 45,
+        "support": [
+          17,
+          0
+        ],
+        "reason": "ready",
+        "stage": "turn",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 0,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          18.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            6.0,
+            18.0
+          ],
+          [
+            14.0,
+            18.0
+          ],
+          [
+            22.0,
+            18.0
+          ],
+          [
+            30.0,
+            18.000000000000004
+          ],
+          [
+            38.0,
+            18.000000000000004
+          ]
+        ],
+        "score": 1.0917190958417935
+      }
+    }
+  ],
+  "original_timestamps": [
+    {
+      "frame": 81,
+      "elapsed_ms": 10420,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          10
+        ],
+        "reason": "stabilizing",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 13,
+        "search_mode": "acquire",
+        "parameters": [
+          0.0,
+          50.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.698121473973551
+      }
+    },
+    {
+      "frame": 82,
+      "elapsed_ms": 10522,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          11,
+          10
+        ],
+        "reason": "stabilizing",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          50.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.49882035602381
+      }
+    },
+    {
+      "frame": 83,
+      "elapsed_ms": 10649,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.539609800469288
+      }
+    },
+    {
+      "frame": 84,
+      "elapsed_ms": 10767,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.598134470779655
+      }
+    },
+    {
+      "frame": 85,
+      "elapsed_ms": 10875,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.598823556374008
+      }
+    },
+    {
+      "frame": 86,
+      "elapsed_ms": 10975,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          10
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 13,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.6095824590961203
+      }
+    },
+    {
+      "frame": 87,
+      "elapsed_ms": 11104,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.4965041034346607
+      }
+    },
+    {
+      "frame": 88,
+      "elapsed_ms": 11225,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": -91,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          -4.357787137382909,
+          49.80973490458728,
+          -0.08726646259971647,
+          0.0
+        ],
+        "route": [
+          [
+            -0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            -1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            -2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            -2.7889837679250613,
+            31.878230338935854
+          ],
+          [
+            -3.4862297099063264,
+            39.84778792366982
+          ],
+          [
+            -4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            -4.8807215938688575,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.4890610714461507
+      }
+    },
+    {
+      "frame": 89,
+      "elapsed_ms": 11325,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          8
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          50.0,
+          0.0,
+          0.0
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.3833997693875326
+      }
+    },
+    {
+      "frame": 90,
+      "elapsed_ms": 11542,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          16
+        ],
+        "reason": "stabilizing",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 12,
+        "search_mode": "acquire",
+        "parameters": [
+          0.0,
+          90.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.882370522155814
+      }
+    },
+    {
+      "frame": 91,
+      "elapsed_ms": 11646,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 111,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "stabilizing",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 134,
+        "anchors": 11,
+        "search_mode": "fallback",
+        "parameters": [
+          0.0,
+          80.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6957303877754253
+      }
+    },
+    {
+      "frame": 92,
+      "elapsed_ms": 11767,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 111,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          80.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.67007573476985
+      }
+    },
+    {
+      "frame": 93,
+      "elapsed_ms": 11876,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 111,
+        "confidence": 75,
+        "support": [
+          12,
+          13
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 11,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          80.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6957303877754253
+      }
+    },
+    {
+      "frame": 94,
+      "elapsed_ms": 11998,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 200,
+        "confidence": 75,
+        "support": [
+          12,
+          11
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          76.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.7053892799142174
+      }
+    },
+    {
+      "frame": 95,
+      "elapsed_ms": 12103,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 511,
+        "confidence": 75,
+        "support": [
+          31,
+          5
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          62.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6584581000189225
+      }
+    },
+    {
+      "frame": 96,
+      "elapsed_ms": 12232,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 289,
+        "confidence": 75,
+        "support": [
+          12,
+          11
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          72.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.6585734116640447
+      }
+    },
+    {
+      "frame": 97,
+      "elapsed_ms": 12333,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 378,
+        "confidence": 75,
+        "support": [
+          12,
+          9
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          68.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.646496848606578
+      }
+    },
+    {
+      "frame": 98,
+      "elapsed_ms": 12436,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 467,
+        "confidence": 75,
+        "support": [
+          31,
+          7
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 9,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          64.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9802949075779592
+      }
+    },
+    {
+      "frame": 99,
+      "elapsed_ms": 12649,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 556,
+        "confidence": 75,
+        "support": [
+          26,
+          5
+        ],
+        "reason": "stabilizing",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 9,
+        "search_mode": "acquire",
+        "parameters": [
+          0.0,
+          60.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.479226558267793
+      }
+    },
+    {
+      "frame": 100,
+      "elapsed_ms": 12769,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 556,
+        "confidence": 75,
+        "support": [
+          30,
+          7
+        ],
+        "reason": "stabilizing",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 8,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          60.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9378981911397783
+      }
+    },
+    {
+      "frame": 101,
+      "elapsed_ms": 12880,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 556,
+        "confidence": 75,
+        "support": [
+          31,
+          7
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          60.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9670605216309403
+      }
+    },
+    {
+      "frame": 102,
+      "elapsed_ms": 13002,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 644,
+        "confidence": 75,
+        "support": [
+          29,
+          5
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          56.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.9276234762478595
+      }
+    },
+    {
+      "frame": 103,
+      "elapsed_ms": 13118,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 91,
+        "bend": 649,
+        "confidence": 75,
+        "support": [
+          28,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          4.8807215938688575,
+          55.78690309313775,
+          0.08726646259971647,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            2.788983767925061,
+            31.878230338935854
+          ],
+          [
+            3.4862297099063264,
+            39.84778792366981
+          ],
+          [
+            4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            4.880721593868857,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.796752694684284
+      }
+    },
+    {
+      "frame": 104,
+      "elapsed_ms": 13290,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 64,
+        "bend": 772,
+        "confidence": 75,
+        "support": [
+          28,
+          5
+        ],
+        "reason": "stabilizing",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 7,
+        "search_mode": "acquire",
+        "parameters": [
+          -2.7735623652732686,
+          50.28227671661198,
+          -0.17453292519943295,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            4.519661096737804,
+            8.920351090099253
+          ],
+          [
+            3.1304756754023613,
+            16.798813114196918
+          ],
+          [
+            1.7412902540669188,
+            24.67727513829458
+          ],
+          [
+            0.35210483273147597,
+            32.55573716239225
+          ],
+          [
+            -1.0370805886039665,
+            40.434199186489906
+          ],
+          [
+            -2.4262660099394093,
+            48.31266121058757
+          ],
+          [
+            3.1352841527999864,
+            51.32416578261356
+          ]
+        ],
+        "score": 2.787814559994775
+      }
+    },
+    {
+      "frame": 105,
+      "elapsed_ms": 13395,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 0,
+        "bend": 644,
+        "confidence": 75,
+        "support": [
+          29,
+          5
+        ],
+        "reason": "stabilizing",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 8,
+        "search_mode": "tracking",
+        "parameters": [
+          0.0,
+          56.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            16.0
+          ],
+          [
+            0.0,
+            24.0
+          ],
+          [
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            48.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "score": 2.8132816929855413
+      }
+    },
+    {
+      "frame": 106,
+      "elapsed_ms": 13504,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 91,
+        "bend": 649,
+        "confidence": 75,
+        "support": [
+          28,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          4.8807215938688575,
+          55.78690309313775,
+          0.08726646259971647,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            2.788983767925061,
+            31.878230338935854
+          ],
+          [
+            3.4862297099063264,
+            39.84778792366981
+          ],
+          [
+            4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            4.880721593868857,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.835318039420408
+      }
+    },
+    {
+      "frame": 107,
+      "elapsed_ms": 13615,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 91,
+        "bend": 649,
+        "confidence": 75,
+        "support": [
+          27,
+          4
+        ],
+        "reason": "ready",
+        "stage": "approach",
+        "geometry_calibrated": false,
+        "searched_candidates": 46,
+        "anchors": 7,
+        "search_mode": "tracking",
+        "parameters": [
+          4.8807215938688575,
+          55.78690309313775,
+          0.08726646259971647,
+          1.5707963267948966
+        ],
+        "route": [
+          [
+            0.6972459419812651,
+            7.969557584733963
+          ],
+          [
+            1.3944918839625302,
+            15.939115169467925
+          ],
+          [
+            2.0917378259437958,
+            23.908672754201888
+          ],
+          [
+            2.788983767925061,
+            31.878230338935854
+          ],
+          [
+            3.4862297099063264,
+            39.84778792366981
+          ],
+          [
+            4.1834756518875915,
+            47.81734550840378
+          ],
+          [
+            4.880721593868857,
+            55.786903093137745
+          ]
+        ],
+        "score": 2.8122434382599777
+      }
+    },
+    {
+      "frame": 108,
+      "elapsed_ms": 13805,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 6,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 109,
+      "elapsed_ms": 13916,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 5,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 110,
+      "elapsed_ms": 14025,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 4,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 111,
+      "elapsed_ms": 14166,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 3,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 112,
+      "elapsed_ms": 14280,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 113,
+      "elapsed_ms": 14389,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 114,
+      "elapsed_ms": 14519,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 115,
+      "elapsed_ms": 14631,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 116,
+      "elapsed_ms": 14776,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 117,
+      "elapsed_ms": 15008,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 118,
+      "elapsed_ms": 15121,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 119,
+      "elapsed_ms": 15253,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 120,
+      "elapsed_ms": 15367,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 121,
+      "elapsed_ms": 15478,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 122,
+      "elapsed_ms": 15612,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 123,
+      "elapsed_ms": 15727,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 124,
+      "elapsed_ms": 15854,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 125,
+      "elapsed_ms": 15964,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 126,
+      "elapsed_ms": 16226,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 127,
+      "elapsed_ms": 16337,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 128,
+      "elapsed_ms": 16452,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 129,
+      "elapsed_ms": 16570,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 130,
+      "elapsed_ms": 16678,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 131,
+      "elapsed_ms": 16791,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 132,
+      "elapsed_ms": 16908,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 133,
+      "elapsed_ms": 17043,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 134,
+      "elapsed_ms": 17158,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 135,
+      "elapsed_ms": 17380,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 136,
+      "elapsed_ms": 17495,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 112,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 137,
+      "elapsed_ms": 17625,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 112,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 138,
+      "elapsed_ms": 17740,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 112,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 139,
+      "elapsed_ms": 17867,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 112,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 140,
+      "elapsed_ms": 17986,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 112,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 141,
+      "elapsed_ms": 18117,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 142,
+      "elapsed_ms": 18236,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 115,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 143,
+      "elapsed_ms": 18352,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 144,
+      "elapsed_ms": 18591,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 145,
+      "elapsed_ms": 18761,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 146,
+      "elapsed_ms": 18882,
+      "result": {
+        "valid": false,
+        "source": "unknown",
+        "steering": 0,
+        "bend": 0,
+        "confidence": 0,
+        "support": [
+          0,
+          0
+        ],
+        "reason": "no_current_pair",
+        "stage": "unknown",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 0,
+        "search_mode": "acquire"
+      }
+    },
+    {
+      "frame": 147,
+      "elapsed_ms": 19001,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 352,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          14,
+          7
+        ],
+        "reason": "stabilizing",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 97,
+        "anchors": 6,
+        "search_mode": "acquire",
+        "parameters": [
+          19.803847577293364,
+          46.30127018922194,
+          0.5235987755982988,
+          0.0
+        ],
+        "route": [
+          [
+            -1.196152422706632,
+            9.928203230275514
+          ],
+          [
+            2.803847577293368,
+            16.85640646055102
+          ],
+          [
+            6.803847577293366,
+            23.78460969082653
+          ],
+          [
+            10.803847577293366,
+            30.712812921102042
+          ],
+          [
+            14.803847577293364,
+            37.64101615137755
+          ],
+          [
+            18.803847577293364,
+            44.56921938165306
+          ],
+          [
+            22.803847577293364,
+            51.49742261192857
+          ]
+        ],
+        "score": 2.2752019729532864
+      }
+    },
+    {
+      "frame": 148,
+      "elapsed_ms": 19122,
+      "result": {
+        "valid": false,
+        "source": "current_pair",
+        "steering": 364,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          13,
+          8
+        ],
+        "reason": "stabilizing",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 8,
+        "search_mode": "tracking",
+        "parameters": [
+          18.469087739586108,
+          50.74340152243906,
+          0.34906585039886584,
+          0.0
+        ],
+        "route": [
+          [
+            2.7361611466053493,
+            7.517540966287271
+          ],
+          [
+            5.4723222932106985,
+            15.035081932574535
+          ],
+          [
+            8.208483439816048,
+            22.552622898861806
+          ],
+          [
+            10.944644586421397,
+            30.070163865149073
+          ],
+          [
+            13.680805733026746,
+            37.58770483143634
+          ],
+          [
+            16.416966879632096,
+            45.105245797723605
+          ],
+          [
+            19.153128026237447,
+            52.622786764010876
+          ]
+        ],
+        "score": 2.425486253943853
+      }
+    },
+    {
+      "frame": 149,
+      "elapsed_ms": 19245,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 273,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 10,
+        "search_mode": "tracking",
+        "parameters": [
+          13.976228435536116,
+          52.15999461960969,
+          0.26179938779914935,
+          0.0
+        ],
+        "route": [
+          [
+            2.0705523608201624,
+            7.727406610312542
+          ],
+          [
+            4.141104721640328,
+            15.454813220625091
+          ],
+          [
+            6.211657082460494,
+            23.182219830937633
+          ],
+          [
+            8.28220944328066,
+            30.909626441250182
+          ],
+          [
+            10.352761804100826,
+            38.637033051562724
+          ],
+          [
+            12.42331416492099,
+            46.364439661875274
+          ],
+          [
+            14.493866525741156,
+            54.09184627218782
+          ]
+        ],
+        "score": 2.3197285594610326
+      }
+    },
+    {
+      "frame": 150,
+      "elapsed_ms": 19370,
+      "result": {
+        "valid": true,
+        "source": "current_pair",
+        "steering": 182,
+        "bend": 0,
+        "confidence": 75,
+        "support": [
+          12,
+          9
+        ],
+        "reason": "ready",
+        "stage": "straight",
+        "geometry_calibrated": false,
+        "searched_candidates": 28,
+        "anchors": 12,
+        "search_mode": "tracking",
+        "parameters": [
+          9.377001594014233,
+          53.17961866265923,
+          0.17453292519943286,
+          0.0
+        ],
+        "route": [
+          [
+            1.3891854213354433,
+            7.878462024097665
+          ],
+          [
+            2.778370842670885,
+            15.75692404819533
+          ],
+          [
+            4.167556264006327,
+            23.635386072292995
+          ],
+          [
+            5.55674168534177,
+            31.51384809639066
+          ],
+          [
+            6.945927106677211,
+            39.392310120488325
+          ],
+          [
+            8.335112528012653,
+            47.27077214458599
+          ],
+          [
+            9.724297949348095,
+            55.149234168683655
+          ]
+        ],
+        "score": 2.222228426510585
+      }
+    }
+  ],
+  "limitations": [
+    "static repeats and retimed sequence are branch checks only",
+    "original hand-push timestamps and all invalid frames retained",
+    "no board timing or autonomous corner validation performed"
+  ]
+}

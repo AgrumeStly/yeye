@@ -1,0 +1,11 @@
+[
+  {
+    "after_index": 1316,
+    "event": "path_lost",
+    "after_sequence": 35,
+    "reason": "no_current_pair",
+    "before_sequence": 34,
+    "prefix": "/sdcard/right_angle_logs/run_0009_loss_01",
+    "before_index": 1315
+  }
+]

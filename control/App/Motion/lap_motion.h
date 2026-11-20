@@ -6,12 +6,16 @@
 #ifndef YEYE_LAP_MOTION_H
 #define YEYE_LAP_MOTION_H
 #include "speed_match.h"
+/* 仅首弯及本次直道适配目标复用双轮启动监督；旧直道目标保留原行为。 */
+#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
+#define LAP_DUAL_STARTUP 1
+#endif
 typedef enum { LAP_CALIBRATION, LAP_WAIT, LAP_HOLD, LAP_ARMED, LAP_RUNNING, LAP_STOPPED, LAP_FAULT } lap_state_t;
 typedef enum { LAP_OK, LAP_KEY, LAP_LINK, LAP_PATH, LAP_ENCODER, LAP_REVERSE, LAP_OVERSPEED,
                LAP_NO_FEEDBACK, LAP_CONFIG, LAP_HARDWARE, LAP_TRANSPORT, LAP_LIMIT } lap_reason_t;
 typedef struct {
-    float straight_rpm; /* 默认40RPM，10..60；不是已地面标定值。 */
-    uint32_t run_ms; /* 默认3000ms做悬空／短线；停止时可明确改到300000ms一圈上限。 */
+    float straight_rpm; /* 旧目标默认40、10..60；StraightAssist默认80、40..100；RightAngle默认60、40..80RPM。 */
+    uint32_t run_ms; /* 旧短版3000ms／Track最长300000；直道默认2000；首弯默认12000、最多15000ms。 */
     float min_feedforward; /* 正目标前馈下限，PWM千分比，默认200、允许0..300。
                             * 不是实际输出下限：PI仍可减到0，零目标始终停轮。
                             * 只在停稳时调整，下次人工启动锁定；不是实测电机阈值。
@@ -25,7 +29,9 @@ typedef struct {
     uint16_t left_pwm, right_pwm;
     int16_t steering;
     uint16_t bend;
-    uint8_t path_valid, history, single;
+    uint8_t path_valid, history, single; /* 首弯v5沿用布局：history=当前出口弱关联，single=当前L预测。
+                                        * 其它旧目标仍按原历史／单边语义解码，协议版本互斥。
+                                        */
     lap_config_t active;
 } lap_view_t;
 /** @brief 最后一次真正进入RUN的停止快照；停车后不被实时零速或末尾STOP覆盖。
@@ -66,16 +72,32 @@ extern volatile lap_config_t g_lap_config;
 extern volatile lap_view_t g_lap;
 extern volatile lap_result_t g_lap_last;
 extern volatile lap_diag_view_t g_lap_diag;
+#ifdef LAP_DUAL_STARTUP
+/** @brief 首弯／直道适配版共用启动监督，与g_lap既有布局独立，便于保留旧取证工具。
+ * stage：0等首次双轮悬空测试，1正在测试，2测试完成可上道；所有时间ms。
+ * completed只在两轮反馈及完整1秒测试均通过后置1；复位后须重新双轮测试。
+ * blocked_reason是最近一次KEY被拒绝的lap_reason_t数值，不锁故障。
+ * counts为按已核实前进符号换算的本次双轮测试净计数，不重新推断左右映射。
+ */
+typedef struct {
+    uint32_t stage, bench_ms, completed, ground_runs;
+    int32_t left_counts, right_counts;
+    uint32_t starts_blocked, blocked_reason;
+} corner_startup_t;
+extern volatile corner_startup_t g_corner_startup;
+#endif
 void lap_motion_init(uint32_t now);
 /** @brief 1ms监督KEY／200ms通信／运行上限；长按1..3秒后松开启动，5秒卡键故障。
- * 前两次仍为单轮500ms校准；校准后的启动必须有当前双边新鲜路径，历史不能启动。
+ * 原目标前两次单轮配对；首弯／直道适配目标第一次KEY双轮悬空1秒，下一次KEY上道。
+ * 首弯v5上道允许当前双侧或当前L形预测，弱关联不能冷启动；旧目标保持双边要求。
+ * 首次双轮测试不依赖相机，不跟随弯道差速。
  */
 void lap_motion_tick(uint32_t now, uint8_t key);
 /** @brief 每20ms输入真实原编码器样本；任何状态都检查样本连续性。
  * 目标为0的内轮允许无脉冲；目标由0变为正时重新计300ms无反馈时限。
  */
 void lap_motion_sample(uint32_t now, const encoder_sample_t *a, const encoder_sample_t *b);
-/** @brief 新版本20字节消息接收；bytes必须CRC／格式已核实；arrival为最后字节ISR时间。
+/** @brief 20字节消息接收；bytes必须CRC／字段及目标版本已核实；arrival为最后字节ISR时间。
  * STOP始终生效；不允许远程START，正式一键启动由车载KEY完成。
  */
 void lap_motion_receive(const uint8_t *bytes, uint32_t arrival, uint32_t now);

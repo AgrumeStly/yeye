@@ -1,0 +1,12 @@
+{
+  "pictures": [
+    "testing\\2026-11-18_right_angle\\ground_05_direct_photo\\preview\\preview_01_frame_00000001.jpg",
+    "testing\\2026-11-18_right_angle\\ground_05_direct_photo\\preview\\preview_02_frame_00000032.jpg",
+    "testing\\2026-11-18_right_angle\\ground_05_direct_photo\\preview\\preview_03_frame_00000062.jpg",
+    "testing\\2026-11-18_right_angle\\ground_05_direct_photo\\preview\\preview_04_frame_00000092.jpg",
+    "testing\\2026-11-18_right_angle\\ground_05_direct_photo\\preview\\preview_05_frame_00000122.jpg"
+  ],
+  "no_uart": true,
+  "no_sd": true,
+  "motor_started": false
+}

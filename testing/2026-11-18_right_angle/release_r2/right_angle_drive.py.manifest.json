@@ -1,0 +1,13 @@
+{
+  "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+  "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+  "lap_protocol.py": "94a7741fd0857d3a33b8b72ad3cafd295cf4587cf5c8fcfaa90ba3a89b18c88c",
+  "right_angle_route.py": "d5b1b4a16f8faca968b47164d72e22e29251f05d10ae37956ec37bfbabfcf036",
+  "right_angle_protocol.py": "dbf28fee3ae99181c26c9b47ca2f73d31c5115dfad2adb6a6341c63b14bfc333",
+  "right_angle_canmv.py": "3b6fbd185655f07a14864ba1f28a897270333f9dbdaf8b0a379ccf9ecb9e36e5",
+  "bundle_sha256": "c26b0e7252f4d678f8d99eaf75d06b01070098c65cc3a4dc88c5c304165c886e",
+  "wire_version": 4,
+  "grid_step": 6,
+  "allow_drive": true,
+  "automatic_motor_start": false
+}

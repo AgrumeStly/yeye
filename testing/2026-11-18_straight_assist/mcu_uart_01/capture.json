@@ -1,0 +1,262 @@
+{
+  "probe_id": "00010001066cff554954657287234218a5a5a5a597969908",
+  "reset_requested": false,
+  "halt_requested": false,
+  "resume_requested": false,
+  "flash_written": false,
+  "source_symbols": {
+    "g_speed_ms": {
+      "address": 536870996,
+      "size": 4
+    },
+    "g_speed_fault": {
+      "address": 536871000,
+      "size": 4
+    },
+    "g_speed_revision": {
+      "address": 536871004,
+      "size": 4
+    },
+    "g_speed_watchdog_started": {
+      "address": 536871008,
+      "size": 4
+    },
+    "g_speed_watchdog_stage": {
+      "address": 536871012,
+      "size": 4
+    },
+    "g_lap_config": {
+      "address": 536871048,
+      "size": 12
+    },
+    "g_lap_uart_errors": {
+      "address": 536871148,
+      "size": 4
+    },
+    "g_speed_match": {
+      "address": 536871152,
+      "size": 112
+    },
+    "g_lap_timing": {
+      "address": 536871408,
+      "size": 16
+    },
+    "g_lap": {
+      "address": 536871440,
+      "size": 68
+    },
+    "g_lap_last": {
+      "address": 536871508,
+      "size": 40
+    },
+    "g_lap_diag": {
+      "address": 536871548,
+      "size": 1952
+    },
+    "g_lap_uart_diag": {
+      "address": 536874780,
+      "size": 40
+    }
+  },
+  "samples": [
+    {
+      "capture_time_utc": "2026-11-18T09:24:57.276553+00:00",
+      "cpu_state": "State.RUNNING",
+      "dhcsr": "0x1010001",
+      "halted": false,
+      "g_speed_ms": 63695,
+      "g_speed_fault": 0,
+      "g_speed_revision": 34734081,
+      "g_speed_watchdog_started": 1,
+      "g_speed_watchdog_stage": 4,
+      "g_lap_uart_errors": 0,
+      "lap": {
+        "state": 0,
+        "reason": 0,
+        "run_since": 0,
+        "path_at": 55694,
+        "received": 209,
+        "rejected": 0,
+        "duplicates": 0,
+        "starts_rejected": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "steering": 0,
+        "bend": 0,
+        "path_valid": 0,
+        "history": 0,
+        "single": 0
+      },
+      "last_run": {
+        "valid": 0,
+        "elapsed_ms": 0,
+        "reason": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "left_boost_samples": 0,
+        "right_boost_samples": 0
+      },
+      "diagnostic_trace": {
+        "total_samples": 0,
+        "frozen": 0,
+        "stop_at_ms": 0,
+        "stop_reason": 0,
+        "left_channel": 0,
+        "right_channel": 0,
+        "left_sign": 0,
+        "right_sign": 0,
+        "samples": []
+      },
+      "timing": {
+        "counter_ready": 1,
+        "clock_hz": 16000000,
+        "systick_max_cycles": 1272,
+        "motion_lock_max_cycles": 891
+      },
+      "calibrator": {
+        "state": 1,
+        "error": 0,
+        "phase": 0
+      },
+      "config": {
+        "straight_rpm": 80.0,
+        "run_ms": 2000,
+        "min_feedforward": 200.0
+      },
+      "uart": {
+        "overrun": 0,
+        "noise": 0,
+        "frame": 0,
+        "parity": 0,
+        "ring_full": 0,
+        "first_mask": 0,
+        "last_mask": 0,
+        "first_at_ms": 0,
+        "last_at_ms": 0,
+        "isr_max_cycles": 194
+      },
+      "core_faults": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0x8",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x1e000003"
+      },
+      "gpio": {
+        "KEY_PA0": 0,
+        "PB2_ODR": 0
+      }
+    },
+    {
+      "capture_time_utc": "2026-11-18T09:24:58.396636+00:00",
+      "cpu_state": "State.RUNNING",
+      "dhcsr": "0x1010001",
+      "halted": false,
+      "g_speed_ms": 64809,
+      "g_speed_fault": 0,
+      "g_speed_revision": 34734081,
+      "g_speed_watchdog_started": 1,
+      "g_speed_watchdog_stage": 4,
+      "g_lap_uart_errors": 0,
+      "lap": {
+        "state": 0,
+        "reason": 0,
+        "run_since": 0,
+        "path_at": 55694,
+        "received": 209,
+        "rejected": 0,
+        "duplicates": 0,
+        "starts_rejected": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "steering": 0,
+        "bend": 0,
+        "path_valid": 0,
+        "history": 0,
+        "single": 0
+      },
+      "last_run": {
+        "valid": 0,
+        "elapsed_ms": 0,
+        "reason": 0,
+        "left_target": 0.0,
+        "right_target": 0.0,
+        "left_rpm": 0.0,
+        "right_rpm": 0.0,
+        "left_pwm": 0,
+        "right_pwm": 0,
+        "left_boost_samples": 0,
+        "right_boost_samples": 0
+      },
+      "diagnostic_trace": {
+        "total_samples": 0,
+        "frozen": 0,
+        "stop_at_ms": 0,
+        "stop_reason": 0,
+        "left_channel": 0,
+        "right_channel": 0,
+        "left_sign": 0,
+        "right_sign": 0,
+        "samples": []
+      },
+      "timing": {
+        "counter_ready": 1,
+        "clock_hz": 16000000,
+        "systick_max_cycles": 1272,
+        "motion_lock_max_cycles": 891
+      },
+      "calibrator": {
+        "state": 1,
+        "error": 0,
+        "phase": 0
+      },
+      "config": {
+        "straight_rpm": 80.0,
+        "run_ms": 2000,
+        "min_feedforward": 200.0
+      },
+      "uart": {
+        "overrun": 0,
+        "noise": 0,
+        "frame": 0,
+        "parity": 0,
+        "ring_full": 0,
+        "first_mask": 0,
+        "last_mask": 0,
+        "first_at_ms": 0,
+        "last_at_ms": 0,
+        "isr_max_cycles": 194
+      },
+      "core_faults": {
+        "ICSR": "0x0",
+        "CFSR": "0x0",
+        "HFSR": "0x0",
+        "DFSR": "0x8",
+        "DBGMCU_CR": "0x7",
+        "DBGMCU_APB1_FZ": "0x0",
+        "RCC_CSR": "0x1e000003"
+      },
+      "gpio": {
+        "KEY_PA0": 0,
+        "PB2_ODR": 0
+      }
+    }
+  ],
+  "flash_matches_bin": true,
+  "bin_sha256": "e7d5a504156d63e121a554f29fe30382e98d6889cf36a1f51bbeb11ea7e84550",
+  "application_baseline_plausible": true
+}

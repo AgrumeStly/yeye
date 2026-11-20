@@ -60,3 +60,10 @@ live_drive_09/backend.jsonl -text whitespace=cr-at-eol
 /ground_07_stopped_view/terminal.txt binary
 /live_drive_10/terminal.txt binary
 /r8_program_deploy_01/terminal.txt binary
+
+# 完整版本交接：历史现场原件及冻结源快照按现有字节入库，不改原文件。
+# 原始终端／JSON／PGM及冻结源快照的空白属于证据，不改写或按作者代码检查。
+# 作者Markdown及本属性文件仍采用LF并检查空白。
+* -text -whitespace
+*.md text eol=lf whitespace
+.gitattributes text eol=lf whitespace

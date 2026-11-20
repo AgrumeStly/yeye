@@ -1,0 +1,49 @@
+{
+  "revision": "0x2120002",
+  "flash_matches_bin": true,
+  "normal_duration_stop": true,
+  "last_run": {
+    "valid": 1,
+    "elapsed_ms": 2000,
+    "reason": 11,
+    "left_target": 79.59130096435547,
+    "right_target": 80.40869903564453,
+    "left_rpm": 82.826904296875,
+    "right_rpm": 84.85739135742188,
+    "left_pwm": 282,
+    "right_pwm": 275,
+    "left_boost_samples": 1,
+    "right_boost_samples": 1
+  },
+  "uart_errors": 0,
+  "hardware_fault": 0,
+  "trace_total_samples": 100,
+  "retained_samples": 32,
+  "retained_elapsed_range_ms": [
+    1368,
+    1988
+  ],
+  "max_abs_measured_wheel_difference_rpm_last_window": 8.325469970703125,
+  "max_abs_target_wheel_difference_rpm_last_window": 5.408149719238281,
+  "left_pwm_range_last_window": [
+    221,
+    304
+  ],
+  "right_pwm_range_last_window": [
+    260,
+    325
+  ],
+  "all_retained_paths_current_valid": true,
+  "timing_us": {
+    "systick_max": 258.3125,
+    "motion_lock_max": 83.6875,
+    "uart_max": 12.1875
+  },
+  "operator_feedback": "normal straight run; approximately half of left diagonal straight; good state; no obvious oscillation",
+  "limitations": [
+    "single 2-second ground run",
+    "raw trace retains only final 640ms",
+    "distance approximate, no measured length",
+    "boundary contacts not separately counted; no lap or speed-up acceptance"
+  ]
+}
