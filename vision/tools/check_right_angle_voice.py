@@ -1,4 +1,4 @@
-"""用真实归档赛道图和模拟口令验证 v7 调度、续行、失效和延迟留证。"""
+"""用真实归档赛道图和模拟口令验证 v8 续行、失效、图传和留证。"""
 import subprocess
 from types import SimpleNamespace
 
@@ -9,7 +9,7 @@ from prepare_right_angle_bundle import build
 
 def simulate(frames, keywords, *, gap_at=0):
     source, info = build(voice=True)
-    assert info['wire_version'] == 7 and not info['automatic_motor_start']
+    assert info['wire_version'] == 8 and not info['automatic_motor_start']
     ns = {'__name__': 'voice_check', 'print': lambda *args: None}
     exec(source, ns)
     index = clock = 0
@@ -28,7 +28,7 @@ def simulate(frames, keywords, *, gap_at=0):
             raise EOFError('simulation complete')
 
     def write(packet):
-        assert len(packet) == 20 and packet[2] == 7
+        assert len(packet) == 20 and packet[2] == 8
         assert ns['crc16'](packet[:18]) == int.from_bytes(packet[18:], 'little')
         trace.append((clock, packet))
         return len(packet)
@@ -51,6 +51,69 @@ def simulate(frames, keywords, *, gap_at=0):
 
 def packets(trace):
     return [packet for _, packet in trace if isinstance(packet, bytes)]
+
+
+def verify_prediction():
+    """本轮停车前后真实L不再退到未知；单边、短预测和重新观测分别检查。"""
+    folder = ROOT / 'testing/2026-11-18_right_angle/voice_ground_01_camera'
+    before = (folder / 'voice_0001_issue_10166_056.pgm').read_bytes()[15:]
+    after = (folder / 'voice_0001_issue_10277_057.pgm').read_bytes()[15:]
+    one_edge = b'\x96' * (115 * 320) + after[115 * 320:]
+    blank = b'\x96' * len(after)
+    trace, _, _ = simulate([before] * 4 + [after, one_edge, blank, after], {3: 2})
+    observed = [(p[6], p[7]) for p in packets(trace) if p[3] == 1]
+    assert observed[2:] == [(9, 60), (9, 60), (9, 60), (5, 55), (5, 45), (9, 60)], observed
+    trace, _, _ = simulate([before] * 4 + [after] + [blank] * 6, {3: 2})
+    assert [p[6] for p in packets(trace) if p[3] == 1][-6:] == [5, 5, 5, 5, 0, 0]
+    trace, _, _ = simulate([before] * 4 + [after] + [one_edge] * 26, {3: 2})
+    endings = [p[6] for p in packets(trace) if p[3] == 1][-26:]
+    assert endings[:10] == [5] * 10 and endings[-4:] == [5, 0, 0, 0], endings
+    trace, _, _ = simulate([one_edge] * 6, {3: 2})
+    assert all(p[3] == 1 and p[6] == 0 for p in packets(trace))
+
+
+def verify_phone():
+    """慢手机每次只消耗一个定长写额度，发到一半时不编码下一帧。"""
+    ns = {'__name__': 'phone_host_check'}
+    exec(build(voice=True)[0], ns)
+    clock, writes, overlays = 0, [], []
+    accepting = True
+
+    def accept():
+        nonlocal accepting
+        if not accepting:
+            raise OSError(11)
+        accepting = False
+        return client, None
+
+    remaining = None
+    def send(data):
+        nonlocal remaining
+        writes.append(len(data))
+        if remaining is None:
+            remaining = len(data)
+            return len(data)
+        raise OSError(11)
+
+    client = SimpleNamespace(setblocking=lambda block: None, recv=lambda size: b'GET /stream HTTP/1.1\r\n\r\n',
+                             send=send, close=lambda: None)
+    ns['time'] = SimpleNamespace(ticks_ms=lambda: clock, ticks_diff=lambda a, b: a - b, ticks_add=lambda a, b: a + b)
+    ns['annotate_preview'] = lambda *args: overlays.append(1)
+    phone = ns['PhonePreview'](SimpleNamespace(accept=accept))
+    frame = SimpleNamespace(to_jpeg=lambda quality: SimpleNamespace(bytearray=lambda: bytearray(12000)))
+    phone.step(frame, {}, b'', False)
+    assert writes == [len(ns['MJPEG_HEADER'])] and not overlays
+    clock = 100
+    phone.step(frame, {}, b'', False)
+    assert not overlays
+    clock = 150
+    phone.step(frame, {}, b'', True)
+    clock = 200
+    phone.step(frame, {}, b'', True)
+    assert len(overlays) == 1 and writes[1:] == [4096, 4096]
+    clock = 1100
+    phone.step(frame, {}, b'', True)
+    assert phone.client is None and len(overlays) == 1
 
 
 def main():
@@ -95,7 +158,9 @@ def main():
     assert decoded.stdout.decode().splitlines() == [
         ' '.join(str(packet[field]) for field in (3, 5, 6, 8, 9)) for packet in frames
     ]
-    print('RightAngleVoice scheduling, R8 frames, loss evidence and production v7 parser PASS')
+    verify_prediction()
+    verify_phone()
+    print('RightAngleVoice scheduling, real corner replay, confidence expiry, phone backpressure and production v8 parser PASS')
 
 
 if __name__ == '__main__':

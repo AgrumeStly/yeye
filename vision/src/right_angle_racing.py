@@ -28,7 +28,7 @@ def _racing_point(distance, radius, outset):
     return radius-outset+distance-arc_length, outset
 
 
-def racing_route(parameters):
+def racing_route(parameters, include_nominal=True):
     """返回当前模型的推荐线、差速请求及圆弧曲率，右正。
 
     parameters=(cx,cz,yaw,angle)来自当前观测模板；先外侧准备，再用圆弧
@@ -61,17 +61,18 @@ def racing_route(parameters):
     for ahead in (8,16,24,32,40,48,56):
         x,z=_racing_point(nearest_distance+ahead,radius,offset)
         route.append((cx+x*n[0]+z*u[0],cz+x*n[1]+z*u[1]))
-    # nominal_path仅供现有图示／静态包络检查，控制使用上方连续投影路线。
-    # 保留原名义圆弧，不通过扩大半径或车道假设来掩盖提前转向。
-    local=[]
-    for along in range(-140,int(tangent),4):
-        local.append((-offset,float(along)))
-    for degree in range(0,91,5):
-        a=math.radians(degree)
-        local.append((radius-offset-radius*math.cos(a),offset-radius+radius*math.sin(a)))
-    for along in range(int(radius-offset)+4,146,4):
-        local.append((float(along),offset))
-    points=[(cx+x*n[0]+z*u[0],cz+x*n[1]+z*u[1]) for x,z in local]
+    # 完整名义线只用于离线图示／包络检查，车载逐帧计算直接使用上方7点。
+    points=[]
+    if include_nominal:
+        local=[]
+        for along in range(-140,int(tangent),4):
+            local.append((-offset,float(along)))
+        for degree in range(0,91,5):
+            a=math.radians(degree)
+            local.append((radius-offset-radius*math.cos(a),offset-radius+radius*math.sin(a)))
+        for along in range(int(radius-offset)+4,146,4):
+            local.append((float(along),offset))
+        points=[(cx+x*n[0]+z*u[0],cz+x*n[1]+z*u[1]) for x,z in local]
     x,z=route[2]
     ratio=RACING_TRACK*x/max(25.0,x*x+z*z)
     ratio=max(-0.65,min(0.65,ratio))

@@ -1,0 +1,18 @@
+{
+  "at_utc": "2026-11-24T13:46:24.218112+00:00",
+  "port": "COM10",
+  "wire_version": 8,
+  "sha256": "c01d489f3c8ac7a6e99f04d07f17c8b905a6f8a27a11c17f5ce7f27d152d1d36",
+  "raw_evidence_local": "vision/build/right_angle_voice_v8_release/deployment_d2b8a2de",
+  "power_isolation_confirmed": true,
+  "script_execution_requested": false,
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "firmware": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "previous_main_sha256": "b5a4d5ea9f5e4b3a2d007217b4782e7acb4d4636b2e585b769e6fb75c7fef581",
+  "wifi_config_exact": true,
+  "readback_exact": true,
+  "readback_bytes": 78889,
+  "wifi_source": "existing team wifi_debug_track.py",
+  "boot_py_present": false,
+  "soft_reboot_observed": true
+}

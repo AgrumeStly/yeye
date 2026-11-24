@@ -1,10 +1,11 @@
-"""K230 语音首弯入口。实时路线沿用 R8，运行期间在内存记录现场证据。"""
+"""K230 语音首弯、分置信度续行和只读手机图传入口。"""
 import json
 import os
 import time
 from lap_protocol import send_voice_start
 from right_angle_protocol import RightAngleSender
 from right_angle_route import RightAngleRoute
+from right_angle_phone import open_phone_preview
 from voice_keywords import GO, STOP, READY_REPLY, VoiceKeywords, cleanup
 
 # STM32最多运行12000ms，从发送Go起再给150ms留出串口及本板调度余量。
@@ -15,7 +16,9 @@ PHOTO_LIMIT = 8
 
 
 class RightAngleVoiceSender(RightAngleSender):
-    wire_version = 7
+    wire_version = 8
+    flags_by_source = {'current_pair': 1, 'current_corner_predicted': 9,
+                       'current_single_forecast': 5, 'short_corridor_forecast': 5}
 
     def start(self, packet):
         """刚发出的当前双侧或当前L形可起步，当前出口弱关联仅许可续行。"""
@@ -38,7 +41,7 @@ class RunEvidence:
         self.count = self.photo_count = 0
         self.last = self.last_photo_at = self.go_at = None
 
-    def record(self, pixels, result, packet, started, sent, acquired, kws_ms):
+    def record(self, pixels, result, packet, started, sent, acquired, kws_ms, previous_phone_ms):
         """串口发送后记一帧。时间均为K230毫秒，照片保留相机原灰度。
 
         age_at_next估算上一帧在本次发送时的年龄，包含2ms名义串口时间；
@@ -50,7 +53,8 @@ class RunEvidence:
         stage = result['stage']
         row = (started, seq, flags, stage, result['reason'], result['steering'], result['bend'],
                time.ticks_diff(acquired, started), time.ticks_diff(sent, started),
-               None if previous is None else time.ticks_diff(sent, previous[1]), age_at_next, kws_ms)
+               None if previous is None else time.ticks_diff(sent, previous[1]), age_at_next, kws_ms,
+               packet[7], result['source'], previous_phone_ms)
         self.records[self.count % RECORD_LIMIT] = row
         self.count += 1
         if not self.issue and (not flags or (age_at_next is not None and age_at_next >= 200)):
@@ -86,10 +90,11 @@ class RunEvidence:
         else:
             raise RuntimeError('right-angle voice log slots exhausted')
         with open(prefix + '.jsonl', 'w') as log:
-            log.write(json.dumps(dict(event=event, time_ms=at, go_sent_ms=self.go_at, wire_version=7,
+            log.write(json.dumps(dict(event=event, time_ms=at, go_sent_ms=self.go_at, wire_version=8,
                 dropped_records=max(0, self.count - RECORD_LIMIT),
                 columns=('start_ms', 'seq', 'flags', 'stage', 'reason', 'steering', 'bend', 'acquire_ms',
-                         'to_send_ms', 'send_interval_ms', 'previous_source_age_ms', 'kws_ms'))) + '\n')
+                         'to_send_ms', 'send_interval_ms', 'previous_source_age_ms', 'kws_ms',
+                         'confidence', 'source', 'previous_phone_ms'))) + '\n')
             for count in range(max(0, self.count - RECORD_LIMIT), self.count):
                 log.write(json.dumps(self.records[count % RECORD_LIMIT]) + '\n')
         for group, photos in (('route', self.photos), ('issue', self.issue)):
@@ -106,18 +111,18 @@ class RunEvidence:
         self.reset()
 
 
-def drive(sensor, channel, gray, sender, voice, evidence):
+def drive(sensor, channel, gray, sender, voice, evidence, phone=None):
     """一轮先采并发送PATH，再读一次短等待音频。Go只用于下一帧，不排队。
 
     单L及出口弱关联按当前图像续行。失效帧立即交给STM32，不沿用旧转向量。
     车上没有执行回执，窗口表示已发Go。窗口内不打印、不播放WAV、不写存储。
     """
-    detector = RightAngleRoute()
-    detector.clock = time.ticks_ms
+    detector = RightAngleRoute(predictive=True)
     origin = time.ticks_ms()
     voice.play(READY_REPLY)
     pending_go = run_until = None
-    print('[RIGHT ANGLE VOICE] ready v7')
+    phone_ms = 0
+    print('[RIGHT ANGLE VOICE] ready v8')
     while True:
         os.exitpoint()
         started = time.ticks_ms()
@@ -136,7 +141,7 @@ def drive(sensor, channel, gray, sender, voice, evidence):
                 evidence.go_at = sent  # 串口异常时finally仍可保存窗口起点。
                 sender.start(packet)
                 run_until = time.ticks_add(sent, RUN_WINDOW_MS)
-                evidence.record(pixels, result, packet, started, sent, acquired, 0)
+                evidence.record(pixels, result, packet, started, sent, acquired, 0, phone_ms)
             else:
                 print('[RIGHT ANGLE VOICE] go_blocked', result['reason'])
             pending_go = None
@@ -147,7 +152,7 @@ def drive(sensor, channel, gray, sender, voice, evidence):
             for _ in range(3):
                 sender.stop()
         if run_until is not None:
-            evidence.record(pixels, result, packet, started, sent, acquired, time.ticks_diff(recognized, sent))
+            evidence.record(pixels, result, packet, started, sent, acquired, time.ticks_diff(recognized, sent), phone_ms)
             if keyword == STOP or time.ticks_diff(recognized, run_until) >= 0:
                 evidence.finish('stop_sent' if keyword == STOP else 'go_window_elapsed', recognized)
                 run_until = None
@@ -158,6 +163,18 @@ def drive(sensor, channel, gray, sender, voice, evidence):
             pending_go = recognized
         elif keyword in (1, 4):
             voice.play(keyword)
+        if phone is not None:
+            # 路径和口令已发，原始取证也已复制。JPEG只在本帧前段足够快时生成，
+            # 阻塞／不支持的图传只关闭预览，不能让图传异常中断首弯控制循环。
+            phone_at = time.ticks_ms()
+            try:
+                phone.step(frame, result, packet, time.ticks_diff(phone_at, started) <= 65)
+            except Exception:
+                cleanup(phone.close)
+                phone = None
+            phone_ms = time.ticks_diff(time.ticks_ms(), phone_at)
+        else:
+            phone_ms = 0
 
 
 def main():
@@ -167,9 +184,10 @@ def main():
     from media.media import MediaManager
     import image
 
-    sensor = uart = sender = voice = evidence = None
+    sensor = uart = sender = voice = evidence = phone = None
     media = False
     try:
+        phone = open_phone_preview()
         mapping = FPIOA()
         mapping.set_function(11, FPIOA.UART2_TXD)
         mapping.set_function(12, FPIOA.UART2_RXD)
@@ -187,7 +205,7 @@ def main():
         voice = VoiceKeywords(mapping)
         evidence = RunEvidence()
         sensor.run()
-        drive(sensor, CAM_CHN_ID_0, image.GRAYSCALE, sender, voice, evidence)
+        drive(sensor, CAM_CHN_ID_0, image.GRAYSCALE, sender, voice, evidence, phone)
     finally:
         if sender is not None:
             def stop_link():
@@ -200,6 +218,8 @@ def main():
             evidence.finish('script_exit', time.ticks_ms())
         if voice is not None:
             cleanup(voice.close)
+        if phone is not None:
+            cleanup(phone.close)
         if media:
             time.sleep_ms(100)
             cleanup(MediaManager.deinit)

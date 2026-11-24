@@ -21,6 +21,9 @@ static int feed, valid_path, steer, bend, history, mode, reverse_mapping;
 #ifdef RIGHT_ANGLE_TARGET
 static int corner_flags;
 #endif
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+static uint8_t path_quality;
+#endif
 static unsigned checks;
 #define CHECK(e) do { ++checks; assert(e); } while (0)
 static void put16(uint8_t *p, uint16_t v) { p[0]=(uint8_t)v; p[1]=(uint8_t)(v>>8); }
@@ -33,13 +36,16 @@ static void packet(uint8_t *p) {
     p[2]=6;
 #endif
 #ifdef RIGHT_ANGLE_VOICE_TARGET
-    p[2]=7;
+    p[2]=8;
 #elif defined(RIGHT_ANGLE_TARGET)
     p[2]=5; /* 首弯v5：当前L形预测，保留其它旧目标原封包。 */
 #endif
     p[6]=(uint8_t)((valid_path?1:0)|(history?4:0)); p[7]=80;
 #ifdef RIGHT_ANGLE_TARGET
     if (corner_flags) p[6]=(uint8_t)((valid_path?1:0)|corner_flags);
+#endif
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+    p[7]=path_quality;
 #endif
     put16(p+8,(uint16_t)steer); put16(p+12,(uint16_t)bend); put16(p+14,20);
     put16(p+18,protocol_crc16(p,18));
@@ -112,6 +118,9 @@ static void init(uint32_t start, int mapping) {
     feed=1; valid_path=1; steer=bend=history=mode=0; sequence=0;
 #ifdef RIGHT_ANGLE_TARGET
     corner_flags=0;
+#endif
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+    path_quality=80;
 #endif
     encoder_counter_init(&a); encoder_counter_init(&b); lap_link_init(&parser); lap_motion_init(now);
     g_lap_config.straight_rpm=40; g_lap_config.run_ms=3000;

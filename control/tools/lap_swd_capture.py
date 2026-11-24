@@ -156,7 +156,7 @@ def main():
         revisions = (0x02120010, 0x02120011, 0x02120012)
         minimum_rpm, maximum_rpm, maximum_run = 40, 80, 15000
     elif args.profile == 'right-angle-voice':
-        revisions = (0x02120013,)
+        revisions = (0x02120013, 0x02120014)
         minimum_rpm, maximum_rpm, maximum_run = 40, 80, 12000
         maximum_reason = 12  # VOICE_STOP是本版的合法停车原因。
     addresses = symbols()

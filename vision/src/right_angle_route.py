@@ -8,6 +8,7 @@
 import math
 from right_angle_racing import racing_route
 from right_angle_grid import corner_grid
+from right_angle_prediction import PREDICTION_ANCHOR_MS, PREDICTION_GAP_MS, fitted_outer_l, fitted_left_forecast, clear_predicted_corridor
 from lite_lap_route import (_threshold, _grid, _pair_anchors, _template,
                             _anchor_distance, _hypot, _point, _pixel)
 
@@ -67,7 +68,8 @@ def _current_anchor_distance(t, anchors):
 
 class RightAngleRoute:
     """固定有界候选库与局部细化；初始化预计算只执行一次，不驱动车轮。"""
-    def __init__(self):
+    def __init__(self, predictive=False):
+        self.predictive = predictive
         self.clock = None  # 可选板上ticks_ms，只计耗时，不改变几何判断或源年龄。
         self.templates = []
         for angle in (0, 90):
@@ -93,6 +95,8 @@ class RightAngleRoute:
         self.refine_key = None
         self.refinements = []
         self.corner_at = None
+        self.forecast_anchor_at = self.visible_edge_at = None
+        self.forecast_route = None
         self.racing_key = None
         self.racing = None
 
@@ -119,7 +123,8 @@ class RightAngleRoute:
         self.last_at = now
         clock = self.clock
         begun = clock() if clock else 0
-        black, occupied, labels = corner_grid(pixels, _threshold(pixels))
+        threshold = _threshold(pixels)
+        black, occupied, labels = corner_grid(pixels, threshold)
         grid_done = clock() if clock else 0
         anchors = _pair_anchors(black)
         anchors_done = clock() if clock else 0
@@ -230,6 +235,42 @@ class RightAngleRoute:
                 if (dual or single) and score>best_score:
                     best,best_score,support=t,score,counts
                     best_dual=dual;best_corner=single
+        forecast = 0
+        fitted = False
+        if self.predictive and not best_dual:
+            # 右边出画时，直接用当前左纵／前横交点补充离散库。当前两臂拟合
+            # 成功便跳过整库重扫与27点精化，给测到过峰值的K230留出时间。
+            match = fitted_outer_l(black, occupied, _corner_template)
+            if (match is not None and (not anchors or _current_anchor_distance(match, anchors) <= 10)
+                    and (not tracking or self.distance(match, self.previous) <= 24)):
+                best, best_score = match, 2.0
+                support = [sum(occupied[i] for i in side) for side in best[0]]
+                best_corner = 2
+                fitted = True
+            elif self.forecast_anchor_at is not None and now-self.forecast_anchor_at < PREDICTION_ANCHOR_MS:
+                # 降级时依次尝试当前单边和短时白走廊。单边重新计算模型；
+                # 白走廊只沿最近路线短时前进，不从空白画面生成新转弯。
+                if best_corner == 1:
+                    forecast = 1
+                elif best is None:
+                    left_fit = fitted_left_forecast(black, self.previous, _corner_template)
+                    if (left_fit is not None and self.distance(left_fit, self.previous) < 12
+                            and len(left_fit[1]) >= 4 and not any(black[i] for i in left_fit[1])):
+                        best, forecast = left_fit, 1
+                        support = [sum(occupied[i] for i in side) for side in best[0]]
+                    else:
+                        for _, t in sorted(seeds, key=lambda item: -item[0])[:8]:
+                            if len(t[1]) < 4 or self.distance(t, self.previous) >= 12:
+                                continue
+                            counts = [sum(occupied[i] for i in side) for side in t[0]]
+                            if any(count >= 9 and count >= 0.62 * len(side) and sum(black[i] for i in side) >= 3
+                                   for count, side in zip(counts, t[0])):
+                                best, support, forecast = t, counts, 1
+                                break
+                    if (best is None and self.visible_edge_at is not None
+                            and now-self.visible_edge_at < PREDICTION_GAP_MS
+                            and clear_predicted_corridor(pixels, black, threshold, self.forecast_route)):
+                        best, forecast = self.previous, 2
         fallback = 0
         if tracking and best is None:
             # 局部支持不足时同帧回到完整当前搜索，不能因为滚动库本帧没扫到
@@ -248,7 +289,7 @@ class RightAngleRoute:
         refined = 0
         # 几何精化保持原27点；只缓存当前seed的预计算模板，分数仍逐帧重算。
         # seed不变时不再每帧重新计算三角函数／投影／折角臂；缓存大小固定。
-        for _, seed in seeds[:1]:
+        for _, seed in (() if fitted or forecast else seeds[:1]):
             c, d, yaw, angle = seed[5]
             if self.refine_key != seed[5]:
                 self.refine_key = seed[5]
@@ -295,14 +336,14 @@ class RightAngleRoute:
             if yaw < -math.radians(15): risk = 1.0
             stage = 'approach' if cz > 40 and yaw > -math.radians(15) else 'turn'
         valid = self.stable >= 3 and now-self.stable_at >= 80
-        if not best_dual: risk = 1.0
+        if not best_dual and not forecast: risk = 1.0
         # 直道沿用32点误差；有90度几何时下方改用外入切弯圆弧和24点纯追踪。
         target = best[2][6] if risk > 0 else best[2][3]
         steering = max(-1000, min(1000, round(math.atan2(target[0], max(5, target[1]))/math.radians(55)*1000)))
         route = best[2]
         if angle > 1 and not (yaw <= -math.radians(75) and cz < 10):
             if self.racing_key != best[4]:
-                self.racing_key = best[4]; self.racing = racing_route(best[4])
+                self.racing_key = best[4]; self.racing = racing_route(best[4], include_nominal=not self.predictive)
             if self.racing is not None:
                 route = self.racing['route']; steering = self.racing['steering']
                 out['racing_radius'] = self.racing['radius']; out['racing_outset'] = self.racing['outset']
@@ -311,18 +352,40 @@ class RightAngleRoute:
                 out['route_projection_s'] = self.racing['projection_s']
                 stage = 'approach' if self.racing['phase']=='entry' else ('turn' if self.racing['phase']=='arc' else 'exit')
         source = 'current_pair' if best_dual else ('current_corner_predicted' if best_corner == 2 else 'current_corner_associated')
-        if not best_dual:
+        confidence = 75 if best_dual else (60 if best_corner == 2 else 45)
+        if self.predictive and not best_dual and best_corner != 2 and not forecast:
+            # 全库重获/精化也可能找到旧式出口单边。和直接找到的单边使用同一时限。
+            if self.forecast_anchor_at is None or now-self.forecast_anchor_at >= PREDICTION_ANCHOR_MS:
+                forecast = 0
+                valid = False
+            else:
+                forecast = 1
+        if forecast:
+            # 前方白区有支持才下发预测。暂时无边线只延续已有路线，不更新边线时钟。
+            source = 'current_single_forecast' if forecast == 1 else 'short_corridor_forecast'
+            confidence = 55 if forecast == 1 else 45
+            if forecast == 2:
+                route = self.forecast_route
+            valid = valid and clear_predicted_corridor(pixels, black, threshold, route)
+        elif not best_dual:
             # v5单侧L／弱关联只允许右转或直行，不扩大协议到未经确认的左转。
             # 推荐点仍在入口直道时不额外给10%右转；真正到达圆弧后，右转量
             # 由连续路线自然增大。双侧路径保留有符号修正，允许及时回正。
             steering = max(0,steering)
+        if self.predictive and valid:
+            if not forecast:
+                self.forecast_anchor_at = now
+            if forecast != 2:
+                self.visible_edge_at = now
+                self.forecast_route = route
         # R7实跑出现100→371及负修正→508的切换，来自距离下限覆盖路线。
         # R8取消该下限；留0字段便于与旧逐帧证据比较，不以历史L强行续转。
         out['turn_floor'] = 0
         out.update(valid=valid, source=source, steering=steering,
-                   bend=int(round(risk*1000)), confidence=75 if best_dual else (60 if best_corner == 2 else 45), stage=stage,
+                   bend=int(round(risk*1000)), confidence=confidence, stage=stage,
                    corner_observed=best_corner==2, corner_age_ms=0 if self.corner_at is None else now-self.corner_at,
-                   measured_edges='left_and_front' if best_corner==2 else ('pair' if best_dual else 'associated_left'),
+                   measured_edges=('none' if forecast == 2 else 'single' if forecast == 1 else
+                                   'left_and_front' if best_corner == 2 else 'pair' if best_dual else 'associated_left'),
                    path_kind='racing_arc_prediction' if angle>1 else 'straight_observation',
                    path_visibility='projected' if best[1] else 'predicted_near_blind',
                    parameters=list(best[4]), route=route, score=best_score,

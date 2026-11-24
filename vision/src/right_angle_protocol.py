@@ -9,6 +9,7 @@ except ImportError:
 
 class RightAngleSender(LapSender):
     wire_version = 5
+    flags_by_source = {'current_pair': 1, 'current_corner_predicted': 9, 'current_corner_associated': 5}
 
     def _send(self, data):
         converted = bytearray(data)
@@ -24,7 +25,7 @@ class RightAngleSender(LapSender):
         """
         if not isinstance(processing_ms,int) or not isinstance(age_ms,int) or min(processing_ms,age_ms)<0:
             raise ValueError('explicit nonnegative timing required')
-        kind=result.get('source'); flags={'current_pair':1,'current_corner_predicted':9,'current_corner_associated':5}.get(kind,0)
+        kind=result.get('source'); flags=self.flags_by_source.get(kind,0)
         valid=bool(self.allow_drive and result.get('valid') and flags and processing_ms<=100 and age_ms<150)
         steering=int(result.get('steering',0));bend=int(result.get('bend',0));quality=int(result.get('confidence',0))
         if kind=='current_corner_predicted':
@@ -32,6 +33,8 @@ class RightAngleSender(LapSender):
         elif kind=='current_corner_associated':
             evidence_age=result.get('corner_age_ms',700)
             valid=valid and isinstance(evidence_age,int) and 0<=evidence_age<700 and bend==1000 and steering>=0 and quality>=45
+        elif kind in ('current_single_forecast', 'short_corridor_forecast'):
+            valid = valid and (50 <= quality < 60 if kind == 'current_single_forecast' else 40 <= quality < 50)
         if not (-1000<=steering<=1000 and 0<=bend<=1000 and 0<=quality<=100):raise ValueError('v5 route fields')
         header=bytes((0xa5,0x5a,self.wire_version,1,12,self.seq));self.seq=(self.seq+1)&255
         data=header+struct.pack('<BBhHHHBB',flags if valid else 0,quality if valid else 0,
