@@ -1,8 +1,12 @@
 # 视觉与语音入口
 
-2026-11-19主控明确存储约定：程序保留/sdcard，照片、采样数据和日志写/data。当前新候选为[release_r8_entry](../testing/2026-11-18_right_angle/release_r8_entry/README.md)，188项离线检查通过、尚未部署；[最新接续](../testing/2026-11-18_right_angle/entry_r8_record.md)记录撤离后状态和待验。R7实测及/data迁移原件保留。
+2026-11-24主控要求完整阅读视觉与DeepSeek的板上成果：[阅读报告](../project_planning/evidence/2026-11-24_vision_board_review/review.md)、[当前进度](../project_planning/project_status.md)。新增`qoder_scripts`五份语音／图传／采集／UART工具及`/data/final_sampling_gc2093`三份采集脚本均已全文读取。独立语音源码、模型与四个WAV已存在，历史日志记录“小南小南／Go／Stop”识别；整车语音启动、3秒停稳、两条自选指令及与循迹并行仍缺完整验证。动态采集CSV存在损坏，本轮不据此认定采集或标定通过。
 
-2026-11-19接续首弯并完成/data迁移和无动力真实保存检查；识别／转向及v5保护保持原版，主控承担视觉／语音。
+本次板上没有`/sdcard/main.py`，语音入口`qoder_scripts/main_voice.py`处于停用命名；CanMV连接／断开产生软重启，末次读取后已断开且没有恢复应用。R7／R8与仓库归档逐字节一致，不能将新增语音／图传当首弯时序问题已修复。以下旧“尚未部署／当前视觉已停”等按原日期阅读，实时状态不能由旧记录推定。
+
+2026-11-19主控明确存储约定：程序保留/sdcard，照片、采样数据和日志写/data。[release_r8_entry](../testing/2026-11-18_right_angle/release_r8_entry/README.md)在188项离线检查后已经部署复测，最新一次地面499ms／LINK2，见[R8现场记录](../testing/2026-11-18_right_angle/r8_field_record.md)。原[入弯改进记录](../testing/2026-11-18_right_angle/entry_r8_record.md)的“尚未部署”为当时阶段；原始实测及/data迁移资料保留。
+
+2026-11-19接续首弯并完成/data迁移和无动力真实保存检查；识别／转向及v5保护保持原版。11月20日及11月24日最新分工：视觉接续语音成果，主控协调整车接口及验收，不沿用旧“主控独自承担视觉／语音”要求等待交付。
 
 - 当前配合[首弯任务](../project_planning/tasks/I-04-RIGHT-ANGLE.md)，R8已离线修正提前强转；最近真实R7／STM32首弯12的2041ms PATH3失败保留，尚无R8整车通过。视觉已停，主控返回后再核对和复跑。
 - 最后归档为相机已停止；不能把旧“已自动启动”当实时状态。[11月19日接续](../testing/2026-11-18_right_angle/resume_20261119.md)先查LINK新鲜度与日志保存，不沿用前次PATH原因。

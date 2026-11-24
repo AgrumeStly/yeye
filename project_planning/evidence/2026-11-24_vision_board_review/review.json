@@ -1,0 +1,346 @@
+{
+  "at_utc": "2026-11-24T12:19:39.599338+00:00",
+  "mode": "review",
+  "board_write_requested": false,
+  "run_script_requested": false,
+  "connection_may_interrupt_existing_script": true,
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "script_status_after_connect": {
+    "running": false
+  },
+  "directories": {
+    "/sdcard/qoder_scripts": [
+      {
+        "entries": [
+          {
+            "name": "main_nopc.py",
+            "type": "file",
+            "size": 5557,
+            "mtime": 1735695036
+          },
+          {
+            "name": "main_voice.py",
+            "type": "file",
+            "size": 233,
+            "mtime": 1795353454
+          },
+          {
+            "name": "bench_uart_flood.py",
+            "type": "file",
+            "size": 1220,
+            "mtime": 1795353028
+          },
+          {
+            "name": "wifi_debug_track.py",
+            "type": "file",
+            "size": 15075,
+            "mtime": 1735691630
+          },
+          {
+            "name": "voice_assistant.py",
+            "type": "file",
+            "size": 5753,
+            "mtime": 1795353448
+          }
+        ]
+      }
+    ],
+    "/data/voice_test": [
+      {
+        "entries": [
+          {
+            "name": "session.wav",
+            "type": "file",
+            "size": 0,
+            "mtime": 1735690608
+          },
+          {
+            "name": "events.log",
+            "type": "file",
+            "size": 7497,
+            "mtime": 1735690636
+          },
+          {
+            "name": "uart_events.log",
+            "type": "file",
+            "size": 2893,
+            "mtime": 1735690132
+          }
+        ]
+      }
+    ],
+    "/data/models": [
+      {
+        "entries": [
+          {
+            "name": "multi_kws.kmodel",
+            "type": "file",
+            "size": 374640,
+            "mtime": 1735696196
+          }
+        ]
+      }
+    ]
+  },
+  "files": [
+    {
+      "remote": "/sdcard/README_开发约定.txt",
+      "local": "board_snapshot\\sdcard\\README_开发约定.txt",
+      "bytes": 4073,
+      "sha256": "f30631f9feecd8f4368d36a971dac1bc4ba880a71479bdc25523be6fa9389713",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 4073,
+        "mtime": 1735692648
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 4073,
+        "mtime": 1735692648
+      }
+    },
+    {
+      "remote": "/sdcard/main.py.bak",
+      "local": "board_snapshot\\sdcard\\main.py.bak",
+      "bytes": 36244,
+      "sha256": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 36244,
+        "mtime": 1735690330
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 36244,
+        "mtime": 1735690330
+      }
+    },
+    {
+      "remote": "/sdcard/main_false.py",
+      "local": "board_snapshot\\sdcard\\main_false.py",
+      "bytes": 5039,
+      "sha256": "b5d1abc893598eef74efad38a57576b3f1ad09c8e4c09145b4b8598b4da15c31",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 5039,
+        "mtime": 1735689604
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 5039,
+        "mtime": 1735689604
+      }
+    },
+    {
+      "remote": "/sdcard/mcp_script.py",
+      "local": "board_snapshot\\sdcard\\mcp_script.py",
+      "bytes": 191,
+      "sha256": "f8036f69a7748e08a6d7a6686163bf6212cf00c1b35ef57cc67ec8fef8f5725e",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 191,
+        "mtime": 1735690200
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 191,
+        "mtime": 1735690200
+      }
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/bench_uart_flood.py",
+      "local": "board_snapshot\\sdcard\\qoder_scripts\\bench_uart_flood.py",
+      "bytes": 1220,
+      "sha256": "2f408292109f89f43abd21b55114332b199516b350b59119d85420cdae952ade",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 1220,
+        "mtime": 1795353028
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 1220,
+        "mtime": 1795353028
+      }
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/main_nopc.py",
+      "local": "board_snapshot\\sdcard\\qoder_scripts\\main_nopc.py",
+      "bytes": 5557,
+      "sha256": "d7b3a8ebb7b95ab9abf04251a1107cc6d355d809ba9497b43f7e8cbafe90548e",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 5557,
+        "mtime": 1735695036
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 5557,
+        "mtime": 1735695036
+      }
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/main_voice.py",
+      "local": "board_snapshot\\sdcard\\qoder_scripts\\main_voice.py",
+      "bytes": 233,
+      "sha256": "83fb3da755111868be2fe9e1ffb2fb473b1eb7f2151d8b95872f1d5b54e2b22b",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 233,
+        "mtime": 1795353454
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 233,
+        "mtime": 1795353454
+      }
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/voice_assistant.py",
+      "local": "board_snapshot\\sdcard\\qoder_scripts\\voice_assistant.py",
+      "bytes": 5753,
+      "sha256": "4ef5b6363885de215b10ce976ec602bdf9d9f031fa07de8d3c37ce09a2bf2cfa",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 5753,
+        "mtime": 1795353448
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 5753,
+        "mtime": 1795353448
+      }
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/wifi_debug_track.py",
+      "local": "board_snapshot\\sdcard\\qoder_scripts\\wifi_debug_track.py",
+      "bytes": 15075,
+      "sha256": "ea2b1abdf4a58803d65263d3b57fc49c029563e20a6aba7b1cec2be30db150e1",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 15075,
+        "mtime": 1735691630
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 15075,
+        "mtime": 1735691630
+      }
+    },
+    {
+      "remote": "/sdcard/revision.txt",
+      "local": "board_snapshot\\sdcard\\revision.txt",
+      "bytes": 40,
+      "sha256": "6e006516019186c087335ad4017ad23ff8a20074f14a9e131eefebd5b244f95a",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 40,
+        "mtime": 1783044252
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 40,
+        "mtime": 1783044252
+      }
+    },
+    {
+      "remote": "/sdcard/right_angle_drive_r7.py",
+      "local": "board_snapshot\\sdcard\\right_angle_drive_r7.py",
+      "bytes": 53657,
+      "sha256": "a91cd793735222bc2e15f7acca6f272425b7bd3ee96cde8cf13b5ccd15b9470b",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 53657,
+        "mtime": 1735692092
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 53657,
+        "mtime": 1735692092
+      }
+    },
+    {
+      "remote": "/sdcard/right_angle_drive_r8.py",
+      "local": "board_snapshot\\sdcard\\right_angle_drive_r8.py",
+      "bytes": 54883,
+      "sha256": "23c812b040d4b71faa986616ae2cfb3cf1fca3c7090ef99b27b36ddc75d8f96b",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 54883,
+        "mtime": 1735693996
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 54883,
+        "mtime": 1735693996
+      }
+    },
+    {
+      "remote": "/sdcard/vision_classify.py",
+      "local": "board_snapshot\\sdcard\\vision_classify.py",
+      "bytes": 3832,
+      "sha256": "aba8264390eef32e3c302bf980c26f49396a1dd312aa3148df5c0b5c93913d92",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 3832,
+        "mtime": 1735690130
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 3832,
+        "mtime": 1735690130
+      }
+    }
+  ],
+  "completed": true
+}

@@ -1,0 +1,8 @@
+# 原始图传源码含队内热点口令，原始RPC还含该源码的Base64；保留本机原件。
+*_backend.jsonl
+board_snapshot/sdcard/qoder_scripts/wifi_debug_track.py
+# 模型、音频原件已下载至本机留证；仓库记录路径、大小、哈希和音频格式。
+board_snapshot/**/*.kmodel
+board_snapshot/**/*.wav
+# 顺带读出的固件示例词典保留本机；不是本任务新增项目源码。
+board_snapshot/sdcard/examples/ai_test_utils/dict.txt

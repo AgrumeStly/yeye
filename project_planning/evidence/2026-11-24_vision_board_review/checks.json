@@ -1,0 +1,40 @@
+{
+  "scope": "documentation and local evidence only; no application test, build, device run or flash",
+  "documents": [
+    "AI_HANDOFF.md",
+    "project_planning\\project_status.md",
+    "project_planning\\voice_handoff.md",
+    "vision\\README.md",
+    "project_planning\\tasks\\TASK-20261124-01-vision-board-review.md",
+    "project_planning\\evidence\\2026-11-24_vision_board_review\\review.md"
+  ],
+  "local_links_checked": 168,
+  "snapshot_files_verified_against_read_manifest": 30,
+  "old_source_byte_matches": [
+    {
+      "snapshot": "sdcard/right_angle_drive_r8.py",
+      "baseline": "testing/2026-11-18_right_angle/release_r8_entry/right_angle_drive.py",
+      "byte_identical": true
+    },
+    {
+      "snapshot": "sdcard/right_angle_drive_r7.py",
+      "baseline": "testing/2026-11-18_right_angle/release_r7_storage/right_angle_drive.py",
+      "byte_identical": true
+    },
+    {
+      "snapshot": "sdcard/main.py.bak",
+      "baseline": "testing/2026-11-12_field_resume/runtime_trace_candidate_03/main.py",
+      "byte_identical": true
+    }
+  ],
+  "rpc_attempts_audited": 6,
+  "board_read_limitations_retained": [
+    "io.listDir timeout for d01_straight_run01",
+    "motion CSV malformed and non-UTF8",
+    "connection/disconnection soft reboots",
+    "old voice logs not bound to current source hash",
+    "original recording empty"
+  ],
+  "passed": true,
+  "errors": []
+}

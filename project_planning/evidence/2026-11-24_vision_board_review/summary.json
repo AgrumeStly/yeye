@@ -1,0 +1,1741 @@
+{
+  "scope": "static source and archived evidence review only",
+  "files": [
+    {
+      "remote": "/sdcard/README_开发约定.txt",
+      "bytes": 4073,
+      "sha256": "f30631f9feecd8f4368d36a971dac1bc4ba880a71479bdc25523be6fa9389713",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/main.py.bak",
+      "bytes": 36244,
+      "sha256": "f9a12f4ec10d1fec6ab629f3415858403b2a4d0ed4df16dfb76482f4c5fe16d8",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/main_false.py",
+      "bytes": 5039,
+      "sha256": "b5d1abc893598eef74efad38a57576b3f1ad09c8e4c09145b4b8598b4da15c31",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/mcp_script.py",
+      "bytes": 191,
+      "sha256": "f8036f69a7748e08a6d7a6686163bf6212cf00c1b35ef57cc67ec8fef8f5725e",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/bench_uart_flood.py",
+      "bytes": 1220,
+      "sha256": "2f408292109f89f43abd21b55114332b199516b350b59119d85420cdae952ade",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/main_nopc.py",
+      "bytes": 5557,
+      "sha256": "d7b3a8ebb7b95ab9abf04251a1107cc6d355d809ba9497b43f7e8cbafe90548e",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/main_voice.py",
+      "bytes": 233,
+      "sha256": "83fb3da755111868be2fe9e1ffb2fb473b1eb7f2151d8b95872f1d5b54e2b22b",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/voice_assistant.py",
+      "bytes": 5753,
+      "sha256": "4ef5b6363885de215b10ce976ec602bdf9d9f031fa07de8d3c37ce09a2bf2cfa",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/qoder_scripts/wifi_debug_track.py",
+      "bytes": 15075,
+      "sha256": "ea2b1abdf4a58803d65263d3b57fc49c029563e20a6aba7b1cec2be30db150e1",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/revision.txt",
+      "bytes": 40,
+      "sha256": "6e006516019186c087335ad4017ad23ff8a20074f14a9e131eefebd5b244f95a",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/right_angle_drive_r7.py",
+      "bytes": 53657,
+      "sha256": "a91cd793735222bc2e15f7acca6f272425b7bd3ee96cde8cf13b5ccd15b9470b",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/right_angle_drive_r8.py",
+      "bytes": 54883,
+      "sha256": "23c812b040d4b71faa986616ae2cfb3cf1fca3c7090ef99b27b36ddc75d8f96b",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/vision_classify.py",
+      "bytes": 3832,
+      "sha256": "aba8264390eef32e3c302bf980c26f49396a1dd312aa3148df5c0b5c93913d92",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/models/multi_kws.kmodel",
+      "bytes": 374640,
+      "sha256": "e8966b1daa5bd86b533cd2c6467a7a1c35e3d5b1359f12366bf5fba66cac4987",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/voice_test/events.log",
+      "bytes": 7497,
+      "sha256": "e0d7f8ffb123174348cd6aa0c37cf04e82177dd1fbbb4136f5e0591d3217a274",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/voice_test/session.wav",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/voice_test/uart_events.log",
+      "bytes": 2893,
+      "sha256": "39d18bf19f33dc8a4588ebb714392b3419b365973c912e5617297598af24b574",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/kmodel/kws.kmodel",
+      "bytes": 373744,
+      "sha256": "124d72f375f64a3346c3b6438396c2c619816d888bb931a0d9285b9cface46f1",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/kmodel/multi_kws.kmodel",
+      "bytes": 374640,
+      "sha256": "e8966b1daa5bd86b533cd2c6467a7a1c35e3d5b1359f12366bf5fba66cac4987",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/utils/go_new.wav",
+      "bytes": 77612,
+      "sha256": "678aee42ffdaee528a7aec43549693b1d43eff6d9ec9a0cbde7df4cc4ad806f2",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/utils/stop_new.wav",
+      "bytes": 71468,
+      "sha256": "62ae9e25c50a0a8646a27c1e524e7a212767c43ba650d1872efba9fac82ad78d",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/utils/wow_new.wav",
+      "bytes": 104492,
+      "sha256": "59fc1c14410376de19830d6367067f5effc9bd5ba6c45b319c8eb5891e6254e0",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/utils/wozai.wav",
+      "bytes": 17678,
+      "sha256": "1fe8b2420352a21d6d05b5e406bb688c42df5c0c4993f273b1d52c08724cde9d",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/captures/reference_color/reference_log.csv",
+      "bytes": 265,
+      "sha256": "06ff076bbf59ab11f9f6e000bf9c98bc4fc56f33fd51b6fbdca21230f6be64e5",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/captures/spot_gray/spot_log.csv",
+      "bytes": 2011,
+      "sha256": "f04616bd106f206bd503413fe30ae73306846982c5e9afaaf6a0773b3bd04ffd",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/final_sampling_gc2093/01_spot_gray.py",
+      "bytes": 3771,
+      "sha256": "76348c4689c0ed40fdffda7737e3c79144c4597984eea2415762c076dacdfd2c",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/final_sampling_gc2093/02_motion_gray.py",
+      "bytes": 5413,
+      "sha256": "1613f279d064bbbd4ca9500191b3b7a58e96da0134b03c803b63c840a86ac9cc",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/final_sampling_gc2093/03_reference_color.py",
+      "bytes": 2578,
+      "sha256": "724d00a98ca0435a4b444ea3475295fe246c2f9e3bd94eec7d2a6db6dffdaf77",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/sdcard/examples/ai_test_utils/dict.txt",
+      "bytes": 32521,
+      "sha256": "8288453b9cc4b490c13c05a87d8bb1345998a48901321aa4f7b2ccaafa74c8fb",
+      "snapshot_verified": true
+    },
+    {
+      "remote": "/data/captures/d01_straight_run01/collect_log.csv",
+      "bytes": 30395,
+      "sha256": "0502ac854fb0796f1505ef6b9d9c9aee344892bd8fc5302759d6ae9794c50727",
+      "snapshot_verified": true
+    }
+  ],
+  "wav": [
+    {
+      "remote": "/data/voice_test/session.wav",
+      "bytes": 0,
+      "header_error": "EOFError"
+    },
+    {
+      "remote": "/sdcard/examples/utils/go_new.wav",
+      "bytes": 77612,
+      "channels": 1,
+      "sample_rate_hz": 16000,
+      "sample_width_bytes": 2,
+      "frames": 38784,
+      "duration_s": 2.424
+    },
+    {
+      "remote": "/sdcard/examples/utils/stop_new.wav",
+      "bytes": 71468,
+      "channels": 1,
+      "sample_rate_hz": 16000,
+      "sample_width_bytes": 2,
+      "frames": 35712,
+      "duration_s": 2.232
+    },
+    {
+      "remote": "/sdcard/examples/utils/wow_new.wav",
+      "bytes": 104492,
+      "channels": 1,
+      "sample_rate_hz": 16000,
+      "sample_width_bytes": 2,
+      "frames": 52224,
+      "duration_s": 3.264
+    },
+    {
+      "remote": "/sdcard/examples/utils/wozai.wav",
+      "bytes": 17678,
+      "channels": 1,
+      "sample_rate_hz": 16000,
+      "sample_width_bytes": 2,
+      "frames": 8800,
+      "duration_s": 0.55
+    }
+  ],
+  "source_matches": [
+    {
+      "snapshot": "sdcard/right_angle_drive_r8.py",
+      "baseline": "testing/2026-11-18_right_angle/release_r8_entry/right_angle_drive.py",
+      "byte_identical": true
+    },
+    {
+      "snapshot": "sdcard/right_angle_drive_r7.py",
+      "baseline": "testing/2026-11-18_right_angle/release_r7_storage/right_angle_drive.py",
+      "byte_identical": true
+    },
+    {
+      "snapshot": "sdcard/main.py.bak",
+      "baseline": "testing/2026-11-12_field_resume/runtime_trace_candidate_03/main.py",
+      "byte_identical": true
+    }
+  ],
+  "rpc": [
+    {
+      "local_raw_file": "collection_backend.jsonl",
+      "sha256": "e350ae47c26d71a3b1bf943a267ba03875425cd6fa3009b4695f3e23e936c390",
+      "methods": {
+        "connectBoard": 1,
+        "scriptRunning": 1,
+        "io.listDir": 8,
+        "io.queryFileStat": 12,
+        "io.readFile": 6,
+        "disconnectBoard": 1
+      },
+      "requests": [
+        {
+          "id": 1,
+          "method": "connectBoard",
+          "params": {
+            "port": "COM10",
+            "baudRate": 12000000
+          }
+        },
+        {
+          "id": 2,
+          "method": "scriptRunning",
+          "params": {}
+        },
+        {
+          "id": 3,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/captures",
+            "offset": 0
+          }
+        },
+        {
+          "id": 4,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/final_sampling_gc2093",
+            "offset": 0
+          }
+        },
+        {
+          "id": 5,
+          "method": "io.listDir",
+          "params": {
+            "path": "/sdcard/examples/ai_test_kmodel",
+            "offset": 0
+          }
+        },
+        {
+          "id": 6,
+          "method": "io.listDir",
+          "params": {
+            "path": "/sdcard/examples/ai_test_utils",
+            "offset": 0
+          }
+        },
+        {
+          "id": 7,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/captures/d01_straight_run01",
+            "offset": 0
+          }
+        },
+        {
+          "id": 8,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/captures/spot_gray",
+            "offset": 0
+          }
+        },
+        {
+          "id": 9,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/captures/reference_color",
+            "offset": 0
+          }
+        },
+        {
+          "id": 10,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/captures/dataset",
+            "offset": 0
+          }
+        },
+        {
+          "id": 11,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/captures/reference_color/reference_log.csv"
+          }
+        },
+        {
+          "id": 12,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/captures/reference_color/reference_log.csv",
+            "offset": 0,
+            "size": 265
+          }
+        },
+        {
+          "id": 13,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/captures/reference_color/reference_log.csv"
+          }
+        },
+        {
+          "id": 14,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/captures/spot_gray/spot_log.csv"
+          }
+        },
+        {
+          "id": 15,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/captures/spot_gray/spot_log.csv",
+            "offset": 0,
+            "size": 2011
+          }
+        },
+        {
+          "id": 16,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/captures/spot_gray/spot_log.csv"
+          }
+        },
+        {
+          "id": 17,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/final_sampling_gc2093/01_spot_gray.py"
+          }
+        },
+        {
+          "id": 18,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/final_sampling_gc2093/01_spot_gray.py",
+            "offset": 0,
+            "size": 3771
+          }
+        },
+        {
+          "id": 19,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/final_sampling_gc2093/01_spot_gray.py"
+          }
+        },
+        {
+          "id": 20,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/final_sampling_gc2093/02_motion_gray.py"
+          }
+        },
+        {
+          "id": 21,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/final_sampling_gc2093/02_motion_gray.py",
+            "offset": 0,
+            "size": 5413
+          }
+        },
+        {
+          "id": 22,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/final_sampling_gc2093/02_motion_gray.py"
+          }
+        },
+        {
+          "id": 23,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/final_sampling_gc2093/03_reference_color.py"
+          }
+        },
+        {
+          "id": 24,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/final_sampling_gc2093/03_reference_color.py",
+            "offset": 0,
+            "size": 2578
+          }
+        },
+        {
+          "id": 25,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/final_sampling_gc2093/03_reference_color.py"
+          }
+        },
+        {
+          "id": 26,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/ai_test_utils/dict.txt"
+          }
+        },
+        {
+          "id": 27,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/ai_test_utils/dict.txt",
+            "offset": 0,
+            "size": 32521
+          }
+        },
+        {
+          "id": 28,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/ai_test_utils/dict.txt"
+          }
+        },
+        {
+          "id": 29,
+          "method": "disconnectBoard",
+          "params": {}
+        }
+      ],
+      "only_read_and_connection_methods": true
+    },
+    {
+      "local_raw_file": "failed_argument_backend.jsonl",
+      "sha256": "671b1fdf329c86ed477aee393e8b953345ef811cd05602edc9a8c131fa92981e",
+      "methods": {
+        "connectBoard": 1,
+        "scriptRunning": 1,
+        "disconnectBoard": 1
+      },
+      "requests": [
+        {
+          "id": 1,
+          "method": "connectBoard",
+          "params": {
+            "port": "COM10",
+            "baudRate": 12000000
+          }
+        },
+        {
+          "id": 2,
+          "method": "scriptRunning",
+          "params": {}
+        },
+        {
+          "id": 3,
+          "method": "disconnectBoard",
+          "params": {}
+        }
+      ],
+      "only_read_and_connection_methods": true
+    },
+    {
+      "local_raw_file": "inventory_backend.jsonl",
+      "sha256": "6c98e0016dd147f54f77f247a09e2b942b40e04ddffd000cb1062d3b732a5167",
+      "methods": {
+        "connectBoard": 1,
+        "scriptRunning": 1,
+        "io.listDir": 5,
+        "disconnectBoard": 1
+      },
+      "requests": [
+        {
+          "id": 1,
+          "method": "connectBoard",
+          "params": {
+            "port": "COM10",
+            "baudRate": 12000000
+          }
+        },
+        {
+          "id": 2,
+          "method": "scriptRunning",
+          "params": {}
+        },
+        {
+          "id": 3,
+          "method": "io.listDir",
+          "params": {
+            "path": "/",
+            "offset": 0
+          }
+        },
+        {
+          "id": 4,
+          "method": "io.listDir",
+          "params": {
+            "path": "/sdcard",
+            "offset": 0
+          }
+        },
+        {
+          "id": 5,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data",
+            "offset": 0
+          }
+        },
+        {
+          "id": 6,
+          "method": "io.listDir",
+          "params": {
+            "path": "/udisk",
+            "offset": 0
+          }
+        },
+        {
+          "id": 7,
+          "method": "io.listDir",
+          "params": {
+            "path": "/flash",
+            "offset": 0
+          }
+        },
+        {
+          "id": 8,
+          "method": "disconnectBoard",
+          "params": {}
+        }
+      ],
+      "only_read_and_connection_methods": true
+    },
+    {
+      "local_raw_file": "motionlog_backend.jsonl",
+      "sha256": "29a872581d01331ad378936e1d97b72866e2186bf1eb94b5421cf0bd6a0ffd9c",
+      "methods": {
+        "connectBoard": 1,
+        "scriptRunning": 1,
+        "io.queryFileStat": 2,
+        "io.readFile": 1,
+        "disconnectBoard": 1
+      },
+      "requests": [
+        {
+          "id": 1,
+          "method": "connectBoard",
+          "params": {
+            "port": "COM10",
+            "baudRate": 12000000
+          }
+        },
+        {
+          "id": 2,
+          "method": "scriptRunning",
+          "params": {}
+        },
+        {
+          "id": 3,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/captures/d01_straight_run01/collect_log.csv"
+          }
+        },
+        {
+          "id": 4,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/captures/d01_straight_run01/collect_log.csv",
+            "offset": 0,
+            "size": 30395
+          }
+        },
+        {
+          "id": 5,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/captures/d01_straight_run01/collect_log.csv"
+          }
+        },
+        {
+          "id": 6,
+          "method": "disconnectBoard",
+          "params": {}
+        }
+      ],
+      "only_read_and_connection_methods": true
+    },
+    {
+      "local_raw_file": "resources_backend.jsonl",
+      "sha256": "5b21047f184222f520927ea80d68844b4e2dc22c44ae25901e21365cac88323e",
+      "methods": {
+        "connectBoard": 1,
+        "scriptRunning": 1,
+        "io.listDir": 3,
+        "io.queryFileStat": 20,
+        "io.readFile": 49,
+        "disconnectBoard": 1
+      },
+      "requests": [
+        {
+          "id": 1,
+          "method": "connectBoard",
+          "params": {
+            "port": "COM10",
+            "baudRate": 12000000
+          }
+        },
+        {
+          "id": 2,
+          "method": "scriptRunning",
+          "params": {}
+        },
+        {
+          "id": 3,
+          "method": "io.listDir",
+          "params": {
+            "path": "/sdcard/examples/kmodel",
+            "offset": 0
+          }
+        },
+        {
+          "id": 4,
+          "method": "io.listDir",
+          "params": {
+            "path": "/sdcard/examples/utils",
+            "offset": 0
+          }
+        },
+        {
+          "id": 5,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/voice_test",
+            "offset": 0
+          }
+        },
+        {
+          "id": 6,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel"
+          }
+        },
+        {
+          "id": 7,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 8,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 32768,
+            "size": 32768
+          }
+        },
+        {
+          "id": 9,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 65536,
+            "size": 32768
+          }
+        },
+        {
+          "id": 10,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 98304,
+            "size": 32768
+          }
+        },
+        {
+          "id": 11,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 131072,
+            "size": 32768
+          }
+        },
+        {
+          "id": 12,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 163840,
+            "size": 32768
+          }
+        },
+        {
+          "id": 13,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 196608,
+            "size": 32768
+          }
+        },
+        {
+          "id": 14,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 229376,
+            "size": 32768
+          }
+        },
+        {
+          "id": 15,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 262144,
+            "size": 32768
+          }
+        },
+        {
+          "id": 16,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 294912,
+            "size": 32768
+          }
+        },
+        {
+          "id": 17,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 327680,
+            "size": 32768
+          }
+        },
+        {
+          "id": 18,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel",
+            "offset": 360448,
+            "size": 14192
+          }
+        },
+        {
+          "id": 19,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/models/multi_kws.kmodel"
+          }
+        },
+        {
+          "id": 20,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/voice_test/events.log"
+          }
+        },
+        {
+          "id": 21,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/voice_test/events.log",
+            "offset": 0,
+            "size": 7497
+          }
+        },
+        {
+          "id": 22,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/voice_test/events.log"
+          }
+        },
+        {
+          "id": 23,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/voice_test/session.wav"
+          }
+        },
+        {
+          "id": 24,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/voice_test/session.wav"
+          }
+        },
+        {
+          "id": 25,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/voice_test/uart_events.log"
+          }
+        },
+        {
+          "id": 26,
+          "method": "io.readFile",
+          "params": {
+            "path": "/data/voice_test/uart_events.log",
+            "offset": 0,
+            "size": 2893
+          }
+        },
+        {
+          "id": 27,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/data/voice_test/uart_events.log"
+          }
+        },
+        {
+          "id": 28,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel"
+          }
+        },
+        {
+          "id": 29,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 30,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 32768,
+            "size": 32768
+          }
+        },
+        {
+          "id": 31,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 65536,
+            "size": 32768
+          }
+        },
+        {
+          "id": 32,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 98304,
+            "size": 32768
+          }
+        },
+        {
+          "id": 33,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 131072,
+            "size": 32768
+          }
+        },
+        {
+          "id": 34,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 163840,
+            "size": 32768
+          }
+        },
+        {
+          "id": 35,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 196608,
+            "size": 32768
+          }
+        },
+        {
+          "id": 36,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 229376,
+            "size": 32768
+          }
+        },
+        {
+          "id": 37,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 262144,
+            "size": 32768
+          }
+        },
+        {
+          "id": 38,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 294912,
+            "size": 32768
+          }
+        },
+        {
+          "id": 39,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 327680,
+            "size": 32768
+          }
+        },
+        {
+          "id": 40,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel",
+            "offset": 360448,
+            "size": 13296
+          }
+        },
+        {
+          "id": 41,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/kmodel/kws.kmodel"
+          }
+        },
+        {
+          "id": 42,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel"
+          }
+        },
+        {
+          "id": 43,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 44,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 32768,
+            "size": 32768
+          }
+        },
+        {
+          "id": 45,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 65536,
+            "size": 32768
+          }
+        },
+        {
+          "id": 46,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 98304,
+            "size": 32768
+          }
+        },
+        {
+          "id": 47,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 131072,
+            "size": 32768
+          }
+        },
+        {
+          "id": 48,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 163840,
+            "size": 32768
+          }
+        },
+        {
+          "id": 49,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 196608,
+            "size": 32768
+          }
+        },
+        {
+          "id": 50,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 229376,
+            "size": 32768
+          }
+        },
+        {
+          "id": 51,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 262144,
+            "size": 32768
+          }
+        },
+        {
+          "id": 52,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 294912,
+            "size": 32768
+          }
+        },
+        {
+          "id": 53,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 327680,
+            "size": 32768
+          }
+        },
+        {
+          "id": 54,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel",
+            "offset": 360448,
+            "size": 14192
+          }
+        },
+        {
+          "id": 55,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/kmodel/multi_kws.kmodel"
+          }
+        },
+        {
+          "id": 56,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/go_new.wav"
+          }
+        },
+        {
+          "id": 57,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/go_new.wav",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 58,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/go_new.wav",
+            "offset": 32768,
+            "size": 32768
+          }
+        },
+        {
+          "id": 59,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/go_new.wav",
+            "offset": 65536,
+            "size": 12076
+          }
+        },
+        {
+          "id": 60,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/go_new.wav"
+          }
+        },
+        {
+          "id": 61,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/stop_new.wav"
+          }
+        },
+        {
+          "id": 62,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/stop_new.wav",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 63,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/stop_new.wav",
+            "offset": 32768,
+            "size": 32768
+          }
+        },
+        {
+          "id": 64,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/stop_new.wav",
+            "offset": 65536,
+            "size": 5932
+          }
+        },
+        {
+          "id": 65,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/stop_new.wav"
+          }
+        },
+        {
+          "id": 66,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/wow_new.wav"
+          }
+        },
+        {
+          "id": 67,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/wow_new.wav",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 68,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/wow_new.wav",
+            "offset": 32768,
+            "size": 32768
+          }
+        },
+        {
+          "id": 69,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/wow_new.wav",
+            "offset": 65536,
+            "size": 32768
+          }
+        },
+        {
+          "id": 70,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/wow_new.wav",
+            "offset": 98304,
+            "size": 6188
+          }
+        },
+        {
+          "id": 71,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/wow_new.wav"
+          }
+        },
+        {
+          "id": 72,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/wozai.wav"
+          }
+        },
+        {
+          "id": 73,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/examples/utils/wozai.wav",
+            "offset": 0,
+            "size": 17678
+          }
+        },
+        {
+          "id": 74,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/examples/utils/wozai.wav"
+          }
+        },
+        {
+          "id": 75,
+          "method": "disconnectBoard",
+          "params": {}
+        }
+      ],
+      "only_read_and_connection_methods": true
+    },
+    {
+      "local_raw_file": "review_backend.jsonl",
+      "sha256": "7ab40b60d1ed6f896f72274ef407f612bbabd61a57107331138613a6f5aa377f",
+      "methods": {
+        "connectBoard": 1,
+        "scriptRunning": 1,
+        "io.listDir": 3,
+        "io.queryFileStat": 26,
+        "io.readFile": 16,
+        "disconnectBoard": 1
+      },
+      "requests": [
+        {
+          "id": 1,
+          "method": "connectBoard",
+          "params": {
+            "port": "COM10",
+            "baudRate": 12000000
+          }
+        },
+        {
+          "id": 2,
+          "method": "scriptRunning",
+          "params": {}
+        },
+        {
+          "id": 3,
+          "method": "io.listDir",
+          "params": {
+            "path": "/sdcard/qoder_scripts",
+            "offset": 0
+          }
+        },
+        {
+          "id": 4,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/voice_test",
+            "offset": 0
+          }
+        },
+        {
+          "id": 5,
+          "method": "io.listDir",
+          "params": {
+            "path": "/data/models",
+            "offset": 0
+          }
+        },
+        {
+          "id": 6,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/README_开发约定.txt"
+          }
+        },
+        {
+          "id": 7,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/README_开发约定.txt",
+            "offset": 0,
+            "size": 4073
+          }
+        },
+        {
+          "id": 8,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/README_开发约定.txt"
+          }
+        },
+        {
+          "id": 9,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/main.py.bak"
+          }
+        },
+        {
+          "id": 10,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/main.py.bak",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 11,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/main.py.bak",
+            "offset": 32768,
+            "size": 3476
+          }
+        },
+        {
+          "id": 12,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/main.py.bak"
+          }
+        },
+        {
+          "id": 13,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/main_false.py"
+          }
+        },
+        {
+          "id": 14,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/main_false.py",
+            "offset": 0,
+            "size": 5039
+          }
+        },
+        {
+          "id": 15,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/main_false.py"
+          }
+        },
+        {
+          "id": 16,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/mcp_script.py"
+          }
+        },
+        {
+          "id": 17,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/mcp_script.py",
+            "offset": 0,
+            "size": 191
+          }
+        },
+        {
+          "id": 18,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/mcp_script.py"
+          }
+        },
+        {
+          "id": 19,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/bench_uart_flood.py"
+          }
+        },
+        {
+          "id": 20,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/qoder_scripts/bench_uart_flood.py",
+            "offset": 0,
+            "size": 1220
+          }
+        },
+        {
+          "id": 21,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/bench_uart_flood.py"
+          }
+        },
+        {
+          "id": 22,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/main_nopc.py"
+          }
+        },
+        {
+          "id": 23,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/qoder_scripts/main_nopc.py",
+            "offset": 0,
+            "size": 5557
+          }
+        },
+        {
+          "id": 24,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/main_nopc.py"
+          }
+        },
+        {
+          "id": 25,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/main_voice.py"
+          }
+        },
+        {
+          "id": 26,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/qoder_scripts/main_voice.py",
+            "offset": 0,
+            "size": 233
+          }
+        },
+        {
+          "id": 27,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/main_voice.py"
+          }
+        },
+        {
+          "id": 28,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/voice_assistant.py"
+          }
+        },
+        {
+          "id": 29,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/qoder_scripts/voice_assistant.py",
+            "offset": 0,
+            "size": 5753
+          }
+        },
+        {
+          "id": 30,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/voice_assistant.py"
+          }
+        },
+        {
+          "id": 31,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/wifi_debug_track.py"
+          }
+        },
+        {
+          "id": 32,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/qoder_scripts/wifi_debug_track.py",
+            "offset": 0,
+            "size": 15075
+          }
+        },
+        {
+          "id": 33,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/qoder_scripts/wifi_debug_track.py"
+          }
+        },
+        {
+          "id": 34,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/revision.txt"
+          }
+        },
+        {
+          "id": 35,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/revision.txt",
+            "offset": 0,
+            "size": 40
+          }
+        },
+        {
+          "id": 36,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/revision.txt"
+          }
+        },
+        {
+          "id": 37,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r7.py"
+          }
+        },
+        {
+          "id": 38,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r7.py",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 39,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r7.py",
+            "offset": 32768,
+            "size": 20889
+          }
+        },
+        {
+          "id": 40,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r7.py"
+          }
+        },
+        {
+          "id": 41,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r8.py"
+          }
+        },
+        {
+          "id": 42,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r8.py",
+            "offset": 0,
+            "size": 32768
+          }
+        },
+        {
+          "id": 43,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r8.py",
+            "offset": 32768,
+            "size": 22115
+          }
+        },
+        {
+          "id": 44,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/right_angle_drive_r8.py"
+          }
+        },
+        {
+          "id": 45,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/vision_classify.py"
+          }
+        },
+        {
+          "id": 46,
+          "method": "io.readFile",
+          "params": {
+            "path": "/sdcard/vision_classify.py",
+            "offset": 0,
+            "size": 3832
+          }
+        },
+        {
+          "id": 47,
+          "method": "io.queryFileStat",
+          "params": {
+            "path": "/sdcard/vision_classify.py"
+          }
+        },
+        {
+          "id": 48,
+          "method": "disconnectBoard",
+          "params": {}
+        }
+      ],
+      "only_read_and_connection_methods": true
+    }
+  ],
+  "logs": {
+    "events.log": {
+      "lines": 99,
+      "recognition_events": [
+        "小南小南 score=0.998 hits=1",
+        "Go score=0.999 hits=1",
+        "Stop score=1.000 hits=1"
+      ],
+      "uart_events": 0,
+      "chunk_rows": 94,
+      "last_line": "异常: Exception Exception('IDE interrupt',)"
+    },
+    "uart_events.log": {
+      "lines": 91,
+      "recognition_events": [],
+      "uart_events": 0,
+      "chunk_rows": 88,
+      "last_line": "异常: Exception Exception('IDE interrupt',)"
+    }
+  },
+  "collections": [
+    {
+      "remote": "/data/captures",
+      "entry_count": 4,
+      "images": 0,
+      "clean_jpg": 0,
+      "debug_jpg": 0
+    },
+    {
+      "remote": "/data/final_sampling_gc2093",
+      "entry_count": 3,
+      "images": 0,
+      "clean_jpg": 0,
+      "debug_jpg": 0
+    },
+    {
+      "remote": "/sdcard/examples/ai_test_kmodel",
+      "entry_count": 0,
+      "images": 0,
+      "clean_jpg": 0,
+      "debug_jpg": 0
+    },
+    {
+      "remote": "/sdcard/examples/ai_test_utils",
+      "entry_count": 10,
+      "images": 9,
+      "clean_jpg": 0,
+      "debug_jpg": 0
+    },
+    {
+      "remote": "/data/captures/spot_gray",
+      "entry_count": 41,
+      "images": 40,
+      "clean_jpg": 20,
+      "debug_jpg": 20
+    },
+    {
+      "remote": "/data/captures/reference_color",
+      "entry_count": 3,
+      "images": 2,
+      "clean_jpg": 0,
+      "debug_jpg": 0
+    },
+    {
+      "remote": "/data/captures/dataset",
+      "entry_count": 0,
+      "images": 0,
+      "clean_jpg": 0,
+      "debug_jpg": 0
+    }
+  ],
+  "motion_csv": {
+    "bytes": 30395,
+    "utf8_or_csv_error": "UnicodeDecodeError",
+    "error_offset": 11,
+    "error_reason": "invalid continuation byte",
+    "line_count_unverified_records": 314,
+    "first_64_bytes_hex": "2b2053455353494f4e2073e3656e653d6430305f73747261296769745f72716e30312065787165637465643d626f74682073706565643d736c6f775f70757368",
+    "accepted_frame_count": null,
+    "accepted_interval_ms": null,
+    "note": "Downloaded bytes contain malformed header and values; root cause not established; motion images not downloaded or checked"
+  }
+}

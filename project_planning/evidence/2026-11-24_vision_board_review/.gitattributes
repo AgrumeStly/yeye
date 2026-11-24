@@ -1,0 +1,5 @@
+# 原始板上源码、日志及终端保留下载字节；不归一化或修复原始损坏内容。
+board_snapshot/** -text -whitespace
+*_terminal.txt binary
+.gitattributes text eol=lf
+.gitignore text eol=lf

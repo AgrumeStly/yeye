@@ -1,0 +1,557 @@
+{
+  "at_utc": "2026-11-24T12:21:20.716123+00:00",
+  "mode": "collection",
+  "board_write_requested": false,
+  "run_script_requested": false,
+  "connection_may_interrupt_existing_script": true,
+  "board": {
+    "archStr": "[CanMV K230D Lushanpi Lite - 128M:000000000000000000000000]",
+    "boardName": "CanMV K230D Lushanpi Lite - 128M",
+    "boardType": "K230D",
+    "capabilities": {
+      "deleteFile": true,
+      "fileExec": true,
+      "listDir": true,
+      "listDirPaged": false,
+      "mkdir": true,
+      "readFile": true,
+      "renameFile": true,
+      "replInput": true,
+      "rmdir": true,
+      "rmdirRecursive": false,
+      "virtualTouch": true,
+      "writeFile": true
+    },
+    "fwVersion": "v1.8-0",
+    "fwVersionFull": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+    "memorySize": "",
+    "port": "COM10",
+    "protocolVersion": 2,
+    "repl": ""
+  },
+  "script_status_after_connect": {
+    "running": false
+  },
+  "directories": {
+    "/data/captures": [
+      {
+        "entries": [
+          {
+            "name": "d01_straight_run01",
+            "type": "directory",
+            "size": 0,
+            "mtime": 1735689600
+          },
+          {
+            "name": "spot_gray",
+            "type": "directory",
+            "size": 0,
+            "mtime": 1735694986
+          },
+          {
+            "name": "reference_color",
+            "type": "directory",
+            "size": 0,
+            "mtime": 1735689988
+          },
+          {
+            "name": "dataset",
+            "type": "directory",
+            "size": 0,
+            "mtime": 1735691032
+          }
+        ]
+      }
+    ],
+    "/data/final_sampling_gc2093": [
+      {
+        "entries": [
+          {
+            "name": "01_spot_gray.py",
+            "type": "file",
+            "size": 3771,
+            "mtime": 1735689906
+          },
+          {
+            "name": "02_motion_gray.py",
+            "type": "file",
+            "size": 5413,
+            "mtime": 1735691464
+          },
+          {
+            "name": "03_reference_color.py",
+            "type": "file",
+            "size": 2578,
+            "mtime": 1735693254
+          }
+        ]
+      }
+    ],
+    "/sdcard/examples/ai_test_kmodel": [
+      {
+        "entries": []
+      }
+    ],
+    "/sdcard/examples/ai_test_utils": [
+      {
+        "entries": [
+          {
+            "name": "6.jpg",
+            "type": "file",
+            "size": 27469,
+            "mtime": 1783044252
+          },
+          {
+            "name": "3.jpg",
+            "type": "file",
+            "size": 23690,
+            "mtime": 1783044252
+          },
+          {
+            "name": "4.jpg",
+            "type": "file",
+            "size": 23986,
+            "mtime": 1783044252
+          },
+          {
+            "name": "dict.txt",
+            "type": "file",
+            "size": 32521,
+            "mtime": 1783044252
+          },
+          {
+            "name": "0.jpg",
+            "type": "file",
+            "size": 23775,
+            "mtime": 1783044252
+          },
+          {
+            "name": "1.jpg",
+            "type": "file",
+            "size": 25501,
+            "mtime": 1783044252
+          },
+          {
+            "name": "7.jpg",
+            "type": "file",
+            "size": 14740,
+            "mtime": 1783044252
+          },
+          {
+            "name": "8.jpg",
+            "type": "file",
+            "size": 15612,
+            "mtime": 1783044252
+          },
+          {
+            "name": "5.jpg",
+            "type": "file",
+            "size": 15301,
+            "mtime": 1783044252
+          },
+          {
+            "name": "2.jpg",
+            "type": "file",
+            "size": 26946,
+            "mtime": 1783044252
+          }
+        ]
+      }
+    ],
+    "/data/captures/d01_straight_run01": {
+      "error": "TimeoutError('io.listDir timeout')"
+    },
+    "/data/captures/spot_gray": [
+      {
+        "entries": [
+          {
+            "name": "spot_log.csv",
+            "type": "file",
+            "size": 2011,
+            "mtime": 1735689972
+          },
+          {
+            "name": "data_0001.jpg",
+            "type": "file",
+            "size": 7242,
+            "mtime": 1735689646
+          },
+          {
+            "name": "dbg_0001.jpg",
+            "type": "file",
+            "size": 7863,
+            "mtime": 1735689646
+          },
+          {
+            "name": "data_0002.jpg",
+            "type": "file",
+            "size": 7212,
+            "mtime": 1735689646
+          },
+          {
+            "name": "dbg_0002.jpg",
+            "type": "file",
+            "size": 7845,
+            "mtime": 1735689646
+          },
+          {
+            "name": "data_0003.jpg",
+            "type": "file",
+            "size": 7496,
+            "mtime": 1735689704
+          },
+          {
+            "name": "dbg_0003.jpg",
+            "type": "file",
+            "size": 7969,
+            "mtime": 1735689704
+          },
+          {
+            "name": "data_0004.jpg",
+            "type": "file",
+            "size": 7500,
+            "mtime": 1735689706
+          },
+          {
+            "name": "dbg_0004.jpg",
+            "type": "file",
+            "size": 7964,
+            "mtime": 1735689706
+          },
+          {
+            "name": "data_0005.jpg",
+            "type": "file",
+            "size": 6415,
+            "mtime": 1735689760
+          },
+          {
+            "name": "dbg_0005.jpg",
+            "type": "file",
+            "size": 7084,
+            "mtime": 1735689762
+          },
+          {
+            "name": "data_0006.jpg",
+            "type": "file",
+            "size": 6348,
+            "mtime": 1735689762
+          },
+          {
+            "name": "dbg_0006.jpg",
+            "type": "file",
+            "size": 7055,
+            "mtime": 1735689762
+          },
+          {
+            "name": "data_0007.jpg",
+            "type": "file",
+            "size": 7014,
+            "mtime": 1735689792
+          },
+          {
+            "name": "dbg_0007.jpg",
+            "type": "file",
+            "size": 7301,
+            "mtime": 1735689792
+          },
+          {
+            "name": "data_0008.jpg",
+            "type": "file",
+            "size": 6866,
+            "mtime": 1735689792
+          },
+          {
+            "name": "dbg_0008.jpg",
+            "type": "file",
+            "size": 7226,
+            "mtime": 1735689792
+          },
+          {
+            "name": "data_0009.jpg",
+            "type": "file",
+            "size": 8086,
+            "mtime": 1735689838
+          },
+          {
+            "name": "dbg_0009.jpg",
+            "type": "file",
+            "size": 7600,
+            "mtime": 1735689838
+          },
+          {
+            "name": "data_0010.jpg",
+            "type": "file",
+            "size": 8016,
+            "mtime": 1735689838
+          },
+          {
+            "name": "dbg_0010.jpg",
+            "type": "file",
+            "size": 7526,
+            "mtime": 1735689838
+          },
+          {
+            "name": "data_0011.jpg",
+            "type": "file",
+            "size": 6705,
+            "mtime": 1735690148
+          },
+          {
+            "name": "dbg_0011.jpg",
+            "type": "file",
+            "size": 7274,
+            "mtime": 1735690148
+          },
+          {
+            "name": "data_0012.jpg",
+            "type": "file",
+            "size": 6633,
+            "mtime": 1735690150
+          },
+          {
+            "name": "dbg_0012.jpg",
+            "type": "file",
+            "size": 7288,
+            "mtime": 1735690150
+          },
+          {
+            "name": "data_0013.jpg",
+            "type": "file",
+            "size": 6871,
+            "mtime": 1735690174
+          },
+          {
+            "name": "dbg_0013.jpg",
+            "type": "file",
+            "size": 7454,
+            "mtime": 1735690174
+          },
+          {
+            "name": "data_0014.jpg",
+            "type": "file",
+            "size": 6876,
+            "mtime": 1735690174
+          },
+          {
+            "name": "dbg_0014.jpg",
+            "type": "file",
+            "size": 7454,
+            "mtime": 1735690174
+          },
+          {
+            "name": "data_0015.jpg",
+            "type": "file",
+            "size": 8237,
+            "mtime": 1735690736
+          },
+          {
+            "name": "dbg_0015.jpg",
+            "type": "file",
+            "size": 7781,
+            "mtime": 1735690736
+          },
+          {
+            "name": "data_0016.jpg",
+            "type": "file",
+            "size": 8108,
+            "mtime": 1735690736
+          },
+          {
+            "name": "dbg_0016.jpg",
+            "type": "file",
+            "size": 7670,
+            "mtime": 1735690736
+          },
+          {
+            "name": "data_0017.jpg",
+            "type": "file",
+            "size": 7819,
+            "mtime": 1735689942
+          },
+          {
+            "name": "dbg_0017.jpg",
+            "type": "file",
+            "size": 8043,
+            "mtime": 1735689942
+          },
+          {
+            "name": "data_0018.jpg",
+            "type": "file",
+            "size": 7864,
+            "mtime": 1735689944
+          },
+          {
+            "name": "dbg_0018.jpg",
+            "type": "file",
+            "size": 8078,
+            "mtime": 1735689944
+          },
+          {
+            "name": "data_0019.jpg",
+            "type": "file",
+            "size": 7991,
+            "mtime": 1735689972
+          },
+          {
+            "name": "dbg_0019.jpg",
+            "type": "file",
+            "size": 8197,
+            "mtime": 1735689972
+          },
+          {
+            "name": "data_0020.jpg",
+            "type": "file",
+            "size": 7988,
+            "mtime": 1735689972
+          },
+          {
+            "name": "dbg_0020.jpg",
+            "type": "file",
+            "size": 8179,
+            "mtime": 1735689972
+          }
+        ]
+      }
+    ],
+    "/data/captures/reference_color": [
+      {
+        "entries": [
+          {
+            "name": "ref_0001.jpg",
+            "type": "file",
+            "size": 281335,
+            "mtime": 1735689998
+          },
+          {
+            "name": "reference_log.csv",
+            "type": "file",
+            "size": 265,
+            "mtime": 1735690044
+          },
+          {
+            "name": "ref_0002.jpg",
+            "type": "file",
+            "size": 293189,
+            "mtime": 1735690044
+          }
+        ]
+      }
+    ],
+    "/data/captures/dataset": [
+      {
+        "entries": []
+      }
+    ]
+  },
+  "files": [
+    {
+      "remote": "/data/captures/reference_color/reference_log.csv",
+      "local": "board_snapshot\\data\\captures\\reference_color\\reference_log.csv",
+      "bytes": 265,
+      "sha256": "06ff076bbf59ab11f9f6e000bf9c98bc4fc56f33fd51b6fbdca21230f6be64e5",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 265,
+        "mtime": 1735690044
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 265,
+        "mtime": 1735690044
+      }
+    },
+    {
+      "remote": "/data/captures/spot_gray/spot_log.csv",
+      "local": "board_snapshot\\data\\captures\\spot_gray\\spot_log.csv",
+      "bytes": 2011,
+      "sha256": "f04616bd106f206bd503413fe30ae73306846982c5e9afaaf6a0773b3bd04ffd",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 2011,
+        "mtime": 1735689972
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 2011,
+        "mtime": 1735689972
+      }
+    },
+    {
+      "remote": "/data/final_sampling_gc2093/01_spot_gray.py",
+      "local": "board_snapshot\\data\\final_sampling_gc2093\\01_spot_gray.py",
+      "bytes": 3771,
+      "sha256": "76348c4689c0ed40fdffda7737e3c79144c4597984eea2415762c076dacdfd2c",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 3771,
+        "mtime": 1735689906
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 3771,
+        "mtime": 1735689906
+      }
+    },
+    {
+      "remote": "/data/final_sampling_gc2093/02_motion_gray.py",
+      "local": "board_snapshot\\data\\final_sampling_gc2093\\02_motion_gray.py",
+      "bytes": 5413,
+      "sha256": "1613f279d064bbbd4ca9500191b3b7a58e96da0134b03c803b63c840a86ac9cc",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 5413,
+        "mtime": 1735691464
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 5413,
+        "mtime": 1735691464
+      }
+    },
+    {
+      "remote": "/data/final_sampling_gc2093/03_reference_color.py",
+      "local": "board_snapshot\\data\\final_sampling_gc2093\\03_reference_color.py",
+      "bytes": 2578,
+      "sha256": "724d00a98ca0435a4b444ea3475295fe246c2f9e3bd94eec7d2a6db6dffdaf77",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 2578,
+        "mtime": 1735693254
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 2578,
+        "mtime": 1735693254
+      }
+    },
+    {
+      "remote": "/sdcard/examples/ai_test_utils/dict.txt",
+      "local": "board_snapshot\\sdcard\\examples\\ai_test_utils\\dict.txt",
+      "bytes": 32521,
+      "sha256": "8288453b9cc4b490c13c05a87d8bb1345998a48901321aa4f7b2ccaafa74c8fb",
+      "stat_before": {
+        "exists": true,
+        "type": "file",
+        "size": 32521,
+        "mtime": 1783044252
+      },
+      "stat_after": {
+        "exists": true,
+        "type": "file",
+        "size": 32521,
+        "mtime": 1783044252
+      }
+    }
+  ],
+  "completed": true
+}
