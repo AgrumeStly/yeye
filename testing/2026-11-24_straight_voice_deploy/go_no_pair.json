@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-24",
+  "board_port": "COM10",
+  "main_sha256": "993ae3302b6c613e9a8cafa74f8abe819354652d0b4350c45846cf4e9f3b7b63",
+  "voice_log": {
+    "path": "/data/straight_voice.log",
+    "go_no_fresh_pair_count": 4,
+    "go_no_fresh_pair_ms": [9992, 13916, 22351, 38516],
+    "reason": "no_pair",
+    "go_sent_events": 0
+  },
+  "camera_only_probe": {
+    "duration_ms": 5000,
+    "frames": 86,
+    "no_pair_frames": 86,
+    "max_pair_support": 0,
+    "preview_frames": 5,
+    "view": "室内背景和车前遮挡，画面未见赛道双边"
+  },
+  "stm32_swd_read": {
+    "frequency_hz": 100000,
+    "result": "No ACK",
+    "application_verified": false
+  },
+  "connection_interrupted_existing_script": true,
+  "connection_soft_reboot_observed": true,
+  "main_py_written": false,
+  "motion_requested": false,
+  "raw_evidence_local": {
+    "voice_log": "vision/build/straight_voice_fault_canmv_37207276",
+    "camera_only": "vision/build/straight_voice_fault_preview_0ad13296",
+    "stm32_swd": "vision/build/straight_voice_fault_swd_3e1ef475"
+  }
+}
