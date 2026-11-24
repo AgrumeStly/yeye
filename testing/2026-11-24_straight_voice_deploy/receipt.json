@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-11-24T12:56:43.072676+00:00",
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "firmware": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "port": "COM10",
+  "bundle_source_commit": "e3f1b1dce0653aeb36d98c5374d3657ed471c2aa",
+  "remote": "/sdcard/main.py",
+  "previous_main_py_present": false,
+  "boot_py_present_before": false,
+  "boot_py_present_after": false,
+  "write_acknowledged": true,
+  "readback_bytes": 32105,
+  "readback_sha256": "993ae3302b6c613e9a8cafa74f8abe819354652d0b4350c45846cf4e9f3b7b63",
+  "readback_exact": true,
+  "script_execution_requested": false,
+  "script_running_after_write": false,
+  "connection_soft_reboot_observed": true,
+  "disconnect_acknowledged": true,
+  "raw_evidence_local": "vision/build/straight_voice_deploy_7ec126b8"
+}
