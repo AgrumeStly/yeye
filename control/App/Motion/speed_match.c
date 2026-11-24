@@ -82,11 +82,11 @@ void speed_match_init(uint32_t now) {
     memset(cal_sum, 0, sizeof(cal_sum)); memset(cal_abs, 0, sizeof(cal_abs));
     zero_output();
 }
-#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
+#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET) || defined(STRAIGHT_VOICE_TARGET)
 int speed_match_use_verified_mapping(void) {
     /* 两轮同时转动无法唯一辨认哪个编码器属于左轮；不能借双轮测试猜映射。
      * 这里直接沿用已实际跑通直道的Flash/RAM冻结环证据，原始a/b采集不变。
-     * 仅首弯及直道双轮启动目标编入此入口，原SpeedMatch／直道目标行为不变。
+     * 仅首弯、直道双轮启动及语音直道目标使用此实证映射。
      */
     if (g_speed_match.state != SPEED_WAIT_RELEASE || g_speed_match.phase != 0u ||
         g_speed_match.left_pwm != 0u || g_speed_match.right_pwm != 0u) return 0;

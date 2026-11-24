@@ -30,7 +30,11 @@ volatile straight_guide_t g_straight_guide;
 volatile float g_straight_sync_error, g_straight_sync_adjustment;
 #define LAP_MIN_CRUISE 40.0f
 #define LAP_MAX_CRUISE 100.0f
+#ifdef STRAIGHT_VOICE_TARGET
+#define LAP_MAX_RUN_MS 2000u
+#else
 #define LAP_MAX_RUN_MS 3000u
+#endif
 #elif defined(LAP_TRACK_TARGET)
 /* 只有GUI明确选择Track目标才默认允许最长5分钟；仍须逐轮悬空校准与人工启动。
  * 原LowSpeedLap目标继续3秒，避免断电后RAM设置丢失而无法识别实际运行期限。
@@ -141,14 +145,40 @@ void lap_motion_init(uint32_t now) {
     memset((void *)&g_corner_startup, 0, sizeof(g_corner_startup));
 #endif
     zero(); speed_match_init(now);
-#ifdef LAP_DUAL_STARTUP
+#if defined(LAP_DUAL_STARTUP) || defined(STRAIGHT_VOICE_TARGET)
     /* 当前接线已在直道实跑确认，不再把首次KEY送进单轮校准器。
-     * 上电仍零PWM；下一次KEY只是受限双轮测试，完整通过后才开放地面启动。
+     * 双轮适配版仍做原KEY测试；语音版直接零输出等待路径和新语音指令。
      */
     if (!speed_match_use_verified_mapping()) { lap_motion_fault(LAP_CONFIG, now); return; }
     g_lap.state = LAP_WAIT;
 #endif
 }
+/** @brief 锁定本次控制参数后进入RUN。now为本板毫秒，config为经启动门核对的参数。
+ * 只重置诊断计数，旧采样槽随计数归零失效，避免在状态提交区清整块内存。
+ */
+static void begin_run(uint32_t now, lap_config_t config) {
+    g_lap.active = config; g_lap.state = LAP_RUNNING; g_lap.reason = LAP_OK;
+    g_lap.run_since = now; edge_at[0] = edge_at[1] = now;
+    g_lap_diag.total_samples = 0u; g_lap_diag.frozen = 0u;
+    g_lap_diag.stop_at_ms = 0u; g_lap_diag.stop_reason = 0u;
+    g_lap_last.valid = 0u; boost_samples[0] = boost_samples[1] = 0u;
+}
+/** @brief 检查RPM、运行毫秒及PWM千分比参数是否可用于本目标。 */
+static int config_valid(lap_config_t config) {
+    return finitef(config.straight_rpm) && config.straight_rpm >= LAP_MIN_CRUISE &&
+           config.straight_rpm <= LAP_MAX_CRUISE && config.run_ms >= 500u &&
+           config.run_ms <= LAP_MAX_RUN_MS && finitef(config.min_feedforward) &&
+           config.min_feedforward >= 0.0f && config.min_feedforward <= 300.0f;
+}
+#ifdef STRAIGHT_VOICE_TARGET
+/** @brief 冷启动时K230 UART引脚尚未就绪，允许清空残字节和解析器后继续零输出等待。
+ * 第一帧校验通过、时序可用的PATH（即便路径无效）即结束启动阶段。之后任一
+ * 传输错误都和旧目标一样锁故障。驱动错误计数由UART中断保存，等待时也不清零。
+ */
+void lap_motion_transport_fault(uint32_t now) {
+    if (seen[0] != 0u || g_lap.state != LAP_WAIT) lap_motion_fault(LAP_TRANSPORT, now);
+}
+#endif
 static int fresh(uint32_t now) {
 #ifdef RIGHT_ANGLE_TARGET
     /* v5：bit3为当前左纵／前横L，按当前证据200ms监督，不等左右双边。
@@ -160,6 +190,26 @@ static int fresh(uint32_t now) {
     return g_lap.path_valid != 0u && (uint32_t)(now - g_lap.path_at) < (g_lap.history ? 120u : 200u);
 #endif
 }
+#ifdef STRAIGHT_VOICE_TARGET
+/** @brief 处理一次Go。path_sequence是发令时刚发送的PATH序号，now为本地毫秒。
+ * 指令不排队。必须处于待机、KEY松开、双轮停稳500ms、反馈仍新鲜，并且
+ * 同一序号的当前双边路径已先收到；迟到、连续Go及故障后的Go不会恢复运动。
+ */
+static void voice_start(uint8_t path_sequence, uint32_t arrival, uint32_t now) {
+    lap_config_t config;
+    if (g_lap.state != LAP_WAIT || raw_candidate != 0u || stable != 0u ||
+        have_sample == 0u || quiet_ms < 500u || (uint32_t)(now - last_sample) > 60u ||
+        path_sequence != last_path_sequence || (uint32_t)(arrival - sequence_at[0]) > 30u ||
+        !fresh(now) || g_lap.history != 0u || g_lap.single != 0u) {
+        ++g_lap.starts_rejected;
+        return;
+    }
+    config = g_lap_config;
+    if (!config_valid(config)) { lap_motion_fault(LAP_CONFIG, now); return; }
+    quiet_ms = 0u;
+    begin_run(now, config);
+}
+#endif
 /** @brief 悬空双轮测试与地面循迹分别监督；原目标始终返回0。
  * 双轮测试只豁免视觉许可，KEY、编码器、方向、过速、无反馈及硬件保护不变。
  */
@@ -179,8 +229,15 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
 #else
     if (g_lap.state == LAP_RUNNING && !fresh(now)) lap_motion_fault(LAP_LINK, now);
 #endif
-    /* 停止优先于年龄／重复号；恢复图像和远程START均不能自行恢复车辆。 */
+    /* 停止优先于年龄／重复号；恢复图像不能自行恢复车辆。 */
     if (type == 2u && b[16] == 2u) {
+#ifdef STRAIGHT_VOICE_TARGET
+        save_result(now, LAP_VOICE_STOP);
+        if (g_lap.state != LAP_FAULT) {
+            g_lap.state = LAP_STOPPED; g_lap.reason = LAP_VOICE_STOP; state_at = now;
+        }
+        g_lap.path_valid = 0u; zero(); return;
+#else
         save_result(now, LAP_KEY);
         if (g_lap.state == LAP_CALIBRATION) {
             /* 相机入口先发STOP时，静止校准待机只清除待启动手势／映射。
@@ -200,6 +257,7 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
         zero();
         /* 停止后清路径许可，必须收到新的当前双边再进行人工启动。 */
         g_lap.path_valid = 0u; return;
+#endif
     }
     if ((uint32_t)(now - arrival) >= 100u) {
         ++g_lap.rejected;
@@ -212,7 +270,16 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
     }
     seen[index] = 1u; sequences[index] = b[5]; sequence_at[index] = arrival;
     ++g_lap.received;
-    if (type == 2u) { if (b[16] == 1u) ++g_lap.starts_rejected; return; }
+    if (type == 2u) {
+        if (b[16] == 1u) {
+#ifdef STRAIGHT_VOICE_TARGET
+            voice_start(b[8], arrival, now);
+#else
+            ++g_lap.starts_rejected;
+#endif
+        }
+        return;
+    }
     last_path_sequence = b[5]; /* 与K230逐帧日志对照，不用累计received猜发送序号。 */
     /* v2的offset10是采集软件边界到封包的年龄ms，非v1航向。
      * 再扣2ms名义占线时间，使200ms监督包含发送端已报告的图像年龄。
@@ -258,7 +325,9 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
 #endif
 }
 void lap_motion_tick(uint32_t now, uint8_t key) {
+#ifndef STRAIGHT_VOICE_TARGET
     uint32_t held;
+#endif
     key = key != 0u ? 1u : 0u;
     if (g_lap.state == LAP_CALIBRATION) {
         speed_match_tick(now, key);
@@ -302,8 +371,17 @@ void lap_motion_tick(uint32_t now, uint8_t key) {
     zero();
     if (g_lap.state == LAP_FAULT) return;
     if (g_lap.state == LAP_STOPPED) {
-        /* 正常时限／远程STOP后需松键停稳再重新人工触发；故障必须复位。 */
-        if (key == 0u && quiet_ms >= 500u) { g_lap.state = LAP_WAIT; state_at = now; }
+        /* 正常时限／远程STOP后需松键停稳再重新发令；故障必须复位。 */
+        if (key == 0u && quiet_ms >= 500u
+#ifdef STRAIGHT_VOICE_TARGET
+            && (uint32_t)(now - state_at) >= 500u
+#endif
+            ) { g_lap.state = LAP_WAIT; state_at = now; }
+#ifdef STRAIGHT_VOICE_TARGET
+    } else if (key != 0u && (uint32_t)(now - raw_at) >= 5000u) {
+        /* KEY不再进入启动手势。待机卡住仍锁故障，运行中则由上方原保护立即撤驱动。 */
+        lap_motion_fault(LAP_KEY, now);
+#else
     } else if (g_lap.state == LAP_WAIT) {
 #ifdef LAP_DUAL_STARTUP
         /* 按下即可计长按时长，启动资格在松开时统一检查。
@@ -340,11 +418,7 @@ void lap_motion_tick(uint32_t now, uint8_t key) {
                     ++g_lap.starts_rejected; g_lap.state = LAP_WAIT; state_at = now; return;
                 }
 #endif
-                if (!finitef(config.straight_rpm) || config.straight_rpm < LAP_MIN_CRUISE || config.straight_rpm > LAP_MAX_CRUISE ||
-                    config.run_ms < 500u || config.run_ms > LAP_MAX_RUN_MS ||
-                    !finitef(config.min_feedforward) || config.min_feedforward < 0.0f || config.min_feedforward > 300.0f) {
-                    lap_motion_fault(LAP_CONFIG, now); return;
-                }
+                if (!config_valid(config)) { lap_motion_fault(LAP_CONFIG, now); return; }
 #ifdef LAP_DUAL_STARTUP
                 if (is_bench) {
                     /* 首次只运行1秒、两轮同目标60RPM，不读取视觉转向；须由主控悬空。
@@ -356,17 +430,11 @@ void lap_motion_tick(uint32_t now, uint8_t key) {
                 } else ++g_corner_startup.ground_runs;
                 g_corner_startup.blocked_reason = LAP_OK;
 #endif
-                g_lap.active = config; g_lap.state = LAP_RUNNING; g_lap.reason = LAP_OK;
-                g_lap.run_since = now; edge_at[0] = edge_at[1] = now;
-                /* 仅接受新人工RUN才重开记录；不在1ms中断里清整块历史，
-                 * 旧槽由total_samples限定为无效，避免长临界区影响UART。
-                 */
-                g_lap_diag.total_samples = 0u; g_lap_diag.frozen = 0u;
-                g_lap_diag.stop_at_ms = 0u; g_lap_diag.stop_reason = 0u;
-                g_lap_last.valid = 0u; boost_samples[0] = boost_samples[1] = 0u;
+                begin_run(now, config);
             } else { g_lap.state = LAP_WAIT; state_at = now; }
         } else if ((uint32_t)(now - state_at) >= 5000u) lap_motion_fault(LAP_KEY, now);
         else if (key != 0u && (uint32_t)(now - state_at) >= 1000u) g_lap.state = LAP_ARMED;
+#endif
     }
 }
 /** @brief 每轮独立处理“目标由0变为正”的一次起步补偿，返回受限PWM。

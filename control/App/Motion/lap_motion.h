@@ -12,7 +12,8 @@
 #endif
 typedef enum { LAP_CALIBRATION, LAP_WAIT, LAP_HOLD, LAP_ARMED, LAP_RUNNING, LAP_STOPPED, LAP_FAULT } lap_state_t;
 typedef enum { LAP_OK, LAP_KEY, LAP_LINK, LAP_PATH, LAP_ENCODER, LAP_REVERSE, LAP_OVERSPEED,
-               LAP_NO_FEEDBACK, LAP_CONFIG, LAP_HARDWARE, LAP_TRANSPORT, LAP_LIMIT } lap_reason_t;
+               LAP_NO_FEEDBACK, LAP_CONFIG, LAP_HARDWARE, LAP_TRANSPORT, LAP_LIMIT,
+               LAP_VOICE_STOP } lap_reason_t;
 typedef struct {
     float straight_rpm; /* 旧目标默认40、10..60；StraightAssist默认80、40..100；RightAngle默认60、40..80RPM。 */
     uint32_t run_ms; /* 旧短版3000ms／Track最长300000；直道默认2000；首弯默认12000、最多15000ms。 */
@@ -91,6 +92,7 @@ void lap_motion_init(uint32_t now);
  * 原目标前两次单轮配对；首弯／直道适配目标第一次KEY双轮悬空1秒，下一次KEY上道。
  * 首弯v5上道允许当前双侧或当前L形预测，弱关联不能冷启动；旧目标保持双边要求。
  * 首次双轮测试不依赖相机，不跟随弯道差速。
+ * 语音直道目标只将KEY作为启动抑制及紧急停止输入。
  */
 void lap_motion_tick(uint32_t now, uint8_t key);
 /** @brief 每20ms输入真实原编码器样本；任何状态都检查样本连续性。
@@ -98,9 +100,12 @@ void lap_motion_tick(uint32_t now, uint8_t key);
  */
 void lap_motion_sample(uint32_t now, const encoder_sample_t *a, const encoder_sample_t *b);
 /** @brief 20字节消息接收；bytes必须CRC／字段及目标版本已核实；arrival为最后字节ISR时间。
- * STOP始终生效；不允许远程START，正式一键启动由车载KEY完成。
+ * STOP始终生效；只有语音直道v6接纳与当前PATH序号绑定的START。
  */
 void lap_motion_receive(const uint8_t *bytes, uint32_t arrival, uint32_t now);
 void lap_motion_fault(lap_reason_t reason, uint32_t now);
+#ifdef STRAIGHT_VOICE_TARGET
+void lap_motion_transport_fault(uint32_t now);
+#endif
 uint8_t lap_motion_led(uint32_t now);
 #endif

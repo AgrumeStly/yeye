@@ -7,10 +7,12 @@ from vision_protocol import crc16
 
 
 class StraightSender(LapSender):
+    wire_version = 3
+
     def _send(self, data):
         """在完整v2封包基础上改v3并重算CRC，短写处理继续复用生产发送器。"""
         converted = bytearray(data)
-        converted[2] = 3
+        converted[2] = self.wire_version
         checksum = crc16(converted[:18])
         converted[18] = checksum & 255
         converted[19] = checksum >> 8

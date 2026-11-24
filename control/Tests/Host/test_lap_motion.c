@@ -29,6 +29,9 @@ static void packet(uint8_t *p) {
 #ifdef STRAIGHT_ASSIST_TARGET
     p[2]=3; /* 同一真实编码器／电机替身可复用于直道v3的独立检查入口。 */
 #endif
+#ifdef STRAIGHT_VOICE_TARGET
+    p[2]=6;
+#endif
 #ifdef RIGHT_ANGLE_TARGET
     p[2]=5; /* 首弯v5：当前L形预测，保留其它旧目标原封包。 */
 #endif

@@ -2,6 +2,7 @@
  * @brief 低速循迹／独立直道的编译期入口，复用原PWM、编码器采集及计数算法。
  * HSI16MHz、TIM1输出、TIM3/4编码器、TIM5启动限时、IWDG及KEY停止均保留。
  * 原目标前两次KEY逐轮校准；首弯及直道适配版首次KEY双轮悬空1秒，下一次上道。
+ * 语音直道版沿用实证映射，静止等待车载K230发START，KEY仅用于停止及抑制启动。
  * 地面UART断流仍由1ms监督撤驱动，悬空仅豁免视觉许可，不豁免电机保护。
  */
 #include "lap_motion.h"
@@ -226,7 +227,9 @@ void UsageFault_Handler(void) { fatal_stop(); }
 
 /** @brief 先撤PWM，再初始化编码器／状态与启动监督；默认只读采集，不自启。 */
 int main(void) {
-#ifdef STRAIGHT_DUAL_START_TARGET
+#ifdef STRAIGHT_VOICE_TARGET
+    g_speed_revision = 0x02120004u; /* 语音直道v6，仍按当前双边走直线。 */
+#elif defined(STRAIGHT_DUAL_START_TARGET)
     g_speed_revision = 0x02120003u; /* 直道R2控制不变；沿用实证映射，首次KEY双轮1秒。 */
 #elif defined(RIGHT_ANGLE_TARGET)
     g_speed_revision = 0x02120012u; /* 首弯R4/v5：当前L形预测可启动，大半径前进圆弧。 */
@@ -267,7 +270,12 @@ int main(void) {
         uint8_t byte; uint32_t arrival, mask, started;
         if (lap_uart_fault()) {
             started = DWT->CYCCNT; mask = motion_lock();
-            lap_motion_fault(LAP_TRANSPORT, g_speed_ms); lap_link_init(&g_lap_parser);
+#ifdef STRAIGHT_VOICE_TARGET
+            lap_motion_transport_fault(g_speed_ms);
+#else
+            lap_motion_fault(LAP_TRANSPORT, g_speed_ms);
+#endif
+            lap_link_init(&g_lap_parser);
             motion_unlock(mask, started);
         }
         while (lap_uart_read(&byte, &arrival)) {

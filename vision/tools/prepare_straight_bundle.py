@@ -10,11 +10,14 @@ import json
 from pathlib import Path
 
 
-def build(allow_drive=False):
+def build(allow_drive=False, *, voice=False):
     root = Path(__file__).resolve().parents[2]
+    entry = 'straight_voice_canmv.py' if voice else 'straight_assist_canmv.py'
     names = ('vision_protocol.py', 'lite_lap_route.py', 'lap_protocol.py',
-             'straight_route.py', 'straight_protocol.py', 'straight_assist_canmv.py')
-    pieces = ['# StraightAssist v3 generated file; no automatic motor START.\n']
+             'straight_route.py', 'straight_protocol.py', entry)
+    version = 6 if voice else 3
+    pieces = ['# 生成的语音直道 v6 入口，上电零驱动。\n' if voice else
+              '# StraightAssist v3 generated file; no automatic motor START.\n']
     manifest = {}
     for name in names:
         raw = (root / 'vision/src' / name).read_bytes()
@@ -41,18 +44,21 @@ def build(allow_drive=False):
     text = ''.join(pieces)
     compile(text, 'straight_assist_bundle', 'exec')
     manifest.update(bundle_sha256=hashlib.sha256(text.encode('utf-8')).hexdigest(),
-                    allow_drive=allow_drive, wire_version=3, grid_step=6, automatic_motor_start=False)
+                    allow_drive=allow_drive or voice, wire_version=version, grid_step=6,
+                    automatic_motor_start=False, voice_motor_start=voice)
     return text, manifest
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--voice', action='store_true', help='生成语音直道 v6 的车载 main.py')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
-    for allow, name in ((False, 'straight_preview.py'), (True, 'straight_drive.py')):
-        text, info = build(allow)
-        (args.output / name).write_text(text, encoding='utf-8')
+    outputs = ((True, 'main.py'),) if args.voice else ((False, 'straight_preview.py'), (True, 'straight_drive.py'))
+    for allow, name in outputs:
+        text, info = build(allow, voice=args.voice)
+        (args.output / name).write_bytes(text.encode('utf-8'))
         (args.output / (name + '.manifest.json')).write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding='utf-8')
     print(args.output)
 
