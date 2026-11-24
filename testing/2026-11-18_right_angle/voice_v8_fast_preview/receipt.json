@@ -1,0 +1,49 @@
+{
+  "at_utc": "2026-11-24T14:18:50.485030+00:00",
+  "wire_version": 8,
+  "remote": "/sdcard/main.py",
+  "port": "COM10",
+  "sha256": "0bcfc9151ad38c8e7a25a4b7d981b7669882804e0c886f5fe42b53cc7ed623ea",
+  "raw_evidence_local": "vision/build/right_angle_voice_v8_fast_preview/deploy_preview_c7ade44f",
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "firmware": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "previous_main_sha256": "20913196dbb73bd6440e76213ec963ab8040c65c5fd1dbbe54cf2d79c0a9fc88",
+  "readback_exact": true,
+  "readback_bytes": 79202,
+  "idle_preview_finished": false,
+  "camera_probe_no_uart": true,
+  "preview_stats": [
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 92 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 143 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 167 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 265 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 265 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 265 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 278 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 278 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 278 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 278 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 0 delivered 0 encoded_over_65ms 0 peak_age_ms 278 send_fps 0.0",
+    "IDLE_PREVIEW_STATS encoded 17 delivered 17 encoded_over_65ms 17 peak_age_ms 278 send_fps 5.5",
+    "IDLE_PREVIEW_STATS encoded 44 delivered 44 encoded_over_65ms 44 peak_age_ms 278 send_fps 8.7",
+    "IDLE_PREVIEW_STATS encoded 72 delivered 72 encoded_over_65ms 72 peak_age_ms 278 send_fps 9.19",
+    "IDLE_PREVIEW_STATS encoded 94 delivered 93 encoded_over_65ms 94 peak_age_ms 278 send_fps 6.91"
+  ],
+  "probe_disconnect": {
+    "message": "USBDBG TX_BUF_LEN (0x8E) request: USBDBG TX_BUF_LEN (0x8E) write (response field 4, payload 0 bytes): The device does not recognize the command.",
+    "source": "poller tx drain"
+  },
+  "programmed_interval_ms": 83,
+  "nonblocking_send_limit_bytes": 8192,
+  "complete_window_send_fps": [
+    8.7,
+    9.19,
+    6.91
+  ],
+  "last_reported_sent_frames": 93,
+  "comparison": {
+    "interval_ms": 180,
+    "approx_send_fps": 5,
+    "raw_evidence_local": "vision/build/right_angle_voice_v8_idle_preview/deploy_preview_a7b77b12"
+  }
+}

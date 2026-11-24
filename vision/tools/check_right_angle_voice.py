@@ -7,7 +7,7 @@ from check_straight_voice import BUILD, CONTROL, ROOT
 from prepare_right_angle_bundle import build
 
 
-def simulate(frames, keywords, *, gap_at=0):
+def simulate(frames, keywords, *, gap_at=0, preview=None, kws_ms=0):
     source, info = build(voice=True)
     assert info['wire_version'] == 8 and not info['automatic_motor_start']
     ns = {'__name__': 'voice_check', 'print': lambda *args: None}
@@ -40,10 +40,15 @@ def simulate(frames, keywords, *, gap_at=0):
               os=SimpleNamespace(exitpoint=exitpoint))
     ns['RunEvidence'].save = save
     evidence = ns['RunEvidence']()
-    voice = SimpleNamespace(poll=lambda: keywords.get(index, 0), play=lambda label: trace.append((clock, label)))
+    def poll():
+        nonlocal clock
+        clock += kws_ms
+        return keywords.get(index, 0)
+
+    voice = SimpleNamespace(poll=poll, play=lambda label: trace.append((clock, label)))
     try:
         ns['drive'](SimpleNamespace(snapshot=snapshot), 0, 7,
-                    ns['RightAngleVoiceSender'](write, allow_drive=True), voice, evidence)
+                    ns['RightAngleVoiceSender'](write, allow_drive=True), voice, evidence, preview)
     except EOFError:
         pass
     return trace, saves, evidence
@@ -110,10 +115,19 @@ def verify_phone():
     phone.step(frame, {}, b'', True)
     clock = 200
     phone.step(frame, {}, b'', True)
-    assert len(overlays) == 1 and writes[1:] == [4096, 4096]
+    assert len(overlays) == 1 and writes[1:] == [8192, 8192]
     clock = 1100
     phone.step(frame, {}, b'', True)
     assert phone.client is None and len(overlays) == 1
+
+
+def verify_preview_schedule(pixels):
+    """慢帧待机仍能更新；Go等待帧和跑动慢帧给控制路径让路。"""
+    allowances = []
+    phone = SimpleNamespace(step=lambda frame, result, packet, encode: allowances.append(encode))
+    simulate([pixels] * 8, {3: 2, 7: 3}, preview=phone, kws_ms=40)
+    # 第4帧先发START并跳过图传。第7帧收到Stop并结束运动窗口后恢复预览。
+    assert allowances == [True, True, False, False, False, True, True]
 
 
 def main():
@@ -160,6 +174,7 @@ def main():
     ]
     verify_prediction()
     verify_phone()
+    verify_preview_schedule(pair)
     print('RightAngleVoice scheduling, real corner replay, confidence expiry, phone backpressure and production v8 parser PASS')
 
 

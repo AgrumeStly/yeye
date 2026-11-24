@@ -3,8 +3,9 @@ import json
 import time
 
 PHONE_PORT = 8080
-PHONE_INTERVAL_MS = 180
-PHONE_CHUNK = 4096
+# 目标约12帧/秒；仍在每次控车循环最多发送一次，慢连接不会忙等。
+PHONE_INTERVAL_MS = 83
+PHONE_CHUNK = 8192
 PHONE_CONFIG = '/sdcard/right_angle_wifi.json'
 
 PAGE = b"""<!doctype html><html lang="zh"><meta charset="utf-8">

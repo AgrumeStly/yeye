@@ -164,11 +164,14 @@ def drive(sensor, channel, gray, sender, voice, evidence, phone=None):
         elif keyword in (1, 4):
             voice.play(keyword)
         if phone is not None:
-            # 路径和口令已发，原始取证也已复制。JPEG只在本帧前段足够快时生成，
-            # 阻塞／不支持的图传只关闭预览，不能让图传异常中断首弯控制循环。
+            # 待机没有动力窗口，继续更新手机画面，避免场景复杂时65ms门一直挡住JPEG。
+            # Go已识别时先等下一张控制图；运行期间仅在有足够路径时序余量时编码。
+            # 原始取证已复制，图传异常只关闭预览，不能中断首弯控制循环。
             phone_at = time.ticks_ms()
+            encode_allowed = pending_go is None and (
+                run_until is None or time.ticks_diff(phone_at, started) <= 65)
             try:
-                phone.step(frame, result, packet, time.ticks_diff(phone_at, started) <= 65)
+                phone.step(frame, result, packet, encode_allowed)
             except Exception:
                 cleanup(phone.close)
                 phone = None
