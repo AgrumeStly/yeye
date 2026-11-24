@@ -1,0 +1,18 @@
+{
+  "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+  "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+  "lap_protocol.py": "dbae8ea7efe4a2dedb106064fa6256c6288411193019d5d86844b6ab32cce31f",
+  "right_angle_racing.py": "488fd84eb5f2c23714acad624b17baff4895065148eb0c69044b48f04799dbb1",
+  "right_angle_grid.py": "8f3d6414ba198bebf7bd530f47a256034031319ec748912176b4251c53ff63d6",
+  "right_angle_route.py": "408a920919571df658c91b13216f2ff1ef7cc92a88fe391a396ee9319d37a924",
+  "right_angle_protocol.py": "72d2fea1a8c83fa1b16c745f73f7aff061cfd258169c3ecdb05f2d0277d610d0",
+  "voice_keywords.py": "9ab81dae512aafe4b49133508d51333c27a9148ba09e3471f386d5fdde1c6fb6",
+  "right_angle_voice_canmv.py": "4d03b39f9a096134eb0f2399e543660e3494414b6814fa8d8f80fead0892fce0",
+  "bundle_sha256": "b5a4d5ea9f5e4b3a2d007217b4782e7acb4d4636b2e585b769e6fb75c7fef581",
+  "wire_version": 7,
+  "grid_step": 6,
+  "allow_drive": true,
+  "automatic_motor_start": false,
+  "duration_ms": 0,
+  "voice_motor_start": true
+}

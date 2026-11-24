@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-11-24T13:18:42.690692+00:00",
+  "port": "COM10",
+  "remote": "/sdcard/main.py",
+  "wire_version": 7,
+  "sha256": "b5a4d5ea9f5e4b3a2d007217b4782e7acb4d4636b2e585b769e6fb75c7fef581",
+  "raw_evidence_local": "vision/build/right_angle_voice/deployment_6465ae76",
+  "script_execution_requested": false,
+  "previous_main_sha256": "993ae3302b6c613e9a8cafa74f8abe819354652d0b4350c45846cf4e9f3b7b63",
+  "boot_present": false,
+  "write_acknowledged": true,
+  "readback_exact": true,
+  "readback_bytes": 60936,
+  "script_running_after_write": false,
+  "soft_reboot_observed": true,
+  "power_isolation_confirmed": true,
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "firmware": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "prior_startup_backup": "vision/build/right_angle_voice/deployment_6465ae76/before_main.py"
+}

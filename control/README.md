@@ -28,7 +28,8 @@
 
 | 场景 | 入口 |
 | --- | --- |
-| 左侧首个直角弯／L形预测与快过弯候选（2026-11-18 R4） | [MDK-ARM/right_angle.uvprojx](MDK-ARM/right_angle.uvprojx)，目标RightAngle，0x02120012／v5；一次双轮悬空1秒，再次KEY地面80RPM／12秒；[最终文件与步骤](docs/right_angle_racing.md) |
+| 左侧首个右转直角弯／语音起步 | [MDK-ARM/right_angle_voice.uvprojx](MDK-ARM/right_angle_voice.uvprojx)，目标 RightAngleVoice，0x02120013／v7；[直接 Go 上道操作](docs/right_angle_voice.md) |
+| 首弯 KEY 历史目标 | [MDK-ARM/right_angle.uvprojx](MDK-ARM/right_angle.uvprojx)，目标 RightAngle，0x02120012／v5；[R8 走线和历史现场记录](docs/right_angle_racing.md) |
 | 编码器稳速＋视觉微调直道（2026-11-18，02版单次地面2秒正常，主控确认无明显摇摆） | [MDK-ARM/straight_assist.uvprojx](MDK-ARM/straight_assist.uvprojx)，目标StraightAssist，0x02120002／80RPM／2秒；[视觉单文件及步骤](docs/straight_assist.md)、[实测](../testing/2026-11-18_straight_assist/ground_03_capture/review.json) |
 | OLED12864无动力点亮／图样与秒计数（2026-11-10） | [MDK-ARM/oled_bench.uvprojx](MDK-ARM/oled_bench.uvprojx)，目标OledBench；[说明](docs/oled_bench.md)，已编译／下载／0x3C实板持续写帧，主控确认画面完全清晰符合预期 |
 | 低速视觉差速试跑（2026-11-09独立候选，板上／整圈待验） | [MDK-ARM/low_speed_lap.uvprojx](MDK-ARM/low_speed_lap.uvprojx)，3秒LowSpeedLap／场地LowSpeedLapTrack；[步骤与限制](docs/low_speed_lap.md)、[I-02](../project_planning/tasks/I-02-LOW-SPEED-LAP.md) |

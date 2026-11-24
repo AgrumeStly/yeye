@@ -5,11 +5,13 @@ import json
 from pathlib import Path
 
 
-def build(allow_drive=False):
+def build(allow_drive=False, *, voice=False):
     root = Path(__file__).resolve().parents[2]
     names = ('vision_protocol.py', 'lite_lap_route.py', 'lap_protocol.py', 'right_angle_racing.py', 'right_angle_grid.py',
-             'right_angle_route.py', 'right_angle_protocol.py', 'right_angle_canmv.py')
-    parts = ['# RightAngle v5 current L corner + racing arc; KEY start only.\n']
+             'right_angle_route.py', 'right_angle_protocol.py')
+    names += ('voice_keywords.py', 'right_angle_voice_canmv.py') if voice else ('right_angle_canmv.py',)
+    parts = ['# 语音首弯 v7。等待本地 Go。\n' if voice else
+             '# RightAngle v5 current L corner + racing arc; KEY start only.\n']
     manifest = {}
     for name in names:
         raw = (root/'vision/src'/name).read_bytes()
@@ -23,7 +25,7 @@ def build(allow_drive=False):
                                     '                            _anchor_distance, _hypot, _point, _pixel)\n', '')
         source = '\n'.join(line for line in source.splitlines() if not line.startswith(
             ('from lap_protocol import ', 'from vision_protocol import ',
-             'from right_angle_route import ', 'from right_angle_protocol import ')))
+             'from right_angle_route import ', 'from right_angle_protocol import ', 'from voice_keywords import ')))
         source = '\n'.join(line for line in source.splitlines() if not line.startswith(
             ('from right_angle_racing import ', 'from right_angle_grid import ',
              'from lite_lap_route import GRID_STEP')))
@@ -36,18 +38,22 @@ def build(allow_drive=False):
     source = ''.join(parts)
     compile(source, 'right_angle_bundle', 'exec')
     manifest.update(bundle_sha256=hashlib.sha256(source.encode('utf-8')).hexdigest(),
-                    wire_version=5, grid_step=6, allow_drive=allow_drive, automatic_motor_start=False,
-                    duration_ms=0 if allow_drive else 600000)
+                    wire_version=7 if voice else 5, grid_step=6, allow_drive=allow_drive or voice,
+                    automatic_motor_start=False, duration_ms=0 if voice or allow_drive else 600000)
+    if voice:
+        manifest['voice_motor_start'] = True
     return source, manifest
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--voice', action='store_true', help='生成语音首弯 v7 的车载 main.py')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
-    for drive, name in ((False, 'right_angle_preview.py'), (True, 'right_angle_drive.py')):
-        source, manifest = build(drive)
+    outputs = ((True, 'main.py'),) if args.voice else ((False, 'right_angle_preview.py'), (True, 'right_angle_drive.py'))
+    for drive, name in outputs:
+        source, manifest = build(drive, voice=args.voice)
         # Windows文本模式会把LF改为CRLF；按UTF-8字节写入以保持manifest哈希一致。
         (args.output/name).write_bytes(source.encode('utf-8'))
         (args.output/(name+'.manifest.json')).write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')

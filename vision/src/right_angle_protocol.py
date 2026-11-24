@@ -8,9 +8,11 @@ except ImportError:
 
 
 class RightAngleSender(LapSender):
+    wire_version = 5
+
     def _send(self, data):
         converted = bytearray(data)
-        converted[2] = 5
+        converted[2] = self.wire_version
         checksum = crc16(converted[:18])
         converted[18] = checksum & 255
         converted[19] = checksum >> 8
@@ -31,7 +33,7 @@ class RightAngleSender(LapSender):
             evidence_age=result.get('corner_age_ms',700)
             valid=valid and isinstance(evidence_age,int) and 0<=evidence_age<700 and bend==1000 and steering>=0 and quality>=45
         if not (-1000<=steering<=1000 and 0<=bend<=1000 and 0<=quality<=100):raise ValueError('v5 route fields')
-        header=bytes((0xa5,0x5a,5,1,12,self.seq));self.seq=(self.seq+1)&255
+        header=bytes((0xa5,0x5a,self.wire_version,1,12,self.seq));self.seq=(self.seq+1)&255
         data=header+struct.pack('<BBhHHHBB',flags if valid else 0,quality if valid else 0,
             steering if valid else 0,min(age_ms,1000),bend if valid else 0,min(processing_ms,1000),0,0)
         return self._send(data+struct.pack('<H',crc16(data)))

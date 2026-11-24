@@ -1,5 +1,5 @@
 /** @file lap_link.h
- * @brief 滑窗解析：普通目标v2、直道目标v3、RIGHT_ANGLE_TARGET首弯v5互斥，不改变v1。
+ * @brief 按目标版本滑窗解析，首弯v5和语音首弯v7互斥，不改变v1。
  */
 #ifndef YEYE_LAP_LINK_H
 #define YEYE_LAP_LINK_H

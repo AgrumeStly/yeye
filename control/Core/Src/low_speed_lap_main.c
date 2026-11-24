@@ -227,7 +227,9 @@ void UsageFault_Handler(void) { fatal_stop(); }
 
 /** @brief 先撤PWM，再初始化编码器／状态与启动监督；默认只读采集，不自启。 */
 int main(void) {
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+    g_speed_revision = 0x02120013u; /* 语音首弯v7，沿用当前L形和差速控制。 */
+#elif defined(STRAIGHT_VOICE_TARGET)
     g_speed_revision = 0x02120004u; /* 语音直道v6，仍按当前双边走直线。 */
 #elif defined(STRAIGHT_DUAL_START_TARGET)
     g_speed_revision = 0x02120003u; /* 直道R2控制不变；沿用实证映射，首次KEY双轮1秒。 */
@@ -270,7 +272,7 @@ int main(void) {
         uint8_t byte; uint32_t arrival, mask, started;
         if (lap_uart_fault()) {
             started = DWT->CYCCNT; mask = motion_lock();
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
             lap_motion_transport_fault(g_speed_ms);
 #else
             lap_motion_fault(LAP_TRANSPORT, g_speed_ms);

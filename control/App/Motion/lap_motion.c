@@ -16,12 +16,18 @@
  */
 volatile lap_config_t g_lap_config = {80.0f, 12000u, 200.0f};
 volatile corner_guide_t g_corner_guide;
+#ifdef LAP_DUAL_STARTUP
 volatile corner_startup_t g_corner_startup;
+#endif
 static uint32_t corner_pair_at;
 static uint8_t corner_pair_seen;
 #define LAP_MIN_CRUISE 40.0f
 #define LAP_MAX_CRUISE 80.0f
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+#define LAP_MAX_RUN_MS 12000u
+#else
 #define LAP_MAX_RUN_MS 15000u
+#endif
 #elif defined(STRAIGHT_ASSIST_TARGET)
 /* 独立直道候选：2秒、80RPM；只改变本目标，不放宽旧循迹目标的参数边界。 */
 volatile lap_config_t g_lap_config = {80.0f, 2000u, 200.0f};
@@ -145,7 +151,7 @@ void lap_motion_init(uint32_t now) {
     memset((void *)&g_corner_startup, 0, sizeof(g_corner_startup));
 #endif
     zero(); speed_match_init(now);
-#if defined(LAP_DUAL_STARTUP) || defined(STRAIGHT_VOICE_TARGET)
+#if defined(LAP_DUAL_STARTUP) || defined(LAP_VOICE_START)
     /* 当前接线已在直道实跑确认，不再把首次KEY送进单轮校准器。
      * 双轮适配版仍做原KEY测试；语音版直接零输出等待路径和新语音指令。
      */
@@ -170,7 +176,7 @@ static int config_valid(lap_config_t config) {
            config.run_ms <= LAP_MAX_RUN_MS && finitef(config.min_feedforward) &&
            config.min_feedforward >= 0.0f && config.min_feedforward <= 300.0f;
 }
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
 /** @brief 冷启动时K230 UART引脚尚未就绪，允许清空残字节和解析器后继续零输出等待。
  * 第一帧校验通过、时序可用的PATH（即便路径无效）即结束启动阶段。之后任一
  * 传输错误都和旧目标一样锁故障。驱动错误计数由UART中断保存，等待时也不清零。
@@ -190,17 +196,24 @@ static int fresh(uint32_t now) {
     return g_lap.path_valid != 0u && (uint32_t)(now - g_lap.path_at) < (g_lap.history ? 120u : 200u);
 #endif
 }
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
+static int voice_path_ready(uint32_t now) {
+    return fresh(now) && g_lap.history == 0u
+#ifndef RIGHT_ANGLE_VOICE_TARGET
+        && g_lap.single == 0u
+#endif
+        ;
+}
 /** @brief 处理一次Go。path_sequence是发令时刚发送的PATH序号，now为本地毫秒。
- * 指令不排队。必须处于待机、KEY松开、双轮停稳500ms、反馈仍新鲜，并且
- * 同一序号的当前双边路径已先收到；迟到、连续Go及故障后的Go不会恢复运动。
+ * 必须处于待机、KEY松开、双轮停稳500ms、反馈仍新鲜。直道要求当前双边；
+ * 首弯还允许已经通过当前像素门限的L形，出口弱关联只能续行。指令不排队。
  */
 static void voice_start(uint8_t path_sequence, uint32_t arrival, uint32_t now) {
     lap_config_t config;
     if (g_lap.state != LAP_WAIT || raw_candidate != 0u || stable != 0u ||
         have_sample == 0u || quiet_ms < 500u || (uint32_t)(now - last_sample) > 60u ||
         path_sequence != last_path_sequence || (uint32_t)(arrival - sequence_at[0]) > 30u ||
-        !fresh(now) || g_lap.history != 0u || g_lap.single != 0u) {
+        !voice_path_ready(now)) {
         ++g_lap.starts_rejected;
         return;
     }
@@ -231,7 +244,7 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
 #endif
     /* 停止优先于年龄／重复号；恢复图像不能自行恢复车辆。 */
     if (type == 2u && b[16] == 2u) {
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
         save_result(now, LAP_VOICE_STOP);
         if (g_lap.state != LAP_FAULT) {
             g_lap.state = LAP_STOPPED; g_lap.reason = LAP_VOICE_STOP; state_at = now;
@@ -272,7 +285,7 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
     ++g_lap.received;
     if (type == 2u) {
         if (b[16] == 1u) {
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
             voice_start(b[8], arrival, now);
 #else
             ++g_lap.starts_rejected;
@@ -325,7 +338,7 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
 #endif
 }
 void lap_motion_tick(uint32_t now, uint8_t key) {
-#ifndef STRAIGHT_VOICE_TARGET
+#ifndef LAP_VOICE_START
     uint32_t held;
 #endif
     key = key != 0u ? 1u : 0u;
@@ -373,11 +386,11 @@ void lap_motion_tick(uint32_t now, uint8_t key) {
     if (g_lap.state == LAP_STOPPED) {
         /* 正常时限／远程STOP后需松键停稳再重新发令；故障必须复位。 */
         if (key == 0u && quiet_ms >= 500u
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
             && (uint32_t)(now - state_at) >= 500u
 #endif
             ) { g_lap.state = LAP_WAIT; state_at = now; }
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
     } else if (key != 0u && (uint32_t)(now - raw_at) >= 5000u) {
         /* KEY不再进入启动手势。待机卡住仍锁故障，运行中则由上方原保护立即撤驱动。 */
         lap_motion_fault(LAP_KEY, now);
@@ -634,5 +647,10 @@ uint8_t lap_motion_led(uint32_t now) {
     if (g_lap.state == LAP_CALIBRATION) return speed_match_led(now);
     if (g_lap.state == LAP_FAULT) return (uint8_t)((now / 100u) % 2u);
     if (g_lap.state == LAP_RUNNING || g_lap.state == LAP_ARMED) return 1u;
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+    /* 当前L也可正式起步。用同一许可判定提示主控，出口弱关联仍显示短闪。 */
+    return (uint8_t)((now % 2000u) < (g_lap.state == LAP_WAIT && voice_path_ready(now) ? 400u : 80u));
+#else
     return (uint8_t)((now % 2000u) < (fresh(now) && !g_lap.history && !g_lap.single ? 400u : 80u));
+#endif
 }

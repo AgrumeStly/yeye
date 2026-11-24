@@ -6,8 +6,10 @@
 #ifndef YEYE_LAP_MOTION_H
 #define YEYE_LAP_MOTION_H
 #include "speed_match.h"
-/* 仅首弯及本次直道适配目标复用双轮启动监督；旧直道目标保留原行为。 */
-#if defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
+/* 同一套控制策略可配两种启动入口。语音版复用轮位，直接等待地面路径与Go。 */
+#if defined(RIGHT_ANGLE_VOICE_TARGET) || defined(STRAIGHT_VOICE_TARGET)
+#define LAP_VOICE_START 1
+#elif defined(RIGHT_ANGLE_TARGET) || defined(STRAIGHT_DUAL_START_TARGET)
 #define LAP_DUAL_STARTUP 1
 #endif
 typedef enum { LAP_CALIBRATION, LAP_WAIT, LAP_HOLD, LAP_ARMED, LAP_RUNNING, LAP_STOPPED, LAP_FAULT } lap_state_t;
@@ -92,7 +94,7 @@ void lap_motion_init(uint32_t now);
  * 原目标前两次单轮配对；首弯／直道适配目标第一次KEY双轮悬空1秒，下一次KEY上道。
  * 首弯v5上道允许当前双侧或当前L形预测，弱关联不能冷启动；旧目标保持双边要求。
  * 首次双轮测试不依赖相机，不跟随弯道差速。
- * 语音直道目标只将KEY作为启动抑制及紧急停止输入。
+ * 语音目标只将KEY作为启动抑制及紧急停止输入。
  */
 void lap_motion_tick(uint32_t now, uint8_t key);
 /** @brief 每20ms输入真实原编码器样本；任何状态都检查样本连续性。
@@ -100,11 +102,11 @@ void lap_motion_tick(uint32_t now, uint8_t key);
  */
 void lap_motion_sample(uint32_t now, const encoder_sample_t *a, const encoder_sample_t *b);
 /** @brief 20字节消息接收；bytes必须CRC／字段及目标版本已核实；arrival为最后字节ISR时间。
- * STOP始终生效；只有语音直道v6接纳与当前PATH序号绑定的START。
+ * STOP始终生效；语音直道v6和语音首弯v7接纳与当前PATH序号绑定的START。
  */
 void lap_motion_receive(const uint8_t *bytes, uint32_t arrival, uint32_t now);
 void lap_motion_fault(lap_reason_t reason, uint32_t now);
-#ifdef STRAIGHT_VOICE_TARGET
+#ifdef LAP_VOICE_START
 void lap_motion_transport_fault(uint32_t now);
 #endif
 uint8_t lap_motion_led(uint32_t now);

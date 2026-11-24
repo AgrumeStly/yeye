@@ -13,8 +13,8 @@ from pathlib import Path
 def build(allow_drive=False, *, voice=False):
     root = Path(__file__).resolve().parents[2]
     entry = 'straight_voice_canmv.py' if voice else 'straight_assist_canmv.py'
-    names = ('vision_protocol.py', 'lite_lap_route.py', 'lap_protocol.py',
-             'straight_route.py', 'straight_protocol.py', entry)
+    names = ('vision_protocol.py', 'lite_lap_route.py', 'lap_protocol.py', 'straight_route.py', 'straight_protocol.py')
+    names += ('voice_keywords.py', entry) if voice else (entry,)
     version = 6 if voice else 3
     pieces = ['# 生成的语音直道 v6 入口，上电零驱动。\n' if voice else
               '# StraightAssist v3 generated file; no automatic motor START.\n']
@@ -37,7 +37,7 @@ def build(allow_drive=False, *, voice=False):
             source = '\n\n'.join(helpers)
         source = '\n'.join(line for line in source.splitlines() if not line.startswith(
             ('from lite_lap_route import ', 'from lap_protocol import ', 'from vision_protocol import ',
-             'from straight_route import ', 'from straight_protocol import ')))
+             'from straight_route import ', 'from straight_protocol import ', 'from voice_keywords import ')))
         if name == 'straight_assist_canmv.py' and allow_drive:
             source = source.replace('ALLOW_DRIVE = False', 'ALLOW_DRIVE = True').replace('SHOW_PREVIEW = True', 'SHOW_PREVIEW = False')
         pieces.append('\n# BEGIN ' + name + '\n' + source + '\n')

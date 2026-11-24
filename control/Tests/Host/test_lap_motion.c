@@ -32,7 +32,9 @@ static void packet(uint8_t *p) {
 #ifdef STRAIGHT_VOICE_TARGET
     p[2]=6;
 #endif
-#ifdef RIGHT_ANGLE_TARGET
+#ifdef RIGHT_ANGLE_VOICE_TARGET
+    p[2]=7;
+#elif defined(RIGHT_ANGLE_TARGET)
     p[2]=5; /* 首弯v5：当前L形预测，保留其它旧目标原封包。 */
 #endif
     p[6]=(uint8_t)((valid_path?1:0)|(history?4:0)); p[7]=80;

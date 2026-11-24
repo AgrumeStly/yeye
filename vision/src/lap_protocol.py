@@ -52,3 +52,13 @@ class LapSender:
         header=bytes((0xa5,0x5a,2,2,12,self.cmd_seq)); self.cmd_seq=(self.cmd_seq+1)&255
         data=header+bytes(10)+bytes((2,0))
         return self._send(data+struct.pack('<H',crc16(data)))
+
+
+def send_voice_start(sender, path_packet):
+    """发送一次与刚发PATH序号绑定的Go。调用者先检查当前路径可用于起步。"""
+    if not sender.allow_drive or not path_packet[6] & 1:
+        raise ValueError('START requires a valid current PATH')
+    data = bytes((0xa5, 0x5a, sender.wire_version, 2, 12, sender.cmd_seq,
+                  0, 0, path_packet[5], 0, 0, 0, 0, 0, 0, 0, 1, 0))
+    sender.cmd_seq = (sender.cmd_seq + 1) & 255
+    return sender._send(data + struct.pack('<H', crc16(data)))

@@ -1,5 +1,7 @@
 # 当前首弯操作：R8连续圆弧／v5控制
 
+2026-11-24 本页保留 R8 几何和 v5 现场历史。主控继续调首弯时使用 [RightAngleVoice v7](right_angle_voice.md)，摆车后直接说 Go。
+
 2026-11-19接续。新视觉[release_r8_entry](../../testing/2026-11-18_right_angle/release_r8_entry/README.md)取消提前强制右转，按入口直线／圆弧／出口直线的连续投影和前视跟随。188项离线检查通过，未部署、未实板计时、未再次上道。STM32仍用0x02120012／v5；程序放/sdcard，照片／日志放/data/right_angle_logs。
 
 最近真实结果为R7：双轮1000ms通过，地面2041ms以PATH3停车，主控反馈提前转向、未进弯。完整日志和触发图已保存，见[本次失败与撤离接续](../../testing/2026-11-18_right_angle/ground_06_record.md)。主控暂离，视觉已停；[R8离线交付及返回步骤](../../testing/2026-11-18_right_angle/entry_r8_record.md)为最新接续。1197个数据文件迁移及/data保存已完成，异常旧目录保留。

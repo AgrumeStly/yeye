@@ -130,8 +130,8 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--frequency', type=int, default=1000000, choices=(100000, 1000000),
                         help='SWD read clock in Hz; 100kHz retries an unstable physical link without reset')
-    parser.add_argument('--profile', choices=('lap', 'straight', 'straight-dual', 'right-angle'), default='lap',
-                        help='straight selects StraightAssist AXF and revision, never writes Flash')
+    parser.add_argument('--profile', choices=('lap', 'straight', 'straight-dual', 'right-angle', 'right-angle-voice'),
+                        default='lap', help='select AXF and revision, never writes Flash')
     parser.add_argument('--image', type=Path, help='archived AXF plus adjacent BIN; Flash must match before RAM decode')
     args = parser.parse_args()
     if args.profile == 'straight':
@@ -140,6 +140,8 @@ def main():
         AXF = ROOT/'control/build/firmware/straight_dual_start/straight_dual_start.axf'
     elif args.profile == 'right-angle':
         AXF = ROOT/'control/build/firmware/right_angle/right_angle.axf'
+    elif args.profile == 'right-angle-voice':
+        AXF = ROOT/'control/build/firmware/right_angle_voice/right_angle_voice.axf'
     if args.image is not None:
         AXF = args.image.resolve()
         if AXF.suffix.lower() != '.axf' or not AXF.is_file() or not AXF.with_suffix('.bin').is_file():
@@ -149,9 +151,14 @@ def main():
         revisions = (0x02120003,)
     minimum_rpm, maximum_rpm = (40, 100) if args.profile in ('straight', 'straight-dual') else (10, 60)
     maximum_run = 3000 if args.profile in ('straight', 'straight-dual') else 300000
+    maximum_reason = 11
     if args.profile == 'right-angle':
         revisions = (0x02120010, 0x02120011, 0x02120012)
         minimum_rpm, maximum_rpm, maximum_run = 40, 80, 15000
+    elif args.profile == 'right-angle-voice':
+        revisions = (0x02120013,)
+        minimum_rpm, maximum_rpm, maximum_run = 40, 80, 12000
+        maximum_reason = 12  # VOICE_STOP是本版的合法停车原因。
     addresses = symbols()
     args.output.mkdir(parents=True, exist_ok=False)
     result = dict(probe_id=PROBE_ID, reset_requested=False, halt_requested=False, resume_requested=False,
@@ -179,7 +186,7 @@ def main():
             # 保存原始读数后检查版本、枚举和布局不变量，避免把指令残留当故障。
             result['application_baseline_plausible'] = all(
                 sample['g_speed_revision'] in revisions
-                and 0 <= sample['lap']['state'] <= 6 and 0 <= sample['lap']['reason'] <= 11
+                and 0 <= sample['lap']['state'] <= 6 and 0 <= sample['lap']['reason'] <= maximum_reason
                 and sample['calibrator']['phase'] <= 2
                 and sample['last_run']['valid'] in (0, 1)
                 and sample['timing']['counter_ready'] == 1
