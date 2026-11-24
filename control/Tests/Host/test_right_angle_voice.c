@@ -1,4 +1,4 @@
-/* 语音首弯运行生产v8解析与分档预测，电机替身不代表实际过弯。 */
+/* 语音首弯运行生产v9解析与分档预测，电机替身不代表实际过弯。 */
 #define main legacy_lap_test_main
 #include "test_lap_motion.c"
 #undef main
@@ -13,7 +13,7 @@ static void cmd(uint8_t version, uint8_t seq, uint8_t path_seq, uint8_t kind, ui
 
 static void go(uint8_t seq) {
     path();
-    cmd(8, seq, (uint8_t)(sequence - 1u), 1, now);
+    cmd(9, seq, (uint8_t)(sequence - 1u), 1, now);
 }
 
 static void setup(void) {
@@ -41,10 +41,11 @@ int main(void) {
     cmd(5, 1, seq, 1, now);
     cmd(6, 1, seq, 1, now);
     cmd(7, 1, seq, 1, now);
-    CHECK(parser.rejected == 3u && g_lap.state == LAP_WAIT);
-    cmd(8, 1, (uint8_t)(seq - 1u), 1, now);
+    cmd(8, 1, seq, 1, now);
+    CHECK(parser.rejected == 4u && g_lap.state == LAP_WAIT);
+    cmd(9, 1, (uint8_t)(seq - 1u), 1, now);
     ticks(31, 0);
-    cmd(8, 2, seq, 1, now);
+    cmd(9, 2, seq, 1, now);
     CHECK(g_lap.starts_rejected == 3u && g_lap.state == LAP_WAIT);
     ticks(1, 1);
     go(3);
@@ -76,7 +77,7 @@ int main(void) {
     path();
     ticks(1000, 0);
     CHECK(g_lap.state == LAP_RUNNING && g_lap.left_target == g_lap.right_target);
-    cmd(8, 0, 0, 2, now - 500u);
+    cmd(9, 0, 0, 2, now - 500u);
     CHECK(g_lap.state == LAP_STOPPED && g_lap_last.reason == LAP_VOICE_STOP);
     CHECK(g_lap.left_pwm == 0u && g_lap.right_pwm == 0u);
 
@@ -95,6 +96,23 @@ int main(void) {
     CHECK(g_lap.state == LAP_FAULT && g_lap.reason == LAP_LINK);
     setup(); ticks(600, 0); go(0); corner_flags = 4; path_quality = 55;
     ticks(1205, 0);
+    CHECK(g_lap.state == LAP_FAULT && g_lap.reason == LAP_LINK);
+    setup(); ticks(600, 0); go(0); corner_flags = 4; path_quality = 58; path();
+    CHECK(g_lap.state == LAP_FAULT && g_lap.reason == LAP_PATH); /* 直线不能直接启用前线跟踪。 */
+    setup(); ticks(600, 0); corner_flags = 8; path_quality = 60; bend = 1000; steer = 295; go(0);
+    CHECK(g_lap.state == LAP_RUNNING);
+    corner_flags = 4; path_quality = 58;
+    ticks(2400, 0);
+    CHECK(g_lap.state == LAP_RUNNING && g_lap.left_target > g_lap.right_target);
+    bend = 0; steer = -130; ticks(1500, 0);
+    CHECK(g_lap.state == LAP_RUNNING && g_lap.left_target < g_lap.right_target);
+    corner_flags = 0; path_quality = 75; steer = 0; path(); ticks(200, 0);
+    CHECK(g_lap.state == LAP_RUNNING && g_lap.left_target == g_lap.right_target);
+    corner_flags = 4; path_quality = 58; path();
+    CHECK(g_lap.state == LAP_FAULT && g_lap.reason == LAP_PATH);
+    setup(); ticks(600, 0); corner_flags = 8; path_quality = 60; bend = 1000; go(0);
+    corner_flags = 4; path_quality = 58; ticks(1600, 0);
+    feed = 0; ticks(200, 0);
     CHECK(g_lap.state == LAP_FAULT && g_lap.reason == LAP_LINK);
     for (fault = 1; fault <= 4; ++fault) {
         setup(); ticks(600, 0); go(0);

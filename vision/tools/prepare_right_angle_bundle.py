@@ -14,7 +14,7 @@ def build(allow_drive=False, *, voice=False):
                  'right_angle_phone.py', 'right_angle_voice_canmv.py')
     else:
         names += ('right_angle_canmv.py',)
-    parts = ['# 语音首弯 v8。等待本地 Go。\n' if voice else
+    parts = ['# 语音首弯 v9。等待本地 Go。\n' if voice else
              '# RightAngle v5 current L corner + racing arc; KEY start only.\n']
     manifest = {}
     for name in names:
@@ -43,7 +43,7 @@ def build(allow_drive=False, *, voice=False):
     source = ''.join(parts)
     compile(source, 'right_angle_bundle', 'exec')
     manifest.update(bundle_sha256=hashlib.sha256(source.encode('utf-8')).hexdigest(),
-                    wire_version=8 if voice else 5, grid_step=6, allow_drive=allow_drive or voice,
+                    wire_version=9 if voice else 5, grid_step=6, allow_drive=allow_drive or voice,
                     automatic_motor_start=False, duration_ms=0 if voice or allow_drive else 600000)
     if voice:
         manifest['voice_motor_start'] = True
@@ -53,7 +53,7 @@ def build(allow_drive=False, *, voice=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--voice', action='store_true', help='生成语音首弯 v8 的车载 main.py')
+    parser.add_argument('--voice', action='store_true', help='生成语音首弯 v9 的车载 main.py')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     outputs = ((True, 'main.py'),) if args.voice else ((False, 'right_angle_preview.py'), (True, 'right_angle_drive.py'))

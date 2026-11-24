@@ -1,0 +1,62 @@
+{
+  "port": "COM10",
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "files": [
+    {
+      "file": "voice_0002.jsonl",
+      "bytes": 12616,
+      "sha256": "d21590f0352f0721ec04db23c01738c747b07749400a249bee903ca67f7bdc06"
+    },
+    {
+      "file": "voice_0002_issue_31829_147.pgm",
+      "bytes": 76815,
+      "sha256": "543ddac3a1198683575cac0ba34c02a51be64a48aa1d4aa25ffa88c8810d872a"
+    },
+    {
+      "file": "voice_0002_issue_31891_148.pgm",
+      "bytes": 76815,
+      "sha256": "3b88350d811aa08b4a51d992a9143754788420a681ae125efe86fbb445d015c6"
+    },
+    {
+      "file": "voice_0002_route_34884_180.pgm",
+      "bytes": 76815,
+      "sha256": "c8f3fa0aeba24966d1b1e2aa16b39473695e016d28474b666feaec0c1c09db93"
+    },
+    {
+      "file": "voice_0002_route_35899_190.pgm",
+      "bytes": 76815,
+      "sha256": "2399fdf7841d95cf78d75307e0d58fe5879e558492a7890058754e6bc7970415"
+    },
+    {
+      "file": "voice_0002_route_36949_200.pgm",
+      "bytes": 76815,
+      "sha256": "67e44f809b3741b0e0b90abb69bd658a2855ae3a627aa04e442de4e13cd45779"
+    },
+    {
+      "file": "voice_0002_route_37980_210.pgm",
+      "bytes": 76815,
+      "sha256": "15b84363d3fa5a569d434f1ea165d234a402bad1b9330f3572f94b996e7acf1f"
+    },
+    {
+      "file": "voice_0002_route_39038_220.pgm",
+      "bytes": 76815,
+      "sha256": "7510850e0064fa44467958e2e1ef148a1b20eaf70bf5cd026fd0cc817c98c315"
+    },
+    {
+      "file": "voice_0002_route_40109_230.pgm",
+      "bytes": 76815,
+      "sha256": "1b23723c202e0b54839b4f76ce01bcddb88e801728c814b27a271f5def391924"
+    },
+    {
+      "file": "voice_0002_route_41156_240.pgm",
+      "bytes": 76815,
+      "sha256": "abc65c4df7d3f27f219ec7509263851ec1cbf9f1a38ea25db8e8008622f6bea3"
+    },
+    {
+      "file": "voice_0002_route_42197_250.pgm",
+      "bytes": 76815,
+      "sha256": "72ffe328d07bf873aa3755253b3032d4f977fddfdf902ff424e942ac686d2e5d"
+    }
+  ],
+  "log_name": "voice_0002.jsonl"
+}

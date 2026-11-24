@@ -36,7 +36,7 @@ static void packet(uint8_t *p) {
     p[2]=6;
 #endif
 #ifdef RIGHT_ANGLE_VOICE_TARGET
-    p[2]=8;
+    p[2]=9;
 #elif defined(RIGHT_ANGLE_TARGET)
     p[2]=5; /* 首弯v5：当前L形预测，保留其它旧目标原封包。 */
 #endif

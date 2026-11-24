@@ -1,0 +1,178 @@
+{
+  "at_utc": "2026-11-24T14:35:40.178897+00:00",
+  "port": "COM10",
+  "wire_version": 9,
+  "remote": "/sdcard/main.py",
+  "sha256": "673155edbbc621ec2f761404ea875cb90445ec90303a7a9572f93be434cf53b3",
+  "raw_evidence_local": "vision/build/right_angle_voice_v9_release/timing_deploy_2d11e0fe",
+  "startup_app_started": false,
+  "power_isolation_confirmed": true,
+  "board": "CanMV K230D Lushanpi Lite - 128M",
+  "firmware": "K230D-v1.8-0-gc2d1f5cc994c206d0032aaf6aaf09332f3dc3c4c",
+  "board_image_replay": {
+    "frames": [
+      [
+        35,
+        "current_corner_predicted",
+        0,
+        9,
+        60
+      ],
+      [
+        32,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        35,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        35,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        30,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ],
+      [
+        31,
+        "current_front_forecast",
+        0,
+        5,
+        58
+      ]
+    ],
+    "input_front_is_masked": true,
+    "no_uart": true,
+    "max_ms": 35,
+    "pass_all": true
+  },
+  "previous_main_sha256": "0bcfc9151ad38c8e7a25a4b7d981b7669882804e0c886f5fe42b53cc7ed623ea",
+  "readback_exact": true,
+  "readback_bytes": 85246,
+  "native_first_attempt": "MicroPython rejected a starred list literal; corrected before write"
+}

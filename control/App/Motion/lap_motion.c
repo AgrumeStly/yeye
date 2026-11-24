@@ -28,8 +28,10 @@ static uint8_t corner_pair_seen;
 /* 低置信度只允许短时续行。时间以最近源图时间计算，收到下一弱包不会续租。 */
 #define CORNER_ANCHOR_MS 1200u
 #define CORNER_COVER_MS 240u
-static uint32_t corner_edge_at;
-static uint8_t corner_path_quality;
+/* 58为已知右弯后逐帧复测的前线，不是无当前观测的历史外推。 */
+#define CORNER_FRONT_QUALITY 58u
+static uint32_t corner_edge_at, corner_front_at;
+static uint8_t corner_path_quality, corner_front_seen;
 #else
 #define LAP_MAX_RUN_MS 15000u
 #endif
@@ -152,7 +154,8 @@ void lap_motion_init(uint32_t now) {
 #ifdef RIGHT_ANGLE_TARGET
     corner_pair_at = now; corner_pair_seen = 0u;
 #ifdef RIGHT_ANGLE_VOICE_TARGET
-    corner_edge_at = now; corner_path_quality = 0u;
+    corner_edge_at = corner_front_at = now;
+    corner_path_quality = corner_front_seen = 0u;
 #endif
 #endif
 #ifdef LAP_DUAL_STARTUP
@@ -198,6 +201,8 @@ void lap_motion_transport_fault(uint32_t now) {
  * 有当前单边只依赖可信双边/L形的时间；白走廊还需核对最近一次实测边。
  */
 static int corner_forecast_fresh(uint32_t now, uint8_t quality) {
+    if (quality == CORNER_FRONT_QUALITY)
+        return corner_front_seen != 0u && (uint32_t)(now - corner_front_at) < CORNER_COVER_MS;
     return corner_pair_seen != 0u && (uint32_t)(now - corner_pair_at) < CORNER_ANCHOR_MS &&
            (quality >= 50u || (uint32_t)(now - corner_edge_at) < CORNER_COVER_MS);
 }
@@ -334,20 +339,26 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
     if (g_lap.history != 0u || g_lap.single != 0u || g_lap.bend != 0u) g_lap.path_valid = 0u;
 #endif
 #ifdef RIGHT_ANGLE_VOICE_TARGET
-    /* v8质量分档由实际来源决定。弱包只用于续行，且独立监督该来源的年龄。
+    /* v9质量分档由实际来源决定。弱包只用于续行，且独立监督该来源的年龄。
      * 以已经扣除发送年龄的采集时刻更新锚点，防止积压包延长预测时限。
      */
     corner_path_quality = b[7];
     if (g_lap.history != 0u) {
-        if (b[7] >= 60u || !corner_forecast_fresh(now, b[7])) g_lap.path_valid = 0u;
+        if (b[7] >= 59u || !corner_forecast_fresh(now, b[7])) g_lap.path_valid = 0u;
     } else if (g_lap.single != 0u) {
         if (g_lap.bend != 1000u || g_lap.steering < 0 || b[7] < 60u) g_lap.path_valid = 0u;
     } else if (b[7] < 70u) g_lap.path_valid = 0u;
-    if (g_lap.path_valid == 0u) corner_pair_seen = 0u;
+    if (g_lap.path_valid == 0u) corner_pair_seen = corner_front_seen = 0u;
     else {
-        if (g_lap.history == 0u) {
+        if (g_lap.history == 0u || b[7] == CORNER_FRONT_QUALITY) {
             corner_pair_seen = 1u;
             corner_pair_at = g_lap.path_at;
+            /* 真实L或当前有风险的双边锚定此右弯。前线只从这个状态接续，
+             * 普通单边/白走廊不续前线租期，直道双边恢复时结束该右弯角色。
+             */
+            corner_front_seen = (uint8_t)(g_lap.single != 0u || g_lap.bend >= 200u ||
+                                         (g_lap.history != 0u && b[7] == CORNER_FRONT_QUALITY));
+            corner_front_at = g_lap.path_at;
         }
         if (b[7] >= 50u) corner_edge_at = g_lap.path_at;
     }

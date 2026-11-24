@@ -1,15 +1,17 @@
-"""用真实归档赛道图和模拟口令验证 v8 续行、失效、图传和留证。"""
+"""用真实归档赛道图和模拟口令验证 v9 续行、失效、图传和留证。"""
+import math
 import subprocess
 from types import SimpleNamespace
 
 import cv2
+import numpy as np
 from check_straight_voice import BUILD, CONTROL, ROOT
 from prepare_right_angle_bundle import build
 
 
 def simulate(frames, keywords, *, gap_at=0, preview=None, kws_ms=0):
     source, info = build(voice=True)
-    assert info['wire_version'] == 8 and not info['automatic_motor_start']
+    assert info['wire_version'] == 9 and not info['automatic_motor_start']
     ns = {'__name__': 'voice_check', 'print': lambda *args: None}
     exec(source, ns)
     index = clock = 0
@@ -28,7 +30,7 @@ def simulate(frames, keywords, *, gap_at=0, preview=None, kws_ms=0):
             raise EOFError('simulation complete')
 
     def write(packet):
-        assert len(packet) == 20 and packet[2] == 8
+        assert len(packet) == 20 and packet[2] == 9
         assert ns['crc16'](packet[:18]) == int.from_bytes(packet[18:], 'little')
         trace.append((clock, packet))
         return len(packet)
@@ -121,6 +123,47 @@ def verify_phone():
     assert phone.client is None and len(overlays) == 1
 
 
+def verify_current_front():
+    """真实故障图对接仅前线的位姿序列，直到两侧直线恢复。"""
+    folder = ROOT / 'testing/2026-11-18_right_angle/voice_ground_02_camera'
+    before = (folder / 'voice_0002_issue_31829_147.pgm').read_bytes()[15:]
+    after = (folder / 'voice_0002_issue_31891_148.pgm').read_bytes()[15:]
+    x, y = np.meshgrid(np.arange(320), np.arange(240))
+    ground_x = (x - 159.5) * 48 / (y + 38.11111111111108)
+    ground_z = (7802.22222222222 - 15.555555555555546 * y) / (y + 38.11111111111108)
+
+    def render(degrees, distance, pair=False):
+        yaw = math.radians(degrees)
+        along = ground_x * math.cos(yaw) - ground_z * math.sin(yaw)
+        depth = ground_x * math.sin(yaw) + ground_z * math.cos(yaw)
+        black = (abs(depth - distance) < 2.5) & (along >= -35)
+        if pair:
+            black |= (abs(depth - (distance - 50)) < 2.5) & (along >= -35)
+        return np.where(black, 40, 160).astype(np.uint8).tobytes()
+
+    ns = {'__name__': 'front_only_check'}
+    exec(build(voice=True)[0], ns)
+    route = ns['RightAngleRoute'](predictive=True)
+    sender = ns['RightAngleVoiceSender'](allow_drive=True)
+    for at in (0, 65, 130):
+        assert route.update(before, at)['source'] == 'current_corner_predicted'
+    fault_point = route.update(after, 195)
+    assert fault_point['valid'] and fault_point['searched_candidates'] == 0
+    measured = []
+    for index in range(24):
+        yaw, distance = max(-90, -5 - 5 * index), max(25, 41 - 1.5 * index)
+        result = route.update(render(yaw, distance), 260 + 65 * index)
+        assert result['valid'] and result['source'] == 'current_front_forecast', result
+        packet = sender.path(result, 40, 45)
+        assert (packet[6], packet[7]) == (5, 58)
+        measured.append((result['stage'], result['front_distance'], result['steering']))
+    assert measured[0][0] == 'turn' and measured[0][2] > 0
+    assert measured[-1][0] == 'exit' and measured[-1][1] < measured[0][1] - 10
+    assert route.update(render(-90, 25, pair=True), 1820)['source'] == 'current_pair'
+    unknown = ns['RightAngleRoute'](predictive=True)
+    assert not any(unknown.update(render(-5, 41), time)['valid'] for time in (0, 65, 130))
+
+
 def verify_preview_schedule(pixels):
     """慢帧待机仍能更新；Go等待帧和跑动慢帧给控制路径让路。"""
     allowances = []
@@ -173,9 +216,10 @@ def main():
         ' '.join(str(packet[field]) for field in (3, 5, 6, 8, 9)) for packet in frames
     ]
     verify_prediction()
+    verify_current_front()
     verify_phone()
     verify_preview_schedule(pair)
-    print('RightAngleVoice scheduling, real corner replay, confidence expiry, phone backpressure and production v8 parser PASS')
+    print('RightAngleVoice scheduling, real corner replay, confidence expiry, phone backpressure and production v9 parser PASS')
 
 
 if __name__ == '__main__':

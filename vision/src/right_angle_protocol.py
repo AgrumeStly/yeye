@@ -33,8 +33,10 @@ class RightAngleSender(LapSender):
         elif kind=='current_corner_associated':
             evidence_age=result.get('corner_age_ms',700)
             valid=valid and isinstance(evidence_age,int) and 0<=evidence_age<700 and bend==1000 and steering>=0 and quality>=45
+        elif kind == 'current_front_forecast':
+            valid = valid and quality == 58 and result.get('front_support', 0) >= 5
         elif kind in ('current_single_forecast', 'short_corridor_forecast'):
-            valid = valid and (50 <= quality < 60 if kind == 'current_single_forecast' else 40 <= quality < 50)
+            valid = valid and (50 <= quality < 58 if kind == 'current_single_forecast' else 40 <= quality < 50)
         if not (-1000<=steering<=1000 and 0<=bend<=1000 and 0<=quality<=100):raise ValueError('v5 route fields')
         header=bytes((0xa5,0x5a,self.wire_version,1,12,self.seq));self.seq=(self.seq+1)&255
         data=header+struct.pack('<BBhHHHBB',flags if valid else 0,quality if valid else 0,

@@ -8,7 +8,8 @@
 import math
 from right_angle_racing import racing_route
 from right_angle_grid import corner_grid
-from right_angle_prediction import PREDICTION_ANCHOR_MS, PREDICTION_GAP_MS, fitted_outer_l, fitted_left_forecast, clear_predicted_corridor
+from right_angle_prediction import PREDICTION_ANCHOR_MS, PREDICTION_GAP_MS, clear_predicted_corridor
+from right_angle_prediction import fitted_outer_l, fitted_left_forecast, fitted_front_edge
 from lite_lap_route import (_threshold, _grid, _pair_anchors, _template,
                             _anchor_distance, _hypot, _point, _pixel)
 
@@ -66,6 +67,29 @@ def _current_anchor_distance(t, anchors):
     return total/len(anchors) if anchors else 0.0
 
 
+def _along_exit_edge(t):
+    """车头接近出弯方向时，把已跟踪的前线作为出口左边推算中线。"""
+    _, d, yaw, _ = t[5]
+    if yaw > -math.radians(75):
+        return None
+    heading = yaw + math.pi/2
+    nx, nz = math.cos(heading), -math.sin(heading)
+    return [(-d*nx-ahead*nz, -d*nz+ahead*nx) for ahead in (8, 16, 24, 32, 40, 48, 56)]
+
+
+def _still_has_l(t, black, occupied):
+    """复核上一候选的两条外臂和内侧白区，避免冷启动退成单边许可。"""
+    if not -math.radians(85) <= t[4][2] <= math.radians(25):
+        return False
+    side = t[0][0]
+    count = sum(occupied[cell] for cell in side)
+    return (count >= 12 and count >= .75 * len(side) and len(t[8]) >= 4
+            and sum(black[cell] for cell in t[8]) <= len(t[8]) // 5
+            and not any(black[cell] for cell in t[1])
+            and all(len(arm) >= 3 and sum(occupied[cell] for cell in arm) >= max(3, .65 * len(arm))
+                    for arm in t[6][:2]))
+
+
 class RightAngleRoute:
     """固定有界候选库与局部细化；初始化预计算只执行一次，不驱动车轮。"""
     def __init__(self, predictive=False):
@@ -97,6 +121,7 @@ class RightAngleRoute:
         self.corner_at = None
         self.forecast_anchor_at = self.visible_edge_at = None
         self.forecast_route = None
+        self.front_model = self.front_at = None
         self.racing_key = None
         self.racing = None
 
@@ -128,6 +153,22 @@ class RightAngleRoute:
         grid_done = clock() if clock else 0
         anchors = _pair_anchors(black)
         anchors_done = clock() if clock else 0
+        tracking = self.previous is not None
+        quick, front = None, None
+        if self.predictive and tracking and not anchors and self.previous[4][3] > 1:
+            # 已跟踪的折角先用当前外边直接拟合，节省整组邻居/精化生成。
+            # 左臂渐出画后，只关联上帧已确认的前线方向和距离。
+            match = fitted_outer_l(black, occupied, _corner_template)
+            if match is not None and self.distance(match, self.previous) <= 24:
+                quick = match
+            elif _still_has_l(self.previous, black, occupied):
+                quick = self.previous
+            elif self.front_at is not None and now-self.front_at < PREDICTION_GAP_MS:
+                match = fitted_front_edge(black, self.front_model, _corner_template)
+                if match is not None:
+                    front_route = _along_exit_edge(match[0]) or racing_route(match[0][4], include_nominal=False)['route']
+                    if clear_predicted_corridor(pixels, black, threshold, front_route):
+                        quick, front = match[0], (match[1], match[2])
 
         def evaluate(t):
             sides, centers = t[0], t[1]
@@ -175,10 +216,9 @@ class RightAngleRoute:
             elif corner: score += 0.3
             return score, dual, (2 if corner else (1 if associated else 0)), counts
 
-        tracking = self.previous is not None
-        local = []
-        if tracking:
-            local.append(self.previous)
+        if quick is not None:
+            pool = []
+        elif tracking:
             c, d, yaw, angle = self.previous[5]
             if self.neighbor_key != self.previous[5]:
                 self.neighbor_key = self.previous[5]
@@ -186,8 +226,8 @@ class RightAngleRoute:
                 for dc, dd, dy in ((-3,0,0),(3,0,0),(0,-4,0),(0,4,0),(0,0,-5),(0,0,5)):
                     t = _corner_template(c+dc, d+dd, yaw+math.radians(dy), angle)
                     if t is not None: self.neighbors.append(t)
-            local.extend(self.neighbors)
-            pool = list(local)
+            pool = [self.previous]
+            pool.extend(self.neighbors)
             # 正常帧只验证上次模型及6个邻居，并滚动查看12个当前粗候选。
             # 仅复用预计算几何，不保留旧像素分数；新的弯道仍能随当前图像进入搜索。
             # 已有模型时不再每帧遍历全库并重建27个细化模板，减少源年龄空档。
@@ -198,11 +238,11 @@ class RightAngleRoute:
             # 启动／失线重获保留原全库搜索；未经当前支持和稳定门不授予运动许可。
             pool = list(self.templates)
         seeds = []
-        best = None
-        best_score = -1e9
-        support = [0, 0]
+        best = quick
+        best_score = 2.0 if quick is not None else -1e9
+        support = [sum(occupied[i] for i in side) for side in quick[0]] if quick is not None else [0, 0]
         best_dual = False
-        best_corner = 0
+        best_corner = 2 if quick is not None and front is None else 0
         for t in pool:
             candidate = evaluate(t)
             if candidate is None: continue
@@ -235,9 +275,9 @@ class RightAngleRoute:
                 if (dual or single) and score>best_score:
                     best,best_score,support=t,score,counts
                     best_dual=dual;best_corner=single
-        forecast = 0
-        fitted = False
-        if self.predictive and not best_dual:
+        forecast = 3 if front is not None else 0
+        fitted = quick is not None
+        if self.predictive and not best_dual and not fitted:
             # 右边出画时，直接用当前左纵／前横交点补充离散库。当前两臂拟合
             # 成功便跳过整库重扫与27点精化，给测到过峰值的K230留出时间。
             match = fitted_outer_l(black, occupied, _corner_template)
@@ -276,6 +316,9 @@ class RightAngleRoute:
             # 局部支持不足时同帧回到完整当前搜索，不能因为滚动库本帧没扫到
             # 邻近新几何而人为制造失线。所有旧关联／单侧／白路面门保持。
             for t in self.templates:
+                # K230运行时搜索达到本帧预算就结束，给封包和串口留余量。
+                if self.predictive and clock and clock()-begun >= 78:
+                    break
                 fallback += 1
                 candidate = evaluate(t)
                 if candidate is None: continue
@@ -297,9 +340,14 @@ class RightAngleRoute:
                 offsets = [(dc,dd,dy) for dc in (-6,0,6)
                            for dd in ((0,) if angle == 0 else (-10,0,10)) for dy in (-10,0,10)]
                 for dc,dd,dy in offsets:
+                    if self.predictive and tracking and clock and clock()-begun >= 78:
+                        self.refine_key = None  # 尚未构完，下一帧可补足。
+                        break
                     t = _corner_template(c+dc, d+dd, yaw+math.radians(dy), angle)
                     if t is not None: self.refinements.append(t)
             for t in self.refinements:
+                if self.predictive and tracking and clock and clock()-begun >= 84:
+                    break
                 refined += 1
                 candidate = evaluate(t)
                 if candidate is None: continue
@@ -362,9 +410,20 @@ class RightAngleRoute:
                 forecast = 1
         if forecast:
             # 前方白区有支持才下发预测。暂时无边线只延续已有路线，不更新边线时钟。
-            source = 'current_single_forecast' if forecast == 1 else 'short_corridor_forecast'
-            confidence = 55 if forecast == 1 else 45
-            if forecast == 2:
+            if forecast == 3:
+                source, confidence = 'current_front_forecast', 58
+                out.update(front_support=front[0], front_distance=front[1])
+                exit_route = _along_exit_edge(best)
+                if exit_route is not None:
+                    # 原横线已转成沿行驶方向的左边。用它的法向偏移和新朝向回正。
+                    route = exit_route
+                    x, z = route[3]
+                    steering = max(-1000, min(1000, round(math.atan2(x, max(5, z))/math.radians(55)*1000)))
+                    stage, risk = 'exit', 0.0
+            elif forecast == 1:
+                source, confidence = 'current_single_forecast', 55
+            else:
+                source, confidence = 'short_corridor_forecast', 45
                 route = self.forecast_route
             valid = valid and clear_predicted_corridor(pixels, black, threshold, route)
         elif not best_dual:
@@ -373,8 +432,12 @@ class RightAngleRoute:
             # 由连续路线自然增大。双侧路径保留有符号修正，允许及时回正。
             steering = max(0,steering)
         if self.predictive and valid:
-            if not forecast:
+            if not forecast or forecast == 3:
                 self.forecast_anchor_at = now
+                if angle > 1 and (best_corner == 2 or forecast == 3 or round(risk*1000) >= 200):
+                    self.front_model, self.front_at = best, now
+                else:
+                    self.front_model = self.front_at = None
             if forecast != 2:
                 self.visible_edge_at = now
                 self.forecast_route = route
@@ -384,7 +447,7 @@ class RightAngleRoute:
         out.update(valid=valid, source=source, steering=steering,
                    bend=int(round(risk*1000)), confidence=confidence, stage=stage,
                    corner_observed=best_corner==2, corner_age_ms=0 if self.corner_at is None else now-self.corner_at,
-                   measured_edges=('none' if forecast == 2 else 'single' if forecast == 1 else
+                   measured_edges=('none' if forecast == 2 else 'front' if forecast == 3 else 'single' if forecast == 1 else
                                    'left_and_front' if best_corner == 2 else 'pair' if best_dual else 'associated_left'),
                    path_kind='racing_arc_prediction' if angle>1 else 'straight_observation',
                    path_visibility='projected' if best[1] else 'predicted_near_blind',

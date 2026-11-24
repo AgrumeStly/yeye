@@ -42,7 +42,8 @@ def annotate_preview(frame, result, packet):
         if point is not None:
             frame.draw_circle(point[0], point[1], 3, color=shade, thickness=1)
     mode = {'current_pair': 'PAIR', 'current_corner_predicted': 'L CORNER',
-            'current_single_forecast': 'ONE EDGE', 'short_corridor_forecast': 'SHORT PRED'}.get(result['source'], 'NO PATH')
+            'current_single_forecast': 'ONE EDGE', 'short_corridor_forecast': 'SHORT PRED',
+            'current_front_forecast': 'FRONT EDGE'}.get(result['source'], 'NO PATH')
     frame.draw_rectangle(0, 0, 320, 28, color=0, fill=True)
     frame.draw_string_advanced(4, 1, 13, '%s %s q%d' % (mode, result['stage'], result['confidence']), color=255)
     frame.draw_string_advanced(4, 14, 13, 'seq %03d  steer %+d  permit %d' %

@@ -102,7 +102,7 @@ void lap_motion_tick(uint32_t now, uint8_t key);
  */
 void lap_motion_sample(uint32_t now, const encoder_sample_t *a, const encoder_sample_t *b);
 /** @brief 20字节消息接收；bytes必须CRC／字段及目标版本已核实；arrival为最后字节ISR时间。
- * STOP始终生效；语音直道v6和语音首弯v8接纳与当前PATH序号绑定的START。
+ * STOP始终生效；语音直道v6和语音首弯v9接纳与当前PATH序号绑定的START。
  */
 void lap_motion_receive(const uint8_t *bytes, uint32_t arrival, uint32_t now);
 void lap_motion_fault(lap_reason_t reason, uint32_t now);

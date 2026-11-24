@@ -16,9 +16,10 @@ PHOTO_LIMIT = 8
 
 
 class RightAngleVoiceSender(RightAngleSender):
-    wire_version = 8
+    wire_version = 9
     flags_by_source = {'current_pair': 1, 'current_corner_predicted': 9,
-                       'current_single_forecast': 5, 'short_corridor_forecast': 5}
+                       'current_single_forecast': 5, 'short_corridor_forecast': 5,
+                       'current_front_forecast': 5}
 
     def start(self, packet):
         """刚发出的当前双侧或当前L形可起步，当前出口弱关联仅许可续行。"""
@@ -90,7 +91,7 @@ class RunEvidence:
         else:
             raise RuntimeError('right-angle voice log slots exhausted')
         with open(prefix + '.jsonl', 'w') as log:
-            log.write(json.dumps(dict(event=event, time_ms=at, go_sent_ms=self.go_at, wire_version=8,
+            log.write(json.dumps(dict(event=event, time_ms=at, go_sent_ms=self.go_at, wire_version=9,
                 dropped_records=max(0, self.count - RECORD_LIMIT),
                 columns=('start_ms', 'seq', 'flags', 'stage', 'reason', 'steering', 'bend', 'acquire_ms',
                          'to_send_ms', 'send_interval_ms', 'previous_source_age_ms', 'kws_ms',
@@ -119,10 +120,11 @@ def drive(sensor, channel, gray, sender, voice, evidence, phone=None):
     """
     detector = RightAngleRoute(predictive=True)
     origin = time.ticks_ms()
+    detector.clock = lambda: time.ticks_diff(time.ticks_ms(), origin)
     voice.play(READY_REPLY)
     pending_go = run_until = None
     phone_ms = 0
-    print('[RIGHT ANGLE VOICE] ready v8')
+    print('[RIGHT ANGLE VOICE] ready v9')
     while True:
         os.exitpoint()
         started = time.ticks_ms()

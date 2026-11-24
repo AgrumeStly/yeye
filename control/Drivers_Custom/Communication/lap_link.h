@@ -1,5 +1,5 @@
 /** @file lap_link.h
- * @brief 按目标版本滑窗解析，首弯v5和语音首弯v8互斥，不改变v1。
+ * @brief 按目标版本滑窗解析，首弯v5和语音首弯v9互斥，不改变v1。
  */
 #ifndef YEYE_LAP_LINK_H
 #define YEYE_LAP_LINK_H

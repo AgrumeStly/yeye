@@ -108,11 +108,58 @@ def fitted_left_forecast(black, previous, template):
     return template(offset + 25, cx * ux + cz * uz, yaw, angle)
 
 
+def fitted_front_edge(black, previous, template):
+    """已知右弯后，沿预期前横线的法向取样，逐帧重估前线距离和角度。
+
+    单条线约束方向和法向距离。弯心沿线坐标沿用上次模型，直到新双侧可见。
+    采样只看当前未扩张黑格，隔开墙面上沿；输出代理坐标与实测格数。
+    """
+    c, d, yaw, angle = previous[5]
+    ux, uz = math.sin(yaw), math.cos(yaw)
+    depth = d + 25
+    samples = []
+    used = set()
+    for across in range(round(c) - 17, round(c) + 61, 7):
+        for shift in (0, -3, 3, -6, 6, -9, 9, -12, 12, -15, 15):
+            forward = depth + shift
+            cell = _pixel(across * uz + forward * ux, -across * ux + forward * uz)
+            if cell is None or cell // GW < GY0 + 3 or not black[cell]:
+                continue
+            if cell not in used:
+                used.add(cell)
+                samples.append((across, forward))
+            break
+    if len(samples) < 5 or samples[-1][0] - samples[0][0] < 28:
+        return None
+    mean_across = sum(p[0] for p in samples) / len(samples)
+    mean_depth = sum(p[1] for p in samples) / len(samples)
+    variance = sum((p[0] - mean_across) ** 2 for p in samples)
+    slope = sum((p[0] - mean_across) * (p[1] - mean_depth) for p in samples) / variance
+    if abs(slope) > 0.45 or max(abs(z - mean_depth - slope * (x - mean_across)) for x, z in samples) > 6:
+        return None
+    change = -math.atan(slope)
+    updated_yaw = yaw + change
+    if not -math.radians(105) <= updated_yaw <= math.radians(30):
+        return None
+    front = mean_depth * math.cos(change) + mean_across * math.sin(change)
+    updated_c = c * math.cos(change) - d * math.sin(change)
+    candidate = template(updated_c, front - 25, updated_yaw, angle)
+    if candidate is None:
+        return None
+    return candidate, len(samples), front
+
+
 def clear_predicted_corridor(pixels, black, threshold, route):
-    """短时预测要通过这帧现有白走廊；检查前四个路线点，不使用历史图。"""
-    cells = {_pixel(*point) for point in route[:4]}
-    cells.discard(None)
-    return len(cells) >= 3 and all(
-        not black[cell] and pixels[(cell // GW * GRID_STEP + 1) * 320 + cell % GW * GRID_STEP + 1] > threshold
-        for cell in cells
-    )
+    """检查最靠近车的四个可见路线格，相机近端盲区的不计入。"""
+    cells = set()
+    for point in route:
+        cell = _pixel(*point)
+        if cell is None or cell in cells:
+            continue
+        x, y = cell % GW * GRID_STEP + 1, cell // GW * GRID_STEP + 1
+        if black[cell] or pixels[y * 320 + x] <= threshold:
+            return False
+        cells.add(cell)
+        if len(cells) == 4:
+            return True
+    return len(cells) >= 3
