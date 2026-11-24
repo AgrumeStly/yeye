@@ -15,7 +15,8 @@
 ## 执行结果
 
 - Keil **StraightVoice**（0x02120004）构建 0 错误、0 警告。新固件产物在 `control/build/firmware/straight_voice/`。HEX SHA-256 为 `7d74c3f26ef46f8324e8fc9b3c66ffbf3ec8d2066d75225121343f7d49cd1b68`。
-- K230 自包含入口在 `vision/build/straight_voice/main.py`，SHA-256 为 `3ed8d7f47a20e43d19f294be0f9676b47026ead63a40b018729e327651be77e2`，文件字节与清单相符。部署沿用板上 v1.8-0、关键词模型和四份 WAV。CanMV v1.8 音频读取使用短等待参数，避免每帧阻塞 300 ms。Go 播放等 2 秒运行窗口结束，Stop 帧先于播放。运行中图像、KWS 和 UART 的端到端时序待实板测量。 [CanMV v1.8 音频源码](https://github.com/kendryte/canmv_k230/blob/v1.8/port/builtin_py/media/pyaudio.py)
+- K230 自包含入口在 `vision/build/straight_voice/main.py`，当前 SHA-256 为 `993ae3302b6c613e9a8cafa74f8abe819354652d0b4350c45846cf4e9f3b7b63`，文件字节与清单相符。部署沿用板上 v1.8-0、关键词模型和四份 WAV。CanMV v1.8 音频读取使用短等待参数，避免每帧阻塞 300 ms。Go 播放等 2 秒运行窗口结束，Stop 帧先于播放。运行中图像、KWS 和 UART 的端到端时序待实板测量。 [CanMV v1.8 音频源码](https://github.com/kendryte/canmv_k230/blob/v1.8/port/builtin_py/media/pyaudio.py)
+- 主控补充开机提示。相机与音频初始化后复用 `wozai.wav` 播一次“我在”，屏蔽播报及尾音期间的录音后再识别口令。就绪提示帮助主控在比赛第三部分语音启动演示中掌握发令时机。电脑检查通过，覆盖首次识别前仅播一次、无口令时只发 PATH，以及原 Go／Stop 调度。实板按操作单确认响声和后续口令识别。
 - `vision/tools/check_straight_voice.py` 通过。STM32 101 项断言覆盖上电零输出、无 KEY 启动、停稳门、v6 序号与版本隔离、2 秒限停、Stop、急停和故障。使用既有直道原图和模拟语音事件，验证 Python 送出的实际字节经生产 C 解析器正确解析。旧直道双轮、直道、首弯和低速模型检查分别 244／893／601／347 项通过，UART 生产驱动替身通过，旧直道视觉 97 项通过。
 - 部署待验证项为车载实际带载电压、无线缆冷启动、同板摄像头与音频并发、语音命中、实际车轮停稳及场地表现。软件模型使用模拟编码器或语音事件。
 

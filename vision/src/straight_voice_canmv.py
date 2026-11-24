@@ -10,6 +10,7 @@ CHUNK = 4800  # 已有KWS模型每次输入300ms单声道PCM。
 CHUNK_MS = 300
 WAVDIR = '/sdcard/examples/utils/'
 REPLIES = ('', 'wozai.wav', 'go_new.wav', 'stop_new.wav', 'wow_new.wav')
+READY_REPLY = 1  # 复用已有的“我在”语音，不额外分发WAV。
 GO = 2
 STOP = 3
 RUN_WINDOW_MS = 2150  # STM32最多撤驱动前运行2000ms，留150ms调度余量。
@@ -169,6 +170,9 @@ def log_event(*fields):
 
 def drive(sensor, channel, gray, sender, voice):
     """每轮先封包相机结果，再读音频。Go仅可用于下一帧，Stop先发帧再播报。"""
+    # 相机和语音设备初始化成功后播一次。play设置麦克风尾音屏蔽，
+    # 循迹循环随即开始建立双边许可，屏蔽解除前poll只丢弃录音。
+    voice.play(READY_REPLY)
     detector = StraightRoute()
     origin = time.ticks_ms()
     pending_go = run_until = previous = None

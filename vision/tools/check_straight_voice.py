@@ -53,11 +53,15 @@ def simulate(pixels, commands, frame_count, lost_at=0):
     def play(label):
         trace.append((clock, label))
 
+    def poll():
+        assert trace[0] == (0, 1)  # 首次录音识别前已请求“我在”。
+        return commands.get(frame_index, 0)
+
     namespace.update(time=SimpleNamespace(ticks_ms=lambda: clock, ticks_diff=lambda later, earlier: later - earlier,
                                           ticks_add=lambda base, delta: base + delta),
                      os=SimpleNamespace(exitpoint=exitpoint), log_event=lambda *fields: logs.append(fields))
     sender = namespace['StraightVoiceSender'](write, allow_drive=True)
-    voice = SimpleNamespace(poll=lambda: commands.get(frame_index, 0), play=play)
+    voice = SimpleNamespace(poll=poll, play=play)
     try:
         namespace['drive'](SimpleNamespace(snapshot=snapshot), 0, 7, sender, voice)
     except EOFError:
@@ -77,7 +81,8 @@ def main():
     pixels = cv2.imread(str(path), 0).tobytes()
 
     idle, _ = simulate(pixels, {}, 8)
-    assert len(idle) == 8 and all(packet[3] == 1 for _, packet in idle)
+    assert idle[0] == (0, 1) and len(idle) == 9
+    assert all(isinstance(packet, bytes) and packet[3] == 1 for _, packet in idle[1:])
     assert idle[-1][1][6] & 1  # 有许可但没有任何上电自动运动指令。
     trace, _ = simulate(pixels, {3: 2, 5: 2, 6: 3}, 8)
     packets = [item for _, item in trace if isinstance(item, bytes)]
@@ -94,10 +99,10 @@ def main():
 
     lost, logs = simulate(pixels, {3: 2}, 9, lost_at=4)
     assert any(event[0] == 'go_no_fresh_pair' for event in logs)
-    assert all(packet[3] == 1 for _, packet in lost) and lost[-1][1][6] & 1
+    assert all(packet[3] == 1 for _, packet in lost[1:]) and lost[-1][1][6] & 1
     full, _ = simulate(pixels, {3: 2, 6: 4}, 50)
     start_ms = next(at for at, packet in full if isinstance(packet, bytes) and packet[3] == 2)
-    assert [(at, label) for at, label in full if isinstance(label, int)] == [(start_ms + 2150, 2)]
+    assert [(at, label) for at, label in full if isinstance(label, int)] == [(0, 1), (start_ms + 2150, 2)]
     print('Voice scheduling, R2 image paths and Python-to-STM32 v6 frames PASS')
 
 
