@@ -14,7 +14,7 @@
 ## 安装与上道
 
 1. 主控保持车辆静止并隔离驱动动力。Keil5 用 **Project → Open Project** 打开 [right_angle_voice.uvprojx](../MDK-ARM/right_angle_voice.uvprojx)，选 **RightAngleVoice**，用 **Flash → Download** 下载。沿用 CMSIS-DAP／SW 及 STM32F4xx 512 KB Flash 算法，工程产物位于 `control/build/firmware/right_angle_voice/`。
-2. 视觉板使用 `vision/build/right_angle_voice_v8_release/main.py`，装到 `/sdcard/main.py`，沿用板上关键词模型和四份 WAV。COM10 已部署并逐字节读回，旧 v7 入口已备份。开队友原热点，退出 IDE、断开下载器和 USB，用车载电池给两板供电并冷启动。
+2. 执行对话按 [默认部署规则](../../AGENTS.md#视觉板默认部署) 安装视觉程序。COM10 已将 `vision/build/right_angle_voice_v8_release/main.py` 装入 `/sdcard/main.py`，逐字节读回一致，旧 v7 入口已备份。板上沿用现有关键词模型和四份 WAV。主控开队友原热点，退出 IDE、断开下载器和 USB，用车载电池给两板供电并冷启动。
 3. 主控在左侧首弯前的来向直道上摆车，车头顺时针。听完“我在”后稍等约 1 秒。绿灯每约 2 秒亮约 0.4 秒表示待机收到可起步的当前路径，直接说 **Go** 上道。约 0.08 秒短闪时先核对取景和固件配对。绿灯常亮为跑动，连续快闪为故障。
 4. 观察车是否连贯右转并进入出弯直道、是否碰黑边、何时停止。语音 **Stop** 撤驱动，实物 **KEY**（PA0／WKUP）可急停。故障停车后先记录位置与灯态，保留取证现场。试跑最长 12 秒，正常运行时进入下一段仍须有当前视觉路径。
 
