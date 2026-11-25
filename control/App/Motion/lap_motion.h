@@ -75,6 +75,16 @@ extern volatile lap_config_t g_lap_config;
 extern volatile lap_view_t g_lap;
 extern volatile lap_result_t g_lap_last;
 extern volatile lap_diag_view_t g_lap_diag;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+/** @brief 联合弯停车瞬间的路径数据。年龄单位ms，UINT32_MAX表示该类证据未建立。 */
+typedef struct {
+    uint32_t at_ms, path_at_ms;
+    uint32_t anchor_age_ms, edge_age_ms, rail_age_ms, front_age_ms;
+    uint8_t path_sequence, path_flags, path_quality, straight_guide;
+    uint16_t processing_ms;
+} lap_joint_stop_t;
+extern volatile lap_joint_stop_t g_joint_stop;
+#endif
 #ifdef LAP_DUAL_STARTUP
 /** @brief 首弯／直道适配版共用启动监督，与g_lap既有布局独立，便于保留旧取证工具。
  * stage：0等首次双轮悬空测试，1正在测试，2测试完成可上道；所有时间ms。

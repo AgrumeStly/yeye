@@ -128,4 +128,5 @@ def racing_route(parameters, include_nominal=True):
     ratio=max(-0.65,min(0.65,ratio))
     return dict(route=route,nominal_path=points,steering=int(round(ratio*1000)),radius=radius,
                 outset=offset,lookahead=24,geometry_calibrated=False,phase=phase,
-                projection_s=nearest_distance,entry_distance=max(0.0,-nearest_distance))
+                projection_s=nearest_distance,entry_distance=max(0.0,-nearest_distance),
+                exit_s=qx-(radius-offset))

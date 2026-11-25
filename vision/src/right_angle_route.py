@@ -7,10 +7,11 @@
 """
 import math
 from right_angle_racing import JOINT_OUTSET, joint_racing_route, racing_route
-from right_angle_grid import corner_grid
+from right_angle_grid import corner_grid, sample_black_rows
 from right_angle_prediction import PREDICTION_ANCHOR_MS, PREDICTION_GAP_MS, clear_predicted_corridor
 from right_angle_prediction import fitted_outer_l, fitted_left_forecast, fitted_front_edge
-from right_angle_prediction import fitted_straight_rail
+from right_angle_prediction import fitted_straight_rail, STRAIGHT_CONTROL_ROWS, turn_ahead
+from straight_route import StraightRoute
 from lite_lap_route import (_threshold, _grid, _pair_anchors, _template,
                             _anchor_distance, _hypot, _point, _pixel)
 
@@ -125,6 +126,7 @@ class RightAngleRoute:
         self.predictive = predictive
         self.joint = joint
         self.outset = JOINT_OUTSET if joint else 0
+        self.straight = StraightRoute() if joint else None
         self.clock = None  # 可选板上ticks_ms，只计耗时，不改变几何判断或源年龄。
         self.templates = []
         for angle in (0, 90):
@@ -165,14 +167,20 @@ class RightAngleRoute:
         self.front_model = self.front_at = None
         self.racing_key = None
         self.racing = None
+        self.first_corner = False
         self.first_exit = None
         self.second_corner = False
         self.second_exit = None
         self.second_exit_at = None
+        self.preview_at = None
+        if self.straight is not None:
+            self.straight.reset()
 
     def curve(self, parameters):
         """联合版和首弯版共用候选搜索及稳定确认，各自采用对应的控制线。"""
         if self.joint:
+            if parameters[3] > 1:
+                return racing_route(parameters, include_nominal=False)
             return joint_racing_route(parameters)
         return racing_route(parameters, include_nominal=not self.predictive)
 
@@ -180,6 +188,23 @@ class RightAngleRoute:
     def distance(a, b):
         return sum(_hypot(a[2][i][0]-b[2][i][0], a[2][i][1]-b[2][i][1])
                    for i in (0, 2, 4))/3
+
+    def _use_straight(self, result, reference, now):
+        """采用旧直道解，更新实际走廊，供下一帧只见一侧时重新估计。"""
+        near, slope = result['near_error'], result['heading_proxy']
+        offset = self.outset / math.cos(reference[4][2])
+        route = [(near + (z-30)*slope - offset, z) for z in (16, 24, 30, 38, 46, 54, 62)]
+        steering = round(StraightRoute.command(near - offset, slope) * 1000)
+        self.previous = reference
+        self.stable, self.stable_at = self.straight.stable, self.straight.stable_at
+        self.forecast_route, self.forecast_command = route, (steering, 0)
+        self.forecast_anchor_at = self.visible_edge_at = now
+        if self.first_exit is not None:
+            self.first_exit = reference
+        result.update(source='straight_pair', stage='straight', steering=steering, route=route,
+                      road_section='connector' if self.first_exit else 'start_straight',
+                      geometry_calibrated=False, parameters=reference[4], vision_mode='near_mid')
+        return result
 
     def update(self, pixels, now):
         """now为取图开始的会话ms；任何拒绝均返回新无效观测，禁止沿用旧命令。
@@ -200,15 +225,40 @@ class RightAngleRoute:
         clock = self.clock
         begun = clock() if clock else 0
         threshold = _threshold(pixels)
+        straight = reference = None
+        if self.joint and (not self.first_corner or self.first_exit is not None) and not self.second_corner:
+            # 双边直道只扫旧算法实际使用的近／中区行，无需每帧做连通域或展开全部弯道模板。
+            bands = sample_black_rows(pixels, threshold, STRAIGHT_CONTROL_ROWS)
+            straight = self.straight.update_anchors(_pair_anchors(bands), now, threshold)
+            if straight['valid']:
+                slope = straight['heading_proxy']
+                yaw = math.atan(slope)
+                offset = (straight['near_error'] - 30*slope) * math.cos(yaw)
+                reference = _corner_template(offset, 50, yaw, 0)
+                if reference is not None:
+                    preview_due = self.preview_at is None or now-self.preview_at >= 70
+                    if preview_due:
+                        self.preview_at = now
+                    if not preview_due or not turn_ahead(pixels, threshold, reference):
+                        return self._use_straight(straight, reference, now)
         black, occupied, labels = corner_grid(pixels, threshold)
         grid_done = clock() if clock else 0
         anchors = _pair_anchors(black)
         anchors_done = clock() if clock else 0
         tracking = self.previous is not None
         quick, front = None, None
+        tried_angle = None
         active_angle = self.previous[4][3] if tracking else 0
         straight_entry = self.joint and tracking and active_angle == 0
-        if self.joint and self.first_exit is not None and not self.second_corner:
+        if reference is not None:
+            tried_angle = OBTUSE_TURN if self.first_exit is not None else math.pi/2
+            match = fitted_outer_l(black, occupied, _corner_template, tried_angle)
+            if (match is not None and _same_rail(reference, 0, match) and
+                    self.curve(match[4])['entry_distance'] <= 38):
+                quick = match
+            else:
+                return self._use_straight(straight, reference, now)
+        if quick is None and self.joint and self.first_exit is not None and not self.second_corner and tried_angle is None:
             # 出直角弯后，只有接在当前出弯车道上的两条实测外臂才能切换弯型。
             match = fitted_outer_l(black, occupied, _corner_template, OBTUSE_TURN)
             if (match is not None and _same_rail(self.first_exit, self.first_exit[4][3], match)
@@ -232,7 +282,7 @@ class RightAngleRoute:
         def evaluate(t):
             angle = t[4][3]
             if self.joint and angle > 0:
-                if self.second_corner and angle > 1:
+                if angle > 1 and (self.second_corner or (self.first_exit is not None and active_angle <= 1)):
                     return None
                 if angle == OBTUSE_TURN and not self.second_corner and (
                         self.first_exit is None or not _same_rail(self.first_exit, self.first_exit[4][3], t)):
@@ -256,8 +306,8 @@ class RightAngleRoute:
                 dual = bool(ids[0]-ids[1] and ids[1]-ids[0])
             # 直道必须有逐行双边走廊；转弯允许用两条二维边界证明当前支持。
             dual = dual and (bool(anchors) or angle > 0)
-            if dual and angle == OBTUSE_TURN and not self.second_corner:
-                # 首次切换钝角时，必须看见同一边的两臂。两条平行直边也可能碰巧匹配远处的角点模板。
+            if self.joint and dual and angle > 0 and (not self.first_corner or (angle == OBTUSE_TURN and not self.second_corner)):
+                # 两条平行直边也可能匹配角点模板。从直道切入任何新弯时必须实测同一侧两臂。
                 dual = any(all(len(arm) >= 3 and sum(occupied[i] for i in arm) >= max(3, .65 * len(arm))
                                for arm in side) for side in (t[6][:2], t[6][2:]))
             # 当前左外边的入弯臂和出弯臂共同证明折角，不要求右侧边界出现，
@@ -362,10 +412,12 @@ class RightAngleRoute:
             # 右边出画时，直接用当前左纵／前横交点补充离散库。当前两臂拟合
             # 成功便跳过整库重扫与27点精化，给测到过峰值的K230留出时间。
             match = fitted_outer_l(black, occupied, _corner_template,
-                                   OBTUSE_TURN if self.second_corner else math.pi / 2)
+                                   OBTUSE_TURN if self.first_exit is not None else math.pi / 2)
             if (match is not None and (not anchors or _current_anchor_distance(match, anchors) <= 10)
                     and (not tracking or self.distance(match, self.previous) <= 24 or
-                         (straight_entry and _same_rail(self.previous, 0, match)))):
+                         (straight_entry and _same_rail(self.previous, 0, match)))
+                    and (not self.joint or self.first_exit is None or self.second_corner or
+                         _same_rail(self.first_exit, self.first_exit[4][3], match))):
                 best, best_score = match, 2.0
                 support = [sum(occupied[i] for i in side) for side in best[0]]
                 best_corner = 2
@@ -450,7 +502,7 @@ class RightAngleRoute:
                     best, best_score, support = t, score, counts
                     best_dual = dual
                     best_corner = single
-        out.update(support=support, searched_candidates=len(pool)+recovery+fallback+refined,
+        out.update(support=support, searched_candidates=len(pool)+recovery+fallback+refined, vision_mode='corner_search',
                    recovery_candidates=recovery,
                    anchors=len(anchors), search_mode='fallback' if fallback else ('tracking' if tracking else 'acquire'))
         if clock:
@@ -537,6 +589,9 @@ class RightAngleRoute:
                     stage, risk = 'exit', 0.0
             elif forecast == 4:
                 source, confidence = 'current_straight_rail', 56
+                slope = math.tan(yaw)
+                near = (best[5][0] - self.outset) / math.cos(yaw) + 30*slope
+                steering = round(StraightRoute.command(near, slope)*1000)
             elif forecast == 1:
                 source, confidence = 'current_single_forecast', 55
             else:
@@ -613,6 +668,8 @@ class RightAngleRoute:
                 self.first_exit = best
         if angle == OBTUSE_TURN and (dual or corner == 2):
             self.second_corner = True
+        if angle > 1 and (dual or corner == 2):
+            self.first_corner = True
         if not self.second_corner:
             return
         if angle == OBTUSE_TURN and near_exit and observed:

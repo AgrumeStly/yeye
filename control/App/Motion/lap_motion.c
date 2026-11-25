@@ -43,8 +43,14 @@ static uint8_t corner_path_quality, corner_front_seen;
 #ifdef JOINT_ANGLE_VOICE_TARGET
 /* 56表示同一条直道边重新通过多行拟合。单侧实测可以更新自己的时钟，不能续双边或新弯证据。 */
 #define CORNER_STRAIGHT_RAIL_QUALITY 56u
+#define CORNER_STRAIGHT_PAIR_QUALITY 80u
 static uint32_t corner_rail_at;
 static uint8_t corner_rail_seen;
+static uint8_t joint_straight_path, joint_used_straight;
+static straight_guide_t joint_straight_guide;
+static uint16_t joint_processing_ms;
+static uint8_t joint_path_flags;
+volatile lap_joint_stop_t g_joint_stop;
 #endif
 #else
 #define LAP_MAX_RUN_MS 15000u
@@ -123,6 +129,10 @@ static void zero(void) {
         g_straight_sync_error = g_straight_sync_adjustment = 0.0f;
     }
 #endif
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    straight_guide_reset(&joint_straight_guide);
+    joint_used_straight = 0u;
+#endif
 }
 /** @brief 只在离开RUN时留存一次结果；必须在zero和状态切换之前调用。
  * 参数为本地ms与本次停止原因；后续待机、故障重复上报或K230清理STOP不覆盖。
@@ -134,6 +144,20 @@ static void save_result(uint32_t now, lap_reason_t reason) {
      */
     g_lap_diag.stop_at_ms = now; g_lap_diag.stop_reason = (uint32_t)reason;
     g_lap_diag.frozen = 1u;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    /* 留下超时时正在用的PATH和各证据年龄。未见过该类证据时记UINT32_MAX。 */
+    g_joint_stop.at_ms = now;
+    g_joint_stop.path_at_ms = g_lap.path_at;
+    g_joint_stop.anchor_age_ms = corner_pair_seen ? now - corner_pair_at : UINT32_MAX;
+    g_joint_stop.edge_age_ms = corner_pair_seen ? now - corner_edge_at : UINT32_MAX;
+    g_joint_stop.rail_age_ms = corner_rail_seen ? now - corner_rail_at : UINT32_MAX;
+    g_joint_stop.front_age_ms = corner_front_seen ? now - corner_front_at : UINT32_MAX;
+    g_joint_stop.path_sequence = last_path_sequence;
+    g_joint_stop.path_flags = joint_path_flags;
+    g_joint_stop.path_quality = corner_path_quality;
+    g_joint_stop.processing_ms = joint_processing_ms;
+    g_joint_stop.straight_guide = joint_used_straight;
+#endif
     g_lap_last.valid = 0u;
     g_lap_last.elapsed_ms = now - g_lap.run_since; g_lap_last.reason = reason;
     g_lap_last.left_target = g_lap.left_target; g_lap_last.right_target = g_lap.right_target;
@@ -173,6 +197,8 @@ void lap_motion_init(uint32_t now) {
 #ifdef JOINT_ANGLE_VOICE_TARGET
     corner_rail_at = now;
     corner_rail_seen = 0u;
+    joint_straight_path = 0u;
+    joint_processing_ms = joint_path_flags = 0u;
 #endif
 #endif
 #endif
@@ -365,6 +391,15 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
      * 以已经扣除发送年龄的采集时刻更新锚点，防止积压包延长预测时限。
      */
     corner_path_quality = b[7];
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    joint_path_flags = b[6];
+    joint_processing_ms = (uint16_t)((uint16_t)b[14] | ((uint16_t)b[15] << 8));
+    /* 80和56使用旧直道误差标度；40级只在继续同一直道时沿用它。 */
+    joint_straight_path = (uint8_t)(g_lap.bend == 0u &&
+        ((g_lap.history == 0u && b[7] == CORNER_STRAIGHT_PAIR_QUALITY) ||
+         (g_lap.history != 0u && (b[7] == CORNER_STRAIGHT_RAIL_QUALITY ||
+          (b[7] < 50u && joint_straight_path != 0u)))));
+#endif
     if (g_lap.history != 0u) {
         if (b[7] >= 59u || !corner_forecast_fresh(now, b[7])) g_lap.path_valid = 0u;
 #ifdef JOINT_ANGLE_VOICE_TARGET
@@ -647,9 +682,32 @@ void lap_motion_sample(uint32_t now, const encoder_sample_t *a, const encoder_sa
 #endif
         if (cruise > cap) cruise = cap;
 #endif
-        if (!corner_guide_update(&guide, cruise, g_lap.steering,
-                                 g_lap.bend, dt, &targets[0], &targets[1])) {
-            lap_motion_fault(LAP_CONFIG, now); return;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+        if (joint_straight_path != 0u) {
+            /* 接续时沿用上一控制周期的平均转速和受限差速，避免换算法就重新起步。 */
+            if (joint_used_straight == 0u) {
+                straight_guide_reset(&joint_straight_guide);
+                joint_straight_guide.command_rpm = guide.command_rpm;
+                joint_straight_guide.correction = guide.correction > 0.12f ? 0.12f :
+                    (guide.correction < -0.12f ? -0.12f : guide.correction);
+            }
+            if (!straight_guide_update(&joint_straight_guide, cruise, g_lap.steering,
+                                       dt, &targets[0], &targets[1])) {
+                lap_motion_fault(LAP_CONFIG, now); return;
+            }
+            guide.command_rpm = joint_straight_guide.command_rpm;
+            guide.correction = joint_straight_guide.correction;
+            joint_used_straight = 1u;
+        } else
+#endif
+        {
+            if (!corner_guide_update(&guide, cruise, g_lap.steering,
+                                     g_lap.bend, dt, &targets[0], &targets[1])) {
+                lap_motion_fault(LAP_CONFIG, now); return;
+            }
+#ifdef JOINT_ANGLE_VOICE_TARGET
+            joint_used_straight = 0u;
+#endif
         }
         g_corner_guide = guide;
     }

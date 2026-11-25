@@ -23,6 +23,11 @@ class StraightRoute:
         self.stable = 0
         self.stable_at = 0
 
+    @staticmethod
+    def command(near, slope):
+        """沿用直道横偏和方向权重，返回右正的归一化纠偏量。"""
+        return max(-1.0, min(1.0, 0.7 * near / 25.0 + 1.2 * slope))
+
     def update(self, pixels, now):
         """now为本次取图开始的相对毫秒；返回原始误差及拒绝原因。
 
@@ -36,14 +41,18 @@ class StraightRoute:
             self.reset()
             result['reason'] = 'input'
             return result
+        threshold = _threshold(pixels)
+        black, _, _ = _grid(pixels, threshold)
+        return self.update_anchors(_pair_anchors(black), now, threshold)
+
+    def update_anchors(self, points, now, threshold):
+        """联合版复用本直道拟合和稳定门，使用同一帧已经算出的双边走廊参照。"""
+        result = dict(valid=False, source='unknown', steering=0, bend=0,
+                      confidence=0, support=len(points), reason='no_pair', threshold=threshold)
         timing_ok = self.last_at is None or 0 < now - self.last_at <= 150
         if not timing_ok:
             self.reset()
         self.last_at = now
-        threshold = _threshold(pixels)
-        black, _, _ = _grid(pixels, threshold)
-        points = _pair_anchors(black)
-        result.update(threshold=threshold, support=len(points))
         if len(points) < 8:
             self.stable = 0
             self.previous_error = None
@@ -94,7 +103,7 @@ class StraightRoute:
             self.previous_error = None
             result['reason'] = 'outside_straight_envelope'
             return result
-        error = max(-1.0, min(1.0, 0.7 * near / 25.0 + 1.2 * slope))
+        error = self.command(near, slope)
         if self.previous_error is None or abs(error - self.previous_error) > 0.22 or not timing_ok:
             self.stable = 1
             self.stable_at = now

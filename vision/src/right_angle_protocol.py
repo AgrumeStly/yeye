@@ -38,6 +38,8 @@ class RightAngleSender(LapSender):
             valid = valid and quality == 58 and result.get('front_support', 0) >= 5
         elif kind == 'current_straight_rail':
             valid = valid and quality == 56 and bend == 0
+        elif kind == 'straight_pair':
+            valid = valid and quality == 80 and bend == 0
         elif kind in ('current_single_forecast', 'short_corridor_forecast'):
             valid = valid and (50 <= quality < 58 if kind == 'current_single_forecast' else 40 <= quality < 50)
         if not (-1000<=steering<=1000 and 0<=bend<=1000 and 0<=quality<=100):raise ValueError('v5 route fields')

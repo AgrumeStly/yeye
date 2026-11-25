@@ -30,9 +30,9 @@ class RightAngleVoiceSender(RightAngleSender):
 
 
 class JointAngleVoiceSender(RightAngleVoiceSender):
-    """联合弯配对沿用20字节帧，56标记本帧实测的已知直道单边。"""
-    wire_version = 11
-    flags_by_source = dict(RightAngleVoiceSender.flags_by_source, current_straight_rail=5)
+    """联合弯配对沿用20字节帧，80／56标记旧直道双边／当前直道单边。"""
+    wire_version = 12
+    flags_by_source = dict(RightAngleVoiceSender.flags_by_source, current_straight_rail=5, straight_pair=1)
 
 
 class RunEvidence:
@@ -56,21 +56,27 @@ class RunEvidence:
         age_at_next估算上一帧在本次发送时的年龄，包含2ms名义串口时间；
         首次无效或本地年龄跨200ms时单独保留相邻图，供配对STM32停车环。
         """
-        seq, flags = packet[5], packet[6]
+        sent_packet = packet is not None
+        seq, flags, quality = (packet[5], packet[6], packet[7]) if sent_packet else (None, None, None)
         previous = self.last
         age_at_next = None if previous is None else time.ticks_diff(sent, previous[0]) + 2
         stage = result['stage']
         row = (started, seq, flags, stage, result['reason'], result['steering'], result['bend'],
                time.ticks_diff(acquired, started), time.ticks_diff(sent, started),
                None if previous is None else time.ticks_diff(sent, previous[1]), age_at_next, kws_ms,
-               packet[7], result['source'], previous_phone_ms)
+               quality, result['source'], previous_phone_ms)
         if self.wire_version >= 10:
             row += (result.get('road_section'),)
+        if self.wire_version >= 12:
+            row += (sent_packet, result.get('vision_mode'), result.get('support'), result.get('searched_candidates'),
+                    result.get('arc_entry_distance'), result.get('geometry_failures'))
         self.records[self.count % RECORD_LIMIT] = row
         self.count += 1
-        if not self.issue and (not flags or (age_at_next is not None and age_at_next >= 200)):
+        if not self.issue and ((sent_packet and not flags) or (age_at_next is not None and age_at_next >= 200)):
             before = () if previous is None else ((previous[0], previous[2], bytes(self.last_pixels)),)
-            self.issue = before + ((started, seq, bytes(pixels)),)
+            self.issue = before + ((started, seq if sent_packet else 256, bytes(pixels)),)
+        if not sent_packet:
+            return  # 保留最近真实PATH的时间、序号和画面，无包帧不能刷新源年龄。
         if (self.last_photo_at is None or stage != previous[3] or
                 time.ticks_diff(started, self.last_photo_at) >= 1000):
             self.photos[self.photo_count % PHOTO_LIMIT] = (started, seq, bytes(pixels))
@@ -79,7 +85,7 @@ class RunEvidence:
         self.last_pixels[:] = pixels
         self.last = (started, sent, seq, stage)
 
-    def save(self, event, at):
+    def save(self, event, at, error=None):
         """每次发令使用独立文件名。写入错误报告到终端，且不会触发新的运动。"""
         if self.go_at is None:
             return
@@ -105,8 +111,11 @@ class RunEvidence:
                    'confidence', 'source', 'previous_phone_ms')
         if self.wire_version >= 10:
             columns += ('road_section',)
+        if self.wire_version >= 12:
+            columns += ('transmitted', 'vision_mode', 'support', 'searched_candidates', 'arc_entry_distance',
+                        'straight_geometry_failures')
         with open(prefix + '.jsonl', 'w') as log:
-            log.write(json.dumps(dict(event=event, time_ms=at, go_sent_ms=self.go_at, wire_version=self.wire_version,
+            log.write(json.dumps(dict(event=event, script_error=error, time_ms=at, go_sent_ms=self.go_at, wire_version=self.wire_version,
                 dropped_records=max(0, self.count - RECORD_LIMIT),
                 columns=columns)) + '\n')
             for count in range(max(0, self.count - RECORD_LIMIT), self.count):
@@ -120,8 +129,8 @@ class RunEvidence:
                         pgm.write(raw)
         print('[RIGHT ANGLE VOICE LOG]', prefix, event, self.count)
 
-    def finish(self, event, at):
-        cleanup(lambda: self.save(event, at))
+    def finish(self, event, at, error=None):
+        cleanup(lambda: self.save(event, at) if error is None else self.save(event, at, error))
         self.reset()
 
 
@@ -179,7 +188,7 @@ def drive(sensor, channel, gray, sender, voice, evidence, phone=None, joint=Fals
             for _ in range(3):
                 sender.stop()
         if run_until is not None:
-            if packet is not None:
+            if packet is not None or joint:
                 evidence.record(pixels, result, packet, started, sent, acquired, time.ticks_diff(recognized, sent), phone_ms)
             if keyword == STOP or completed or time.ticks_diff(recognized, run_until) >= 0:
                 event = 'stop_sent' if keyword == STOP else 'joint_complete' if completed else 'go_window_elapsed'
@@ -222,7 +231,7 @@ def main(joint=False, go_pcm=None):
     from media.media import MediaManager
     import image
 
-    sensor = uart = sender = voice = evidence = phone = None
+    sensor = uart = sender = voice = evidence = phone = error = None
     media = False
     try:
         if not joint:
@@ -246,6 +255,9 @@ def main(joint=False, go_pcm=None):
         evidence = RunEvidence(sender.wire_version)
         sensor.run()
         drive(sensor, CAM_CHN_ID_0, image.GRAYSCALE, sender, voice, evidence, phone, joint)
+    except BaseException as exc:
+        error = repr(exc)
+        raise
     finally:
         if sender is not None:
             def stop_link():
@@ -255,7 +267,7 @@ def main(joint=False, go_pcm=None):
         if sensor is not None:
             cleanup(sensor.stop)
         if evidence is not None and evidence.go_at is not None:
-            evidence.finish('script_exit', time.ticks_ms())
+            evidence.finish('script_exit', time.ticks_ms(), error)
         if voice is not None:
             cleanup(voice.close)
         if phone is not None:

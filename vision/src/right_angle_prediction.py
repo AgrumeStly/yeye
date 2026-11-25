@@ -5,6 +5,31 @@ from lite_lap_route import GRID_STEP, GW, GY0, GY1, _pixel
 # 持续单侧证据和瞬时白走廊的上限分别核对；低置信度帧不能续租强观测。
 PREDICTION_ANCHOR_MS = 1200
 PREDICTION_GAP_MS = 240
+STRAIGHT_CONTROL_ROWS = range((72 + GRID_STEP - 1) // GRID_STEP, 216 // GRID_STEP + 1, 2)
+
+
+def turn_ahead(pixels, threshold, reference):
+    """远区用少量投影格找进入前方白区的黑边；只触发备选搜索，不发转向命令。
+
+    42到90是前向投影代理量。横向取距旧中线-17到+10的内部位置，跳过原边界。
+    两个不同实黑格才有预警。角度和弯心继续由弯道两臂的当前实测确定。
+    """
+    cx, cz, u_x, u_z, _, _ = reference[7]
+    base = cx*u_z - cz*u_x
+    dark = set()
+    for forward in (42, 48, 54, 62, 70, 80, 90):
+        for lateral in (-17, -11, -5, 2, 10):
+            cross = base + lateral
+            cell = _pixel(forward*u_x + cross*u_z, forward*u_z - cross*u_x)
+            if cell is None or cell in dark:
+                continue
+            x, y = cell % GW * GRID_STEP, cell // GW * GRID_STEP
+            at = y*320+x
+            if sum(pixels[at+delta] <= threshold for delta in (0, 2, 640, 642)) >= 2:
+                dark.add(cell)
+                if len(dark) >= 2:
+                    return True
+    return False
 
 
 def _project_row(gy):

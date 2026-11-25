@@ -35,18 +35,24 @@ def _peel_background(black, component):
             black[index]=0
 
 
+def sample_black_rows(pixels, threshold, rows):
+    """按指定网格行采样灰度，用于近中区快速走廊和完整弯道组件的共同入口。"""
+    black = bytearray(GW*GH)
+    for gy in rows:
+        for gx in range(1,GW-1):
+            p=gy*GRID_STEP*320+gx*GRID_STEP
+            black[gy*GW+gx]=int((int(pixels[p]<=threshold)+int(pixels[p+2]<=threshold)+
+                int(pixels[p+640]<=threshold)+int(pixels[p+642]<=threshold))>=2)
+    return black
+
+
 def corner_grid(pixels, threshold):
     """输入320x240灰度及阈值，返回当前黑格／容差网格／组件标签。
 
     4点至少2黑才采黑；小于3格的噪声组件仍拒绝。一格扩张只用于模型
     采样容差，不充作真实黑边。所有容器大小受320x240网格固定上界限制。
     """
-    black=bytearray(GW*GH);labels=array('H',[0]*(GW*GH))
-    for gy in range(GY0,GY1):
-        for gx in range(1,GW-1):
-            p=gy*GRID_STEP*320+gx*GRID_STEP
-            black[gy*GW+gx]=int((int(pixels[p]<=threshold)+int(pixels[p+2]<=threshold)+
-                int(pixels[p+640]<=threshold)+int(pixels[p+642]<=threshold))>=2)
+    black=sample_black_rows(pixels, threshold, range(GY0,GY1));labels=array('H',[0]*(GW*GH))
     number=0
     for start in range(GY0*GW,GY1*GW):
         if not black[start] or labels[start]:continue

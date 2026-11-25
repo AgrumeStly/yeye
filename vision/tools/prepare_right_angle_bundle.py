@@ -13,6 +13,8 @@ def build(allow_drive=False, *, voice=False, joint=False):
              'right_angle_route.py', 'right_angle_protocol.py')
     if voice:
         names = (*names[:5], 'right_angle_prediction.py', *names[5:], 'voice_keywords.py')
+        if joint:
+            names = (*names[:6], 'straight_route.py', *names[6:])
         if not joint:
             names += ('right_angle_phone.py',)
         names += ('right_angle_voice_canmv.py',)
@@ -22,7 +24,7 @@ def build(allow_drive=False, *, voice=False, joint=False):
              '# RightAngle v5 current L corner + racing arc; KEY start only.\n']
     manifest = {}
     if joint:
-        parts[0] = '# 直角＋钝角联合弯 v11，等待本地 Go。\n'
+        parts[0] = '# 直角＋钝角联合弯 v12，等待本地 Go。\n'
         asset = root / 'vision/assets/go_received.wav'
         with wave.open(str(asset), 'rb') as reply:
             pcm = reply.readframes(reply.getnframes())
@@ -43,10 +45,10 @@ def build(allow_drive=False, *, voice=False, joint=False):
         source = '\n'.join(line for line in source.splitlines() if not line.startswith(
             ('from lap_protocol import ', 'from vision_protocol import ',
              'from right_angle_route import ', 'from right_angle_protocol import ', 'from voice_keywords import ',
-             'from right_angle_prediction import ', 'from right_angle_phone import ')))
+             'from right_angle_prediction import ', 'from right_angle_phone import ', 'from straight_route import ')))
         source = '\n'.join(line for line in source.splitlines() if not line.startswith(
             ('from right_angle_racing import ', 'from right_angle_grid import ',
-             'from lite_lap_route import GRID_STEP')))
+             'from lite_lap_route import ')))
         if name == 'right_angle_canmv.py' and allow_drive:
             source = source.replace('ALLOW_DRIVE = False', 'ALLOW_DRIVE = True').replace('SHOW_PREVIEW = True', 'SHOW_PREVIEW = False')
             # 正式视觉必须覆盖摆车、双轮测试和等待；不因10分钟窗口在KEY前悄悄退出。
@@ -59,7 +61,7 @@ def build(allow_drive=False, *, voice=False, joint=False):
     source = ''.join(parts)
     compile(source, 'right_angle_bundle', 'exec')
     manifest.update(bundle_sha256=hashlib.sha256(source.encode('utf-8')).hexdigest(),
-                    wire_version=11 if joint else (9 if voice else 5), grid_step=6, allow_drive=allow_drive or voice,
+                    wire_version=12 if joint else (9 if voice else 5), grid_step=6, allow_drive=allow_drive or voice,
                     automatic_motor_start=False, duration_ms=0 if voice or allow_drive else 600000)
     if voice:
         manifest['voice_motor_start'] = True

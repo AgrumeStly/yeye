@@ -30,8 +30,8 @@ def symbols():
     with AXF.open('rb') as stream:
         table = ELFFile(stream).get_section_by_name('.symtab')
         found = {s.name: dict(address=int(s['st_value']), size=int(s['st_size'])) for s in table.iter_symbols()
-                 if s.name in names or s.name == 'g_corner_startup'}
-    required_found = set(found)-{'g_corner_startup'}
+                 if s.name in names or s.name in ('g_corner_startup', 'g_joint_stop')}
+    required_found = set(found)-{'g_corner_startup', 'g_joint_stop'}
     if required_found != set(names) and required_found != set(names)-{'g_lap_diag'}:
         raise RuntimeError('required LowSpeedLap symbols absent')
     # ARMCC当前工程使用短枚举，不能按主机int大小推算state/reason偏移。
@@ -42,6 +42,8 @@ def symbols():
         raise RuntimeError('timing or diagnostic layout changed')
     if 'g_corner_startup' in found and found['g_corner_startup']['size'] != 32:
         raise RuntimeError('corner startup layout changed')
+    if 'g_joint_stop' in found and found['g_joint_stop']['size'] != 32:
+        raise RuntimeError('joint stop layout changed')
     return found
 
 
@@ -107,6 +109,10 @@ def capture(target, addresses):
             struct.unpack('<4I2i2I', data('g_corner_startup'))))
     if 'g_lap_diag' in addresses:
         result['diagnostic_trace'] = diagnostic_view(data('g_lap_diag'))
+    if 'g_joint_stop' in addresses and result['last_run']['valid']:
+        fields = ('at_ms','path_at_ms','anchor_age_ms','edge_age_ms','rail_age_ms','front_age_ms',
+                  'path_sequence','path_flags','path_quality','straight_guide','processing_ms')
+        result['joint_stop'] = dict(zip(fields, struct.unpack_from('<6I4BH', data('g_joint_stop'))))
     result['timing'] = dict(zip(('counter_ready','clock_hz','systick_max_cycles','motion_lock_max_cycles'),
                                struct.unpack('<4I',data('g_lap_timing'))))
     cal = data('g_speed_match', 8)
@@ -163,7 +169,7 @@ def main():
         maximum_reason = 12  # VOICE_STOP是本版的合法停车原因。
     elif args.profile == 'joint-angle-voice':
         # v10及后续联合弯使用同一冻结环布局，实际Flash仍需与所选BIN逐字节相等。
-        revisions = (0x02120016, 0x02120017)
+        revisions = (0x02120016, 0x02120017, 0x02120018)
         minimum_rpm, maximum_rpm, maximum_run = 40, 100, 40000
         maximum_reason = 12
     addresses = symbols()
