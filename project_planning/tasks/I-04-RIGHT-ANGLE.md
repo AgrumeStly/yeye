@@ -2,6 +2,8 @@
 
 ## 当前摘要
 
+2026-11-25，联合 v12 再停。K230 `voice_0010` 确认右单边扫描的负步长切片触发板端 `NotImplementedError`。已改用物理列索引，实板隔离诊断确认右边拟合可返回，更新 `/sdcard/main.py` 并逐字节读回。STM32 `0x02120018` 已确认配对，无需重刷。实跑待主控验收。 [现场日志](../../testing/2026-11-25_joint_angle_voice/voice_0010.jsonl) [安装回执](../../testing/2026-11-25_joint_angle_voice/v12_rail_fix_receipt.json)
+
 2026-11-25，联合 v11 仍在首弯前停。取回 K230 本趟 99 帧历史日志，发现从 Go 第一帧起把直道当作弯中，且视觉在 Go 后约 6.53 秒退出。读取 STM32 时已处于待机，本趟未找到有效冻结码。v12 用原直道拟合和控制、当前单边预估、远区低频查弯及 v9 首弯轨迹，增加两板停车细节。 [停车位置](../../testing/2026-11-25_joint_angle_voice/v11_stop_position.png) [K230 日志](../../testing/2026-11-25_joint_angle_voice/voice_0008.jsonl)
 
 2026-11-25，主控报告联合 v10 起步后直线行驶，未到首弯即快闪停车。现场冻结为 5.999 秒 `LINK 2`，最后 PATH 源图年龄约 71 ms。v11 允许当前实测到的直道单侧边线续行，提高双边明确时的巡航目标。K230 已装 v11 并读回一致，配对固件 `0x02120017` 已构建，待主控下载和上道验收。 [冻结记录](../../testing/2026-11-25_joint_angle_voice/v10_first_stop_swd.json) [新版配对](../../control/docs/joint_angle_voice.md)
@@ -50,6 +52,10 @@
 结束条件：实施与适用检查完成后回写本任务并进入待主控验收；缺少实物条件则列明待验与唯一下一步。若主控已按本次授权完成一次上道，先归档结果再等待明确通过／退回，不自动连续试跑。完整首弯仅在主控明确接受后记已验收；失败、退回或换聊继续本ID，不扩展整圈／提速任务。
 
 ## 执行结果
+
+联合 v12 又在相近位置停止。历史日志 `voice_0010` 包含 122 个有效 `straight_pair/near_mid` 包，发送前最慢 34 ms，发送时上一源图估算年龄峰值 69 ms。最后有效包序号 `252`，Go 后 3.842 秒记录 `script_exit` 和 `NotImplementedError('only slices with step=1 (aka None) are supported',)`。唯一匹配的负步长切片在右侧单边黑格扫描中。主控已断电重上，读回 STM32 `0x02120018` 与本地固件相同，当前没有本趟冻结码。此证据确认 K230 程序退出的直接原因，STM32 原始停码无法追溯。 [K230 日志](../../testing/2026-11-25_joint_angle_voice/voice_0010.jsonl) [重上电后 SWD](../../testing/2026-11-25_joint_angle_voice/v12_after_power_cycle_swd.json)
+
+右侧逐列倒序寻边，白区读取仍用正向连续切片；保留左右几何拟合规则。电脑用原记录图比较左右拟合逐值相同。K230 CanMV v1.8 用相同旧图网格运行纯拟合，右边法向偏移 `28.00593`，未初始化相机、UART 或运行控制入口。随后备份旧 `main.py`、写入 161,035 字节、逐字节读回一致。保留 100／62 RPM、断流保护与原 STM32 配对。不新增实跑。目标是消除识别切换时的崩溃，支撑表 1 基本功能的完圈与用时得分，仍以连续过弯和触边记录验收。 [比赛原文](../../competition/比赛文档.pdf) [装板回执](../../testing/2026-11-25_joint_angle_voice/v12_rail_fix_receipt.json)
 
 v11 现场取证：照片车仍位于首弯前。匹配的 K230 `voice_0008` 从 Go 的第一张帧 `85` 即发 `bend=1000`，99 帧中 98 帧标为 `right_angle`，最后 `183` 为 `current_single_forecast`，在 Go 后约 6.53 秒由 `script_exit` 结尾。STM32 实读 Flash 与 v11 BIN 一致，`WAIT 1`、`run_since=0`、`last_run.valid=0`，无有效本趟冻结停车码。不能从此断定 STM32 最初快闪原因，也不能把视觉退出当作已知异常类型。 [Go 首帧](../../testing/2026-11-25_joint_angle_voice/voice_0008_route_12046_085.pgm) [最后路径图](../../testing/2026-11-25_joint_angle_voice/voice_0008_route_18004_183.pgm) [STM32 读回](../../testing/2026-11-25_joint_angle_voice/v11_after_stop_swd.json)
 

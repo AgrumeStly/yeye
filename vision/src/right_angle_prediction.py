@@ -47,18 +47,21 @@ def _left_rail(black, right=False):
     """
     samples = []
     rows = range((108 + GRID_STEP - 1) // GRID_STEP, 216 // GRID_STEP, 18 // GRID_STEP)
+    edge = GW - 1 if right else 0
+    step = -1 if right else 1
     for gy in rows:
         base = gy * GW
         row = black[base:base + GW]
-        if right:
-            row = row[::-1]
         start = None
         for gx in range(1, GW - 4):
-            if row[gx]:
+            # 右边从物理列倒序走。CanMV v1.8 不支持 bytearray 的负步长切片。
+            index = edge + step * gx
+            if row[index]:
                 if start is None:
                     start = gx
             elif start is not None:
-                if 2 <= gx - start <= 60 // GRID_STEP and not any(row[gx:gx + 4]):
+                white_at = index - 3 if right else index
+                if 2 <= gx - start <= 60 // GRID_STEP and not any(row[white_at:white_at + 4]):
                     z, scale = _project_row(gy)
                     middle = (start + gx - 1) / 2
                     if right:
