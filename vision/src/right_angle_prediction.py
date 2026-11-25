@@ -13,25 +13,32 @@ def _project_row(gy):
             48.0 / (y + 38.11111111111108))
 
 
-def _left_rail(black):
+def _left_rail(black, right=False):
     """在近区多行找细黑边与它右侧的白区，拟合车道左边直线。
 
     使用未扩张黑格求中心；平行背景或断裂噪声不能用一个采样点参与拟合。
-    返回行驶方向、法向偏移和最远实测投影。单靠此结果不会确认新弯。
+    返回行驶方向、法向偏移和最远实测投影。right为真时从右边向内搜索。
+    单靠此结果不会确认新弯，左右边线均使用真实像素坐标和相同的白侧检查。
     """
     samples = []
     rows = range((108 + GRID_STEP - 1) // GRID_STEP, 216 // GRID_STEP, 18 // GRID_STEP)
     for gy in rows:
         base = gy * GW
+        row = black[base:base + GW]
+        if right:
+            row = row[::-1]
         start = None
         for gx in range(1, GW - 4):
-            if black[base + gx]:
+            if row[gx]:
                 if start is None:
                     start = gx
             elif start is not None:
-                if 2 <= gx - start <= 60 // GRID_STEP and not any(black[base + gx:base + gx + 4]):
+                if 2 <= gx - start <= 60 // GRID_STEP and not any(row[gx:gx + 4]):
                     z, scale = _project_row(gy)
-                    x = ((start + gx - 1) * GRID_STEP / 2 + 1 - 159.5) * scale
+                    middle = (start + gx - 1) / 2
+                    if right:
+                        middle = GW - 1 - middle
+                    x = (middle * GRID_STEP + 1 - 159.5) * scale
                     samples.append((x, z))
                     break
                 start = None
@@ -45,7 +52,8 @@ def _left_rail(black):
     yaw = math.atan2(ux, uz)
     offsets = [uz * x - ux * z for x, z in samples]
     offset = sum(offsets) / len(offsets)
-    if not (-48 <= offset <= -8 and -1.3 <= yaw <= 0.44 and max(offsets) - min(offsets) <= 4):
+    inward_offset, inward_yaw = (-offset, -yaw) if right else (offset, yaw)
+    if not (-48 <= inward_offset <= -8 and -1.3 <= inward_yaw <= 0.44 and max(offsets) - min(offsets) <= 4):
         return None
     return ux, uz, yaw, offset, max(ux * x + uz * z for x, z in samples)
 
@@ -110,6 +118,32 @@ def fitted_left_forecast(black, previous, template):
     ux, uz, yaw, offset, _ = rail
     cx, cz, _, angle = previous[4]
     return template(offset + 25, cx * ux + cz * uz, yaw, angle)
+
+
+def fitted_straight_rail(black, previous, template):
+    """按当前单侧多行像素更新已知直道中线。只沿用原车道侧别，不估算新弯心。
+
+    直道模型的横向截距和偏航来自当前画面。车道宽50和截距门限沿用投影代理量。
+    单根黑线必须和旧走廊的位置／方向一致，且由调用方复核前方白色推荐线。
+    """
+    old_offset, _, old_yaw, _ = previous[5]
+    best = None
+    best_error = 16.0
+    for right in (False, True):
+        rail = _left_rail(black, right)
+        if rail is None:
+            continue
+        _, _, yaw, offset, _ = rail
+        center = offset - 25 if right else offset + 25
+        angle_error = abs(yaw - old_yaw)
+        if abs(center - old_offset) > 10 or angle_error > math.radians(16):
+            continue
+        error = abs(center - old_offset) + angle_error * 24
+        if error < best_error:
+            candidate = template(center, 50, yaw, 0)
+            if candidate is not None:
+                best, best_error = candidate, error
+    return best
 
 
 def fitted_front_edge(black, previous, template):

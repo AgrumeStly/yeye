@@ -9,15 +9,15 @@ int corner_guide_update(corner_guide_t *g, float cruise, int16_t steering,
                         uint16_t bend, uint32_t dt_ms, float *left, float *right) {
     float risk, dt, speed, desired, maximum, step;
     *left = *right = 0.0f;
-    if (!(cruise >= 40.0f && cruise <= 80.0f) || steering < -1000 || steering > 1000 ||
+    if (!(cruise >= 40.0f && cruise <= CORNER_CRUISE_MAX_RPM) || steering < -1000 || steering > 1000 ||
         bend > 1000u || dt_ms == 0u || dt_ms > 60u ||
-        !(g->command_rpm >= 0.0f && g->command_rpm <= 80.0f) ||
+        !(g->command_rpm >= 0.0f && g->command_rpm <= CORNER_CRUISE_MAX_RPM) ||
         !(g->correction >= -1.0f && g->correction <= 1.0f)) {
         corner_guide_reset(g); return 0;
     }
     dt = (float)dt_ms / 1000.0f; risk = (float)bend / 1000.0f;
     /* v5弯道走可前进的大半径圆弧，满弯平均60RPM，低巡航时不额外提速。
-     * 上限仍取直道已用80RPM，不宣称轮距、侧滑或最快圈速已完成实测。
+     * 旧首弯最高80RPM；联合弯用100RPM加快清晰直道，满弯和外轮上限仍保持。
      */
     speed = cruise + ((cruise < 60.0f ? cruise : 60.0f) - cruise) * risk;
     if (g->command_rpm == 0.0f) g->command_rpm = 40.0f;

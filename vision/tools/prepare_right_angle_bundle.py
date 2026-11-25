@@ -22,7 +22,7 @@ def build(allow_drive=False, *, voice=False, joint=False):
              '# RightAngle v5 current L corner + racing arc; KEY start only.\n']
     manifest = {}
     if joint:
-        parts[0] = '# 直角＋钝角联合弯 v10，等待本地 Go。\n'
+        parts[0] = '# 直角＋钝角联合弯 v11，等待本地 Go。\n'
         asset = root / 'vision/assets/go_received.wav'
         with wave.open(str(asset), 'rb') as reply:
             pcm = reply.readframes(reply.getnframes())
@@ -59,7 +59,7 @@ def build(allow_drive=False, *, voice=False, joint=False):
     source = ''.join(parts)
     compile(source, 'right_angle_bundle', 'exec')
     manifest.update(bundle_sha256=hashlib.sha256(source.encode('utf-8')).hexdigest(),
-                    wire_version=10 if joint else (9 if voice else 5), grid_step=6, allow_drive=allow_drive or voice,
+                    wire_version=11 if joint else (9 if voice else 5), grid_step=6, allow_drive=allow_drive or voice,
                     automatic_motor_start=False, duration_ms=0 if voice or allow_drive else 600000)
     if voice:
         manifest['voice_motor_start'] = True
@@ -73,7 +73,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     targets = parser.add_mutually_exclusive_group()
     targets.add_argument('--voice', action='store_true', help='生成语音首弯 v9 的车载 main.py')
-    targets.add_argument('--joint', action='store_true', help='生成直角和钝角联合弯 v10 的车载 main.py')
+    targets.add_argument('--joint', action='store_true', help='生成直角和钝角联合弯的车载 main.py')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     outputs = ((True, 'main.py'),) if args.voice or args.joint else (

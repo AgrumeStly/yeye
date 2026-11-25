@@ -130,7 +130,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--frequency', type=int, default=1000000, choices=(100000, 1000000),
                         help='SWD read clock in Hz; 100kHz retries an unstable physical link without reset')
-    parser.add_argument('--profile', choices=('lap', 'straight', 'straight-dual', 'right-angle', 'right-angle-voice'),
+    parser.add_argument('--profile', choices=('lap', 'straight', 'straight-dual', 'right-angle', 'right-angle-voice', 'joint-angle-voice'),
                         default='lap', help='select AXF and revision, never writes Flash')
     parser.add_argument('--image', type=Path, help='archived AXF plus adjacent BIN; Flash must match before RAM decode')
     args = parser.parse_args()
@@ -142,6 +142,8 @@ def main():
         AXF = ROOT/'control/build/firmware/right_angle/right_angle.axf'
     elif args.profile == 'right-angle-voice':
         AXF = ROOT/'control/build/firmware/right_angle_voice/right_angle_voice.axf'
+    elif args.profile == 'joint-angle-voice':
+        AXF = ROOT/'control/build/firmware/joint_angle_voice/joint_angle_voice.axf'
     if args.image is not None:
         AXF = args.image.resolve()
         if AXF.suffix.lower() != '.axf' or not AXF.is_file() or not AXF.with_suffix('.bin').is_file():
@@ -159,6 +161,11 @@ def main():
         revisions = (0x02120013, 0x02120014, 0x02120015)
         minimum_rpm, maximum_rpm, maximum_run = 40, 80, 12000
         maximum_reason = 12  # VOICE_STOP是本版的合法停车原因。
+    elif args.profile == 'joint-angle-voice':
+        # v10及后续联合弯使用同一冻结环布局，实际Flash仍需与所选BIN逐字节相等。
+        revisions = (0x02120016, 0x02120017)
+        minimum_rpm, maximum_rpm, maximum_run = 40, 100, 40000
+        maximum_reason = 12
     addresses = symbols()
     args.output.mkdir(parents=True, exist_ok=False)
     result = dict(probe_id=PROBE_ID, reset_requested=False, halt_requested=False, resume_requested=False,

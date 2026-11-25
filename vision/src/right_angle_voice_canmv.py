@@ -30,8 +30,9 @@ class RightAngleVoiceSender(RightAngleSender):
 
 
 class JointAngleVoiceSender(RightAngleVoiceSender):
-    """联合弯专用配对版本，沿用20字节帧及v9的置信度分档。"""
-    wire_version = 10
+    """联合弯配对沿用20字节帧，56标记本帧实测的已知直道单边。"""
+    wire_version = 11
+    flags_by_source = dict(RightAngleVoiceSender.flags_by_source, current_straight_rail=5)
 
 
 class RunEvidence:
@@ -63,7 +64,7 @@ class RunEvidence:
                time.ticks_diff(acquired, started), time.ticks_diff(sent, started),
                None if previous is None else time.ticks_diff(sent, previous[1]), age_at_next, kws_ms,
                packet[7], result['source'], previous_phone_ms)
-        if self.wire_version == 10:
+        if self.wire_version >= 10:
             row += (result.get('road_section'),)
         self.records[self.count % RECORD_LIMIT] = row
         self.count += 1
@@ -102,7 +103,7 @@ class RunEvidence:
         columns = ('start_ms', 'seq', 'flags', 'stage', 'reason', 'steering', 'bend', 'acquire_ms',
                    'to_send_ms', 'send_interval_ms', 'previous_source_age_ms', 'kws_ms',
                    'confidence', 'source', 'previous_phone_ms')
-        if self.wire_version == 10:
+        if self.wire_version >= 10:
             columns += ('road_section',)
         with open(prefix + '.jsonl', 'w') as log:
             log.write(json.dumps(dict(event=event, time_ms=at, go_sent_ms=self.go_at, wire_version=self.wire_version,
@@ -127,7 +128,8 @@ class RunEvidence:
 def drive(sensor, channel, gray, sender, voice, evidence, phone=None, joint=False):
     """一轮先采并发送PATH，再读一次短等待音频。Go发令始终绑定新鲜PATH序号。
 
-    单L及出口弱关联按当前图像续行。失效帧立即交给STM32，不沿用旧转向量。
+    单L及出口弱关联按当前图像续行。联合版模型暂未匹配、且无明确压线证据时等下一帧，
+    STM32仍以最后发出的源图年龄监督。明确阻断的无效帧立即发出。
     车上没有执行回执，窗口表示已发Go。窗口内不打印、不播放WAV、不写存储。
     """
     detector = RightAngleRoute(predictive=True, joint=joint)
@@ -150,10 +152,10 @@ def drive(sensor, channel, gray, sender, voice, evidence, phone=None, joint=Fals
         processed = time.ticks_ms()
         processing = time.ticks_diff(processed, copied)
         age = time.ticks_diff(processed, started)
-        if joint and run_until is not None and result['valid'] and (processing > 100 or age >= 150):
-            # 计算超时但图像有路径时不发过期命令。STM32仍按上一次实际源图的200ms监督。
-            continue
-        packet = sender.path(result, processing, age)
+        skip = (joint and run_until is not None and (result['reason'] == 'observation_missed' or
+                (result['valid'] and (processing > 100 or age >= 150))))
+        # 跳过不确证或过期帧，不更新时间戳。语音Stop和本地记录完成逻辑照常处理。
+        packet = None if skip else sender.path(result, processing, age)
         sent = time.ticks_ms()
         if pending_go is not None:
             remaining = (700 if joint else 200) - time.ticks_diff(sent, pending_go)
@@ -171,13 +173,14 @@ def drive(sensor, channel, gray, sender, voice, evidence, phone=None, joint=Fals
                 continue
         keyword = voice.poll()
         recognized = time.ticks_ms()
-        completed = joint and run_until is not None and packet[6] and result.get('joint_complete', False)
+        completed = joint and run_until is not None and packet is not None and packet[6] and result.get('joint_complete', False)
         if keyword == STOP or completed:
             pending_go = None
             for _ in range(3):
                 sender.stop()
         if run_until is not None:
-            evidence.record(pixels, result, packet, started, sent, acquired, time.ticks_diff(recognized, sent), phone_ms)
+            if packet is not None:
+                evidence.record(pixels, result, packet, started, sent, acquired, time.ticks_diff(recognized, sent), phone_ms)
             if keyword == STOP or completed or time.ticks_diff(recognized, run_until) >= 0:
                 event = 'stop_sent' if keyword == STOP else 'joint_complete' if completed else 'go_window_elapsed'
                 evidence.finish(event, recognized)

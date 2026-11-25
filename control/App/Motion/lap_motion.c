@@ -17,7 +17,7 @@
  */
 #ifdef JOINT_ANGLE_VOICE_TARGET
 #define LAP_MAX_RUN_MS 40000u
-volatile lap_config_t g_lap_config = {80.0f, LAP_MAX_RUN_MS, 200.0f};
+volatile lap_config_t g_lap_config = {CORNER_CRUISE_MAX_RPM, LAP_MAX_RUN_MS, 200.0f};
 #else
 volatile lap_config_t g_lap_config = {80.0f, 12000u, 200.0f};
 #endif
@@ -28,7 +28,7 @@ volatile corner_startup_t g_corner_startup;
 static uint32_t corner_pair_at;
 static uint8_t corner_pair_seen;
 #define LAP_MIN_CRUISE 40.0f
-#define LAP_MAX_CRUISE 80.0f
+#define LAP_MAX_CRUISE CORNER_CRUISE_MAX_RPM
 #ifdef RIGHT_ANGLE_VOICE_TARGET
 #ifndef JOINT_ANGLE_VOICE_TARGET
 #define LAP_MAX_RUN_MS 12000u
@@ -40,6 +40,12 @@ static uint8_t corner_pair_seen;
 #define CORNER_FRONT_QUALITY 58u
 static uint32_t corner_edge_at, corner_front_at;
 static uint8_t corner_path_quality, corner_front_seen;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+/* 56表示同一条直道边重新通过多行拟合。单侧实测可以更新自己的时钟，不能续双边或新弯证据。 */
+#define CORNER_STRAIGHT_RAIL_QUALITY 56u
+static uint32_t corner_rail_at;
+static uint8_t corner_rail_seen;
+#endif
 #else
 #define LAP_MAX_RUN_MS 15000u
 #endif
@@ -164,6 +170,10 @@ void lap_motion_init(uint32_t now) {
 #ifdef RIGHT_ANGLE_VOICE_TARGET
     corner_edge_at = corner_front_at = now;
     corner_path_quality = corner_front_seen = 0u;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    corner_rail_at = now;
+    corner_rail_seen = 0u;
+#endif
 #endif
 #endif
 #ifdef LAP_DUAL_STARTUP
@@ -211,6 +221,10 @@ void lap_motion_transport_fault(uint32_t now) {
 static int corner_forecast_fresh(uint32_t now, uint8_t quality) {
     if (quality == CORNER_FRONT_QUALITY)
         return corner_front_seen != 0u && (uint32_t)(now - corner_front_at) < CORNER_COVER_MS;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    if (corner_rail_seen != 0u && (uint32_t)(now - corner_rail_at) < CORNER_COVER_MS &&
+        (quality == CORNER_STRAIGHT_RAIL_QUALITY || quality < 50u)) return 1;
+#endif
     return corner_pair_seen != 0u && (uint32_t)(now - corner_pair_at) < CORNER_ANCHOR_MS &&
            (quality >= 50u || (uint32_t)(now - corner_edge_at) < CORNER_COVER_MS);
 }
@@ -353,6 +367,9 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
     corner_path_quality = b[7];
     if (g_lap.history != 0u) {
         if (b[7] >= 59u || !corner_forecast_fresh(now, b[7])) g_lap.path_valid = 0u;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+        if (b[7] == CORNER_STRAIGHT_RAIL_QUALITY && g_lap.bend != 0u) g_lap.path_valid = 0u;
+#endif
     } else if (g_lap.single != 0u) {
 #ifdef JOINT_ANGLE_VOICE_TARGET
         /* 外侧两臂已确认右弯，局部路径允许小幅向左回正；仍要求满弯风险与当前证据。 */
@@ -361,6 +378,13 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
         if (g_lap.bend != 1000u || g_lap.steering < 0 || b[7] < 60u) g_lap.path_valid = 0u;
 #endif
     } else if (b[7] < 70u) g_lap.path_valid = 0u;
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    if (g_lap.path_valid == 0u || (g_lap.history == 0u && g_lap.bend >= 200u)) corner_rail_seen = 0u;
+    else if (g_lap.history != 0u && b[7] == CORNER_STRAIGHT_RAIL_QUALITY) {
+        corner_rail_at = g_lap.path_at;
+        corner_rail_seen = 1u;
+    }
+#endif
     if (g_lap.path_valid == 0u) corner_pair_seen = corner_front_seen = 0u;
     else {
         if (g_lap.history == 0u || b[7] == CORNER_FRONT_QUALITY) {
@@ -618,6 +642,9 @@ void lap_motion_sample(uint32_t now, const encoder_sample_t *a, const encoder_sa
         /* 低置信度下降共同轮速，保留现有转向斜坡和独立PI。单位均为RPM。 */
         float cap = g_lap.history != 0u ? (corner_path_quality < 50u ? 40.0f : 50.0f) :
                     (g_lap.single != 0u ? 60.0f : LAP_MAX_CRUISE);
+#ifdef JOINT_ANGLE_VOICE_TARGET
+        if (g_lap.history != 0u && corner_path_quality == CORNER_STRAIGHT_RAIL_QUALITY) cap = 62.0f;
+#endif
         if (cruise > cap) cruise = cap;
 #endif
         if (!corner_guide_update(&guide, cruise, g_lap.steering,

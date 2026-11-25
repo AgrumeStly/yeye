@@ -228,7 +228,7 @@ void UsageFault_Handler(void) { fatal_stop(); }
 /** @brief 先撤PWM，再初始化编码器／状态与启动监督；默认只读采集，不自启。 */
 int main(void) {
 #ifdef JOINT_ANGLE_VOICE_TARGET
-    g_speed_revision = 0x02120016u; /* 联合弯v10，使用独立观察及语音配对程序。 */
+    g_speed_revision = 0x02120017u; /* 联合弯v11，支持实测直道单边续行和100RPM巡航。 */
 #elif defined(RIGHT_ANGLE_VOICE_TARGET)
     g_speed_revision = 0x02120015u; /* 语音首弯v9，支持当前前线连续估计。 */
 #elif defined(STRAIGHT_VOICE_TARGET)

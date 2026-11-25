@@ -30,12 +30,14 @@ class RightAngleSender(LapSender):
         steering=int(result.get('steering',0));bend=int(result.get('bend',0));quality=int(result.get('confidence',0))
         if kind=='current_corner_predicted':
             # 联合弯外边仍确认右转，但允许赛车线在进／出弯短时向左回正。
-            valid=valid and result.get('corner_observed') is True and bend==1000 and (self.wire_version == 10 or steering>=0) and quality>=60
+            valid=valid and result.get('corner_observed') is True and bend==1000 and (self.wire_version >= 10 or steering>=0) and quality>=60
         elif kind=='current_corner_associated':
             evidence_age=result.get('corner_age_ms',700)
             valid=valid and isinstance(evidence_age,int) and 0<=evidence_age<700 and bend==1000 and steering>=0 and quality>=45
         elif kind == 'current_front_forecast':
             valid = valid and quality == 58 and result.get('front_support', 0) >= 5
+        elif kind == 'current_straight_rail':
+            valid = valid and quality == 56 and bend == 0
         elif kind in ('current_single_forecast', 'short_corridor_forecast'):
             valid = valid and (50 <= quality < 58 if kind == 'current_single_forecast' else 40 <= quality < 50)
         if not (-1000<=steering<=1000 and 0<=bend<=1000 and 0<=quality<=100):raise ValueError('v5 route fields')
