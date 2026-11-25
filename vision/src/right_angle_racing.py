@@ -9,6 +9,56 @@ import math
 RACING_RADIUS = 30.0
 RACING_OUTSET = 5.0
 RACING_TRACK = 14.0  # 名义控制轮距代理量；未归档实测，不当作硬件尺寸事实。
+JOINT_OUTSET = 2.0  # 两弯共用的外偏；首弯 v9 为 5，视频出弯已偏近外侧黑边。
+JOINT_CLEARANCE = 21.0  # 名义线路到边界的最小代理距离，给车身半对角和跟踪误差留量。
+
+
+def joint_racing_route(parameters):
+    """连接任意正角度右弯的同偏置入口／出口。参数和输出距离均为地面投影代理量。
+
+    以模型车道宽50计算余量：外侧由共同偏置约束，最靠近内角处在圆弧中点。
+    根据该处到内侧折点的距离限制半径；用同一个偏置衔接首弯出口和次弯入口。
+    返回车头投影最近点、弧后的有符号纵向进度和前视路线，供控速、续行和退出使用。
+    """
+    cx, cz, yaw, angle = parameters
+    half = angle / 2
+    secant = 1 / math.cos(half)
+    radius_limit = ((25 + JOINT_OUTSET) * secant - JOINT_CLEARANCE) / (secant - 1)
+    radius = min(30.0 if angle > 1 else 58.0, radius_limit)
+    u, n = (math.sin(yaw), math.cos(yaw)), (math.cos(yaw), -math.sin(yaw))
+    va, vz = math.sin(angle), math.cos(angle)
+    tangent = -(radius - JOINT_OUTSET) * math.tan(half)
+    center_x = radius - JOINT_OUTSET
+    end_x = center_x - radius * vz
+    end_z = tangent + radius * va
+    arc_length = radius * angle
+    qx, qz = -cx*n[0]-cz*n[1], -cx*u[0]-cz*u[1]
+    arc_theta = max(0.0, min(angle, math.atan2(qz - tangent, center_x - qx)))
+    exit_s = (qx - end_x) * va + (qz - end_z) * vz
+
+    def point(s):
+        if s <= 0:
+            return -JOINT_OUTSET, tangent + s
+        if s < arc_length:
+            theta = s / radius
+            return center_x - radius*math.cos(theta), tangent + radius*math.sin(theta)
+        return end_x + (s - arc_length)*va, end_z + (s - arc_length)*vz
+
+    def distance2(s):
+        x, z = point(s)
+        return (x - qx)**2 + (z - qz)**2
+
+    along = min((min(0.0, qz - tangent), radius * arc_theta,
+                 arc_length + max(0.0, exit_s)), key=distance2)
+    route = []
+    for ahead in (8, 16, 24, 32, 40, 48, 56):
+        x, z = point(along + ahead)
+        route.append((cx+x*n[0]+z*u[0], cz+x*n[1]+z*u[1]))
+    x, z = route[2]
+    ratio = RACING_TRACK*x/max(25.0, x*x+z*z)
+    return dict(route=route, steering=round(max(-0.65, min(0.65, ratio))*1000), radius=radius,
+                outset=JOINT_OUTSET, phase='entry' if along < 0 else ('arc' if along < arc_length else 'exit'),
+                projection_s=along, entry_distance=max(0.0, -along), exit_s=exit_s)
 
 
 def _racing_point(distance, radius, outset):

@@ -9,11 +9,18 @@ import uuid
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--keil-root', default='D:/software/Keil5')
-    parser.add_argument('--voice', action='store_true', help='构建独立语音首弯目标')
+    targets = parser.add_mutually_exclusive_group()
+    targets.add_argument('--voice', action='store_true', help='构建独立语音首弯目标')
+    targets.add_argument('--joint', action='store_true', help='构建直角和钝角联合弯目标')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     keil = Path(args.keil_root)
-    name, target = ('right_angle_voice', 'RightAngleVoice') if args.voice else ('right_angle', 'RightAngle')
+    if args.joint:
+        name, target = 'joint_angle_voice', 'JointAngleVoice'
+    elif args.voice:
+        name, target = 'right_angle_voice', 'RightAngleVoice'
+    else:
+        name, target = 'right_angle', 'RightAngle'
     folder = root / 'build/firmware' / name
     folder.mkdir(parents=True, exist_ok=True)
     log = folder / ('build_' + uuid.uuid4().hex + '.log')

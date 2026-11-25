@@ -18,7 +18,7 @@ typedef enum { LAP_OK, LAP_KEY, LAP_LINK, LAP_PATH, LAP_ENCODER, LAP_REVERSE, LA
                LAP_VOICE_STOP } lap_reason_t;
 typedef struct {
     float straight_rpm; /* 旧目标默认40、10..60；StraightAssist默认80、40..100；RightAngle默认60、40..80RPM。 */
-    uint32_t run_ms; /* 旧短版3000ms／Track最长300000；直道默认2000；首弯默认12000、最多15000ms。 */
+    uint32_t run_ms; /* 单次运动上限ms。直道默认2000，首弯默认12000，联合弯默认40000。 */
     float min_feedforward; /* 正目标前馈下限，PWM千分比，默认200、允许0..300。
                             * 不是实际输出下限：PI仍可减到0，零目标始终停轮。
                             * 只在停稳时调整，下次人工启动锁定；不是实测电机阈值。

@@ -1,11 +1,13 @@
 /** @file lap_link.c
- * @brief 普通试跑v2、直道v3、首弯v5、语音直道v6、语音首弯v9互斥。
+ * @brief 普通试跑v2、直道v3、首弯v5、语音直道v6、语音首弯v9、联合弯v10互斥。
  * CRC复用原生产实现，来源／风险及单侧短租期由应用继续检查。
  */
 #include "lap_link.h"
 #include "protocol.h"
 #include <string.h>
-#ifdef RIGHT_ANGLE_VOICE_TARGET
+#ifdef JOINT_ANGLE_VOICE_TARGET
+#define LAP_WIRE_VERSION 10u
+#elif defined(RIGHT_ANGLE_VOICE_TARGET)
 #define LAP_WIRE_VERSION 9u
 #elif defined(STRAIGHT_VOICE_TARGET)
 #define LAP_WIRE_VERSION 6u
@@ -28,7 +30,7 @@ static int valid(const uint8_t *b) {
         steering >= -1000 && steering <= 1000 && u16(b + 10) <= 1000u &&
         u16(b + 12) <= 1000u && u16(b + 14) <= 1000u && b[16] == 0u;
 #if defined(STRAIGHT_VOICE_TARGET) || defined(RIGHT_ANGLE_VOICE_TARGET)
-    /* v6/v9 START的byte8引用刚发的PATH序号；byte9及其余保留字节仍须为零。 */
+    /* v6/v9/v10 START的byte8引用刚发的PATH序号；byte9及其余保留字节仍须为零。 */
     if (b[3] == 2u && b[16] == 1u) return b[6] == 0u && b[7] == 0u && b[9] == 0u &&
         u16(b+10) == 0u && u16(b+12) == 0u && u16(b+14) == 0u;
 #endif

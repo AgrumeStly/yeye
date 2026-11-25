@@ -11,10 +11,16 @@
 #endif
 #ifdef RIGHT_ANGLE_TARGET
 #include "corner_guide.h"
-/* 首弯快过弯候选：80RPM接近、满弯平均60RPM，默认12秒试跑窗口。
- * 限时只限制范围，不触发转弯；每个20ms目标均来自当前v5观测／预测路径。
+/* 首弯快过弯候选：80RPM接近、满弯平均60RPM。
+ * 联合弯从比赛起点驶入第一弯，保留40秒总上限，视觉确认第二个出口即发STOP。
+ * 限时只限制运动范围，每个20ms轮速目标仍取当前有证据的观测／预测路径。
  */
+#ifdef JOINT_ANGLE_VOICE_TARGET
+#define LAP_MAX_RUN_MS 40000u
+volatile lap_config_t g_lap_config = {80.0f, LAP_MAX_RUN_MS, 200.0f};
+#else
 volatile lap_config_t g_lap_config = {80.0f, 12000u, 200.0f};
+#endif
 volatile corner_guide_t g_corner_guide;
 #ifdef LAP_DUAL_STARTUP
 volatile corner_startup_t g_corner_startup;
@@ -24,7 +30,9 @@ static uint8_t corner_pair_seen;
 #define LAP_MIN_CRUISE 40.0f
 #define LAP_MAX_CRUISE 80.0f
 #ifdef RIGHT_ANGLE_VOICE_TARGET
+#ifndef JOINT_ANGLE_VOICE_TARGET
 #define LAP_MAX_RUN_MS 12000u
+#endif
 /* 低置信度只允许短时续行。时间以最近源图时间计算，收到下一弱包不会续租。 */
 #define CORNER_ANCHOR_MS 1200u
 #define CORNER_COVER_MS 240u
@@ -346,7 +354,12 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
     if (g_lap.history != 0u) {
         if (b[7] >= 59u || !corner_forecast_fresh(now, b[7])) g_lap.path_valid = 0u;
     } else if (g_lap.single != 0u) {
+#ifdef JOINT_ANGLE_VOICE_TARGET
+        /* 外侧两臂已确认右弯，局部路径允许小幅向左回正；仍要求满弯风险与当前证据。 */
+        if (g_lap.bend != 1000u || b[7] < 60u) g_lap.path_valid = 0u;
+#else
         if (g_lap.bend != 1000u || g_lap.steering < 0 || b[7] < 60u) g_lap.path_valid = 0u;
+#endif
     } else if (b[7] < 70u) g_lap.path_valid = 0u;
     if (g_lap.path_valid == 0u) corner_pair_seen = corner_front_seen = 0u;
     else {

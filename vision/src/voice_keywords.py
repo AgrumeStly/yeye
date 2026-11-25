@@ -13,7 +13,7 @@ STOP = 3
 class VoiceKeywords:
     """沿用现有KPU模型、MIC增益、分类及右声道功放。模型和Audio均由本脚本独占。"""
 
-    def __init__(self, mapping):
+    def __init__(self, mapping, go_pcm=None):
         from machine import Pin, FPIOA
         from media.pyaudio import PyAudio, paInt16, LEFT_RIGHT
         import media.wave as wave
@@ -28,6 +28,9 @@ class VoiceKeywords:
         self.last = 0
         self.go_ready = False  # 上电或播报后先听到背景，防重复触发或把扬声器当发令。
         self.ignore_until = None
+        # 联合弯的“收到”在上电时转换为整块右声道PCM，识别后不读卡、不转码。
+        self.go_audio = tuple(self.stereo(go_pcm[i:i + CHUNK * 2])
+                              for i in range(0, len(go_pcm), CHUNK * 2)) if go_pcm else ()
         self.audio = PyAudio()
         try:
             for name in REPLIES[1:]:
@@ -99,21 +102,39 @@ class VoiceKeywords:
             pcm = wav.read_frames(CHUNK)
             while pcm:
                 # 输出设备要求整块大小，末块补零；沿用已有单声道转右路的接法。
-                stereo = bytearray(CHUNK * 4)
-                for sample_at in range(0, len(pcm), 2):
-                    stereo[sample_at * 2 + 2:sample_at * 2 + 4] = pcm[sample_at:sample_at + 2]
-                if self.output.write(stereo) != 0:
+                if self.output.write(self.stereo(pcm)) != 0:
                     raise OSError('Speaker write failed')
                 frames += 1
                 self.input.read(block=False)
                 pcm = wav.read_frames(CHUNK)
         finally:
             wav.close()
+        self.after_reply(started, frames, CHUNK_MS * 2)
+
+    @staticmethod
+    def stereo(pcm):
+        """把16位单声道样本送到车载右路功放，末块补零到300ms。"""
+        stereo = bytearray(CHUNK * 4)
+        for sample_at in range(0, len(pcm), 2):
+            stereo[sample_at * 2 + 2:sample_at * 2 + 4] = pcm[sample_at:sample_at + 2]
+        return stereo
+
+    def acknowledge_go(self):
+        """识别Go后立即送入已缓存的“收到”，此时尚未发送车辆START。"""
+        started = time.ticks_ms()
+        for block in self.go_audio:
+            if self.output.write(block) != 0:
+                raise OSError('Speaker write failed')
+            self.input.read(block=False)
+        self.after_reply(started, len(self.go_audio), 100)
+
+    def after_reply(self, started, frames, tail_ms):
+        """丢弃扬声器回采的尾音，再恢复本地Stop识别。参数均为块数或毫秒。"""
         self.cache = self.np.zeros((1, 256, 105), dtype=self.np.float)
         self.last = 0
         self.go_ready = False
         remaining = max(0, frames * CHUNK_MS - time.ticks_diff(time.ticks_ms(), started))
-        self.ignore_until = time.ticks_add(time.ticks_ms(), remaining + CHUNK_MS * 2)
+        self.ignore_until = time.ticks_add(time.ticks_ms(), remaining + tail_ms)
 
     def close(self):
         """逐项释放资源，设备清理失败时仍继续关功放及销毁特征提取器。"""
