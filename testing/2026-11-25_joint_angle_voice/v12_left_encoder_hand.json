@@ -1,0 +1,50 @@
+{
+  "utc": "2026-11-25T11:48:10.063915+00:00",
+  "registers": {
+    "left_tim3_cnt": 1073742884,
+    "right_tim4_cnt": 1073743908
+  },
+  "control": {
+    "tim3_cr1": 17,
+    "tim4_cr1": 1,
+    "tim3_smcr": 3,
+    "tim4_smcr": 3
+  },
+  "samples": [
+    [
+      0,
+      86,
+      65180
+    ],
+    [
+      123,
+      86,
+      65180
+    ],
+    [
+      233,
+      86,
+      65180
+    ],
+    [
+      344,
+      86,
+      65180
+    ],
+    [
+      455,
+      84,
+      65180
+    ],
+    [
+      566,
+      8,
+      65180
+    ]
+  ],
+  "left_changed": true,
+  "right_changed": false,
+  "target_power_isolated": true,
+  "flash_written": false,
+  "motors_commanded": false
+}
