@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-25",
+  "task": "I-04-RIGHT-ANGLE",
+  "source_commit": "d28664228eafce99c7807bd9de748d28481d91c4",
+  "firmware_revision": "0x02120015",
+  "wire_version": 9,
+  "files": {
+    "main.py": {
+      "sha256": "673155edbbc621ec2f761404ea875cb90445ec90303a7a9572f93be434cf53b3",
+      "bytes": 85246
+    },
+    "right_angle_voice.bin": {
+      "sha256": "3d38bc2d3554cd363fdca493c76a469ecc8818c182891ef957faa53c30032864",
+      "bytes": 17944
+    },
+    "right_angle_voice.hex": {
+      "sha256": "2ce78966e2df44a80f363859bd57714012d9950c2c104cae0202d1d663700565",
+      "bytes": 50525
+    }
+  }
+}
