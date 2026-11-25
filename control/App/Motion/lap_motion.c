@@ -347,9 +347,23 @@ void lap_motion_receive(const uint8_t *b, uint32_t arrival, uint32_t now) {
     }
     if ((uint32_t)(now - arrival) >= 100u) {
         ++g_lap.rejected;
+#ifndef JOINT_ANGLE_VOICE_TARGET
         if (g_lap.state == LAP_RUNNING) lap_motion_fault(LAP_LINK, now);
+#endif
         return;
     }
+#ifdef JOINT_ANGLE_VOICE_TARGET
+    /* 丢弃传输途中变旧的路径和证据不再成立的弱候选，避免覆盖仍新鲜的当前路径。
+     * 此处不更新序号、不延长上一条路径的200ms时限。当前明确撤许可仍照常停车。 */
+    if (type == 1u && (b[6] & 1u) != 0u) {
+        uint32_t source_age = (uint32_t)((uint16_t)b[10] | ((uint16_t)b[11] << 8));
+        if ((uint32_t)(now - arrival) + source_age + 2u >= 200u || b[15] != 0u || b[14] > 100u ||
+            ((b[6] & 4u) != 0u && !corner_forecast_fresh(now, b[7]))) {
+            ++g_lap.rejected;
+            return;
+        }
+    }
+#endif
     if (seen[index] != 0u && (uint32_t)(arrival - sequence_at[index]) < 200u) {
         delta = (uint8_t)(b[5] - sequences[index]);
         if (delta == 0u || delta >= 128u) { ++g_lap.duplicates; return; }

@@ -169,7 +169,7 @@ def main():
         maximum_reason = 12  # VOICE_STOP是本版的合法停车原因。
     elif args.profile == 'joint-angle-voice':
         # v10及后续联合弯使用同一冻结环布局，实际Flash仍需与所选BIN逐字节相等。
-        revisions = (0x02120016, 0x02120017, 0x02120018)
+        revisions = (0x02120016, 0x02120017, 0x02120018, 0x02120019)
         minimum_rpm, maximum_rpm, maximum_run = 40, 100, 40000
         maximum_reason = 12
     addresses = symbols()

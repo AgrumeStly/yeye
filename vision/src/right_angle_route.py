@@ -93,6 +93,12 @@ def _same_rail(first, first_turn, second, second_turn=0):
                 (bx*math.cos(byaw) - bz*math.sin(byaw))) <= 12)
 
 
+def _corridor_blocked(black, route):
+    """旧推荐线上两个不同的可见实黑投影格才确认受阻。"""
+    cells = {_pixel(*point) for point in route}
+    return sum(black[cell] for cell in cells if cell is not None) >= 2
+
+
 def _straight_reference(t, racing):
     """给当前单边重拟合限定参考直段。圆弧中间仍由实测弯边或短预测负责。"""
     cx, cz, yaw, angle = t[4]
@@ -509,12 +515,9 @@ class RightAngleRoute:
             out['profile_ms'] = dict(grid=grid_done-begun, anchors=anchors_done-grid_done,
                                      search=clock()-anchors_done)
         if best is None:
-            if self.joint and self.forecast_route is not None:
-                # 一帧模型搜索落空时保留关联。若现帧在原推荐线上明确看到两个
-                # 黑格，照常撤许可；否则让STM32按上一有效源图的200ms时限等下一帧。
-                projected = {_pixel(*point) for point in self.forecast_route}
-                blocked = sum(black[cell] for cell in projected if cell is not None) >= 2
-                if not blocked:
+            if self.joint:
+                # 模型落空只表示这一帧没有新路线。明确看到旧路线受阻才立即撤许可。
+                if self.forecast_route is None or not _corridor_blocked(black, self.forecast_route):
                     out['reason'] = 'observation_missed'
                     return out
                 out['reason'] = 'corridor_blocked'
@@ -634,6 +637,13 @@ class RightAngleRoute:
         # R7实跑出现100→371及负修正→508的切换，来自距离下限覆盖路线。
         # R8取消该下限；留0字段便于与旧逐帧证据比较，不以历史L强行续转。
         out['turn_floor'] = 0
+        reason = 'ready' if valid else 'stabilizing'
+        if self.joint and not valid:
+            # 新拟合可信度不足或白区证据短缺时，既不发新转向也不刷新上一帧的时钟。
+            if self.forecast_route is not None and _corridor_blocked(black, self.forecast_route):
+                reason = 'corridor_blocked'
+            else:
+                reason = 'observation_missed'
         out.update(valid=valid, source=source, steering=steering,
                    bend=int(round(risk*1000)), confidence=confidence, stage=stage,
                    corner_observed=best_corner==2, corner_age_ms=0 if self.corner_at is None else now-self.corner_at,
@@ -643,7 +653,7 @@ class RightAngleRoute:
                    path_kind='racing_arc_prediction' if angle>0 else 'straight_observation',
                    path_visibility='projected' if best[1] else 'predicted_near_blind',
                    parameters=list(best[4]), route=route, score=best_score,
-                   reason='ready' if valid else 'stabilizing')
+                   reason=reason)
         return out
 
     def _advance_joint(self, best, dual, corner, forecast, now):
