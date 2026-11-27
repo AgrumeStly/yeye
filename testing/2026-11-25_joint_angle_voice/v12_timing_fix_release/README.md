@@ -8,7 +8,7 @@
 | [STM32 BIN](joint_angle_voice.bin) | `f11c601193bbdaaadc77e559565d1a5abd11f61b897a7425b7ce0b9c9b5401f8` |
 | [STM32 HEX](joint_angle_voice.hex) | `df0985df36afc211884e9ca7fcfda0e626c255da3cac096804f7f61797622398` |
 
-[视觉清单](main.py.manifest.json)列出合成入口所用源码和“收到”音频。修改时从源文件重新生成，方法见[配对说明](../../../control/docs/joint_angle_voice.md)。STM32 源工程为 [JointAngleVoice](../../../control/MDK-ARM/joint_angle_voice.uvprojx)。
+[视觉清单](main.py.manifest.json)保留原构建的源码和“收到”音频哈希。原构建的 `voice_keywords.py` 使用 CRLF，Git 克隆后的源码使用 LF。已从 GitHub 默认分支克隆并重生成，生成的 `main.py` 与这里的归档逐字节一致。修改时从源文件重新生成，方法见[配对说明](../../../control/docs/joint_angle_voice.md)。STM32 源工程为 [JointAngleVoice](../../../control/MDK-ARM/joint_angle_voice.uvprojx)。
 
 语音初始化读取板上 `/sdcard/examples/kmodel/multi_kws.kmodel` 及 `/sdcard/examples/utils/` 下的 `wozai.wav`、`go_new.wav`、`stop_new.wav`、`wow_new.wav`。换板时核对实际 CanMV 固件和这五个文件。原板资源保留在板上及本机采集归档。 [资源记录](../../../project_planning/evidence/2026-11-24_vision_board_review/resources.json) [读取实现](../../../vision/src/voice_keywords.py)
 
