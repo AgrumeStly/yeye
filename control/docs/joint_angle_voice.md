@@ -2,6 +2,8 @@
 
 联合版配对为 STM32 **JointAngleVoice `0x02120019`** 与 K230 **v12 路径接收修订**。按比赛图 1 顺时针行驶，从虚线起点驶向赛道左侧，两次均右转。直角转向 90°。钝角处约 141° 的车道内角对应约 39° 的车头转角，按图 1 估算。 [比赛原文](../../competition/比赛文档.pdf)
 
+与构建和装板记录对应的配对文件，以及板上语音资源清单见[版本归档](../../testing/2026-11-25_joint_angle_voice/v12_timing_fix_release/README.md)。
+
 ## 赛车线和轮速
 
 直道近中区复用 StraightVoice 的当前双边拟合及 STM32 直道控制，使用旧算法的采样行，直接计算车头与车道的横偏和方向。远区每约 70 ms 抽样判断前方是否出现折角迹象。双边稳定时只有远区提示才进入完整弯道搜索。出现遮挡或近中区不再满足直道约束时，再以完整网格复核当前边线。实际当前弯臂与入口方向一致后，才根据前视点进入赛车线。设计参考近区纠偏、远区预瞄以及目标点曲率跟踪。 [近远区视觉研究](https://www.cs.drexel.edu/~dds26/publications/Salvucci-Perc04.pdf) [Coulter 路径跟踪](https://www.ri.cmu.edu/publication_view.html?pub_id=278)

@@ -5,14 +5,14 @@
 | 日常问题 | 入口 |
 | --- | --- |
 | 现在做到哪，下一步是什么 | [当前状态与全部任务](project_planning/project_status.md) |
-| 队友用本地dsh继续语音开发 | [AI接续入口](AI_HANDOFF.md) → [K230语音交接](project_planning/voice_handoff.md) |
+| 队友用 DeepSeek 接续整车开发 | [AI 接续入口与提示词](AI_HANDOFF.md) |
 | 各阶段要交付什么 | [阶段路线图](project_planning/roadmap.md) |
 | 新建总管／执行对话、反馈验收 | [启动与反馈提示词](project_planning/agent_initialization_prompts.md) |
 | 一项任务怎样定义、完成和中断接续 | [任务格式](project_planning/tasks/README.md) |
 | 本次重构结果与检查 | [ORG-03](project_planning/tasks/ORG-03-TASK-ARCHITECTURE.md) |
 | 文件放哪、事实以哪里为准 | [目录与内容源](DIRECTORY_GUIDE.md) |
 
-当前工程主线为首弯；独立直道一次80RPM／2秒已确认，完整自主过弯及整圈待验。首弯最后故障为LINK超龄，具体版本与恢复步骤查任务记录，不执行旧对话的过期操作。
+当前工程主线为起点直道、左侧直角和钝角联合过弯。主控已确认 v9 完成首个直角弯。最新联合版为 STM32 `0x02120019`／K230 v12 路径接收修订，两弯连续通过和整圈待验。左轮带载无反馈的诊断从任务当前区接续。 [当前任务](project_planning/tasks/I-04-RIGHT-ANGLE.md)
 
 ## 模块入口
 
@@ -22,4 +22,4 @@
 
 执行任务完成可交付改动及适用检查后默认按明确范围做本地Git提交；上传当前改动需主控本次明确要求。共享checkout写入、Keil保存／构建、分支与硬件动作串行。被忽略的build／tmp可能有唯一原始日志或Flash备份，不据目录名删除。换设备按[版本交接](project_planning/version_handoff.md)核对本地未同步及工具环境。
 
-当前完整版本与默认main发布情况见[发布任务](project_planning/tasks/TASK-20261119-02-current-version-main.md)及[版本交接](project_planning/version_handoff.md)。队友从仓库根目录的[AI_HANDOFF.md](AI_HANDOFF.md)交给本地dsh接续；本机环境、语音方案、实现和验证在队友电脑继续处理。工具安装、模型获取及板上文件状态以交接说明和实际设备为准，不随Git自动恢复。
+队友从 GitHub 获取默认 `main` 后，在仓库根目录把 [AI_HANDOFF.md](AI_HANDOFF.md) 交给能访问该目录的本地 DeepSeek／dsh。当前配对包、源码和现场证据见[版本交接](project_planning/version_handoff.md)。队友按接续说明核对本机工具、语音资源和实际设备版本。

@@ -1,8 +1,10 @@
 # 验证与现场证据入口
 
-2026-11-19。原始失败与复测保留，日期／版本／条件区分；本轮未重新跑软件或车辆测试。
+更新于 2026-11-27。原始失败和复测按日期、版本及条件保留。
 
-- [当前首弯最后停机及接续](2026-11-18_right_angle/resume_20261119.md)：858ms LINK2，未进弯；包含前次PATH差异、缺失触发帧和日志问题。
+- [联合过弯 v12 配对包](2026-11-25_joint_angle_voice/v12_timing_fix_release/README.md)及[较早 v12 兼容修订的左轮无反馈记录](2026-11-25_joint_angle_voice/v12_left_no_feedback_swd.json)。
+- [v9 完整通过首弯基线](2026-11-18_right_angle/voice_v9_pass_baseline/parameters.md)。当次停后绿灯快闪，故障码待核。
+- [首弯历史停机](2026-11-18_right_angle/resume_20261119.md)。858 ms LINK2，未进弯，含前次 PATH 差异、缺失触发帧和日志问题。
 - [直道任务限定验收](../project_planning/tasks/I-03-STRAIGHT-ASSIST.md)：一次80RPM／2秒，不代表重复性或整圈。
 - [首弯最终归档](2026-11-18_right_angle/release_r6_final/README.md)：版本配对来源，非通过证明。
 - [统一任务及验收规则](../project_planning/tasks/README.md)：按改动选检查，已有适用证据复用；主控明确验收后总管更新状态。

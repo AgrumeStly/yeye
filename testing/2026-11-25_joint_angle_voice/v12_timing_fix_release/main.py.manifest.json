@@ -1,0 +1,22 @@
+{
+  "go_received.wav": "a77b061014157a78359d16f7e86fcaf8555a6b4269810b09076e62bda088c994",
+  "vision_protocol.py": "60572bf8723c25045172cb0b1f6869fc0288a1cfb85affeb9b36532f24b533cd",
+  "lite_lap_route.py": "02f1bd169c4904d7d65df640252448f640b6c734ef6cbda12a771cafb49b8cb2",
+  "lap_protocol.py": "dbae8ea7efe4a2dedb106064fa6256c6288411193019d5d86844b6ab32cce31f",
+  "right_angle_racing.py": "17b578239f7f832c16cc8de4a967f3259659821e2db33bf6e00f315eca58d21e",
+  "right_angle_grid.py": "8ff54cd2ba6fe486876353efacc5be1daec127b892f7b6c66f814ce65dbd3150",
+  "right_angle_prediction.py": "87b07fda97ba172910c94b58e57e3b01cc04f54a7ab9f519b80d07eaa52f8194",
+  "straight_route.py": "49484210448453d9ec97fdb12bbbd148fbe0309ead387e9b50addfbe75997498",
+  "right_angle_route.py": "1f20ba3c31ae9c576f1667471d25daf20d5a91399193ac58ba814c386a166ab9",
+  "right_angle_protocol.py": "3819bf70d24de710ebd57203f1bc6fbbdf823b6d7096c40a005ca9544c30bb68",
+  "voice_keywords.py": "4a95ddac30af9382ab85678530009e7862669d267c16346cbfaa586b818a69c1",
+  "right_angle_voice_canmv.py": "bfb6b6af38eba944d892a4eef11543f2149e1117665122772eb0a0f65bd16b39",
+  "bundle_sha256": "c4283811e545f20a7c4a11782266a54390f134b67ad501044079cf32a5103186",
+  "wire_version": 12,
+  "grid_step": 6,
+  "allow_drive": true,
+  "automatic_motor_start": false,
+  "duration_ms": 0,
+  "voice_motor_start": true,
+  "phone_preview": false
+}

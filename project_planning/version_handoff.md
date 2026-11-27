@@ -1,6 +1,10 @@
 # 版本与设备交接记录
 
-## 当前交付：完整当前版本及AI语音交接已发布到main（2026-11-20）
+## 当前交付：整车开发交给队友与 DeepSeek（2026-11-27）
+
+队友从 GitHub 默认 `main` 获取代码后，从 [AI_HANDOFF.md](../AI_HANDOFF.md) 开始。本轮范围见[发布任务](tasks/TASK-20261127-01-deepseek-handoff.md)。当前开发配对为 STM32 `0x02120019`／K230 v12 路径接收修订，配对文件、源码来源和板上资源见[归档](../testing/2026-11-25_joint_angle_voice/v12_timing_fix_release/README.md)。实车接续按 [I-04-RIGHT-ANGLE](tasks/I-04-RIGHT-ANGLE.md) 当前区。
+
+## 历史交付：完整当前版本及AI语音交接已发布到main（2026-11-20）
 
 当前版本主提交[`15adcc5c1093a3162f27907457687c75e0fd8121`](https://github.com/AgrumeStly/yeye/commit/15adcc5c1093a3162f27907457687c75e0fd8121)已普通atomic推送至main及原开发分支。已核对远端默认HEAD指向main且同号，并从GitHub运行不指定分支的普通clone：main、HEAD同号、工作区干净；614份非交付回填文件树与清单一致、553份现场原件字节哈希一致、26个AI交接本地链接可定位。当前任务、状态与收据随后随交付回填提交继续同步main，最终号在发布回报给出，避免自引用循环提交。
 

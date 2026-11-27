@@ -1,8 +1,17 @@
 # 当前状态与任务
 
-更新：2026-11-24。依据：主控要求完整阅读视觉与DeepSeek已放在视觉板上的成果并更新进度，本轮专项读取和资料更新见[TASK-20261124-01-vision-board-review](tasks/TASK-20261124-01-vision-board-review.md)。全局维护职责仍按协作标准；本次只读现有板上资料并更新记录，没有修改运行实现、启动应用测试、构建、刷写或试跑。CanMV连接／断开有软重启输出，不能将本次读取称作无扰动观察。
+更新于 2026-11-27。队友从 [DeepSeek 接续入口](../AI_HANDOFF.md) 开始，发布范围见[本次交接任务](tasks/TASK-20261127-01-deepseek-handoff.md)。
 
 ## 当前判断
+
+- 11 月 24 日独立语音直道已实现。主控听到“我在”，对准直道排查后反馈 Go 复核“符合预期”，其余直道量化结果待验。 [直道语音任务](tasks/TASK-20261124-02-straight-voice.md)
+- 11 月 25 日主控确认 v9 正常完成左侧首个右转直角弯，停后绿灯仍快闪。随后形成起点直道、首个直角和第二个钝角的联合目标。当前配对为 STM32 JointAngleVoice `0x02120019`／K230 v12 路径接收修订，已复核软件、构建及 K230 装板读回，配套 STM32 下载和两弯实车待验。 [I-04 当前区](tasks/I-04-RIGHT-ANGLE.md) [配对包](../testing/2026-11-25_joint_angle_voice/v12_timing_fix_release/README.md)
+- 最新已归档现场故障为较早 v12 兼容修订起步 301 ms 左轮无反馈。左路软件有 PWM 请求，手转有计数，实际带载输出待测。下一步由硬件补齐同趟左右输出对照，主控按原任务安排 Go 上道验收。 [停车冻结](../testing/2026-11-25_joint_angle_voice/v12_left_no_feedback_swd.json) [硬件定位](../hardware_preparation/i05_motor_power_diagnosis_task.md)
+- 整圈、比赛触边与用时、冲线自动停车、语音接管 3 秒停稳和最终报告仍待完成。依据比赛第三部分、图 1 和表 1，优先恢复可靠起步并验收连续两弯。 [比赛原文](../competition/比赛文档.pdf)
+
+## 11 月 24 日全局快照
+
+下列判断和接续安排按 11 月 24 日的实读范围存档。当时的阅读任务记录了 CanMV 连接／断开所引发的软重启。 [板上阅读任务](tasks/TASK-20261124-01-vision-board-review.md)
 
 - 主控已统一验收当前实际交付的资料、软件、现场结果及进度，范围见[本次验收记录](evidence/2026-11-19_current_acceptance/acceptance.md)，相关任务与索引已同步。当前工程主线仍为S2首弯，完整自主首弯和整圈尚未完成。
 - 直道已推进到0x02120003双轮启动适配；主控确认悬空／地面“正常”，最后一次2000ms／LIMIT11及零硬件／UART错误有实读证据。现有交付已验收，不新增触边、距离、摆动或重复性量化。
@@ -17,7 +26,7 @@
 - 完整当前版与AI语音交接主提交[15adcc5c1093a3162f27907457687c75e0fd8121](https://github.com/AgrumeStly/yeye/commit/15adcc5c1093a3162f27907457687c75e0fd8121)已同步到开发分支及默认main；补齐此前未提交原位源码与依赖，保留5次已有成果提交。普通clone自动选main且干净，614份非交付回填内容和553份现场原件核对通过；结果回填随后随正常提交同步main，最终号在发布回报中给出。
 - 上次[74a45ef架构上传](tasks/TASK-20261119-01-architecture-upload.md)已验收，其文档范围作为历史保留。当前完整发布及未随库内容见[发布任务](tasks/TASK-20261119-02-current-version-main.md)；本机UI／用户路径配置、忽略环境和认证保留本地，未编辑运行源码或进行新功能验证。
 
-## 下一步与管理边界
+### 当时的下一步与管理记录
 
 主控已指定本对话为新总管，并于2026-11-19明确“org-03验收通过”。总管已核对[ORG-03架构交付](tasks/ORG-03-TASK-ARCHITECTURE.md)及归档检查，登记该管理架构成果已验收；该结论不扩大到车辆能力或其它S0任务。
 
@@ -48,7 +57,7 @@ S2工程后续继续[I-04-RIGHT-ANGLE原任务](tasks/I-04-RIGHT-ANGLE.md)的同
 | H-03 | S1 | 待核实 | [记录](tasks/H-03.md) |
 | I-02-LOW-SPEED-LAP | S2 | 进行中 | [记录](tasks/I-02-LOW-SPEED-LAP.md) |
 | I-03-STRAIGHT-ASSIST | S2 | 已验收（02基线及03当前交付） | [记录](tasks/I-03-STRAIGHT-ASSIST.md) |
-| I-04-RIGHT-ANGLE | S2 | 进行中（R8当前阶段交付已验收） | [记录](tasks/I-04-RIGHT-ANGLE.md) |
+| I-04-RIGHT-ANGLE | S2 | 进行中（v9 首弯已确认，v12 联合版待主控验收） | [记录](tasks/I-04-RIGHT-ANGLE.md) |
 | ORG-01 | S0 | 已关闭 | [记录](tasks/ORG-01.md) |
 | ORG-02 | S1 | 已验收（现有分层／迁移交付） | [记录](tasks/ORG-02.md) |
 | REVIEW-20261107 | S0 | 待核实 | [记录](tasks/REVIEW-20261107.md) |
@@ -68,6 +77,8 @@ S2工程后续继续[I-04-RIGHT-ANGLE原任务](tasks/I-04-RIGHT-ANGLE.md)的同
 | TASK-20261119-01-architecture-upload | S0 | 已验收 | [记录](tasks/TASK-20261119-01-architecture-upload.md) |
 | TASK-20261119-02-current-version-main | S0 | 待主控验收 | [记录](tasks/TASK-20261119-02-current-version-main.md) |
 | TASK-20261124-01-vision-board-review | S0／S4 | 待主控验收（板上成果阅读与进度记录） | [记录](tasks/TASK-20261124-01-vision-board-review.md) |
+| TASK-20261124-02-straight-voice | S2／S4 | Go 复核已确认，整车量化待验 | [记录](tasks/TASK-20261124-02-straight-voice.md) |
+| TASK-20261127-01-deepseek-handoff | S0 | 待主控验收（版本发布与接续资料） | [记录](tasks/TASK-20261127-01-deepseek-handoff.md) |
 
 ## 旧全局登记、无独立任务单的缺口
 

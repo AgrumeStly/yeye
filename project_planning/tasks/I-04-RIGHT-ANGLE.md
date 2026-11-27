@@ -35,10 +35,10 @@
 依赖与事实入口：
 
 - [ORG-03](ORG-03-TASK-ARCHITECTURE.md)管理架构已于2026-11-19由主控验收；[I-03直道](I-03-STRAIGHT-ASSIST.md)已有80RPM／2秒实跑确认，不重新验收基础能力。
-- 当前先读[R8现场记录](../../testing/2026-11-18_right_angle/r8_field_record.md)、[当前操作](../../control/docs/right_angle_racing.md)及[R8来源与发布](../../testing/2026-11-18_right_angle/entry_r8_record.md)；[11月19日最初接续](../../testing/2026-11-18_right_angle/resume_20261119.md)保留为11月18日LINK失败来源，不覆盖新进度。
-- 当前配对为 STM32 0x02120015／v9 与最新 K230 v9，轮位沿用既有实证。R8 0x02120012／v5、首次语音 0x02120013／v7、连续预测 0x02120014／v8 保留各自现场记录。 [R8 配对归档](../../testing/2026-11-18_right_angle/release_r6_final/README.md)
+- 联合版当前配对为 STM32 `0x02120019`／K230 v12 路径接收修订，轮位沿用既有实证。 [操作单](../../control/docs/joint_angle_voice.md) [配对包](../../testing/2026-11-25_joint_angle_voice/v12_timing_fix_release/README.md)
+- 首弯现场通过基线单独保留为 STM32 `0x02120015`／K230 v9。既有 R8 `0x02120012`／v5、首次语音 `0x02120013`／v7、连续预测 `0x02120014`／v8 各有现场记录。 [v9 通过记录](../../testing/2026-11-18_right_angle/voice_v9_pass_baseline/parameters.md) [R8 现场记录](../../testing/2026-11-18_right_angle/r8_field_record.md) [R8 来源](../../testing/2026-11-18_right_angle/entry_r8_record.md)
 
-本轮工程范围为消除 ground_07 的跑动窗口同步落盘，复用已确认的语音直道启动及 STOP，配对 R8 当前图像走线。78ms 原记录包含 JSON 序列化、write 及潜在内部刷新。新版本的合并处理时序、实际 LINK 风险和触黑边情况以正式跑动取证。
+早期版本为消除 ground_07 的跑动窗口同步落盘，复用了已确认的语音直道启动及 STOP，并配对 R8 当前图像走线。78 ms 原记录包含 JSON 序列化、write 及潜在内部刷新。联合版的合并处理时序、实际 LINK 风险和触黑边情况仍以正式跑动取证。 [原接续记录](../../testing/2026-11-18_right_angle/resume_20261119.md)
 
 本轮按主控指定的语音上道需求更新 STM32／K230 启动接口与证据记录，原首弯走线和轮速策略用于新目标，新增独立配对版本。首弯现场诊断使用本任务记录和 `testing/2026-11-18_right_angle/`。全局状态由总管维护。
 

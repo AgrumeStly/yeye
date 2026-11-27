@@ -1,43 +1,42 @@
-# 给本地 dsh／DeepSeek 的项目接续入口
+# DeepSeek 项目开发交接
 
-更新时间：2026-11-24。本文件由主控要求整理，供视觉与本地dsh／DeepSeek继续语音开发；板上现有成果已于11月24日读取并记录在[阅读报告](project_planning/evidence/2026-11-24_vision_board_review/review.md)。dsh／DeepSeek是开发助手；当前运行时使用本地KPU关键词模型，不把DeepSeek服务部署到小车。
+2026-11-27 更新。主控把最新进度交给队友和本地 DeepSeek／dsh，接续 STM32、K230 循迹与语音、联调、证据和报告。开发助手在队友电脑上读写仓库，车上使用 K230 本地关键词模型。主控负责车辆操作、实车验收和远端发布授权，硬件负责实际电气取证。
 
-主控已确定：沿用现有K230上的麦克风和扬声器。协作中由视觉角色承接本次语音开发，主控负责整车接口协调和验收。方案选择、队友本机环境、实现及板级验证，由视觉与本地dsh在接收仓库后继续处理。
+## 在队友电脑开始
 
-## 阅读顺序
+```powershell
+git clone https://github.com/AgrumeStly/yeye.git
+cd yeye
+git status --short --branch
+git rev-parse HEAD
+```
 
-先确认工作目录是实际clone得到的仓库根目录，读取以下文件，不依赖dsh自动识别某个文件名：
+在这个目录启动能访问工作区的本地 DeepSeek／dsh，复制本页最后一节的提示词。已有仓库的队友先检查本地修改，再从默认 `main` 更新。工作目录、Keil 编译器、Python 环境、COM 号及板上版本按队友现场核对。
 
-1. [AGENTS.md](AGENTS.md)：比赛依据、职责、代码注释、Git、设备操作规则。
-2. [项目技能](.agent/skill/grill-me/SKILL.md)、[协作标准](project_planning/collaboration_standard.md)、[当前状态](project_planning/project_status.md)：已决事项与当前任务边界。
-3. [语音交接说明](project_planning/voice_handoff.md)：语音目标、现有基础、接口缺口、资料位置及接续提示词。
-4. [比赛文档](competition/比赛文档.md)第三部分／图1／表1；有冲突以PDF为准。
-5. 按语音说明再读必要源码和规格。不要先遍历全部现场日志或执行旧任务历史区的Prompt。
+1. 读取 [AGENTS.md](AGENTS.md)、[项目技能](.agent/skill/grill-me/SKILL.md)和[协作标准](project_planning/collaboration_standard.md)。
+2. 读取[当前状态](project_planning/project_status.md)及[I-04-RIGHT-ANGLE 当前摘要和执行结果](project_planning/tasks/I-04-RIGHT-ANGLE.md)。历史区保留当时的版本和授权。
+3. 查看[比赛 PDF](competition/比赛文档.pdf)第三部分、图 1 和表 1，可搜索[转写](competition/比赛文档.md)。工程入口见[架构](docs/architecture.md)、[STM32](control/README.md)、[视觉](vision/README.md)及[协议](control/docs/protocol_v1_draft.md)。
+4. 按下表选当前任务所需的实现、配对包和证据。板上语音资源的来历见[语音历史交接](project_planning/voice_handoff.md)。
 
-## 开始接续前应输出什么
+## 当前工程状态
 
-先实际读取文件，再简短报告：仓库路径、分支、完整HEAD；语音已确认事项；当前代码能做与不能做的事情；影响下一步的实际缺口。没有文件读取能力时说明限制，请视觉提供上述文件内容，不能假装已读整个仓库。
+| 范围 | 已有成果与待验 |
+| --- | --- |
+| 独立语音直道 | StraightVoice `0x02120004`。主控听到开机应答，排查取景后反馈 Go 表现“符合预期”。起步后车辆量化证据待补。见[直道任务](project_planning/tasks/TASK-20261124-02-straight-voice.md)。 |
+| 首个直角弯 | RightAngleVoice `0x02120015`／K230 v9。主控确认完整通过首弯，停后绿灯快闪，故障码和触边数据待核。见 [v9 实车参数及配对包](testing/2026-11-18_right_angle/voice_v9_pass_baseline/parameters.md)。 |
+| 起点直道、直角及钝角联合版 | 当前开发基线为 JointAngleVoice `0x02120019`／K230 v12 路径接收修订，电脑检查及 STM32 构建有记录，K230 写入后逐字节读回一致。此回执记载配套 STM32 尚未下载。两弯连续通过待验。见[配对说明](control/docs/joint_angle_voice.md)和[交接配对包](testing/2026-11-25_joint_angle_voice/v12_timing_fix_release/README.md)。 |
+| 优先处理的实车故障 | 较早的 v12 兼容修订在起步 301 ms 时触发左轮无反馈，软件请求在、左轮原始计数为零，隔离动力手转能计数。带载驱动输出仍待硬件取证。见[冻结记录](testing/2026-11-25_joint_angle_voice/v12_left_no_feedback_swd.json)及[硬件定位任务](hardware_preparation/i05_motor_power_diagnosis_task.md)。 |
+| 比赛验收缺口 | 顺时针完整一圈的用时与触边、冲线自动停车、语音接管后 3 秒停稳、应答清晰度与自选口令完整演示仍待取证，报告终稿待完成。见[比赛规则](competition/比赛文档.pdf)和[报告目录](report/README.md)。 |
 
-本仓库的Windows绝对路径、COM号、IDE配置、用户目录和旧运行快照都是来源电脑的历史记录。队友电脑重新核对本机路径、设备和当前会话；不照抄`D:/projects/projectsyeye`或COM10作为本机事实。Git不会同步本机驱动、虚拟环境、认证或板上文件。
+联合版复用 K230 上的模型和 WAV，项目配对包内含本项目的“收到”音频。准备新板时按配对包的资源清单核对。项目工作区的登录凭据、驱动、虚拟环境和 IDE 用户设置由各自电脑管理。
 
-## 必须保留的事实
+开发先沿用 `I-04-RIGHT-ANGLE`。从现有冻结和日志梳理左轮故障与路径误停各自的证据，保留 KEY（WKUP）急停、路径超龄、失线和轮速保护。硬件取得同趟带载对照后，按首个异常点收敛修复；主控再对配对版本做 Go 上道验收，记录两轮反馈、两弯、用时、触边、停车码和语音应答。按表 1 优先解决影响完圈的故障，再推进剩余赛段和完整语音验收。
 
-- 当前直道03、首弯R8等现有阶段交付已获主控统一验收。首弯最近一次为499ms／LINK2／源年龄200ms，完整首弯及整圈尚未完成；接受当前进度不改变失败实证。
-- 板上已有`/sdcard/qoder_scripts/voice_assistant.py`及停用入口`main_voice.py`，实现“小南小南／Go／Stop／Wow”识别、WAV回应及v5命令发送；本地[源码证据](project_planning/evidence/2026-11-24_vision_board_review/board_snapshot/sdcard/qoder_scripts/voice_assistant.py)已归档。旧日志有前三词识别事件，但当前最终源码未绑定测试会话，UART日志无实际发送事件，尚无整车语音通过证据。正式`vision/audio/`产品模块仍未建立，不从零忽略板上成果。
-- 本次根目录无`/sdcard/main.py`，语音、R8循迹、手机图传为独立应用；不能直接启用停用入口或把300ms录音／最长3.264秒阻塞播报放入200ms路径主循环。R7／R8与既有归档相同，原时序问题没有新的修复证据。
-- 图传只输出车线与遥测，不发UART；动态采集目录枚举超时且CSV损坏。后续先按阅读报告区分已有代码、历史日志与未验能力，不能照板上README或旧注释宣称已通过328帧／整车验收。
-- 当前直道／首弯研发目标使用KEY启动并拒绝远程START；STATUS无实际动作回执。不能直接拿旧v1命令包实现本目标的语音启动，也不能把“已发送STOP”播报成“已停稳”。
-- 不擅自改STM32工程、协议字段、已有循迹算法或保护时限来迁就语音。需跨模块变更时，按协作标准与主控对齐具体范围。
-- 后续新增或修改的主应用代码写详细中文注释，按实际改动选择验证。交付改动按完整任务ID本地提交；上传／合并仍按主控对应任务的明确授权。
-
-## 可直接发送给 dsh 的第一条消息
+## 可直接复制给 DeepSeek
 
 ```text
-当前工作目录是队友从GitHub clone的椰椰智能小车仓库。本地dsh作为本次开发助手。
-先实际读取AI_HANDOFF.md，再按其中顺序读取AGENTS.md、项目技能、协作标准、当前状态和project_planning/voice_handoff.md。
-语音硬件已确定沿用现有K230麦克风和扬声器，不重新询问是否改用独立语音模块。
-先报告实际仓库路径、分支和完整HEAD，归纳现有语音基础、比赛要求、代码接口缺口和需要在本机核对的固件／音频信息，再与视觉继续确定下一步。
-队友本机环境、语音方案、实现及验证由本会话继续处理；不要把历史路径、COM号或旧运行快照当作当前事实。
-保留现有控制、循迹与保护。现有研发目标拒绝远程START，STATUS无回执，不能假装语音动作已被车辆执行。
-按项目规则记录实际改动、来源、检查、未完成项和接续信息，不自动上传或驱动车辆。
+当前目录是从 GitHub 获取的椰椰智能小车仓库。作为本地开发执行助手，接续 STM32、K230 循迹与语音、联调和报告相关开发。
+先实际读取 AI_HANDOFF.md，再按其中顺序读 AGENTS.md、比赛规则、协作标准、当前状态和 I-04-RIGHT-ANGLE 的当前区。运行 git status 和 git rev-parse HEAD，报告实际路径、分支、完整提交号，以及最新工作版本、已验结果和待验事项。没有本地文件权限时先说明缺项。
+先沿 I-04-RIGHT-ANGLE 核对 v12 的配对文件、停车冻结及左轮带载证据缺口，按已授权范围继续源码、离线验证和任务记录。v9 实车过首弯、v12 软件检查与 v12 实车待验分别记录。保留急停和故障保护，现场动作由主控和硬件执行。
+每项改动关联比赛评分项及验证证据。主应用使用详细中文注释，保留共享修改，完成可交付改动后按完整任务 ID 本地提交。实车通过以主控反馈为准，上传按主控当次授权办理。
 ```
